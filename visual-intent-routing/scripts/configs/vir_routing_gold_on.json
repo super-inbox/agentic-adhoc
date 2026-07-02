@@ -1,0 +1,5788 @@
+{
+  "schema_version": 1,
+  "ontology_schema_version": 1,
+  "generated": "2026-06-24",
+  "title": "Visual Intent Routing — template routing gold set (v1) — ontology-enriched (Subject × Info-type × Layout)",
+  "description": "vir_routing_gold.json enriched with 3-tier ontology coordinates per template, for per-axis routing-error attribution. Regenerate via scripts/build_gold_ontology.cjs. Base gold is still the source of truth for the labels themselves.",
+  "ontology_legend": {
+    "tiers": {
+      "I_subject": "from taxonomy.template_subjects (auto-derived tag), filtered to canonical subjects",
+      "II_info_type": "from taxonomy.template_information_types (auto-derived tag)",
+      "III_layout": "HEURISTIC from template-id substrings (same LAYOUT_RULES as build_3d_gap_matrix.cjs); Layout is NOT yet a queryable tag (2026-06-01 audit Open item 2), so treat as approximate"
+    },
+    "fields": {
+      "gold_cell": "coordinate of primary_template_id — the single intended cell (null for content-gap queries)",
+      "acceptable_cells": "coordinate of each acceptable id — the multi-valid spread of cells that are also correct",
+      "near_miss_cells": "coordinate of each near-miss + axis_mismatch = which of [subject, info_type, layout] it diverges from gold_cell on",
+      "_subject_source": "canonical | raw-fallback | MISSING — flags weak/absent subject coordinates for review",
+      "_info_type_source": "taxonomy | MISSING"
+    },
+    "caveat": "Coordinates are derived from the shipped catalog taxonomy (facts), not from any router, so they do not contaminate a KB/router eval. But the base labels (acceptable_template_ids) are still a Claude draft pending human review — see vir-routing-eval-v1-review-checklist.md."
+  },
+  "review_status": "claude-draft-pending-human-review",
+  "label_legend": {
+    "ambiguity": "low = subject+format both explicit (one route family); medium = subject clear, format implied; high = broad/polysemous, gold is a set",
+    "acceptable_template_ids": "any of these counts as a correct route (top-k hit)",
+    "primary_template_id": "single best route, or null on tie/gap",
+    "near_miss_template_ids": "adjacent templates that look right but are subject/format-mismatched; NOT correct answers (used for diagnostics)"
+  },
+  "queries": [
+    {
+      "query": "单词",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-vocabulary",
+        "template-word-scene",
+        "template-kids-vocabulary-poster",
+        "template-mbti-animal"
+      ],
+      "primary_template_id": "template-vocabulary",
+      "near_miss_template_ids": [
+        "template-species-science",
+        "template-language-word-comparison-educational-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "Bare polysemous noun 'word/vocabulary'; gold is a set of word-card routes. vocabulary is the most general bilingual word-card generator; mbti-animal qualifies via its animal-vocab aliases; species-science is more biology than vocab (near-miss).",
+      "evidence": "template-vocabulary params [language_pair,topic_name], title 'Bilingual Vocabulary Visual Guide'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-vocabulary",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-word-scene",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-animal",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-species-science",
+            "subjects": [
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "information-card",
+              "insight"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type"
+            ]
+          },
+          {
+            "template_id": "template-language-word-comparison-educational-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "comparison",
+              "vocabulary"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "卡通",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-education-card",
+        "template-mbti-contrast",
+        "template-travel"
+      ],
+      "primary_template_id": null,
+      "near_miss_template_ids": [
+        "template-mbti-animal"
+      ],
+      "canonical_slots": {},
+      "rationale": "'Cartoon' is a bare style word, not a subject; many cartoon-rendered templates are equally valid with no single best route (tie). education-card offers 'cute cartoon style'; mbti-contrast and travel are hand-drawn cartoon styles.",
+      "evidence": "template-education-card description 'cute cartoon style', topics include 'cartoon'; template-mbti-contrast aliases include '卡通风格'.",
+      "ontology": {
+        "gold_cell": null,
+        "gold_cell_source": "content-gap-no-cell",
+        "acceptable_cells": [
+          {
+            "template_id": "template-education-card",
+            "subjects": [
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "information-card"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-contrast",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "comparison",
+              "quiz"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-travel",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-mbti-animal",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "吉伊卡哇",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [],
+      "primary_template_id": null,
+      "near_miss_template_ids": [
+        "template-cartoon-character-profile-card-kawaii-style",
+        "template-custom-character-card"
+      ],
+      "canonical_slots": {},
+      "rationale": "True content gap: Chiikawa is a specific licensed kawaii franchise no template generates; bigram '卡哇' only surfaces generic kawaii inspirations (intent mismatch). Honest no-route is the gold.",
+      "evidence": "No KB template carries Chiikawa/吉伊卡哇 in samples or aliases; only generic kawaii character-card templates exist.",
+      "ontology": {
+        "gold_cell": null,
+        "gold_cell_source": "content-gap-no-cell",
+        "acceptable_cells": [],
+        "near_miss_cells": [
+          {
+            "template_id": "template-cartoon-character-profile-card-kawaii-style",
+            "subjects": [
+              "character"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-custom-character-card",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "家居装饰",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-interior-design-mood-board-generator",
+        "template-soft-decoration-design-guide",
+        "template-houseplant-care-guide-infographic"
+      ],
+      "primary_template_id": "template-interior-design-mood-board-generator",
+      "near_miss_template_ids": [
+        "template-product-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "'Home decoration' names interior-decor subject; both seeds carry the literal '家居装饰' alias; houseplant-care-guide is a decor-adjacent fit.",
+      "evidence": "template-interior-design-mood-board-generator aliases include '家居装饰','室内装饰'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-interior-design-mood-board-generator",
+          "subjects": [
+            "design"
+          ],
+          "info_types": [
+            "collection"
+          ],
+          "layout": "mood-board",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-interior-design-mood-board-generator",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "mood-board",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-soft-decoration-design-guide",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "guide-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-houseplant-care-guide-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-product-poster",
+            "subjects": [
+              "product"
+            ],
+            "info_types": [],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "工程",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-industrial-design-concept-sketch",
+        "template-educational-career-field-infographic",
+        "template-architecture"
+      ],
+      "primary_template_id": "template-industrial-design-concept-sketch",
+      "near_miss_template_ids": [
+        "template-mbti-siliconvalley"
+      ],
+      "canonical_slots": {},
+      "rationale": "'Engineering' fits industrial-design (engineering blueprints, '工程草图/工程图' aliases) and career-field (Industrial Engineering). Dropped seed mbti-siliconvalley (generates MBTI personas of tech founders, not engineering).",
+      "evidence": "template-industrial-design-concept-sketch aliases '工业设计','工程草图'; career-field samples 'Industrial Engineering'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-industrial-design-concept-sketch",
+          "subjects": [
+            "design"
+          ],
+          "info_types": [],
+          "layout": "poster",
+          "_subject_source": "canonical",
+          "_info_type_source": "MISSING",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-industrial-design-concept-sketch",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-educational-career-field-infographic",
+            "subjects": [
+              "learning"
+            ],
+            "info_types": [
+              "information-card",
+              "insight",
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-architecture",
+            "subjects": [
+              "learning"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-mbti-siliconvalley",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "植物",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-species-science",
+        "template-herbal",
+        "template-gardening-how-to-infographic"
+      ],
+      "primary_template_id": "template-species-science",
+      "near_miss_template_ids": [
+        "template-country-souvenirs-watercolor",
+        "template-CVC-english-word-coloring-flower-card"
+      ],
+      "canonical_slots": {},
+      "rationale": "Bare domain noun 'plants' with multiple valid plant-subject routes. species-science covers plant species, herbal medicinal plants, gardening plant care.",
+      "evidence": "template-species-science samples 'ginkgo tree','golden camellia', aliases '植物学'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-species-science",
+          "subjects": [
+            "learning",
+            "science"
+          ],
+          "info_types": [
+            "information-card",
+            "insight"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-species-science",
+            "subjects": [
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "information-card",
+              "insight"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-herbal",
+            "subjects": [
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "information-card"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-gardening-how-to-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-country-souvenirs-watercolor",
+            "subjects": [
+              "culture",
+              "design",
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type"
+            ]
+          },
+          {
+            "template_id": "template-CVC-english-word-coloring-flower-card",
+            "subjects": [
+              "learning",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "水果中文",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-vocabulary",
+        "template-cuisine-food-vocab-poster"
+      ],
+      "primary_template_id": "template-vocabulary",
+      "near_miss_template_ids": [
+        "template-kids-vocabulary-poster"
+      ],
+      "canonical_slots": {
+        "topic_name": "Fruits"
+      },
+      "rationale": "'Fruits Chinese' = bilingual fruit vocabulary; vocabulary generates en-zh 'Fruits' cards directly; cuisine-food-vocab covers the fruit subject. expected='empty' is a tokenization bug, not a true content gap.",
+      "evidence": "template-vocabulary samples include 'Fruits' and language_pair 'en-zh'; aliases 'chinese-english','中英对照'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-vocabulary",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-cuisine-food-vocab-poster",
+            "subjects": [
+              "food",
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "电商详情图",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-fashion-ecommerce",
+        "template-product-poster",
+        "template-product-theme-promotional-poster"
+      ],
+      "primary_template_id": "template-fashion-ecommerce",
+      "near_miss_template_ids": [
+        "template-food-product-packaging-design"
+      ],
+      "canonical_slots": {},
+      "rationale": "'E-commerce detail image' names subject and artifact precisely; fashion-ecommerce generates e-commerce detail-page long images; product-poster/product-theme-promotional are adjacent commercial visuals.",
+      "evidence": "template-fashion-ecommerce description 'suitable for e-commerce detail pages'; aliases '电商','e-commerce'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-fashion-ecommerce",
+          "subjects": [
+            "design",
+            "product"
+          ],
+          "info_types": [
+            "profile"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-fashion-ecommerce",
+            "subjects": [
+              "design",
+              "product"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-product-poster",
+            "subjects": [
+              "product"
+            ],
+            "info_types": [],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-product-theme-promotional-poster",
+            "subjects": [
+              "design",
+              "product"
+            ],
+            "info_types": [],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-food-product-packaging-design",
+            "subjects": [
+              "design",
+              "product"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          }
+        ]
+      }
+    },
+    {
+      "query": "自行车",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-bilingual-object-structure-labeling",
+        "template-vocabulary",
+        "template-travel-packing-guide-infographic"
+      ],
+      "primary_template_id": "template-bilingual-object-structure-labeling",
+      "near_miss_template_ids": [
+        "template-fashion-ecommerce"
+      ],
+      "canonical_slots": {
+        "object_name": "Bicycle"
+      },
+      "rationale": "'Bicycle' has dedicated bike content post-2026-05-20 batch: object-structure-labeling (mountain/road-bike anatomy labels), vocabulary (en-zh/en-fr cycling vocab), travel-packing-guide (cycling tour packing). Subject clear, format implied -> medium.",
+      "evidence": "template-bilingual-object-structure-labeling param object_name with bike/anatomy samples; template-vocabulary has en-zh/en-fr cycling word cards.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-bilingual-object-structure-labeling",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-bilingual-object-structure-labeling",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-travel-packing-guide-infographic",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-fashion-ecommerce",
+            "subjects": [
+              "design",
+              "product"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "葡萄酒",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-wine-variety-intro-infographic",
+        "template-lifestyle-info-card",
+        "template-regional-alcoholic-drinks-infographic"
+      ],
+      "primary_template_id": "template-wine-variety-intro-infographic",
+      "near_miss_template_ids": [
+        "template-food"
+      ],
+      "canonical_slots": {
+        "wine_name": "Red Wine"
+      },
+      "rationale": "'Wine' has a dedicated wine-variety template (red/white wine, tasting notes); lifestyle-info-card has explicit '葡萄酒品鉴'; regional-alcoholic-drinks is the regional alcohol route.",
+      "evidence": "template-wine-variety-intro-infographic samples 'Red Wine','White Wine','Champagne'; lifestyle-info-card alias '葡萄酒品鉴'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-wine-variety-intro-infographic",
+          "subjects": [
+            "food",
+            "lifestyle"
+          ],
+          "info_types": [
+            "collection",
+            "information-card",
+            "process"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-wine-variety-intro-infographic",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection",
+              "information-card",
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-lifestyle-info-card",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "information-card",
+              "process"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-regional-alcoholic-drinks-infographic",
+            "subjects": [
+              "culture",
+              "food",
+              "travel"
+            ],
+            "info_types": [
+              "collection",
+              "information-card"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-food",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "蔬菜",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-vocabulary",
+        "template-kids-vocabulary-poster",
+        "template-gardening-how-to-infographic"
+      ],
+      "primary_template_id": "template-vocabulary",
+      "near_miss_template_ids": [
+        "template-word-scene"
+      ],
+      "canonical_slots": {
+        "topic_name": "vegetables"
+      },
+      "rationale": "'Vegetables' generated directly as a vocab theme and a gardening subject. Dropped seed word-scene (generates labeled scenes, not a vegetables subject card).",
+      "evidence": "template-kids-vocabulary-poster samples 'vegetables', alias '蔬菜'; gardening-how-to samples 'carrots','lettuce','tomatoes'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-vocabulary",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-gardening-how-to-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-word-scene",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          }
+        ]
+      }
+    },
+    {
+      "query": "词汇",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-vocabulary",
+        "template-kids-vocabulary-poster",
+        "template-mbti-animal",
+        "template-language-word-comparison-educational-poster"
+      ],
+      "primary_template_id": "template-vocabulary",
+      "near_miss_template_ids": [
+        "template-word-scene"
+      ],
+      "canonical_slots": {},
+      "rationale": "Bare 'vocabulary' domain word; gold is a set of word-card routes. vocabulary is canonical; kids-vocabulary-poster and language-word-comparison are dedicated vocab posters; mbti-animal qualifies via animal-vocab aliases.",
+      "evidence": "template-vocabulary title 'Bilingual Vocabulary Visual Guide'; kids-vocabulary-poster alias '词汇学习'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-vocabulary",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-animal",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-language-word-comparison-educational-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "comparison",
+              "vocabulary"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-word-scene",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          }
+        ]
+      }
+    },
+    {
+      "query": "趣味经济学知识科普",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-education-card",
+        "template-hotspot-card"
+      ],
+      "primary_template_id": "template-education-card",
+      "near_miss_template_ids": [
+        "template-species-science",
+        "template-weird-science-facts-infographic"
+      ],
+      "canonical_slots": {
+        "topic": "economics"
+      },
+      "rationale": "'Interesting economics knowledge popularization' is a science/knowledge-popularization infographic; education-card turns any topic into a Chinese 科普 card; hotspot-card covers knowledge cards. No economics-specific template exists (open gap).",
+      "evidence": "template-education-card description 'Turn an input topic into a Chinese educational infographic', aliases '科学知识','信息图'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-education-card",
+          "subjects": [
+            "learning",
+            "science"
+          ],
+          "info_types": [
+            "information-card"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-education-card",
+            "subjects": [
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "information-card"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-hotspot-card",
+            "subjects": [
+              "learning"
+            ],
+            "info_types": [
+              "information-card"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-species-science",
+            "subjects": [
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "information-card",
+              "insight"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          },
+          {
+            "template_id": "template-weird-science-facts-infographic",
+            "subjects": [
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "insight"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "音乐",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-music-style-visual-infographic",
+        "template-vocabulary"
+      ],
+      "primary_template_id": "template-music-style-visual-infographic",
+      "near_miss_template_ids": [
+        "template-movie-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "'Music' served directly by music-style infographic (jazz/kpop/rock); vocabulary covers 'Musical Instruments'. Dropped seed movie-poster (subject is films, not music).",
+      "evidence": "template-music-style-visual-infographic samples 'jazz musician','kpop idol','rock star', aliases '音乐海报'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-music-style-visual-infographic",
+          "subjects": [
+            "design"
+          ],
+          "info_types": [
+            "collection"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-music-style-visual-infographic",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-movie-poster",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "食物",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-cuisine-food-vocab-poster",
+        "template-food",
+        "template-vocabulary",
+        "template-bilingual-object-structure-labeling"
+      ],
+      "primary_template_id": "template-cuisine-food-vocab-poster",
+      "near_miss_template_ids": [
+        "template-varieties-food-poster",
+        "template-fruit"
+      ],
+      "canonical_slots": {},
+      "rationale": "Bare 'food' domain word with many valid food routes. cuisine-food-vocab and vocabulary cover food vocab, food is a culinary science panorama, bilingual-object-structure-labeling labels foods.",
+      "evidence": "template-cuisine-food-vocab-poster description 'bilingual food vocabulary posters'; bilingual-object-structure-labeling samples 'Hamburger','Pepperoni Pizza'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-cuisine-food-vocab-poster",
+          "subjects": [
+            "food",
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "flashcard",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-cuisine-food-vocab-poster",
+            "subjects": [
+              "food",
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-food",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-bilingual-object-structure-labeling",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-varieties-food-poster",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection",
+              "information-card"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-fruit",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "香薰",
+      "locale": "zh",
+      "source": "user-2026-05-20",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-product-poster",
+        "template-soft-decoration-design-guide",
+        "template-interior-design-mood-board-generator",
+        "template-lifestyle-info-card"
+      ],
+      "primary_template_id": "template-product-poster",
+      "near_miss_template_ids": [
+        "template-herbal"
+      ],
+      "canonical_slots": {
+        "product_name": "Aromatherapy Diffuser"
+      },
+      "rationale": "'Aromatherapy/scented candle' covered by 4 dedicated examples: product-poster (aroma diffuser), soft-decoration & interior-design (aromatherapy spa space), lifestyle-info-card (essential oils).",
+      "evidence": "template-product-poster samples 'aroma diffuser'; soft-decoration aliases '香薰','精油','aromatherapy'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-product-poster",
+          "subjects": [
+            "product"
+          ],
+          "info_types": [],
+          "layout": "poster",
+          "_subject_source": "canonical",
+          "_info_type_source": "MISSING",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-product-poster",
+            "subjects": [
+              "product"
+            ],
+            "info_types": [],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-soft-decoration-design-guide",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "guide-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-interior-design-mood-board-generator",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "mood-board",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-lifestyle-info-card",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "information-card",
+              "process"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-herbal",
+            "subjects": [
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "information-card"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "historical character",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-figure-principles-infographic",
+        "template-historical-figure-educational",
+        "template-historical-figure-profile-infographic"
+      ],
+      "primary_template_id": "template-figure-principles-infographic",
+      "near_miss_template_ids": [
+        "template-historical-figure-vs-infographic",
+        "template-costume"
+      ],
+      "canonical_slots": {},
+      "rationale": "Subject is a historical person; multiple dedicated historical-figure routes exist. figure-principles takes a single famous_figure (Einstein, da Vinci) matching 'historical · character_name'.",
+      "evidence": "template-figure-principles-infographic param [famous_figure], samples 'albert einstein','leonardo da vinci'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-figure-principles-infographic",
+          "subjects": [
+            "history",
+            "learning",
+            "science"
+          ],
+          "info_types": [
+            "insight",
+            "timeline"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-figure-principles-infographic",
+            "subjects": [
+              "history",
+              "learning",
+              "science"
+            ],
+            "info_types": [
+              "insight",
+              "timeline"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-historical-figure-educational",
+            "subjects": [
+              "character",
+              "history",
+              "learning"
+            ],
+            "info_types": [
+              "insight",
+              "profile",
+              "timeline"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-historical-figure-profile-infographic",
+            "subjects": [
+              "character",
+              "history",
+              "learning"
+            ],
+            "info_types": [
+              "profile",
+              "timeline"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-historical-figure-vs-infographic",
+            "subjects": [
+              "character",
+              "history"
+            ],
+            "info_types": [
+              "comparison",
+              "timeline"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-costume",
+            "subjects": [
+              "culture"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "future characters",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-mbti-siliconvalley",
+        "template-custom-character-card"
+      ],
+      "primary_template_id": "template-mbti-siliconvalley",
+      "near_miss_template_ids": [
+        "template-character",
+        "template-constellation-steampunk"
+      ],
+      "canonical_slots": {},
+      "rationale": "'Future characters' maps to sci-fi/AI/tech personas; mbti-siliconvalley generates AI-model and tech-founder characters; custom-character-card builds archetype/cinematic cards. No dedicated sci-fi character generator exists.",
+      "evidence": "template-mbti-siliconvalley samples 'ChatGPT','Claude','Gemini', topics include 'ai'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-mbti-siliconvalley",
+          "subjects": [
+            "character",
+            "mbti"
+          ],
+          "info_types": [
+            "quiz"
+          ],
+          "layout": "character-card",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-mbti-siliconvalley",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-custom-character-card",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-character",
+            "subjects": [
+              "character"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-constellation-steampunk",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "homophones and homonyms",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-english-grammar-wordlist-infographic"
+      ],
+      "primary_template_id": "template-english-grammar-wordlist-infographic",
+      "near_miss_template_ids": [
+        "template-english-homograph-educational-poster"
+      ],
+      "canonical_slots": {
+        "topic": "20 common homophones"
+      },
+      "rationale": "Capability override of the note's gap claim: english-grammar-wordlist-infographic explicitly generates homophone/homonym word-pair infographics (samples literally '20 common homophones'/'20 common homonyms'). homograph poster is near-miss (same spelling, not sound).",
+      "evidence": "template-english-grammar-wordlist-infographic description 'homophones, homonyms, confusing word pairs'; samples '20 common homonyms','20 common homophones 1'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-english-grammar-wordlist-infographic",
+          "subjects": [
+            "language",
+            "learning",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-english-grammar-wordlist-infographic",
+            "subjects": [
+              "language",
+              "learning",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-english-homograph-educational-poster",
+            "subjects": [
+              "language",
+              "learning",
+              "vocabulary"
+            ],
+            "info_types": [
+              "comparison",
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "english-chinese",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-vocabulary",
+        "template-word-scene",
+        "template-bilingual-object-structure-labeling",
+        "template-language-word-comparison-educational-poster"
+      ],
+      "primary_template_id": "template-vocabulary",
+      "near_miss_template_ids": [
+        "template-cuisine-food-vocab-poster",
+        "template-kids-vocabulary-poster"
+      ],
+      "canonical_slots": {
+        "language_pair": "en-zh"
+      },
+      "rationale": "Bilingual en-zh tag slug; gold is a set of templates with explicit english-chinese language_pair capability. vocabulary is canonical; word-scene, bilingual labeling, language-word-comparison all carry en-zh.",
+      "evidence": "template-vocabulary param language_pair sample 'en-zh', aliases 'english-chinese','中英对照'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-vocabulary",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-word-scene",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-bilingual-object-structure-labeling",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-language-word-comparison-educational-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "comparison",
+              "vocabulary"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-cuisine-food-vocab-poster",
+            "subjects": [
+              "food",
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "language learning expressions",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-native-english-expressions",
+        "template-english-phrasal-verb",
+        "template-english-top5-phrases",
+        "template-chinese-idiom-learning-card"
+      ],
+      "primary_template_id": "template-native-english-expressions",
+      "near_miss_template_ids": [
+        "template-english-dialogue-scene",
+        "template-slang-week-recap-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "Broad language-learning domain phrase resolving to a set of phrase/idiom/expression learning-card templates; native-english-expressions is the most literal fit. Antonym seeds are off-subject for 'expressions'.",
+      "evidence": "template-native-english-expressions title 'Native English Expressions Posters'; phrasal-verb/top5-phrases generate idiom/phrase cards.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-native-english-expressions",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "dialogue",
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-native-english-expressions",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "dialogue",
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-english-phrasal-verb",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-english-top5-phrases",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "collection",
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-chinese-idiom-learning-card",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-english-dialogue-scene",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "dialogue",
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          },
+          {
+            "template_id": "template-slang-week-recap-infographic",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "insight",
+              "vocabulary"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "global influence",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-national-culture-history-infographic",
+        "template-country-souvenirs-watercolor",
+        "template-cultural-travel-journey-infographic",
+        "template-east-asian-culture-comparison-infographic"
+      ],
+      "primary_template_id": "template-national-culture-history-infographic",
+      "near_miss_template_ids": [
+        "template-city-mbti",
+        "template-national-theme-map-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "Bare polysemous phrase routed to clean country/culture-themed templates per the post-prune intent; universe-specific MBTI templates correctly excluded as off-subject.",
+      "evidence": "template-national-culture-history-infographic samples 'china, france, italy, japan, united kingdom'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-national-culture-history-infographic",
+          "subjects": [
+            "culture",
+            "history",
+            "learning"
+          ],
+          "info_types": [
+            "information-card",
+            "insight",
+            "timeline"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-national-culture-history-infographic",
+            "subjects": [
+              "culture",
+              "history",
+              "learning"
+            ],
+            "info_types": [
+              "information-card",
+              "insight",
+              "timeline"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-country-souvenirs-watercolor",
+            "subjects": [
+              "culture",
+              "design",
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-cultural-travel-journey-infographic",
+            "subjects": [
+              "culture",
+              "history",
+              "learning",
+              "travel"
+            ],
+            "info_types": [
+              "timeline"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-east-asian-culture-comparison-infographic",
+            "subjects": [
+              "culture"
+            ],
+            "info_types": [
+              "comparison"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-city-mbti",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "profile",
+              "quiz"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-national-theme-map-infographic",
+            "subjects": [
+              "learning"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "remote destination",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-travel",
+        "template-series-travel",
+        "template-country-top10-travel-destinations",
+        "template-3d-region-landmark-map"
+      ],
+      "primary_template_id": "template-travel",
+      "near_miss_template_ids": [
+        "template-whimsical-travel-map",
+        "template-best-cities-travel-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "Travel-destination domain phrase covered by the travel map / destination / itinerary family; primary is the canonical travel map generator.",
+      "evidence": "template-country-top10-travel-destinations title 'Country Top 10 Travel Destinations Poster'; template-travel 'Hand-drawn Travel Map Generator'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-travel",
+          "subjects": [
+            "travel"
+          ],
+          "info_types": [],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "MISSING",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-travel",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-series-travel",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "carousel",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-country-top10-travel-destinations",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-3d-region-landmark-map",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-whimsical-travel-map",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-best-cities-travel-infographic",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "collection",
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "unique cultural experiences",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-cultural-travel-journey-infographic"
+      ],
+      "primary_template_id": "template-cultural-travel-journey-infographic",
+      "near_miss_template_ids": [
+        "template-country-dos-and-donts-infographic",
+        "template-cultural-festival-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "Note claims a content gap, but by capability cultural-travel-journey-infographic generates cultural-experience content (cultural immersion / maori cultural experience), so it is a genuine single route.",
+      "evidence": "template-cultural-travel-journey-infographic alias 'cultural immersion', samples 'maori cultural experience','japanese tea ceremony'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-cultural-travel-journey-infographic",
+          "subjects": [
+            "culture",
+            "history",
+            "learning",
+            "travel"
+          ],
+          "info_types": [
+            "timeline"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-cultural-travel-journey-infographic",
+            "subjects": [
+              "culture",
+              "history",
+              "learning",
+              "travel"
+            ],
+            "info_types": [
+              "timeline"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-country-dos-and-donts-infographic",
+            "subjects": [
+              "culture",
+              "travel"
+            ],
+            "info_types": [
+              "collection",
+              "insight",
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type"
+            ]
+          },
+          {
+            "template_id": "template-cultural-festival-poster",
+            "subjects": [
+              "culture",
+              "learning"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "short city escapes",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-series-travel",
+        "template-best-cities-travel-infographic",
+        "template-city-miniature"
+      ],
+      "primary_template_id": "template-series-travel",
+      "near_miss_template_ids": [
+        "template-architecture",
+        "template-3d-region-landmark-map",
+        "template-travel"
+      ],
+      "canonical_slots": {},
+      "rationale": "Intent is short city itineraries/getaways; series-travel (daily trip plans) and best-cities-travel fit. Architectural 3D-model hits are the flagged intent mismatch (near-miss).",
+      "evidence": "template-series-travel title 'AI Travel Itinerary Planner (Daily Plans)'; best-cities-travel-infographic = best-cities guide.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-series-travel",
+          "subjects": [
+            "travel"
+          ],
+          "info_types": [
+            "collection"
+          ],
+          "layout": "carousel",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-series-travel",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "carousel",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-best-cities-travel-infographic",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "collection",
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-city-miniature",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-architecture",
+            "subjects": [
+              "learning"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-3d-region-landmark-map",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-travel",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "creative comfort food",
+      "locale": "en",
+      "source": "reddit",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-cuisine-food-vocab-poster",
+        "template-recipe",
+        "template-food",
+        "template-varieties-food-poster"
+      ],
+      "primary_template_id": "template-cuisine-food-vocab-poster",
+      "near_miss_template_ids": [
+        "template-premium-recipe-card-infographic",
+        "template-food-recipe-tip-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "Recipe/cuisine/comfort-food family; cuisine-food-vocab-poster carries the exact 'creative comfort food' alias making it the best route.",
+      "evidence": "template-cuisine-food-vocab-poster aliases include 'comfort food' and 'creative comfort food'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-cuisine-food-vocab-poster",
+          "subjects": [
+            "food",
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "flashcard",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-cuisine-food-vocab-poster",
+            "subjects": [
+              "food",
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-recipe",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "guide-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-food",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-varieties-food-poster",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection",
+              "information-card"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-premium-recipe-card-infographic",
+            "subjects": [
+              "design",
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-food-recipe-tip-infographic",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "唯美春天",
+      "locale": "zh",
+      "source": "user-report-2026-05-18",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-CVC-english-word-coloring-flower-card",
+        "template-gardening-how-to-infographic",
+        "template-country-souvenirs-watercolor",
+        "template-lifestyle-watercolor-infographic"
+      ],
+      "primary_template_id": "template-CVC-english-word-coloring-flower-card",
+      "near_miss_template_ids": [
+        "template-country-top10-travel-destinations",
+        "template-poetry-ink-wash-illustration"
+      ],
+      "canonical_slots": {},
+      "rationale": "'Beautiful spring' -> watercolor floral/garden aesthetic templates; herbal correctly dropped as off-intent medicinal. Flower-card and gardening best deliver spring-flower visuals.",
+      "evidence": "CVC flower-card and gardening-how-to render plant/flower watercolor; note lists country-souvenirs-watercolor + CVC-flower-card + gardening as top.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-CVC-english-word-coloring-flower-card",
+          "subjects": [
+            "learning",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-CVC-english-word-coloring-flower-card",
+            "subjects": [
+              "learning",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-gardening-how-to-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-country-souvenirs-watercolor",
+            "subjects": [
+              "culture",
+              "design",
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-lifestyle-watercolor-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "insight"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-country-top10-travel-destinations",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-poetry-ink-wash-illustration",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [
+              "quote"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "证件照",
+      "locale": "zh",
+      "source": "user-report-2026-05-18",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [],
+      "primary_template_id": null,
+      "near_miss_template_ids": [
+        "template-lifestyle-photo-grid",
+        "template-fashion-ecommerce"
+      ],
+      "canonical_slots": {},
+      "rationale": "Content gap: no template generates ID/passport-photo or portrait-retouching output. The 16 post-topup hits are a CJK-bigram matcher artifact, not real capability, so honest gold is no route.",
+      "evidence": "Full-KB scan for 证件/id-photo/passport/headshot/retouch surfaces no portrait-retouching template.",
+      "ontology": {
+        "gold_cell": null,
+        "gold_cell_source": "content-gap-no-cell",
+        "acceptable_cells": [],
+        "near_miss_cells": [
+          {
+            "template_id": "template-lifestyle-photo-grid",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-fashion-ecommerce",
+            "subjects": [
+              "design",
+              "product"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "手作",
+      "locale": "zh",
+      "source": "user-report-2026-05-18",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-intangible-heritage"
+      ],
+      "primary_template_id": "template-intangible-heritage",
+      "near_miss_template_ids": [
+        "template-vintage-travel-scrapbook-poster",
+        "template-watercolor-theme-collage-illustration"
+      ],
+      "canonical_slots": {},
+      "rationale": "'Handcraft/handmade' resolves to the intangible-heritage craft board; the multilingual-vocabulary seed correctly dropped as off-subject (vocab, not craft).",
+      "evidence": "template-intangible-heritage aliases 手工艺/手工制作/craftsmanship/paper craft, sample 'paper cutting'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-intangible-heritage",
+          "subjects": [
+            "culture"
+          ],
+          "info_types": [
+            "information-card"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-intangible-heritage",
+            "subjects": [
+              "culture"
+            ],
+            "info_types": [
+              "information-card"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-vintage-travel-scrapbook-poster",
+            "subjects": [
+              "lifestyle",
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "collage",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-watercolor-theme-collage-illustration",
+            "subjects": [
+              "design",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "collage",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "mbti marvel",
+      "locale": "en",
+      "source": "popular",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-mbti-marvel"
+      ],
+      "primary_template_id": "template-mbti-marvel",
+      "near_miss_template_ids": [
+        "template-mbti-generic"
+      ],
+      "canonical_slots": {},
+      "rationale": "Exact subject+format match to the dedicated Marvel MBTI template.",
+      "evidence": "template-mbti-marvel 'MBTI Marvel Superhero Infographic Generator', ex=66.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-mbti-marvel",
+          "subjects": [
+            "character",
+            "mbti"
+          ],
+          "info_types": [
+            "quiz"
+          ],
+          "layout": "character-card",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-mbti-marvel",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-mbti-generic",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          }
+        ]
+      }
+    },
+    {
+      "query": "spring flowers",
+      "locale": "en",
+      "source": "popular",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-CVC-english-word-coloring-flower-card",
+        "template-gardening-how-to-infographic",
+        "template-watercolor-theme-collage-illustration",
+        "template-lifestyle-watercolor-infographic"
+      ],
+      "primary_template_id": "template-gardening-how-to-infographic",
+      "near_miss_template_ids": [
+        "template-country-souvenirs-watercolor",
+        "template-watercolor-painting-tutorial-guide"
+      ],
+      "canonical_slots": {},
+      "rationale": "Watercolor + gardening floral templates; herbal correctly dropped per prune. Gardening and flower-card directly render spring flowers.",
+      "evidence": "template-gardening-how-to-infographic 'Gardening DIY Visual Guide'; CVC flower-card = flower cards.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-gardening-how-to-infographic",
+          "subjects": [
+            "lifestyle"
+          ],
+          "info_types": [
+            "process"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-CVC-english-word-coloring-flower-card",
+            "subjects": [
+              "learning",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-gardening-how-to-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-watercolor-theme-collage-illustration",
+            "subjects": [
+              "design",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "collage",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-lifestyle-watercolor-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "insight"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-country-souvenirs-watercolor",
+            "subjects": [
+              "culture",
+              "design",
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-watercolor-painting-tutorial-guide",
+            "subjects": [
+              "design",
+              "learning"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "guide-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "反义词",
+      "locale": "zh",
+      "source": "popular",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-chinese-verb-opposite-infographic",
+        "template-kids-opposite-concept-education"
+      ],
+      "primary_template_id": "template-chinese-verb-opposite-infographic",
+      "near_miss_template_ids": [
+        "template-mbti-contrast",
+        "template-language-word-comparison-educational-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "'Antonyms' is a linguistic-opposites query; the two opposite-word templates fit. mbti-contrast correctly dropped (personality opposites != antonyms).",
+      "evidence": "template-chinese-verb-opposite-infographic 'Chinese Verb Opposites: Learn Antonym Pairs'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-chinese-verb-opposite-infographic",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "comparison",
+            "vocabulary"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-chinese-verb-opposite-infographic",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "comparison",
+              "vocabulary"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-kids-opposite-concept-education",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "comparison",
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-mbti-contrast",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "comparison",
+              "quiz"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-language-word-comparison-educational-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "comparison",
+              "vocabulary"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "paper cutting",
+      "locale": "en",
+      "source": "popular",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-intangible-heritage"
+      ],
+      "primary_template_id": "template-intangible-heritage",
+      "near_miss_template_ids": [
+        "template-cultural-relic-retro-infographic",
+        "template-guofeng-scroll"
+      ],
+      "canonical_slots": {
+        "craft_name": "paper cutting"
+      },
+      "rationale": "Paper cutting is a core sample of the intangible-heritage craft board; clothing-evolution-poster seed is off-subject and dropped.",
+      "evidence": "template-intangible-heritage sample_param_values include 'paper cutting', aliases jianzhi/kirigami/剪纸.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-intangible-heritage",
+          "subjects": [
+            "culture"
+          ],
+          "info_types": [
+            "information-card"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-intangible-heritage",
+            "subjects": [
+              "culture"
+            ],
+            "info_types": [
+              "information-card"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-cultural-relic-retro-infographic",
+            "subjects": [
+              "culture"
+            ],
+            "info_types": [
+              "information-card"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-guofeng-scroll",
+            "subjects": [
+              "culture"
+            ],
+            "info_types": [
+              "profile",
+              "story"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "met gala",
+      "locale": "en",
+      "source": "gsc-zero",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-fashion-inspired-gown-design-sheet",
+        "template-ai-outfit-try-on-poster"
+      ],
+      "primary_template_id": "template-fashion-inspired-gown-design-sheet",
+      "near_miss_template_ids": [
+        "template-fashion-ecommerce",
+        "template-personal-fashion-outfit-style-variations"
+      ],
+      "canonical_slots": {},
+      "rationale": "Red-carpet/couture fashion query; the two templates carrying explicit met-gala/red-carpet/couture aliases truly fit.",
+      "evidence": "fashion-inspired-gown-design-sheet and ai-outfit-try-on-poster aliases include met gala / red carpet / couture / 红毯.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-fashion-inspired-gown-design-sheet",
+          "subjects": [
+            "design",
+            "fashion",
+            "lifestyle"
+          ],
+          "info_types": [
+            "insight",
+            "profile"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-fashion-inspired-gown-design-sheet",
+            "subjects": [
+              "design",
+              "fashion",
+              "lifestyle"
+            ],
+            "info_types": [
+              "insight",
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-ai-outfit-try-on-poster",
+            "subjects": [
+              "fashion",
+              "lifestyle"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-fashion-ecommerce",
+            "subjects": [
+              "design",
+              "product"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          },
+          {
+            "template_id": "template-personal-fashion-outfit-style-variations",
+            "subjects": [
+              "fashion",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          }
+        ]
+      }
+    },
+    {
+      "query": "动物 词汇",
+      "locale": "zh",
+      "source": "synthetic",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-kids-vocabulary-poster",
+        "template-cartoon-english-vocabulary-flashcards",
+        "template-vocabulary",
+        "template-bilingual-object-structure-labeling"
+      ],
+      "primary_template_id": "template-kids-vocabulary-poster",
+      "near_miss_template_ids": [
+        "template-children-english-vocab-spelling",
+        "template-group-vocab-category"
+      ],
+      "canonical_slots": {
+        "theme_name": "Animals"
+      },
+      "rationale": "'Animal + vocabulary' -> bilingual vocab posters/flashcards; vocab parent re-added via animal-topic filter. Kids watercolor vocab poster is the cleanest animal-vocab fit.",
+      "evidence": "template-vocabulary sample topics include 'Farm Animals'; kids-vocabulary-poster = bilingual watercolor kids vocab.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-kids-vocabulary-poster",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "poster",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-cartoon-english-vocabulary-flashcards",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-bilingual-object-structure-labeling",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-children-english-vocab-spelling",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-group-vocab-category",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "collection",
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "wedding planner",
+      "locale": "en",
+      "source": "synthetic",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [],
+      "primary_template_id": null,
+      "near_miss_template_ids": [
+        "template-relationship-advice-infographic",
+        "template-cultural-festival-poster",
+        "template-lifestyle-info-card"
+      ],
+      "canonical_slots": {},
+      "rationale": "Content gap: no template generates wedding-planning/celebration content. The vocab-parent hit was a heterogeneous false positive; remaining matches are off-subject, so honest gold is no route.",
+      "evidence": "Full-KB scan for wedding/婚礼/bride/marriage surfaces no wedding-subject generator; expected_templates='empty'.",
+      "ontology": {
+        "gold_cell": null,
+        "gold_cell_source": "content-gap-no-cell",
+        "acceptable_cells": [],
+        "near_miss_cells": [
+          {
+            "template_id": "template-relationship-advice-infographic",
+            "subjects": [
+              "character"
+            ],
+            "info_types": [
+              "insight",
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-cultural-festival-poster",
+            "subjects": [
+              "culture",
+              "learning"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-lifestyle-info-card",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "information-card",
+              "process"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "minimalist autumn outfit for japan travel",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-travel-packing-guide-infographic",
+        "template-fashion-style-outfit-breakdown-infographic",
+        "template-personal-fashion-outfit-style-variations",
+        "template-fashion-ecommerce"
+      ],
+      "primary_template_id": "template-travel-packing-guide-infographic",
+      "near_miss_template_ids": [
+        "template-fashion-inspired-gown-design-sheet",
+        "template-ai-outfit-try-on-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "Outfit-for-travel long-tail; travel-packing-guide best angles 'autumn outfit for japan travel', with outfit-breakdown/style-variation as alternates. Gown-design-sheet (couture) is off-intent for minimalist travel outfits.",
+      "evidence": "template-travel-packing-guide-infographic 'Travel Packing Visual Guide'; outfit-breakdown renders outfit components.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-travel-packing-guide-infographic",
+          "subjects": [
+            "travel"
+          ],
+          "info_types": [
+            "process"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-travel-packing-guide-infographic",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-fashion-style-outfit-breakdown-infographic",
+            "subjects": [
+              "design",
+              "fashion"
+            ],
+            "info_types": [],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-personal-fashion-outfit-style-variations",
+            "subjects": [
+              "fashion",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-fashion-ecommerce",
+            "subjects": [
+              "design",
+              "product"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-fashion-inspired-gown-design-sheet",
+            "subjects": [
+              "design",
+              "fashion",
+              "lifestyle"
+            ],
+            "info_types": [
+              "insight",
+              "profile"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-ai-outfit-try-on-poster",
+            "subjects": [
+              "fashion",
+              "lifestyle"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject",
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "infj vs entp dating compatibility chart",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-mbti-personality-compatibility-infographic",
+        "template-mbti-relationship-infographic",
+        "template-mbti-in-love-infographic",
+        "template-mbti-comparison-infographic"
+      ],
+      "primary_template_id": "template-mbti-personality-compatibility-infographic",
+      "near_miss_template_ids": [
+        "template-mbti-group-comparison-infographic",
+        "template-dual-character-comparison-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "MBTI dating-compatibility query; the dedicated compatibility template is the most literal fit, with relationship/in-love/comparison as valid alternates.",
+      "evidence": "template-mbti-personality-compatibility-infographic 'MBTI Personality Compatibility Infographic'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-mbti-personality-compatibility-infographic",
+          "subjects": [
+            "character",
+            "mbti",
+            "personality"
+          ],
+          "info_types": [
+            "comparison",
+            "quiz"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-mbti-personality-compatibility-infographic",
+            "subjects": [
+              "character",
+              "mbti",
+              "personality"
+            ],
+            "info_types": [
+              "comparison",
+              "quiz"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-relationship-infographic",
+            "subjects": [
+              "character",
+              "mbti",
+              "personality"
+            ],
+            "info_types": [
+              "comparison",
+              "insight",
+              "quiz"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-in-love-infographic",
+            "subjects": [
+              "character",
+              "mbti",
+              "personality"
+            ],
+            "info_types": [
+              "insight",
+              "quiz"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-comparison-infographic",
+            "subjects": [
+              "character",
+              "mbti",
+              "personality"
+            ],
+            "info_types": [
+              "comparison",
+              "quiz"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-mbti-group-comparison-infographic",
+            "subjects": [
+              "character",
+              "mbti",
+              "personality"
+            ],
+            "info_types": [
+              "collection",
+              "comparison",
+              "quiz"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-dual-character-comparison-infographic",
+            "subjects": [
+              "character",
+              "lifestyle"
+            ],
+            "info_types": [
+              "comparison"
+            ],
+            "layout": "vs-battle",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "cuban sandwich recipe poster",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-recipe",
+        "template-varieties-food-poster",
+        "template-food",
+        "template-premium-recipe-card-infographic"
+      ],
+      "primary_template_id": "template-recipe",
+      "near_miss_template_ids": [
+        "template-food-recipe-tip-infographic",
+        "template-cuisine-food-vocab-poster"
+      ],
+      "canonical_slots": {
+        "dish_name": "Cuban sandwich"
+      },
+      "rationale": "Clear dish+recipe-poster intent; recipe is canonical and varieties-food-poster explicitly does sandwiches.",
+      "evidence": "template-varieties-food-poster samples 'Classic American Sandwiches, World Sandwiches'; recipe = recipe posters.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-recipe",
+          "subjects": [
+            "food",
+            "lifestyle"
+          ],
+          "info_types": [
+            "process"
+          ],
+          "layout": "guide-card",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-recipe",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "guide-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-varieties-food-poster",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection",
+              "information-card"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-food",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-premium-recipe-card-infographic",
+            "subjects": [
+              "design",
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-food-recipe-tip-infographic",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-cuisine-food-vocab-poster",
+            "subjects": [
+              "food",
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "bilingual flashcards for kids learning korean fruits",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-vocabulary",
+        "template-kids-vocabulary-poster",
+        "template-cartoon-english-vocabulary-flashcards",
+        "template-children-english-vocab-spelling"
+      ],
+      "primary_template_id": "template-vocabulary",
+      "near_miss_template_ids": [
+        "template-detailed-vocab-flashcard",
+        "template-group-vocab-category"
+      ],
+      "canonical_slots": {
+        "language_pair": "en-ko",
+        "topic_name": "Fruits"
+      },
+      "rationale": "Bilingual kids vocab flashcards for korean fruits; canonical vocabulary supports en-ko + Fruits exactly, with kids/cartoon variants as alternates.",
+      "evidence": "template-vocabulary sample values include 'en-ko' and 'Fruits'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-vocabulary",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-cartoon-english-vocabulary-flashcards",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-children-english-vocab-spelling",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-detailed-vocab-flashcard",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-group-vocab-category",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "collection",
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          }
+        ]
+      }
+    },
+    {
+      "query": "watercolor map of europe travel destinations",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-watercolor-world-map-illustration"
+      ],
+      "primary_template_id": "template-watercolor-world-map-illustration",
+      "near_miss_template_ids": [
+        "template-whimsical-travel-map",
+        "template-watercolor-travel-journal-collage"
+      ],
+      "canonical_slots": {
+        "continent_name": "europe"
+      },
+      "rationale": "Subject is a watercolor continent map of Europe with destinations; watercolor-world-map-illustration is the continent-level watercolor map. Whimsical-travel-map is per-country, journal-collage is expedition-theme (adjacent).",
+      "evidence": "template-watercolor-world-map-illustration samples include 'europe', param continent_name.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-watercolor-world-map-illustration",
+          "subjects": [
+            "learning",
+            "travel"
+          ],
+          "info_types": [
+            "map"
+          ],
+          "layout": "map",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-watercolor-world-map-illustration",
+            "subjects": [
+              "learning",
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-whimsical-travel-map",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          },
+          {
+            "template_id": "template-watercolor-travel-journal-collage",
+            "subjects": [
+              "lifestyle",
+              "travel"
+            ],
+            "info_types": [
+              "collection",
+              "story"
+            ],
+            "layout": "collage",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "monstera plant care guide infographic",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-houseplant-care-guide-infographic"
+      ],
+      "primary_template_id": "template-houseplant-care-guide-infographic",
+      "near_miss_template_ids": [
+        "template-gardening-how-to-infographic"
+      ],
+      "canonical_slots": {
+        "plant_name": "monstera"
+      },
+      "rationale": "houseplant-care-guide-infographic is an exact match (watering/soil/light care) with a monstera example. gardening-how-to covers edible-plant growing steps, not decorative houseplant care (near-miss).",
+      "evidence": "template-houseplant-care-guide-infographic samples include 'monstera' (and pothos, snake plant), param plant_name.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-houseplant-care-guide-infographic",
+          "subjects": [
+            "lifestyle"
+          ],
+          "info_types": [
+            "process"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-houseplant-care-guide-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-gardening-how-to-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          }
+        ]
+      }
+    },
+    {
+      "query": "marvel mbti character chart 16 types",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-mbti-generic",
+        "template-mbti-marvel"
+      ],
+      "primary_template_id": "template-mbti-generic",
+      "near_miss_template_ids": [
+        "template-fandom-character-grid-poster"
+      ],
+      "canonical_slots": {
+        "mbti_topic": "Marvel"
+      },
+      "rationale": "A 16-type MBTI chart themed to Marvel: mbti-generic generates the full 16-type chart with a 'Marvel' character_set; mbti-marvel maps types onto Marvel heroes. fandom-grid is a 3x3 poster, not a 16-type chart (near-miss).",
+      "evidence": "template-mbti-generic samples include 'Marvel'; mbti-marvel samples are Marvel heroes.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-mbti-generic",
+          "subjects": [
+            "character",
+            "mbti"
+          ],
+          "info_types": [
+            "collection",
+            "quiz"
+          ],
+          "layout": "character-card",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-mbti-generic",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-marvel",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-fandom-character-grid-poster",
+            "subjects": [
+              "character",
+              "design"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "lunar new year red envelope graphic design",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-lunar-new-year-red-envelope-set"
+      ],
+      "primary_template_id": "template-lunar-new-year-red-envelope-set",
+      "near_miss_template_ids": [
+        "template-cultural-festival-poster",
+        "template-product-theme-promotional-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "A dedicated lunar-new-year-red-envelope-set template now ships (the note's 'no example yet' is stale), directly generating festive red-envelope design sets.",
+      "evidence": "template-lunar-new-year-red-envelope-set aliases 'lunar new year','新年红包','红包设计'; samples 'Dragon Year Red Envelopes'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-lunar-new-year-red-envelope-set",
+          "subjects": [
+            "culture",
+            "design"
+          ],
+          "info_types": [
+            "collection"
+          ],
+          "layout": "collage",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-lunar-new-year-red-envelope-set",
+            "subjects": [
+              "culture",
+              "design"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "collage",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-cultural-festival-poster",
+            "subjects": [
+              "culture",
+              "learning"
+            ],
+            "info_types": [
+              "profile"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "info_type",
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-product-theme-promotional-poster",
+            "subjects": [
+              "design",
+              "product"
+            ],
+            "info_types": [],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "MISSING",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "1950s vintage diner illustration retro poster",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [],
+      "primary_template_id": null,
+      "near_miss_template_ids": [
+        "template-nostalgic-first-item-poster",
+        "template-watercolor-theme-collage-illustration",
+        "template-vintage-travel-scrapbook-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "Content gap: no template honestly generates a 1950s diner SCENE illustration/retro poster. nostalgic-first-item makes object-collection posters, watercolor-theme-collage makes seasonal mood collages, vintage-travel-scrapbook makes destination scrapbooks — all subject-mismatched.",
+      "evidence": "No KB template carries a diner/1950s-scene sample; nostalgic-first-item samples are gadgets (camera, tv).",
+      "ontology": {
+        "gold_cell": null,
+        "gold_cell_source": "content-gap-no-cell",
+        "acceptable_cells": [],
+        "near_miss_cells": [
+          {
+            "template_id": "template-nostalgic-first-item-poster",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-watercolor-theme-collage-illustration",
+            "subjects": [
+              "design",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "collage",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-vintage-travel-scrapbook-poster",
+            "subjects": [
+              "lifestyle",
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "collage",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "before after kitchen organization makeover",
+      "locale": "en",
+      "source": "progseo-2026-05-26",
+      "ambiguity": "low",
+      "acceptable_template_ids": [
+        "template-home-organization-before-after"
+      ],
+      "primary_template_id": "template-home-organization-before-after",
+      "near_miss_template_ids": [],
+      "canonical_slots": {
+        "space_type": "Kitchen Counter"
+      },
+      "rationale": "Exact canonical match: home-organization-before-after generates before/after organization posters and includes kitchen examples. Narrow but precise.",
+      "evidence": "template-home-organization-before-after samples include 'Kitchen Counter' and literal 'before after kitchen organization makeover'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-home-organization-before-after",
+          "subjects": [
+            "design"
+          ],
+          "info_types": [
+            "comparison"
+          ],
+          "layout": "before-after",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-home-organization-before-after",
+            "subjects": [
+              "design"
+            ],
+            "info_types": [
+              "comparison"
+            ],
+            "layout": "before-after",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": []
+      }
+    },
+    {
+      "query": "phonics worksheets kindergarten",
+      "locale": "en",
+      "source": "pinterest-discovery-2026-05-29",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-phonics-consonant-blend",
+        "template-kids-vocabulary-poster"
+      ],
+      "primary_template_id": "template-phonics-consonant-blend",
+      "near_miss_template_ids": [
+        "template-english-homograph-educational-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "Phonics for kindergarten covered by phonics-consonant-blend (50 examples); kids-vocabulary-poster serves early-learner printables. The note's 'empty' is about the 'worksheets' format token, not the subject.",
+      "evidence": "template-phonics-consonant-blend description 'phonics learning poster', topics 'beginner','language-english'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-phonics-consonant-blend",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-phonics-consonant-blend",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-english-homograph-educational-poster",
+            "subjects": [
+              "language",
+              "learning",
+              "vocabulary"
+            ],
+            "info_types": [
+              "comparison",
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "Spanish vocabulary printable",
+      "locale": "en",
+      "source": "pinterest-discovery-2026-05-29",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-vocabulary"
+      ],
+      "primary_template_id": "template-vocabulary",
+      "near_miss_template_ids": [
+        "template-cartoon-english-vocabulary-flashcards",
+        "template-kids-vocabulary-poster"
+      ],
+      "canonical_slots": {
+        "language_pair": "en-es"
+      },
+      "rationale": "Subject is Spanish vocabulary; template-vocabulary supports the en-es language pair explicitly. Kids/cartoon flashcards are English-Chinese only — subject-mismatched for Spanish (near-miss).",
+      "evidence": "template-vocabulary samples include 'en-es', desc 'any topic and language pair (en-zh, en-es, ...)'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-vocabulary",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "single-image",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-cartoon-english-vocabulary-flashcards",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          },
+          {
+            "template_id": "template-kids-vocabulary-poster",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "ESL flashcards printable",
+      "locale": "en",
+      "source": "pinterest-discovery-2026-05-29",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-cartoon-english-vocabulary-flashcards",
+        "template-vocabulary"
+      ],
+      "primary_template_id": "template-cartoon-english-vocabulary-flashcards",
+      "near_miss_template_ids": [
+        "template-verb-action-learning-cards"
+      ],
+      "canonical_slots": {},
+      "rationale": "ESL = English-as-second-language flashcards; cartoon-english-vocabulary-flashcards generates kids' English vocab flashcards; template-vocabulary makes bilingual cards for any topic. verb-action-learning-cards is verb-specific (near-miss).",
+      "evidence": "template-cartoon-english-vocabulary-flashcards desc 'English vocabulary flashcards'; vocabulary topics include 'flashcards'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-cartoon-english-vocabulary-flashcards",
+          "subjects": [
+            "language",
+            "vocabulary"
+          ],
+          "info_types": [
+            "vocabulary"
+          ],
+          "layout": "flashcard",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-cartoon-english-vocabulary-flashcards",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-vocabulary",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-verb-action-learning-cards",
+            "subjects": [
+              "language",
+              "vocabulary"
+            ],
+            "info_types": [
+              "vocabulary"
+            ],
+            "layout": "flashcard",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          }
+        ]
+      }
+    },
+    {
+      "query": "easy weeknight dinners healthy",
+      "locale": "en",
+      "source": "pinterest-discovery-2026-05-29",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [],
+      "primary_template_id": null,
+      "near_miss_template_ids": [
+        "template-recipe",
+        "template-premium-recipe-card-infographic",
+        "template-food-recipe-tip-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "Content gap: recipe templates generate a single named-dish poster, not an adjective-named, multi-recipe 'easy/healthy weeknight dinners' collection.",
+      "evidence": "template-recipe param dish_name single-dish samples; premium-recipe-card single recipe_name — no collection artifact.",
+      "ontology": {
+        "gold_cell": null,
+        "gold_cell_source": "content-gap-no-cell",
+        "acceptable_cells": [],
+        "near_miss_cells": [
+          {
+            "template_id": "template-recipe",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "guide-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-premium-recipe-card-infographic",
+            "subjects": [
+              "design",
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-food-recipe-tip-infographic",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "gluten free dinner ideas",
+      "locale": "en",
+      "source": "pinterest-discovery-2026-05-29",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [],
+      "primary_template_id": null,
+      "near_miss_template_ids": [
+        "template-recipe",
+        "template-premium-recipe-card-infographic",
+        "template-dessert-color-lab-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "Content gap: 'gluten free dinner ideas' is a dietary-collection concept; recipe templates make single-dish posters and dessert-color-lab is a themed dessert grid — none generate a gluten-free dinner-idea collection.",
+      "evidence": "recipe/premium-recipe-card take a single dish/recipe name (no dietary-collection samples).",
+      "ontology": {
+        "gold_cell": null,
+        "gold_cell_source": "content-gap-no-cell",
+        "acceptable_cells": [],
+        "near_miss_cells": [
+          {
+            "template_id": "template-recipe",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "guide-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-premium-recipe-card-infographic",
+            "subjects": [
+              "design",
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-dessert-color-lab-infographic",
+            "subjects": [
+              "design",
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection",
+              "information-card"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "meal prep weekly recipes",
+      "locale": "en",
+      "source": "pinterest-discovery-2026-05-29",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [],
+      "primary_template_id": null,
+      "near_miss_template_ids": [
+        "template-recipe",
+        "template-premium-recipe-card-infographic",
+        "template-food-recipe-tip-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "Content gap: meal-prep weekly planning is a multi-recipe schedule artifact; recipe templates each generate one dish/recipe poster — no weekly meal-plan template exists.",
+      "evidence": "template-recipe param dish_name (single dish); food-recipe-tip is split-screen cooking tips.",
+      "ontology": {
+        "gold_cell": null,
+        "gold_cell_source": "content-gap-no-cell",
+        "acceptable_cells": [],
+        "near_miss_cells": [
+          {
+            "template_id": "template-recipe",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "guide-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-premium-recipe-card-infographic",
+            "subjects": [
+              "design",
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          },
+          {
+            "template_id": "template-food-recipe-tip-infographic",
+            "subjects": [
+              "food",
+              "lifestyle"
+            ],
+            "info_types": [
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "cozy reading aesthetic",
+      "locale": "en",
+      "source": "pinterest-discovery-2026-05-29",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-lifestyle-watercolor-infographic",
+        "template-watercolor-theme-collage-illustration"
+      ],
+      "primary_template_id": "template-lifestyle-watercolor-infographic",
+      "near_miss_template_ids": [
+        "template-self-help-book-visual-summary-infographic"
+      ],
+      "canonical_slots": {},
+      "rationale": "A cozy-reading aesthetic vibe is served by cozy watercolor lifestyle/mood templates. self-help-book summarizes a book's content, not an aesthetic (near-miss).",
+      "evidence": "template-lifestyle-watercolor-infographic desc 'cozy lifestyle infographic ... self-care', aliases 'aesthetic'; watercolor-theme-collage sample 'cozy winter tea'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-lifestyle-watercolor-infographic",
+          "subjects": [
+            "lifestyle"
+          ],
+          "info_types": [
+            "insight"
+          ],
+          "layout": "infographic",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-lifestyle-watercolor-infographic",
+            "subjects": [
+              "lifestyle"
+            ],
+            "info_types": [
+              "insight"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-watercolor-theme-collage-illustration",
+            "subjects": [
+              "design",
+              "lifestyle"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "collage",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-self-help-book-visual-summary-infographic",
+            "subjects": [
+              "learning"
+            ],
+            "info_types": [
+              "insight",
+              "process"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "book lovers gift guide",
+      "locale": "en",
+      "source": "pinterest-discovery-2026-05-29",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-book-recommendation-grid-poster",
+        "template-top10-visual-guide-infographic"
+      ],
+      "primary_template_id": "template-book-recommendation-grid-poster",
+      "near_miss_template_ids": [
+        "template-country-souvenirs-watercolor"
+      ],
+      "canonical_slots": {},
+      "rationale": "Subject is books for a gift guide; book-recommendation-grid-poster generates a book grid; top10-visual-guide can do a Top 10 book-genres list. country-souvenirs-watercolor matches the gift-guide layout but subject is souvenirs, not books (near-miss).",
+      "evidence": "template-book-recommendation-grid-poster desc 'book recommendation poster ... 16 book cards'; top10-visual-guide sample 'Top 10 Book Genres'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-book-recommendation-grid-poster",
+          "subjects": [
+            "design",
+            "learning"
+          ],
+          "info_types": [
+            "collection"
+          ],
+          "layout": "grid",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-book-recommendation-grid-poster",
+            "subjects": [
+              "design",
+              "learning"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-top10-visual-guide-infographic",
+            "subjects": [
+              "learning"
+            ],
+            "info_types": [
+              "collection",
+              "process"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-country-souvenirs-watercolor",
+            "subjects": [
+              "culture",
+              "design",
+              "travel"
+            ],
+            "info_types": [
+              "collection"
+            ],
+            "layout": "single-image",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "chiikawa",
+      "locale": "en",
+      "source": "user-weekly-2026-05-30",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-fandom-character-grid-poster",
+        "template-mbti-generic",
+        "template-pop-culture-matching-chart"
+      ],
+      "primary_template_id": "template-fandom-character-grid-poster",
+      "near_miss_template_ids": [
+        "template-celebrity-movie-group-poster"
+      ],
+      "canonical_slots": {},
+      "rationale": "Bare niche-fandom noun with several valid formats post-topup: fandom-character-grid (cast grid), mbti-generic (MBTI chart), pop-culture-matching (zodiac chart) all carry Chiikawa examples.",
+      "evidence": "template-fandom-character-grid-poster samples 'Chiikawa','Chiikawa and Friends Main Cast'; mbti-generic alias 'chiikawa'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-fandom-character-grid-poster",
+          "subjects": [
+            "character",
+            "design"
+          ],
+          "info_types": [
+            "collection",
+            "profile"
+          ],
+          "layout": "grid",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-fandom-character-grid-poster",
+            "subjects": [
+              "character",
+              "design"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-generic",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-pop-culture-matching-chart",
+            "subjects": [
+              "character"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "matching-chart",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-celebrity-movie-group-poster",
+            "subjects": [
+              "character"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "poster",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "layout"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "query": "samurai",
+      "locale": "en",
+      "source": "user-weekly-2026-05-30",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-fandom-character-grid-poster",
+        "template-mbti-generic",
+        "template-pop-culture-matching-chart",
+        "template-historical-figure-profile-infographic"
+      ],
+      "primary_template_id": "template-fandom-character-grid-poster",
+      "near_miss_template_ids": [],
+      "canonical_slots": {},
+      "rationale": "Bare subject noun with multiple valid routes after the fandom topup: fandom-grid (samurai grids), mbti-generic / pop-culture (anime-samurai), historical-figure-profile (legendary samurai & battles).",
+      "evidence": "template-fandom-character-grid-poster samples 'Famous Samurai of Japan','Female Samurai (Onna-bugeisha)', aliases 'samurai','武士'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-fandom-character-grid-poster",
+          "subjects": [
+            "character",
+            "design"
+          ],
+          "info_types": [
+            "collection",
+            "profile"
+          ],
+          "layout": "grid",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-fandom-character-grid-poster",
+            "subjects": [
+              "character",
+              "design"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-generic",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-pop-culture-matching-chart",
+            "subjects": [
+              "character"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "matching-chart",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-historical-figure-profile-infographic",
+            "subjects": [
+              "character",
+              "history",
+              "learning"
+            ],
+            "info_types": [
+              "profile",
+              "timeline"
+            ],
+            "layout": "infographic",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": []
+      }
+    },
+    {
+      "query": "genshin",
+      "locale": "en",
+      "source": "user-weekly-2026-05-30",
+      "ambiguity": "medium",
+      "acceptable_template_ids": [
+        "template-fandom-character-grid-poster",
+        "template-mbti-generic",
+        "template-pop-culture-matching-chart"
+      ],
+      "primary_template_id": "template-fandom-character-grid-poster",
+      "near_miss_template_ids": [],
+      "canonical_slots": {},
+      "rationale": "Bare game-fandom noun with several valid routes after topup: fandom-grid (region character grids), mbti-generic (by-element MBTI), pop-culture (Archons chart) all carry Genshin examples.",
+      "evidence": "template-fandom-character-grid-poster samples 'Genshin Impact','Genshin Impact — Liyue Region Characters'.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-fandom-character-grid-poster",
+          "subjects": [
+            "character",
+            "design"
+          ],
+          "info_types": [
+            "collection",
+            "profile"
+          ],
+          "layout": "grid",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-fandom-character-grid-poster",
+            "subjects": [
+              "character",
+              "design"
+            ],
+            "info_types": [
+              "collection",
+              "profile"
+            ],
+            "layout": "grid",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-mbti-generic",
+            "subjects": [
+              "character",
+              "mbti"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "character-card",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-pop-culture-matching-chart",
+            "subjects": [
+              "character"
+            ],
+            "info_types": [
+              "collection",
+              "quiz"
+            ],
+            "layout": "matching-chart",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": []
+      }
+    },
+    {
+      "query": "maps",
+      "locale": "en",
+      "source": "user-report-2026-06-05",
+      "ambiguity": "high",
+      "acceptable_template_ids": [
+        "template-whimsical-travel-map",
+        "template-3d-region-landmark-map",
+        "template-world-travel-map-illustration",
+        "template-watercolor-world-map-illustration"
+      ],
+      "primary_template_id": "template-whimsical-travel-map",
+      "near_miss_template_ids": [
+        "template-tourist-spot-watercolor-map-infographic",
+        "template-historical-event-map-illustration"
+      ],
+      "canonical_slots": {},
+      "rationale": "Broad polysemous single noun; gold is a set of core map-generating templates. whimsical-travel-map is the most generic illustrated map route, with 3d-region-landmark, world-travel-map, watercolor-world-map rounding out the family.",
+      "evidence": "These templates carry template_topics 'map' and are illustrated/geographic map generators.",
+      "ontology": {
+        "gold_cell": {
+          "template_id": "template-whimsical-travel-map",
+          "subjects": [
+            "travel"
+          ],
+          "info_types": [
+            "map"
+          ],
+          "layout": "map",
+          "_subject_source": "canonical",
+          "_info_type_source": "taxonomy",
+          "_layout_source": "heuristic"
+        },
+        "gold_cell_source": "derived-from-primary",
+        "acceptable_cells": [
+          {
+            "template_id": "template-whimsical-travel-map",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-3d-region-landmark-map",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-world-travel-map-illustration",
+            "subjects": [
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          },
+          {
+            "template_id": "template-watercolor-world-map-illustration",
+            "subjects": [
+              "learning",
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic"
+          }
+        ],
+        "near_miss_cells": [
+          {
+            "template_id": "template-tourist-spot-watercolor-map-infographic",
+            "subjects": [
+              "design",
+              "travel"
+            ],
+            "info_types": [
+              "map"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": []
+          },
+          {
+            "template_id": "template-historical-event-map-illustration",
+            "subjects": [
+              "history",
+              "learning"
+            ],
+            "info_types": [
+              "map",
+              "timeline"
+            ],
+            "layout": "map",
+            "_subject_source": "canonical",
+            "_info_type_source": "taxonomy",
+            "_layout_source": "heuristic",
+            "axis_mismatch": [
+              "subject"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
