@@ -60,3 +60,99 @@ node scripts/try_kb_matcher.cjs 单词 chiikawa …        # A vs B(desc) vs B(K
 2. Wire cell-level scoring into `eval_template_routing.cjs` (per-axis accuracy + error
    attribution + Template-Diversity@K), reading `vir_routing_gold_on.json`.
 3. Scale the gold toward the spec's balanced 100/200 and fold in real user queries.
+
+## VIR v2 — reproducible ranked routing and abstention benchmark
+
+V2 is separate from the unapproved v1 definitions. It preserves the supplied 16
+manual anchors exactly, adds a 15-template evidence-grounded capability registry,
+and evaluates:
+
+```
+query → ranked canonical template IDs, or explicit abstention
+```
+
+It does not evaluate rendered-image quality. The design and known label/workflow
+conflicts are documented in
+[`benchmarks/vir_v2/DESIGN.md`](benchmarks/vir_v2/DESIGN.md).
+
+The committed default is JSON-compatible YAML and requests 650 deterministic
+candidate records: 450 single-intent core, 80 content gaps, 60 ambiguous/boundary,
+and 60 multi-intent. Generated labels retain `auto_accepted` or `needs_review`
+status; only the 16 anchors are manually approved.
+
+### Reproduce the network-free pilot
+
+```bash
+npm test
+node scripts/vir-eval.cjs inspect \
+  --config benchmarks/vir_v2/configs/default.yaml
+node scripts/vir-eval.cjs all \
+  --config benchmarks/vir_v2/configs/default.yaml \
+  --no-resume
+```
+
+Every stage is independently resumable:
+
+```bash
+node scripts/vir-eval.cjs build-registry --config benchmarks/vir_v2/configs/default.yaml
+node scripts/vir-eval.cjs expand         --config benchmarks/vir_v2/configs/default.yaml
+node scripts/vir-eval.cjs validate       --config benchmarks/vir_v2/configs/default.yaml
+node scripts/vir-eval.cjs split          --config benchmarks/vir_v2/configs/default.yaml
+node scripts/vir-eval.cjs run            --config benchmarks/vir_v2/configs/default.yaml --adapter=mock
+node scripts/vir-eval.cjs score          --config benchmarks/vir_v2/configs/default.yaml
+node scripts/vir-eval.cjs report         --config benchmarks/vir_v2/configs/default.yaml
+```
+
+To exercise the current Curify API while the frontend is running:
+
+```bash
+node scripts/vir-eval.cjs run \
+  --config benchmarks/vir_v2/configs/default.yaml \
+  --adapter=http \
+  --url=http://localhost:3000/api/search-template-match \
+  --no-resume
+node scripts/vir-eval.cjs report \
+  --config benchmarks/vir_v2/configs/default.yaml
+```
+
+CLI adapters accept one JSONL request on stdin and must emit one JSONL response;
+this is also the provider-neutral bridge for Python routers. Module-function and
+mock adapters are available. Unknown IDs, duplicate IDs, malformed ranks/scores,
+parse errors, and unmarked empty outputs are recorded as visible router errors.
+
+Optional LLM expansion is explicit and cached; it never runs in tests:
+
+```bash
+node scripts/vir-eval.cjs expand \
+  --config benchmarks/vir_v2/configs/default.yaml \
+  --provider=llm
+```
+
+It requires `OPENAI_API_KEY` and writes raw output, model, prompt version, and
+prompt hash to the configured cache. Query generation and independent Gold
+validation use different prompts. Rule generation remains the reproducible
+default.
+
+Optional independent validation is a separate explicit stage. Accepted model
+verdicts remain `needs_review` until a human approves them:
+
+```bash
+node scripts/vir-eval.cjs validate \
+  --config benchmarks/vir_v2/configs/default.yaml \
+  --llm-validator \
+  --validator-model=gpt-4o-mini \
+  --limit=20
+```
+
+Regression comparison uses paired records, slice deltas, newly fixed/broken
+records, and a seeded paired bootstrap interval:
+
+```bash
+node scripts/vir-eval.cjs compare \
+  --config benchmarks/vir_v2/configs/default.yaml \
+  --baseline=benchmarks/vir_v2/baselines/<baseline-run>
+```
+
+Primary artifacts are written to `reports/vir_v2/pilot/`; the manual review queue
+is in `reports/vir_v2/review/`. Do not tune router behavior or thresholds on the
+locked test manifest in `benchmarks/vir_v2/manifests/test_manifest.json`.

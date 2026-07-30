@@ -1,0 +1,288 @@
+{
+  "benchmark_version": "vir-v2",
+  "valid": true,
+  "record_count": 650,
+  "status_counts": {
+    "auto_accepted": 300,
+    "needs_review": 350
+  },
+  "schema_errors": [],
+  "duplicate_ids": [],
+  "exact_duplicates": [],
+  "normalized_duplicates": [],
+  "near_duplicates": [
+    {
+      "left_id": "vir-v2-core-vir-s11-25",
+      "right_id": "vir-v2-core-vir-s11-28",
+      "similarity": 0.8413,
+      "same_semantic_cluster": false
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-002",
+      "right_id": "vir-v2-challenge-amb-020",
+      "similarity": 0.8779,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-002",
+      "right_id": "vir-v2-challenge-amb-038",
+      "similarity": 0.8821,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-003",
+      "right_id": "vir-v2-challenge-amb-021",
+      "similarity": 0.8944,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-003",
+      "right_id": "vir-v2-challenge-amb-039",
+      "similarity": 0.861,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-003",
+      "right_id": "vir-v2-challenge-amb-057",
+      "similarity": 0.9045,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-005",
+      "right_id": "vir-v2-challenge-amb-023",
+      "similarity": 0.8756,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-005",
+      "right_id": "vir-v2-challenge-amb-041",
+      "similarity": 0.8841,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-006",
+      "right_id": "vir-v2-challenge-amb-024",
+      "similarity": 0.9043,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-006",
+      "right_id": "vir-v2-challenge-amb-042",
+      "similarity": 0.8808,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-006",
+      "right_id": "vir-v2-challenge-amb-060",
+      "similarity": 0.8947,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-008",
+      "right_id": "vir-v2-challenge-amb-026",
+      "similarity": 0.85,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-008",
+      "right_id": "vir-v2-challenge-amb-044",
+      "similarity": 0.85,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-009",
+      "right_id": "vir-v2-challenge-amb-027",
+      "similarity": 0.9167,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-009",
+      "right_id": "vir-v2-challenge-amb-045",
+      "similarity": 0.8947,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-011",
+      "right_id": "vir-v2-challenge-amb-029",
+      "similarity": 0.8778,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-011",
+      "right_id": "vir-v2-challenge-amb-047",
+      "similarity": 0.8899,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-012",
+      "right_id": "vir-v2-challenge-amb-030",
+      "similarity": 0.925,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-012",
+      "right_id": "vir-v2-challenge-amb-048",
+      "similarity": 0.8768,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-014",
+      "right_id": "vir-v2-challenge-amb-032",
+      "similarity": 0.8829,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-014",
+      "right_id": "vir-v2-challenge-amb-050",
+      "similarity": 0.895,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-015",
+      "right_id": "vir-v2-challenge-amb-033",
+      "similarity": 0.8944,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-015",
+      "right_id": "vir-v2-challenge-amb-051",
+      "similarity": 0.861,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-016",
+      "right_id": "vir-v2-challenge-amb-034",
+      "similarity": 0.8523,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-017",
+      "right_id": "vir-v2-challenge-amb-035",
+      "similarity": 0.8868,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-017",
+      "right_id": "vir-v2-challenge-amb-053",
+      "similarity": 0.8785,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-018",
+      "right_id": "vir-v2-challenge-amb-036",
+      "similarity": 0.9198,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-018",
+      "right_id": "vir-v2-challenge-amb-054",
+      "similarity": 0.8864,
+      "same_semantic_cluster": true
+    }
+  ],
+  "language_warnings": [],
+  "leaked_template_ids": [],
+  "contradictory_annotations": [],
+  "content_gap_collisions": [],
+  "full_catalog_gap_audit": {
+    "audit_version": "vir-gap-audit-2026-07-29",
+    "source_catalog_sha256": "df2fdda6337f44502147286defa196a58c44286b19aa9df6216c0b608b149586",
+    "source_template_count": 332,
+    "audited_subject_count": 17,
+    "unaudited_record_ids": []
+  },
+  "balance_warnings": [],
+  "distributions": {
+    "partition": {
+      "core": 450,
+      "content_gap": 80,
+      "challenge": 120
+    },
+    "target": {
+      "template-vocabulary": 49,
+      "template-english-grammar-wordlist-infographic": 45,
+      "template-interior-design-mood-board-generator": 52,
+      "template-education-card": 50,
+      "template-fandom-character-grid-poster": 49,
+      "template-lifestyle-watercolor-infographic": 50,
+      "template-travel": 35,
+      "template-intangible-heritage": 41,
+      "template-recipe": 42,
+      "template-mbti-generic": 48,
+      "template-species-science": 57,
+      "template-figure-principles-infographic": 41,
+      "template-product-poster": 47,
+      "template-fashion-inspired-gown-design-sheet": 30,
+      "template-mbti-personality-compatibility-infographic": 42,
+      "__none__": 80
+    },
+    "language": {
+      "zh": 240,
+      "en": 260,
+      "mixed": 150
+    },
+    "difficulty": {
+      "low": 170,
+      "medium": 190,
+      "high": 290
+    },
+    "core_target": {
+      "template-vocabulary": 30,
+      "template-english-grammar-wordlist-infographic": 30,
+      "template-interior-design-mood-board-generator": 30,
+      "template-education-card": 30,
+      "template-fandom-character-grid-poster": 30,
+      "template-lifestyle-watercolor-infographic": 30,
+      "template-travel": 30,
+      "template-intangible-heritage": 30,
+      "template-recipe": 30,
+      "template-mbti-generic": 30,
+      "template-species-science": 30,
+      "template-figure-principles-infographic": 30,
+      "template-product-poster": 30,
+      "template-fashion-inspired-gown-design-sheet": 30,
+      "template-mbti-personality-compatibility-infographic": 30
+    },
+    "core_language": {
+      "zh": 180,
+      "en": 180,
+      "mixed": 90
+    },
+    "core_difficulty": {
+      "low": 150,
+      "medium": 150,
+      "high": 150
+    },
+    "transformation_type": {
+      "different_example": 210,
+      "explicit_artifact": 170,
+      "paraphrase": 210,
+      "conversational": 170,
+      "audience_modifier": 150,
+      "style_modifier": 75,
+      "aspect_ratio_modifier": 75,
+      "implicit_intent": 150,
+      "code_switch": 90,
+      "layout_modifier": 75,
+      "boundary_nearby": 150,
+      "underspecified": 120,
+      "typo_noise": 75,
+      "unsupported_visual_request": 60,
+      "clean": 40,
+      "noisy": 40,
+      "boundary_case": 60,
+      "ambiguous_intent": 60,
+      "conflicting_modifier": 40,
+      "multi_intent": 60,
+      "multi_clause": 40,
+      "paired_artifacts": 48,
+      "supported_plus_unsupported": 12
+    },
+    "validation_status": {
+      "auto_accepted": 300,
+      "needs_review": 350
+    }
+  },
+  "similarity_layer": "character-3gram-jaccard",
+  "configuration_hash": "a0b79b90d3c04710be9d7d3fe8631c60c49c804697a88fec80e41910ce937c00"
+}

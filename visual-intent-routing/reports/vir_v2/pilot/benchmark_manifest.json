@@ -1,0 +1,169 @@
+{
+  "benchmark_version": "vir-v2",
+  "template_registry_version": "vir-capabilities-2026-07-29",
+  "created_at": "2026-07-29T00:00:00.000Z",
+  "random_seed": 1234,
+  "creation_configuration": {
+    "expansion": {
+      "provider": "rule",
+      "core_per_target": 30,
+      "content_gap": 80,
+      "ambiguous": 60,
+      "multi_intent": 60,
+      "languages": {
+        "zh": 0.4,
+        "en": 0.4,
+        "mixed": 0.2
+      },
+      "difficulties": {
+        "low": 0.3334,
+        "medium": 0.3333,
+        "high": 0.3333
+      },
+      "model": "gpt-4o-mini",
+      "temperature": 0.2,
+      "batch_size": 10,
+      "max_retries": 3,
+      "prompt_version": "vir-query-expander-v1"
+    },
+    "split": {
+      "dev_fraction": 0.5,
+      "locked_test": true
+    },
+    "validation": {
+      "near_duplicate_threshold": 0.84,
+      "split_leakage_threshold": 0.88,
+      "content_gap_collision_threshold": 0.28,
+      "auto_accept_clean_core": true,
+      "validator_prompt_version": "vir-query-validator-v1"
+    },
+    "full_catalog_gap_audit": {
+      "audit_version": "vir-gap-audit-2026-07-29",
+      "source_catalog_sha256": "df2fdda6337f44502147286defa196a58c44286b19aa9df6216c0b608b149586"
+    }
+  },
+  "creation_configuration_sha256": "970f1ffe91c6d44d44652b6c4b2316014cc1dcbac285e0cde3a071cea42aefb1",
+  "locked_test": true,
+  "counts": {
+    "anchor": 16,
+    "dev": 265,
+    "test": 265,
+    "challenge": 120
+  },
+  "dataset_counts": {
+    "requested": 650,
+    "generated": 650,
+    "rejected": 0,
+    "needs_review": 350,
+    "auto_accepted": 300,
+    "manually_approved": 16
+  },
+  "distributions": {
+    "dev": {
+      "target": {
+        "template-vocabulary": 15,
+        "template-english-grammar-wordlist-infographic": 15,
+        "template-interior-design-mood-board-generator": 15,
+        "template-education-card": 15,
+        "template-fandom-character-grid-poster": 15,
+        "template-lifestyle-watercolor-infographic": 15,
+        "template-travel": 15,
+        "template-intangible-heritage": 15,
+        "template-recipe": 15,
+        "template-mbti-generic": 15,
+        "template-species-science": 15,
+        "template-figure-principles-infographic": 15,
+        "template-product-poster": 15,
+        "template-fashion-inspired-gown-design-sheet": 15,
+        "template-mbti-personality-compatibility-infographic": 15,
+        "__none__": 40
+      },
+      "language": {
+        "en": 118,
+        "mixed": 51,
+        "zh": 96
+      },
+      "difficulty": {
+        "low": 85,
+        "medium": 85,
+        "high": 95
+      },
+      "transformation_type": {
+        "different_example": 105,
+        "explicit_artifact": 85,
+        "paraphrase": 105,
+        "conversational": 85,
+        "audience_modifier": 75,
+        "aspect_ratio_modifier": 42,
+        "style_modifier": 33,
+        "implicit_intent": 75,
+        "underspecified": 66,
+        "typo_noise": 42,
+        "boundary_nearby": 75,
+        "layout_modifier": 33,
+        "code_switch": 19,
+        "unsupported_visual_request": 30,
+        "clean": 20,
+        "noisy": 20
+      }
+    },
+    "test": {
+      "target": {
+        "template-vocabulary": 15,
+        "template-english-grammar-wordlist-infographic": 15,
+        "template-interior-design-mood-board-generator": 15,
+        "template-education-card": 15,
+        "template-fandom-character-grid-poster": 15,
+        "template-lifestyle-watercolor-infographic": 15,
+        "template-travel": 15,
+        "template-intangible-heritage": 15,
+        "template-recipe": 15,
+        "template-mbti-generic": 15,
+        "template-species-science": 15,
+        "template-figure-principles-infographic": 15,
+        "template-product-poster": 15,
+        "template-fashion-inspired-gown-design-sheet": 15,
+        "template-mbti-personality-compatibility-infographic": 15,
+        "__none__": 40
+      },
+      "language": {
+        "zh": 104,
+        "en": 102,
+        "mixed": 59
+      },
+      "difficulty": {
+        "low": 85,
+        "medium": 85,
+        "high": 95
+      },
+      "transformation_type": {
+        "different_example": 105,
+        "explicit_artifact": 85,
+        "paraphrase": 105,
+        "conversational": 85,
+        "audience_modifier": 75,
+        "style_modifier": 42,
+        "aspect_ratio_modifier": 33,
+        "implicit_intent": 75,
+        "code_switch": 31,
+        "layout_modifier": 42,
+        "boundary_nearby": 75,
+        "underspecified": 54,
+        "typo_noise": 33,
+        "unsupported_visual_request": 30,
+        "clean": 20,
+        "noisy": 20
+      }
+    }
+  },
+  "test_file": "benchmarks/vir_v2/data/splits/test.jsonl",
+  "test_file_sha256": "8850de17ebf2dd02ad540e57ff7687307979319bce3a81137b725f88b057a687",
+  "registry_sha256": "45d7519968790291d984b650061fa0389dd91f1b238e3dfcdd403a558ce0563d",
+  "post_split_similarity_audit": {
+    "layer": "character-3gram-jaccard",
+    "threshold": 0.88,
+    "collision_count": 0,
+    "collisions": []
+  },
+  "note": "Do not tune routing rules or abstention thresholds on this locked test manifest."
+}

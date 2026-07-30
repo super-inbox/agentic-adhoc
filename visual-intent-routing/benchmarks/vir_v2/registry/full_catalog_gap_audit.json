@@ -1,0 +1,119 @@
+{
+  "audit_version": "vir-gap-audit-2026-07-29",
+  "audited_at": "2026-07-29T00:00:00.000Z",
+  "scope": "Current Curify frontend catalog, including text-only and reference-image workflows",
+  "source_evidence": {
+    "catalog_path_at_audit": "../../curify-frontend/public/data/nano_templates.json",
+    "catalog_sha256": "df2fdda6337f44502147286defa196a58c44286b19aa9df6216c0b608b149586",
+    "english_descriptions_path_at_audit": "../../curify-frontend/messages/en/nano.json",
+    "english_descriptions_sha256": "52a3a54b69629245f40b5943d2353a5ae93edcc09dd731802ee2d6c4cab6fa80",
+    "template_count": 332,
+    "allow_generation_count": 233,
+    "method": "Inspected IDs, English titles/descriptions, input parameters, upload requirements, and adjacent examples; keyword hits were manually checked for operation and output compatibility."
+  },
+  "scope_rule": "A capability is unsupported when no current template can produce the requested functional artifact. Visual lookalikes, nonfunctional mockups, and workflows requiring a missing reference image do not make a text-only request supported.",
+  "capability_checks": [
+    {
+      "subject_event": "identity portrait",
+      "status": "unsupported_in_text_only_scope",
+      "adjacent_templates": ["template-portrait-retouching-blueprint", "template-kpop-idol-profile-vintage-passport-poster"],
+      "rationale": "The retouching blueprint requires an uploaded portrait and the vintage passport poster is a decorative profile layout, not a biometric official photo. Production planning explicitly blocks text-only ID-photo generation."
+    },
+    {
+      "subject_event": "resume document",
+      "status": "unsupported",
+      "adjacent_templates": [],
+      "rationale": "No resume or CV document-layout generator was found."
+    },
+    {
+      "subject_event": "interface design",
+      "status": "unsupported",
+      "adjacent_templates": ["template-layered-systems-architecture"],
+      "rationale": "No app wireframe or dashboard UI generator was found; a systems-architecture diagram is a different information structure."
+    },
+    {
+      "subject_event": "event stationery",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": ["template-brand-vi-full-visual-pack-mockup"],
+      "rationale": "Brand mockups may depict stationery, but no seating-assignment artifact or ticket with a functional scannable QR-code contract exists."
+    },
+    {
+      "subject_event": "functional ticket",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": ["template-brand-vi-full-visual-pack-mockup"],
+      "rationale": "A visual mockup cannot guarantee a working QR payload or ticketing function."
+    },
+    {
+      "subject_event": "tattoo design",
+      "status": "unsupported",
+      "adjacent_templates": [],
+      "rationale": "No tattoo or transfer-stencil generator was found."
+    },
+    {
+      "subject_event": "architectural drawing",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": ["template-architecture", "template-industrial-design-concept-sketch"],
+      "rationale": "Adjacent templates make illustrative architecture or concept sketches, not measured floor plans suitable as technical drawings."
+    },
+    {
+      "subject_event": "sewing pattern",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": ["template-fashion-inspired-gown-design-sheet"],
+      "rationale": "A fashion concept sheet is not a printable, measured garment pattern."
+    },
+    {
+      "subject_event": "functional menu",
+      "status": "unsupported",
+      "adjacent_templates": ["template-recipe", "template-food-product-packaging-design"],
+      "rationale": "Recipe and packaging templates do not produce restaurant menus with prices and allergen codes."
+    },
+    {
+      "subject_event": "publication cover",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": [],
+      "rationale": "No measured full-wrap book cover with spine and bleed controls was found."
+    },
+    {
+      "subject_event": "audio cover",
+      "status": "unsupported",
+      "adjacent_templates": ["template-music-style-visual-infographic"],
+      "rationale": "A music infographic is not podcast or album cover artwork with platform/package specifications."
+    },
+    {
+      "subject_event": "business diagram",
+      "status": "unsupported",
+      "adjacent_templates": ["template-layered-systems-architecture"],
+      "rationale": "No organization chart with reporting-line semantics was found."
+    },
+    {
+      "subject_event": "data visualization",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": [],
+      "rationale": "No template accepts tabular data and guarantees an accurate plot from specified columns."
+    },
+    {
+      "subject_event": "presentation design",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": [],
+      "rationale": "No editable slide-master or presentation-deck output exists in the image-template catalog."
+    },
+    {
+      "subject_event": "craft pattern",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": ["template-crafting-step-by-step-tutorial-infographic", "template-kids-origami-step-tutorial-infographic-poster"],
+      "rationale": "Craft tutorials do not provide stitch-accurate knitting charts."
+    },
+    {
+      "subject_event": "motion design",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": ["template-brand-vi-full-visual-pack-mockup"],
+      "rationale": "The catalog produces still images, not transparent video logo animation."
+    },
+    {
+      "subject_event": "3D model",
+      "status": "unsupported_functional_artifact",
+      "adjacent_templates": ["template-industrial-design-concept-sketch"],
+      "rationale": "A rendered concept image is not a watertight, dimensionally usable STL model."
+    }
+  ]
+}

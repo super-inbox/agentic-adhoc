@@ -1,0 +1,56 @@
+{
+  "benchmark_version": "vir-v2",
+  "registry_version": "vir-capabilities-2026-07-29",
+  "random_seed": 1234,
+  "paths": {
+    "seeds": "benchmarks/vir_v2/seeds/seed_queries.json",
+    "registry": "benchmarks/vir_v2/registry/template_capabilities.json",
+    "full_catalog_gap_audit": "benchmarks/vir_v2/registry/full_catalog_gap_audit.json",
+    "catalog": "public/data/nano_templates.json",
+    "capability_kb": "scripts/configs/template_capability_kb.json",
+    "candidate_dir": "benchmarks/vir_v2/data/candidates",
+    "validated_dir": "benchmarks/vir_v2/data/validated",
+    "split_dir": "benchmarks/vir_v2/data/splits",
+    "manifest_dir": "benchmarks/vir_v2/manifests",
+    "cache_dir": "benchmarks/vir_v2/cache",
+    "review_dir": "reports/vir_v2/review",
+    "report_dir": "reports/vir_v2/pilot"
+  },
+  "expansion": {
+    "provider": "rule",
+    "core_per_target": 30,
+    "content_gap": 80,
+    "ambiguous": 60,
+    "multi_intent": 60,
+    "languages": {"zh": 0.4, "en": 0.4, "mixed": 0.2},
+    "difficulties": {"low": 0.3334, "medium": 0.3333, "high": 0.3333},
+    "model": "gpt-4o-mini",
+    "temperature": 0.2,
+    "batch_size": 10,
+    "max_retries": 3,
+    "prompt_version": "vir-query-expander-v1"
+  },
+  "validation": {
+    "near_duplicate_threshold": 0.84,
+    "split_leakage_threshold": 0.88,
+    "content_gap_collision_threshold": 0.28,
+    "auto_accept_clean_core": true,
+    "validator_prompt_version": "vir-query-validator-v1"
+  },
+  "split": {
+    "dev_fraction": 0.5,
+    "locked_test": true
+  },
+  "router": {
+    "adapter": "mock",
+    "top_k": 5,
+    "abstention_threshold": 0.105,
+    "mock_noise": 0
+  },
+  "metrics": {
+    "bootstrap_samples": 500,
+    "confidence_level": 0.95,
+    "thresholds": [0.05, 0.075, 0.1, 0.125, 0.15, 0.2, 0.3]
+  },
+  "gates": {}
+}

@@ -1,0 +1,18 @@
+{
+  "requested": {
+    "core": 450,
+    "content_gap": 80,
+    "ambiguous": 60,
+    "multi_intent": 60,
+    "total": 650
+  },
+  "generated": {
+    "core": 450,
+    "content_gap": 80,
+    "challenge": 120,
+    "total": 650
+  },
+  "provider": "rule",
+  "random_seed": 1234,
+  "dry_run": false
+}
