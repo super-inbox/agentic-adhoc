@@ -1,0 +1,271 @@
+
+[2026-08-02T15:20:46.248Z] pending=85 concurrency=4
+OPENAI_API_KEY is set.
+[job 1/85] starting
+[job 2/85] starting
+[job 3/85] starting
+[job 4/85] starting
+[job 4/85] completed in 54.5s
+[job 5/85] starting
+[job 2/85] completed in 58.6s
+[job 6/85] starting
+[job 3/85] completed in 58.7s
+[job 7/85] starting
+[job 1/85] completed in 70.9s
+[job 8/85] starting
+[job 6/85] completed in 58.4s
+[job 9/85] starting
+[job 5/85] completed in 70.0s
+[job 10/85] starting
+[job 8/85] completed in 67.1s
+[job 11/85] starting
+[job 7/85] completed in 79.1s
+[job 12/85] starting
+[job 10/85] completed in 52.2s
+[job 13/85] starting
+[job 9/85] completed in 64.4s
+[job 14/85] starting
+[job 11/85] completed in 63.8s
+[job 15/85] starting
+[job 12/85] completed in 64.8s
+[job 16/85] starting
+[job 13/85] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_7d2b4f4f57044eb297db7ce24c59d3a7.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 17/85] starting
+[job 14/85] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_a5d332f6f75b4c9ab80f79f6220a8462.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 18/85] starting
+[job 15/85] completed in 62.1s
+[job 19/85] starting
+[job 16/85] completed in 73.9s
+[job 20/85] starting
+[job 17/85] completed in 60.2s
+[job 21/85] starting
+[job 18/85] completed in 64.8s
+[job 22/85] starting
+[job 20/85] completed in 66.1s
+[job 23/85] starting
+[job 19/85] completed in 87.6s
+[job 24/85] starting
+[job 21/85] completed in 74.4s
+[job 25/85] starting
+[job 22/85] completed in 72.1s
+[job 26/85] starting
+[job 23/85] completed in 61.2s
+[job 27/85] starting
+[job 24/85] completed in 53.3s
+[job 28/85] starting
+[job 25/85] completed in 55.2s
+[job 29/85] starting
+[job 26/85] completed in 56.2s
+[job 30/85] starting
+[job 28/85] completed in 66.3s
+[job 31/85] starting
+[job 27/85] completed in 67.3s
+[job 32/85] starting
+[job 29/85] completed in 62.3s
+[job 33/85] starting
+[job 30/85] completed in 70.9s
+[job 34/85] starting
+[job 31/85] completed in 53.7s
+[job 35/85] starting
+[job 32/85] completed in 77.3s
+[job 36/85] starting
+[job 35/85] completed in 49.4s
+[job 37/85] starting
+[job 33/85] completed in 86.7s
+[job 38/85] starting
+[job 34/85] completed in 65.6s
+[job 39/85] starting
+[job 36/85] completed in 55.5s
+[job 40/85] starting
+[job 37/85] completed in 65.7s
+[job 41/85] starting
+[job 39/85] completed in 59.9s
+[job 42/85] starting
+[job 38/85] completed in 74.6s
+[job 43/85] starting
+[job 40/85] completed in 54.6s
+[job 44/85] starting
+[job 41/85] completed in 69.6s
+[job 45/85] starting
+[job 43/85] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_a1c5a65af424435fa1e58d0f02a0ef0e.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 46/85] starting
+[job 42/85] completed in 67.4s
+[job 47/85] starting
+[job 44/85] completed in 72.0s
+[job 48/85] starting
+[job 46/85] completed in 50.4s
+[job 49/85] starting
+[job 47/85] completed in 52.4s
+[job 50/85] starting
+[job 45/85] completed in 67.1s
+[job 51/85] starting
+[job 48/85] completed in 72.9s
+[job 52/85] starting
+[job 50/85] completed in 53.2s
+[job 53/85] starting
+[job 49/85] completed in 64.4s
+[job 54/85] starting
+[job 51/85] completed in 54.1s
+[job 55/85] starting
+[job 53/85] completed in 47.1s
+[job 56/85] starting
+[job 52/85] completed in 65.2s
+[job 57/85] starting
+[job 54/85] completed in 54.1s
+[job 58/85] starting
+[job 55/85] completed in 59.5s
+[job 59/85] starting
+[job 56/85] completed in 66.6s
+[job 60/85] starting
+[job 57/85] completed in 67.7s
+[job 61/85] starting
+[job 58/85] completed in 70.2s
+[job 62/85] starting
+[job 59/85] completed in 66.8s
+[job 63/85] starting
+[job 60/85] completed in 57.4s
+[job 64/85] starting
+[job 61/85] completed in 52.6s
+[job 65/85] starting
+[job 62/85] completed in 52.8s
+[job 66/85] starting
+[job 63/85] completed in 57.4s
+[job 67/85] starting
+[job 65/85] completed in 9076.8s
+[job 68/85] starting
+[job 64/85] completed in 9084.3s
+[job 69/85] starting
+[job 66/85] completed in 9080.1s
+[job 70/85] starting
+[job 67/85] completed in 9071.8s
+[job 71/85] starting
+[job 68/85] completed in 59.8s
+[job 72/85] starting
+[job 70/85] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_c666794df4b24840a9115331d227a698.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 73/85] starting
+[job 69/85] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_4e89be6ae00849838a971b5d9bf393e2.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 74/85] starting
+[job 71/85] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_abaf5e78fcd540d6bcc9ddec16b6ac98.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 75/85] starting
+[job 72/85] completed in 62.9s
+[job 76/85] starting
+[job 74/85] completed in 57.9s
+[job 77/85] starting
+[job 73/85] completed in 71.7s
+[job 78/85] starting
+[job 75/85] completed in 73.0s
+[job 79/85] starting
+[job 76/85] completed in 66.4s
+[job 80/85] starting
+[job 77/85] completed in 76.7s
+[job 81/85] starting
+[job 78/85] completed in 68.3s
+[job 82/85] starting
+[job 79/85] completed in 59.5s
+[job 83/85] starting
+[job 80/85] completed in 69.1s
+[job 84/85] starting
+[job 81/85] completed in 56.7s
+[job 85/85] starting
+[job 83/85] completed in 47.7s
+[job 82/85] completed in 60.3s
+[job 85/85] completed in 59.8s
+[job 84/85] completed in 67.0s
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-002--02--template-ethnic-costume-deconstruction-board.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-001--02--template-lifestyle-watercolor-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-002--01--template-cultural-festival-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-001--01--template-educational-topic-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-003--01--template-lifestyle-watercolor-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-002--03--template-cultural-travel-journey-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-003--03--template-self-care-illustration-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-003--02--template-vintage-ultimate-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-004--02--template-watercolor-theme-collage-illustration.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-004--01--template-home-lifestyle-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-004--03--template-lifestyle-watercolor-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-005--01--template-dual-character-comparison-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-006--01--template-english-homograph-educational-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-006--02--template-english-grammar-wordlist-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-006--03--template-english-word-difference-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-007--01--template-food-recipe-tip-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-007--03--template-country-dos-and-donts-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-007--02--template-cultural-travel-journey-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-008--01--template-cultural-travel-journey-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-008--02--template-tourist-spot-watercolor-map-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-008--03--template-vintage-travel-scrapbook-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-009--01--template-fashion-inspired-gown-design-sheet.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-009--02--template-watercolor-theme-collage-illustration.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-009--03--template-dessert-color-lab-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-010--02--template-lifestyle-habit-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-010--01--template-lifestyle-watercolor-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-010--03--template-self-care-illustration-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-011--01--template-herbal.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-011--02--template-gardening-how-to-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-011--03--template-vintage-ultimate-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-012--03--template-ethnic-costume-deconstruction-board.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-012--01--template-intangible-heritage.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-012--02--template-cultural-relic-retro-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-013--01--template-watercolor-theme-collage-illustration.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-013--02--template-home-lifestyle-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-014--01--template-home-lifestyle-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-013--03--template-vintage-ultimate-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-014--02--template-watercolor-theme-collage-illustration.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-014--03--template-lifestyle-habit-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-015--01--template-dual-character-comparison-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-016--01--template-english-grammar-wordlist-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-017--02--template-premium-recipe-card-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-017--03--template-varieties-food-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-017--01--template-food.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-018--01--template-cultural-travel-journey-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-018--03--template-ethnic-costume-deconstruction-board.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-018--02--template-tourist-spot-watercolor-map-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-019--01--template-fashion-inspired-gown-design-sheet.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-019--03--template-dessert-color-lab-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-019--02--template-watercolor-travel-journal-collage.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-020--01--template-watercolor-theme-collage-illustration.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-020--02--template-lifestyle-watercolor-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-020--03--template-lifestyle-photo-grid.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-021--01--template-cultural-travel-journey-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-021--02--template-cartoon-action-visual-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-021--03--template-top10-visual-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-022--01--template-cultural-festival-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-022--02--template-ethnic-costume-deconstruction-board.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-022--03--template-country-souvenirs-watercolor.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-023--01--template-book-series.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-023--03--template-lifestyle-watercolor-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-023--02--template-self-care-illustration-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-024--01--template-home-lifestyle-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-024--02--template-watercolor-theme-collage-illustration.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-024--03--template-self-care-illustration-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-026--01--template-english-homograph-educational-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-026--03--template-english-word-difference-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-026--02--template-english-grammar-wordlist-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-027--01--template-cultural-travel-journey-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-027--02--template-food-recipe-tip-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-027--03--template-vintage-ultimate-guide-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-028--01--template-cultural-travel-journey-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-028--02--template-tourist-spot-watercolor-map-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-028--03--template-best-cities-travel-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-029--01--template-fashion-inspired-gown-design-sheet.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-029--03--template-dessert-color-lab-infographic.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-029--02--template-watercolor-theme-collage-illustration.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-030--02--template-self-care-illustration-poster.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/curify/vir-v2-exploration-030--01--template-lifestyle-habit-infographic.jpeg
+
+exit_code=1 signal=none
+
+[2026-08-02T18:17:23.073Z] pending=6 concurrency=4
+OPENAI_API_KEY is set.
+[job 1/6] starting
+[job 2/6] starting
+[job 3/6] starting
+[job 4/6] starting
+[job 3/6] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_a8193606fdcd4dae9c7342c94ff47501.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 5/6] starting
+[job 1/6] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_7073e3462ba94849a63563149e2fc952.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 6/6] starting
+[job 2/6] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_862ec18bbb5740b68669c8ab8fdd503a.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 4/6] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_adffe886228748feb7d77a07ebd522a3.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 5/6] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_aa284c141d184a279c3a39cf9671661e.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 6/6] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_bb3f4d3a49414a1d8a71225252939593.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+
+exit_code=1 signal=none

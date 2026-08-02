@@ -281,7 +281,13 @@ async function postJson(url, body, maxAttempts = 3) {
   throw lastError;
 }
 
-async function buildPlans({ records, planPath, baseUrl, dryRun = false }) {
+async function buildPlans({
+  records,
+  planPath,
+  baseUrl,
+  dryRun = false,
+  concurrency = 4,
+}) {
   const existing = new Map(
     readJsonl(planPath).map((row) => [row.query_id, row]),
   );
@@ -304,47 +310,85 @@ async function buildPlans({ records, planPath, baseUrl, dryRun = false }) {
   });
   writeJsonl(planPath, rows);
   if (dryRun) return rows;
-  for (let index = 0; index < rows.length; index += 1) {
-    const row = rows[index];
-    if (["completed", "abstained"].includes(row.status)) continue;
-    try {
-      const { payload, attempts } = await postJson(
-        `${baseUrl.replace(/\/+$/, "")}/api/search-generation-plan`,
-        {
-          query: row.query,
-          locale: row.language === "en" ? "en" : "zh",
-        },
+  const pendingIndexes = rows
+    .map((row, index) => ({ row, index }))
+    .filter(({ row }) => !["completed", "abstained"].includes(row.status))
+    .map(({ index }) => index);
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < pendingIndexes.length) {
+      const pendingPosition = cursor;
+      cursor += 1;
+      const index = pendingIndexes[pendingPosition];
+      const row = rows[index];
+      try {
+        const { payload, attempts } = await postJson(
+          `${baseUrl.replace(/\/+$/, "")}/api/search-generation-plan`,
+          {
+            query: row.query,
+            locale: row.language === "en" ? "en" : "zh",
+          },
+        );
+        row.attempts += attempts;
+        row.plan = payload;
+        row.notice = payload.notice ?? null;
+        row.status = payload.directions?.length ? "completed" : "abstained";
+        row.error = null;
+      } catch (error) {
+        row.attempts += 3;
+        row.status = "failed";
+        row.error = error instanceof Error ? error.message : String(error);
+      }
+      row.updated_at = new Date().toISOString();
+      // Synchronous checkpoint writes make concurrent workers interruption-safe.
+      writeJsonl(planPath, rows);
+      console.log(
+        `[plan ${pendingPosition + 1}/${pendingIndexes.length}] ${row.query_id}: ${row.status}`,
       );
-      row.attempts += attempts;
-      row.plan = payload;
-      row.notice = payload.notice ?? null;
-      row.status = payload.directions?.length ? "completed" : "abstained";
-      row.error = null;
-    } catch (error) {
-      row.attempts += 3;
-      row.status = "failed";
-      row.error = error instanceof Error ? error.message : String(error);
     }
-    row.updated_at = new Date().toISOString();
-    writeJsonl(planPath, rows);
-    console.log(
-      `[plan ${index + 1}/${rows.length}] ${row.query_id}: ${row.status}`,
-    );
-  }
+  };
+  const workerCount = Math.max(
+    1,
+    Math.min(Number(concurrency) || 1, pendingIndexes.length || 1),
+  );
+  await Promise.all(Array.from({ length: workerCount }, () => worker()));
   return rows;
 }
 
-function pendingJobs(jobs, outDir) {
+function terminalFailureMap(filePath) {
+  return new Map(readJsonl(filePath).map((row) => [row.out, row]));
+}
+
+function terminalFailureForJob(job, failures) {
+  const failure = failures.get(job.out);
+  if (!failure) return null;
+  return failure.prompt_sha256 === sha256(job.prompt) ? failure : null;
+}
+
+function pendingJobs(jobs, outDir, failures = new Map()) {
   const absolute = resolveRoot(outDir);
   return jobs.filter((job) => {
     const filePath = path.join(absolute, job.out);
-    return !fs.existsSync(filePath) || fs.statSync(filePath).size === 0;
+    const missing = !fs.existsSync(filePath) || fs.statSync(filePath).size === 0;
+    return missing && !terminalFailureForJob(job, failures);
   });
 }
 
-function jobResult(job, outDir) {
+function jobResult(job, outDir, failures = new Map()) {
   const filePath = path.join(resolveRoot(outDir), job.out);
   if (!fs.existsSync(filePath) || fs.statSync(filePath).size === 0) {
+    const failure = terminalFailureForJob(job, failures);
+    if (failure) {
+      return {
+        ...job,
+        status: "failed",
+        failure_reason: failure.reason,
+        failed_at: failure.marked_at,
+        local_path: null,
+        bytes: 0,
+        sha256: null,
+      };
+    }
     return { ...job, status: "pending", local_path: null, bytes: 0, sha256: null };
   }
   const stats = fs.statSync(filePath);
@@ -359,17 +403,29 @@ function jobResult(job, outDir) {
 
 function summarizeImagegenLog(logPath) {
   if (!fs.existsSync(logPath)) return null;
-  const text = fs.readFileSync(logPath, "utf8");
-  const count = (pattern) => (text.match(pattern) ?? []).length;
-  const exitCodes = [...text.matchAll(/exit_code=(\d+)/g)].map((match) =>
-    Number(match[1]),
-  );
+  const allText = fs.readFileSync(logPath, "utf8");
+  const segmentStarts = [
+    ...allText.matchAll(/^\[\d{4}-\d{2}-\d{2}T.*?\] pending=/gm),
+  ];
+  const lastText = segmentStarts.length
+    ? allText.slice(segmentStarts.at(-1).index)
+    : allText;
+  const summarize = (text) => {
+    const count = (pattern) => (text.match(pattern) ?? []).length;
+    const exitCodes = [...text.matchAll(/exit_code=(\d+)/g)].map((match) =>
+      Number(match[1]),
+    );
+    return {
+      completed_attempts: count(/completed in/g),
+      moderation_blocked: count(/moderation_blocked/g),
+      billing_hard_limit_reached: count(/billing_hard_limit_reached/g),
+      last_exit_code: exitCodes.length ? exitCodes.at(-1) : null,
+    };
+  };
   return {
     path: path.relative(ROOT, logPath),
-    completed_attempts: count(/completed in/g),
-    moderation_blocked: count(/moderation_blocked/g),
-    billing_hard_limit_reached: count(/billing_hard_limit_reached/g),
-    last_exit_code: exitCodes.length ? exitCodes.at(-1) : null,
+    ...summarize(allText),
+    last_run: summarize(lastText),
   };
 }
 
@@ -451,6 +507,14 @@ function runPaths(runId, stage) {
     pairedPending: path.join(stageDir, "paired-pending.jsonl"),
     gptOut: path.join(stageDir, "gpt-direct"),
     curifyOut: path.join(stageDir, "curify"),
+    gptTerminalFailures: path.join(
+      stageDir,
+      "gpt-direct-terminal-failures.jsonl",
+    ),
+    curifyTerminalFailures: path.join(
+      stageDir,
+      "curify-terminal-failures.jsonl",
+    ),
     manifest: path.join(stageDir, "stage-manifest.json"),
   };
 }
@@ -466,8 +530,10 @@ async function prepare(options) {
   if (options.limit) records = records.slice(0, Number(options.limit));
   writeJsonl(paths.records, records);
   const gptJobs = buildGptJobs(records, stage);
+  const gptFailures = terminalFailureMap(paths.gptTerminalFailures);
+  const curifyFailures = terminalFailureMap(paths.curifyTerminalFailures);
   writeJsonl(paths.gptInput, gptJobs);
-  const pendingGptJobs = pendingJobs(gptJobs, paths.gptOut);
+  const pendingGptJobs = pendingJobs(gptJobs, paths.gptOut, gptFailures);
   writeJsonl(paths.gptPending, pendingGptJobs);
 
   const plans = await buildPlans({
@@ -475,6 +541,7 @@ async function prepare(options) {
     planPath: paths.plans,
     baseUrl: options.base_url ?? DEFAULT_BASE_URL,
     dryRun: Boolean(options.dry_run),
+    concurrency: Number(options.plan_concurrency ?? 4),
   });
   const templates = readJson(
     options.catalog ?? "../../curify-frontend/public/data/nano_templates.json",
@@ -486,8 +553,18 @@ async function prepare(options) {
     stage,
   );
   writeJsonl(paths.curifyInput, curifyJobs);
-  const pendingCurifyJobs = pendingJobs(curifyJobs, paths.curifyOut);
+  const pendingCurifyJobs = pendingJobs(
+    curifyJobs,
+    paths.curifyOut,
+    curifyFailures,
+  );
   writeJsonl(paths.curifyPending, pendingCurifyJobs);
+  const terminalGptJobs = gptJobs.filter((job) =>
+    terminalFailureForJob(job, gptFailures),
+  );
+  const terminalCurifyJobs = curifyJobs.filter((job) =>
+    terminalFailureForJob(job, curifyFailures),
+  );
   const pairedPending = [
     ...pendingGptJobs.map((job) => ({
       ...job,
@@ -516,7 +593,10 @@ async function prepare(options) {
     },
     gpt_direct: {
       total_jobs: gptJobs.length,
-      pending_jobs: pendingJobs(gptJobs, paths.gptOut).length,
+      completed_jobs:
+        gptJobs.length - pendingGptJobs.length - terminalGptJobs.length,
+      terminal_failed_jobs: terminalGptJobs.length,
+      pending_jobs: pendingGptJobs.length,
       input: path.relative(ROOT, paths.gptPending),
       output_dir: path.relative(ROOT, paths.gptOut),
     },
@@ -525,7 +605,10 @@ async function prepare(options) {
       plan_abstained: plans.filter((row) => row.status === "abstained").length,
       plan_failed: plans.filter((row) => row.status === "failed").length,
       total_jobs: curifyJobs.length,
-      pending_jobs: pendingJobs(curifyJobs, paths.curifyOut).length,
+      completed_jobs:
+        curifyJobs.length - pendingCurifyJobs.length - terminalCurifyJobs.length,
+      terminal_failed_jobs: terminalCurifyJobs.length,
+      pending_jobs: pendingCurifyJobs.length,
       omissions,
       input: path.relative(ROOT, paths.curifyPending),
       output_dir: path.relative(ROOT, paths.curifyOut),
@@ -550,18 +633,21 @@ function finalize(options) {
   const runId = options.run_id ?? DEFAULT_RUN_ID;
   const paths = runPaths(runId, stage);
   const previous = readJson(paths.manifest);
+  const gptFailures = terminalFailureMap(paths.gptTerminalFailures);
+  const curifyFailures = terminalFailureMap(paths.curifyTerminalFailures);
   const gptResults = readJsonl(paths.gptInput).map((job) =>
-    jobResult(job, paths.gptOut),
+    jobResult(job, paths.gptOut, gptFailures),
   );
   const curifyResults = readJsonl(paths.curifyInput).map((job) =>
-    jobResult(job, paths.curifyOut),
+    jobResult(job, paths.curifyOut, curifyFailures),
   );
   writeJsonl(path.join(paths.stageDir, "gpt-direct-results.jsonl"), gptResults);
   writeJsonl(path.join(paths.stageDir, "curify-results.jsonl"), curifyResults);
   const summarize = (rows) => ({
     total: rows.length,
     completed: rows.filter((row) => row.status === "completed").length,
-    pending: rows.filter((row) => row.status !== "completed").length,
+    failed: rows.filter((row) => row.status === "failed").length,
+    pending: rows.filter((row) => row.status === "pending").length,
     bytes: rows.reduce((total, row) => total + row.bytes, 0),
   });
   const galleryPath = path.join(paths.stageDir, "gallery.html");
@@ -591,13 +677,73 @@ function finalize(options) {
     gallery: path.relative(ROOT, galleryPath),
   };
   manifest.blocking_error = Object.values(manifest.execution_logs).some(
-    (entry) => entry?.billing_hard_limit_reached > 0,
+    (entry) => entry?.last_run?.billing_hard_limit_reached > 0,
   )
     ? "billing_hard_limit_reached"
     : null;
   writeJson(paths.manifest, manifest);
   console.log(JSON.stringify(manifest, null, 2));
   return manifest;
+}
+
+function markTerminal(options) {
+  const stage = options.stage;
+  if (!stage) throw new Error("mark-terminal requires --stage");
+  const runId = options.run_id ?? DEFAULT_RUN_ID;
+  const paths = runPaths(runId, stage);
+  const system = options.system ?? "paired";
+  const reason = options.reason ?? "moderation_blocked_after_retry";
+  const targets = {
+    "gpt-direct": {
+      input: paths.gptInput,
+      outDir: paths.gptOut,
+      ledger: paths.gptTerminalFailures,
+    },
+    curify: {
+      input: paths.curifyInput,
+      outDir: paths.curifyOut,
+      ledger: paths.curifyTerminalFailures,
+    },
+  };
+  const systems = system === "paired" ? ["gpt-direct", "curify"] : [system];
+  if (systems.some((name) => !targets[name])) {
+    throw new Error(`Unknown terminal-failure system: ${system}`);
+  }
+  const summary = {};
+  for (const name of systems) {
+    const target = targets[name];
+    const jobs = readJsonl(target.input);
+    const existing = terminalFailureMap(target.ledger);
+    const missing = jobs.filter((job) => {
+      const filePath = path.join(resolveRoot(target.outDir), job.out);
+      return !fs.existsSync(filePath) || fs.statSync(filePath).size === 0;
+    });
+    for (const job of missing) {
+      existing.set(job.out, {
+        schema_version: 1,
+        run_id: runId,
+        stage,
+        system: name,
+        query_id: job.vir_query_id,
+        direction: job.vir_direction,
+        out: job.out,
+        prompt_sha256: sha256(job.prompt),
+        status: "terminal_failed",
+        reason,
+        marked_at: new Date().toISOString(),
+      });
+    }
+    writeJsonl(
+      target.ledger,
+      [...existing.values()].sort((a, b) => a.out.localeCompare(b.out)),
+    );
+    summary[name] = {
+      marked: missing.length,
+      ledger: path.relative(ROOT, target.ledger),
+    };
+  }
+  console.log(JSON.stringify(summary, null, 2));
+  return summary;
 }
 
 async function render(options) {
@@ -732,8 +878,9 @@ function help() {
   console.log(`VIR v2 paired image task builder
 
 Usage:
-  node scripts/vir-image-tasks.cjs prepare --stage anchors [--run-id ${DEFAULT_RUN_ID}]
+  node scripts/vir-image-tasks.cjs prepare --stage anchors [--plan-concurrency 4] [--run-id ${DEFAULT_RUN_ID}]
   node scripts/vir-image-tasks.cjs render --stage anchors [--system paired] [--python /path/to/python]
+  node scripts/vir-image-tasks.cjs mark-terminal --stage anchors [--system paired] [--reason moderation_blocked_after_retry]
   node scripts/vir-image-tasks.cjs finalize --stage anchors [--run-id ${DEFAULT_RUN_ID}]
 
 Stages: anchors | exploration | core | challenge-gap
@@ -747,6 +894,7 @@ async function main() {
   const { command, options } = parseArgs(process.argv.slice(2));
   if (command === "prepare") await prepare(options);
   else if (command === "render") await render(options);
+  else if (command === "mark-terminal") markTerminal(options);
   else if (command === "finalize") finalize(options);
   else help();
 }
@@ -763,9 +911,13 @@ module.exports = {
   buildGptJobs,
   fillPrompt,
   gptPrompt,
+  jobResult,
+  markTerminal,
   outputName,
   parseArgs,
+  pendingJobs,
   render,
   renderGalleryHtml,
   stageRecords,
+  summarizeImagegenLog,
 };

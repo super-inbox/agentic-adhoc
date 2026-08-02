@@ -221,7 +221,8 @@ node scripts/vir-image-tasks.cjs render --stage exploration --system paired \
   --python /private/tmp/vir-imagegen-venv/bin/python --concurrency 4
 node scripts/vir-image-tasks.cjs finalize --stage exploration
 
-node scripts/vir-image-tasks.cjs prepare --stage core --base-url http://localhost:3001
+node scripts/vir-image-tasks.cjs prepare --stage core --base-url http://localhost:3001 \
+  --plan-concurrency 4
 node scripts/vir-image-tasks.cjs render --stage core --system paired \
   --python /private/tmp/vir-imagegen-venv/bin/python --concurrency 4
 node scripts/vir-image-tasks.cjs finalize --stage core
@@ -238,3 +239,20 @@ has no Curify image; it remains an auditable routing result. On a billing hard
 limit the renderer stops immediately, preserves completed files, and resumes
 after another `prepare` call. Outputs live under
 `reports/vir_v2/images/<run-id>/<stage>/{gpt-direct,curify}/`.
+
+For a large stage, the two systems may be rendered in parallel with separate
+`--system gpt-direct` and `--system curify` processes. After a final retry,
+persist confirmed moderation-only failures so later resume commands do not
+resubmit them, then refresh and finalize the stage:
+
+```bash
+node scripts/vir-image-tasks.cjs mark-terminal --stage core --system paired \
+  --reason moderation_blocked_after_retry
+node scripts/vir-image-tasks.cjs prepare --stage core --base-url http://localhost:3001
+node scripts/vir-image-tasks.cjs finalize --stage core
+```
+
+Terminal-failure JSONL ledgers retain the query, direction, prompt hash, reason,
+and timestamp. They are counted as failed rather than pending in the manifest.
+Historical billing errors remain in append-only logs, while `blocking_error`
+reflects only the latest execution segment.

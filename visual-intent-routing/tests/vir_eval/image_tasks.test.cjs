@@ -1,14 +1,20 @@
 "use strict";
 
 const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
 const test = require("node:test");
 
 const {
   buildCurifyJobs,
   buildGptJobs,
   fillPrompt,
+  jobResult,
+  pendingJobs,
   renderGalleryHtml,
   stageRecords,
+  summarizeImagegenLog,
 } = require("../../scripts/vir-image-tasks.cjs");
 
 test("paired image stages preserve the requested execution counts", () => {
@@ -108,4 +114,45 @@ test("paired gallery shows completed and pending outputs without scoring visuals
   assert.match(html, /Pending \/ failed/);
   assert.match(html, /plants &lt;and&gt; facts/);
   assert.match(html, /Human inspection only/);
+});
+
+test("terminal failures are excluded from resume input and remain auditable", () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), "vir-images-"));
+  const job = { prompt: "blocked prompt", out: "blocked.jpeg" };
+  const crypto = require("node:crypto");
+  const failures = new Map([
+    [
+      job.out,
+      {
+        out: job.out,
+        prompt_sha256: crypto.createHash("sha256").update(job.prompt).digest("hex"),
+        reason: "moderation_blocked_after_retry",
+        marked_at: "2026-08-02T00:00:00.000Z",
+      },
+    ],
+  ]);
+
+  assert.deepEqual(pendingJobs([job], directory, failures), []);
+  assert.equal(jobResult(job, directory, failures).status, "failed");
+  assert.equal(
+    jobResult(job, directory, failures).failure_reason,
+    "moderation_blocked_after_retry",
+  );
+});
+
+test("image log summary distinguishes historical billing from the latest run", () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), "vir-log-"));
+  const logPath = path.join(directory, "imagegen.log");
+  fs.writeFileSync(
+    logPath,
+    "[2026-08-01T00:00:00.000Z] pending=2 concurrency=1\n" +
+      "billing_hard_limit_reached\nexit_code=1 signal=none\n\n" +
+      "[2026-08-02T00:00:00.000Z] pending=1 concurrency=1\n" +
+      "moderation_blocked\nexit_code=1 signal=none\n",
+  );
+
+  const summary = summarizeImagegenLog(logPath);
+  assert.equal(summary.billing_hard_limit_reached, 1);
+  assert.equal(summary.last_run.billing_hard_limit_reached, 0);
+  assert.equal(summary.last_run.moderation_blocked, 1);
 });

@@ -1,0 +1,163 @@
+
+[2026-08-02T18:31:01.512Z] pending=450 concurrency=4
+OPENAI_API_KEY is set.
+[job 1/450] starting
+[job 2/450] starting
+[job 3/450] starting
+[job 4/450] starting
+[job 1/450] completed in 43.2s
+[job 5/450] starting
+[job 2/450] completed in 47.5s
+[job 6/450] starting
+[job 3/450] completed in 52.5s
+[job 7/450] starting
+[job 4/450] completed in 57.4s
+[job 8/450] starting
+[job 5/450] completed in 50.5s
+[job 9/450] starting
+[job 6/450] completed in 54.5s
+[job 10/450] starting
+[job 7/450] completed in 55.7s
+[job 11/450] starting
+
+[2026-08-02T18:33:10.574Z] pending=443 concurrency=4
+OPENAI_API_KEY is set.
+[job 1/443] starting
+[job 2/443] starting
+[job 3/443] starting
+[job 4/443] starting
+[job 2/443] completed in 52.6s
+[job 5/443] starting
+[job 4/443] completed in 55.0s
+[job 6/443] starting
+[job 3/443] completed in 59.1s
+[job 7/443] starting
+[job 1/443] completed in 60.2s
+[job 8/443] starting
+[job 5/443] completed in 47.6s
+[job 9/443] starting
+[job 8/443] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_261f0761a9c64d2790c231508311976a.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 10/443] starting
+[job 6/443] completed in 61.4s
+[job 11/443] starting
+[job 7/443] completed in 67.1s
+[job 12/443] starting
+[job 9/443] completed in 51.8s
+[job 13/443] starting
+[job 11/443] completed in 44.0s
+[job 14/443] starting
+[job 10/443] completed in 54.3s
+[job 15/443] starting
+[job 12/443] completed in 51.4s
+[job 16/443] starting
+[job 13/443] completed in 58.6s
+[job 17/443] starting
+[job 14/443] completed in 54.6s
+[job 18/443] starting
+[job 15/443] completed in 61.6s
+[job 19/443] starting
+[job 16/443] completed in 52.8s
+[job 20/443] starting
+[job 17/443] completed in 55.5s
+[job 21/443] starting
+[job 18/443] completed in 54.5s
+[job 22/443] starting
+[job 19/443] completed in 57.1s
+[job 23/443] starting
+[job 20/443] completed in 54.8s
+[job 24/443] starting
+[job 21/443] completed in 46.9s
+[job 25/443] starting
+[job 22/443] completed in 56.6s
+[job 26/443] starting
+[job 23/443] completed in 50.1s
+[job 27/443] starting
+[job 24/443] completed in 52.5s
+[job 28/443] starting
+[job 25/443] completed in 49.8s
+[job 29/443] starting
+[job 26/443] completed in 47.1s
+[job 30/443] starting
+[job 27/443] completed in 53.4s
+[job 31/443] starting
+[job 28/443] completed in 58.4s
+[job 32/443] starting
+[job 29/443] completed in 61.6s
+[job 33/443] starting
+[job 30/443] completed in 57.5s
+[job 34/443] starting
+[job 31/443] completed in 55.2s
+[job 35/443] starting
+[job 32/443] completed in 53.5s
+[job 36/443] starting
+[job 33/443] completed in 57.4s
+[job 37/443] starting
+[job 34/443] completed in 56.1s
+[job 38/443] starting
+[job 35/443] completed in 50.7s
+[job 39/443] starting
+[job 36/443] completed in 52.2s
+[job 40/443] starting
+[job 37/443] completed in 50.5s
+[job 41/443] starting
+[job 38/443] completed in 54.5s
+[job 42/443] starting
+[job 39/443] completed in 59.9s
+[job 43/443] starting
+[job 40/443] completed in 55.4s
+[job 44/443] starting
+[job 41/443] completed in 58.2s
+[job 45/443] starting
+[job 42/443] completed in 54.1s
+[job 46/443] starting
+[job 43/443] completed in 54.1s
+[job 47/443] starting
+[job 44/443] completed in 52.1s
+[job 48/443] starting
+[job 46/443] completed in 58.5s
+[job 49/443] starting
+[job 45/443] completed in 65.9s
+[job 50/443] starting
+[job 47/443] completed in 53.1s
+[job 51/443] starting
+[job 48/443] completed in 62.0s
+[job 52/443] starting
+[job 51/443] completed in 50.9s
+[job 53/443] starting
+[job 49/443] completed in 58.2s
+[job 54/443] starting
+[job 50/443] completed in 55.8s
+[job 55/443] starting
+[job 52/443] completed in 57.0s
+[job 56/443] starting
+[job 54/443] completed in 55.2s
+[job 57/443] starting
+[job 53/443] completed in 58.9s
+[job 58/443] starting
+[job 55/443] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_507ce3b750254d2282d64316d70608e5.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 59/443] starting
+[job 56/443] completed in 54.8s
+[job 60/443] starting
+[job 58/443] completed in 52.7s
+[job 61/443] starting
+[job 57/443] completed in 54.8s
+[job 62/443] starting
+[job 59/443] completed in 56.8s
+[job 63/443] starting
+[job 60/443] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_b33a220724564db2aae1486e9a1d379a.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 64/443] starting
+[job 62/443] completed in 56.1s
+[job 65/443] starting
+[job 61/443] completed in 59.4s
+[job 66/443] starting
+[job 63/443] completed in 71.9s
+[job 67/443] starting
+[job 64/443] completed in 56.0s
+[job 68/443] starting
+[job 65/443] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_1b8c1c3168fb4d97bd289f9f6ca2a4d0.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 69/443] starting
+[job 69/443] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+Billing hard limit detected; terminating the batch to prevent repeated rejected calls.
+[job 70/443] starting
+
+exit_code=1 signal=SIGTERM

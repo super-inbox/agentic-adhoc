@@ -179,3 +179,206 @@ OPENAI_API_KEY is set.
 [job 90/90] starting
 [job 88/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
 [job 90/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+
+[2026-08-02T15:06:33.121Z] pending=61 concurrency=4
+OPENAI_API_KEY is set.
+[job 1/61] starting
+[job 2/61] starting
+[job 3/61] starting
+[job 4/61] starting
+[job 4/61] completed in 58.0s
+[job 5/61] starting
+[job 1/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_b063fbd61cee48cb9b42ab7b4a109625.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 6/61] starting
+[job 2/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_71fbd4940531411ba3350aeeac3a4f49.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 7/61] starting
+[job 3/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_c5fb87afdd9a4ff78a8ab7d6674971f6.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 8/61] starting
+[job 7/61] completed in 48.8s
+[job 9/61] starting
+[job 5/61] completed in 57.3s
+[job 10/61] starting
+[job 8/61] completed in 54.6s
+[job 11/61] starting
+[job 6/61] completed in 58.5s
+[job 12/61] starting
+[job 9/61] completed in 50.0s
+[job 13/61] starting
+[job 12/61] completed in 42.1s
+[job 14/61] starting
+[job 11/61] completed in 46.1s
+[job 15/61] starting
+[job 10/61] completed in 50.3s
+[job 16/61] starting
+[job 13/61] completed in 45.1s
+[job 17/61] starting
+[job 15/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_70900c9d883c4756b1a4628d4dfb5f4a.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 18/61] starting
+[job 14/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_527f9d9a01a748b58836bb305ce21d95.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 19/61] starting
+[job 16/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_301362b4f67846509f11fb6aef14d860.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 20/61] starting
+[job 17/61] completed in 45.9s
+[job 21/61] starting
+[job 18/61] completed in 51.3s
+[job 22/61] starting
+[job 19/61] completed in 54.9s
+[job 23/61] starting
+[job 20/61] completed in 54.5s
+[job 24/61] starting
+[job 21/61] completed in 55.5s
+[job 25/61] starting
+[job 22/61] completed in 50.2s
+[job 26/61] starting
+[job 23/61] completed in 48.2s
+[job 27/61] starting
+[job 24/61] completed in 48.7s
+[job 28/61] starting
+[job 25/61] completed in 49.7s
+[job 29/61] starting
+[job 27/61] completed in 54.9s
+[job 30/61] starting
+[job 26/61] completed in 58.4s
+[job 31/61] starting
+[job 28/61] completed in 49.0s
+[job 32/61] starting
+[job 29/61] completed in 56.3s
+[job 33/61] starting
+[job 30/61] completed in 52.2s
+[job 34/61] starting
+[job 32/61] completed in 57.9s
+[job 35/61] starting
+[job 31/61] completed in 62.6s
+[job 36/61] starting
+[job 33/61] completed in 56.7s
+[job 37/61] starting
+[job 34/61] completed in 57.8s
+[job 38/61] starting
+[job 35/61] completed in 60.9s
+[job 39/61] starting
+[job 36/61] completed in 58.8s
+[job 40/61] starting
+[job 37/61] completed in 56.3s
+[job 41/61] starting
+[job 38/61] completed in 62.0s
+[job 42/61] starting
+[job 39/61] completed in 55.9s
+[job 43/61] starting
+[job 40/61] completed in 59.7s
+[job 44/61] starting
+[job 41/61] completed in 51.7s
+[job 45/61] starting
+[job 42/61] completed in 46.5s
+[job 46/61] starting
+[job 43/61] completed in 53.2s
+[job 47/61] starting
+[job 44/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_4a2fde27ed5a45e1a4e43e714abe5cc6.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 48/61] starting
+[job 45/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_af75b29407754061b19fc55308484ab1.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 49/61] starting
+[job 46/61] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_f96c366c7e50455daa14ed973f40290b.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 50/61] starting
+[job 47/61] completed in 55.7s
+[job 51/61] starting
+[job 48/61] completed in 54.8s
+[job 52/61] starting
+[job 49/61] completed in 59.0s
+[job 53/61] starting
+[job 50/61] completed in 51.9s
+[job 54/61] starting
+[job 51/61] completed in 53.8s
+[job 55/61] starting
+[job 52/61] completed in 59.8s
+[job 56/61] starting
+[job 53/61] completed in 57.6s
+[job 57/61] starting
+[job 54/61] completed in 61.7s
+[job 58/61] starting
+[job 55/61] completed in 56.4s
+[job 59/61] starting
+[job 56/61] completed in 53.0s
+[job 60/61] starting
+[job 57/61] completed in 49.7s
+[job 61/61] starting
+[job 58/61] completed in 53.8s
+[job 60/61] completed in 49.8s
+[job 59/61] completed in 61.1s
+[job 61/61] completed in 54.0s
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-011--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-012--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-012--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-013--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-012--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-013--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-014--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-014--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-013--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-014--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-016--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-016--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-016--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-017--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-017--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-017--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-018--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-018--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-018--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-019--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-019--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-019--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-020--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-020--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-021--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-020--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-021--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-021--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-022--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-022--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-022--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-023--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-023--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-023--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-024--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-024--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-024--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-026--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-026--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-026--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-027--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-027--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-027--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-028--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-028--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-028--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-029--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-029--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-029--03.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-030--02.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-030--01.jpeg
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-030--03.jpeg
+
+exit_code=1 signal=none
+
+[2026-08-02T18:14:40.212Z] pending=9 concurrency=4
+OPENAI_API_KEY is set.
+[job 1/9] starting
+[job 2/9] starting
+[job 3/9] starting
+[job 4/9] starting
+[job 1/9] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_710c61e118cd416e9bb46f2c811749d4.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 5/9] starting
+[job 2/9] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_ac738a9eb9e5421ab6f751572d0cd7fe.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 6/9] starting
+[job 3/9] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_1e62ca2eff4049c9a8058aba1805a113.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 7/9] starting
+[job 4/9] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_ce19618af1a240e29aa258f7e9f1c37b.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 8/9] starting
+[job 5/9] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_ff5ffad8fc444362a281b72125a6d96a.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 9/9] starting
+[job 7/9] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_9a48210dbe02470096c93b36df6633af.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 6/9] completed in 59.0s
+[job 8/9] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_f839a2fc023b4913a7dba271ff58579e.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 9/9] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_487e23b0265e47d48114866ad8d9c59c.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+Wrote /Users/pan/Desktop/pumyung/003Maryland/3-Research/10-future/llm/curify/agentic-adhoc/visual-intent-routing/reports/vir_v2/images/2026-08-01-full/exploration/gpt-direct/vir-v2-exploration-015--03.jpeg
+
+exit_code=1 signal=none
