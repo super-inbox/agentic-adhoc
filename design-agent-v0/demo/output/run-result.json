@@ -1,0 +1,460 @@
+{
+  "run_id": "design_agent_demo_mens_grooming",
+  "status": "COMPLETED",
+  "task_type": "design_vote",
+  "skill_id": "design-vote",
+  "summary": "AI 模拟投票完成：D 方案以 39% 位列第一。以 D 款作为主推；B 款可用于更年轻、强调货架冲击力的渠道测试。",
+  "code": null,
+  "artifacts": [
+    {
+      "artifact_id": "e94c05daf821",
+      "kind": "report",
+      "label": "AI simulated vote report",
+      "object_path": "demo/output/design-vote-report.png",
+      "media_type": "image/png",
+      "url": null,
+      "metadata": {
+        "winner": "D",
+        "simulated": true
+      }
+    },
+    {
+      "artifact_id": "854bf290d397",
+      "kind": "manifest",
+      "label": "Structured vote analysis",
+      "object_path": "demo/output/design-vote-analysis.json",
+      "media_type": "application/json",
+      "url": null,
+      "metadata": {
+        "simulated": true
+      }
+    }
+  ],
+  "verdict": {
+    "passed": true,
+    "scores": {
+      "grounding": 4.6,
+      "segment_plausibility": 4.3,
+      "ranking_sanity": 4.4,
+      "actionability": 4.5
+    },
+    "hard_failures": [],
+    "repairable_failures": [],
+    "repair_instruction": null,
+    "retry_scope": []
+  },
+  "iterations": 1,
+  "trace": [
+    {
+      "step_id": "4e8a163b21e1",
+      "stage": "UNDERSTAND",
+      "name": "route_task",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:38.800436Z",
+      "ended_at": "2026-08-02T14:39:38.800878Z",
+      "latency_ms": 0,
+      "tool_name": null,
+      "model": null,
+      "input_summary": {
+        "requested_task": "design_vote",
+        "image_count": 1,
+        "prompt_chars": "[redacted]"
+      },
+      "output_summary": "design_vote",
+      "metrics": {},
+      "error": null
+    },
+    {
+      "step_id": "e29439ef1eb3",
+      "stage": "UNDERSTAND",
+      "name": "capability_gate",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:38.800901Z",
+      "ended_at": "2026-08-02T14:39:38.800927Z",
+      "latency_ms": 0,
+      "tool_name": null,
+      "model": null,
+      "input_summary": {
+        "skill_id": "design-vote",
+        "image_count": 1,
+        "allow_paid_generation": false
+      },
+      "output_summary": {
+        "supported": true,
+        "code": "SUPPORTED",
+        "message": ""
+      },
+      "metrics": {},
+      "error": null
+    },
+    {
+      "step_id": "98765d055989",
+      "stage": "PLAN",
+      "name": "plan_iteration_0",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:38.800941Z",
+      "ended_at": "2026-08-02T14:39:38.800968Z",
+      "latency_ms": 0,
+      "tool_name": null,
+      "model": null,
+      "input_summary": {
+        "iteration": 0,
+        "repair_instruction": null
+      },
+      "output_summary": {
+        "skill_id": "design-vote",
+        "iteration": 0,
+        "calls": [
+          {
+            "tool": "analyze_design_vote",
+            "purpose": "ground preferences in visible design cues"
+          },
+          {
+            "tool": "render_design_vote_report",
+            "purpose": "render deterministic decision graphic"
+          },
+          {
+            "tool": "verify_design_vote",
+            "purpose": "verify math and visual grounding"
+          }
+        ],
+        "repair_instruction": null
+      },
+      "metrics": {},
+      "error": null
+    },
+    {
+      "step_id": "3103708d5242",
+      "stage": "GENERATE",
+      "name": "tool:analyze_design_vote",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:38.800989Z",
+      "ended_at": "2026-08-02T14:39:38.830648Z",
+      "latency_ms": 29,
+      "tool_name": "analyze_design_vote",
+      "model": "demo-vision-fixture-v1",
+      "input_summary": {
+        "prompt": "[redacted]",
+        "image_urls": "[redacted]",
+        "candidate_images": null,
+        "repair_instruction": null
+      },
+      "output_summary": {
+        "candidate_images": {
+          "count": 4,
+          "sizes": [
+            11090,
+            13983,
+            14429,
+            12898
+          ]
+        },
+        "analysis": {
+          "product": "男士洁面泡沫包装",
+          "category": "男士理容",
+          "axis": "质感、品牌识别与货架高级感",
+          "variants": [
+            "dict",
+            "dict",
+            "dict",
+            "dict"
+          ],
+          "segments": [
+            "dict",
+            "dict",
+            "dict",
+            "dict"
+          ],
+          "overall": {
+            "A": 16,
+            "B": 21,
+            "C": 24,
+            "D": 39
+          },
+          "winner": "D",
+          "recommendation": "以 D 款作为主推；B 款可用于更年轻、强调货架冲击力的渠道测试。",
+          "confidence": 0.84,
+          "simulated_disclaimer": "AI 模拟投票 · 加权合成，并非真实消费者调研"
+        }
+      },
+      "metrics": {
+        "estimated_credits": 0.0
+      },
+      "error": null
+    },
+    {
+      "step_id": "1383fa8e33a4",
+      "stage": "GENERATE",
+      "name": "tool:render_design_vote_report",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:38.830718Z",
+      "ended_at": "2026-08-02T14:39:39.040068Z",
+      "latency_ms": 209,
+      "tool_name": "render_design_vote_report",
+      "model": null,
+      "input_summary": {
+        "analysis": {
+          "product": "男士洁面泡沫包装",
+          "category": "男士理容",
+          "axis": "质感、品牌识别与货架高级感",
+          "variants": [
+            "dict",
+            "dict",
+            "dict",
+            "dict"
+          ],
+          "segments": [
+            "dict",
+            "dict",
+            "dict",
+            "dict"
+          ],
+          "overall": {
+            "A": 16,
+            "B": 21,
+            "C": 24,
+            "D": 39
+          },
+          "winner": "D",
+          "recommendation": "以 D 款作为主推；B 款可用于更年轻、强调货架冲击力的渠道测试。",
+          "confidence": 0.84,
+          "simulated_disclaimer": "AI 模拟投票 · 加权合成，并非真实消费者调研"
+        },
+        "candidate_images": {
+          "count": 4,
+          "sizes": [
+            11090,
+            13983,
+            14429,
+            12898
+          ]
+        }
+      },
+      "output_summary": {
+        "report_bytes": {
+          "type": "bytes",
+          "size": 251156
+        }
+      },
+      "metrics": {
+        "estimated_credits": 0.0
+      },
+      "error": null
+    },
+    {
+      "step_id": "ca8ac45fd066",
+      "stage": "VERIFY",
+      "name": "verify_iteration_0",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:39.040160Z",
+      "ended_at": "2026-08-02T14:39:39.040381Z",
+      "latency_ms": 0,
+      "tool_name": null,
+      "model": null,
+      "input_summary": {
+        "iteration": 0,
+        "skill_id": "design-vote"
+      },
+      "output_summary": {
+        "passed": true,
+        "scores": {
+          "grounding": 4.6,
+          "segment_plausibility": 4.3,
+          "ranking_sanity": 4.4,
+          "actionability": 4.5
+        },
+        "hard_failures": [],
+        "repairable_failures": [],
+        "repair_instruction": null,
+        "retry_scope": []
+      },
+      "metrics": {},
+      "error": null
+    },
+    {
+      "step_id": "c4f6638681ac",
+      "stage": "VERIFY",
+      "name": "tool:verify_design_vote",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:39.040218Z",
+      "ended_at": "2026-08-02T14:39:39.040355Z",
+      "latency_ms": 0,
+      "tool_name": "verify_design_vote",
+      "model": "demo-vision-fixture-v1",
+      "input_summary": {
+        "prompt": "[redacted]",
+        "analysis": {
+          "product": "男士洁面泡沫包装",
+          "category": "男士理容",
+          "axis": "质感、品牌识别与货架高级感",
+          "variants": [
+            "dict",
+            "dict",
+            "dict",
+            "dict"
+          ],
+          "segments": [
+            "dict",
+            "dict",
+            "dict",
+            "dict"
+          ],
+          "overall": {
+            "A": 16,
+            "B": 21,
+            "C": 24,
+            "D": 39
+          },
+          "winner": "D",
+          "recommendation": "以 D 款作为主推；B 款可用于更年轻、强调货架冲击力的渠道测试。",
+          "confidence": 0.84,
+          "simulated_disclaimer": "AI 模拟投票 · 加权合成，并非真实消费者调研"
+        },
+        "candidate_images": {
+          "count": 4,
+          "sizes": [
+            11090,
+            13983,
+            14429,
+            12898
+          ]
+        },
+        "report_bytes": {
+          "type": "bytes",
+          "size": 251156
+        }
+      },
+      "output_summary": {
+        "passed": true,
+        "scores": {
+          "grounding": 4.6,
+          "segment_plausibility": 4.3,
+          "ranking_sanity": 4.4,
+          "actionability": 4.5
+        },
+        "hard_failures": [],
+        "repairable_failures": [],
+        "repair_instruction": null,
+        "retry_scope": []
+      },
+      "metrics": {
+        "estimated_credits": 0.0
+      },
+      "error": null
+    },
+    {
+      "step_id": "336bbec44136",
+      "stage": "PRESENT",
+      "name": "finalize_artifacts",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:39.040398Z",
+      "ended_at": "2026-08-02T14:39:39.045367Z",
+      "latency_ms": 4,
+      "tool_name": null,
+      "model": null,
+      "input_summary": {
+        "skill_id": "design-vote"
+      },
+      "output_summary": [
+        {
+          "artifact_id": "e94c05daf821",
+          "kind": "report",
+          "label": "AI simulated vote report",
+          "object_path": "demo/output/design-vote-report.png",
+          "media_type": "image/png",
+          "url": "[redacted]",
+          "metadata": {
+            "winner": "D",
+            "simulated": true
+          }
+        },
+        {
+          "artifact_id": "854bf290d397",
+          "kind": "manifest",
+          "label": "Structured vote analysis",
+          "object_path": "demo/output/design-vote-analysis.json",
+          "media_type": "application/json",
+          "url": "[redacted]",
+          "metadata": {
+            "simulated": true
+          }
+        }
+      ],
+      "metrics": {},
+      "error": null
+    },
+    {
+      "step_id": "fdba9784e48f",
+      "stage": "PRESENT",
+      "name": "tool:store_design_vote_artifacts",
+      "status": "COMPLETED",
+      "started_at": "2026-08-02T14:39:39.040424Z",
+      "ended_at": "2026-08-02T14:39:39.045328Z",
+      "latency_ms": 4,
+      "tool_name": "store_design_vote_artifacts",
+      "model": null,
+      "input_summary": {
+        "analysis": {
+          "product": "男士洁面泡沫包装",
+          "category": "男士理容",
+          "axis": "质感、品牌识别与货架高级感",
+          "variants": [
+            "dict",
+            "dict",
+            "dict",
+            "dict"
+          ],
+          "segments": [
+            "dict",
+            "dict",
+            "dict",
+            "dict"
+          ],
+          "overall": {
+            "A": 16,
+            "B": 21,
+            "C": 24,
+            "D": 39
+          },
+          "winner": "D",
+          "recommendation": "以 D 款作为主推；B 款可用于更年轻、强调货架冲击力的渠道测试。",
+          "confidence": 0.84,
+          "simulated_disclaimer": "AI 模拟投票 · 加权合成，并非真实消费者调研"
+        },
+        "report_bytes": {
+          "type": "bytes",
+          "size": 251156
+        }
+      },
+      "output_summary": [
+        {
+          "artifact_id": "e94c05daf821",
+          "kind": "report",
+          "label": "AI simulated vote report",
+          "object_path": "demo/output/design-vote-report.png",
+          "media_type": "image/png",
+          "url": "[redacted]",
+          "metadata": {
+            "winner": "D",
+            "simulated": true
+          }
+        },
+        {
+          "artifact_id": "854bf290d397",
+          "kind": "manifest",
+          "label": "Structured vote analysis",
+          "object_path": "demo/output/design-vote-analysis.json",
+          "media_type": "application/json",
+          "url": "[redacted]",
+          "metadata": {
+            "simulated": true
+          }
+        }
+      ],
+      "metrics": {
+        "estimated_credits": 0.0
+      },
+      "error": null
+    }
+  ]
+}

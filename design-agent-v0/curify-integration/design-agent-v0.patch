@@ -1,0 +1,3108 @@
+diff --git a/curify_background/.env.example b/curify_background/.env.example
+index c1cca89..886c5e3 100644
+--- a/curify_background/.env.example
++++ b/curify_background/.env.example
+@@ -37,6 +37,17 @@ AZURE_STORAGE_CONTAINER_NAME="processed-videos"
+ OPENAI_API_KEY=""
+ HF_API_KEY=""
+ 
++# Design Agent / Gemini + private artifact storage
++GEMINI_API_KEY=""
++GEMINI_IMAGE_MODEL="gemini-3-pro-image-preview"
++# Optional multimodal text model for design analysis + verification.
++# Empty falls back to GEMINI_IMAGE_MODEL.
++DESIGN_AGENT_ANALYSIS_MODEL=""
++GCP_PROJECT="your-gcp-project"
++GCP_LOCATION="us-central1"
++GCS_BUCKET="your-private-artifact-bucket"
++GOOGLE_APPLICATION_CREDENTIALS="/tmp/gcp-sa.json"
++
+ ELEVENLABS_API_KEY=""
+ ELEVENLABS_SCRIBE_API_URL="https://api.elevenlabs.io/v1/speech-to-text"
+ 
+@@ -49,4 +60,4 @@ IS_PRODUCTION=False
+ # Email Configuration
+ MAIL_USERNAME=""
+ MAIL_PASSWORD=""
+-MAIL_SERVER=""
+\ No newline at end of file
++MAIL_SERVER=""
+diff --git a/curify_background/app/agent_runtime/__init__.py b/curify_background/app/agent_runtime/__init__.py
+new file mode 100644
+index 0000000..1b9119f
+--- /dev/null
++++ b/curify_background/app/agent_runtime/__init__.py
+@@ -0,0 +1,41 @@
++"""Bounded, tool-mediated Design Agent runtime.
++
++The runtime is intentionally small and deterministic around the model calls:
++skills choose typed tools, tools are permission-gated, verifiers return a
++structured repair contract, and the runtime owns the retry budget.
++
++Imports stay lazy so the offline evaluator can use its scoring helpers without
++loading model clients or application settings.
++"""
++
++from typing import TYPE_CHECKING, Any
++
++if TYPE_CHECKING:
++    from app.agent_runtime.runtime import DesignAgentRuntime
++    from app.agent_runtime.schemas import (
++        AgentRunRequest,
++        AgentRunResult,
++        AgentRunStatus,
++        AgentTaskType,
++    )
++
++__all__ = [
++    "AgentRunRequest",
++    "AgentRunResult",
++    "AgentRunStatus",
++    "AgentTaskType",
++    "DesignAgentRuntime",
++    "build_default_runtime",
++]
++
++
++def __getattr__(name: str) -> Any:
++    if name in {"DesignAgentRuntime", "build_default_runtime"}:
++        from app.agent_runtime import runtime
++
++        return getattr(runtime, name)
++    if name in {"AgentRunRequest", "AgentRunResult", "AgentRunStatus", "AgentTaskType"}:
++        from app.agent_runtime import schemas
++
++        return getattr(schemas, name)
++    raise AttributeError(name)
+diff --git a/curify_background/app/agent_runtime/evaluation.py b/curify_background/app/agent_runtime/evaluation.py
+new file mode 100644
+index 0000000..3b556b1
+--- /dev/null
++++ b/curify_background/app/agent_runtime/evaluation.py
+@@ -0,0 +1,144 @@
++from __future__ import annotations
++
++from collections import defaultdict
++from typing import Any, Dict, Iterable, List
++
++
++def _allowed_statuses(expected: Dict[str, Any]) -> List[str]:
++    value = expected.get("status", "COMPLETED")
++    return [str(item) for item in value] if isinstance(value, list) else [str(value)]
++
++
++def score_case(case: Dict[str, Any], response: Dict[str, Any]) -> Dict[str, Any]:
++    """Score a terminal API response against one versioned single-turn case."""
++    expected = case.get("expected") or {}
++    trace = response.get("trace") or []
++    seen_stages = {
++        str(step.get("stage"))
++        for step in trace
++        if step.get("status") in ("RUNNING", "COMPLETED", "FAILED")
++    }
++    required_stages = set(expected.get("required_stages") or ["UNDERSTAND"])
++    artifacts = response.get("artifacts") or []
++    artifact_kinds = {str(artifact.get("kind")) for artifact in artifacts}
++
++    checks: Dict[str, bool] = {
++        "terminal_status": str(response.get("status")) in _allowed_statuses(expected),
++        "required_stages": required_stages.issubset(seen_stages),
++        "min_artifacts": len(artifacts) >= int(expected.get("min_artifacts", 0)),
++    }
++    if expected.get("task_type") is not None:
++        checks["route"] = response.get("task_type") == expected["task_type"]
++    if expected.get("skill_id") is not None:
++        checks["skill"] = response.get("skill_id") == expected["skill_id"]
++    if "code" in expected:
++        checks["code"] = response.get("code") == expected["code"]
++    if "verdict_passed" in expected:
++        verdict = response.get("verdict") or {}
++        checks["verdict"] = verdict.get("passed") is expected["verdict_passed"]
++    if "max_iterations" in expected:
++        checks["retry_budget"] = int(response.get("iterations") or 0) <= int(
++            expected["max_iterations"]
++        )
++    if expected.get("artifact_kinds"):
++        checks["artifact_kinds"] = set(expected["artifact_kinds"]).issubset(artifact_kinds)
++    if expected.get("artifacts_reachable"):
++        probes = response.get("_artifact_probe") or []
++        checks["artifacts_reachable"] = (
++            len(probes) == len(artifacts)
++            and bool(probes)
++            and all(probe.get("reachable") is True for probe in probes)
++        )
++
++    stage_coverage = (
++        len(required_stages & seen_stages) / len(required_stages)
++        if required_stages
++        else 1.0
++    )
++    return {
++        "id": case["id"],
++        "task_type": expected.get("task_type"),
++        "coverage": case.get("coverage", "unknown"),
++        "passed": all(checks.values()),
++        "checks": checks,
++        "stage_coverage": round(stage_coverage, 4),
++        "actual_status": response.get("status"),
++        "actual_task_type": response.get("task_type"),
++        "actual_code": response.get("code"),
++        "iterations": int(response.get("iterations") or 0),
++        "artifact_count": len(artifacts),
++        "trace_steps": len(trace),
++    }
++
++
++def aggregate_results(results: Iterable[Dict[str, Any]]) -> Dict[str, Any]:
++    rows = list(results)
++    total = len(rows)
++    routed = [row for row in rows if "route" in row.get("checks", {})]
++    verified = [row for row in rows if "verdict" in row.get("checks", {})]
++    abstained = [
++        row
++        for row in rows
++        if row.get("checks", {}).get("terminal_status") is not None
++        and row.get("actual_status") == "ABSTAINED"
++    ]
++    by_coverage: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
++    for row in rows:
++        by_coverage[str(row.get("coverage", "unknown"))].append(row)
++
++    def rate(subset: List[Dict[str, Any]], predicate) -> float:
++        return (
++            sum(1 for item in subset if predicate(item)) / len(subset)
++            if subset
++            else 0.0
++        )
++
++    return {
++        "total": total,
++        "case_pass_rate": round(rate(rows, lambda row: row["passed"]), 4),
++        "routing_accuracy": round(
++            rate(routed, lambda row: row["checks"].get("route", False)), 4
++        ),
++        "verification_pass_rate": round(
++            rate(verified, lambda row: row["checks"].get("verdict", False)), 4
++        ),
++        "mean_stage_coverage": round(
++            sum(row.get("stage_coverage", 0.0) for row in rows) / total, 4
++        )
++        if total
++        else 0.0,
++        "abstained_count": len(abstained),
++        "by_coverage": {
++            key: {
++                "n": len(group),
++                "pass_rate": round(rate(group, lambda row: row["passed"]), 4),
++                "failed_ids": [row["id"] for row in group if not row["passed"]],
++            }
++            for key, group in sorted(by_coverage.items())
++        },
++        "failed_ids": [row["id"] for row in rows if not row["passed"]],
++    }
++
++
++def render_markdown(summary: Dict[str, Any]) -> str:
++    def pct(value: float) -> str:
++        return f"{float(value) * 100:.1f}%"
++
++    lines = [
++        "# Design Agent — single-turn runtime eval",
++        "",
++        f"- Cases: **{summary['total']}**",
++        f"- End-to-end pass rate: **{pct(summary['case_pass_rate'])}**",
++        f"- Routing accuracy: **{pct(summary['routing_accuracy'])}**",
++        f"- Verification pass rate: **{pct(summary['verification_pass_rate'])}**",
++        f"- Mean required-stage coverage: **{pct(summary['mean_stage_coverage'])}**",
++        "",
++        "## Coverage gaps",
++        "",
++        "| coverage | n | pass rate | failed cases |",
++        "|---|---:|---:|---|",
++    ]
++    for name, group in summary["by_coverage"].items():
++        failed = ", ".join(group["failed_ids"]) or "—"
++        lines.append(f"| {name} | {group['n']} | {pct(group['pass_rate'])} | {failed} |")
++    return "\n".join(lines) + "\n"
+diff --git a/curify_background/app/agent_runtime/persistence.py b/curify_background/app/agent_runtime/persistence.py
+new file mode 100644
+index 0000000..c017954
+--- /dev/null
++++ b/curify_background/app/agent_runtime/persistence.py
+@@ -0,0 +1,133 @@
++from __future__ import annotations
++
++import hashlib
++import logging
++import uuid
++from datetime import datetime
++from typing import Any, Dict
++
++from sqlalchemy.ext.asyncio import AsyncSession
++
++from app.agent_runtime.runtime import build_default_runtime
++from app.agent_runtime.schemas import AgentRunRequest, AgentRunStatus
++from app.agent_runtime.tracing import safe_error
++from app.crud.project import create_project, update_project_fields
++from app.database import async_session_maker
++from app.models.project import JobSettings, JobType, ProjectStatus
++
++logger = logging.getLogger(__name__)
++
++
++def new_agent_run_id() -> str:
++    return f"design_agent_{uuid.uuid4().hex[:16]}"
++
++
++def _source_hash(value: str) -> str:
++    return hashlib.sha256(value.encode("utf-8")).hexdigest()[:16]
++
++
++def initial_runtime_config(request: AgentRunRequest) -> Dict[str, Any]:
++    return {
++        "kind": "design_agent",
++        "agent_status": AgentRunStatus.QUEUED.value,
++        "request": {
++            "task_type": request.task_type.value,
++            "prompt": request.prompt,
++            "locale": request.locale,
++            "image_count": len(request.image_urls),
++            # Never persist signed URLs or private object paths in trace JSON.
++            "image_ref_hashes": [_source_hash(value) for value in request.image_urls],
++            "output_count": request.output_count,
++            "max_iterations": request.max_iterations,
++            "allow_paid_generation": request.allow_paid_generation,
++            "constraints": request.constraints,
++        },
++        "trace": [],
++    }
++
++
++async def prepare_agent_project(
++    db: AsyncSession,
++    run_id: str,
++    user_id: int,
++    request: AgentRunRequest,
++) -> None:
++    await create_project(
++        db=db,
++        project_id=run_id,
++        user_id=user_id,
++        video_id=None,
++        project_name=f"Design Agent · {request.task_type.value}",
++        job_settings=JobSettings(job_type=JobType.DESIGN_AGENT),
++        description=f"single-turn multimodal design agent; images={len(request.image_urls)}",
++        is_production=True,
++        created_at=datetime.utcnow(),
++        updated_at=datetime.utcnow(),
++    )
++    await update_project_fields(
++        db,
++        run_id,
++        status=ProjectStatus.STARTED,
++        runtime_config=initial_runtime_config(request),
++    )
++
++
++async def run_agent_project(
++    run_id: str,
++    user_id: int,
++    request_payload: Dict[str, Any],
++) -> None:
++    request = AgentRunRequest.model_validate(request_payload)
++    base_config = initial_runtime_config(request)
++    async with async_session_maker() as db:
++        async def trace_sink(steps) -> None:
++            current_stage = steps[-1].stage.value if steps else None
++            await update_project_fields(
++                db,
++                run_id,
++                runtime_config={
++                    **base_config,
++                    "agent_status": AgentRunStatus.RUNNING.value,
++                    "current_stage": current_stage,
++                    "trace": [step.model_dump(mode="json") for step in steps],
++                },
++            )
++
++        try:
++            result = await build_default_runtime().run(run_id, request, trace_sink)
++            project_status = (
++                ProjectStatus.COMPLETED
++                if result.status in (AgentRunStatus.COMPLETED, AgentRunStatus.ABSTAINED)
++                else ProjectStatus.FAILED
++            )
++            result_json = result.model_dump(mode="json")
++            runtime_config = {
++                **base_config,
++                "agent_status": result.status.value,
++                "current_stage": result.trace[-1].stage.value if result.trace else None,
++                "trace": result_json.pop("trace"),
++                "result": result_json,
++            }
++            updates: Dict[str, Any] = {
++                "status": project_status,
++                "runtime_config": runtime_config,
++                "cost_credits": sum(
++                    step.metrics.get("estimated_credits", 0.0) for step in result.trace
++                ),
++            }
++            if result.artifacts:
++                updates["final_video_blob_path"] = result.artifacts[0].object_path
++            await update_project_fields(db, run_id, **updates)
++        except Exception as exc:
++            logger.exception("Design Agent background task crashed run_id=%s user_id=%s", run_id, user_id)
++            await update_project_fields(
++                db,
++                run_id,
++                status=ProjectStatus.FAILED,
++                runtime_config={
++                    **base_config,
++                    "agent_status": AgentRunStatus.FAILED.value,
++                    "failure_code": "AGENT_BACKGROUND_CRASH",
++                    "failure_reason": safe_error(exc),
++                },
++            )
+diff --git a/curify_background/app/agent_runtime/registry.py b/curify_background/app/agent_runtime/registry.py
+new file mode 100644
+index 0000000..84e7227
+--- /dev/null
++++ b/curify_background/app/agent_runtime/registry.py
+@@ -0,0 +1,83 @@
++from __future__ import annotations
++
++from dataclasses import dataclass
++from typing import Any, Awaitable, Callable, Dict, Optional
++
++from app.agent_runtime.schemas import AgentRunRequest, AgentStage
++from app.agent_runtime.tracing import TraceRecorder, safe_summary
++
++
++class AgentAbstention(Exception):
++    def __init__(self, code: str, message: str):
++        super().__init__(message)
++        self.code = code
++        self.message = message
++
++
++class ToolNotFoundError(RuntimeError):
++    pass
++
++
++@dataclass
++class ToolContext:
++    run_id: str
++    request: AgentRunRequest
++    recorder: TraceRecorder
++
++
++ToolHandler = Callable[[Dict[str, Any], ToolContext], Awaitable[Any]]
++
++
++@dataclass
++class ToolSpec:
++    name: str
++    description: str
++    stage: AgentStage
++    handler: ToolHandler
++    requires_paid_generation: bool = False
++    model: Optional[str] = None
++    estimated_credits: float = 0.0
++    credit_estimator: Optional[Callable[[Dict[str, Any]], float]] = None
++
++
++class ToolRegistry:
++    def __init__(self):
++        self._tools: Dict[str, ToolSpec] = {}
++
++    def register(self, spec: ToolSpec) -> None:
++        if spec.name in self._tools:
++            raise ValueError(f"Tool already registered: {spec.name}")
++        self._tools[spec.name] = spec
++
++    def describe(self, name: str) -> ToolSpec:
++        try:
++            return self._tools[name]
++        except KeyError as exc:
++            raise ToolNotFoundError(name) from exc
++
++    async def invoke(
++        self,
++        name: str,
++        args: Dict[str, Any],
++        context: ToolContext,
++    ) -> Any:
++        spec = self.describe(name)
++        if spec.requires_paid_generation and not context.request.allow_paid_generation:
++            raise AgentAbstention(
++                "PAID_GENERATION_NOT_APPROVED",
++                "This skill creates paid model outputs. Resubmit with allow_paid_generation=true.",
++            )
++        estimated_credits = (
++            spec.credit_estimator(args)
++            if spec.credit_estimator is not None
++            else spec.estimated_credits
++        )
++        return await context.recorder.record(
++            spec.stage,
++            f"tool:{name}",
++            lambda: spec.handler(args, context),
++            tool_name=name,
++            model=spec.model,
++            input_summary=safe_summary(args),
++            metrics={"estimated_credits": max(0.0, float(estimated_credits))},
++        )
+diff --git a/curify_background/app/agent_runtime/rendering.py b/curify_background/app/agent_runtime/rendering.py
+new file mode 100644
+index 0000000..321951f
+--- /dev/null
++++ b/curify_background/app/agent_runtime/rendering.py
+@@ -0,0 +1,237 @@
++from __future__ import annotations
++
++import io
++from pathlib import Path
++from typing import List
++
++from PIL import Image, ImageDraw, ImageFont
++
++from app.agent_runtime.schemas import VoteAnalysis
++
++
++_APP_ROOT = Path(__file__).resolve().parent.parent
++_FONT_PATH = _APP_ROOT / "assets" / "fonts" / "NotoSansSC-Regular.ttf"
++
++
++def _font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
++    try:
++        return ImageFont.truetype(str(_FONT_PATH), size)
++    except Exception:
++        return ImageFont.load_default()
++
++
++def _text(draw: ImageDraw.ImageDraw, xy, value: str, *, size: int, fill, anchor=None):
++    draw.text(xy, value, font=_font(size), fill=fill, anchor=anchor)
++
++
++def _fit_text(draw: ImageDraw.ImageDraw, value: str, *, size: int, max_width: int) -> str:
++    normalized = " ".join(value.split())
++    font = _font(size)
++    if draw.textlength(normalized, font=font) <= max_width:
++        return normalized
++    suffix = "…"
++    while normalized and draw.textlength(normalized + suffix, font=font) > max_width:
++        normalized = normalized[:-1]
++    return normalized + suffix
++
++
++def _cover(image: Image.Image, size: tuple[int, int]) -> Image.Image:
++    image = image.convert("RGB")
++    target_w, target_h = size
++    scale = max(target_w / image.width, target_h / image.height)
++    resized = image.resize(
++        (max(1, round(image.width * scale)), max(1, round(image.height * scale))),
++        Image.LANCZOS,
++    )
++    left = max(0, (resized.width - target_w) // 2)
++    top = max(0, (resized.height - target_h) // 2)
++    return resized.crop((left, top, left + target_w, top + target_h))
++
++
++def _image_bytes(image: Image.Image, format: str = "PNG") -> bytes:
++    out = io.BytesIO()
++    image.save(out, format=format, optimize=True)
++    return out.getvalue()
++
++
++def split_vote_candidates(source_images: List[bytes]) -> List[bytes]:
++    """Normalize four files or split one comparison board into A-D.
++
++    The deterministic splitter supports the common 4-column, 4-row, and 2x2
++    boards. Visual verification is responsible for rejecting a single image
++    that does not actually contain four coherent candidates.
++    """
++    if len(source_images) == 4:
++        return source_images
++    if len(source_images) != 1:
++        raise ValueError("Design vote requires one comparison board or four images.")
++    image = Image.open(io.BytesIO(source_images[0])).convert("RGB")
++    w, h = image.size
++    boxes: List[tuple[int, int, int, int]] = []
++    if w / max(h, 1) >= 2.2:
++        boxes = [(round(i * w / 4), 0, round((i + 1) * w / 4), h) for i in range(4)]
++    elif h / max(w, 1) >= 2.2:
++        boxes = [(0, round(i * h / 4), w, round((i + 1) * h / 4)) for i in range(4)]
++    else:
++        boxes = [
++            (0, 0, w // 2, h // 2),
++            (w // 2, 0, w, h // 2),
++            (0, h // 2, w // 2, h),
++            (w // 2, h // 2, w, h),
++        ]
++    return [_image_bytes(image.crop(box), "JPEG") for box in boxes]
++
++
++def render_vote_report(analysis: VoteAnalysis, candidate_images: List[bytes]) -> bytes:
++    width, height = 1600, 1220
++    canvas = Image.new("RGB", (width, height), (247, 245, 240))
++    draw = ImageDraw.Draw(canvas)
++    ink = (24, 27, 34)
++    muted = (99, 103, 112)
++    accent = (121, 72, 54)
++    gold = (188, 137, 65)
++
++    _text(
++        draw,
++        (70, 54),
++        _fit_text(draw, analysis.product, size=52, max_width=1160),
++        size=52,
++        fill=ink,
++    )
++    _text(
++        draw,
++        (70, 120),
++        _fit_text(draw, f"AI 模拟投票 · {analysis.axis}", size=29, max_width=1360),
++        size=29,
++        fill=accent,
++    )
++    _text(draw, (1530, 76), f"置信度 {round(analysis.confidence * 100)}%", size=23, fill=muted, anchor="ra")
++
++    card_w, gap, start_x = 340, 26, 70
++    top = 180
++    variant_by_id = {variant.id: variant for variant in analysis.variants}
++    for index, label in enumerate(("A", "B", "C", "D")):
++        x = start_x + index * (card_w + gap)
++        winner = label == analysis.winner
++        border = gold if winner else (218, 215, 207)
++        draw.rounded_rectangle(
++            (x, top, x + card_w, top + 560),
++            radius=24,
++            fill=(255, 255, 255),
++            outline=border,
++            width=7 if winner else 2,
++        )
++        thumb = _cover(Image.open(io.BytesIO(candidate_images[index])), (300, 310))
++        canvas.paste(thumb, (x + 20, top + 20))
++        draw.rounded_rectangle((x + 20, top + 20, x + 84, top + 84), radius=18, fill=(20, 22, 27))
++        _text(draw, (x + 52, top + 52), label, size=32, fill="white", anchor="mm")
++        if winner:
++            draw.rounded_rectangle((x + 202, top + 31, x + 309, top + 74), radius=18, fill=gold)
++            _text(draw, (x + 255, top + 52), "推荐", size=21, fill="white", anchor="mm")
++        percent = analysis.overall[label]
++        _text(draw, (x + 20, top + 356), f"{percent}%", size=60, fill=accent if winner else ink)
++        draw.rounded_rectangle((x + 20, top + 430, x + card_w - 20, top + 448), radius=9, fill=(234, 230, 221))
++        draw.rounded_rectangle(
++            (x + 20, top + 430, x + 20 + round((card_w - 40) * percent / 100), top + 448),
++            radius=9,
++            fill=gold if winner else accent,
++        )
++        variant = variant_by_id[label]
++        _text(
++            draw,
++            (x + 20, top + 472),
++            _fit_text(draw, variant.design_language, size=22, max_width=300),
++            size=22,
++            fill=muted,
++        )
++        if variant.strengths:
++            _text(
++                draw,
++                (x + 20, top + 512),
++                _fit_text(draw, "＋ " + variant.strengths[0], size=20, max_width=300),
++                size=20,
++                fill=(55, 112, 78),
++            )
++
++    section_top = 790
++    _text(draw, (70, section_top), "分人群偏好", size=32, fill=ink)
++    segment_x = 70
++    for segment in analysis.segments[:5]:
++        leader = max(("A", "B", "C", "D"), key=lambda key: segment.votes[key])
++        box_w = 276
++        draw.rounded_rectangle(
++            (segment_x, section_top + 54, segment_x + box_w, section_top + 172),
++            radius=18,
++            fill=(239, 235, 226),
++        )
++        _text(
++            draw,
++            (segment_x + 18, section_top + 72),
++            _fit_text(draw, segment.name, size=21, max_width=240),
++            size=21,
++            fill=ink,
++        )
++        _text(
++            draw,
++            (segment_x + 18, section_top + 116),
++            f"偏好 {leader} · {segment.votes[leader]}%",
++            size=24,
++            fill=accent,
++        )
++        segment_x += box_w + 24
++
++    draw.rounded_rectangle((70, 1010, 1530, 1122), radius=22, fill=(31, 34, 40))
++    _text(
++        draw,
++        (100, 1036),
++        _fit_text(draw, f"建议：{analysis.recommendation}", size=27, max_width=1380),
++        size=27,
++        fill="white",
++    )
++    _text(draw, (70, 1163), analysis.simulated_disclaimer, size=21, fill=muted)
++    _text(draw, (1530, 1163), "Curify Design Agent", size=21, fill=muted, anchor="ra")
++    return _image_bytes(canvas, "PNG")
++
++
++def render_tryon_poster(image_bytes: bytes, direction: str, prompt: str) -> bytes:
++    image = _cover(Image.open(io.BytesIO(image_bytes)), (1080, 1350))
++    overlay = Image.new("RGBA", image.size, (0, 0, 0, 0))
++    draw = ImageDraw.Draw(overlay)
++    for y in range(230):
++        alpha = round(150 * (1 - y / 230))
++        draw.rectangle((0, y, 1080, y + 1), fill=(10, 12, 17, alpha))
++    for y in range(1110, 1350):
++        alpha = round(175 * ((y - 1110) / 240))
++        draw.rectangle((0, y, 1080, y + 1), fill=(10, 12, 17, alpha))
++    composed = Image.alpha_composite(image.convert("RGBA"), overlay)
++    draw = ImageDraw.Draw(composed)
++    _text(draw, (58, 54), "CURIFY EDIT", size=28, fill=(255, 255, 255, 220))
++    _text(
++        draw,
++        (58, 101),
++        _fit_text(draw, direction, size=47, max_width=964),
++        size=47,
++        fill="white",
++    )
++    _text(
++        draw,
++        (58, 1212),
++        _fit_text(draw, prompt, size=30, max_width=820),
++        size=30,
++        fill="white",
++    )
++    _text(draw, (1022, 1294), "AI CONCEPT", size=21, fill=(255, 255, 255, 210), anchor="ra")
++    return _image_bytes(composed.convert("RGB"), "JPEG")
++
++
++def validate_image_bytes(image_bytes: bytes, *, min_side: int = 512) -> List[str]:
++    failures: List[str] = []
++    try:
++        image = Image.open(io.BytesIO(image_bytes))
++        image.verify()
++        image = Image.open(io.BytesIO(image_bytes))
++        if min(image.size) < min_side:
++            failures.append(f"image is too small: {image.width}x{image.height}")
++    except Exception:
++        failures.append("artifact is not a readable image")
++    return failures
+diff --git a/curify_background/app/agent_runtime/runtime.py b/curify_background/app/agent_runtime/runtime.py
+new file mode 100644
+index 0000000..7859aab
+--- /dev/null
++++ b/curify_background/app/agent_runtime/runtime.py
+@@ -0,0 +1,196 @@
++from __future__ import annotations
++
++import logging
++from typing import Optional
++
++from app.agent_runtime.registry import AgentAbstention, ToolContext
++from app.agent_runtime.schemas import (
++    AgentRunRequest,
++    AgentRunResult,
++    AgentRunStatus,
++    AgentStage,
++    VerificationVerdict,
++)
++from app.agent_runtime.services import DesignAgentServices, default_services
++from app.agent_runtime.skills import SkillContext, SkillRegistry, infer_task_type
++from app.agent_runtime.tools import build_tool_registry
++from app.agent_runtime.tracing import TraceRecorder, TraceSink
++
++logger = logging.getLogger(__name__)
++
++
++class DesignAgentRuntime:
++    """A bounded single-turn loop: understand -> plan -> tools -> verify -> repair."""
++
++    def __init__(
++        self,
++        services: DesignAgentServices,
++        skills: Optional[SkillRegistry] = None,
++    ):
++        self.services = services
++        self.skills = skills or SkillRegistry()
++        self.tools = build_tool_registry(services)
++
++    async def run(
++        self,
++        run_id: str,
++        request: AgentRunRequest,
++        trace_sink: Optional[TraceSink] = None,
++    ) -> AgentRunResult:
++        recorder = TraceRecorder(trace_sink)
++        selected_task = None
++        skill = None
++        verdict: Optional[VerificationVerdict] = None
++        execution = None
++        iterations = 0
++        try:
++            selected_task = await recorder.record(
++                AgentStage.UNDERSTAND,
++                "route_task",
++                lambda: infer_task_type(request),
++                input_summary={
++                    "requested_task": request.task_type.value,
++                    "image_count": len(request.image_urls),
++                    "prompt_chars": len(request.prompt),
++                },
++            )
++            if selected_task is None:
++                return AgentRunResult(
++                    run_id=run_id,
++                    status=AgentRunStatus.ABSTAINED,
++                    summary="The request does not match a supported Design Agent skill.",
++                    code="UNSUPPORTED_TASK",
++                    trace=recorder.steps,
++                )
++            skill = self.skills.get(selected_task)
++            capability = await recorder.record(
++                AgentStage.UNDERSTAND,
++                "capability_gate",
++                lambda: skill.capability(request),
++                input_summary={
++                    "skill_id": skill.skill_id,
++                    "image_count": len(request.image_urls),
++                    "allow_paid_generation": request.allow_paid_generation,
++                },
++            )
++            if not capability.supported:
++                return AgentRunResult(
++                    run_id=run_id,
++                    status=AgentRunStatus.ABSTAINED,
++                    task_type=selected_task,
++                    skill_id=skill.skill_id,
++                    summary=capability.message,
++                    code=capability.code,
++                    trace=recorder.steps,
++                )
++
++            tool_context = ToolContext(run_id=run_id, request=request, recorder=recorder)
++            skill_context = SkillContext(
++                run_id=run_id,
++                request=request,
++                tools=self.tools,
++                tool_context=tool_context,
++            )
++            feedback: Optional[VerificationVerdict] = None
++            previous = None
++            for iteration in range(request.max_iterations + 1):
++                iterations = iteration + 1
++                await recorder.record(
++                    AgentStage.PLAN,
++                    f"plan_iteration_{iteration}",
++                    lambda iteration=iteration, feedback=feedback: skill.plan(
++                        request, iteration, feedback
++                    ),
++                    input_summary={
++                        "iteration": iteration,
++                        "repair_instruction": feedback.repair_instruction if feedback else None,
++                    },
++                )
++                execution = await skill.execute(
++                    skill_context,
++                    iteration,
++                    previous,
++                    feedback,
++                )
++                verdict = await recorder.record(
++                    AgentStage.VERIFY,
++                    f"verify_iteration_{iteration}",
++                    lambda: skill.verify(skill_context, execution),
++                    input_summary={"iteration": iteration, "skill_id": skill.skill_id},
++                )
++                if verdict.passed:
++                    artifacts = await recorder.record(
++                        AgentStage.PRESENT,
++                        "finalize_artifacts",
++                        lambda: skill.present(skill_context, execution),
++                        input_summary={"skill_id": skill.skill_id},
++                    )
++                    return AgentRunResult(
++                        run_id=run_id,
++                        status=AgentRunStatus.COMPLETED,
++                        task_type=selected_task,
++                        skill_id=skill.skill_id,
++                        summary=skill.summary(execution),
++                        artifacts=artifacts,
++                        verdict=verdict,
++                        iterations=iterations,
++                        trace=recorder.steps,
++                    )
++                if verdict.hard_failures:
++                    return AgentRunResult(
++                        run_id=run_id,
++                        status=AgentRunStatus.ABSTAINED,
++                        task_type=selected_task,
++                        skill_id=skill.skill_id,
++                        summary="Visual verification found an input/output problem that cannot be repaired safely.",
++                        code="VISUAL_VERIFICATION_HARD_FAIL",
++                        verdict=verdict,
++                        iterations=iterations,
++                        trace=recorder.steps,
++                    )
++                if iteration < request.max_iterations and verdict.repairable_failures:
++                    previous = execution
++                    feedback = verdict
++                    continue
++                return AgentRunResult(
++                    run_id=run_id,
++                    status=AgentRunStatus.FAILED,
++                    task_type=selected_task,
++                    skill_id=skill.skill_id,
++                    summary="The artifact did not pass visual verification within the retry budget.",
++                    code="VERIFICATION_FAILED",
++                    verdict=verdict,
++                    iterations=iterations,
++                    trace=recorder.steps,
++                )
++        except AgentAbstention as exc:
++            return AgentRunResult(
++                run_id=run_id,
++                status=AgentRunStatus.ABSTAINED,
++                task_type=selected_task,
++                skill_id=skill.skill_id if skill else None,
++                summary=exc.message,
++                code=exc.code,
++                verdict=verdict,
++                iterations=iterations,
++                trace=recorder.steps,
++            )
++        except Exception:
++            logger.exception("Design Agent run failed run_id=%s", run_id)
++            return AgentRunResult(
++                run_id=run_id,
++                status=AgentRunStatus.FAILED,
++                task_type=selected_task,
++                skill_id=skill.skill_id if skill else None,
++                summary="Design Agent execution failed.",
++                code="AGENT_RUNTIME_ERROR",
++                verdict=verdict,
++                iterations=iterations,
++                trace=recorder.steps,
++            )
++
++
++def build_default_runtime(
++    services: Optional[DesignAgentServices] = None,
++) -> DesignAgentRuntime:
++    return DesignAgentRuntime(services or default_services())
+diff --git a/curify_background/app/agent_runtime/schemas.py b/curify_background/app/agent_runtime/schemas.py
+new file mode 100644
+index 0000000..bde3ca4
+--- /dev/null
++++ b/curify_background/app/agent_runtime/schemas.py
+@@ -0,0 +1,206 @@
++from __future__ import annotations
++
++from datetime import datetime
++from enum import Enum
++from typing import Any, Dict, List, Optional
++
++from pydantic import BaseModel, Field
++
++
++class AgentTaskType(str, Enum):
++    AUTO = "auto"
++    DESIGN_VOTE = "design_vote"
++    TRYON_POSTER = "tryon_poster"
++
++
++class AgentRunStatus(str, Enum):
++    QUEUED = "QUEUED"
++    RUNNING = "RUNNING"
++    COMPLETED = "COMPLETED"
++    ABSTAINED = "ABSTAINED"
++    FAILED = "FAILED"
++
++
++class AgentStage(str, Enum):
++    UNDERSTAND = "UNDERSTAND"
++    PLAN = "PLAN"
++    GENERATE = "GENERATE"
++    VERIFY = "VERIFY"
++    PRESENT = "PRESENT"
++
++
++class AgentStepStatus(str, Enum):
++    RUNNING = "RUNNING"
++    COMPLETED = "COMPLETED"
++    FAILED = "FAILED"
++
++
++class AgentArtifactKind(str, Enum):
++    IMAGE = "image"
++    REPORT = "report"
++    MANIFEST = "manifest"
++
++
++class AgentRunRequest(BaseModel):
++    """One user turn. Images are uploaded first through the existing image API.
++
++    For ``tryon_poster`` image 0 is the selfie and optional image 1 is the
++    product/garment reference. Four-image ``design_vote`` requests map to A-D;
++    a single image is treated as a four-panel comparison board.
++    """
++
++    task_type: AgentTaskType = AgentTaskType.AUTO
++    prompt: str = Field(min_length=1, max_length=2_000)
++    image_urls: List[str] = Field(min_length=1, max_length=4)
++    locale: str = Field(default="zh", min_length=2, max_length=16)
++    output_count: int = Field(default=3, ge=1, le=4)
++    max_iterations: int = Field(default=1, ge=0, le=2)
++    allow_paid_generation: bool = False
++    constraints: Dict[str, Any] = Field(default_factory=dict)
++
++
++class AgentCapabilityDecision(BaseModel):
++    supported: bool
++    code: str = "SUPPORTED"
++    message: str = ""
++
++
++class AgentToolCall(BaseModel):
++    tool: str
++    purpose: str
++
++
++class AgentPlan(BaseModel):
++    skill_id: str
++    iteration: int
++    calls: List[AgentToolCall]
++    repair_instruction: Optional[str] = None
++
++
++class AgentArtifact(BaseModel):
++    artifact_id: str
++    kind: AgentArtifactKind
++    label: str
++    object_path: str
++    media_type: str
++    url: Optional[str] = None
++    metadata: Dict[str, Any] = Field(default_factory=dict)
++
++
++class VerificationVerdict(BaseModel):
++    passed: bool = False
++    scores: Dict[str, float] = Field(default_factory=dict)
++    hard_failures: List[str] = Field(default_factory=list)
++    repairable_failures: List[str] = Field(default_factory=list)
++    repair_instruction: Optional[str] = None
++    retry_scope: List[str] = Field(default_factory=list)
++
++
++class AgentTraceStep(BaseModel):
++    step_id: str
++    stage: AgentStage
++    name: str
++    status: AgentStepStatus
++    started_at: datetime
++    ended_at: Optional[datetime] = None
++    latency_ms: Optional[int] = None
++    tool_name: Optional[str] = None
++    model: Optional[str] = None
++    input_summary: Dict[str, Any] = Field(default_factory=dict)
++    output_summary: Any = Field(default_factory=dict)
++    metrics: Dict[str, float] = Field(default_factory=dict)
++    error: Optional[str] = None
++
++
++class AgentRunResult(BaseModel):
++    run_id: str
++    status: AgentRunStatus
++    task_type: Optional[AgentTaskType] = None
++    skill_id: Optional[str] = None
++    summary: str
++    code: Optional[str] = None
++    artifacts: List[AgentArtifact] = Field(default_factory=list)
++    verdict: Optional[VerificationVerdict] = None
++    iterations: int = 0
++    trace: List[AgentTraceStep] = Field(default_factory=list)
++
++
++class VoteVariant(BaseModel):
++    id: str
++    design_language: str
++    strengths: List[str] = Field(default_factory=list)
++    weaknesses: List[str] = Field(default_factory=list)
++
++
++class VoteSegmentDraft(BaseModel):
++    name: str
++    share: float
++    votes: Dict[str, float]
++    rationale: str
++
++
++class VoteDraft(BaseModel):
++    valid_variants: bool = True
++    issues: List[str] = Field(default_factory=list)
++    # Defaults let the model return a small, honest invalid-input response;
++    # the runtime abstains before aggregation when ``valid_variants`` is false.
++    product: str = ""
++    category: str = ""
++    axis: str = ""
++    variants: List[VoteVariant] = Field(default_factory=list)
++    segments: List[VoteSegmentDraft] = Field(default_factory=list)
++    recommendation: str = ""
++    confidence: float = 0.7
++
++
++class VoteSegment(BaseModel):
++    name: str
++    share: float
++    votes: Dict[str, int]
++    rationale: str
++
++
++class VoteAnalysis(BaseModel):
++    product: str
++    category: str
++    axis: str
++    variants: List[VoteVariant]
++    segments: List[VoteSegment]
++    overall: Dict[str, int]
++    winner: str
++    recommendation: str
++    confidence: float
++    simulated_disclaimer: str = "AI 模拟投票 · 加权合成，并非真实消费者调研"
++
++
++class TryOnPosterScore(BaseModel):
++    index: int
++    identity: float = Field(ge=0.0, le=5.0)
++    product_fidelity: Optional[float] = Field(default=None, ge=0.0, le=5.0)
++    anatomy: float = Field(ge=0.0, le=5.0)
++    instruction_following: float = Field(ge=0.0, le=5.0)
++    layout: float = Field(ge=0.0, le=5.0)
++    failures: List[str] = Field(default_factory=list)
++
++
++class TryOnReview(BaseModel):
++    posters: List[TryOnPosterScore]
++
++
++class CreateAgentRunResponse(BaseModel):
++    run_id: str
++    status: AgentRunStatus = AgentRunStatus.QUEUED
++
++
++class AgentRunStatusResponse(BaseModel):
++    run_id: str
++    status: AgentRunStatus
++    task_type: Optional[AgentTaskType] = None
++    skill_id: Optional[str] = None
++    summary: Optional[str] = None
++    code: Optional[str] = None
++    current_stage: Optional[AgentStage] = None
++    artifacts: List[AgentArtifact] = Field(default_factory=list)
++    verdict: Optional[VerificationVerdict] = None
++    iterations: int = 0
++    trace: List[AgentTraceStep] = Field(default_factory=list)
+diff --git a/curify_background/app/agent_runtime/services.py b/curify_background/app/agent_runtime/services.py
+new file mode 100644
+index 0000000..228737a
+--- /dev/null
++++ b/curify_background/app/agent_runtime/services.py
+@@ -0,0 +1,517 @@
++from __future__ import annotations
++
++import asyncio
++import io
++import ipaddress
++import json
++import logging
++import math
++import socket
++import uuid
++from dataclasses import dataclass
++from typing import Any, Dict, List, Optional, Protocol
++from urllib.parse import urljoin, urlparse
++
++import httpx
++from PIL import Image
++from google import genai
++from google.genai import types
++
++from app.agent_runtime.schemas import (
++    AgentArtifact,
++    AgentArtifactKind,
++    TryOnReview,
++    VerificationVerdict,
++    VoteAnalysis,
++    VoteDraft,
++    VoteSegment,
++)
++from app.config import settings
++from app.utils import gcs_storage
++
++logger = logging.getLogger(__name__)
++
++VARIANT_IDS = ("A", "B", "C", "D")
++GEMINI_TIMEOUT_MS = 60_000
++MAX_IMAGE_PIXELS = 40_000_000
++
++_genai_client: Optional[genai.Client] = None
++
++
++def _get_genai_client() -> genai.Client:
++    """Keep the runtime independent from ``app.services`` import side effects."""
++    global _genai_client
++    if _genai_client is not None:
++        return _genai_client
++    if not settings.GEMINI_API_KEY:
++        raise RuntimeError("GEMINI_API_KEY is required for Design Agent model calls.")
++    try:
++        _genai_client = genai.Client(
++            api_key=settings.GEMINI_API_KEY,
++            http_options=types.HttpOptions(timeout=GEMINI_TIMEOUT_MS),
++        )
++    except Exception:
++        logger.warning(
++            "google-genai rejected the configured request timeout; using its default client",
++            exc_info=True,
++        )
++        _genai_client = genai.Client(api_key=settings.GEMINI_API_KEY)
++    return _genai_client
++
++
++def _extract_first_image_from_response(response: Any) -> Image.Image:
++    parts = getattr(response, "parts", None)
++    if parts is None:
++        candidates = getattr(response, "candidates", None) or []
++        if candidates:
++            parts = getattr(getattr(candidates[0], "content", None), "parts", None)
++    for part in parts or []:
++        data = getattr(getattr(part, "inline_data", None), "data", None)
++        if data:
++            return Image.open(io.BytesIO(data)).convert("RGB")
++    raise RuntimeError("Gemini returned no generated image.")
++
++
++class ImageLoaderProtocol(Protocol):
++    async def load(self, source: str) -> bytes: ...
++
++
++class ArtifactStoreProtocol(Protocol):
++    async def put(
++        self,
++        run_id: str,
++        filename: str,
++        data: bytes,
++        media_type: str,
++        kind: AgentArtifactKind,
++        label: str,
++        metadata: Optional[Dict[str, Any]] = None,
++    ) -> AgentArtifact: ...
++
++    async def sign(self, object_path: str, expiry_minutes: int = 60) -> str: ...
++
++
++class DesignModelGatewayProtocol(Protocol):
++    model_name: str
++    generation_model_name: str
++
++    async def analyze_vote(
++        self,
++        prompt: str,
++        candidate_images: List[bytes],
++        repair_instruction: Optional[str] = None,
++    ) -> VoteDraft: ...
++
++    async def review_vote(
++        self,
++        prompt: str,
++        candidate_images: List[bytes],
++        analysis: VoteAnalysis,
++    ) -> VerificationVerdict: ...
++
++    async def generate_tryon(
++        self,
++        selfie: bytes,
++        product: Optional[bytes],
++        prompt: str,
++        direction: str,
++        repair_instruction: Optional[str] = None,
++    ) -> bytes: ...
++
++    async def review_tryon(
++        self,
++        selfie: bytes,
++        product: Optional[bytes],
++        prompt: str,
++        posters: List[bytes],
++    ) -> TryOnReview: ...
++
++
++class SafeImageLoader:
++    """Load a private GCS object path or a public HTTPS image with SSRF guards."""
++
++    def __init__(self, max_bytes: int = 12 * 1024 * 1024):
++        self.max_bytes = max_bytes
++
++    @staticmethod
++    def _validate_public_https(url: str) -> None:
++        parsed = urlparse(url)
++        if (
++            parsed.scheme != "https"
++            or not parsed.hostname
++            or parsed.username is not None
++            or parsed.password is not None
++        ):
++            raise ValueError("Only private GCS object paths or public HTTPS image URLs are allowed.")
++        try:
++            addresses = {
++                item[4][0]
++                for item in socket.getaddrinfo(parsed.hostname, parsed.port or 443)
++            }
++        except socket.gaierror as exc:
++            raise ValueError("Image host could not be resolved.") from exc
++        for address in addresses:
++            ip = ipaddress.ip_address(address)
++            if not ip.is_global:
++                raise ValueError("Private, loopback, and link-local image hosts are not allowed.")
++
++    def _load_sync(self, source: str) -> bytes:
++        if "://" not in source:
++            raw = gcs_storage.download_bytes_from_gcs(source)
++        else:
++            current = source
++            raw = b""
++            with httpx.Client(timeout=20.0, follow_redirects=False) as client:
++                for _ in range(4):
++                    self._validate_public_https(current)
++                    with client.stream(
++                        "GET",
++                        current,
++                        headers={"User-Agent": "CurifyDesignAgent/1.0"},
++                    ) as response:
++                        if response.status_code in (301, 302, 303, 307, 308):
++                            location = response.headers.get("location")
++                            if not location:
++                                raise ValueError("Image redirect has no destination.")
++                            current = urljoin(current, location)
++                            continue
++                        response.raise_for_status()
++                        content_type = response.headers.get("content-type", "").lower()
++                        if content_type and not content_type.startswith("image/"):
++                            raise ValueError("URL did not return an image.")
++                        content_length = response.headers.get("content-length")
++                        if content_length and int(content_length) > self.max_bytes:
++                            raise ValueError("Image URL exceeds the maximum allowed size.")
++                        chunks = bytearray()
++                        for chunk in response.iter_bytes():
++                            chunks.extend(chunk)
++                            if len(chunks) > self.max_bytes:
++                                raise ValueError("Image URL exceeds the maximum allowed size.")
++                        raw = bytes(chunks)
++                        break
++                else:
++                    raise ValueError("Too many image redirects.")
++        if not raw or len(raw) > self.max_bytes:
++            raise ValueError(f"Image must be between 1 byte and {self.max_bytes} bytes.")
++        try:
++            im = Image.open(io.BytesIO(raw))
++            if im.width * im.height > MAX_IMAGE_PIXELS:
++                raise ValueError("Image dimensions are too large.")
++            im.verify()
++            im = Image.open(io.BytesIO(raw)).convert("RGB")
++            out = io.BytesIO()
++            im.save(out, format="JPEG", quality=92, optimize=True)
++            return out.getvalue()
++        except Exception as exc:
++            raise ValueError("Uploaded source is not a readable image.") from exc
++
++    async def load(self, source: str) -> bytes:
++        return await asyncio.to_thread(self._load_sync, source)
++
++
++class GCSArtifactStore:
++    async def put(
++        self,
++        run_id: str,
++        filename: str,
++        data: bytes,
++        media_type: str,
++        kind: AgentArtifactKind,
++        label: str,
++        metadata: Optional[Dict[str, Any]] = None,
++    ) -> AgentArtifact:
++        safe_name = "".join(ch for ch in filename if ch.isalnum() or ch in "-_.")
++        if not safe_name:
++            raise ValueError("Invalid artifact filename.")
++        object_path = f"design_agent/{run_id}/{safe_name}"
++        await asyncio.to_thread(
++            gcs_storage.upload_bytes_to_gcs,
++            data,
++            object_path,
++            media_type,
++            "private, no-store",
++        )
++        return AgentArtifact(
++            artifact_id=uuid.uuid4().hex[:12],
++            kind=kind,
++            label=label,
++            object_path=object_path,
++            media_type=media_type,
++            metadata=metadata or {},
++        )
++
++    async def sign(self, object_path: str, expiry_minutes: int = 60) -> str:
++        return await asyncio.to_thread(
++            gcs_storage.generate_signed_url,
++            object_path,
++            expiry_minutes,
++        )
++
++
++def _extract_text(response: Any) -> str:
++    texts: List[str] = []
++    for candidate in getattr(response, "candidates", None) or []:
++        content = getattr(candidate, "content", None)
++        for part in getattr(content, "parts", None) or []:
++            text = getattr(part, "text", None)
++            if text:
++                texts.append(str(text))
++    return "\n".join(texts).strip()
++
++
++def _parse_json_object(text: str) -> Dict[str, Any]:
++    cleaned = text.strip().replace("```json", "").replace("```", "").strip()
++    start, end = cleaned.find("{"), cleaned.rfind("}")
++    if start < 0 or end <= start:
++        raise ValueError("Model did not return a JSON object.")
++    return json.loads(cleaned[start : end + 1])
++
++
++def _jpeg_part(data: bytes) -> types.Part:
++    return types.Part(inline_data=types.Blob(data=data, mime_type="image/jpeg"))
++
++
++class GeminiDesignGateway:
++    def __init__(self):
++        configured = getattr(settings, "DESIGN_AGENT_ANALYSIS_MODEL", "")
++        self.model_name = configured or settings.GEMINI_IMAGE_MODEL
++        self.generation_model_name = settings.GEMINI_IMAGE_MODEL
++
++    def _text_call_sync(self, parts: List[Any]) -> Dict[str, Any]:
++        response = _get_genai_client().models.generate_content(
++            model=self.model_name,
++            contents=parts,
++            config=types.GenerateContentConfig(response_modalities=["TEXT"]),
++        )
++        return _parse_json_object(_extract_text(response))
++
++    async def analyze_vote(
++        self,
++        prompt: str,
++        candidate_images: List[bytes],
++        repair_instruction: Optional[str] = None,
++    ) -> VoteDraft:
++        instructions = f"""
++You are the visual-understanding stage of a design decision agent.
++The user asks: {prompt}
++
++Four candidate designs are attached and explicitly labeled A-D. Inspect only
++visible evidence: hierarchy, typography, whitespace, color, brand placement,
++product/category cues, and commercial context. Define a single evaluation axis
++that answers the request. Create 3-6 plausible category-specific consumer
++segments whose shares sum approximately to 1. For every segment, assign a
++preference distribution across A-D and explain it from visible design cues.
++
++This is a simulation, not real market research. Do not invent respondents,
++sample sizes, surveys, quotations, sales, or demographic facts. If the images
++do not contain four coherent candidate designs, set valid_variants=false and
++explain why in issues.
++
++Return only JSON with this shape:
++{{
++  "valid_variants": true,
++  "issues": [],
++  "product": "...",
++  "category": "...",
++  "axis": "...",
++  "variants": [
++    {{"id":"A","design_language":"...","strengths":["..."],"weaknesses":["..."]}}
++  ],
++  "segments": [
++    {{"name":"...","share":0.25,"votes":{{"A":25,"B":25,"C":25,"D":25}},"rationale":"..."}}
++  ],
++  "recommendation": "...",
++  "confidence": 0.0
++}}
++"""
++        if repair_instruction:
++            instructions += f"\nA verifier rejected the prior result. Repair it using: {repair_instruction}\n"
++        parts: List[Any] = [instructions]
++        for label, image in zip(VARIANT_IDS, candidate_images):
++            parts.extend([f"VARIANT {label}", _jpeg_part(image)])
++        payload = await asyncio.to_thread(self._text_call_sync, parts)
++        return VoteDraft.model_validate(payload)
++
++    async def review_vote(
++        self,
++        prompt: str,
++        candidate_images: List[bytes],
++        analysis: VoteAnalysis,
++    ) -> VerificationVerdict:
++        instructions = f"""
++Act as an independent visual verifier. Compare the attached A-D designs against
++this proposed simulated-vote analysis and the user's request: {prompt}
++
++Analysis JSON:
++{analysis.model_dump_json()}
++
++Judge whether claims are grounded in visible design evidence, segments fit the
++product category, the winner is defensible, and the recommendation is useful.
++Do not demand real survey evidence: this is explicitly an AI simulation.
++Return only JSON:
++{{"passed":true,"scores":{{"grounding":0.0,"segment_plausibility":0.0,"ranking_sanity":0.0,"actionability":0.0}},"hard_failures":[],"repairable_failures":[],"repair_instruction":null,"retry_scope":[]}}
++Scores use 0-5. Set passed=false if any score is below 3.0. Use hard_failures
++only when there are not four usable designs; other issues are repairable.
++"""
++        parts: List[Any] = [instructions]
++        for label, image in zip(VARIANT_IDS, candidate_images):
++            parts.extend([f"VARIANT {label}", _jpeg_part(image)])
++        payload = await asyncio.to_thread(self._text_call_sync, parts)
++        return VerificationVerdict.model_validate(payload)
++
++    def _generate_tryon_sync(
++        self,
++        selfie: bytes,
++        product: Optional[bytes],
++        prompt: str,
++        direction: str,
++        repair_instruction: Optional[str],
++    ) -> bytes:
++        product_rule = (
++            "IMAGE 2 is the exact merchandise reference. Preserve its silhouette, color, material, pattern, logos, and construction."
++            if product
++            else "No merchandise reference is supplied; create a plausible outfit concept from the text and do not claim SKU accuracy."
++        )
++        instruction = f"""
++Create one polished 4:5 ecommerce campaign image.
++IMAGE 1 is the person: preserve the exact recognizable face, skin tone, body
++proportions, and identity. Change clothing and scene only. {product_rule}
++User brief: {prompt}
++Creative direction: {direction}
++Use believable anatomy, hands, garment occlusion, and commercial lighting.
++Leave clean negative space at the top and bottom for deterministic typography.
++Do not render text, captions, watermarks, price tags, or logos not present in
++the product reference.
++"""
++        if repair_instruction:
++            instruction += f"\nRepair the rejected prior attempt: {repair_instruction}\n"
++        parts: List[Any] = [_jpeg_part(selfie)]
++        if product:
++            parts.append(_jpeg_part(product))
++        parts.append(instruction)
++        response = _get_genai_client().models.generate_content(
++            model=settings.GEMINI_IMAGE_MODEL,
++            contents=parts,
++            config=types.GenerateContentConfig(response_modalities=["IMAGE", "TEXT"]),
++        )
++        image = _extract_first_image_from_response(response).convert("RGB")
++        out = io.BytesIO()
++        image.save(out, format="JPEG", quality=92, optimize=True)
++        return out.getvalue()
++
++    async def generate_tryon(
++        self,
++        selfie: bytes,
++        product: Optional[bytes],
++        prompt: str,
++        direction: str,
++        repair_instruction: Optional[str] = None,
++    ) -> bytes:
++        return await asyncio.to_thread(
++            self._generate_tryon_sync,
++            selfie,
++            product,
++            prompt,
++            direction,
++            repair_instruction,
++        )
++
++    async def review_tryon(
++        self,
++        selfie: bytes,
++        product: Optional[bytes],
++        prompt: str,
++        posters: List[bytes],
++    ) -> TryOnReview:
++        instructions = f"""
++You are the visual QA stage for ecommerce try-on posters. IMAGE 1 is the source
++selfie. {"IMAGE 2 is the exact product reference." if product else "There is no exact product reference; product_fidelity must be null."}
++The remaining images are generated posters numbered from 0. User brief: {prompt}
++
++For each poster score 0-5: identity, product_fidelity (null without product),
++anatomy, instruction_following, and layout. List concrete visible failures.
++Be strict about face identity, extra/malformed limbs, garment geometry, and
++unreadable/AI-rendered text. Return only JSON:
++{{"posters":[{{"index":0,"identity":0.0,"product_fidelity":null,"anatomy":0.0,"instruction_following":0.0,"layout":0.0,"failures":[]}}]}}
++"""
++        parts: List[Any] = [instructions, "SOURCE SELFIE", _jpeg_part(selfie)]
++        if product:
++            parts.extend(["PRODUCT REFERENCE", _jpeg_part(product)])
++        for index, poster in enumerate(posters):
++            parts.extend([f"POSTER {index}", _jpeg_part(poster)])
++        payload = await asyncio.to_thread(self._text_call_sync, parts)
++        return TryOnReview.model_validate(payload)
++
++
++def normalize_percentages(values: Dict[str, float]) -> Dict[str, int]:
++    nonnegative = {key: max(0.0, float(values.get(key, 0.0))) for key in VARIANT_IDS}
++    total = sum(nonnegative.values())
++    if total <= 0:
++        nonnegative = {key: 1.0 for key in VARIANT_IDS}
++        total = 4.0
++    scaled = {key: nonnegative[key] * 100.0 / total for key in VARIANT_IDS}
++    floors = {key: int(math.floor(value)) for key, value in scaled.items()}
++    remaining = 100 - sum(floors.values())
++    order = sorted(VARIANT_IDS, key=lambda key: scaled[key] - floors[key], reverse=True)
++    for key in order[:remaining]:
++        floors[key] += 1
++    return floors
++
++
++def aggregate_vote_draft(draft: VoteDraft) -> VoteAnalysis:
++    variant_by_id = {
++        variant.id.upper(): variant.model_copy(update={"id": variant.id.upper()})
++        for variant in draft.variants
++    }
++    if set(variant_by_id) != set(VARIANT_IDS):
++        raise ValueError("Vote analysis must describe exactly variants A-D.")
++    if not draft.segments:
++        raise ValueError("Vote analysis must contain at least one audience segment.")
++    shares = [max(0.0, segment.share) for segment in draft.segments]
++    share_total = sum(shares)
++    if share_total <= 0:
++        shares = [1.0 / len(draft.segments)] * len(draft.segments)
++    else:
++        shares = [share / share_total for share in shares]
++    segments: List[VoteSegment] = []
++    overall_float = {key: 0.0 for key in VARIANT_IDS}
++    for share, segment in zip(shares, draft.segments):
++        votes = normalize_percentages(segment.votes)
++        for key in VARIANT_IDS:
++            overall_float[key] += share * votes[key]
++        segments.append(
++            VoteSegment(
++                name=segment.name,
++                share=round(share, 4),
++                votes=votes,
++                rationale=segment.rationale,
++            )
++        )
++    overall = normalize_percentages(overall_float)
++    winner = max(VARIANT_IDS, key=lambda key: overall[key])
++    return VoteAnalysis(
++        product=draft.product,
++        category=draft.category,
++        axis=draft.axis,
++        variants=[variant_by_id[key] for key in VARIANT_IDS],
++        segments=segments,
++        overall=overall,
++        winner=winner,
++        recommendation=draft.recommendation,
++        confidence=max(0.0, min(1.0, draft.confidence)),
++    )
++
++
++@dataclass
++class DesignAgentServices:
++    gateway: DesignModelGatewayProtocol
++    image_loader: ImageLoaderProtocol
++    artifact_store: ArtifactStoreProtocol
++
++
++def default_services() -> DesignAgentServices:
++    return DesignAgentServices(
++        gateway=GeminiDesignGateway(),
++        image_loader=SafeImageLoader(),
++        artifact_store=GCSArtifactStore(),
++    )
+diff --git a/curify_background/app/agent_runtime/skills.py b/curify_background/app/agent_runtime/skills.py
+new file mode 100644
+index 0000000..f5a40c7
+--- /dev/null
++++ b/curify_background/app/agent_runtime/skills.py
+@@ -0,0 +1,280 @@
++from __future__ import annotations
++
++import re
++from dataclasses import dataclass
++from typing import Any, Dict, List, Optional, Protocol
++
++from app.agent_runtime.registry import ToolContext, ToolRegistry
++from app.agent_runtime.schemas import (
++    AgentCapabilityDecision,
++    AgentPlan,
++    AgentRunRequest,
++    AgentTaskType,
++    AgentToolCall,
++    VerificationVerdict,
++)
++
++
++@dataclass
++class SkillContext:
++    run_id: str
++    request: AgentRunRequest
++    tools: ToolRegistry
++    tool_context: ToolContext
++
++
++class DesignSkill(Protocol):
++    skill_id: str
++    task_type: AgentTaskType
++
++    def capability(self, request: AgentRunRequest) -> AgentCapabilityDecision: ...
++
++    def plan(
++        self,
++        request: AgentRunRequest,
++        iteration: int,
++        feedback: Optional[VerificationVerdict],
++    ) -> AgentPlan: ...
++
++    async def execute(
++        self,
++        context: SkillContext,
++        iteration: int,
++        previous: Optional[Dict[str, Any]],
++        feedback: Optional[VerificationVerdict],
++    ) -> Dict[str, Any]: ...
++
++    async def verify(
++        self,
++        context: SkillContext,
++        execution: Dict[str, Any],
++    ) -> VerificationVerdict: ...
++
++    async def present(
++        self,
++        context: SkillContext,
++        execution: Dict[str, Any],
++    ) -> List[Any]: ...
++
++    def summary(self, execution: Dict[str, Any]) -> str: ...
++
++
++class DesignVoteSkill:
++    skill_id = "design-vote"
++    task_type = AgentTaskType.DESIGN_VOTE
++
++    def capability(self, request: AgentRunRequest) -> AgentCapabilityDecision:
++        if len(request.image_urls) not in (1, 4):
++            return AgentCapabilityDecision(
++                supported=False,
++                code="INVALID_CANDIDATE_COUNT",
++                message="Design vote requires one four-panel board or four separate images.",
++            )
++        return AgentCapabilityDecision(supported=True)
++
++    def plan(
++        self,
++        request: AgentRunRequest,
++        iteration: int,
++        feedback: Optional[VerificationVerdict],
++    ) -> AgentPlan:
++        return AgentPlan(
++            skill_id=self.skill_id,
++            iteration=iteration,
++            repair_instruction=feedback.repair_instruction if feedback else None,
++            calls=[
++                AgentToolCall(tool="analyze_design_vote", purpose="ground preferences in visible design cues"),
++                AgentToolCall(tool="render_design_vote_report", purpose="render deterministic decision graphic"),
++                AgentToolCall(tool="verify_design_vote", purpose="verify math and visual grounding"),
++            ],
++        )
++
++    async def execute(
++        self,
++        context: SkillContext,
++        iteration: int,
++        previous: Optional[Dict[str, Any]],
++        feedback: Optional[VerificationVerdict],
++    ) -> Dict[str, Any]:
++        analyzed = await context.tools.invoke(
++            "analyze_design_vote",
++            {
++                "prompt": context.request.prompt,
++                "image_urls": context.request.image_urls,
++                "candidate_images": previous.get("candidate_images") if previous else None,
++                "repair_instruction": feedback.repair_instruction if feedback else None,
++            },
++            context.tool_context,
++        )
++        rendered = await context.tools.invoke(
++            "render_design_vote_report",
++            {
++                "analysis": analyzed["analysis"],
++                "candidate_images": analyzed["candidate_images"],
++            },
++            context.tool_context,
++        )
++        return {**analyzed, **rendered}
++
++    async def verify(
++        self,
++        context: SkillContext,
++        execution: Dict[str, Any],
++    ) -> VerificationVerdict:
++        return await context.tools.invoke(
++            "verify_design_vote",
++            {
++                "prompt": context.request.prompt,
++                "analysis": execution["analysis"],
++                "candidate_images": execution["candidate_images"],
++                "report_bytes": execution["report_bytes"],
++            },
++            context.tool_context,
++        )
++
++    async def present(
++        self,
++        context: SkillContext,
++        execution: Dict[str, Any],
++    ) -> List[Any]:
++        return await context.tools.invoke(
++            "store_design_vote_artifacts",
++            {
++                "analysis": execution["analysis"],
++                "report_bytes": execution["report_bytes"],
++            },
++            context.tool_context,
++        )
++
++    def summary(self, execution: Dict[str, Any]) -> str:
++        analysis = execution["analysis"]
++        return (
++            f"AI 模拟投票完成：{analysis.winner} 方案以 "
++            f"{analysis.overall[analysis.winner]}% 位列第一。{analysis.recommendation}"
++        )
++
++
++class TryOnPosterSkill:
++    skill_id = "tryon-poster"
++    task_type = AgentTaskType.TRYON_POSTER
++    _requires_product = re.compile(
++        r"商品|SKU|同款|真实试穿|product\s+try|exact\s+(?:product|garment)|garment\s+reference",
++        re.IGNORECASE,
++    )
++
++    def capability(self, request: AgentRunRequest) -> AgentCapabilityDecision:
++        if not request.image_urls:
++            return AgentCapabilityDecision(
++                supported=False,
++                code="MISSING_SELFIE",
++                message="Try-on poster generation requires a selfie as the first image.",
++            )
++        if self._requires_product.search(request.prompt) and len(request.image_urls) < 2:
++            return AgentCapabilityDecision(
++                supported=False,
++                code="MISSING_PRODUCT_IMAGE",
++                message="Exact merchandise try-on requires a product image as the second input.",
++            )
++        if not request.allow_paid_generation:
++            return AgentCapabilityDecision(
++                supported=False,
++                code="PAID_GENERATION_NOT_APPROVED",
++                message="Try-on poster generation requires allow_paid_generation=true.",
++            )
++        return AgentCapabilityDecision(supported=True)
++
++    def plan(
++        self,
++        request: AgentRunRequest,
++        iteration: int,
++        feedback: Optional[VerificationVerdict],
++    ) -> AgentPlan:
++        return AgentPlan(
++            skill_id=self.skill_id,
++            iteration=iteration,
++            repair_instruction=feedback.repair_instruction if feedback else None,
++            calls=[
++                AgentToolCall(tool="generate_tryon_posters", purpose="generate ecommerce poster directions"),
++                AgentToolCall(tool="verify_tryon_posters", purpose="verify identity, product, anatomy, and layout"),
++            ],
++        )
++
++    async def execute(
++        self,
++        context: SkillContext,
++        iteration: int,
++        previous: Optional[Dict[str, Any]],
++        feedback: Optional[VerificationVerdict],
++    ) -> Dict[str, Any]:
++        args: Dict[str, Any] = {
++            "prompt": context.request.prompt,
++            "image_urls": context.request.image_urls,
++            "output_count": context.request.output_count,
++            "repair_instruction": feedback.repair_instruction if feedback else None,
++        }
++        if previous:
++            args.update(
++                {
++                    "source_assets": previous.get("source_assets"),
++                    "existing_posters": previous.get("posters"),
++                    "retry_scope": feedback.retry_scope if feedback else [],
++                }
++            )
++        return await context.tools.invoke(
++            "generate_tryon_posters",
++            args,
++            context.tool_context,
++        )
++
++    async def verify(
++        self,
++        context: SkillContext,
++        execution: Dict[str, Any],
++    ) -> VerificationVerdict:
++        return await context.tools.invoke(
++            "verify_tryon_posters",
++            {
++                "prompt": context.request.prompt,
++                "source_assets": execution["source_assets"],
++                "posters": execution["posters"],
++            },
++            context.tool_context,
++        )
++
++    async def present(
++        self,
++        context: SkillContext,
++        execution: Dict[str, Any],
++    ) -> List[Any]:
++        return await context.tools.invoke(
++            "store_tryon_artifacts",
++            execution,
++            context.tool_context,
++        )
++
++    def summary(self, execution: Dict[str, Any]) -> str:
++        qualifier = "穿搭概念" if execution["concept_only"] else "商品参考试穿"
++        return f"已生成 {len(execution['posters'])} 张{qualifier}电商海报，并通过视觉校验。"
++
++
++class SkillRegistry:
++    def __init__(self, skills: Optional[List[DesignSkill]] = None):
++        self._skills: Dict[AgentTaskType, DesignSkill] = {}
++        for skill in skills or [DesignVoteSkill(), TryOnPosterSkill()]:
++            self._skills[skill.task_type] = skill
++
++    def get(self, task_type: AgentTaskType) -> DesignSkill:
++        if task_type not in self._skills:
++            raise KeyError(task_type)
++        return self._skills[task_type]
++
++
++def infer_task_type(request: AgentRunRequest) -> Optional[AgentTaskType]:
++    if request.task_type != AgentTaskType.AUTO:
++        return request.task_type
++    prompt = request.prompt.lower()
++    if re.search(r"投票|哪款|哪个设计|包装.*(?:好|质感)|vote|which\s+(?:design|packaging)|compare", prompt):
++        return AgentTaskType.DESIGN_VOTE
++    if re.search(r"自拍|穿搭|试穿|电商海报|outfit|try[- ]?on|ecommerce\s+poster", prompt):
++        return AgentTaskType.TRYON_POSTER
++    return None
+diff --git a/curify_background/app/agent_runtime/tools.py b/curify_background/app/agent_runtime/tools.py
+new file mode 100644
+index 0000000..9872d40
+--- /dev/null
++++ b/curify_background/app/agent_runtime/tools.py
+@@ -0,0 +1,348 @@
++from __future__ import annotations
++
++import asyncio
++import json
++from typing import Any, Dict, List, Optional
++
++from app.agent_runtime.registry import AgentAbstention, ToolContext, ToolRegistry, ToolSpec
++from app.agent_runtime.rendering import (
++    render_tryon_poster,
++    render_vote_report,
++    split_vote_candidates,
++    validate_image_bytes,
++)
++from app.agent_runtime.schemas import (
++    AgentArtifactKind,
++    AgentStage,
++    VerificationVerdict,
++    VoteAnalysis,
++)
++from app.agent_runtime.services import DesignAgentServices, aggregate_vote_draft
++
++
++TRYON_DIRECTIONS = (
++    "Studio product hero · premium catalog lighting",
++    "Editorial lifestyle · confident social campaign",
++    "Marketplace detail · clean conversion-focused composition",
++    "Seasonal campaign · bold color-block environment",
++)
++
++
++def _combine_verdicts(
++    deterministic_hard: List[str],
++    deterministic_repairable: List[str],
++    model_verdict: VerificationVerdict,
++) -> VerificationVerdict:
++    hard = list(dict.fromkeys([*deterministic_hard, *model_verdict.hard_failures]))
++    repairable = list(
++        dict.fromkeys([*deterministic_repairable, *model_verdict.repairable_failures])
++    )
++    passed = model_verdict.passed and not hard and not repairable
++    repair_instruction = model_verdict.repair_instruction
++    if not repair_instruction and repairable:
++        repair_instruction = "; ".join(repairable)
++    return VerificationVerdict(
++        passed=passed,
++        scores=model_verdict.scores,
++        hard_failures=hard,
++        repairable_failures=repairable,
++        repair_instruction=repair_instruction,
++        retry_scope=model_verdict.retry_scope,
++    )
++
++
++def build_tool_registry(services: DesignAgentServices) -> ToolRegistry:
++    registry = ToolRegistry()
++
++    async def analyze_vote(args: Dict[str, Any], _context: ToolContext) -> Dict[str, Any]:
++        candidates = args.get("candidate_images")
++        if candidates is None:
++            source_images = await asyncio.gather(
++                *(services.image_loader.load(source) for source in args["image_urls"])
++            )
++            candidates = split_vote_candidates(list(source_images))
++        draft = await services.gateway.analyze_vote(
++            args["prompt"],
++            candidates,
++            args.get("repair_instruction"),
++        )
++        if not draft.valid_variants:
++            raise AgentAbstention(
++                "INSUFFICIENT_CANDIDATES",
++                "; ".join(draft.issues) or "The input does not contain four usable designs.",
++            )
++        analysis = aggregate_vote_draft(draft)
++        return {"candidate_images": candidates, "analysis": analysis}
++
++    async def make_vote_report(args: Dict[str, Any], _context: ToolContext) -> Dict[str, Any]:
++        analysis = VoteAnalysis.model_validate(args["analysis"])
++        report = await asyncio.to_thread(
++            render_vote_report,
++            analysis,
++            args["candidate_images"],
++        )
++        return {"report_bytes": report}
++
++    async def verify_vote(args: Dict[str, Any], _context: ToolContext) -> VerificationVerdict:
++        analysis = VoteAnalysis.model_validate(args["analysis"])
++        hard: List[str] = []
++        repairable: List[str] = []
++        if len(analysis.variants) != 4:
++            hard.append("analysis does not contain four variants")
++        if sum(analysis.overall.values()) != 100:
++            repairable.append("overall vote distribution does not sum to 100")
++        if any(sum(segment.votes.values()) != 100 for segment in analysis.segments):
++            repairable.append("one or more segment vote distributions do not sum to 100")
++        if abs(sum(segment.share for segment in analysis.segments) - 1.0) > 0.02:
++            repairable.append("segment shares do not sum to 1")
++        expected_winner = max(analysis.overall, key=analysis.overall.get)
++        if expected_winner != analysis.winner:
++            repairable.append("winner does not match the aggregated vote")
++        report_failures = validate_image_bytes(args["report_bytes"], min_side=900)
++        repairable.extend(report_failures)
++        model_verdict = await services.gateway.review_vote(
++            args["prompt"],
++            args["candidate_images"],
++            analysis,
++        )
++        for name, score in model_verdict.scores.items():
++            if score < 3.0:
++                repairable.append(f"{name} score below 3.0")
++        return _combine_verdicts(hard, repairable, model_verdict)
++
++    async def store_vote(args: Dict[str, Any], context: ToolContext) -> List[Any]:
++        analysis = VoteAnalysis.model_validate(args["analysis"])
++        report_artifact = await services.artifact_store.put(
++            context.run_id,
++            "design-vote-report.png",
++            args["report_bytes"],
++            "image/png",
++            AgentArtifactKind.REPORT,
++            "AI simulated vote report",
++            {"winner": analysis.winner, "simulated": True},
++        )
++        manifest = analysis.model_dump_json(indent=2).encode("utf-8")
++        manifest_artifact = await services.artifact_store.put(
++            context.run_id,
++            "design-vote-analysis.json",
++            manifest,
++            "application/json",
++            AgentArtifactKind.MANIFEST,
++            "Structured vote analysis",
++            {"simulated": True},
++        )
++        return [report_artifact, manifest_artifact]
++
++    async def generate_tryon(args: Dict[str, Any], _context: ToolContext) -> Dict[str, Any]:
++        source_assets = args.get("source_assets")
++        if source_assets:
++            selfie = source_assets["selfie"]
++            product = source_assets.get("product")
++        else:
++            selfie = await services.image_loader.load(args["image_urls"][0])
++            product = (
++                await services.image_loader.load(args["image_urls"][1])
++                if len(args["image_urls"]) > 1
++                else None
++            )
++        count = args["output_count"]
++        existing: List[Optional[bytes]] = list(args.get("existing_posters") or [None] * count)
++        if len(existing) < count:
++            existing.extend([None] * (count - len(existing)))
++        raw_retry_scope = args.get("retry_scope")
++        retry_scope = (
++            {int(value) for value in raw_retry_scope}
++            if raw_retry_scope
++            else set(range(count))
++        )
++        for index in range(count):
++            if existing[index] is not None and index not in retry_scope:
++                continue
++            raw = await services.gateway.generate_tryon(
++                selfie,
++                product,
++                args["prompt"],
++                TRYON_DIRECTIONS[index],
++                args.get("repair_instruction"),
++            )
++            existing[index] = await asyncio.to_thread(
++                render_tryon_poster,
++                raw,
++                TRYON_DIRECTIONS[index],
++                args["prompt"],
++            )
++        posters = [poster for poster in existing if poster is not None]
++        if len(posters) != count:
++            raise RuntimeError("Try-on generator did not produce every requested poster.")
++        return {
++            "source_assets": {"selfie": selfie, "product": product},
++            "posters": posters,
++            "directions": list(TRYON_DIRECTIONS[:count]),
++            "concept_only": product is None,
++        }
++
++    async def verify_tryon(args: Dict[str, Any], _context: ToolContext) -> VerificationVerdict:
++        hard: List[str] = []
++        repairable: List[str] = []
++        posters: List[bytes] = args["posters"]
++        deterministic_retry_scope: List[str] = []
++        for index, poster in enumerate(posters):
++            image_failures = validate_image_bytes(poster, min_side=900)
++            if image_failures:
++                deterministic_retry_scope.append(str(index))
++            for failure in image_failures:
++                repairable.append(f"poster {index}: {failure}")
++        review = await services.gateway.review_tryon(
++            args["source_assets"]["selfie"],
++            args["source_assets"].get("product"),
++            args["prompt"],
++            posters,
++        )
++        scores: Dict[str, float] = {}
++        retry_scope: List[str] = list(deterministic_retry_scope)
++        expected_indices = set(range(len(posters)))
++        returned_indices = {score.index for score in review.posters}
++        if len(review.posters) != len(posters) or returned_indices != expected_indices:
++            hard.append("visual verifier returned invalid poster score indices")
++        for score in review.posters:
++            if score.index not in expected_indices:
++                continue
++            values = [
++                score.identity,
++                score.anatomy,
++                score.instruction_following,
++                score.layout,
++            ]
++            has_product = args["source_assets"].get("product") is not None
++            if has_product and score.product_fidelity is None:
++                retry_scope.append(str(score.index))
++                repairable.append(f"poster {score.index}: product fidelity was not scored")
++            if score.product_fidelity is not None:
++                values.append(score.product_fidelity)
++            minimum = min(values)
++            scores[f"poster_{score.index}"] = minimum
++            if minimum < 3.5 or score.failures:
++                retry_scope.append(str(score.index))
++                reason = ", ".join(score.failures) or f"minimum visual score {minimum:.1f}"
++                repairable.append(f"poster {score.index}: {reason}")
++        return VerificationVerdict(
++            passed=not hard and not repairable,
++            scores=scores,
++            hard_failures=hard,
++            repairable_failures=list(dict.fromkeys(repairable)),
++            repair_instruction="; ".join(dict.fromkeys(repairable)) if repairable else None,
++            retry_scope=list(dict.fromkeys(retry_scope)),
++        )
++
++    async def store_tryon(args: Dict[str, Any], context: ToolContext) -> List[Any]:
++        artifacts = []
++        for index, (poster, direction) in enumerate(zip(args["posters"], args["directions"])):
++            artifacts.append(
++                await services.artifact_store.put(
++                    context.run_id,
++                    f"tryon-poster-{index + 1}.jpg",
++                    poster,
++                    "image/jpeg",
++                    AgentArtifactKind.IMAGE,
++                    direction,
++                    {
++                        "index": index,
++                        "concept_only": args["concept_only"],
++                        "contains_personal_image": True,
++                    },
++                )
++            )
++        manifest_payload = {
++            "kind": "tryon_poster",
++            "concept_only": args["concept_only"],
++            "directions": args["directions"],
++            "disclaimer": (
++                "AI outfit concept; no exact merchandise fidelity is claimed."
++                if args["concept_only"]
++                else "AI virtual try-on using a supplied merchandise reference."
++            ),
++        }
++        artifacts.append(
++            await services.artifact_store.put(
++                context.run_id,
++                "tryon-manifest.json",
++                json.dumps(manifest_payload, ensure_ascii=False, indent=2).encode("utf-8"),
++                "application/json",
++                AgentArtifactKind.MANIFEST,
++                "Try-on run manifest",
++                {"contains_personal_image": False},
++            )
++        )
++        return artifacts
++
++    analysis_model = services.gateway.model_name
++    generation_model = services.gateway.generation_model_name
++
++    def tryon_credit_estimate(args: Dict[str, Any]) -> float:
++        retry_scope = args.get("retry_scope")
++        generated_count = len(retry_scope) if retry_scope else int(args["output_count"])
++        return 10.0 * generated_count
++
++    registry.register(
++        ToolSpec(
++            name="analyze_design_vote",
++            description="Visually analyze four candidate designs and simulate category-specific preferences.",
++            stage=AgentStage.GENERATE,
++            handler=analyze_vote,
++            model=analysis_model,
++        )
++    )
++    registry.register(
++        ToolSpec(
++            name="render_design_vote_report",
++            description="Render an honest, deterministic vote decision graphic.",
++            stage=AgentStage.GENERATE,
++            handler=make_vote_report,
++        )
++    )
++    registry.register(
++        ToolSpec(
++            name="verify_design_vote",
++            description="Check vote math, report integrity, and visual grounding.",
++            stage=AgentStage.VERIFY,
++            handler=verify_vote,
++            model=analysis_model,
++        )
++    )
++    registry.register(
++        ToolSpec(
++            name="store_design_vote_artifacts",
++            description="Persist the vote report and structured analysis.",
++            stage=AgentStage.PRESENT,
++            handler=store_vote,
++        )
++    )
++    registry.register(
++        ToolSpec(
++            name="generate_tryon_posters",
++            description="Generate and deterministically typeset ecommerce try-on posters.",
++            stage=AgentStage.GENERATE,
++            handler=generate_tryon,
++            requires_paid_generation=True,
++            model=generation_model,
++            credit_estimator=tryon_credit_estimate,
++        )
++    )
++    registry.register(
++        ToolSpec(
++            name="verify_tryon_posters",
++            description="Verify identity, product fidelity, anatomy, instruction following, and layout.",
++            stage=AgentStage.VERIFY,
++            handler=verify_tryon,
++            model=analysis_model,
++        )
++    )
++    registry.register(
++        ToolSpec(
++            name="store_tryon_artifacts",
++            description="Persist final try-on posters and their manifest.",
++            stage=AgentStage.PRESENT,
++            handler=store_tryon,
++        )
++    )
++    return registry
+diff --git a/curify_background/app/agent_runtime/tracing.py b/curify_background/app/agent_runtime/tracing.py
+new file mode 100644
+index 0000000..09b4263
+--- /dev/null
++++ b/curify_background/app/agent_runtime/tracing.py
+@@ -0,0 +1,123 @@
++from __future__ import annotations
++
++import inspect
++import json
++import logging
++import re
++import time
++import uuid
++from datetime import datetime, timezone
++from enum import Enum
++from typing import Any, Awaitable, Callable, Dict, Optional
++
++from pydantic import BaseModel
++
++from app.agent_runtime.schemas import (
++    AgentStage,
++    AgentStepStatus,
++    AgentTraceStep,
++)
++
++logger = logging.getLogger(__name__)
++
++TraceSink = Callable[[list[AgentTraceStep]], Awaitable[None]]
++
++
++def safe_error(value: Exception) -> str:
++    message = str(value)
++    message = re.sub(r"https?://\S+", "[url-redacted]", message)
++    message = re.sub(r"images/uploads/\S+", "[image-ref-redacted]", message)
++    return message[:500]
++
++
++def safe_summary(value: Any, *, depth: int = 0) -> Any:
++    """Return a trace-safe summary without raw images, prompts, or signed URLs."""
++    if isinstance(value, Enum):
++        return value.value
++    if isinstance(value, (str, int, float, bool)) or value is None:
++        if isinstance(value, str) and len(value) > 240:
++            return value[:237] + "..."
++        return value
++    if depth > 3:
++        return type(value).__name__
++    if isinstance(value, bytes):
++        return {"type": "bytes", "size": len(value)}
++    if isinstance(value, BaseModel):
++        return safe_summary(value.model_dump(mode="json"), depth=depth + 1)
++    if isinstance(value, dict):
++        out: Dict[str, Any] = {}
++        for key, item in list(value.items())[:24]:
++            key_lower = str(key).lower()
++            if any(token in key_lower for token in ("url", "prompt", "image_bytes")):
++                if isinstance(item, list):
++                    out[str(key)] = {"count": len(item)}
++                elif isinstance(item, bytes):
++                    out[str(key)] = {"type": "bytes", "size": len(item)}
++                else:
++                    out[str(key)] = "[redacted]"
++            else:
++                out[str(key)] = safe_summary(item, depth=depth + 1)
++        return out
++    if isinstance(value, (list, tuple)):
++        if value and isinstance(value[0], bytes):
++            return {"count": len(value), "sizes": [len(v) for v in value[:8]]}
++        return [safe_summary(v, depth=depth + 1) for v in list(value)[:12]]
++    return type(value).__name__
++
++
++class TraceRecorder:
++    def __init__(self, sink: Optional[TraceSink] = None):
++        self.steps: list[AgentTraceStep] = []
++        self._sink = sink
++
++    async def _emit(self) -> None:
++        # Always write a compact structured log; Project-backed persistence is
++        # supplied by the API layer through ``sink``.
++        if self.steps:
++            logger.info(
++                "design_agent_trace %s",
++                json.dumps(self.steps[-1].model_dump(mode="json"), ensure_ascii=False),
++            )
++        if self._sink:
++            await self._sink(list(self.steps))
++
++    async def record(
++        self,
++        stage: AgentStage,
++        name: str,
++        operation: Callable[[], Any],
++        *,
++        tool_name: Optional[str] = None,
++        model: Optional[str] = None,
++        input_summary: Optional[Dict[str, Any]] = None,
++        metrics: Optional[Dict[str, float]] = None,
++    ) -> Any:
++        step = AgentTraceStep(
++            step_id=uuid.uuid4().hex[:12],
++            stage=stage,
++            name=name,
++            status=AgentStepStatus.RUNNING,
++            started_at=datetime.now(timezone.utc),
++            tool_name=tool_name,
++            model=model,
++            input_summary=safe_summary(input_summary or {}),
++            metrics=metrics or {},
++        )
++        self.steps.append(step)
++        await self._emit()
++        started = time.perf_counter()
++        try:
++            result = operation()
++            if inspect.isawaitable(result):
++                result = await result
++            step.status = AgentStepStatus.COMPLETED
++            step.output_summary = safe_summary(result)
++            return result
++        except Exception as exc:
++            step.status = AgentStepStatus.FAILED
++            step.error = safe_error(exc)
++            raise
++        finally:
++            step.ended_at = datetime.now(timezone.utc)
++            step.latency_ms = int((time.perf_counter() - started) * 1_000)
++            await self._emit()
+diff --git a/curify_background/app/config.py b/curify_background/app/config.py
+index 8153393..d7fea36 100644
+--- a/curify_background/app/config.py
++++ b/curify_background/app/config.py
+@@ -158,6 +158,9 @@ class Settings(BaseSettings):
+ 
+     GEMINI_API_KEY: str = ""
+     GEMINI_IMAGE_MODEL: str = "gemini-3-pro-image-preview"
++    # Empty means reuse GEMINI_IMAGE_MODEL. Set a multimodal text model here
++    # when analysis/verification should use a cheaper deployment.
++    DESIGN_AGENT_ANALYSIS_MODEL: str = ""
+ 
+     X_API_KEY: str = ""
+     X_API_SECRET: str = ""
+@@ -224,4 +227,4 @@ if cookie_path.exists():
+                 print(line.strip())
+     except Exception as e:
+         print("Error reading cookies file:", e)
+-    print("---- End cookies preview ----")
+\ No newline at end of file
++    print("---- End cookies preview ----")
+diff --git a/curify_background/app/main.py b/curify_background/app/main.py
+index 8b79820..5916afc 100644
+--- a/curify_background/app/main.py
++++ b/curify_background/app/main.py
+@@ -30,6 +30,7 @@ from app.routers import (
+     proposals,
+     etsy_packs,
+     product_video,
++    design_agent,
+ )
+ 
+ from app.utils.gcs_storage import ensure_gcp_credentials
+@@ -173,6 +174,7 @@ app.include_router(rss_ingestion.router)
+ app.include_router(proposals.router)
+ app.include_router(etsy_packs.router)
+ app.include_router(product_video.router)
++app.include_router(design_agent.router)
+ 
+ # -----------------------------
+ # Root endpoint
+diff --git a/curify_background/app/models/project.py b/curify_background/app/models/project.py
+index 23b0413..6ff20f9 100644
+--- a/curify_background/app/models/project.py
++++ b/curify_background/app/models/project.py
+@@ -33,6 +33,7 @@ class JobType(str, Enum):
+     SPEECH_TRANSLATOR = "speech_translator"
+     PRODUCT_VIDEO = "product_video"
+     COSTUME_TRYON = "costume_tryon"
++    DESIGN_AGENT = "design_agent"
+ 
+ class AudioOption(str, Enum):
+     ORIGINAL = "original"
+diff --git a/curify_background/app/routers/__init__.py b/curify_background/app/routers/__init__.py
+index 9cee92d..dd1a2c1 100644
+--- a/curify_background/app/routers/__init__.py
++++ b/curify_background/app/routers/__init__.py
+@@ -1,6 +1,5 @@
+-# app/routers/__init__.py
+-from . import auth
+-from . import video
+-from . import user
+-from . import project
+-from . import gtm_jobs
++"""FastAPI router package.
++
++Routers are imported explicitly by ``app.main``. Keeping package import lazy
++prevents a focused worker or test from loading every media/payment dependency.
++"""
+diff --git a/curify_background/app/routers/design_agent.py b/curify_background/app/routers/design_agent.py
+new file mode 100644
+index 0000000..8521b16
+--- /dev/null
++++ b/curify_background/app/routers/design_agent.py
+@@ -0,0 +1,129 @@
++from __future__ import annotations
++
++import asyncio
++import logging
++from typing import Any, Dict
++from urllib.parse import urlparse
++
++from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, status
++from sqlalchemy.ext.asyncio import AsyncSession
++
++from app.agent_runtime.persistence import (
++    new_agent_run_id,
++    prepare_agent_project,
++    run_agent_project,
++)
++from app.agent_runtime.schemas import (
++    AgentArtifact,
++    AgentRunRequest,
++    AgentRunStatus,
++    AgentRunStatusResponse,
++    AgentStage,
++    AgentTaskType,
++    AgentTraceStep,
++    CreateAgentRunResponse,
++    VerificationVerdict,
++)
++from app.crud.project import get_project_by_id
++from app.database import get_db
++from app.models.user import User
++from app.utils import gcs_storage
++from app.utils.auth_utils import get_current_user
++
++logger = logging.getLogger(__name__)
++router = APIRouter(prefix="/design-agent", tags=["design-agent"])
++
++
++def _validate_image_sources(body: AgentRunRequest, user_id: int) -> None:
++    """Prevent one user from asking the service account to read another upload."""
++    owned_prefix = f"images/uploads/{user_id}/"
++    for source in body.image_urls:
++        if "://" not in source:
++            if not source.startswith(owned_prefix) or ".." in source.split("/"):
++                raise HTTPException(
++                    status_code=400,
++                    detail="Private image handles must come from this user's /images/upload endpoint.",
++                )
++            continue
++        parsed = urlparse(source)
++        if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
++            raise HTTPException(
++                status_code=400,
++                detail="External image inputs must be public HTTPS URLs without embedded credentials.",
++            )
++
++
++@router.post(
++    "/runs",
++    status_code=status.HTTP_202_ACCEPTED,
++    response_model=CreateAgentRunResponse,
++)
++async def create_design_agent_run(
++    body: AgentRunRequest,
++    background_tasks: BackgroundTasks,
++    current_user: User = Depends(get_current_user),
++    db: AsyncSession = Depends(get_db),
++) -> CreateAgentRunResponse:
++    _validate_image_sources(body, current_user.user_id)
++    run_id = new_agent_run_id()
++    await prepare_agent_project(db, run_id, current_user.user_id, body)
++    background_tasks.add_task(
++        run_agent_project,
++        run_id,
++        current_user.user_id,
++        body.model_dump(mode="json"),
++    )
++    return CreateAgentRunResponse(run_id=run_id)
++
++
++def _status(value: Any) -> AgentRunStatus:
++    try:
++        return AgentRunStatus(str(value))
++    except ValueError:
++        return AgentRunStatus.RUNNING
++
++
++@router.get("/runs/{run_id}", response_model=AgentRunStatusResponse)
++async def get_design_agent_run(
++    run_id: str,
++    current_user: User = Depends(get_current_user),
++    db: AsyncSession = Depends(get_db),
++) -> AgentRunStatusResponse:
++    project = await get_project_by_id(db, run_id)
++    if (
++        not project
++        or project.user_id != current_user.user_id
++        or not run_id.startswith("design_agent_")
++    ):
++        raise HTTPException(status_code=404, detail="Design Agent run not found.")
++    runtime_config: Dict[str, Any] = project.runtime_config or {}
++    result: Dict[str, Any] = runtime_config.get("result") or {}
++    artifact_payloads = result.get("artifacts") or []
++    artifacts = []
++    for payload in artifact_payloads:
++        artifact = AgentArtifact.model_validate(payload)
++        try:
++            artifact.url = await asyncio.to_thread(
++                gcs_storage.generate_signed_url,
++                artifact.object_path,
++                60,
++            )
++        except Exception:
++            logger.warning("Could not sign Design Agent artifact %s", artifact.object_path, exc_info=True)
++        artifacts.append(artifact)
++    trace_payload = runtime_config.get("trace") or []
++    trace = [AgentTraceStep.model_validate(step) for step in trace_payload]
++    current_stage = runtime_config.get("current_stage")
++    return AgentRunStatusResponse(
++        run_id=run_id,
++        status=_status(runtime_config.get("agent_status", AgentRunStatus.RUNNING.value)),
++        task_type=(AgentTaskType(result["task_type"]) if result.get("task_type") else None),
++        skill_id=result.get("skill_id"),
++        summary=result.get("summary"),
++        code=result.get("code") or runtime_config.get("failure_code"),
++        current_stage=AgentStage(current_stage) if current_stage else None,
++        artifacts=artifacts,
++        verdict=(VerificationVerdict.model_validate(result["verdict"]) if result.get("verdict") else None),
++        iterations=int(result.get("iterations") or 0),
++        trace=trace,
++    )
+diff --git a/curify_background/tests/test_design_agent_runtime.py b/curify_background/tests/test_design_agent_runtime.py
+new file mode 100644
+index 0000000..1525751
+--- /dev/null
++++ b/curify_background/tests/test_design_agent_runtime.py
+@@ -0,0 +1,495 @@
++import io
++import os
++import unittest
++import uuid
++from unittest.mock import AsyncMock, patch
++
++os.environ.setdefault("DATABASE_URL", "postgresql+asyncpg://user:pass@localhost/db")
++os.environ.setdefault("CALLBACK_API_BASE_URL", "http://localhost:8000")
++os.environ.setdefault("SECRET_KEY", "test_secret_key")
++os.environ.setdefault(
++    "AZURE_STORAGE_CONNECTION_STRING",
++    "DefaultEndpointsProtocol=https;AccountName=test;AccountKey=key;EndpointSuffix=core.windows.net",
++)
++os.environ.setdefault("ELEVENLABS_API_KEY", "test_eleven_key")
++os.environ.setdefault("OPENAI_API_KEY", "test_openai_key")
++os.environ.setdefault("SYNC_LAB_API_KEY", "test_sync_key")
++os.environ.setdefault("AZURE_TRANSLATOR_KEY", "test_azure_key")
++os.environ.setdefault("IS_PRODUCTION", "False")
++os.environ.setdefault("SKIP_DB_CREATE", "true")
++
++from fastapi import BackgroundTasks
++from fastapi import HTTPException
++from PIL import Image
++
++from app.agent_runtime.runtime import DesignAgentRuntime
++from app.agent_runtime.evaluation import aggregate_results, score_case
++from app.agent_runtime.schemas import (
++    AgentArtifact,
++    AgentRunRequest,
++    AgentRunStatus,
++    AgentTaskType,
++    TryOnPosterScore,
++    TryOnReview,
++    VerificationVerdict,
++    VoteDraft,
++    VoteSegmentDraft,
++    VoteVariant,
++)
++from app.agent_runtime.services import DesignAgentServices, SafeImageLoader
++from app.routers.design_agent import create_design_agent_run, get_design_agent_run
++
++
++def sample_jpeg(color=(190, 180, 170), size=(1200, 900)) -> bytes:
++    image = Image.new("RGB", size, color)
++    out = io.BytesIO()
++    image.save(out, format="JPEG", quality=90)
++    return out.getvalue()
++
++
++class MemoryImageLoader:
++    def __init__(self):
++        self.calls = []
++
++    async def load(self, source: str) -> bytes:
++        self.calls.append(source)
++        return sample_jpeg()
++
++
++class MemoryArtifactStore:
++    def __init__(self):
++        self.objects = {}
++
++    async def put(
++        self,
++        run_id,
++        filename,
++        data,
++        media_type,
++        kind,
++        label,
++        metadata=None,
++    ):
++        path = f"memory/{run_id}/{filename}"
++        self.objects[path] = data
++        return AgentArtifact(
++            artifact_id=uuid.uuid4().hex[:12],
++            kind=kind,
++            label=label,
++            object_path=path,
++            media_type=media_type,
++            metadata=metadata or {},
++        )
++
++    async def sign(self, object_path: str, expiry_minutes: int = 60) -> str:
++        return f"https://example.com/{object_path}"
++
++
++class FakeGateway:
++    model_name = "fake-multimodal-model"
++    generation_model_name = "fake-image-model"
++
++    def __init__(self, fail_vote_reviews=0, fail_tryon_reviews=0, invalid_vote=False):
++        self.fail_vote_reviews = fail_vote_reviews
++        self.fail_tryon_reviews = fail_tryon_reviews
++        self.invalid_vote = invalid_vote
++        self.vote_analysis_calls = 0
++        self.vote_review_calls = 0
++        self.tryon_generation_calls = 0
++        self.tryon_review_calls = 0
++
++    async def analyze_vote(self, prompt, candidate_images, repair_instruction=None):
++        self.vote_analysis_calls += 1
++        if self.invalid_vote:
++            return VoteDraft(valid_variants=False, issues=["Only three coherent designs are visible."])
++        return VoteDraft(
++            valid_variants=True,
++            product="Men's grooming cleanser",
++            category="men's grooming",
++            axis="premium feel",
++            variants=[
++                VoteVariant(
++                    id=label,
++                    design_language=f"Visible hierarchy {label}",
++                    strengths=[f"strength {label}"],
++                    weaknesses=[f"weakness {label}"],
++                )
++                for label in "ABCD"
++            ],
++            segments=[
++                VoteSegmentDraft(
++                    name="Urban professionals",
++                    share=0.6,
++                    votes={"A": 10, "B": 20, "C": 25, "D": 45},
++                    rationale="D has the clearest hierarchy.",
++                ),
++                VoteSegmentDraft(
++                    name="Design-aware shoppers",
++                    share=0.4,
++                    votes={"A": 10, "B": 10, "C": 50, "D": 30},
++                    rationale="C has a more editorial composition.",
++                ),
++            ],
++            recommendation="Lead with D and retain C as an editorial alternative.",
++            confidence=0.82,
++        )
++
++    async def review_vote(self, prompt, candidate_images, analysis):
++        self.vote_review_calls += 1
++        if self.vote_review_calls <= self.fail_vote_reviews:
++            return VerificationVerdict(
++                passed=False,
++                scores={"grounding": 2.0},
++                repairable_failures=["Ground the ranking in visible hierarchy."],
++                repair_instruction="Use concrete visible hierarchy evidence.",
++            )
++        return VerificationVerdict(
++            passed=True,
++            scores={
++                "grounding": 4.4,
++                "segment_plausibility": 4.2,
++                "ranking_sanity": 4.1,
++                "actionability": 4.0,
++            },
++        )
++
++    async def generate_tryon(
++        self,
++        selfie,
++        product,
++        prompt,
++        direction,
++        repair_instruction=None,
++    ):
++        self.tryon_generation_calls += 1
++        color = (80 + self.tryon_generation_calls * 20, 110, 150)
++        return sample_jpeg(color=color, size=(1080, 1350))
++
++    async def review_tryon(self, selfie, product, prompt, posters):
++        self.tryon_review_calls += 1
++        scores = []
++        for index in range(len(posters)):
++            failed = self.tryon_review_calls <= self.fail_tryon_reviews and index == 1
++            scores.append(
++                TryOnPosterScore(
++                    index=index,
++                    identity=2.5 if failed else 4.5,
++                    product_fidelity=2.5 if failed else 4.2,
++                    anatomy=4.2,
++                    instruction_following=4.3,
++                    layout=4.4,
++                    failures=["face identity drift"] if failed else [],
++                )
++            )
++        return TryOnReview(posters=scores)
++
++
++def runtime_with_gateway(gateway: FakeGateway):
++    loader = MemoryImageLoader()
++    store = MemoryArtifactStore()
++    runtime = DesignAgentRuntime(
++        DesignAgentServices(gateway=gateway, image_loader=loader, artifact_store=store)
++    )
++    return runtime, loader, store
++
++
++class TestDesignAgentRuntime(unittest.IsolatedAsyncioTestCase):
++    async def test_design_vote_runs_end_to_end(self):
++        gateway = FakeGateway()
++        runtime, loader, store = runtime_with_gateway(gateway)
++        result = await runtime.run(
++            "run_vote",
++            AgentRunRequest(
++                prompt="站在消费者角度，哪款男士理容包装更有质感？",
++                image_urls=["private/comparison-board.jpg"],
++            ),
++        )
++
++        self.assertEqual(result.status, AgentRunStatus.COMPLETED)
++        self.assertEqual(result.task_type, AgentTaskType.DESIGN_VOTE)
++        self.assertEqual(result.skill_id, "design-vote")
++        self.assertEqual(len(result.artifacts), 2)
++        self.assertEqual(result.iterations, 1)
++        self.assertIn("D", result.summary)
++        self.assertTrue(result.verdict and result.verdict.passed)
++        self.assertEqual(gateway.vote_analysis_calls, 1)
++        self.assertEqual(gateway.vote_review_calls, 1)
++        self.assertTrue(any(step.stage.value == "VERIFY" for step in result.trace))
++        stage_order = [step.stage.value for step in result.trace]
++        self.assertLess(stage_order.index("UNDERSTAND"), stage_order.index("PLAN"))
++        self.assertLess(stage_order.index("PLAN"), stage_order.index("GENERATE"))
++        self.assertLess(stage_order.index("GENERATE"), stage_order.index("VERIFY"))
++        self.assertLess(stage_order.index("VERIFY"), stage_order.index("PRESENT"))
++        self.assertEqual(len(store.objects), 2)
++
++    async def test_design_vote_repairs_after_visual_feedback(self):
++        gateway = FakeGateway(fail_vote_reviews=1)
++        runtime, loader, _ = runtime_with_gateway(gateway)
++        result = await runtime.run(
++            "run_vote_retry",
++            AgentRunRequest(
++                task_type=AgentTaskType.DESIGN_VOTE,
++                prompt="Compare these four package designs",
++                image_urls=["a", "b", "c", "d"],
++                max_iterations=1,
++            ),
++        )
++
++        self.assertEqual(result.status, AgentRunStatus.COMPLETED)
++        self.assertEqual(result.iterations, 2)
++        self.assertEqual(gateway.vote_analysis_calls, 2)
++        self.assertEqual(gateway.vote_review_calls, 2)
++        self.assertEqual(len(loader.calls), 4)  # references are reused during repair
++
++    async def test_design_vote_abstains_when_vision_rejects_the_board(self):
++        gateway = FakeGateway(invalid_vote=True)
++        runtime, _, _ = runtime_with_gateway(gateway)
++        result = await runtime.run(
++            "run_invalid_board",
++            AgentRunRequest(
++                task_type=AgentTaskType.DESIGN_VOTE,
++                prompt="Vote on these designs",
++                image_urls=["board"],
++            ),
++        )
++        self.assertEqual(result.status, AgentRunStatus.ABSTAINED)
++        self.assertEqual(result.code, "INSUFFICIENT_CANDIDATES")
++
++    async def test_design_vote_abstains_on_invalid_candidate_count(self):
++        gateway = FakeGateway()
++        runtime, _, _ = runtime_with_gateway(gateway)
++        result = await runtime.run(
++            "run_bad_vote",
++            AgentRunRequest(
++                task_type=AgentTaskType.DESIGN_VOTE,
++                prompt="Vote on these designs",
++                image_urls=["a", "b"],
++            ),
++        )
++        self.assertEqual(result.status, AgentRunStatus.ABSTAINED)
++        self.assertEqual(result.code, "INVALID_CANDIDATE_COUNT")
++        self.assertEqual(gateway.vote_analysis_calls, 0)
++
++    async def test_exact_product_tryon_requires_product_reference(self):
++        gateway = FakeGateway()
++        runtime, _, _ = runtime_with_gateway(gateway)
++        result = await runtime.run(
++            "run_missing_product",
++            AgentRunRequest(
++                task_type=AgentTaskType.TRYON_POSTER,
++                prompt="用自拍生成这个真实商品的试穿电商海报",
++                image_urls=["selfie"],
++                allow_paid_generation=True,
++            ),
++        )
++        self.assertEqual(result.status, AgentRunStatus.ABSTAINED)
++        self.assertEqual(result.code, "MISSING_PRODUCT_IMAGE")
++
++    async def test_tryon_requires_paid_generation_permission(self):
++        gateway = FakeGateway()
++        runtime, _, _ = runtime_with_gateway(gateway)
++        result = await runtime.run(
++            "run_no_permission",
++            AgentRunRequest(
++                task_type=AgentTaskType.TRYON_POSTER,
++                prompt="Generate outfit posters",
++                image_urls=["selfie"],
++            ),
++        )
++        self.assertEqual(result.status, AgentRunStatus.ABSTAINED)
++        self.assertEqual(result.code, "PAID_GENERATION_NOT_APPROVED")
++
++    async def test_tryon_retries_only_failed_poster(self):
++        gateway = FakeGateway(fail_tryon_reviews=1)
++        runtime, _, store = runtime_with_gateway(gateway)
++        result = await runtime.run(
++            "run_tryon",
++            AgentRunRequest(
++                task_type=AgentTaskType.TRYON_POSTER,
++                prompt="Use my selfie and product image to create ecommerce posters",
++                image_urls=["selfie", "product"],
++                output_count=3,
++                max_iterations=1,
++                allow_paid_generation=True,
++            ),
++        )
++        self.assertEqual(result.status, AgentRunStatus.COMPLETED)
++        self.assertEqual(result.iterations, 2)
++        self.assertEqual(gateway.tryon_generation_calls, 4)  # 3 first pass + failed index 1
++        self.assertEqual(gateway.tryon_review_calls, 2)
++        self.assertEqual(len(result.artifacts), 4)
++        self.assertEqual(len(store.objects), 4)
++        generation_steps = [
++            step for step in result.trace if step.tool_name == "generate_tryon_posters"
++        ]
++        self.assertTrue(generation_steps)
++        self.assertTrue(all(step.model == "fake-image-model" for step in generation_steps))
++        self.assertEqual(
++            sum(step.metrics.get("estimated_credits", 0.0) for step in result.trace),
++            40.0,
++        )
++
++
++class TestSafeImageLoader(unittest.TestCase):
++    def test_rejects_http_and_private_network_sources(self):
++        with self.assertRaises(ValueError):
++            SafeImageLoader._validate_public_https("http://example.com/image.jpg")
++        with self.assertRaises(ValueError):
++            SafeImageLoader._validate_public_https("https://127.0.0.1/image.jpg")
++
++
++class TestDesignAgentRouter(unittest.IsolatedAsyncioTestCase):
++    async def test_create_run_persists_and_enqueues(self):
++        body = AgentRunRequest(
++            task_type=AgentTaskType.DESIGN_VOTE,
++            prompt="Which design wins?",
++            image_urls=["images/uploads/42/board.jpg"],
++        )
++        background = BackgroundTasks()
++        user = type("UserStub", (), {"user_id": 42})()
++        with patch(
++            "app.routers.design_agent.prepare_agent_project",
++            new=AsyncMock(),
++        ) as prepare:
++            response = await create_design_agent_run(
++                body=body,
++                background_tasks=background,
++                current_user=user,
++                db=AsyncMock(),
++            )
++        self.assertTrue(response.run_id.startswith("design_agent_"))
++        prepare.assert_awaited_once()
++        self.assertEqual(len(background.tasks), 1)
++
++    async def test_create_run_rejects_another_users_private_image(self):
++        body = AgentRunRequest(
++            task_type=AgentTaskType.DESIGN_VOTE,
++            prompt="Which design wins?",
++            image_urls=["images/uploads/99/board.jpg"],
++        )
++        with self.assertRaises(HTTPException) as raised:
++            await create_design_agent_run(
++                body=body,
++                background_tasks=BackgroundTasks(),
++                current_user=type("UserStub", (), {"user_id": 42})(),
++                db=AsyncMock(),
++            )
++        self.assertEqual(raised.exception.status_code, 400)
++
++    async def test_get_run_rehydrates_trace_and_signs_artifacts(self):
++        project = type(
++            "ProjectStub",
++            (),
++            {
++                "user_id": 42,
++                "runtime_config": {
++                    "agent_status": "COMPLETED",
++                    "current_stage": "PRESENT",
++                    "trace": [],
++                    "result": {
++                        "task_type": "design_vote",
++                        "skill_id": "design-vote",
++                        "summary": "D wins",
++                        "iterations": 1,
++                        "verdict": {"passed": True},
++                        "artifacts": [
++                            {
++                                "artifact_id": "artifact-1",
++                                "kind": "report",
++                                "label": "vote report",
++                                "object_path": "design_agent/run/report.png",
++                                "media_type": "image/png",
++                            }
++                        ],
++                    },
++                },
++            },
++        )()
++        with (
++            patch(
++                "app.routers.design_agent.get_project_by_id",
++                new=AsyncMock(return_value=project),
++            ),
++            patch(
++                "app.routers.design_agent.gcs_storage.generate_signed_url",
++                return_value="https://example.com/signed",
++            ),
++        ):
++            response = await get_design_agent_run(
++                run_id="design_agent_123",
++                current_user=type("UserStub", (), {"user_id": 42})(),
++                db=AsyncMock(),
++            )
++        self.assertEqual(response.status, AgentRunStatus.COMPLETED)
++        self.assertEqual(response.current_stage.value, "PRESENT")
++        self.assertEqual(response.artifacts[0].url, "https://example.com/signed")
++
++
++class TestDesignAgentEvaluation(unittest.TestCase):
++    def test_score_case_checks_route_trace_verdict_and_artifacts(self):
++        case = {
++            "id": "vote-1",
++            "coverage": "supported",
++            "expected": {
++                "status": "COMPLETED",
++                "task_type": "design_vote",
++                "skill_id": "design-vote",
++                "required_stages": [
++                    "UNDERSTAND",
++                    "PLAN",
++                    "GENERATE",
++                    "VERIFY",
++                    "PRESENT",
++                ],
++                "min_artifacts": 2,
++                "artifact_kinds": ["report", "manifest"],
++                "artifacts_reachable": True,
++                "verdict_passed": True,
++                "max_iterations": 2,
++            },
++        }
++        response = {
++            "status": "COMPLETED",
++            "task_type": "design_vote",
++            "skill_id": "design-vote",
++            "iterations": 1,
++            "verdict": {"passed": True},
++            "artifacts": [{"kind": "report"}, {"kind": "manifest"}],
++            "_artifact_probe": [{"reachable": True}, {"reachable": True}],
++            "trace": [
++                {"stage": stage, "status": "COMPLETED"}
++                for stage in ("UNDERSTAND", "PLAN", "GENERATE", "VERIFY", "PRESENT")
++            ],
++        }
++        result = score_case(case, response)
++        self.assertTrue(result["passed"])
++        self.assertEqual(result["stage_coverage"], 1.0)
++
++    def test_aggregate_exposes_coverage_failures(self):
++        summary = aggregate_results(
++            [
++                {
++                    "id": "ok",
++                    "coverage": "supported",
++                    "passed": True,
++                    "checks": {"route": True},
++                    "stage_coverage": 1.0,
++                    "actual_status": "COMPLETED",
++                },
++                {
++                    "id": "gap",
++                    "coverage": "gap",
++                    "passed": False,
++                    "checks": {"route": False},
++                    "stage_coverage": 0.5,
++                    "actual_status": "ABSTAINED",
++                },
++            ]
++        )
++        self.assertEqual(summary["case_pass_rate"], 0.5)
++        self.assertEqual(summary["routing_accuracy"], 0.5)
++        self.assertEqual(summary["by_coverage"]["gap"]["failed_ids"], ["gap"])
++
++
++if __name__ == "__main__":
++    unittest.main()
