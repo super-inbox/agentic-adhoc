@@ -9,7 +9,10 @@ const {
   resolveRoot,
   writeJson,
 } = require("./common.cjs");
-const { evaluateRecord } = require("./metrics.cjs");
+const {
+  evaluateRecord,
+  explorationRecordMetrics,
+} = require("./metrics.cjs");
 
 function flattenMetrics(value, prefix = "", output = {}) {
   if (typeof value === "number") {
@@ -63,6 +66,40 @@ function pairedBootstrapDelta(
   };
 }
 
+function pairedBootstrapMeanDelta(
+  baselineValues,
+  currentValues,
+  { samples = 1000, seed = 1234, confidence = 0.95 } = {},
+) {
+  if (
+    baselineValues.length !== currentValues.length ||
+    !baselineValues.length
+  ) {
+    return { lower: null, upper: null, confidence, samples: 0 };
+  }
+  const random = mulberry32(seed);
+  const deltas = [];
+  for (let sample = 0; sample < samples; sample += 1) {
+    let baseline = 0;
+    let current = 0;
+    for (let index = 0; index < baselineValues.length; index += 1) {
+      const picked = Math.floor(random() * baselineValues.length);
+      baseline += baselineValues[picked];
+      current += currentValues[picked];
+    }
+    deltas.push(
+      (current - baseline) / baselineValues.length,
+    );
+  }
+  const alpha = (1 - confidence) / 2;
+  return {
+    lower: quantile(deltas, alpha),
+    upper: quantile(deltas, 1 - alpha),
+    confidence,
+    samples,
+  };
+}
+
 function compareRuns({
   records,
   baselinePredictions,
@@ -91,10 +128,16 @@ function compareRuns({
   const newlyFixed = [];
   const newlyBroken = [];
   pairedRecords.forEach((record, index) => {
-    if (!baselineEval[index].correct && currentEval[index].correct) {
+    if (
+      baselineEval[index].correct === false &&
+      currentEval[index].correct === true
+    ) {
       newlyFixed.push(record.id);
     }
-    if (baselineEval[index].correct && !currentEval[index].correct) {
+    if (
+      baselineEval[index].correct === true &&
+      currentEval[index].correct === false
+    ) {
       newlyBroken.push(record.id);
     }
   });
@@ -123,6 +166,12 @@ function compareRuns({
         `${row.dimension}\u0000${row.value}`,
       );
       if (!previous) return null;
+      if (
+        typeof previous.exact_accuracy !== "number" ||
+        typeof row.exact_accuracy !== "number"
+      ) {
+        return null;
+      }
       return {
         dimension: row.dimension,
         value: row.value,
@@ -146,6 +195,38 @@ function compareRuns({
         delta.absolute_delta >= rule.min_delta);
     gates.push({ metric, passed, rule, ...delta });
   }
+  const pairedExact = baselineEval
+    .map((baseline, index) => ({
+      baseline,
+      current: currentEval[index],
+    }))
+    .filter(
+      ({ baseline, current }) =>
+        typeof baseline.correct === "boolean" &&
+        typeof current.correct === "boolean",
+    );
+  const explorationPairs = pairedRecords
+    .filter((record) => record.gold.target_mode === "exploration")
+    .map((record) => ({
+      baseline: explorationRecordMetrics(
+        record,
+        baselineById.get(record.id),
+        config.metrics.exploration_k,
+      ).relevant_effective_style_count,
+      current: explorationRecordMetrics(
+        record,
+        currentById.get(record.id),
+        config.metrics.exploration_k,
+      ).relevant_effective_style_count,
+    }));
+  const baselineExploration = explorationPairs.map((row) => row.baseline);
+  const currentExploration = explorationPairs.map((row) => row.current);
+  const baselineExplorationMean = mean(baselineExploration);
+  const currentExplorationMean = mean(currentExploration);
+  const explorationDelta =
+    baselineExplorationMean === null || currentExplorationMean === null
+      ? null
+      : currentExplorationMean - baselineExplorationMean;
   return {
     paired_record_count: pairedRecords.length,
     metric_deltas: metricDeltas,
@@ -153,14 +234,35 @@ function compareRuns({
     newly_broken_records: newlyBroken,
     per_slice_regressions: perSlice.filter((row) => row.absolute_delta < 0),
     paired_bootstrap_overall_exact_delta: pairedBootstrapDelta(
-      baselineEval.map((item) => item.correct),
-      currentEval.map((item) => item.correct),
+      pairedExact.map((item) => item.baseline.correct),
+      pairedExact.map((item) => item.current.correct),
       {
         samples: config.metrics.bootstrap_samples,
         seed: config.random_seed,
         confidence: config.metrics.confidence_level,
       },
     ),
+    style_exploration_lift_at_k: {
+      metric: "relevant_effective_style_count_at_k",
+      evaluation_k: config.metrics.exploration_k,
+      paired_record_count: explorationPairs.length,
+      baseline: baselineExplorationMean,
+      current: currentExplorationMean,
+      absolute_lift: explorationDelta,
+      relative_lift:
+        baselineExplorationMean
+          ? explorationDelta / Math.abs(baselineExplorationMean)
+          : null,
+      paired_bootstrap_interval: pairedBootstrapMeanDelta(
+        baselineExploration,
+        currentExploration,
+        {
+          samples: config.metrics.bootstrap_samples,
+          seed: config.random_seed + 97,
+          confidence: config.metrics.confidence_level,
+        },
+      ),
+    },
     gates,
     gates_passed: gates.every((gate) => gate.passed),
   };
@@ -177,6 +279,7 @@ function writeComparison(outDir, comparison) {
     `Newly fixed: ${comparison.newly_fixed_records.length}`,
     `Newly broken: ${comparison.newly_broken_records.length}`,
     `Paired bootstrap CI for exact-accuracy delta: ${comparison.paired_bootstrap_overall_exact_delta.lower} to ${comparison.paired_bootstrap_overall_exact_delta.upper}`,
+    `Style Exploration Lift@${comparison.style_exploration_lift_at_k.evaluation_k}: ${comparison.style_exploration_lift_at_k.absolute_lift ?? "n/a"} effective styles/query (paired CI ${comparison.style_exploration_lift_at_k.paired_bootstrap_interval.lower ?? "n/a"} to ${comparison.style_exploration_lift_at_k.paired_bootstrap_interval.upper ?? "n/a"})`,
     "",
     "| Metric | Baseline | Current | Absolute delta | Relative delta |",
     "|---|---:|---:|---:|---:|",
@@ -193,5 +296,6 @@ module.exports = {
   compareRuns,
   flattenMetrics,
   pairedBootstrapDelta,
+  pairedBootstrapMeanDelta,
   writeComparison,
 };

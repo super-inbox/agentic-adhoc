@@ -43,11 +43,32 @@ a single resumable CLI, following this repository's Node conventions.
 cluster-aware split → adapter → normalized predictions → deterministic metrics
 → reports/comparison`.
 
+`exploration` is a fifth, independent split alongside anchor/dev/test/challenge.
+Ten curated capability profiles are rendered in Chinese, English, and natural
+mixed language by default (30 queries). Each profile freezes one required
+subject/information goal, several relevant templates, and each template's
+evidence-grounded primary visual-style and layout family. These records are not
+single-label questions and never enter Core Top-1 accuracy.
+
+The exploration headline is `Relevant Effective Style Count@K`:
+`(relevant_count / K) × exp(-Σ p(style) ln p(style))`. Relevance comes from the
+annotated profile targets; style families come from the frozen capability
+registry. This gates diversity by relevance, so unrelated outputs cannot make a
+router look exploratory. A paired run comparison reports `Style Exploration
+Lift@K` with a seeded paired-bootstrap interval. This remains a routing-level
+proxy; pixel/perceptual diversity and final-image quality are intentionally
+outside v2.
+
 Rule expansion is deterministic and fixture-backed. Optional LLM generation and
 validation use separate prompts, versioned prompt hashes, on-disk caches,
 schema-constrained JSON parsing, retries, resume, batch and dry-run controls.
 No network call occurs unless `--provider=llm` or an external adapter is
 explicitly selected.
+
+Exploration remains profile-driven even when the other partitions use the LLM
+provider. This deliberately freezes cross-run concepts and relevant style
+families; new LLM-proposed exploration profiles should enter as review
+candidates rather than silently changing the comparison set.
 
 Character n-gram similarity is the dependency-free fallback for collision,
 near-duplicate, and leakage checks. The interface can be replaced by an
@@ -61,10 +82,11 @@ equality and never an LLM judgment.
   verbatim and converted traceably to approved JSONL records.
 - Generated records are candidates. Deterministically clean core records may be
   `auto_accepted`, but are not called manually approved Gold. Challenge and
-  content-gap candidates default to `needs_review`.
+  content-gap candidates default to `needs_review`. Exploration profiles and
+  their style-family boundaries also default to `needs_review`.
 - The benchmark scope is text query → text-only generatable template or
   abstention. Reference-image workflows are outside this routing target.
-- The full-generation default requests 650 candidate records. Quality checks may
+- The full-generation default requests 680 candidate records. Quality checks may
   reject or queue records; counts are never padded after validation.
 - A future catalog refresh must rerun the content-gap audit; a no-match label is
   not assumed to remain true merely because this point-in-time audit passed.

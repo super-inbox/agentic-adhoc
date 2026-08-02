@@ -74,6 +74,43 @@ test("schema validates a correct record and rejects an invalid target", () => {
   assert.match(result.errors.join(" "), /invalid target/);
 });
 
+test("schema validates exploration Gold and requires complete style mappings", () => {
+  const record = anchorRecord(seeds[0], registry);
+  record.id = "exploration-schema";
+  record.partition = "exploration";
+  record.split = "exploration";
+  record.gold = {
+    target_mode: "exploration",
+    targets: ["template-vocabulary", "template-recipe"],
+    acceptable_target_sets: [],
+    must_abstain: false,
+    exploration: {
+      profile_id: "schema-test",
+      evaluation_k: 3,
+      required_subject_event: "food-language theme",
+      required_information_type: "open visual exploration",
+      target_style_families: {
+        "template-vocabulary": "illustrated-flashcard",
+        "template-recipe": "food-photography",
+      },
+      target_layout_families: {
+        "template-vocabulary": "card-grid",
+        "template-recipe": "recipe-poster",
+      },
+      acceptable_visual_style_families: [
+        "illustrated-flashcard",
+        "food-photography",
+      ],
+    },
+  };
+  assert.equal(validateRecord(record, registry).valid, true);
+  const invalid = structuredClone(record);
+  delete invalid.gold.exploration.target_style_families["template-recipe"];
+  const result = validateRecord(invalid, registry);
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join(" "), /missing target template-recipe/);
+});
+
 test("normalizer aliases IDs and validates rank/score shape", () => {
   const prediction = normalizeRouterOutput({
     queryId: "q1",

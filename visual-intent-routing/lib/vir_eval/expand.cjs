@@ -419,9 +419,9 @@ function challengeVariantSuffix(language, variation) {
   const suffixes = {
     en: [
       "",
-      " Keep it concise for teens.",
-      " Use a vertical 4:5 layout.",
-      " Give it an informal but informative social-media tone.",
+      " For teens; keep it concise.",
+      " Vertical 4:5.",
+      " Social, informative tone.",
     ],
     zh: [
       "",
@@ -431,9 +431,9 @@ function challengeVariantSuffix(language, variation) {
     ],
     mixed: [
       "",
-      " for teens，内容简洁一点。",
-      " 用 vertical 4:5 layout。",
-      " social-friendly 但信息要靠谱。",
+      " teens 向，内容简洁。",
+      " vertical 4:5。",
+      " social-friendly，信息靠谱。",
     ],
   };
   return suffixes[language][variation % suffixes[language].length];
@@ -451,9 +451,9 @@ function renderAmbiguous(a, b, index, language, variation = 0) {
     return `想做${scenario.zh}，可以偏${a.generation_profile.artifacts_zh[0]}，也可以按${b.generation_profile.artifacts_zh[0]}来呈现，重点还没定。${challengeVariantSuffix(language, variation)}`.trim();
   }
   if (language === "mixed") {
-    return `${scenario.zh} / ${scenario.en}，could be ${withIndefiniteArticle(aa)} or ${withIndefiniteArticle(ba)}，重点未定 pls。${challengeVariantSuffix(language, variation)}`.trim();
+    return `${scenario.zh} / ${scenario.en}：${aa} or ${ba}，重点未定。${challengeVariantSuffix(language, variation)}`.trim();
   }
-  return `Make ${scenario.en}; either ${withIndefiniteArticle(aa)} or ${withIndefiniteArticle(ba)} could fit because the emphasis is not settled.${challengeVariantSuffix(language, variation)}`.trim();
+  return `${scenario.en}. Choose ${withIndefiniteArticle(aa)} or ${withIndefiniteArticle(ba)}; emphasis open.${challengeVariantSuffix(language, variation)}`.trim();
 }
 
 function renderMulti(
@@ -602,6 +602,129 @@ function generateChallenges({
     );
   }
   return [...ambiguous, ...multi];
+}
+
+function renderExplorationQuery(profile, language, variation) {
+  const suffixes = {
+    en: [
+      "",
+      " Show different options before I choose.",
+      " Keep the core idea consistent.",
+    ],
+    zh: [
+      "",
+      " 先给我看几个真正不同的方向，我再决定。",
+      " 各方向都要保留同一个核心主题。",
+    ],
+    mixed: [
+      "",
+      " 先给我 different directions，我再选。",
+      " Keep the core idea 一致，但表现路径要不同。",
+    ],
+  };
+  const suffix = suffixes[language][variation % suffixes[language].length];
+  if (language === "zh") {
+    return `围绕${profile.concept_zh}探索三个不同的视觉方向，先不要固定成一种风格。${suffix}`.trim();
+  }
+  if (language === "mixed") {
+    return `围绕${profile.concept_zh}，explore three distinct visual directions，先别锁定一种 style。${suffix}`.trim();
+  }
+  return `Explore three visual directions for ${profile.concept_en}. Vary style and composition.${suffix}`.trim();
+}
+
+function generateExploration({
+  profiles,
+  registry,
+  count,
+  randomSeed,
+  evaluationK = 3,
+}) {
+  if (!Array.isArray(profiles) || !profiles.length) {
+    throw new Error("Exploration profiles must be a non-empty array");
+  }
+  const records = [];
+  for (let index = 0; index < count; index += 1) {
+    const profileIndex = index % profiles.length;
+    const variation = Math.floor(index / profiles.length);
+    const profile = profiles[profileIndex];
+    const language = ["zh", "en", "mixed"][variation % 3];
+    const targets = profile.targets.map((target) => {
+      const canonical = registry.canonicalize(target);
+      if (!canonical) {
+        throw new Error(
+          `Exploration profile ${profile.profile_id} has invalid target ${target}`,
+        );
+      }
+      return canonical;
+    });
+    if (new Set(targets).size < 2) {
+      throw new Error(
+        `Exploration profile ${profile.profile_id} needs at least two targets`,
+      );
+    }
+    const targetStyleFamilies = {};
+    const targetLayoutFamilies = {};
+    for (const target of targets) {
+      const taxonomy = registry.get(target)?.style_taxonomy;
+      if (
+        !taxonomy?.primary_visual_style_family ||
+        !taxonomy?.primary_layout_family
+      ) {
+        throw new Error(
+          `Exploration target ${target} is missing a primary style or layout family`,
+        );
+      }
+      targetStyleFamilies[target] = taxonomy.primary_visual_style_family;
+      targetLayoutFamilies[target] = taxonomy.primary_layout_family;
+    }
+    const styles = [...new Set(Object.values(targetStyleFamilies))];
+    if (styles.length < 2) {
+      throw new Error(
+        `Exploration profile ${profile.profile_id} needs at least two style families`,
+      );
+    }
+    const record = makeRecord({
+      id: `vir-v2-exploration-${String(index + 1).padStart(3, "0")}`,
+      seed: null,
+      clusterId: `vir-v2-exploration-${profile.profile_id}`,
+      partition: "exploration",
+      query: renderExplorationQuery(profile, language, variation),
+      language,
+      difficulty: language === "mixed" ? "high" : "medium",
+      transformations: [
+        "open_ended_exploration",
+        "multiple_visual_directions",
+        language === "mixed" ? "code_switch" : "style_unspecified",
+      ],
+      ontology: {
+        subject_event: profile.required_subject_event,
+        information_type: profile.required_information_type,
+        style_layout: "multiple relevant visual directions without a fixed style",
+      },
+      gold: {
+        target_mode: "exploration",
+        targets,
+        acceptable_target_sets: [],
+        must_abstain: false,
+        exploration: {
+          profile_id: profile.profile_id,
+          evaluation_k: evaluationK,
+          required_subject_event: profile.required_subject_event,
+          required_information_type: profile.required_information_type,
+          target_style_families: targetStyleFamilies,
+          target_layout_families: targetLayoutFamilies,
+          acceptable_visual_style_families: styles,
+          rationale: profile.rationale,
+        },
+      },
+      randomSeed,
+      promptVersion: "vir-exploration-profile-v2",
+      generatedAt: FIXED_TIME,
+    });
+    record.subject = profile.subject;
+    records.push(record);
+  }
+  return records;
 }
 
 function loadCachedResponse(cachePath, promptHash) {
@@ -828,6 +951,14 @@ async function expandDataset({
     ...quotas,
     provider: provider ?? config.expansion.provider,
   };
+  const explorationProfiles = loadJson(config.paths.exploration_profiles);
+  const exploration = generateExploration({
+    profiles: explorationProfiles,
+    registry,
+    count: expansion.exploration,
+    randomSeed: config.random_seed,
+    evaluationK: config.metrics.exploration_k,
+  });
   if (expansion.provider === "llm") {
     const basePrompt = fs.readFileSync(
       resolveRoot("benchmarks/vir_v2/prompts/query_expander.md"),
@@ -839,20 +970,31 @@ async function expandDataset({
         core: [],
         contentGap: [],
         challenge: [],
+        exploration: [],
         summary: {
           requested: {
             core: 15 * expansion.core_per_target,
             content_gap: expansion.content_gap,
             ambiguous: expansion.ambiguous,
             multi_intent: expansion.multi_intent,
+            exploration: expansion.exploration,
             total:
               15 * expansion.core_per_target +
               expansion.content_gap +
               expansion.ambiguous +
-              expansion.multi_intent,
+              expansion.multi_intent +
+              expansion.exploration,
           },
-          generated: { core: 0, content_gap: 0, challenge: 0, total: 0 },
+          generated: {
+            core: 0,
+            content_gap: 0,
+            challenge: 0,
+            exploration: 0,
+            total: 0,
+          },
           provider: "llm",
+          exploration_profile_count: explorationProfiles.length,
+          exploration_profiles_sha256: hashObject(explorationProfiles),
           dry_run: true,
           task_count: tasks.length,
           batch_size: expansion.batch_size,
@@ -915,19 +1057,25 @@ Return {"records":[...]} and include query, language, difficulty, transformation
         content_gap: expansion.content_gap,
         ambiguous: expansion.ambiguous,
         multi_intent: expansion.multi_intent,
+        exploration: expansion.exploration,
         total:
           15 * expansion.core_per_target +
           expansion.content_gap +
           expansion.ambiguous +
-          expansion.multi_intent,
+          expansion.multi_intent +
+          expansion.exploration,
       },
       generated: {
         core: core.length,
         content_gap: contentGap.length,
         challenge: challenge.length,
-        total: imported.length,
+        exploration: exploration.length,
+        total: imported.length + exploration.length,
       },
       provider: "llm",
+      exploration_provider: "rule-profile",
+      exploration_profile_count: explorationProfiles.length,
+      exploration_profiles_sha256: hashObject(explorationProfiles),
       random_seed: config.random_seed,
       task_count: tasks.length,
       batch_size: expansion.batch_size,
@@ -942,11 +1090,15 @@ Return {"records":[...]} and include query, language, difficulty, transformation
       path.join(config.paths.candidate_dir, "challenge.jsonl"),
       challenge,
     );
+    writeJsonl(
+      path.join(config.paths.candidate_dir, "exploration.jsonl"),
+      exploration,
+    );
     writeJson(
       path.join(config.paths.manifest_dir, "expansion_summary.json"),
       summary,
     );
-    return { core, contentGap, challenge, summary };
+    return { core, contentGap, challenge, exploration, summary };
   }
   const positive = generateCore({
     seeds,
@@ -972,19 +1124,29 @@ Return {"records":[...]} and include query, language, difficulty, transformation
       content_gap: expansion.content_gap,
       ambiguous: expansion.ambiguous,
       multi_intent: expansion.multi_intent,
+      exploration: expansion.exploration,
       total:
         15 * expansion.core_per_target +
         expansion.content_gap +
         expansion.ambiguous +
-        expansion.multi_intent,
+        expansion.multi_intent +
+        expansion.exploration,
     },
     generated: {
       core: positive.length,
       content_gap: contentGap.length,
       challenge: challenge.length,
-      total: positive.length + contentGap.length + challenge.length,
+      exploration: exploration.length,
+      total:
+        positive.length +
+        contentGap.length +
+        challenge.length +
+        exploration.length,
     },
     provider: "rule",
+    exploration_provider: "rule-profile",
+    exploration_profile_count: explorationProfiles.length,
+    exploration_profiles_sha256: hashObject(explorationProfiles),
     random_seed: config.random_seed,
     dry_run: dryRun,
   };
@@ -998,12 +1160,16 @@ Return {"records":[...]} and include query, language, difficulty, transformation
       path.join(config.paths.candidate_dir, "challenge.jsonl"),
       challenge,
     );
+    writeJsonl(
+      path.join(config.paths.candidate_dir, "exploration.jsonl"),
+      exploration,
+    );
     writeJson(
       path.join(config.paths.manifest_dir, "expansion_summary.json"),
       summary,
     );
   }
-  return { core: positive, contentGap, challenge, summary };
+  return { core: positive, contentGap, challenge, exploration, summary };
 }
 
 module.exports = {
@@ -1016,9 +1182,11 @@ module.exports = {
   generateChallenges,
   generateContentGap,
   generateCore,
+  generateExploration,
   importLlmTaskRecords,
   loadCachedResponse,
   renderCoreQuery,
+  renderExplorationQuery,
   challengeVariantSuffix,
   withIndefiniteArticle,
 };

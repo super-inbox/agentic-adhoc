@@ -96,3 +96,58 @@ test("cluster-aware split keeps variants together and audits leakage", () => {
     1,
   );
 });
+
+test("exploration records stay in a separate split and cannot change dev/test", () => {
+  const core = [
+    candidate(0, "core-a", "English Spanish fruit vocabulary cards", "a"),
+    candidate(0, "core-b", "English Korean weather vocabulary", "b"),
+  ];
+  const exploration = candidate(
+    0,
+    "exploration-a",
+    "Explore several directions for a language-learning food story",
+    "exploration-cluster",
+  );
+  exploration.partition = "exploration";
+  exploration.gold = {
+    target_mode: "exploration",
+    targets: ["template-vocabulary", "template-recipe"],
+    acceptable_target_sets: [],
+    must_abstain: false,
+    exploration: {
+      profile_id: "split-test",
+      evaluation_k: 3,
+      required_subject_event: "language and food",
+      required_information_type: "open exploration",
+      target_style_families: {
+        "template-vocabulary": "illustrated-flashcard",
+        "template-recipe": "food-photography",
+      },
+      target_layout_families: {
+        "template-vocabulary": "card-grid",
+        "template-recipe": "recipe-poster",
+      },
+      acceptable_visual_style_families: [
+        "illustrated-flashcard",
+        "food-photography",
+      ],
+    },
+  };
+  for (const record of [...core, exploration]) {
+    record.validation.status = "auto_accepted";
+  }
+  const withoutExploration = splitRecords(core, {
+    seed: 1234,
+    devFraction: 0.5,
+    threshold: 0.9,
+  });
+  const withExploration = splitRecords([...core, exploration], {
+    seed: 1234,
+    devFraction: 0.5,
+    threshold: 0.9,
+  });
+  assert.deepEqual(withExploration.dev, withoutExploration.dev);
+  assert.deepEqual(withExploration.test, withoutExploration.test);
+  assert.equal(withExploration.exploration.length, 1);
+  assert.equal(withExploration.exploration[0].split, "exploration");
+});

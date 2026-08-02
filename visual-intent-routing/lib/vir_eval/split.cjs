@@ -90,7 +90,7 @@ function componentBucket(component) {
 function splitRecords(records, { seed = 1234, devFraction = 0.5, threshold = 0.88 } = {}) {
   const eligible = records.filter(
     (record) =>
-      record.partition !== "challenge" &&
+      !["challenge", "exploration"].includes(record.partition) &&
       record.validation.status !== "rejected",
   );
   const challenges = records
@@ -100,6 +100,13 @@ function splitRecords(records, { seed = 1234, devFraction = 0.5, threshold = 0.8
         record.validation.status !== "rejected",
     )
     .map((record) => ({ ...record, split: "challenge" }));
+  const exploration = records
+    .filter(
+      (record) =>
+        record.partition === "exploration" &&
+        record.validation.status !== "rejected",
+    )
+    .map((record) => ({ ...record, split: "exploration" }));
   const components = buildLeakageComponents(eligible, threshold);
   const buckets = new Map();
   for (const component of components) {
@@ -133,6 +140,7 @@ function splitRecords(records, { seed = 1234, devFraction = 0.5, threshold = 0.8
     dev: dev.sort((a, b) => a.id.localeCompare(b.id)),
     test: test.sort((a, b) => a.id.localeCompare(b.id)),
     challenge: challenges.sort((a, b) => a.id.localeCompare(b.id)),
+    exploration: exploration.sort((a, b) => a.id.localeCompare(b.id)),
     component_count: components.length,
   };
 }
@@ -207,14 +215,19 @@ function createSplits({ config, seeds, registry, records, writeOutputs = true })
     dev: path.join(config.paths.split_dir, "dev.jsonl"),
     test: path.join(config.paths.split_dir, "test.jsonl"),
     challenge: path.join(config.paths.split_dir, "challenge.jsonl"),
+    exploration: path.join(config.paths.split_dir, "exploration.jsonl"),
   };
   if (writeOutputs) {
     writeJsonl(paths.anchor, anchors);
     writeJsonl(paths.dev, result.dev);
     writeJsonl(paths.test, result.test);
     writeJsonl(paths.challenge, result.challenge);
+    writeJsonl(paths.exploration, result.exploration);
   }
   const testBody = result.test.map((record) => JSON.stringify(record)).join("\n");
+  const explorationBody = result.exploration
+    .map((record) => JSON.stringify(record))
+    .join("\n");
   const expansionSummaryPath = resolveRoot(
     path.join(config.paths.manifest_dir, "expansion_summary.json"),
   );
@@ -262,6 +275,7 @@ function createSplits({ config, seeds, registry, records, writeOutputs = true })
       dev: result.dev.length,
       test: result.test.length,
       challenge: result.challenge.length,
+      exploration: result.exploration.length,
     },
     dataset_counts: {
       requested: expansionSummary?.requested?.total ?? null,
@@ -274,11 +288,19 @@ function createSplits({ config, seeds, registry, records, writeOutputs = true })
     distributions: {
       dev: splitDistributions(result.dev),
       test: splitDistributions(result.test),
+      exploration: splitDistributions(result.exploration),
     },
     test_file: paths.test,
     test_file_sha256: writeOutputs
       ? sha256File(paths.test)
       : sha256(testBody ? `${testBody}\n` : ""),
+    exploration_file: paths.exploration,
+    exploration_file_sha256: writeOutputs
+      ? sha256File(paths.exploration)
+      : sha256(explorationBody ? `${explorationBody}\n` : ""),
+    exploration_profiles_sha256: sha256File(
+      config.paths.exploration_profiles,
+    ),
     registry_sha256: hashObject(registry.document),
     post_split_similarity_audit: {
       layer: "character-3gram-jaccard",

@@ -63,6 +63,7 @@ function goldSignature(record) {
       .map((set) => [...set].sort())
       .sort(),
     abstain: record.gold.must_abstain,
+    exploration: record.gold.exploration ?? null,
   });
 }
 
@@ -191,6 +192,7 @@ function reviewRow(record, issues, contentCollision) {
     target_mode: record.gold.target_mode,
     targets: record.gold.targets,
     acceptable_target_sets: record.gold.acceptable_target_sets,
+    exploration: record.gold.exploration ?? null,
     validation_status: record.validation.status,
     deterministic_issues: issues,
     catalog_collision: contentCollision ?? null,
@@ -278,6 +280,7 @@ function validateDataset({
   const leakedTemplateIds = [];
   const languageWarnings = [];
   const contradictoryAnnotations = [];
+  const explorationTaxonomyConflicts = [];
 
   for (const record of records) {
     const schema = validateRecord(record, registry);
@@ -303,6 +306,34 @@ function validateDataset({
     if (languageWarning) {
       languageWarnings.push({ id: record.id, warning: languageWarning });
       recordIssues.get(record.id).push(languageWarning);
+    }
+    if (record.gold?.target_mode === "exploration") {
+      for (const target of record.gold.targets ?? []) {
+        const taxonomy = registry.get(target)?.style_taxonomy;
+        const expectedStyle = taxonomy?.primary_visual_style_family;
+        const expectedLayout = taxonomy?.primary_layout_family;
+        const actualStyle =
+          record.gold.exploration?.target_style_families?.[target];
+        const actualLayout =
+          record.gold.exploration?.target_layout_families?.[target];
+        if (
+          actualStyle !== expectedStyle ||
+          actualLayout !== expectedLayout
+        ) {
+          const conflict = {
+            id: record.id,
+            target,
+            expected_style: expectedStyle ?? null,
+            actual_style: actualStyle ?? null,
+            expected_layout: expectedLayout ?? null,
+            actual_layout: actualLayout ?? null,
+          };
+          explorationTaxonomyConflicts.push(conflict);
+          recordIssues
+            .get(record.id)
+            .push(`exploration taxonomy mismatch for ${target}`);
+        }
+      }
     }
   }
 
@@ -395,7 +426,7 @@ function validateDataset({
       schemaErrors.some((error) => error.id === record.id) ||
       duplicateIds.includes(record.id) ||
       issues.some((issue) =>
-        /leaks internal|exact duplicate|normalized duplicate|contradictory/.test(
+        /leaks internal|exact duplicate|normalized duplicate|contradictory|exploration taxonomy mismatch/.test(
           issue,
         ),
       );
@@ -435,6 +466,7 @@ function validateDataset({
       exactDuplicates.length === 0 &&
       normalizedDuplicates.length === 0 &&
       contradictoryAnnotations.length === 0 &&
+      explorationTaxonomyConflicts.length === 0 &&
       leakedTemplateIds.length === 0,
     record_count: records.length,
     status_counts: statuses,
@@ -446,6 +478,7 @@ function validateDataset({
     language_warnings: languageWarnings,
     leaked_template_ids: leakedTemplateIds,
     contradictory_annotations: contradictoryAnnotations,
+    exploration_taxonomy_conflicts: explorationTaxonomyConflicts,
     content_gap_collisions: gapCollisions.filter(
       (collision) => collision.warning,
     ),
@@ -488,6 +521,9 @@ function validateDataset({
         (record) => record.partition === "content_gap",
       ),
       challenge: records.filter((record) => record.partition === "challenge"),
+      exploration: records.filter(
+        (record) => record.partition === "exploration",
+      ),
     };
     for (const [name, rows] of Object.entries(groups)) {
       writeJsonl(path.join(config.paths.validated_dir, `${name}.jsonl`), rows);
@@ -516,6 +552,7 @@ function validateDataset({
         "target_mode",
         "targets",
         "acceptable_target_sets",
+        "exploration",
         "validation_status",
         "deterministic_issues",
         "catalog_collision",

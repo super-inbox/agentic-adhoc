@@ -25,6 +25,7 @@ const REQUIRED_FIELDS = [
   "neighboring_templates",
   "evidence_paths",
   "ontology",
+  "style_taxonomy",
 ];
 
 class CapabilityRegistry {
@@ -160,6 +161,44 @@ function validateRegistry(registry) {
     }
     if (!entry.uncertainty) {
       warnings.push(`${entry.canonical_id}: no uncertainty note`);
+    }
+    const taxonomy = entry.style_taxonomy ?? {};
+    for (const field of [
+      "primary_visual_style_family",
+      "primary_layout_family",
+    ]) {
+      if (typeof taxonomy[field] !== "string" || !taxonomy[field]) {
+        errors.push(`${entry.canonical_id}: invalid style_taxonomy.${field}`);
+      }
+    }
+    for (const field of ["visual_style_families", "layout_families"]) {
+      if (
+        !Array.isArray(taxonomy[field]) ||
+        !taxonomy[field].length ||
+        taxonomy[field].some(
+          (value) => typeof value !== "string" || !value,
+        )
+      ) {
+        errors.push(`${entry.canonical_id}: invalid style_taxonomy.${field}`);
+      }
+    }
+    if (
+      Array.isArray(taxonomy.visual_style_families) &&
+      !taxonomy.visual_style_families.includes(
+        taxonomy.primary_visual_style_family,
+      )
+    ) {
+      errors.push(
+        `${entry.canonical_id}: primary visual style is missing from visual_style_families`,
+      );
+    }
+    if (
+      Array.isArray(taxonomy.layout_families) &&
+      !taxonomy.layout_families.includes(taxonomy.primary_layout_family)
+    ) {
+      errors.push(
+        `${entry.canonical_id}: primary layout is missing from layout_families`,
+      );
     }
   }
   return {

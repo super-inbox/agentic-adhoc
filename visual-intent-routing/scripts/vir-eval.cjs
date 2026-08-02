@@ -72,13 +72,13 @@ function context(options) {
 }
 
 function loadCandidateRecords(config) {
-  return ["core", "content_gap", "challenge"].flatMap((name) =>
+  return ["core", "content_gap", "challenge", "exploration"].flatMap((name) =>
     readJsonl(path.join(config.paths.candidate_dir, `${name}.jsonl`)),
   );
 }
 
 function loadValidatedRecords(config) {
-  return ["core", "content_gap", "challenge"].flatMap((name) =>
+  return ["core", "content_gap", "challenge", "exploration"].flatMap((name) =>
     readJsonl(path.join(config.paths.validated_dir, `${name}.jsonl`)),
   );
 }
@@ -105,6 +105,7 @@ function expansionOverrides(options) {
     ["content_gap", "content_gap"],
     ["ambiguous", "ambiguous"],
     ["multi_intent", "multi_intent"],
+    ["exploration", "exploration"],
   ]) {
     if (options[option] !== undefined) output[field] = Number(options[option]);
   }
@@ -114,6 +115,7 @@ function expansionOverrides(options) {
 function inspectStage({ config, seeds, registry }) {
   const catalog = loadJson(config.paths.catalog);
   const kb = loadJson(config.paths.capability_kb);
+  const explorationProfiles = loadJson(config.paths.exploration_profiles);
   const gapAudit = config.paths.full_catalog_gap_audit
     ? loadJson(config.paths.full_catalog_gap_audit)
     : null;
@@ -130,6 +132,13 @@ function inspectStage({ config, seeds, registry }) {
     abstention_anchor_count: seeds.filter((seed) => !seed.gold_targets.length)
       .length,
     registry_template_count: registry.templates.length,
+    exploration: {
+      profile_count: explorationProfiles.length,
+      default_query_count: config.expansion.exploration,
+      evaluation_k: config.metrics.exploration_k,
+      headline_metric: "Relevant Effective Style Count@K",
+      excluded_from_primary_core_accuracy: true,
+    },
     registry_validation: validation,
     frozen_catalog: {
       template_count: catalog.length,
@@ -253,6 +262,9 @@ async function validateStage(ctx, options = {}) {
       challenge: result.records.filter(
         (record) => record.partition === "challenge",
       ),
+      exploration: result.records.filter(
+        (record) => record.partition === "exploration",
+      ),
     })) {
       writeJsonl(
         path.join(ctx.config.paths.validated_dir, `${name}.jsonl`),
@@ -343,6 +355,39 @@ function scoreStage(ctx) {
     path.join(ctx.config.paths.report_dir, "slice_metrics.json"),
     score.sliceMetrics,
   );
+  writeJson(
+    path.join(ctx.config.paths.report_dir, "exploration_metrics.json"),
+    {
+      summary: score.metrics.exploration,
+      records: score.explorationRows,
+    },
+  );
+  writeCsv(
+    path.join(ctx.config.paths.report_dir, "exploration_metrics.csv"),
+    [
+      "id",
+      "query",
+      "language",
+      "difficulty",
+      "semantic_cluster_id",
+      "profile_id",
+      "evaluation_k",
+      "returned_count",
+      "relevant_count",
+      "relevance_at_k",
+      "distinct_relevant_style_count",
+      "distinct_relevant_layout_count",
+      "style_entropy_nats",
+      "effective_style_count",
+      "relevant_effective_style_count",
+      "relevant_template_ids",
+      "predicted_template_ids",
+      "style_distribution",
+      "layout_distribution",
+      "abstained",
+    ],
+    score.explorationRows,
+  );
   writeCsv(
     path.join(ctx.config.paths.report_dir, "metrics.csv"),
     ["metric", "value"],
@@ -357,6 +402,9 @@ function scoreStage(ctx) {
           score.metrics.primary_core.overall_exact_accuracy_including_no_match
             .value,
         abstention_f1: score.metrics.content_gap.abstention_f1,
+        exploration_k: score.metrics.exploration.evaluation_k,
+        relevant_effective_style_count_at_k:
+          score.metrics.exploration.relevant_effective_style_count_at_k.value,
         errors: score.errors.length,
       },
       null,
@@ -446,7 +494,7 @@ Commands:
   build-registry   Validate the evidence-grounded registry
   expand           Build deterministic candidates (or --provider=llm)
   validate         Run schema, collision, duplicate, and Gold-quality checks
-  split            Create anchor/dev/test/challenge with leakage audit
+  split            Create anchor/dev/test/challenge/exploration splits
   run              Run --adapter=mock|http|cli|module and normalize outputs
   score            Compute deterministic metrics
   report           Generate machine-readable and human-readable reports
@@ -455,7 +503,8 @@ Commands:
 
 Useful options:
   --dry-run --no-resume --core-per-target=30 --content-gap=80
-  --ambiguous=60 --multi-intent=60 --abstention-threshold=0.1
+  --ambiguous=60 --multi-intent=60 --exploration=30
+  --abstention-threshold=0.1
   --llm-validator [--validator-model=gpt-4o-mini] [--limit=20]
   --url=http://localhost:3000/api/search-template-match
   --command=python --command-args='["router.py"]'

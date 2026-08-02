@@ -26,14 +26,23 @@ function flattenNumeric(value, prefix = "", output = []) {
 function formatMetric(value) {
   if (value === null || value === undefined) return "n/a";
   if (typeof value === "object" && "value" in value) {
-    const percent =
-      value.value === null ? "n/a" : `${(value.value * 100).toFixed(2)}%`;
-    if (value.interval?.lower !== null) {
-      return `${percent} (95% CI ${(value.interval.lower * 100).toFixed(
-        2,
-      )}–${(value.interval.upper * 100).toFixed(2)}; n=${value.total})`;
+    const countUnit = value.unit && value.unit !== "ratio";
+    const formatted =
+      value.value === null
+        ? "n/a"
+        : countUnit
+          ? `${value.value.toFixed(3)} ${value.unit}`
+          : `${(value.value * 100).toFixed(2)}%`;
+    if (value.interval && value.interval.lower !== null) {
+      const lower = countUnit
+        ? value.interval.lower.toFixed(3)
+        : `${(value.interval.lower * 100).toFixed(2)}%`;
+      const upper = countUnit
+        ? value.interval.upper.toFixed(3)
+        : `${(value.interval.upper * 100).toFixed(2)}%`;
+      return `${formatted} (${value.interval.confidence * 100}% CI ${lower}–${upper}; n=${value.total})`;
     }
-    return percent;
+    return formatted;
   }
   if (typeof value === "number") return value.toFixed(4);
   return String(value);
@@ -113,6 +122,11 @@ function renderReport({
   const pending = records.filter(
     (record) => record.validation.status === "needs_review",
   ).length;
+  const pendingExploration = records.filter(
+    (record) =>
+      record.partition === "exploration" &&
+      record.validation.status === "needs_review",
+  ).length;
   const lines = [
     "# Visual Intent Routing v2 evaluation report",
     "",
@@ -123,6 +137,7 @@ function renderReport({
     `- Records evaluated: ${records.length}`,
     `- Run configuration hash: \`${runMetadata.configuration_hash}\``,
     `- Locked test SHA256: \`${benchmarkManifest.test_file_sha256}\``,
+    `- Exploration split SHA256: \`${benchmarkManifest.exploration_file_sha256 ?? "n/a"}\``,
     `- Registry version: \`${benchmarkManifest.template_registry_version}\``,
     "",
     "This report evaluates query-to-template routing only. It does not judge generated-image quality.",
@@ -135,6 +150,7 @@ function renderReport({
     `- Needs review: ${benchmarkManifest.dataset_counts?.needs_review ?? 0}`,
     `- Auto-accepted: ${benchmarkManifest.dataset_counts?.auto_accepted ?? 0}`,
     `- Manually approved anchors: ${benchmarkManifest.dataset_counts?.manually_approved ?? 0}`,
+    `- Exploration split: ${benchmarkManifest.counts?.exploration ?? 0}`,
     "",
     distributionTable(validation.distributions),
     "",
@@ -146,6 +162,7 @@ function renderReport({
     `- Auto-accepted (not human-approved): ${validation.status_counts.auto_accepted ?? 0}`,
     `- Near-duplicate pairs: ${validation.near_duplicates.length}`,
     `- Content-gap catalog-collision warnings: ${validation.content_gap_collisions.length}`,
+    `- Exploration taxonomy conflicts: ${validation.exploration_taxonomy_conflicts?.length ?? 0}`,
     `- Full-catalog gap audit: ${validation.full_catalog_gap_audit?.audit_version ?? "not supplied"} (${validation.full_catalog_gap_audit?.source_template_count ?? "n/a"} templates; ${validation.full_catalog_gap_audit?.unaudited_record_ids?.length ?? "n/a"} unaudited records)`,
     `- Balance warnings: ${validation.balance_warnings.join("; ") || "none"}`,
     "",
@@ -256,7 +273,33 @@ function renderReport({
     "",
     "Challenge results are excluded from primary core accuracy.",
     "",
-    "## 13. Latency and system failures",
+    "## 13. Style exploration",
+    "",
+    `- Relevant Effective Style Count@${metrics.exploration.evaluation_k}: ${formatMetric(
+      metrics.exploration.relevant_effective_style_count_at_k,
+    )}`,
+    `- Mean relevance@${metrics.exploration.evaluation_k}: ${formatMetric(
+      metrics.exploration.mean_relevance_at_k,
+    )}`,
+    `- Distinct relevant style families: ${formatMetric(
+      metrics.exploration.mean_distinct_relevant_style_count,
+    )}`,
+    `- Distinct relevant layout families: ${formatMetric(
+      metrics.exploration.mean_distinct_relevant_layout_count,
+    )}`,
+    `- Normalized exploration score: ${formatMetric(
+      metrics.exploration.normalized_style_exploration_score,
+    )}`,
+    `- Exploration abstention rate: ${formatMetric(
+      metrics.exploration.abstention_rate,
+    )}`,
+    `- Exploration records awaiting human review: ${pendingExploration}/${metrics.exploration.count}`,
+    "",
+    `Formula: \`${metrics.exploration.formula}\``,
+    "",
+    "This is a capability-registry routing proxy: it measures whether the router exposes multiple relevant template/style directions. It does not measure pixel-level diversity or final-image quality. Exploration records are excluded from primary core accuracy; compare two runs to obtain Style Exploration Lift@K.",
+    "",
+    "## 14. Latency and system failures",
     "",
     `- Mean / median latency: ${formatMetric(
       metrics.system.latency_mean_ms,
@@ -267,15 +310,16 @@ function renderReport({
     `- Error rate: ${formatMetric(metrics.system.error_rate)}`,
     `- Retry rate: ${formatMetric(metrics.system.retry_rate)}`,
     "",
-    "## 14. Limitations",
+    "## 15. Limitations",
     "",
     "- The committed pilot uses a deterministic lexical mock over the capability registry; it is plumbing validation, not a production-quality baseline.",
     "- Generated candidate annotations have not received independent human approval.",
     "- Character n-gram similarity is a reproducible fallback, not a semantic embedding model.",
     "- Current text-only routing treats reference-image ID-photo work as out of scope.",
     "- Confidence calibration metrics are only meaningful for adapters returning valid scores.",
+    "- Style families are evidence-grounded registry annotations and still require human review; they are coarser than perceptual image style.",
     "",
-    "## 15. Records awaiting human review",
+    "## 16. Records awaiting human review",
     "",
     `${pending} records remain in \`review_queue.csv\` / \`review_queue.jsonl\`. Auto-accepted records are still distinguishable from the 16 manually approved anchors.`,
     "",
@@ -356,6 +400,7 @@ function generateReports({
       "dimension",
       "value",
       "count",
+      "scorable_count",
       "correct",
       "exact_accuracy",
       "ci_lower",
@@ -366,6 +411,39 @@ function generateReports({
     score.sliceMetrics,
   );
   writeJson(path.join(reportDir, "slice_metrics.json"), score.sliceMetrics);
+  writeJson(
+    path.join(reportDir, "exploration_metrics.json"),
+    {
+      summary: score.metrics.exploration,
+      records: score.explorationRows,
+    },
+  );
+  writeCsv(
+    path.join(reportDir, "exploration_metrics.csv"),
+    [
+      "id",
+      "query",
+      "language",
+      "difficulty",
+      "semantic_cluster_id",
+      "profile_id",
+      "evaluation_k",
+      "returned_count",
+      "relevant_count",
+      "relevance_at_k",
+      "distinct_relevant_style_count",
+      "distinct_relevant_layout_count",
+      "style_entropy_nats",
+      "effective_style_count",
+      "relevant_effective_style_count",
+      "relevant_template_ids",
+      "predicted_template_ids",
+      "style_distribution",
+      "layout_distribution",
+      "abstained",
+    ],
+    score.explorationRows,
+  );
   writeJson(path.join(reportDir, "dataset_validation.json"), validation);
   writeJson(path.join(reportDir, "benchmark_manifest.json"), benchmarkManifest);
   writeJson(path.join(reportDir, "run_metadata.json"), runMetadata);

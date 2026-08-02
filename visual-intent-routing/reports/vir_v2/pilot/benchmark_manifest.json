@@ -1,6 +1,6 @@
 {
   "benchmark_version": "vir-v2",
-  "template_registry_version": "vir-capabilities-2026-07-29",
+  "template_registry_version": "vir-capabilities-2026-07-29-exploration-v1",
   "created_at": "2026-07-29T00:00:00.000Z",
   "random_seed": 1234,
   "creation_configuration": {
@@ -10,6 +10,7 @@
       "content_gap": 80,
       "ambiguous": 60,
       "multi_intent": 60,
+      "exploration": 30,
       "languages": {
         "zh": 0.4,
         "en": 0.4,
@@ -24,7 +25,7 @@
       "temperature": 0.2,
       "batch_size": 10,
       "max_retries": 3,
-      "prompt_version": "vir-query-expander-v1"
+      "prompt_version": "vir-query-expander-v2"
     },
     "split": {
       "dev_fraction": 0.5,
@@ -35,26 +36,27 @@
       "split_leakage_threshold": 0.88,
       "content_gap_collision_threshold": 0.28,
       "auto_accept_clean_core": true,
-      "validator_prompt_version": "vir-query-validator-v1"
+      "validator_prompt_version": "vir-query-validator-v2"
     },
     "full_catalog_gap_audit": {
       "audit_version": "vir-gap-audit-2026-07-29",
       "source_catalog_sha256": "df2fdda6337f44502147286defa196a58c44286b19aa9df6216c0b608b149586"
     }
   },
-  "creation_configuration_sha256": "970f1ffe91c6d44d44652b6c4b2316014cc1dcbac285e0cde3a071cea42aefb1",
+  "creation_configuration_sha256": "a9cb0e81448725084ddd3993d6902ebbed9650f90d0a7a6000812db3fad9d622",
   "locked_test": true,
   "counts": {
     "anchor": 16,
     "dev": 265,
     "test": 265,
-    "challenge": 120
+    "challenge": 120,
+    "exploration": 30
   },
   "dataset_counts": {
-    "requested": 650,
-    "generated": 650,
+    "requested": 680,
+    "generated": 680,
     "rejected": 0,
-    "needs_review": 350,
+    "needs_review": 380,
     "auto_accepted": 300,
     "manually_approved": 16
   },
@@ -154,11 +156,47 @@
         "clean": 20,
         "noisy": 20
       }
+    },
+    "exploration": {
+      "target": {
+        "template-species-science": 6,
+        "template-education-card": 18,
+        "template-lifestyle-watercolor-infographic": 12,
+        "template-intangible-heritage": 6,
+        "template-travel": 6,
+        "template-interior-design-mood-board-generator": 12,
+        "template-product-poster": 3,
+        "template-fandom-character-grid-poster": 6,
+        "template-mbti-generic": 3,
+        "template-mbti-personality-compatibility-infographic": 3,
+        "template-english-grammar-wordlist-infographic": 3,
+        "template-vocabulary": 6,
+        "template-recipe": 3,
+        "template-fashion-inspired-gown-design-sheet": 3
+      },
+      "language": {
+        "zh": 10,
+        "en": 10,
+        "mixed": 10
+      },
+      "difficulty": {
+        "medium": 20,
+        "high": 10
+      },
+      "transformation_type": {
+        "open_ended_exploration": 30,
+        "multiple_visual_directions": 30,
+        "style_unspecified": 20,
+        "code_switch": 10
+      }
     }
   },
   "test_file": "benchmarks/vir_v2/data/splits/test.jsonl",
   "test_file_sha256": "8850de17ebf2dd02ad540e57ff7687307979319bce3a81137b725f88b057a687",
-  "registry_sha256": "45d7519968790291d984b650061fa0389dd91f1b238e3dfcdd403a558ce0563d",
+  "exploration_file": "benchmarks/vir_v2/data/splits/exploration.jsonl",
+  "exploration_file_sha256": "fddf895870376a5d380a87cc346803307d1e7b97398d79e5f363ad102af3b63c",
+  "exploration_profiles_sha256": "98381876e0e9e3afe403e718bc78dc5609314b811e6a8e9bf3fa4941c38e964e",
+  "registry_sha256": "84923cf3d24367f8b464fe874504e2e26d4233bcef206b1c7dc54ebcf21b3350",
   "post_split_similarity_audit": {
     "layer": "character-3gram-jaccard",
     "threshold": 0.88,

@@ -62,7 +62,10 @@ async function runRouter({
   };
 }
 
-function loadRunRecords(config, splits = ["anchor", "dev", "test", "challenge"]) {
+function loadRunRecords(
+  config,
+  splits = ["anchor", "dev", "test", "challenge", "exploration"],
+) {
   return splits.flatMap((split) =>
     readJsonl(path.join(config.paths.split_dir, `${split}.jsonl`)),
   );

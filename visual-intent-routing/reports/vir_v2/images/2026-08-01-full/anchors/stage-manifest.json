@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-01-full",
+  "stage": "anchors",
+  "prepared_at": "2026-08-02T14:10:32.722Z",
+  "record_count": 16,
+  "record_ids_sha256": "fbbc54d8153b782df4d537cd613ac996a841ed845d2cb958dede899b719f8ab8",
+  "image_model": "gpt-image-2",
+  "generation_config": {
+    "size": "auto",
+    "quality": "medium",
+    "output_format": "jpeg",
+    "output_compression": 90,
+    "same_image_backend_for_both_systems": true
+  },
+  "gpt_direct": {
+    "total_jobs": 16,
+    "pending_jobs": 0,
+    "input": "reports/vir_v2/images/2026-08-01-full/anchors/gpt-direct-pending.jsonl",
+    "output_dir": "reports/vir_v2/images/2026-08-01-full/anchors/gpt-direct",
+    "total": 16,
+    "completed": 16,
+    "pending": 0,
+    "bytes": 4124909
+  },
+  "curify": {
+    "plan_completed": 15,
+    "plan_abstained": 1,
+    "plan_failed": 0,
+    "total_jobs": 15,
+    "pending_jobs": 1,
+    "omissions": [
+      {
+        "query_id": "vir-v2-anchor-vir-s16",
+        "status": "abstained",
+        "reason": "证件照需要上传本人照片，当前搜索页仅支持无需参考图的直接生成。"
+      }
+    ],
+    "input": "reports/vir_v2/images/2026-08-01-full/anchors/curify-pending.jsonl",
+    "output_dir": "reports/vir_v2/images/2026-08-01-full/anchors/curify",
+    "total": 15,
+    "completed": 14,
+    "pending": 1,
+    "bytes": 5442673
+  },
+  "paired_generation": {
+    "pending_jobs": 1,
+    "input": "reports/vir_v2/images/2026-08-01-full/anchors/paired-pending.jsonl",
+    "output_dir": "reports/vir_v2/images/2026-08-01-full/anchors"
+  },
+  "finalized_at": "2026-08-02T14:39:32.578Z",
+  "execution_logs": {
+    "gpt_direct": null,
+    "curify": {
+      "path": "reports/vir_v2/images/2026-08-01-full/anchors/curify-imagegen.log",
+      "completed_attempts": 0,
+      "moderation_blocked": 0,
+      "billing_hard_limit_reached": 0,
+      "last_exit_code": 0
+    }
+  },
+  "blocking_error": null,
+  "gallery": "reports/vir_v2/images/2026-08-01-full/anchors/gallery.html"
+}

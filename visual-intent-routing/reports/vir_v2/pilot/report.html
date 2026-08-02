@@ -4,49 +4,52 @@
 <br>
 - Benchmark: <code>vir-v2</code><br>
 - Router adapter: <code>mock-capability-lexical</code><br>
-- Records evaluated: 666<br>
-- Run configuration hash: <code>bea6d02d1ce5b27b1c256f365e01b039a603665df31f7cc8c31210137b5f510e</code><br>
+- Records evaluated: 696<br>
+- Run configuration hash: <code>f808ae9cd4416d2653e67d8478274cb08522f279d91270a758c59f2ef6a84649</code><br>
 - Locked test SHA256: <code>8850de17ebf2dd02ad540e57ff7687307979319bce3a81137b725f88b057a687</code><br>
-- Registry version: <code>vir-capabilities-2026-07-29</code><br>
+- Exploration split SHA256: <code>fddf895870376a5d380a87cc346803307d1e7b97398d79e5f363ad102af3b63c</code><br>
+- Registry version: <code>vir-capabilities-2026-07-29-exploration-v1</code><br>
 <br>
 This report evaluates query-to-template routing only. It does not judge generated-image quality.<br>
 <br>
 <h2>2. Dataset counts and distributions</h2><br>
 <br>
-- Requested candidates: 650<br>
-- Generated candidates: 650<br>
+- Requested candidates: 680<br>
+- Generated candidates: 680<br>
 - Rejected: 0<br>
-- Needs review: 350<br>
+- Needs review: 380<br>
 - Auto-accepted: 300<br>
 - Manually approved anchors: 16<br>
+- Exploration split: 30<br>
 <br>
 | Dimension | Value | Count |<br>
 |---|---|---:|<br>
 | partition | core | 450 |<br>
 | partition | content_gap | 80 |<br>
 | partition | challenge | 120 |<br>
-| target | template-vocabulary | 49 |<br>
-| target | template-english-grammar-wordlist-infographic | 45 |<br>
-| target | template-interior-design-mood-board-generator | 52 |<br>
-| target | template-education-card | 50 |<br>
-| target | template-fandom-character-grid-poster | 49 |<br>
-| target | template-lifestyle-watercolor-infographic | 50 |<br>
-| target | template-travel | 35 |<br>
-| target | template-intangible-heritage | 41 |<br>
-| target | template-recipe | 42 |<br>
-| target | template-mbti-generic | 48 |<br>
-| target | template-species-science | 57 |<br>
+| partition | exploration | 30 |<br>
+| target | template-vocabulary | 55 |<br>
+| target | template-english-grammar-wordlist-infographic | 48 |<br>
+| target | template-interior-design-mood-board-generator | 64 |<br>
+| target | template-education-card | 68 |<br>
+| target | template-fandom-character-grid-poster | 55 |<br>
+| target | template-lifestyle-watercolor-infographic | 62 |<br>
+| target | template-travel | 41 |<br>
+| target | template-intangible-heritage | 47 |<br>
+| target | template-recipe | 45 |<br>
+| target | template-mbti-generic | 51 |<br>
+| target | template-species-science | 63 |<br>
 | target | template-figure-principles-infographic | 41 |<br>
-| target | template-product-poster | 47 |<br>
-| target | template-fashion-inspired-gown-design-sheet | 30 |<br>
-| target | template-mbti-personality-compatibility-infographic | 42 |<br>
+| target | template-product-poster | 50 |<br>
+| target | template-fashion-inspired-gown-design-sheet | 33 |<br>
+| target | template-mbti-personality-compatibility-infographic | 45 |<br>
 | target | __none__ | 80 |<br>
-| language | zh | 240 |<br>
-| language | en | 260 |<br>
-| language | mixed | 150 |<br>
+| language | zh | 250 |<br>
+| language | en | 270 |<br>
+| language | mixed | 160 |<br>
 | difficulty | low | 170 |<br>
-| difficulty | medium | 190 |<br>
-| difficulty | high | 290 |<br>
+| difficulty | medium | 210 |<br>
+| difficulty | high | 300 |<br>
 | core_target | template-vocabulary | 30 |<br>
 | core_target | template-english-grammar-wordlist-infographic | 30 |<br>
 | core_target | template-interior-design-mood-board-generator | 30 |<br>
@@ -76,7 +79,7 @@ This report evaluates query-to-template routing only. It does not judge generate
 | transformation_type | style_modifier | 75 |<br>
 | transformation_type | aspect_ratio_modifier | 75 |<br>
 | transformation_type | implicit_intent | 150 |<br>
-| transformation_type | code_switch | 90 |<br>
+| transformation_type | code_switch | 100 |<br>
 | transformation_type | layout_modifier | 75 |<br>
 | transformation_type | boundary_nearby | 150 |<br>
 | transformation_type | underspecified | 120 |<br>
@@ -91,27 +94,31 @@ This report evaluates query-to-template routing only. It does not judge generate
 | transformation_type | multi_clause | 40 |<br>
 | transformation_type | paired_artifacts | 48 |<br>
 | transformation_type | supported_plus_unsupported | 12 |<br>
+| transformation_type | open_ended_exploration | 30 |<br>
+| transformation_type | multiple_visual_directions | 30 |<br>
+| transformation_type | style_unspecified | 20 |<br>
 | validation_status | auto_accepted | 300 |<br>
-| validation_status | needs_review | 350 |<br>
+| validation_status | needs_review | 380 |<br>
 <br>
 <h2>3. Validation warnings</h2><br>
 <br>
 - Schema errors: 0<br>
 - Rejected: 0<br>
-- Needs human review: 350<br>
+- Needs human review: 380<br>
 - Auto-accepted (not human-approved): 300<br>
-- Near-duplicate pairs: 28<br>
+- Near-duplicate pairs: 32<br>
 - Content-gap catalog-collision warnings: 0<br>
+- Exploration taxonomy conflicts: 0<br>
 - Full-catalog gap audit: vir-gap-audit-2026-07-29 (332 templates; 0 unaudited records)<br>
 - Balance warnings: none<br>
 <br>
 <h2>4. Primary metrics</h2><br>
 <br>
-- Positive top-1 exact accuracy: 24.30% (95% CI 20.62–28.40; n=465)<br>
+- Positive top-1 exact accuracy: 24.30% (95% CI 20.62%–28.40%; n=465)<br>
 - Macro top-1 across templates: 0.2430<br>
-- Overall exact accuracy including no-match: 35.53% (95% CI 31.63–39.63; n=546)<br>
-- Recall@3: 24.52% (95% CI 20.83–28.62; n=465)<br>
-- Recall@5: 24.52% (95% CI 20.83–28.62; n=465)<br>
+- Overall exact accuracy including no-match: 35.53% (95% CI 31.63%–39.63%; n=546)<br>
+- Recall@3: 24.52% (95% CI 20.83%–28.62%; n=465)<br>
+- Recall@5: 24.52% (95% CI 20.83%–28.62%; n=465)<br>
 - MRR: 0.2441<br>
 <br>
 <h2>5. Content-gap results</h2><br>
@@ -119,8 +126,8 @@ This report evaluates query-to-template routing only. It does not judge generate
 - Abstention precision: 0.1875<br>
 - Abstention recall: 1.0000<br>
 - Abstention F1: 0.3158<br>
-- False-routing rate: 0.00% (95% CI 0.00–4.53; n=81)<br>
-- False-abstention rate: 75.48% (95% CI 71.38–79.17; n=465)<br>
+- False-routing rate: 0.00% (95% CI 0.00%–4.53%; n=81)<br>
+- False-abstention rate: 75.48% (95% CI 71.38%–79.17%; n=465)<br>
 - Match-confidence AUROC / AUPRC: 0.7817 / 0.9550<br>
 <br>
 <h2>6. Robustness</h2><br>
@@ -183,29 +190,44 @@ _None._<br>
 <br>
 <h2>12. Ambiguous and multi-intent challenges</h2><br>
 <br>
-- Ambiguous acceptable-set match: 66.67% (95% CI 54.06–77.27; n=60)<br>
-- Ambiguous abstention: 33.33% (95% CI 22.73–45.94; n=60)<br>
-- Multi exact set match: 0.00% (95% CI 0.00–6.02; n=60)<br>
+- Ambiguous acceptable-set match: 66.67% (95% CI 54.06%–77.27%; n=60)<br>
+- Ambiguous abstention: 33.33% (95% CI 22.73%–45.94%; n=60)<br>
+- Multi exact set match: 0.00% (95% CI 0.00%–6.02%; n=60)<br>
 - Multi set precision / recall / F1: 0.2267 / 0.6000 / 0.3270<br>
 <br>
 Challenge results are excluded from primary core accuracy.<br>
 <br>
-<h2>13. Latency and system failures</h2><br>
+<h2>13. Style exploration</h2><br>
 <br>
-- Mean / median latency: 1.2954 / 1.2760 ms<br>
-- p90 / p95 latency: 1.3925 / 1.4460 ms<br>
+- Relevant Effective Style Count@3: 0.244 effective styles per query (95% CI 0.078–0.422; n=30)<br>
+- Mean relevance@3: 13.33% (95% CI 4.44%–22.81%; n=30)<br>
+- Distinct relevant style families: 0.400 style families per query (95% CI 0.167–0.667; n=30)<br>
+- Distinct relevant layout families: 0.400 layout families per query (95% CI 0.133–0.633; n=30)<br>
+- Normalized exploration score: 8.15% (95% CI 2.40%–14.07%; n=30)<br>
+- Exploration abstention rate: 76.67% (95% CI 59.07%–88.21%; n=30)<br>
+- Exploration records awaiting human review: 30/30<br>
+<br>
+Formula: <code>(relevant predictions / K) × exp(Shannon entropy of relevant style-family distribution)</code><br>
+<br>
+This is a capability-registry routing proxy: it measures whether the router exposes multiple relevant template/style directions. It does not measure pixel-level diversity or final-image quality. Exploration records are excluded from primary core accuracy; compare two runs to obtain Style Exploration Lift@K.<br>
+<br>
+<h2>14. Latency and system failures</h2><br>
+<br>
+- Mean / median latency: 1.3174 / 1.2930 ms<br>
+- p90 / p95 latency: 1.4270 / 1.4988 ms<br>
 - Error rate: 0.0000<br>
 - Retry rate: 0.0000<br>
 <br>
-<h2>14. Limitations</h2><br>
+<h2>15. Limitations</h2><br>
 <br>
 - The committed pilot uses a deterministic lexical mock over the capability registry; it is plumbing validation, not a production-quality baseline.<br>
 - Generated candidate annotations have not received independent human approval.<br>
 - Character n-gram similarity is a reproducible fallback, not a semantic embedding model.<br>
 - Current text-only routing treats reference-image ID-photo work as out of scope.<br>
 - Confidence calibration metrics are only meaningful for adapters returning valid scores.<br>
+- Style families are evidence-grounded registry annotations and still require human review; they are coarser than perceptual image style.<br>
 <br>
-<h2>15. Records awaiting human review</h2><br>
+<h2>16. Records awaiting human review</h2><br>
 <br>
-350 records remain in <code>review_queue.csv</code> / <code>review_queue.jsonl</code>. Auto-accepted records are still distinguishable from the 16 manually approved anchors.<br>
+380 records remain in <code>review_queue.csv</code> / <code>review_queue.jsonl</code>. Auto-accepted records are still distinguishable from the 16 manually approved anchors.<br>
 </body></html>

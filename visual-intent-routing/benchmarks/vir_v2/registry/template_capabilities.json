@@ -1,5 +1,5 @@
 {
-  "registry_version": "vir-capabilities-2026-07-29",
+  "registry_version": "vir-capabilities-2026-07-29-exploration-v1",
   "benchmark_version": "vir-v2",
   "catalog_scope": {
     "catalog": "public/data/nano_templates.json",
@@ -27,6 +27,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-vocabulary", "public/data/nano_templates.json#template-vocabulary", "public/data/nano_inspiration.json#template-vocabulary", "messages/en/nano.json#template-vocabulary"],
       "uncertainty": "Layout varies across the unusually large example family; bilingual term learning is the stable capability boundary.",
       "ontology": {"subject_event": "language vocabulary on a chosen topic", "information_type": "bilingual vocabulary learning", "style_layout": "illustrated card grid or visual guide"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "illustrated-flashcard",
+        "visual_style_families": ["illustrated-flashcard", "classroom-education"],
+        "primary_layout_family": "card-grid",
+        "layout_families": ["card-grid", "visual-guide"]
+      },
       "generation_profile": {
         "artifacts_en": ["bilingual vocabulary poster", "illustrated word-card set", "classroom vocabulary grid"],
         "artifacts_zh": ["双语词汇海报", "插画单词卡组", "课堂词汇九宫格"],
@@ -61,6 +67,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-english-grammar-wordlist-infographic", "public/data/nano_templates.json#template-english-grammar-wordlist-infographic", "public/data/nano_inspiration.json#template-english-grammar-wordlist-infographic", "messages/en/nano.json#template-english-grammar-wordlist-infographic"],
       "uncertainty": "Evidence is strong for homophones/homonyms but limited for grammar topics outside confusing word lists.",
       "ontology": {"subject_event": "English confusing word relationships", "information_type": "definition and distinction", "style_layout": "boxed educational word-list infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "boxed-cartoon-education",
+        "visual_style_families": ["boxed-cartoon-education", "classroom-education"],
+        "primary_layout_family": "boxed-wordlist-infographic",
+        "layout_families": ["boxed-wordlist-infographic", "paired-entry-grid"]
+      },
       "generation_profile": {
         "artifacts_en": ["ESL word-pair infographic", "classroom homophone poster", "boxed confusing-words guide"],
         "artifacts_zh": ["英语易混词信息图", "同音词课堂海报", "英语词对科普卡"],
@@ -95,6 +107,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-interior-design-mood-board-generator", "public/data/nano_templates.json#template-interior-design-mood-board-generator", "public/data/nano_inspiration.json#template-interior-design-mood-board-generator", "messages/en/nano.json#template-interior-design-mood-board-generator"],
       "uncertainty": "The frozen catalog marks the template as requiring an image upload although its text capability is clear; routing is evaluated independently of downstream input collection.",
       "ontology": {"subject_event": "interior space design", "information_type": "style and material inspiration", "style_layout": "interior mood board"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "editorial-material-collage",
+        "visual_style_families": ["editorial-material-collage", "interior-design"],
+        "primary_layout_family": "mood-board",
+        "layout_families": ["mood-board", "material-palette-board"]
+      },
       "generation_profile": {
         "artifacts_en": ["interior mood board", "room palette and material board", "decor concept sheet"],
         "artifacts_zh": ["室内设计情绪板", "空间配色材质板", "家居软装灵感板"],
@@ -129,6 +147,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-education-card", "public/data/nano_templates.json#template-education-card", "public/data/nano_inspiration.json#template-education-card", "messages/en/nano.json#template-education-card"],
       "uncertainty": "This is intentionally broad; a more specialized template should win when the subject and information structure are explicit.",
       "ontology": {"subject_event": "general educational topic", "information_type": "accessible explanation and key facts", "style_layout": "modular 3:4 knowledge card infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "chalkboard-cartoon-education",
+        "visual_style_families": ["chalkboard-cartoon-education", "popular-science"],
+        "primary_layout_family": "knowledge-card",
+        "layout_families": ["knowledge-card", "modular-infographic"]
+      },
       "generation_profile": {
         "artifacts_en": ["popular-science knowledge card", "educational explainer infographic", "cartoon concept card"],
         "artifacts_zh": ["知识科普卡", "教育解释信息图", "卡通知识长图"],
@@ -163,6 +187,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-fandom-character-grid-poster", "public/data/nano_templates.json#template-fandom-character-grid-poster", "public/data/nano_inspiration.json#template-fandom-character-grid-poster", "messages/en/nano.json#template-fandom-character-grid-poster"],
       "uncertainty": "Examples extend beyond fictional fandoms to coherent sports and historical groups; the stable operation is ensemble showcase rather than classification.",
       "ontology": {"subject_event": "fandom or themed character ensemble", "information_type": "character collection and showcase", "style_layout": "vertical cinematic character grid poster"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "cinematic-character-poster",
+        "visual_style_families": ["cinematic-character-poster", "fandom-illustration"],
+        "primary_layout_family": "character-grid",
+        "layout_families": ["character-grid", "ensemble-poster"]
+      },
       "generation_profile": {
         "artifacts_en": ["3x3 fandom character poster", "nine-character cast grid", "cinematic ensemble poster"],
         "artifacts_zh": ["九宫格角色海报", "九人阵容角色墙", "电影感群像海报"],
@@ -197,6 +227,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-lifestyle-watercolor-infographic", "public/data/nano_templates.json#template-lifestyle-watercolor-infographic", "public/data/nano_inspiration.json#template-lifestyle-watercolor-infographic", "messages/en/nano.json#template-lifestyle-watercolor-infographic"],
       "uncertainty": "Search aliases include craft language beyond the six direct examples; those craft boundaries need manual review.",
       "ontology": {"subject_event": "cozy everyday lifestyle", "information_type": "tips, habits, or aesthetic inspiration", "style_layout": "warm watercolor infographic poster"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "warm-watercolor-illustration",
+        "visual_style_families": ["warm-watercolor-illustration", "cozy-lifestyle"],
+        "primary_layout_family": "vignette-infographic",
+        "layout_families": ["vignette-infographic", "lifestyle-poster"]
+      },
       "generation_profile": {
         "artifacts_en": ["cozy watercolor lifestyle guide", "self-care infographic", "illustrated routine poster"],
         "artifacts_zh": ["水彩生活方式指南", "自我关怀信息图", "治愈系日常海报"],
@@ -231,6 +267,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-travel", "public/data/nano_templates.json#template-travel", "public/data/nano_inspiration.json#template-travel", "messages/en/nano.json#template-travel"],
       "uncertainty": "The description specifies Simplified Chinese labels, while examples cover international destinations; output-language flexibility is uncertain.",
       "ontology": {"subject_event": "destination trip", "information_type": "itinerary and route planning", "style_layout": "cute hand-drawn map with daily blocks"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "hand-drawn-watercolor-map",
+        "visual_style_families": ["hand-drawn-watercolor-map", "travel-illustration"],
+        "primary_layout_family": "map-itinerary",
+        "layout_families": ["map-itinerary", "daily-route-blocks"]
+      },
       "generation_profile": {
         "artifacts_en": ["hand-drawn travel itinerary map", "illustrated trip route", "day-by-day destination guide"],
         "artifacts_zh": ["手绘旅行路线图", "插画行程地图", "按天旅行攻略"],
@@ -265,6 +307,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-intangible-heritage", "public/data/nano_templates.json#template-intangible-heritage", "public/data/nano_inspiration.json#template-intangible-heritage", "messages/en/nano.json#template-intangible-heritage"],
       "uncertainty": "The description says Chinese heritage, but an Azulejo example demonstrates at least some non-Chinese traditional-craft coverage.",
       "ontology": {"subject_event": "traditional heritage craft", "information_type": "history, process, meaning, and preservation", "style_layout": "dense A3 heritage information board"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "heritage-editorial-illustration",
+        "visual_style_families": ["heritage-editorial-illustration", "traditional-craft"],
+        "primary_layout_family": "dense-information-board",
+        "layout_families": ["dense-information-board", "process-history-board"]
+      },
       "generation_profile": {
         "artifacts_en": ["intangible-heritage explainer board", "traditional craft infographic", "A3 heritage process poster"],
         "artifacts_zh": ["非遗科普展板", "传统工艺信息图", "A3 文化传承海报"],
@@ -299,6 +347,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-recipe", "public/data/nano_templates.json#template-recipe", "public/data/nano_inspiration.json#template-recipe", "messages/en/nano.json#template-recipe"],
       "uncertainty": "The stable capability is one named recipe; collection-scale meal planning remains outside observed evidence.",
       "ontology": {"subject_event": "named dish", "information_type": "ingredients and cooking instructions", "style_layout": "food-photography recipe poster"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "food-photography",
+        "visual_style_families": ["food-photography", "culinary-editorial"],
+        "primary_layout_family": "recipe-poster",
+        "layout_families": ["recipe-poster", "ingredients-and-steps"]
+      },
       "generation_profile": {
         "artifacts_en": ["recipe poster", "cookbook-style visual guide", "ingredients-and-steps card"],
         "artifacts_zh": ["食谱海报", "菜谱视觉指南", "食材步骤卡"],
@@ -333,6 +387,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-mbti-generic", "public/data/nano_templates.json#template-mbti-generic", "public/data/nano_inspiration.json#template-mbti-generic", "messages/en/nano.json#template-mbti-generic"],
       "uncertainty": "Examples mix full 16-type charts and smaller behavior comparisons; explicit compatibility should route to the dedicated template.",
       "ontology": {"subject_event": "MBTI types or MBTI-mapped character set", "information_type": "personality classification and behavior comparison", "style_layout": "labeled cartoon multi-character chart"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "cartoon-personality-chart",
+        "visual_style_families": ["cartoon-personality-chart", "personality-education"],
+        "primary_layout_family": "personality-grid",
+        "layout_families": ["personality-grid", "sixteen-type-chart"]
+      },
       "generation_profile": {
         "artifacts_en": ["16-type MBTI character chart", "MBTI behavior comparison", "personality mapping grid"],
         "artifacts_zh": ["MBTI 十六型角色图", "人格行为对比图", "角色人格分类表"],
@@ -367,6 +427,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-species-science", "public/data/nano_templates.json#template-species-science", "public/data/nano_inspiration.json#template-species-science", "messages/en/nano.json#template-species-science"],
       "uncertainty": "Bare domain words like 植物 are intrinsically broad, but the supplied anchor fixes this route for anchor scoring.",
       "ontology": {"subject_event": "single plant or animal species", "information_type": "scientific facts, anatomy, habitat, and conservation", "style_layout": "central-species modular science infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "scientific-illustration",
+        "visual_style_families": ["scientific-illustration", "natural-history"],
+        "primary_layout_family": "central-species-infographic",
+        "layout_families": ["central-species-infographic", "anatomy-fact-modules"]
+      },
       "generation_profile": {
         "artifacts_en": ["species science infographic", "illustrated field-guide card", "scientific species poster"],
         "artifacts_zh": ["物种科普信息图", "自然观察图鉴卡", "科学物种海报"],
@@ -401,6 +467,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-figure-principles-infographic", "public/data/nano_templates.json#template-figure-principles-infographic", "public/data/nano_inspiration.json#template-figure-principles-infographic", "messages/en/nano.json#template-figure-principles-infographic"],
       "uncertainty": "The anchor phrase historical character is less specific than the principles operation; expanded core queries make that operation defensible.",
       "ontology": {"subject_event": "single famous or historical person", "information_type": "life principles, habits, and lessons", "style_layout": "portrait-led educational principles infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "editorial-portrait-illustration",
+        "visual_style_families": ["editorial-portrait-illustration", "biographical-education"],
+        "primary_layout_family": "portrait-led-infographic",
+        "layout_families": ["portrait-led-infographic", "principles-card"]
+      },
       "generation_profile": {
         "artifacts_en": ["famous-figure principles infographic", "life-lessons visual guide", "portrait-led habits poster"],
         "artifacts_zh": ["名人原则信息图", "人物人生经验图解", "肖像式习惯海报"],
@@ -435,6 +507,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-product-poster", "public/data/nano_templates.json#template-product-poster", "public/data/nano_inspiration.json#template-product-poster", "messages/en/nano.json#template-product-poster"],
       "uncertainty": "Observed examples emphasize cozy home products; support for unrelated product categories should not be assumed.",
       "ontology": {"subject_event": "small home or lifestyle product", "information_type": "promotion and feature highlighting", "style_layout": "warm single-product advertising poster"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "lifestyle-product-advertising",
+        "visual_style_families": ["lifestyle-product-advertising", "warm-commercial"],
+        "primary_layout_family": "product-hero-poster",
+        "layout_families": ["product-hero-poster", "feature-callout-poster"]
+      },
       "generation_profile": {
         "artifacts_en": ["cozy product poster", "lifestyle product advertisement", "feature-led launch visual"],
         "artifacts_zh": ["温馨产品海报", "生活方式产品广告", "卖点型新品视觉"],
@@ -469,6 +547,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-fashion-inspired-gown-design-sheet", "public/data/nano_templates.json#template-fashion-inspired-gown-design-sheet", "public/data/nano_inspiration.json#template-fashion-inspired-gown-design-sheet", "messages/en/nano.json#template-fashion-inspired-gown-design-sheet"],
       "uncertainty": "Met Gala is an alias and suitable context, but the underlying operation is gown concept design—not event coverage.",
       "ontology": {"subject_event": "couture gown inspired by a theme", "information_type": "fashion concept development and annotation", "style_layout": "gown design sheet with technical sketch"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "fashion-illustration",
+        "visual_style_families": ["fashion-illustration", "couture-concept"],
+        "primary_layout_family": "design-sheet",
+        "layout_families": ["design-sheet", "technical-sketch-board"]
+      },
       "generation_profile": {
         "artifacts_en": ["couture gown design sheet", "red-carpet dress concept board", "annotated fashion sketch"],
         "artifacts_zh": ["高定礼服设计稿", "红毯礼服概念板", "带注释的时装设计图"],
@@ -503,6 +587,12 @@
       "evidence_paths": ["scripts/configs/template_capability_kb.json#template-mbti-personality-compatibility-infographic", "public/data/nano_templates.json#template-mbti-personality-compatibility-infographic", "public/data/nano_inspiration.json#template-mbti-personality-compatibility-infographic", "messages/en/nano.json#template-mbti-personality-compatibility-infographic"],
       "uncertainty": "Evidence centers on two-type relationships; compatibility among larger groups is unsupported.",
       "ontology": {"subject_event": "pair of MBTI personality types", "information_type": "relationship compatibility comparison", "style_layout": "cute dual-character comparison infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "cute-comparison-illustration",
+        "visual_style_families": ["cute-comparison-illustration", "relationship-education"],
+        "primary_layout_family": "comparison-chart",
+        "layout_families": ["comparison-chart", "dual-character-infographic"]
+      },
       "generation_profile": {
         "artifacts_en": ["MBTI compatibility chart", "two-type relationship infographic", "personality pairing comparison"],
         "artifacts_zh": ["MBTI 兼容性图表", "双人格关系信息图", "人格配对对比图"],

@@ -1,0 +1,181 @@
+
+[2026-08-02T14:27:19.548Z] pending=90 concurrency=4
+OPENAI_API_KEY is set.
+[job 1/90] starting
+[job 2/90] starting
+[job 3/90] starting
+[job 4/90] starting
+[job 4/90] completed in 56.1s
+[job 5/90] starting
+[job 3/90] completed in 59.1s
+[job 6/90] starting
+[job 2/90] completed in 59.7s
+[job 7/90] starting
+[job 1/90] completed in 62.0s
+[job 8/90] starting
+[job 5/90] completed in 52.6s
+[job 9/90] starting
+[job 6/90] completed in 54.9s
+[job 10/90] starting
+[job 7/90] completed in 57.9s
+[job 11/90] starting
+[job 8/90] completed in 61.1s
+[job 12/90] starting
+[job 10/90] completed in 50.2s
+[job 13/90] starting
+[job 11/90] completed in 49.4s
+[job 14/90] starting
+[job 12/90] completed in 53.5s
+[job 15/90] starting
+[job 9/90] completed in 70.2s
+[job 16/90] starting
+[job 14/90] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_53f3b510c2a34c7ca025d45f5b5fd9e0.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 17/90] starting
+[job 13/90] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_29cf0e11a851484d93abf7e1670d00ac.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 18/90] starting
+[job 16/90] completed in 51.1s
+[job 19/90] starting
+[job 15/90] failed: Error code: 400 - {'error': {'message': 'Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID req_d7b74d73616d46e7a827c2e3c16a5606.', 'type': 'image_generation_user_error', 'param': None, 'code': 'moderation_blocked', 'moderation_details': {'moderation_stage': 'output', 'categories': ['other']}}}
+[job 20/90] starting
+[job 17/90] completed in 56.7s
+[job 21/90] starting
+[job 18/90] completed in 59.8s
+[job 22/90] starting
+[job 20/90] completed in 54.2s
+[job 23/90] starting
+[job 19/90] completed in 64.4s
+[job 24/90] starting
+[job 21/90] completed in 64.3s
+[job 25/90] starting
+[job 22/90] completed in 58.8s
+[job 26/90] starting
+[job 23/90] completed in 63.1s
+[job 27/90] starting
+[job 24/90] completed in 60.8s
+[job 28/90] starting
+[job 26/90] completed in 54.7s
+[job 29/90] starting
+[job 25/90] completed in 63.7s
+[job 30/90] starting
+[job 27/90] completed in 57.3s
+[job 31/90] starting
+[job 28/90] completed in 58.8s
+[job 32/90] starting
+[job 29/90] completed in 57.2s
+[job 33/90] starting
+[job 30/90] completed in 53.2s
+[job 34/90] starting
+[job 31/90] completed in 59.0s
+[job 35/90] starting
+[job 35/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 36/90] starting
+[job 36/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 37/90] starting
+[job 37/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 38/90] starting
+[job 38/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 39/90] starting
+[job 39/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 40/90] starting
+[job 40/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 41/90] starting
+[job 41/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 42/90] starting
+[job 42/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 43/90] starting
+[job 32/90] completed in 58.5s
+[job 44/90] starting
+[job 43/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 45/90] starting
+[job 44/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 46/90] starting
+[job 45/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 47/90] starting
+[job 46/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 48/90] starting
+[job 47/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 49/90] starting
+[job 48/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 50/90] starting
+[job 50/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 51/90] starting
+[job 51/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 52/90] starting
+[job 49/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 53/90] starting
+[job 52/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 53/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 54/90] starting
+[job 55/90] starting
+[job 54/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 56/90] starting
+[job 55/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 57/90] starting
+[job 56/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 58/90] starting
+[job 57/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 59/90] starting
+[job 59/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 60/90] starting
+[job 58/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 61/90] starting
+[job 60/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 62/90] starting
+[job 61/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 63/90] starting
+[job 62/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 64/90] starting
+[job 63/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 65/90] starting
+[job 64/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 66/90] starting
+[job 66/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 67/90] starting
+[job 65/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 68/90] starting
+[job 68/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 69/90] starting
+[job 69/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 70/90] starting
+[job 67/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 71/90] starting
+[job 70/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 72/90] starting
+[job 71/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 73/90] starting
+[job 72/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 74/90] starting
+[job 73/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 75/90] starting
+[job 74/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 76/90] starting
+[job 75/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 77/90] starting
+[job 76/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 78/90] starting
+[job 77/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 79/90] starting
+[job 79/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 80/90] starting
+[job 78/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 81/90] starting
+[job 80/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 82/90] starting
+[job 81/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 83/90] starting
+[job 82/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 84/90] starting
+[job 83/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 85/90] starting
+[job 84/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 86/90] starting
+[job 85/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 87/90] starting
+[job 86/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 87/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 88/90] starting
+[job 89/90] starting
+[job 89/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 90/90] starting
+[job 88/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+[job 90/90] failed: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}

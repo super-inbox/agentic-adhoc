@@ -49,6 +49,15 @@ node scripts/kb_lookup.cjs <template-id>  # inspect one template's capability ev
 
 ## Run (needs `OPENAI_API_KEY` — Path B calls gpt-4o-mini)
 
+Put the key in **`visual-intent-routing/.env.local`** (this directory's root, next to
+`package.json`) — the scripts load it via `dotenv` from `ROOT/.env.local` and it is
+git-ignored:
+
+```
+# visual-intent-routing/.env.local
+OPENAI_API_KEY=sk-...
+```
+
 ```
 node scripts/eval_template_routing.cjs --path=all     # A / B / union routing accuracy
 node scripts/try_kb_matcher.cjs 单词 chiikawa …        # A vs B(desc) vs B(KB) per query
@@ -75,10 +84,28 @@ It does not evaluate rendered-image quality. The design and known label/workflow
 conflicts are documented in
 [`benchmarks/vir_v2/DESIGN.md`](benchmarks/vir_v2/DESIGN.md).
 
-The committed default is JSON-compatible YAML and requests 650 deterministic
+The committed default is JSON-compatible YAML and requests 680 deterministic
 candidate records: 450 single-intent core, 80 content gaps, 60 ambiguous/boundary,
-and 60 multi-intent. Generated labels retain `auto_accepted` or `needs_review`
-status; only the 16 anchors are manually approved.
+60 multi-intent, and 30 open-ended style-exploration queries. Generated labels
+retain `auto_accepted` or `needs_review` status; only the 16 anchors are manually
+approved.
+
+The independent `exploration` split quantifies whether a router exposes several
+relevant visual directions without contaminating Core Top-1 accuracy. Its
+headline metric is:
+
+```
+Relevant Effective Style Count@K
+  = (relevant predictions / K)
+    × exp(Shannon entropy of relevant style-family distribution)
+```
+
+At `K=3`, three relevant and registry-distinct style directions score 3; one
+relevant direction plus two irrelevant templates scores `1/3`; irrelevant
+variety cannot increase the score. `compare` reports the corresponding
+`Style Exploration Lift@K` against a baseline. This is a capability-routing
+proxy based on frozen registry style/layout families, not a perceptual or
+rendered-image diversity score.
 
 ### Reproduce the network-free pilot
 
@@ -145,7 +172,7 @@ node scripts/vir-eval.cjs validate \
 ```
 
 Regression comparison uses paired records, slice deltas, newly fixed/broken
-records, and a seeded paired bootstrap interval:
+records, seeded paired bootstrap intervals, and Style Exploration Lift:
 
 ```bash
 node scripts/vir-eval.cjs compare \
@@ -156,3 +183,58 @@ node scripts/vir-eval.cjs compare \
 Primary artifacts are written to `reports/vir_v2/pilot/`; the manual review queue
 is in `reports/vir_v2/review/`. Do not tune router behavior or thresholds on the
 locked test manifest in `benchmarks/vir_v2/manifests/test_manifest.json`.
+
+### Generate paired GPT-direct and Curify images
+
+Image generation is an optional, paid artifact stage. It does not alter routing
+Gold labels or enter the VIR v2 routing metrics. Both arms use `gpt-image-2` with
+the same quality settings: GPT-direct receives the natural-language query;
+Curify receives the filled prompt from the template selected by the live Curify
+generation-plan API. This isolates the value of routing/template planning from a
+change in image backend.
+
+Install the official image client in a temporary environment and start the
+sibling Curify frontend first:
+
+```bash
+python3 -m venv /private/tmp/vir-imagegen-venv
+/private/tmp/vir-imagegen-venv/bin/python -m pip install openai
+
+cd ../../curify-frontend
+npm run dev
+```
+
+Then run each stage in order from this project. Replace port `3001` with the port
+printed by Next.js. `prepare` checkpoints each Curify plan, `render` skips files
+already present and writes API logs, and `finalize` hashes completed images.
+
+```bash
+cd ../agentic-adhoc/visual-intent-routing
+
+node scripts/vir-image-tasks.cjs prepare --stage anchors --base-url http://localhost:3001
+node scripts/vir-image-tasks.cjs render --stage anchors --system paired \
+  --python /private/tmp/vir-imagegen-venv/bin/python --concurrency 4
+node scripts/vir-image-tasks.cjs finalize --stage anchors
+
+node scripts/vir-image-tasks.cjs prepare --stage exploration --base-url http://localhost:3001
+node scripts/vir-image-tasks.cjs render --stage exploration --system paired \
+  --python /private/tmp/vir-imagegen-venv/bin/python --concurrency 4
+node scripts/vir-image-tasks.cjs finalize --stage exploration
+
+node scripts/vir-image-tasks.cjs prepare --stage core --base-url http://localhost:3001
+node scripts/vir-image-tasks.cjs render --stage core --system paired \
+  --python /private/tmp/vir-imagegen-venv/bin/python --concurrency 4
+node scripts/vir-image-tasks.cjs finalize --stage core
+
+node scripts/vir-image-tasks.cjs prepare --stage challenge-gap --base-url http://localhost:3001
+node scripts/vir-image-tasks.cjs render --stage challenge-gap --system paired \
+  --python /private/tmp/vir-imagegen-venv/bin/python --concurrency 4
+node scripts/vir-image-tasks.cjs finalize --stage challenge-gap
+```
+
+The 465 supported Core records include the 15 positive anchors, so the `core`
+image stage intentionally emits the remaining 450 records. A Curify abstention
+has no Curify image; it remains an auditable routing result. On a billing hard
+limit the renderer stops immediately, preserves completed files, and resumes
+after another `prepare` call. Outputs live under
+`reports/vir_v2/images/<run-id>/<stage>/{gpt-direct,curify}/`.

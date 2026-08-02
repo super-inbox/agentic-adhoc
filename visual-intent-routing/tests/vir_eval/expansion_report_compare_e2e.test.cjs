@@ -14,7 +14,9 @@ const {
 const { loadRegistry } = require("../../lib/vir_eval/registry.cjs");
 const { loadSeeds } = require("../../lib/vir_eval/schema.cjs");
 const {
+  generateChallenges,
   generateCore,
+  generateExploration,
   loadCachedResponse,
 } = require("../../lib/vir_eval/expand.cjs");
 const { MockRouterAdapter } = require("../../lib/vir_eval/adapters.cjs");
@@ -45,6 +47,54 @@ test("rule expansion is deterministic at a fixed seed and quota", () => {
     ),
     true,
   );
+});
+
+test("exploration expansion is deterministic, multilingual, and capability-tagged", () => {
+  const profiles = loadJson(config.paths.exploration_profiles);
+  const args = {
+    profiles,
+    registry,
+    count: 30,
+    randomSeed: 1234,
+    evaluationK: 3,
+  };
+  const first = generateExploration(args);
+  assert.deepEqual(first, generateExploration(args));
+  assert.equal(first.length, 30);
+  assert.deepEqual(
+    Object.fromEntries(
+      ["zh", "en", "mixed"].map((language) => [
+        language,
+        first.filter((record) => record.language === language).length,
+      ]),
+    ),
+    { zh: 10, en: 10, mixed: 10 },
+  );
+  assert.ok(first.every((record) => record.query.length <= 200));
+  assert.equal(
+    first.every(
+      (record) =>
+        record.partition === "exploration" &&
+        record.gold.target_mode === "exploration" &&
+        new Set(
+          Object.values(
+            record.gold.exploration.target_style_families,
+          ),
+        ).size >= 2,
+    ),
+    true,
+  );
+});
+
+test("generated challenge queries fit the current Curify input contract", () => {
+  const records = generateChallenges({
+    registry,
+    ambiguousCount: 60,
+    multiCount: 60,
+    randomSeed: 1234,
+  });
+  assert.equal(records.length, 120);
+  assert.ok(records.every((record) => record.query.length <= 200));
 });
 
 test("cached LLM response loader checks the prompt hash", () => {
@@ -148,6 +198,11 @@ test("mock end-to-end execution and report generation need no network", async ()
   assert.equal(fs.existsSync(report.report_md), true);
   assert.equal(fs.existsSync(path.join(temp, "metrics.json")), true);
   assert.match(fs.readFileSync(report.report_md, "utf8"), /Primary metrics/);
+  assert.match(fs.readFileSync(report.report_md, "utf8"), /Style exploration/);
+  assert.equal(
+    fs.existsSync(path.join(temp, "exploration_metrics.csv")),
+    true,
+  );
 });
 
 test("baseline comparison reports fixed/broken records and paired interval", () => {
@@ -191,4 +246,83 @@ test("baseline comparison reports fixed/broken records and paired interval", () 
   });
   assert.equal(interval.samples, 100);
   assert.equal(typeof interval.lower, "number");
+});
+
+test("baseline comparison reports Style Exploration Lift at K", () => {
+  const item = tinyRecord(
+    "explore",
+    "Explore several relevant visual directions",
+    "template-vocabulary",
+    "exploration",
+  );
+  item.split = "exploration";
+  item.gold = {
+    target_mode: "exploration",
+    targets: ["template-vocabulary", "template-recipe", "template-travel"],
+    acceptable_target_sets: [],
+    must_abstain: false,
+    exploration: {
+      profile_id: "compare-test",
+      evaluation_k: 3,
+      required_subject_event: "broad theme",
+      required_information_type: "open exploration",
+      target_style_families: {
+        "template-vocabulary": "illustrated-flashcard",
+        "template-recipe": "food-photography",
+        "template-travel": "hand-drawn-watercolor-map",
+      },
+      target_layout_families: {
+        "template-vocabulary": "card-grid",
+        "template-recipe": "recipe-poster",
+        "template-travel": "map-itinerary",
+      },
+      acceptable_visual_style_families: [
+        "illustrated-flashcard",
+        "food-photography",
+        "hand-drawn-watercolor-map",
+      ],
+    },
+  };
+  const prediction = (templates) => ({
+    query_id: item.id,
+    predictions: templates.map((template_id, index) => ({
+      template_id,
+      score: 0.9 - index * 0.1,
+      rank: index + 1,
+    })),
+    abstained: false,
+    latency_ms: 1,
+    raw_output: {},
+    error: null,
+  });
+  const comparison = compareRuns({
+    records: [item],
+    baselinePredictions: [
+      prediction([
+        "template-vocabulary",
+        "template-product-poster",
+        "template-fashion-inspired-gown-design-sheet",
+      ]),
+    ],
+    currentPredictions: [
+      prediction([
+        "template-vocabulary",
+        "template-recipe",
+        "template-travel",
+      ]),
+    ],
+    baselineMetrics: {},
+    currentMetrics: {},
+    config,
+  });
+  assert.equal(
+    comparison.style_exploration_lift_at_k.baseline,
+    1 / 3,
+  );
+  assert.ok(
+    Math.abs(comparison.style_exploration_lift_at_k.current - 3) < 1e-12,
+  );
+  assert.ok(
+    comparison.style_exploration_lift_at_k.absolute_lift > 2.66,
+  );
 });

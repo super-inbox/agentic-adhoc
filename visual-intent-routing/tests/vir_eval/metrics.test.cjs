@@ -6,6 +6,7 @@ const test = require("node:test");
 const { loadConfig } = require("../../lib/vir_eval/common.cjs");
 const {
   ambiguousMatch,
+  explorationRecordMetrics,
   scoreDataset,
   setMetrics,
 } = require("../../lib/vir_eval/metrics.cjs");
@@ -36,6 +37,7 @@ function record(id, mode, targets, extra = {}) {
       targets,
       acceptable_target_sets: extra.acceptable ?? [],
       must_abstain: mode === "none",
+      ...(extra.exploration ? { exploration: extra.exploration } : {}),
     },
     provenance: {},
     validation: { status: "auto_accepted" },
@@ -188,6 +190,82 @@ test("aggregates language and difficulty slices", () => {
   assert.equal(language.find((row) => row.value === "zh").exact_accuracy, 0);
   assert.equal(result.metrics.robustness.difficulty_accuracy.low, 1);
   assert.equal(result.metrics.robustness.difficulty_accuracy.high, 0);
+});
+
+test("scores only relevant style diversity in the exploration partition", () => {
+  const exploration = {
+    profile_id: "test-profile",
+    evaluation_k: 3,
+    required_subject_event: "broad discovery theme",
+    required_information_type: "open visual exploration",
+    target_style_families: {
+      "template-vocabulary": "illustrated-flashcard",
+      "template-recipe": "food-photography",
+      "template-travel": "hand-drawn-watercolor-map",
+    },
+    target_layout_families: {
+      "template-vocabulary": "card-grid",
+      "template-recipe": "recipe-poster",
+      "template-travel": "map-itinerary",
+    },
+    acceptable_visual_style_families: [
+      "illustrated-flashcard",
+      "food-photography",
+      "hand-drawn-watercolor-map",
+    ],
+  };
+  const item = record(
+    "explore",
+    "exploration",
+    ["template-vocabulary", "template-recipe", "template-travel"],
+    {
+      partition: "exploration",
+      split: "exploration",
+      transformations: ["open_ended_exploration"],
+      exploration,
+    },
+  );
+  const diverse = prediction("explore", [
+    "template-vocabulary",
+    "template-recipe",
+    "template-travel",
+  ]);
+  const diverseMetric = explorationRecordMetrics(item, diverse);
+  assert.equal(diverseMetric.relevant_count, 3);
+  assert.equal(diverseMetric.distinct_relevant_style_count, 3);
+  assert.ok(
+    Math.abs(diverseMetric.relevant_effective_style_count - 3) < 1e-12,
+  );
+
+  const mostlyIrrelevant = prediction("explore", [
+    "template-vocabulary",
+    "template-product-poster",
+    "template-fashion-inspired-gown-design-sheet",
+  ]);
+  assert.equal(
+    explorationRecordMetrics(item, mostlyIrrelevant)
+      .relevant_effective_style_count,
+    1 / 3,
+  );
+
+  const result = scoreDataset({
+    records: [item],
+    predictions: [diverse],
+    config,
+  });
+  assert.ok(
+    Math.abs(
+      result.metrics.exploration.relevant_effective_style_count_at_k.value -
+        3,
+    ) < 1e-12,
+  );
+  assert.equal(
+    result.sliceMetrics.find(
+      (row) => row.dimension === "partition" && row.value === "exploration",
+    ).exact_accuracy,
+    null,
+  );
+  assert.equal(result.errors.length, 0);
 });
 
 module.exports = { prediction, record };

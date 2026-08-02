@@ -1,6 +1,6 @@
 "use strict";
 
-const { mean, quantile } = require("./common.cjs");
+const { mean, mulberry32, quantile } = require("./common.cjs");
 
 function safeDivide(numerator, denominator) {
   return denominator ? numerator / denominator : null;
@@ -132,6 +132,10 @@ function evaluateRecord(record, prediction) {
     correct = setMetrics(record.gold.targets, predictedIds).exact;
   } else if (mode === "ambiguous") {
     correct = ambiguousMatch(record, predictedIds, prediction.abstained);
+  } else if (mode === "exploration") {
+    // Exploration has a continuous relevance-adjusted diversity metric. It is
+    // deliberately not coerced into a single-label exact-correctness value.
+    correct = null;
   }
   const targetRanks = record.gold.targets
     .map((target) => predictedIds.indexOf(target) + 1)
@@ -377,6 +381,172 @@ function challengeMetrics(evaluated, confidence) {
   };
 }
 
+function bootstrapMeanInterval(
+  values,
+  { samples = 1000, seed = 1234, confidence = 0.95 } = {},
+) {
+  if (!values.length) {
+    return { lower: null, upper: null, confidence, samples: 0 };
+  }
+  const random = mulberry32(seed);
+  const estimates = [];
+  for (let sample = 0; sample < samples; sample += 1) {
+    let total = 0;
+    for (let index = 0; index < values.length; index += 1) {
+      total += values[Math.floor(random() * values.length)];
+    }
+    estimates.push(total / values.length);
+  }
+  const alpha = (1 - confidence) / 2;
+  return {
+    lower: quantile(estimates, alpha),
+    upper: quantile(estimates, 1 - alpha),
+    confidence,
+    samples,
+  };
+}
+
+function explorationRecordMetrics(record, prediction, kOverride = null) {
+  if (record.gold.target_mode !== "exploration") {
+    throw new Error(`${record.id} is not an exploration record`);
+  }
+  const exploration = record.gold.exploration;
+  const k = kOverride ?? exploration.evaluation_k;
+  if (!Number.isInteger(k) || k < 1) {
+    throw new Error(`Invalid exploration k for ${record.id}: ${k}`);
+  }
+  const ranked = (prediction.predictions ?? [])
+    .slice()
+    .sort((left, right) => left.rank - right.rank)
+    .slice(0, k);
+  const relevantTargets = new Set(record.gold.targets);
+  const relevant = ranked.filter((item) =>
+    relevantTargets.has(item.template_id),
+  );
+  const styleCounts = {};
+  const layoutCounts = {};
+  for (const item of relevant) {
+    const style =
+      exploration.target_style_families[item.template_id];
+    const layout =
+      exploration.target_layout_families[item.template_id];
+    if (!style || !layout) {
+      throw new Error(
+        `Exploration record ${record.id} lacks style/layout mapping for ${item.template_id}`,
+      );
+    }
+    styleCounts[style] = (styleCounts[style] ?? 0) + 1;
+    layoutCounts[layout] = (layoutCounts[layout] ?? 0) + 1;
+  }
+  const relevantCount = relevant.length;
+  const styleEntropy =
+    relevantCount === 0
+      ? 0
+      : -Object.values(styleCounts).reduce((total, count) => {
+          const probability = count / relevantCount;
+          return total + probability * Math.log(probability);
+        }, 0);
+  const effectiveStyleCount =
+    relevantCount === 0 ? 0 : Math.exp(styleEntropy);
+  const relevanceAtK = relevantCount / k;
+  return {
+    id: record.id,
+    query: record.query,
+    language: record.language,
+    difficulty: record.difficulty,
+    semantic_cluster_id: record.semantic_cluster_id,
+    profile_id: exploration.profile_id,
+    evaluation_k: k,
+    returned_count: ranked.length,
+    relevant_count: relevantCount,
+    relevance_at_k: relevanceAtK,
+    distinct_relevant_style_count: Object.keys(styleCounts).length,
+    distinct_relevant_layout_count: Object.keys(layoutCounts).length,
+    style_entropy_nats: styleEntropy,
+    effective_style_count: effectiveStyleCount,
+    relevant_effective_style_count:
+      relevanceAtK * effectiveStyleCount,
+    relevant_template_ids: relevant.map((item) => item.template_id),
+    predicted_template_ids: ranked.map((item) => item.template_id),
+    style_distribution: styleCounts,
+    layout_distribution: layoutCounts,
+    abstained: prediction.abstained === true,
+  };
+}
+
+function explorationMetrics(evaluated, config) {
+  const k = config.metrics.exploration_k;
+  const rows = evaluated
+    .filter((item) => item.mode === "exploration")
+    .map((item) =>
+      explorationRecordMetrics(item.record, item.prediction, k),
+    );
+  const bootstrap = (values, seedOffset) =>
+    bootstrapMeanInterval(values, {
+      samples: config.metrics.bootstrap_samples,
+      seed: config.random_seed + seedOffset,
+      confidence: config.metrics.confidence_level,
+    });
+  const scoreValues = rows.map(
+    (row) => row.relevant_effective_style_count,
+  );
+  const relevanceValues = rows.map((row) => row.relevance_at_k);
+  const distinctStyleValues = rows.map(
+    (row) => row.distinct_relevant_style_count,
+  );
+  const distinctLayoutValues = rows.map(
+    (row) => row.distinct_relevant_layout_count,
+  );
+  const styleDistribution = {};
+  for (const row of rows) {
+    for (const [style, count] of Object.entries(row.style_distribution)) {
+      styleDistribution[style] = (styleDistribution[style] ?? 0) + count;
+    }
+  }
+  const metric = (values, unit, seedOffset) => ({
+    value: mean(values),
+    total: values.length,
+    unit,
+    interval: bootstrap(values, seedOffset),
+  });
+  return {
+    count: rows.length,
+    evaluation_k: k,
+    headline_metric: "relevant_effective_style_count_at_k",
+    relevant_effective_style_count_at_k: metric(
+      scoreValues,
+      "effective styles per query",
+      1,
+    ),
+    mean_relevance_at_k: metric(relevanceValues, "ratio", 2),
+    mean_distinct_relevant_style_count: metric(
+      distinctStyleValues,
+      "style families per query",
+      3,
+    ),
+    mean_distinct_relevant_layout_count: metric(
+      distinctLayoutValues,
+      "layout families per query",
+      4,
+    ),
+    normalized_style_exploration_score: metric(
+      scoreValues.map((value) => value / k),
+      "ratio",
+      5,
+    ),
+    abstention_rate: proportion(
+      rows.filter((row) => row.abstained).length,
+      rows.length,
+      config.metrics.confidence_level,
+    ),
+    relevant_style_distribution: styleDistribution,
+    formula:
+      "(relevant predictions / K) × exp(Shannon entropy of relevant style-family distribution)",
+    interpretation: `0–${k} relevant effective style directions per query; irrelevant outputs cannot increase the score.`,
+    excluded_from_primary_core_accuracy: true,
+  };
+}
+
 function consistency(items) {
   if (items.length < 2) return null;
   const choices = items.map((item) =>
@@ -532,15 +702,24 @@ function sliceRows(evaluated, confidence) {
       }
     }
     for (const [value, items] of [...groups.entries()].sort()) {
-      const successful = items.filter((item) => item.correct).length;
+      const scorable = items.filter(
+        (item) => typeof item.correct === "boolean",
+      );
+      const successful = scorable.filter((item) => item.correct).length;
+      const interval = wilsonInterval(
+        successful,
+        scorable.length,
+        confidence,
+      );
       rows.push({
         dimension,
         value,
         count: items.length,
+        scorable_count: scorable.length,
         correct: successful,
-        exact_accuracy: safeDivide(successful, items.length),
-        ci_lower: wilsonInterval(successful, items.length, confidence).lower,
-        ci_upper: wilsonInterval(successful, items.length, confidence).upper,
+        exact_accuracy: safeDivide(successful, scorable.length),
+        ci_lower: interval.lower,
+        ci_upper: interval.upper,
         abstention_rate: safeDivide(
           items.filter((item) => item.prediction.abstained).length,
           items.length,
@@ -602,7 +781,7 @@ function confusionRows(evaluated) {
 
 function errorRows(evaluated) {
   return evaluated
-    .filter((item) => !item.correct)
+    .filter((item) => item.correct === false)
     .map((item) => {
       const closestCandidate = item.prediction.raw_output?.candidates?.[0];
       return {
@@ -655,11 +834,12 @@ function scoreDataset({ records, predictions, config }) {
   const metrics = {
     benchmark_version: config.benchmark_version,
     scoring_contract:
-      "Exact canonical template-ID equality; ambiguous sets and abstention use explicit deterministic rules.",
-    confidence_intervals: `Wilson intervals at ${confidence * 100}% for important proportions.`,
+      "Exact canonical template-ID equality; ambiguous sets, abstention, and relevance-adjusted registry style diversity use explicit deterministic rules.",
+    confidence_intervals: `Wilson intervals at ${confidence * 100}% for important proportions; seeded bootstrap intervals for exploration means.`,
     primary_core: primaryMetrics(evaluated, confidence),
     content_gap: abstentionMetrics(evaluated, config, confidence),
     challenges: challengeMetrics(evaluated, confidence),
+    exploration: explorationMetrics(evaluated, config),
     robustness: robustnessMetrics(evaluated),
     system: systemMetrics(evaluated),
   };
@@ -667,6 +847,15 @@ function scoreDataset({ records, predictions, config }) {
     metrics,
     evaluated,
     sliceMetrics: sliceRows(evaluated, confidence),
+    explorationRows: evaluated
+      .filter((item) => item.mode === "exploration")
+      .map((item) =>
+        explorationRecordMetrics(
+          item.record,
+          item.prediction,
+          config.metrics.exploration_k,
+        ),
+      ),
     confusion: confusionRows(evaluated),
     errors: errorRows(evaluated),
   };
@@ -675,7 +864,10 @@ function scoreDataset({ records, predictions, config }) {
 module.exports = {
   ambiguousMatch,
   averagePrecision,
+  bootstrapMeanInterval,
   evaluateRecord,
+  explorationMetrics,
+  explorationRecordMetrics,
   inverseNormalCdf,
   queryLengthBucket,
   rocAuc,
