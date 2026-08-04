@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "benchmark_version": "vir-v2",
+  "track": "production",
+  "run_id": "2026-08-03-production-gemini",
+  "stage": "exploration",
+  "prepared_at": "2026-08-04T03:47:48.156Z",
+  "record_count": 30,
+  "record_ids_sha256": "f884d54549e7952d3b68b0c7a1d63230928f72e3ce2651c8fde54cf5c3505d56",
+  "curify_pipeline": {
+    "routing_and_template_planning": "Curify search-generation-plan",
+    "image_model": "gemini-3-pro-image-preview",
+    "generation_endpoint": "/api/generate-image",
+    "controlled_backend": false
+  },
+  "plan_source": {
+    "run_id": "2026-08-01-full",
+    "path": "reports/vir_v2/images/2026-08-01-full/exploration/curify-plans.jsonl",
+    "reused": 30,
+    "completed": 30,
+    "abstained": 0,
+    "failed": 0
+  },
+  "image_jobs": {
+    "total": 85,
+    "completed": 81,
+    "pending": 0,
+    "omissions": [],
+    "input": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini-input.jsonl",
+    "output_dir": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini",
+    "failed": 4,
+    "bytes": 76411839,
+    "results": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini-results.jsonl"
+  },
+  "comparison_reference": {
+    "gpt_direct_run_id": "2026-08-01-full",
+    "note": "End-to-end production comparison; image backends are intentionally not controlled."
+  },
+  "finalized_at": "2026-08-04T04:20:42.648Z",
+  "system_metrics": {
+    "latency_mean_ms": 24761.320987654322,
+    "error_rate": 0.047058823529411764
+  },
+  "gallery": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gallery.html"
+}

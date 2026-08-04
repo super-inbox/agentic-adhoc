@@ -256,3 +256,60 @@ Terminal-failure JSONL ledgers retain the query, direction, prompt hash, reason,
 and timestamp. They are counted as failed rather than pending in the manifest.
 Historical billing errors remain in append-only logs, while `blocking_error`
 reflects only the latest execution segment.
+
+### Run the real Curify production image backend (Gemini)
+
+The controlled track above is retained for diagnosing routing/template value.
+For the end-to-end product comparison requested for VIR v2, Curify uses its
+actual production path instead:
+
+```text
+query -> Curify search-generation-plan -> selected template + params
+      -> Curify /api/generate-image -> gemini-3-pro-image-preview
+```
+
+This track intentionally does **not** hold the image model constant. It measures
+the complete Curify experience against GPT-direct, so differences may come from
+both Curify's routing/template system and Gemini's renderer. Its outputs use a
+separate run directory and never overwrite the controlled `gpt-image-2` images.
+
+Start the sibling Curify frontend (where `GEMINI_API_KEY` is configured), then
+prepare, render, and finalize each stage:
+
+```bash
+cd ../../curify-frontend
+npm run dev
+
+cd ../agentic-adhoc/visual-intent-routing
+
+node scripts/vir-gemini-production.cjs prepare --stage anchors \
+  --run-id 2026-08-03-production-gemini \
+  --plan-source-run 2026-08-01-full --base-url http://localhost:3000
+node scripts/vir-gemini-production.cjs render --stage anchors \
+  --run-id 2026-08-03-production-gemini \
+  --base-url http://localhost:3000 --concurrency 2 --max-attempts 3
+node scripts/vir-gemini-production.cjs finalize --stage anchors \
+  --run-id 2026-08-03-production-gemini
+```
+
+Repeat with `--stage exploration`, `--stage core`, and finally
+`--stage challenge-gap`. The prepared plan cache is validated against query text
+and language before reuse. If no matching cached plan exists, `prepare` calls
+the live Curify planner. `render` calls the Curify Gemini endpoint, validates the
+returned image format and prepared prompt, checkpoints each image atomically,
+and stops visibly on a Gemini quota response. Re-running the same command only
+submits missing images:
+
+```bash
+node scripts/vir-gemini-production.cjs render --stage core \
+  --run-id 2026-08-03-production-gemini \
+  --base-url http://localhost:3000 --concurrency 2 --max-attempts 3
+node scripts/vir-gemini-production.cjs finalize --stage core \
+  --run-id 2026-08-03-production-gemini
+```
+
+Production artifacts live under
+`reports/vir_v2/images/<run-id>/<stage>/curify-gemini/`. Each stage also has
+the exact input JSONL, result/event JSONL, manifest, SHA256 hashes, latency,
+failure details, and a static inspection gallery. API keys are read only by the
+Curify frontend and are never copied into benchmark artifacts.

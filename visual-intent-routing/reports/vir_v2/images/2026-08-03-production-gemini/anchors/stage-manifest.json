@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "benchmark_version": "vir-v2",
+  "track": "production",
+  "run_id": "2026-08-03-production-gemini",
+  "stage": "anchors",
+  "prepared_at": "2026-08-04T02:38:26.677Z",
+  "record_count": 16,
+  "record_ids_sha256": "fbbc54d8153b782df4d537cd613ac996a841ed845d2cb958dede899b719f8ab8",
+  "curify_pipeline": {
+    "routing_and_template_planning": "Curify search-generation-plan",
+    "image_model": "gemini-3-pro-image-preview",
+    "generation_endpoint": "/api/generate-image",
+    "controlled_backend": false
+  },
+  "plan_source": {
+    "run_id": "2026-08-01-full",
+    "path": "reports/vir_v2/images/2026-08-01-full/anchors/curify-plans.jsonl",
+    "reused": 16,
+    "completed": 15,
+    "abstained": 1,
+    "failed": 0
+  },
+  "image_jobs": {
+    "total": 15,
+    "completed": 15,
+    "pending": 0,
+    "omissions": [
+      {
+        "query_id": "vir-v2-anchor-vir-s16",
+        "status": "abstained",
+        "reason": "证件照需要上传本人照片，当前搜索页仅支持无需参考图的直接生成。"
+      }
+    ],
+    "input": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini-input.jsonl",
+    "output_dir": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini",
+    "failed": 0,
+    "bytes": 12840986,
+    "results": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini-results.jsonl"
+  },
+  "comparison_reference": {
+    "gpt_direct_run_id": "2026-08-01-full",
+    "note": "End-to-end production comparison; image backends are intentionally not controlled."
+  },
+  "finalized_at": "2026-08-04T03:47:48.074Z",
+  "system_metrics": {
+    "latency_mean_ms": 29107.066666666666,
+    "error_rate": 0
+  },
+  "gallery": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gallery.html"
+}

@@ -5,6 +5,7 @@ const fs = require("node:fs");
 const os = require("node:os");
 const path = require("node:path");
 const test = require("node:test");
+const http = require("node:http");
 
 const {
   buildCurifyJobs,
@@ -16,6 +17,15 @@ const {
   stageRecords,
   summarizeImagegenLog,
 } = require("../../scripts/vir-image-tasks.cjs");
+
+const {
+  MODEL: GEMINI_MODEL,
+  buildGeminiJobs,
+  findGeminiOutput,
+  pendingGeminiJobs,
+  productionSlug,
+  renderGeminiJobs,
+} = require("../../scripts/vir-gemini-production.cjs");
 
 test("paired image stages preserve the requested execution counts", () => {
   assert.equal(stageRecords("anchors").length, 16);
@@ -155,4 +165,119 @@ test("image log summary distinguishes historical billing from the latest run", (
   assert.equal(summary.billing_hard_limit_reached, 1);
   assert.equal(summary.last_run.billing_hard_limit_reached, 0);
   assert.equal(summary.last_run.moderation_blocked, 1);
+});
+
+test("production Gemini jobs preserve Curify template parameters and use stable slugs", () => {
+  const curifyJobs = [
+    {
+      prompt: "Create a plant science card.",
+      vir_query_id: "vir-v2-example",
+      vir_direction: 1,
+      vir_metadata: {
+        source_query: "植物知识卡",
+        stage: "core",
+        partition: "core",
+        language: "zh",
+        template_id: "template-species-science",
+        params: { subject: "植物" },
+        confidence: 0.91,
+        reason: "fixture",
+        plan_source: "template_match",
+      },
+    },
+  ];
+  const first = buildGeminiJobs(curifyJobs, "fixture-run", "core")[0];
+  const second = buildGeminiJobs(curifyJobs, "fixture-run", "core")[0];
+
+  assert.equal(first.model, GEMINI_MODEL);
+  assert.equal(first.template_id, "template-species-science");
+  assert.deepEqual(first.params, { subject: "植物" });
+  assert.equal(first.locale, "zh");
+  assert.equal(first.slug, second.slug);
+  assert.equal(
+    first.slug,
+    productionSlug(
+      "fixture-run",
+      "core",
+      "vir-v2-example",
+      1,
+      "template-species-science",
+    ),
+  );
+});
+
+test("Gemini production renderer checkpoints an image and resumes without a network call", async () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), "vir-gemini-"));
+  const outDir = path.join(directory, "images");
+  const resultPath = path.join(directory, "results.jsonl");
+  const eventPath = path.join(directory, "events.jsonl");
+  const prompt = "Create a fixture poster.";
+  const job = {
+    schema_version: 1,
+    query_id: "vir-v2-fixture",
+    query: "fixture",
+    stage: "anchors",
+    partition: "core",
+    language: "en",
+    direction: 1,
+    template_id: "template-fixture",
+    params: { topic: "fixture" },
+    locale: "en",
+    slug: "vir-gemini-fixture",
+    expected_prompt: prompt,
+    expected_prompt_sha256: "fixture-hash",
+    model: GEMINI_MODEL,
+    endpoint: "/api/generate-image",
+  };
+  const png = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 0]);
+  let postCount = 0;
+  const server = http.createServer((request, response) => {
+    if (request.method === "POST") {
+      postCount += 1;
+      request.resume();
+      response.setHeader("Content-Type", "application/json");
+      response.end(
+        JSON.stringify({
+          url: `/api/generate-image/${job.slug}.png`,
+          prompt,
+          bytes: png.length,
+        }),
+      );
+      return;
+    }
+    response.setHeader("Content-Type", "image/png");
+    response.end(png);
+  });
+  await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+  const address = server.address();
+  const baseUrl = `http://127.0.0.1:${address.port}`;
+  try {
+    const first = await renderGeminiJobs({
+      jobs: [job],
+      outDir,
+      resultPath,
+      eventPath,
+      baseUrl,
+      concurrency: 1,
+      maxAttempts: 1,
+    });
+    assert.equal(first.completed, 1);
+    assert.equal(postCount, 1);
+    assert.ok(findGeminiOutput(job, outDir));
+    assert.deepEqual(pendingGeminiJobs([job], outDir), []);
+
+    const resumed = await renderGeminiJobs({
+      jobs: [job],
+      outDir,
+      resultPath,
+      eventPath,
+      baseUrl,
+      concurrency: 1,
+      maxAttempts: 1,
+    });
+    assert.equal(resumed.requested, 0);
+    assert.equal(postCount, 1);
+  } finally {
+    await new Promise((resolve) => server.close(resolve));
+  }
 });
