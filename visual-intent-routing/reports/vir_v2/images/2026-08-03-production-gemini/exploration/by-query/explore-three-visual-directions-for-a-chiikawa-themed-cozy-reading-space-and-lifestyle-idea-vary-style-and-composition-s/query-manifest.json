@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-020",
+  "query": "Explore three visual directions for a Chiikawa-themed cozy reading space and lifestyle idea. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space-and-lifestyle-idea-vary-style-and-composition-s",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space-and-lifestyle-idea-vary-style-and-composition-s/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 268579,
+      "sha256": "64a7b102821d7b415ddfe47618065e7f994d6324235a8a37c098ae18f9188e44"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space-and-lifestyle-idea-vary-style-and-composition-s/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 253439,
+      "sha256": "c9404f362a12f14d6cf63d518b12f626c45a07fc40a582bfcf7ee62a3f8732d5"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space-and-lifestyle-idea-vary-style-and-composition-s/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 240773,
+      "sha256": "c0302ee6679077e58f797314c944e55a259309fb18688d956880a25959243a70"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space-and-lifestyle-idea-vary-style-and-composition-s/curify-gemini--d01.jpg",
+      "template_id": "template-watercolor-theme-collage-illustration",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 965950,
+      "sha256": "44a5b5704fa0936a75cb70ec9ae438d332191be01b03848ce52c0c381c6dd8c5"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space-and-lifestyle-idea-vary-style-and-composition-s/curify-gemini--d02.jpg",
+      "template_id": "template-lifestyle-watercolor-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 965062,
+      "sha256": "dee176f05a44ffbcad93fb0707d18a59def3b0b6f5df9b1e30e66754608d212b"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space-and-lifestyle-idea-vary-style-and-composition-s/curify-gemini--d03.jpg",
+      "template_id": "template-lifestyle-photo-grid",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 884287,
+      "sha256": "c386cd284e20f3cbf6cf019219d89f11227e758aec73e3eef9e14c626ca31e7d"
+    }
+  ],
+  "curify_omission": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s03-09",
+  "query": "Create a decor concept sheet for mid-century reading nook.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-a-decor-concept-sheet-for-mid-century-reading-nook",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-decor-concept-sheet-for-mid-century-reading-nook/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 275325,
+      "sha256": "999f6d249349c1a5db55db48dfeb4386810cfedb78a745d6bd3a9d59504fbfb0"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-decor-concept-sheet-for-mid-century-reading-nook/curify-gemini--d01.jpg",
+      "template_id": "template-fashion-inspired-gown-design-sheet",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 557875,
+      "sha256": "3377fdee7a2e707ae995899b005dbdd74bd0cd12e4ea8050b2dab6db7a2df187"
+    }
+  ],
+  "curify_omission": null
+}

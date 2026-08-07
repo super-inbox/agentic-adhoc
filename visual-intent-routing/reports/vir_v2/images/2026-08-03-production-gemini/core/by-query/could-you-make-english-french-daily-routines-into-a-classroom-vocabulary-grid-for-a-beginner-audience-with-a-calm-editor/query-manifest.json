@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s01-15",
+  "query": "Could you make English-French daily routines into a classroom vocabulary grid for a beginner audience, with a calm editorial look in 4:5?",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/could-you-make-english-french-daily-routines-into-a-classroom-vocabulary-grid-for-a-beginner-audience-with-a-calm-editor",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-english-french-daily-routines-into-a-classroom-vocabulary-grid-for-a-beginner-audience-with-a-calm-editor/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 277201,
+      "sha256": "eb2cd61d3f9727774c537bb0563c2ba5bddc8f1a898aecdcf31d99a308106420"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-english-french-daily-routines-into-a-classroom-vocabulary-grid-for-a-beginner-audience-with-a-calm-editor/curify-gemini--d01.jpg",
+      "template_id": "template-daily-essentials-learning-card",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 808110,
+      "sha256": "e54312cb60bf7253b99c806154c7a632886fdf95a229c1e115d39ebb1eb13a36"
+    }
+  ],
+  "curify_omission": null
+}

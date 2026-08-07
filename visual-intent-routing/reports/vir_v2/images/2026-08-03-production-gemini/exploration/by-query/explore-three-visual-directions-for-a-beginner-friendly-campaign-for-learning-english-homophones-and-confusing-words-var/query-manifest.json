@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-016",
+  "query": "Explore three visual directions for a beginner-friendly campaign for learning English homophones and confusing words. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-learning-english-homophones-and-confusing-words-var",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-learning-english-homophones-and-confusing-words-var/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 278629,
+      "sha256": "8dd80d1e1903ecc45201ef57ce9f594049577e35f3841920ac670e1858140bf9"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-learning-english-homophones-and-confusing-words-var/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 281719,
+      "sha256": "e9a67d77336f8ba1db971773865b43770e52e8645b7a9a44ea9bf67982023425"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-learning-english-homophones-and-confusing-words-var/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 386003,
+      "sha256": "ce4bf55c57fdfafd2ce65f62b769c0e169c9f7950c0c2fab1e8b31f90349bff5"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-learning-english-homophones-and-confusing-words-var/curify-gemini--d01.jpg",
+      "template_id": "template-english-grammar-wordlist-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 977005,
+      "sha256": "11fa4be6cbadb2b1d1cffeda89fcc8df8301f5b8c105900bfa08765d8004f861"
+    }
+  ],
+  "curify_omission": null
+}

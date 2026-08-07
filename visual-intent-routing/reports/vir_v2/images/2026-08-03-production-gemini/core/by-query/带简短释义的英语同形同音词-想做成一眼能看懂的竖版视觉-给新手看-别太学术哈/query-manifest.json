@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s02-22",
+  "query": "带简短释义的英语同形同音词，想做成一眼能看懂的竖版视觉，给新手看，别太学术哈",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/带简短释义的英语同形同音词-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/带简短释义的英语同形同音词-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 312356,
+      "sha256": "1d4c0297213c5b15f86d43ce5d827fdbb97ef43a312151528cebce42b856c048"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/带简短释义的英语同形同音词-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈/curify-gemini--d01.jpg",
+      "template_id": "template-english-homograph-educational-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 791438,
+      "sha256": "738d64cc3bda9839fcdddda0e14bb807ad8643faebc4cc808cbdc879effc760f"
+    }
+  ],
+  "curify_omission": null
+}

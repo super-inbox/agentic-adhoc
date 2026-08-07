@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-017",
+  "query": "Explore three visual directions for a Cuban sandwich visual story for people discovering the dish. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-people-discovering-the-dish-vary-style-and-composi",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-people-discovering-the-dish-vary-style-and-composi/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 451061,
+      "sha256": "f58a83604878c35e2ed59a684c5cc1f9e1cae4275a77623fbacb356fb3058e30"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-people-discovering-the-dish-vary-style-and-composi/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 439171,
+      "sha256": "89f3c0677d57172964afe4908526a1eb4ce43f0cf92aef2dfa69d6b8ca5a330a"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-people-discovering-the-dish-vary-style-and-composi/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 492841,
+      "sha256": "d55fe20709b3d2c61bf7b8eb9a937ef36f16f8308abe78ab7ff300291828f593"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-people-discovering-the-dish-vary-style-and-composi/curify-gemini--d01.jpg",
+      "template_id": "template-food",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 969675,
+      "sha256": "ebba27005f9d8c03c88f4014923c942a23f51da41c5af08fd50fc15d6d13fda9"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-people-discovering-the-dish-vary-style-and-composi/curify-gemini--d02.jpg",
+      "template_id": "template-premium-recipe-card-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 988740,
+      "sha256": "c0121f7e5cce8f882f1ddc1433214b3b8e257766eac5b86d600ac227389dd9b9"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-people-discovering-the-dish-vary-style-and-composi/curify-gemini--d03.jpg",
+      "template_id": "template-varieties-food-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 683681,
+      "sha256": "3eaf5582bd6f368f4917b50a978f5e75b5aa3f5936a978f580cb79d9ff8a8ab7"
+    }
+  ],
+  "curify_omission": null
+}

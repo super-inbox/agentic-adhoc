@@ -14,12 +14,14 @@
     "controlled_backend": false
   },
   "plan_source": {
-    "run_id": "2026-08-01-full",
-    "path": "reports/vir_v2/images/2026-08-01-full/exploration/curify-plans.jsonl",
+    "run_id": "2026-08-03-production-gemini",
+    "path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-plans.jsonl",
     "reused": 30,
     "completed": 30,
     "abstained": 0,
-    "failed": 0
+    "failed": 0,
+    "original_run_id": "2026-08-01-full",
+    "integrated": true
   },
   "image_jobs": {
     "total": 85,
@@ -33,13 +35,44 @@
     "results": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini-results.jsonl"
   },
   "comparison_reference": {
-    "gpt_direct_run_id": "2026-08-01-full",
+    "integrated": true,
+    "directory": "reports/vir_v2/images/2026-08-03-production-gemini/exploration",
     "note": "End-to-end production comparison; image backends are intentionally not controlled."
   },
-  "finalized_at": "2026-08-04T04:20:42.648Z",
+  "finalized_at": "2026-08-07T13:51:32.558Z",
   "system_metrics": {
-    "latency_mean_ms": 24761.320987654322,
-    "error_rate": 0.047058823529411764
+    "curify_gemini": {
+      "latency_mean_ms": 24761.320987654322,
+      "error_rate": 0.047058823529411764
+    },
+    "gpt_direct": {
+      "latency_mean_ms": null,
+      "error_rate": 0.08888888888888889
+    }
   },
-  "gallery": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gallery.html"
+  "gallery": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gallery.html",
+  "gpt_direct": {
+    "image_model": "gpt-image-2",
+    "total": 90,
+    "completed": 82,
+    "failed": 8,
+    "pending": 0,
+    "unique_queries": 28,
+    "bytes": 26865410,
+    "results": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct-results.jsonl",
+    "output_dir": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query",
+    "migrated_from_run": "2026-08-01-full"
+  },
+  "combined": {
+    "completed_images": 163,
+    "unique_queries": 30,
+    "query_folders": 30,
+    "queries_covered_by_both": 28,
+    "matched_image_pairs": 76
+  },
+  "image_naming": {
+    "policy_version": "query-folder-v1",
+    "format": "by-query/<normalized-query>/<system>--d<direction>.<extension>",
+    "migration_manifest": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/query-folder-migration.json"
+  }
 }

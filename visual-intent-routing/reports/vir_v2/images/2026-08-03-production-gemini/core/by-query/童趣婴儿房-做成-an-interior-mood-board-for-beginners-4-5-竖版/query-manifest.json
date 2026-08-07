@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s03-13",
+  "query": "童趣婴儿房 做成 an interior mood board，for beginners，4:5 竖版。",
+  "language": "mixed",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/童趣婴儿房-做成-an-interior-mood-board-for-beginners-4-5-竖版",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/童趣婴儿房-做成-an-interior-mood-board-for-beginners-4-5-竖版/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 210208,
+      "sha256": "8b25c54979453c1512985685ae1bf3bd6484c153e72de4fa46b17aec68a47639"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/童趣婴儿房-做成-an-interior-mood-board-for-beginners-4-5-竖版/curify-gemini--d01.jpg",
+      "template_id": "template-watercolor-theme-collage-illustration",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 691836,
+      "sha256": "e3e032275c5546dd1d2a72a1abfe5ac2e157f4aa8c982ce91deecfcae4916be4"
+    }
+  ],
+  "curify_omission": null
+}

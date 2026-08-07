@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-003",
+  "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容探索三个不同的视觉方向，先不要固定成一种风格。",
+  "language": "zh",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内容探索三个不同的视觉方向-先不要固",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内容探索三个不同的视觉方向-先不要固/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 280452,
+      "sha256": "5a3abe1d782eb85a11ef9401e5b2323f5abd03ec8d72f251b15e33a9e91a5cb3"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内容探索三个不同的视觉方向-先不要固/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 264403,
+      "sha256": "c8c423ecb7f1a5fc8dd3d4e5da2d73a612052a2db888e79a0fcbe68c3a9e0935"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内容探索三个不同的视觉方向-先不要固/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 363754,
+      "sha256": "e50ede816cc38d6c99e70ce3e95d9cec6419c4645f9b2b61c6dc037cbeee587d"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内容探索三个不同的视觉方向-先不要固/curify-gemini--d01.jpg",
+      "template_id": "template-lifestyle-watercolor-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 832470,
+      "sha256": "cf21ee84f679df0d0c1e8fcb8bf51e020207b2777464c96abe56850896274a55"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内容探索三个不同的视觉方向-先不要固/curify-gemini--d02.jpg",
+      "template_id": "template-vintage-ultimate-guide-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1163302,
+      "sha256": "4bc669d9f8b1ddba94080ff8acdd84f6fcc11d3fd24e40bfb3e1f8a2ace4ff95"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内容探索三个不同的视觉方向-先不要固/curify-gemini--d03.jpg",
+      "template_id": "template-self-care-illustration-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 889664,
+      "sha256": "4bbb840019323507ad988a7ee64401e802cf829dd6e3c0bb0ee2a9ad64c15221"
+    }
+  ],
+  "curify_omission": null
+}

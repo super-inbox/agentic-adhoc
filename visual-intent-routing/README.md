@@ -193,6 +193,10 @@ Curify receives the filled prompt from the template selected by the live Curify
 generation-plan API. This isolates the value of routing/template planning from a
 change in image backend.
 
+This controlled workflow remains reproducible, but its earlier rendered
+`2026-08-01-full` artifacts were removed to avoid retaining a duplicate Curify
+image set. The current published production comparison is documented below.
+
 Install the official image client in a temporary environment and start the
 sibling Curify frontend first:
 
@@ -257,11 +261,10 @@ and timestamp. They are counted as failed rather than pending in the manifest.
 Historical billing errors remain in append-only logs, while `blocking_error`
 reflects only the latest execution segment.
 
-### Run the real Curify production image backend (Gemini)
+### Run the unified production comparison (GPT-direct vs Curify Gemini)
 
-The controlled track above is retained for diagnosing routing/template value.
 For the end-to-end product comparison requested for VIR v2, Curify uses its
-actual production path instead:
+actual production path:
 
 ```text
 query -> Curify search-generation-plan -> selected template + params
@@ -270,8 +273,8 @@ query -> Curify search-generation-plan -> selected template + params
 
 This track intentionally does **not** hold the image model constant. It measures
 the complete Curify experience against GPT-direct, so differences may come from
-both Curify's routing/template system and Gemini's renderer. Its outputs use a
-separate run directory and never overwrite the controlled `gpt-image-2` images.
+both Curify's routing/template system and Gemini's renderer. GPT-direct and
+Curify Gemini outputs live together under one run directory.
 
 Start the sibling Curify frontend (where `GEMINI_API_KEY` is configured), then
 prepare, render, and finalize each stage:
@@ -284,7 +287,7 @@ cd ../agentic-adhoc/visual-intent-routing
 
 node scripts/vir-gemini-production.cjs prepare --stage anchors \
   --run-id 2026-08-03-production-gemini \
-  --plan-source-run 2026-08-01-full --base-url http://localhost:3000
+  --base-url http://localhost:3000
 node scripts/vir-gemini-production.cjs render --stage anchors \
   --run-id 2026-08-03-production-gemini \
   --base-url http://localhost:3000 --concurrency 2 --max-attempts 3
@@ -309,7 +312,12 @@ node scripts/vir-gemini-production.cjs finalize --stage core \
 ```
 
 Production artifacts live under
-`reports/vir_v2/images/<run-id>/<stage>/curify-gemini/`. Each stage also has
-the exact input JSONL, result/event JSONL, manifest, SHA256 hashes, latency,
-failure details, and a static inspection gallery. API keys are read only by the
-Curify frontend and are never copied into benchmark artifacts.
+`reports/vir_v2/images/<run-id>/<stage>/by-query/<normalized-query>/`. Each
+Query directory places `gpt-direct--d<direction>` and
+`curify-gemini--d<direction>` images side by side and includes a
+`query-manifest.json` with the exact unmodified Query, IDs, models, templates,
+hashes, and completion status. Each stage also has the exact input JSONL,
+result/event JSONL, manifest, failure details, and a combined static inspection
+gallery. The current run-level counts are in `comparison-manifest.json`. API
+keys are read only by the relevant clients and are never copied into benchmark
+artifacts.

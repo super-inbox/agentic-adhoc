@@ -1,24 +1,44 @@
-# VIR v2 Curify Production Track status
+# VIR v2 unified production comparison status
 
 Run ID: `2026-08-03-production-gemini`
 
-Pipeline: Curify routing and template parameters → Curify
-`/api/generate-image` → `gemini-3-pro-image-preview`.
+Systems:
 
-This is an end-to-end production comparison track. It does not control the
-image backend against GPT-direct. The earlier `2026-08-01-full` run remains the
-separate `gpt-image-2` controlled track and has not been overwritten.
+- GPT-direct: query → `gpt-image-2`
+- Curify production: routing + template parameters → Curify
+  `/api/generate-image` → `gemini-3-pro-image-preview`
+
+Both systems now live in this single run directory. The removed
+`2026-08-01-full` directory was the older controlled track; its 158 Curify
+`gpt-image-2` images are intentionally excluded from the counts below.
 
 ## Current checkpoint
 
-| Stage | Records | Gemini jobs | Completed | Failed | Pending | Notes |
-|---|---:|---:|---:|---:|---:|---|
-| Anchors | 16 | 15 | 15 | 0 | 0 | `vir-s16` correctly abstained, so no image job |
-| Exploration | 30 | 85 | 81 | 4 | 0 | Four prompts repeatedly returned no image or text only |
-| Core | 450 | 450 | 54 | 1 | 395 | Stopped immediately at the Gemini daily request quota |
-| Challenge + content gap | 200 | not prepared | 0 | 0 | not prepared | Run after Core |
+| Stage | GPT-direct images | Curify Gemini images | Combined | Unique queries | Matched query/direction pairs |
+|---|---:|---:|---:|---:|---:|
+| Anchors | 16 | 15 | 31 | 16 | 15 |
+| Exploration | 82 | 81 | 163 | 30 | 76 |
+| Core | 68 | 54 | 122 | 69 | 53 |
+| **Total** | **166** | **150** | **316** | **115** | **144** |
 
-Current Curify Gemini images: **150** (`15 + 81 + 54`).
+Among the 115 unique queries, 96 have at least one successful image from both
+systems. Exploration may have up to three directions per query, which is why
+its matched-pair count is greater than its query count.
+
+## Completion state
+
+| Stage | System | Jobs | Completed | Failed | Pending |
+|---|---|---:|---:|---:|---:|
+| Anchors | GPT-direct | 16 | 16 | 0 | 0 |
+| Anchors | Curify Gemini | 15 | 15 | 0 | 0 |
+| Exploration | GPT-direct | 90 | 82 | 8 | 0 |
+| Exploration | Curify Gemini | 85 | 81 | 4 | 0 |
+| Core | GPT-direct | 450 | 68 | 0 | 382 |
+| Core | Curify Gemini | 450 | 54 | 1 | 395 |
+
+`vir-s16` correctly abstained in the Curify anchor run, so Curify created no
+image job for that content-gap query. Challenge + content-gap image generation
+has not been prepared.
 
 The Core stop was a `RESOURCE_EXHAUSTED` response for
 `GenerateRequestsPerDayPerProjectPerModel`, with a project limit of 250 daily
@@ -56,3 +76,12 @@ node scripts/vir-gemini-production.cjs finalize --stage challenge-gap \
 
 Do not interpret image completion or visual inspection as routing accuracy.
 Routing metrics continue to use exact template IDs and abstention Gold labels.
+
+## Files
+
+Each stage contains `by-query/<normalized-query>/` directories, result JSONL
+files, a combined `gallery.html`, and `stage-manifest.json`. Every Query folder
+places `gpt-direct--d<direction>` and `curify-gemini--d<direction>` images side
+by side and contains an exact `query-manifest.json`. Each stage records the
+move in `query-folder-migration.json`; the root `comparison-manifest.json`
+summarizes all three stages.

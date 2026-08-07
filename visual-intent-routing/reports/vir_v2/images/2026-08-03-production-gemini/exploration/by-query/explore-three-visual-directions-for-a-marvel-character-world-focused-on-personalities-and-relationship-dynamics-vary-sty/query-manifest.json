@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-015",
+  "query": "Explore three visual directions for a Marvel character world focused on personalities and relationship dynamics. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-a-marvel-character-world-focused-on-personalities-and-relationship-dynamics-vary-sty",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "failed",
+      "local_path": null,
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "failed",
+      "local_path": null,
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-marvel-character-world-focused-on-personalities-and-relationship-dynamics-vary-sty/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 232648,
+      "sha256": "ab1c703f4c756858018969b561d98520955d055c3cf6f080ed86356f220742c8"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-marvel-character-world-focused-on-personalities-and-relationship-dynamics-vary-sty/curify-gemini--d01.jpg",
+      "template_id": "template-dual-character-comparison-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1125304,
+      "sha256": "f665c556b2c7796410e11a1312486c78838bfbeb51e270cb5ddc59dcffac7a63"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "failed",
+      "local_path": null,
+      "template_id": "template-fandom-character-grid-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

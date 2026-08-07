@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-19",
+  "query": "能不能把利率如何影响生活做成知识科普卡？给初学者看，风格清爽，竖版 4:5。",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/能不能把利率如何影响生活做成知识科普卡-给初学者看-风格清爽-竖版-4-5",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/能不能把利率如何影响生活做成知识科普卡-给初学者看-风格清爽-竖版-4-5/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 276535,
+      "sha256": "749e394c5747587c082e7df7d39ae652965dbb42de660e89297a819b73c0864f"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/能不能把利率如何影响生活做成知识科普卡-给初学者看-风格清爽-竖版-4-5/curify-gemini--d01.jpg",
+      "template_id": "template-lifestyle-info-card",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 691023,
+      "sha256": "b125a0e0e063d5d2aaa00c6cbc817061b566a81c103cd6f5fe96f9e12c8ffd01"
+    }
+  ],
+  "curify_omission": null
+}

@@ -6,6 +6,7 @@ const { spawn } = require("node:child_process");
 const fs = require("node:fs");
 const os = require("node:os");
 const path = require("node:path");
+const { queryImageName } = require("./vir-image-names.cjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const DEFAULT_RUN_ID = "2026-08-01-full";
@@ -101,23 +102,8 @@ function stageRecords(stage) {
   throw new Error(`Unknown stage: ${stage}`);
 }
 
-function safeName(value) {
-  return String(value)
-    .toLowerCase()
-    .replace(/[^a-z0-9-]+/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "")
-    .slice(0, 160);
-}
-
-function outputName(recordId, direction, templateId = null) {
-  return [
-    safeName(recordId),
-    String(direction).padStart(2, "0"),
-    templateId ? safeName(templateId) : null,
-  ]
-    .filter(Boolean)
-    .join("--") + ".jpeg";
+function outputName(recordId, direction, templateId = null, query = null) {
+  return queryImageName(query ?? recordId, recordId, direction, "jpeg");
 }
 
 function gptPrompt(record, direction, directionCount) {
@@ -148,7 +134,7 @@ function buildGptJobs(records, stage) {
       const direction = offset + 1;
       return imageJob({
         prompt: gptPrompt(record, direction, directionCount),
-        out: outputName(record.id, direction),
+        out: outputName(record.id, direction, null, record.query),
         queryId: record.id,
         direction,
         metadata: {
@@ -227,7 +213,7 @@ function buildCurifyJobs(records, plans, templates, stage) {
       jobs.push(
         imageJob({
           prompt: fillPrompt(basePrompt, direction.params ?? {}),
-          out: outputName(record.id, rank, direction.template_id),
+          out: outputName(record.id, rank, direction.template_id, record.query),
           queryId: record.id,
           direction: rank,
           metadata: {

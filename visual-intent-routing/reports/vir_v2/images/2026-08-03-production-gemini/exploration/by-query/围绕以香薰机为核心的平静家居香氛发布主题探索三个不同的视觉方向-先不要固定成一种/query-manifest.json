@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-004",
+  "query": "围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向，先不要固定成一种风格。",
+  "language": "zh",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向-先不要固定成一种",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向-先不要固定成一种/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 160196,
+      "sha256": "26a0f41080f5b9d6be79e290ae53b02937cc0b9fabffd5b748d9c5530705a47f"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向-先不要固定成一种/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 167132,
+      "sha256": "549c0445bcf5b8024c007254bc0458140cffcde819696aebcc4822e96e708754"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向-先不要固定成一种/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 191475,
+      "sha256": "75a785c6a575f56b50525f003505228d3118e561b4153a69886dfabc498c7e0d"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向-先不要固定成一种/curify-gemini--d01.jpg",
+      "template_id": "template-home-lifestyle-guide-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 955908,
+      "sha256": "77e7743dc20651f948b4b6e40ab4c3df867f1717dd74da5ed51779089d839052"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向-先不要固定成一种/curify-gemini--d02.jpg",
+      "template_id": "template-watercolor-theme-collage-illustration",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 844177,
+      "sha256": "dc240063cdd8f2f3ffe5da3b37d2ebed6ae2756a27439d614b58a4c98141bbac"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向-先不要固定成一种/curify-gemini--d03.jpg",
+      "template_id": "template-lifestyle-watercolor-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 782033,
+      "sha256": "9edd8ae1af395712691d2218e7fdcb75a8bb8928ff19d932f786144d633da346"
+    }
+  ],
+  "curify_omission": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s03-17",
+  "query": "Could you make sage green kitchen into a room palette and material board for a beginner audience, with a calm editorial look in 4:5?",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/could-you-make-sage-green-kitchen-into-a-room-palette-and-material-board-for-a-beginner-audience-with-a-calm-editorial-l",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-sage-green-kitchen-into-a-room-palette-and-material-board-for-a-beginner-audience-with-a-calm-editorial-l/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 212176,
+      "sha256": "38a4caa24a2ad17c5de21f9e493256e50fbc87022d9cae4746abae992881d3bb"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-sage-green-kitchen-into-a-room-palette-and-material-board-for-a-beginner-audience-with-a-calm-editorial-l/curify-gemini--d01.jpg",
+      "template_id": "template-room-vocabulary-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 514906,
+      "sha256": "0e8d2b4fabc9ba4e387ef8c60eea11e7f7136d0ed1343586569b066bb5460281"
+    }
+  ],
+  "curify_omission": null
+}

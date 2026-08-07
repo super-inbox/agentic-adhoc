@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-10",
+  "query": "帮我做一个 why eclipses occur 的知识科普卡，labels 清楚一点。",
+  "language": "mixed",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/帮我做一个-why-eclipses-occur-的知识科普卡-labels-清楚一点",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/帮我做一个-why-eclipses-occur-的知识科普卡-labels-清楚一点/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 307579,
+      "sha256": "7e26eb16badf33989775fe5f72f814b33750a09d101807dadecdc7363e49a603"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/帮我做一个-why-eclipses-occur-的知识科普卡-labels-清楚一点/curify-gemini--d01.jpg",
+      "template_id": "template-weird-cold-knowledge-popular-science-card",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 979359,
+      "sha256": "3f2f934a81a1c7f1c2e49ee0a4f4376c2981d0409ce5b1d764873f3fc8d2e92d"
+    }
+  ],
+  "curify_omission": null
+}

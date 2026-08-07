@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-007",
+  "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+  "language": "zh",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向-先不要固定",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向-先不要固定/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 378276,
+      "sha256": "28b9beea6933bb5c3c7d6ce574b06928e1ab6193e6b1cc2dde05131dfd225d40"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向-先不要固定/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 474794,
+      "sha256": "e245e2a72eb62be7033f3041159c09a7b10444e2d529042b59ca00b0cabdf15c"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向-先不要固定/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 552383,
+      "sha256": "bb4ec839a250d449ccb759efe90fe44acb3f06ce88f02f5af76fb9a803c9cad9"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向-先不要固定/curify-gemini--d01.jpg",
+      "template_id": "template-food-recipe-tip-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 938866,
+      "sha256": "c3b799e07554fb5a51d8a2906bf6a5367a43cf78d6c813eee8528485f7b6fe14"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向-先不要固定/curify-gemini--d02.jpg",
+      "template_id": "template-cultural-travel-journey-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1075626,
+      "sha256": "edf85fb3deaa03b0c19523b0eae83b0579f81d17f3b7490bb1ffda4cd113474a"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向-先不要固定/curify-gemini--d03.jpg",
+      "template_id": "template-country-dos-and-donts-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 925259,
+      "sha256": "a889bcc6e801e805f868403b34f6e4774bbe5ed00c7a77d942a498b779d0380d"
+    }
+  ],
+  "curify_omission": null
+}

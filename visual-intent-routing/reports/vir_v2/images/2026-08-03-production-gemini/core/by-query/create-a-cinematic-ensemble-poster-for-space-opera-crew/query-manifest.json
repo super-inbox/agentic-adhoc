@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s05-09",
+  "query": "Create a cinematic ensemble poster for space opera crew.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-a-cinematic-ensemble-poster-for-space-opera-crew",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-cinematic-ensemble-poster-for-space-opera-crew/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 305349,
+      "sha256": "1fd1827e5dcf6259f6d85602ffda80816fd37b151fe4bb51e1d5adff2c1be17b"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "pending",
+      "local_path": null,
+      "template_id": "template-celebrity-movie-group-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

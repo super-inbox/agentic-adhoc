@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s03-20",
+  "query": "Could you make pet-friendly studio apartment into a room palette and material board for a beginner audience, with a calm editorial look in 4:5?",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/could-you-make-pet-friendly-studio-apartment-into-a-room-palette-and-material-board-for-a-beginner-audience-with-a-calm",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-pet-friendly-studio-apartment-into-a-room-palette-and-material-board-for-a-beginner-audience-with-a-calm/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 255219,
+      "sha256": "26488e59443149f8ee691521f8b136b76aec4db7a41a985bba4d76bf28008eef"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-pet-friendly-studio-apartment-into-a-room-palette-and-material-board-for-a-beginner-audience-with-a-calm/curify-gemini--d01.jpg",
+      "template_id": "template-lifestyle-watercolor-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 961782,
+      "sha256": "23f31c65bdddd376885dd14d3379d05c305ff98aa4a76e5629925e927e4bff12"
+    }
+  ],
+  "curify_omission": null
+}

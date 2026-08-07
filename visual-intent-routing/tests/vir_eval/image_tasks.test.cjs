@@ -22,10 +22,18 @@ const {
   MODEL: GEMINI_MODEL,
   buildGeminiJobs,
   findGeminiOutput,
+  normalizeIntegratedGptResults,
   pendingGeminiJobs,
+  productionGallery,
   productionSlug,
   renderGeminiJobs,
 } = require("../../scripts/vir-gemini-production.cjs");
+const {
+  queryFolderNames,
+  queryImageName,
+  queryImageStem,
+  systemImageName,
+} = require("../../scripts/vir-image-names.cjs");
 
 test("paired image stages preserve the requested execution counts", () => {
   assert.equal(stageRecords("anchors").length, 16);
@@ -81,7 +89,10 @@ test("Curify jobs use ranked template plans and filled prompts", () => {
   );
   assert.equal(jobs.length, 1);
   assert.equal(jobs[0].prompt, "Create a poster about quiet reading.");
-  assert.match(jobs[0].out, /template-test\.jpeg$/);
+  assert.equal(
+    jobs[0].out,
+    "a-quiet-reading-corner--vir-v2-test--d01.jpeg",
+  );
   assert.deepEqual(omissions, []);
 });
 
@@ -193,6 +204,8 @@ test("production Gemini jobs preserve Curify template parameters and use stable 
   assert.equal(first.template_id, "template-species-science");
   assert.deepEqual(first.params, { subject: "植物" });
   assert.equal(first.locale, "zh");
+  assert.equal(first.query_directory, "植物知识卡");
+  assert.equal(first.local_basename, "curify-gemini--d01");
   assert.equal(first.slug, second.slug);
   assert.equal(
     first.slug,
@@ -202,8 +215,84 @@ test("production Gemini jobs preserve Curify template parameters and use stable 
       "vir-v2-example",
       1,
       "template-species-science",
+      "植物知识卡",
     ),
   );
+  assert.equal(first.slug, "植物知识卡--vir-v2-example--d01");
+});
+
+test("query image filenames are readable, multilingual, aligned, and bounded", () => {
+  assert.equal(
+    queryImageName("Cozy reading aesthetic!", "vir-v2-demo", 2, "jpeg"),
+    "cozy-reading-aesthetic--vir-v2-demo--d02.jpeg",
+  );
+  assert.equal(
+    queryImageStem("植物知识卡 / plant facts", "vir-v2-demo", 1),
+    "植物知识卡-plant-facts--vir-v2-demo--d01",
+  );
+  const longName = queryImageName("非常长的中文查询".repeat(30), "vir-v2-demo", 1, "jpg");
+  assert.ok(Buffer.byteLength(longName, "utf8") < 160);
+  assert.doesNotMatch(longName, /[/\\:*?"<>|]/);
+  assert.equal(systemImageName("gpt-direct", 3, "jpeg"), "gpt-direct--d03.jpeg");
+  const folders = queryFolderNames([
+    { id: "vir-a", query: "Cozy reading!" },
+    { id: "vir-b", query: "cozy reading" },
+    { id: "vir-c", query: "植物知识卡" },
+  ]);
+  assert.equal(folders.get("vir-a"), "cozy-reading--vir-a");
+  assert.equal(folders.get("vir-b"), "cozy-reading--vir-b");
+  assert.equal(folders.get("vir-c"), "植物知识卡");
+});
+
+test("integrated production gallery normalizes moved GPT outputs and shows both systems", () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), "vir-gpt-integrated-"));
+  const outDir = path.join(directory, "gpt-direct");
+  fs.mkdirSync(outDir);
+  fs.writeFileSync(path.join(outDir, "fixture.jpeg"), "fixture-image");
+  const gptResults = normalizeIntegratedGptResults(
+    [
+      {
+        vir_query_id: "vir-v2-fixture",
+        vir_direction: 1,
+        out: "fixture.jpeg",
+        status: "completed",
+        local_path: "reports/old-run/fixture.jpeg",
+      },
+    ],
+    outDir,
+  );
+  assert.equal(gptResults[0].status, "completed");
+  assert.equal(path.basename(gptResults[0].local_path), "fixture.jpeg");
+  assert.ok(gptResults[0].sha256);
+
+  const html = productionGallery({
+    stage: "core",
+    stageDir: path.resolve("reports/run"),
+    records: [
+      {
+        id: "vir-v2-fixture",
+        query: "fixture query",
+        language: "en",
+        partition: "core",
+        difficulty: "low",
+      },
+    ],
+    gptResults,
+    results: [
+      {
+        query_id: "vir-v2-fixture",
+        direction: 1,
+        template_id: "template-fixture",
+        status: "completed",
+        local_path: "reports/run/by-query/fixture/curify-gemini--d01.jpg",
+      },
+    ],
+    omissions: [],
+  });
+  assert.match(html, /GPT-direct · gpt-image-2/);
+  assert.match(html, /Curify · gemini-3-pro-image-preview/);
+  assert.match(html, /gpt-direct\/fixture\.jpeg/);
+  assert.match(html, /by-query\/fixture\/curify-gemini--d01\.jpg/);
 });
 
 test("Gemini production renderer checkpoints an image and resumes without a network call", async () => {

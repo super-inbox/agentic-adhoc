@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-021",
+  "query": "围绕兼具知识性和灵感感的银杏视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+  "language": "mixed",
+  "partition": "exploration",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-distinct-visual-directions-先别锁定一种-style",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-distinct-visual-directions-先别锁定一种-style/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 422680,
+      "sha256": "df4f31159d4c8d874a00bbc060c2c6d9bd9505087300a53ecb6786c2cc78aff3"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-distinct-visual-directions-先别锁定一种-style/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 341638,
+      "sha256": "9f6301ba728897e0e9fc1d782e6ba19b44be36b7190812f0d39b3a6d78bfa2dc"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-distinct-visual-directions-先别锁定一种-style/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 401640,
+      "sha256": "622599411dd4a7d3212a215bb6b937cd9dcd3bf91f384029280d2b0c37c247c2"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-distinct-visual-directions-先别锁定一种-style/curify-gemini--d01.jpg",
+      "template_id": "template-cultural-travel-journey-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 993139,
+      "sha256": "53c7d39fde3448d08e68d18e77ff49fc48082d1db4be166bea438869fce918ea"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-distinct-visual-directions-先别锁定一种-style/curify-gemini--d02.jpg",
+      "template_id": "template-cartoon-action-visual-guide-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 669896,
+      "sha256": "ef5deb761da7af21d7c08da78cdb04126f6737b889922284df8ad187c38045b0"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-distinct-visual-directions-先别锁定一种-style/curify-gemini--d03.jpg",
+      "template_id": "template-top10-visual-guide-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 986382,
+      "sha256": "8e4dc23567dc98f699c67eb2254d4346ca4685b8876475f328fd0705ccf2083d"
+    }
+  ],
+  "curify_omission": null
+}

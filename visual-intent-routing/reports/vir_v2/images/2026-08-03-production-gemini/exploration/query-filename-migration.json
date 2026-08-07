@@ -1,0 +1,1651 @@
+{
+  "schema_version": 1,
+  "naming_policy_version": "query-filename-v1",
+  "run_id": "2026-08-03-production-gemini",
+  "stage": "exploration",
+  "renamed_at": "2026-08-07T13:41:48.788Z",
+  "format": "<normalized-query>--<query-id>--d<direction>.<extension>",
+  "completed_images": 163,
+  "renamed_files": 163,
+  "metadata_rows_rewritten": {
+    "gpt_input": 90,
+    "gpt_pending": 0,
+    "gpt_results": 90,
+    "gpt_terminal_failures": 8,
+    "curify_input": 85,
+    "curify_pending": 0,
+    "curify_results": 85
+  },
+  "entries": [
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-001",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-001--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同--vir-v2-exploration-001--d01.jpeg",
+      "bytes": 435071,
+      "sha256": "db1afa7ff02a36a5066ec0842bc60767f1944ecba45dca2ac75958d7f60dabad"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-001",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-001--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同--vir-v2-exploration-001--d02.jpeg",
+      "bytes": 306311,
+      "sha256": "a99a6ae7cda7e96dd8a82df964bb433e60663516598c99b38ea6542ecebf4d17"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-001",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-001--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同--vir-v2-exploration-001--d03.jpeg",
+      "bytes": 340913,
+      "sha256": "fcf05f9862b152d5a72e0cd3d092e26594d4e6ebdee371f527ada68c96f1031a"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-002",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-002--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初次到访者的陕西剪纸文化体验探索三个不同--vir-v2-exploration-002--d01.jpeg",
+      "bytes": 382901,
+      "sha256": "82939e77659e78b93132b4c2074f324804e716c7861a9de9b55d879e0c12e3ac"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-002",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-002--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初次到访者的陕西剪纸文化体验探索三个不同--vir-v2-exploration-002--d02.jpeg",
+      "bytes": 397095,
+      "sha256": "aa61ca33cd26b0b5bab2247a83e58d23998b8e9c304e6c6463a2cca1ca692302"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-002",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-002--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初次到访者的陕西剪纸文化体验探索三个不同--vir-v2-exploration-002--d03.jpeg",
+      "bytes": 536640,
+      "sha256": "29d93afc50e12d53d181cde806189652b93120c2483eaae6a368583bd85634da"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-003",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-003--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-003--d01.jpeg",
+      "bytes": 280452,
+      "sha256": "5a3abe1d782eb85a11ef9401e5b2323f5abd03ec8d72f251b15e33a9e91a5cb3"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-003",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-003--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-003--d02.jpeg",
+      "bytes": 264403,
+      "sha256": "c8c423ecb7f1a5fc8dd3d4e5da2d73a612052a2db888e79a0fcbe68c3a9e0935"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-003",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-003--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-003--d03.jpeg",
+      "bytes": 363754,
+      "sha256": "e50ede816cc38d6c99e70ce3e95d9cec6419c4645f9b2b61c6dc037cbeee587d"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-004",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-004--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕以香薰机为核心的平静家居香氛发布主题探索三个--vir-v2-exploration-004--d01.jpeg",
+      "bytes": 160196,
+      "sha256": "26a0f41080f5b9d6be79e290ae53b02937cc0b9fabffd5b748d9c5530705a47f"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-004",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-004--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕以香薰机为核心的平静家居香氛发布主题探索三个--vir-v2-exploration-004--d02.jpeg",
+      "bytes": 167132,
+      "sha256": "549c0445bcf5b8024c007254bc0458140cffcde819696aebcc4822e96e708754"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-004",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-004--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕以香薰机为核心的平静家居香氛发布主题探索三个--vir-v2-exploration-004--d03.jpeg",
+      "bytes": 191475,
+      "sha256": "75a785c6a575f56b50525f003505228d3118e561b4153a69886dfabc498c7e0d"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-006",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-006--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初学者的英语同音词和易混词学习主题探索三--vir-v2-exploration-006--d01.jpeg",
+      "bytes": 302552,
+      "sha256": "03559f28de76e6b3d270daf0173d3037a0d7b0f13cfc08d0e5b38a02ac7da429"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-006",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-006--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初学者的英语同音词和易混词学习主题探索三--vir-v2-exploration-006--d02.jpeg",
+      "bytes": 253103,
+      "sha256": "d0386d2def852f729b4b92ecf5ced653a9e396032c1fcc50bbee94d897984cae"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-006",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-006--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初学者的英语同音词和易混词学习主题探索三--vir-v2-exploration-006--d03.jpeg",
+      "bytes": 398688,
+      "sha256": "87bdfcc9d916610d3c7855d3f411ccc7f4e7994e8c8d5553aafc56a1eaa89233"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-007",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-007--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向第一次了解古巴三明治的人做一组视觉故事探--vir-v2-exploration-007--d01.jpeg",
+      "bytes": 378276,
+      "sha256": "28b9beea6933bb5c3c7d6ce574b06928e1ab6193e6b1cc2dde05131dfd225d40"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-007",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-007--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向第一次了解古巴三明治的人做一组视觉故事探--vir-v2-exploration-007--d02.jpeg",
+      "bytes": 474794,
+      "sha256": "e245e2a72eb62be7033f3041159c09a7b10444e2d529042b59ca00b0cabdf15c"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-007",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-007--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向第一次了解古巴三明治的人做一组视觉故事探--vir-v2-exploration-007--d03.jpeg",
+      "bytes": 552383,
+      "sha256": "bb4ec839a250d449ccb759efe90fe44acb3f06ce88f02f5af76fb9a803c9cad9"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-008",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-008--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕帮助旅行者发现京都传统工艺的旅行主题探索三个--vir-v2-exploration-008--d01.jpeg",
+      "bytes": 265789,
+      "sha256": "968a8b0f24255f50f23b7f9c31261724d61e542160efa503576b76ff9660d671"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-008",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-008--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕帮助旅行者发现京都传统工艺的旅行主题探索三个--vir-v2-exploration-008--d02.jpeg",
+      "bytes": 360920,
+      "sha256": "b195acd7c284d1865d94961d7a5e6ee81f9c89ec849e4da1098b6e85e7c1641d"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-008",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-008--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕帮助旅行者发现京都传统工艺的旅行主题探索三个--vir-v2-exploration-008--d03.jpeg",
+      "bytes": 513323,
+      "sha256": "d825a01cdcf4e0f57b05f4c59b9846b4872422a417770bebb9ed80f2d2e337e0"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-009",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-009--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-009--d01.jpeg",
+      "bytes": 343757,
+      "sha256": "c3e9c5e9d8a06d5bd7fee166cda7b436137e812e0c9346fc4bc679880244fc6d"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-009",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-009--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-009--d02.jpeg",
+      "bytes": 217563,
+      "sha256": "89d39cb72ad23cc12c3917859624b1420daba8819f841861eb561e3b37f8ef20"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-009",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-009--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-009--d03.jpeg",
+      "bytes": 319107,
+      "sha256": "6560a09093b13ee5fc8e731c26b3883ed4a1ff7d457bd361f35017b44bd15ed1"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-010",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-010--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索--vir-v2-exploration-010--d01.jpeg",
+      "bytes": 260267,
+      "sha256": "0fd5fa5ff307ecc8131b46b1a46e5de91bc0be79c76e219fc40689ee8187d094"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-010",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-010--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索--vir-v2-exploration-010--d02.jpeg",
+      "bytes": 320349,
+      "sha256": "74c654f809d0c384be21023895f1b07d657b08f5a0e85dbba5cb61db125402fb"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-010",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-010--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索--vir-v2-exploration-010--d03.jpeg",
+      "bytes": 252877,
+      "sha256": "3fc03c5beb382fe130d13f6d629fd03d29c1cac37f1aac9a23c6ce92e88c5a6f"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-011",
+      "query": "Explore three visual directions for an informative and inspiring visual story about ginkgo. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-011--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-an-informative-and-inspiring-visual--vir-v2-exploration-011--d01.jpeg",
+      "bytes": 412167,
+      "sha256": "113d0039aea3fabc86a7c10a7803bf096c8a50485965311edb58a7f1f142092d"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-011",
+      "query": "Explore three visual directions for an informative and inspiring visual story about ginkgo. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-011--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-an-informative-and-inspiring-visual--vir-v2-exploration-011--d02.jpeg",
+      "bytes": 334339,
+      "sha256": "6ed3ce4e3bb9dd057d57b40660c51fc5b1166f0e47fe6d357ace063d476497ee"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-011",
+      "query": "Explore three visual directions for an informative and inspiring visual story about ginkgo. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-011--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-an-informative-and-inspiring-visual--vir-v2-exploration-011--d03.jpeg",
+      "bytes": 421878,
+      "sha256": "19cee6da05580e36acd04ebec5d5bae9bbea7cc10c61da91e87fc138fe84cf7a"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-012",
+      "query": "Explore three visual directions for a Shaanxi paper-cutting culture experience for first-time visitors. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-012--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-expe--vir-v2-exploration-012--d01.jpeg",
+      "bytes": 491989,
+      "sha256": "1076cdcd0a90ce160f3bfdb42e18500dce6351d1717fd26b2dae492b9a7c55d2"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-012",
+      "query": "Explore three visual directions for a Shaanxi paper-cutting culture experience for first-time visitors. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-012--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-expe--vir-v2-exploration-012--d02.jpeg",
+      "bytes": 415429,
+      "sha256": "efaf12d021b16d50a89f86dd145a633ea52578c7e6e2c1e76b7c51d8142e88a6"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-012",
+      "query": "Explore three visual directions for a Shaanxi paper-cutting culture experience for first-time visitors. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-012--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-expe--vir-v2-exploration-012--d03.jpeg",
+      "bytes": 428603,
+      "sha256": "72492a092d1025f580b201ab325c63e89b4ce1043778f34ecf53093dccb6beae"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-013",
+      "query": "Explore three visual directions for a cozy reading world for young adults, including atmosphere and useful ideas. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-013--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-cozy-reading-world-for-young-adult--vir-v2-exploration-013--d01.jpeg",
+      "bytes": 295510,
+      "sha256": "81b8ec63326662d779b2475ea6238dad73b8503c5726b809ba62a043b7d99c82"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-013",
+      "query": "Explore three visual directions for a cozy reading world for young adults, including atmosphere and useful ideas. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-013--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-cozy-reading-world-for-young-adult--vir-v2-exploration-013--d02.jpeg",
+      "bytes": 250853,
+      "sha256": "fe19aaca0a156673c63d1ce5e60f80a5aa4f35f83d202b00b953ca609f04ee1a"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-013",
+      "query": "Explore three visual directions for a cozy reading world for young adults, including atmosphere and useful ideas. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-013--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-cozy-reading-world-for-young-adult--vir-v2-exploration-013--d03.jpeg",
+      "bytes": 263252,
+      "sha256": "1224e89c20adf0e0fb75461b97cf803217faa201aa4f660a3875dc0bd3e5269a"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-014",
+      "query": "Explore three visual directions for a calm home-fragrance launch centered on an aroma diffuser. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-014--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centere--vir-v2-exploration-014--d01.jpeg",
+      "bytes": 164594,
+      "sha256": "0b36b284ce6cb7a40d54fba5a41010ff7e522e6311eb522526695c7dc40d4a76"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-014",
+      "query": "Explore three visual directions for a calm home-fragrance launch centered on an aroma diffuser. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-014--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centere--vir-v2-exploration-014--d02.jpeg",
+      "bytes": 190244,
+      "sha256": "9f3a8c62d00e0dad4166187cdc26ba86e7176d4e83a3a9b8b665eae4d9dd52a7"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-014",
+      "query": "Explore three visual directions for a calm home-fragrance launch centered on an aroma diffuser. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-014--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centere--vir-v2-exploration-014--d03.jpeg",
+      "bytes": 183561,
+      "sha256": "7ee7cfdf425678f3a2b74ff98f3a66474a0beff4a13fd08db3b2309456a158dd"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-015",
+      "query": "Explore three visual directions for a Marvel character world focused on personalities and relationship dynamics. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-015--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-marvel-character-world-focused-on--vir-v2-exploration-015--d03.jpeg",
+      "bytes": 232648,
+      "sha256": "ab1c703f4c756858018969b561d98520955d055c3cf6f080ed86356f220742c8"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-016",
+      "query": "Explore three visual directions for a beginner-friendly campaign for learning English homophones and confusing words. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-016--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-lea--vir-v2-exploration-016--d01.jpeg",
+      "bytes": 278629,
+      "sha256": "8dd80d1e1903ecc45201ef57ce9f594049577e35f3841920ac670e1858140bf9"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-016",
+      "query": "Explore three visual directions for a beginner-friendly campaign for learning English homophones and confusing words. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-016--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-lea--vir-v2-exploration-016--d02.jpeg",
+      "bytes": 281719,
+      "sha256": "e9a67d77336f8ba1db971773865b43770e52e8645b7a9a44ea9bf67982023425"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-016",
+      "query": "Explore three visual directions for a beginner-friendly campaign for learning English homophones and confusing words. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-016--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-lea--vir-v2-exploration-016--d03.jpeg",
+      "bytes": 386003,
+      "sha256": "ce4bf55c57fdfafd2ce65f62b769c0e169c9f7950c0c2fab1e8b31f90349bff5"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-017",
+      "query": "Explore three visual directions for a Cuban sandwich visual story for people discovering the dish. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-017--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-pe--vir-v2-exploration-017--d01.jpeg",
+      "bytes": 451061,
+      "sha256": "f58a83604878c35e2ed59a684c5cc1f9e1cae4275a77623fbacb356fb3058e30"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-017",
+      "query": "Explore three visual directions for a Cuban sandwich visual story for people discovering the dish. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-017--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-pe--vir-v2-exploration-017--d02.jpeg",
+      "bytes": 439171,
+      "sha256": "89f3c0677d57172964afe4908526a1eb4ce43f0cf92aef2dfa69d6b8ca5a330a"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-017",
+      "query": "Explore three visual directions for a Cuban sandwich visual story for people discovering the dish. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-017--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-pe--vir-v2-exploration-017--d03.jpeg",
+      "bytes": 492841,
+      "sha256": "d55fe20709b3d2c61bf7b8eb9a937ef36f16f8308abe78ab7ff300291828f593"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-018",
+      "query": "Explore three visual directions for a Kyoto trip theme that helps visitors discover traditional crafts. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-018--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visito--vir-v2-exploration-018--d01.jpeg",
+      "bytes": 271431,
+      "sha256": "7c0325ece05b8fb37def11aa89678c82cd764a4b37ceea34e58d1fa00555a6f2"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-018",
+      "query": "Explore three visual directions for a Kyoto trip theme that helps visitors discover traditional crafts. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-018--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visito--vir-v2-exploration-018--d02.jpeg",
+      "bytes": 241940,
+      "sha256": "4a1019405ab233227a9f333da818f607195765c018d5ac05f36f6555f31481e8"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-018",
+      "query": "Explore three visual directions for a Kyoto trip theme that helps visitors discover traditional crafts. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-018--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visito--vir-v2-exploration-018--d03.jpeg",
+      "bytes": 356412,
+      "sha256": "19689791dcec0527553f0d7438c6d0c8ba1c21811b0ce552441c24036d85391c"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-019",
+      "query": "Explore three visual directions for an orchid-inspired visual world spanning botanical story, colors, materials, and couture. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-019--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-an-orchid-inspired-visual-world-span--vir-v2-exploration-019--d01.jpeg",
+      "bytes": 365965,
+      "sha256": "6d7b9bf8e708a9ebbb2d8b867f250a1543e8315e069d86f078002df6dcee58e3"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-019",
+      "query": "Explore three visual directions for an orchid-inspired visual world spanning botanical story, colors, materials, and couture. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-019--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-an-orchid-inspired-visual-world-span--vir-v2-exploration-019--d02.jpeg",
+      "bytes": 240160,
+      "sha256": "ef0aa1d61439bff0187fbbf62bd0a16f16b813a96be98add740d1a6a31a545a4"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-019",
+      "query": "Explore three visual directions for an orchid-inspired visual world spanning botanical story, colors, materials, and couture. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-019--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-an-orchid-inspired-visual-world-span--vir-v2-exploration-019--d03.jpeg",
+      "bytes": 297435,
+      "sha256": "6ec803efa7e12c4473d205220436b4a56010e5237a4e2c617f4826eb13c1907a"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-020",
+      "query": "Explore three visual directions for a Chiikawa-themed cozy reading space and lifestyle idea. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-020--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space--vir-v2-exploration-020--d01.jpeg",
+      "bytes": 268579,
+      "sha256": "64a7b102821d7b415ddfe47618065e7f994d6324235a8a37c098ae18f9188e44"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-020",
+      "query": "Explore three visual directions for a Chiikawa-themed cozy reading space and lifestyle idea. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-020--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space--vir-v2-exploration-020--d02.jpeg",
+      "bytes": 253439,
+      "sha256": "c9404f362a12f14d6cf63d518b12f626c45a07fc40a582bfcf7ee62a3f8732d5"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-020",
+      "query": "Explore three visual directions for a Chiikawa-themed cozy reading space and lifestyle idea. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-020--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space--vir-v2-exploration-020--d03.jpeg",
+      "bytes": 240773,
+      "sha256": "c0302ee6679077e58f797314c944e55a259309fb18688d956880a25959243a70"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-021",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-021--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-dis--vir-v2-exploration-021--d01.jpeg",
+      "bytes": 422680,
+      "sha256": "df4f31159d4c8d874a00bbc060c2c6d9bd9505087300a53ecb6786c2cc78aff3"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-021",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-021--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-dis--vir-v2-exploration-021--d02.jpeg",
+      "bytes": 341638,
+      "sha256": "9f6301ba728897e0e9fc1d782e6ba19b44be36b7190812f0d39b3a6d78bfa2dc"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-021",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-021--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-dis--vir-v2-exploration-021--d03.jpeg",
+      "bytes": 401640,
+      "sha256": "622599411dd4a7d3212a215bb6b937cd9dcd3bf91f384029280d2b0c37c247c2"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-022",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-022--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初次到访者的陕西剪纸文化体验-explore-three-dis--vir-v2-exploration-022--d01.jpeg",
+      "bytes": 409836,
+      "sha256": "4768633fef86bf84eb9b472ec198d1be9676a273e32108ba086ef914bfb18a23"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-022",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-022--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初次到访者的陕西剪纸文化体验-explore-three-dis--vir-v2-exploration-022--d02.jpeg",
+      "bytes": 439537,
+      "sha256": "31cbb59d739436b7a8e6c87fe14ad77c4424fd767b8390d27642ce2daecb6db9"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-022",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-022--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初次到访者的陕西剪纸文化体验-explore-three-dis--vir-v2-exploration-022--d03.jpeg",
+      "bytes": 366117,
+      "sha256": "6b1037576cf1afcaba344ad88e07f7edee17e431ee61c94ca01baf200c62c4ab"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-023",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-023--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-023--d01.jpeg",
+      "bytes": 271409,
+      "sha256": "873a0b6dda28ccc13b1872f44f49226712efdc54560a43b835e0402f27f6e601"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-023",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-023--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-023--d02.jpeg",
+      "bytes": 278403,
+      "sha256": "e7b88804ed1d918f1efe5cac3366f8e72c421d75861b0a78956b7be1180cf9d0"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-023",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-023--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-023--d03.jpeg",
+      "bytes": 322510,
+      "sha256": "168845707e23c04429782bef8326a47e169cc7be0e7620fa68aab098edc2f146"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-024",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-024--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕以香薰机为核心的平静家居香氛发布主题-explore-thr--vir-v2-exploration-024--d01.jpeg",
+      "bytes": 155777,
+      "sha256": "d4655f983a38e7d64f5a2d72e5eb57df4878b2ecc748209e8a8b633a98a7ece3"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-024",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-024--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕以香薰机为核心的平静家居香氛发布主题-explore-thr--vir-v2-exploration-024--d02.jpeg",
+      "bytes": 165471,
+      "sha256": "09d534371830d74ddc95bbefc5ef5a047c20ccea4a3fb42e507e485a2d862f23"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-024",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-024--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕以香薰机为核心的平静家居香氛发布主题-explore-thr--vir-v2-exploration-024--d03.jpeg",
+      "bytes": 185746,
+      "sha256": "9f0aafba1d5f365ded0582d426d0a42ba8791daac5025710cbfa6c054e67cc98"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-026",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-026--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初学者的英语同音词和易混词学习主题-explore--vir-v2-exploration-026--d01.jpeg",
+      "bytes": 274880,
+      "sha256": "8f54d562647a40aaa76f94bea8382bce4421caf0f35de9bd1a431bd328abf21b"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-026",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-026--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初学者的英语同音词和易混词学习主题-explore--vir-v2-exploration-026--d02.jpeg",
+      "bytes": 332211,
+      "sha256": "05001ca87734a1fb0776a05985a2f379818cf915d650455df77c2d177468feee"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-026",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-026--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向初学者的英语同音词和易混词学习主题-explore--vir-v2-exploration-026--d03.jpeg",
+      "bytes": 286642,
+      "sha256": "762c9e004e277fd4e76debcf2a2564b0b91773fe72ed99b4d433887d7628690e"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-027",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-027--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向第一次了解古巴三明治的人做一组视觉故事-ex--vir-v2-exploration-027--d01.jpeg",
+      "bytes": 449616,
+      "sha256": "8d56a9e46df1cdaa304e6e960e4612df31e19e9dfa3ecc3e8434cecca718334a"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-027",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-027--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向第一次了解古巴三明治的人做一组视觉故事-ex--vir-v2-exploration-027--d02.jpeg",
+      "bytes": 425256,
+      "sha256": "5766684f01a6a1c5e9b22acdf7f7b4bbae2f2236ffe6d6538dd72b3bcb3c4216"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-027",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-027--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕面向第一次了解古巴三明治的人做一组视觉故事-ex--vir-v2-exploration-027--d03.jpeg",
+      "bytes": 481382,
+      "sha256": "6124e6b14b109e902004ebbed1101088e0c756bbcbfff92ffb5b5bf564f05c2c"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-028",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-028--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-thr--vir-v2-exploration-028--d01.jpeg",
+      "bytes": 393381,
+      "sha256": "3677d3f74d7096ea38fcc7e7f28e809a6ca0c25105d12bd541fb93895338a240"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-028",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-028--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-thr--vir-v2-exploration-028--d02.jpeg",
+      "bytes": 343997,
+      "sha256": "cd8a2bd48ff48519f98f383f8a07bbca41c2fc456732455b132a2e3d15178526"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-028",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-028--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-thr--vir-v2-exploration-028--d03.jpeg",
+      "bytes": 424404,
+      "sha256": "61f465e84b48c3732417ad14feaa1246548d20551c07b4fa7bcc859380b98681"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-029",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-029--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-029--d01.jpeg",
+      "bytes": 275615,
+      "sha256": "5d390e0b27c4eb4cfeda2946738e84d00ff3799e15f5e8d55b572be9861972c6"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-029",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-029--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-029--d02.jpeg",
+      "bytes": 302860,
+      "sha256": "c97c8fff980368a7788e02bc4a72db311fea66fab8509e6b06feb30b91b61cbd"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-029",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-029--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-029--d03.jpeg",
+      "bytes": 311779,
+      "sha256": "969ae9dfcb5a0698c21c9c5454fdc1cfb7bdfac1097670e10b279493c03a1e1b"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-030",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-030--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explo--vir-v2-exploration-030--d01.jpeg",
+      "bytes": 277536,
+      "sha256": "c031ac17d82a1818cd1c85600323f7ccda772d84e48027232b789df50ffb198d"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-030",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-030--02.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explo--vir-v2-exploration-030--d02.jpeg",
+      "bytes": 249678,
+      "sha256": "6bd49ce9936c480658685546d2935a79c7f6209088875018e7c196ffff812b97"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-exploration-030",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/vir-v2-exploration-030--03.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/gpt-direct/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explo--vir-v2-exploration-030--d03.jpeg",
+      "bytes": 284693,
+      "sha256": "6eec24ba8039a844bb7619c6e2e14b62d49fc021c9c299a83d05a312d3bb1bb4"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-001",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-001-1-template-educational-topic-infographic-e2055357484a.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同--vir-v2-exploration-001--d01.jpg",
+      "bytes": 1007479,
+      "sha256": "78c8bf6a983cd039af6b12fa15920ccc1d6277c8385dbb0556a4cac1aadc9a85"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-001",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-001-2-template-lifestyle-watercolor-infographic-b7c1bbce71d3.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同--vir-v2-exploration-001--d02.jpg",
+      "bytes": 874418,
+      "sha256": "82d3ec3f40a1cb9adf123ea2b3d04877df0e9bbd101172bfb4d0f5fde317906d"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-002",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-002-1-template-cultural-festival-poster-3c6f9eb3c06e.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初次到访者的陕西剪纸文化体验探索三个不同--vir-v2-exploration-002--d01.jpg",
+      "bytes": 1096161,
+      "sha256": "4bf58085e07f562d271b2a1165c70a6b8cc0e47b661507cf7f34493e25e74472"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-002",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-002-2-template-ethnic-costume-deconstruction-board-4a3e4939e5f5.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初次到访者的陕西剪纸文化体验探索三个不同--vir-v2-exploration-002--d02.jpg",
+      "bytes": 817534,
+      "sha256": "de047a2d08cf0326f4bbe5c570e32e265ca35374048b3e60c98d236e21384658"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-002",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-002-3-template-cultural-travel-journey-infographic-b11591afa8b2.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初次到访者的陕西剪纸文化体验探索三个不同--vir-v2-exploration-002--d03.jpg",
+      "bytes": 1069668,
+      "sha256": "d990cfb2be45afb8b23f5d740e686c866d29ecf148d65b1c499cafcc9f71147e"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-003",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-003-1-template-lifestyle-watercolor-infographic-628124c668c7.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-003--d01.jpg",
+      "bytes": 832470,
+      "sha256": "cf21ee84f679df0d0c1e8fcb8bf51e020207b2777464c96abe56850896274a55"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-003",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-003-2-template-vintage-ultimate-guide-infographic-7f34425164fe.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-003--d02.jpg",
+      "bytes": 1163302,
+      "sha256": "4bc669d9f8b1ddba94080ff8acdd84f6fcc11d3fd24e40bfb3e1f8a2ace4ff95"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-003",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-003-3-template-self-care-illustration-poster-be327ad1505b.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-003--d03.jpg",
+      "bytes": 889664,
+      "sha256": "4bbb840019323507ad988a7ee64401e802cf829dd6e3c0bb0ee2a9ad64c15221"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-004",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-004-1-template-home-lifestyle-guide-infographic-5163d0b25d7c.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕以香薰机为核心的平静家居香氛发布主题探索三个--vir-v2-exploration-004--d01.jpg",
+      "bytes": 955908,
+      "sha256": "77e7743dc20651f948b4b6e40ab4c3df867f1717dd74da5ed51779089d839052"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-004",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-004-2-template-watercolor-theme-collage-illustration-7eb5b3f23f67.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕以香薰机为核心的平静家居香氛发布主题探索三个--vir-v2-exploration-004--d02.jpg",
+      "bytes": 844177,
+      "sha256": "dc240063cdd8f2f3ffe5da3b37d2ebed6ae2756a27439d614b58a4c98141bbac"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-004",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-004-3-template-lifestyle-watercolor-infographic-5049e380a478.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕以香薰机为核心的平静家居香氛发布主题探索三个--vir-v2-exploration-004--d03.jpg",
+      "bytes": 782033,
+      "sha256": "9edd8ae1af395712691d2218e7fdcb75a8bb8928ff19d932f786144d633da346"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-005",
+      "query": "围绕聚焦人物性格和关系互动的漫威角色世界探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-005-1-template-dual-character-comparison-infographic-644ced1fa063.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕聚焦人物性格和关系互动的漫威角色世界探索三个--vir-v2-exploration-005--d01.jpg",
+      "bytes": 1003071,
+      "sha256": "02c3a07635c73dcfc26aa31995d7e9c6a1f17e87e23cb1c25c27ea4bd6dff84e"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-005",
+      "query": "围绕聚焦人物性格和关系互动的漫威角色世界探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-005-2-template-custom-character-card-5d27bec46bf5.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕聚焦人物性格和关系互动的漫威角色世界探索三个--vir-v2-exploration-005--d02.jpg",
+      "bytes": 1087451,
+      "sha256": "172ad4b554590b791866718e35e60291019b4a5929814e6ed8fde6841e472005"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-006",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-006-1-template-english-homograph-educational-poster-faf231ac46d5.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初学者的英语同音词和易混词学习主题探索三--vir-v2-exploration-006--d01.jpg",
+      "bytes": 820420,
+      "sha256": "b9501f4df013f9fd39545ab4bc1614089308cd73bb0f8b4c2cecd0dff37b60cf"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-006",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-006-2-template-english-grammar-wordlist-infographic-9329627764dc.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初学者的英语同音词和易混词学习主题探索三--vir-v2-exploration-006--d02.jpg",
+      "bytes": 1033475,
+      "sha256": "a0382226ac03c2fd2d05e0c95856a74b2f93af6facb656724d227cb85e1af11e"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-006",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-006-3-template-english-word-difference-infographic-ee2b6dda6c82.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初学者的英语同音词和易混词学习主题探索三--vir-v2-exploration-006--d03.jpg",
+      "bytes": 740865,
+      "sha256": "7316ef81b2ab839617e94d73dfc2eb2250c074ad00e883b9b6d753651d555e0e"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-007",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-007-1-template-food-recipe-tip-infographic-afd328a062fe.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向第一次了解古巴三明治的人做一组视觉故事探--vir-v2-exploration-007--d01.jpg",
+      "bytes": 938866,
+      "sha256": "c3b799e07554fb5a51d8a2906bf6a5367a43cf78d6c813eee8528485f7b6fe14"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-007",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-007-2-template-cultural-travel-journey-infographic-7a0259ce2687.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向第一次了解古巴三明治的人做一组视觉故事探--vir-v2-exploration-007--d02.jpg",
+      "bytes": 1075626,
+      "sha256": "edf85fb3deaa03b0c19523b0eae83b0579f81d17f3b7490bb1ffda4cd113474a"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-007",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-007-3-template-country-dos-and-donts-infographic-8aeaf0034bd5.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向第一次了解古巴三明治的人做一组视觉故事探--vir-v2-exploration-007--d03.jpg",
+      "bytes": 925259,
+      "sha256": "a889bcc6e801e805f868403b34f6e4774bbe5ed00c7a77d942a498b779d0380d"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-008",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-008-1-template-cultural-travel-journey-infographic-c97ca1d8c45a.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕帮助旅行者发现京都传统工艺的旅行主题探索三个--vir-v2-exploration-008--d01.jpg",
+      "bytes": 1033823,
+      "sha256": "125ecfb7209b6c8ca1f35fe9f7a20f61fd99885ccbf6f439a5bd4bf0418cff53"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-008",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-008-2-template-tourist-spot-watercolor-map-infographic-e5fbcbc588c0.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕帮助旅行者发现京都传统工艺的旅行主题探索三个--vir-v2-exploration-008--d02.jpg",
+      "bytes": 1000715,
+      "sha256": "163ad546927c0e716af63b93fb071f76423252158eda8d7a0137deabd65eca2f"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-008",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-008-3-template-vintage-travel-scrapbook-poster-1061f2d3792d.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕帮助旅行者发现京都传统工艺的旅行主题探索三个--vir-v2-exploration-008--d03.jpg",
+      "bytes": 976963,
+      "sha256": "2b02b55c6dbbeaea1cd3df01a2fb748738cf4504eaffc1d84c7dae7c3654de11"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-009",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-009-1-template-fashion-inspired-gown-design-sheet-9fef9d11b0ae.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-009--d01.jpg",
+      "bytes": 830277,
+      "sha256": "2791e2954a3d96384937bb0bf85b131894680cf236d15c9d8e764b86bad4ec4b"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-009",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-009-2-template-watercolor-theme-collage-illustration-1d66d2944036.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-009--d02.jpg",
+      "bytes": 920685,
+      "sha256": "a0021fce1ad48ff6df8346dfc572087b43601f805f17a0b9afefb57cdb3fc056"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-009",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-009-3-template-dessert-color-lab-infographic-4c194876739a.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-009--d03.jpg",
+      "bytes": 741884,
+      "sha256": "3653e182443e7332ca820fa09d781e0ec9d6c037278702a9ef6cd08cecc9b3ea"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-010",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-010-1-template-lifestyle-watercolor-infographic-774c5397adf6.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索--vir-v2-exploration-010--d01.jpg",
+      "bytes": 927757,
+      "sha256": "9cf009d3991f8bbebab4658025ddfa85a22e3172d4046caa7db3362400b75c5f"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-010",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-010-2-template-lifestyle-habit-infographic-fd7892e533a6.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索--vir-v2-exploration-010--d02.jpg",
+      "bytes": 990957,
+      "sha256": "390b66a25165b99d4668502acf71b1027eae0a45d344f0e53acf58b4280e55be"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-010",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向，先不要固定成一种风格。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-010-3-template-self-care-illustration-poster-f168a90c230c.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索--vir-v2-exploration-010--d03.jpg",
+      "bytes": 848647,
+      "sha256": "0f0d37b3fa3bf8dd570d7e1d8b81a3cf5e764d0f4d8993ce991f32e2baf2f29d"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-011",
+      "query": "Explore three visual directions for an informative and inspiring visual story about ginkgo. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-011-1-template-herbal-71348c72912d.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-an-informative-and-inspiring-visual--vir-v2-exploration-011--d01.jpg",
+      "bytes": 856862,
+      "sha256": "c051aad765ffc702f52a6ffc9c43c17e86c3c0a738b197724d10e32b57e048c3"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-011",
+      "query": "Explore three visual directions for an informative and inspiring visual story about ginkgo. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-011-2-template-gardening-how-to-infographic-b61c74732c12.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-an-informative-and-inspiring-visual--vir-v2-exploration-011--d02.jpg",
+      "bytes": 893584,
+      "sha256": "9f68d479d7c08849798d33295a47d530fa5c07e16a5beb74e986876d8c040ec6"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-011",
+      "query": "Explore three visual directions for an informative and inspiring visual story about ginkgo. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-011-3-template-vintage-ultimate-guide-infographic-c159a4f21a69.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-an-informative-and-inspiring-visual--vir-v2-exploration-011--d03.jpg",
+      "bytes": 1078295,
+      "sha256": "eae39af2e3f3d3f3076db0fbd682c2c2690baa931220495c00e131a36fc8d1fb"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-012",
+      "query": "Explore three visual directions for a Shaanxi paper-cutting culture experience for first-time visitors. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-012-1-template-intangible-heritage-0d6cccdfec9b.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-expe--vir-v2-exploration-012--d01.jpg",
+      "bytes": 1082630,
+      "sha256": "eefe22ff7a7a56838157eb3ce7e801ec633389b1b2095b211d58da22e99d9a31"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-012",
+      "query": "Explore three visual directions for a Shaanxi paper-cutting culture experience for first-time visitors. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-012-2-template-cultural-relic-retro-infographic-7647fd08381b.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-expe--vir-v2-exploration-012--d02.jpg",
+      "bytes": 1128721,
+      "sha256": "dce0e976e8bdaad8c54b7e9d1a1f9d97b2870b37e201ebc1b2f81cbd79a962f9"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-012",
+      "query": "Explore three visual directions for a Shaanxi paper-cutting culture experience for first-time visitors. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-012-3-template-ethnic-costume-deconstruction-board-c5dd4a602dc4.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-expe--vir-v2-exploration-012--d03.jpg",
+      "bytes": 998722,
+      "sha256": "857d5473fca9fa2a6a402e7a8b094791c956c90083ba6fd1688a43b47cb3cfe5"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-013",
+      "query": "Explore three visual directions for a cozy reading world for young adults, including atmosphere and useful ideas. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-013-1-template-watercolor-theme-collage-illustration-893382961598.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-cozy-reading-world-for-young-adult--vir-v2-exploration-013--d01.jpg",
+      "bytes": 929885,
+      "sha256": "e1516e42fcffbe729f005b4d86166db3f224fdac36d04228025f86864227d1ac"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-013",
+      "query": "Explore three visual directions for a cozy reading world for young adults, including atmosphere and useful ideas. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-013-2-template-home-lifestyle-guide-infographic-7e1375be0df4.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-cozy-reading-world-for-young-adult--vir-v2-exploration-013--d02.jpg",
+      "bytes": 930294,
+      "sha256": "6cfa6a3a2e9b07fa7586782772fe1a5ce2aef0eead37c879d4f75e4d76eba5ad"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-013",
+      "query": "Explore three visual directions for a cozy reading world for young adults, including atmosphere and useful ideas. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-013-3-template-vintage-ultimate-guide-infographic-f30546e82573.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-cozy-reading-world-for-young-adult--vir-v2-exploration-013--d03.jpg",
+      "bytes": 1123863,
+      "sha256": "dfc89660029b9fe0ae0609e40405f4622ebc9440c926a31eb2e33077af481c9c"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-014",
+      "query": "Explore three visual directions for a calm home-fragrance launch centered on an aroma diffuser. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-014-1-template-home-lifestyle-guide-infographic-09f34a9ec0a3.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centere--vir-v2-exploration-014--d01.jpg",
+      "bytes": 1032573,
+      "sha256": "da908460cd3f90f3baa6c8435662eaafbdffa98fe507339291508c628ba96a50"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-014",
+      "query": "Explore three visual directions for a calm home-fragrance launch centered on an aroma diffuser. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-014-2-template-watercolor-theme-collage-illustration-094795c646e5.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centere--vir-v2-exploration-014--d02.jpg",
+      "bytes": 762103,
+      "sha256": "93c11774eda6cec026ae8d4ca1f61c4e2d30ebedbd5eccfb28a541bf9cc0c448"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-014",
+      "query": "Explore three visual directions for a calm home-fragrance launch centered on an aroma diffuser. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-014-3-template-lifestyle-habit-infographic-f64f612f4435.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centere--vir-v2-exploration-014--d03.jpg",
+      "bytes": 1026467,
+      "sha256": "4225909c992baa7be0a9e6e50501d3511140ffb5b9459f13bb439f825ca7a31d"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-015",
+      "query": "Explore three visual directions for a Marvel character world focused on personalities and relationship dynamics. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-015-1-template-dual-character-comparison-infographic-547c85e30544.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-marvel-character-world-focused-on--vir-v2-exploration-015--d01.jpg",
+      "bytes": 1125304,
+      "sha256": "f665c556b2c7796410e11a1312486c78838bfbeb51e270cb5ddc59dcffac7a63"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-016",
+      "query": "Explore three visual directions for a beginner-friendly campaign for learning English homophones and confusing words. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-016-1-template-english-grammar-wordlist-infographic-b2f3a170e525.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-beginner-friendly-campaign-for-lea--vir-v2-exploration-016--d01.jpg",
+      "bytes": 977005,
+      "sha256": "11fa4be6cbadb2b1d1cffeda89fcc8df8301f5b8c105900bfa08765d8004f861"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-017",
+      "query": "Explore three visual directions for a Cuban sandwich visual story for people discovering the dish. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-017-1-template-food-b12afe0aec47.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-pe--vir-v2-exploration-017--d01.jpg",
+      "bytes": 969675,
+      "sha256": "ebba27005f9d8c03c88f4014923c942a23f51da41c5af08fd50fc15d6d13fda9"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-017",
+      "query": "Explore three visual directions for a Cuban sandwich visual story for people discovering the dish. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-017-2-template-premium-recipe-card-infographic-ee64eb78a073.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-pe--vir-v2-exploration-017--d02.jpg",
+      "bytes": 988740,
+      "sha256": "c0121f7e5cce8f882f1ddc1433214b3b8e257766eac5b86d600ac227389dd9b9"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-017",
+      "query": "Explore three visual directions for a Cuban sandwich visual story for people discovering the dish. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-017-3-template-varieties-food-poster-d2c967256678.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-cuban-sandwich-visual-story-for-pe--vir-v2-exploration-017--d03.jpg",
+      "bytes": 683681,
+      "sha256": "3eaf5582bd6f368f4917b50a978f5e75b5aa3f5936a978f580cb79d9ff8a8ab7"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-018",
+      "query": "Explore three visual directions for a Kyoto trip theme that helps visitors discover traditional crafts. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-018-1-template-cultural-travel-journey-infographic-4697bdec764a.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visito--vir-v2-exploration-018--d01.jpg",
+      "bytes": 1155203,
+      "sha256": "9e9a9d2731ab61f01caa215057f987c274d4a8e698407668c07a8c740cc14afd"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-018",
+      "query": "Explore three visual directions for a Kyoto trip theme that helps visitors discover traditional crafts. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-018-2-template-tourist-spot-watercolor-map-infographic-6fe4959d1c56.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visito--vir-v2-exploration-018--d02.jpg",
+      "bytes": 1015278,
+      "sha256": "d4d08f7dca5c43d51ec82594eb53be2ba068f891d6ba20b25315957661afe9f8"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-018",
+      "query": "Explore three visual directions for a Kyoto trip theme that helps visitors discover traditional crafts. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-018-3-template-ethnic-costume-deconstruction-board-70da33eb9547.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visito--vir-v2-exploration-018--d03.jpg",
+      "bytes": 862343,
+      "sha256": "66db9d6c997eea22e86c72638771c29b65907cc0e5a9a64cd43cb9592a300602"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-019",
+      "query": "Explore three visual directions for an orchid-inspired visual world spanning botanical story, colors, materials, and couture. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-019-1-template-fashion-inspired-gown-design-sheet-54ff20b58bf6.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-an-orchid-inspired-visual-world-span--vir-v2-exploration-019--d01.jpg",
+      "bytes": 580371,
+      "sha256": "8411f8b7b68c69de2d69200a183b8ea84b2da4305b6f20306251b72a1b6befb5"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-019",
+      "query": "Explore three visual directions for an orchid-inspired visual world spanning botanical story, colors, materials, and couture. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-019-2-template-watercolor-travel-journal-collage-937075160235.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-an-orchid-inspired-visual-world-span--vir-v2-exploration-019--d02.jpg",
+      "bytes": 1215188,
+      "sha256": "6d8d37f7b065ec8a7469162b6c71b44b3f5ccb3fd0af4d56c4ab4b89dad5edec"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-019",
+      "query": "Explore three visual directions for an orchid-inspired visual world spanning botanical story, colors, materials, and couture. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-019-3-template-dessert-color-lab-infographic-72d21f9679d2.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-an-orchid-inspired-visual-world-span--vir-v2-exploration-019--d03.jpg",
+      "bytes": 570417,
+      "sha256": "960187ba1a29b36333e81288fab2b9893f98a9cda77c3a96fc3c97f294936679"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-020",
+      "query": "Explore three visual directions for a Chiikawa-themed cozy reading space and lifestyle idea. Vary style and composition. Show different options before I choose.",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-020-1-template-watercolor-theme-collage-illustration-08f9540b5203.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space--vir-v2-exploration-020--d01.jpg",
+      "bytes": 965950,
+      "sha256": "44a5b5704fa0936a75cb70ec9ae438d332191be01b03848ce52c0c381c6dd8c5"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-020",
+      "query": "Explore three visual directions for a Chiikawa-themed cozy reading space and lifestyle idea. Vary style and composition. Show different options before I choose.",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-020-2-template-lifestyle-watercolor-infographic-e97aa2923fd5.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space--vir-v2-exploration-020--d02.jpg",
+      "bytes": 965062,
+      "sha256": "dee176f05a44ffbcad93fb0707d18a59def3b0b6f5df9b1e30e66754608d212b"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-020",
+      "query": "Explore three visual directions for a Chiikawa-themed cozy reading space and lifestyle idea. Vary style and composition. Show different options before I choose.",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-020-3-template-lifestyle-photo-grid-a08f3c9ffd10.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/explore-three-visual-directions-for-a-chiikawa-themed-cozy-reading-space--vir-v2-exploration-020--d03.jpg",
+      "bytes": 884287,
+      "sha256": "c386cd284e20f3cbf6cf019219d89f11227e758aec73e3eef9e14c626ca31e7d"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-021",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-021-1-template-cultural-travel-journey-infographic-4ce13d3b56a5.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-dis--vir-v2-exploration-021--d01.jpg",
+      "bytes": 993139,
+      "sha256": "53c7d39fde3448d08e68d18e77ff49fc48082d1db4be166bea438869fce918ea"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-021",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-021-2-template-cartoon-action-visual-guide-infographic-2e9132e04804.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-dis--vir-v2-exploration-021--d02.jpg",
+      "bytes": 669896,
+      "sha256": "ef5deb761da7af21d7c08da78cdb04126f6737b889922284df8ad187c38045b0"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-021",
+      "query": "围绕兼具知识性和灵感感的银杏视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-021-3-template-top10-visual-guide-infographic-a73e4516c1e4.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕兼具知识性和灵感感的银杏视觉故事-explore-three-dis--vir-v2-exploration-021--d03.jpg",
+      "bytes": 986382,
+      "sha256": "8e4dc23567dc98f699c67eb2254d4346ca4685b8876475f328fd0705ccf2083d"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-022",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-022-1-template-cultural-festival-poster-541f41388e59.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初次到访者的陕西剪纸文化体验-explore-three-dis--vir-v2-exploration-022--d01.jpg",
+      "bytes": 1187260,
+      "sha256": "6fe0994259fa83c8841129ac1a5b6fe0c055911dfe049fe90024915e54011b22"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-022",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-022-2-template-ethnic-costume-deconstruction-board-e97af67c3726.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初次到访者的陕西剪纸文化体验-explore-three-dis--vir-v2-exploration-022--d02.jpg",
+      "bytes": 977937,
+      "sha256": "02f0ca88e719cf5d6600836aab85eebd5d7bf0707d27de1439cfc0e7ab625000"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-022",
+      "query": "围绕面向初次到访者的陕西剪纸文化体验，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-022-3-template-country-souvenirs-watercolor-85d4fccaff9e.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初次到访者的陕西剪纸文化体验-explore-three-dis--vir-v2-exploration-022--d03.jpg",
+      "bytes": 1020200,
+      "sha256": "bcfaccdc6d33cc5a4d5db75199f1a7251b9464da55f5803875690543ec9b55a6"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-023",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-023-2-template-self-care-illustration-poster-3280b218260b.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-023--d02.jpg",
+      "bytes": 947041,
+      "sha256": "3f968d04fa24e58f9c4f1e2207dfb90d79420a97367f7ed0f10872f635a0b521"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-023",
+      "query": "围绕面向年轻人的治愈阅读世界，要有氛围也有实用内容，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-023-3-template-lifestyle-watercolor-infographic-6d4e8e389cfc.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向年轻人的治愈阅读世界-要有氛围也有实用内--vir-v2-exploration-023--d03.jpg",
+      "bytes": 899088,
+      "sha256": "d13764e3e2346e516a529261a00929417430f9d27a2b5de90db70f68a3e7c8bf"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-024",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-024-1-template-home-lifestyle-guide-infographic-9c41d1412b0c.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕以香薰机为核心的平静家居香氛发布主题-explore-thr--vir-v2-exploration-024--d01.jpg",
+      "bytes": 1007975,
+      "sha256": "3d8929272ec8437389811711e2c0d4a978d5bf4236ac929d05311178217d8da4"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-024",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-024-2-template-watercolor-theme-collage-illustration-50010fdca177.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕以香薰机为核心的平静家居香氛发布主题-explore-thr--vir-v2-exploration-024--d02.jpg",
+      "bytes": 840839,
+      "sha256": "299b0706ba9f3406d28145a58ac913792cd073c350a2b2e53216af966c5d5607"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-024",
+      "query": "围绕以香薰机为核心的平静家居香氛发布主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-024-3-template-self-care-illustration-poster-cf49094ebf14.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕以香薰机为核心的平静家居香氛发布主题-explore-thr--vir-v2-exploration-024--d03.jpg",
+      "bytes": 948512,
+      "sha256": "0a11a6235ebfac85f6fda6916e56dcf18388893b9a6ac85c2a4cd0b127a0e983"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-025",
+      "query": "围绕聚焦人物性格和关系互动的漫威角色世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-025-2-template-custom-character-card-ae4458be5fa5.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕聚焦人物性格和关系互动的漫威角色世界-explore-thr--vir-v2-exploration-025--d02.jpg",
+      "bytes": 1082591,
+      "sha256": "f5dad2f0a27c766f9af5132e602f818d60b059b287449fbc406016e8cabe6dc8"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-025",
+      "query": "围绕聚焦人物性格和关系互动的漫威角色世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-025-3-template-dual-character-comparison-infographic-736a466062ba.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕聚焦人物性格和关系互动的漫威角色世界-explore-thr--vir-v2-exploration-025--d03.jpg",
+      "bytes": 1156649,
+      "sha256": "7f4d2ffd3d50e4bf259918a6e9454ab6c16c52970232047c950c9d5796f23d82"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-026",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-026-1-template-english-homograph-educational-poster-12f7b2512071.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初学者的英语同音词和易混词学习主题-explore--vir-v2-exploration-026--d01.jpg",
+      "bytes": 951440,
+      "sha256": "3bcc3081cd54497db2bc4c1ff3e7b279dcce8c14b986118140340349b90c2f54"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-026",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-026-2-template-english-grammar-wordlist-infographic-df5a984b1432.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初学者的英语同音词和易混词学习主题-explore--vir-v2-exploration-026--d02.jpg",
+      "bytes": 999250,
+      "sha256": "952123a0d62d55603dc442a21ef5d206f64f6b42e86728f74245a073df0016cf"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-026",
+      "query": "围绕面向初学者的英语同音词和易混词学习主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-026-3-template-english-word-difference-infographic-6a93e0ef4a95.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向初学者的英语同音词和易混词学习主题-explore--vir-v2-exploration-026--d03.jpg",
+      "bytes": 615519,
+      "sha256": "d6d0c22dd054f87be46ffc00ec5ca44d38eb1a8fb52f8815f738a91cbbfb4213"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-027",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-027-1-template-cultural-travel-journey-infographic-477ea2c5aa0f.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向第一次了解古巴三明治的人做一组视觉故事-ex--vir-v2-exploration-027--d01.jpg",
+      "bytes": 1040360,
+      "sha256": "dc7ba827a364944a5f517c1badd2b810ca199287fa1cb8e148bcf58178c7607e"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-027",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-027-2-template-food-recipe-tip-infographic-ccafcf3dfc96.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向第一次了解古巴三明治的人做一组视觉故事-ex--vir-v2-exploration-027--d02.jpg",
+      "bytes": 1044844,
+      "sha256": "ed070658e5dc74c1a6462d0a342c11dae42b1f38520c02f7ee206fa79122ccb1"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-027",
+      "query": "围绕面向第一次了解古巴三明治的人做一组视觉故事，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-027-3-template-vintage-ultimate-guide-infographic-b389ca37051c.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕面向第一次了解古巴三明治的人做一组视觉故事-ex--vir-v2-exploration-027--d03.jpg",
+      "bytes": 1212493,
+      "sha256": "ed990396a3719cf37e61f84bd25ad04ba512341c42934c4f300bfd4a0c1b490c"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-028",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-028-1-template-cultural-travel-journey-infographic-375530487d4f.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-thr--vir-v2-exploration-028--d01.jpg",
+      "bytes": 1044330,
+      "sha256": "0585ce5ad85747be77a3b26e9170ba6bee75c94ef0802ed3bb785b33ee5aa1fd"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-028",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-028-2-template-tourist-spot-watercolor-map-infographic-5f99061a8273.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-thr--vir-v2-exploration-028--d02.jpg",
+      "bytes": 1154103,
+      "sha256": "53118e5c3774e6e8fccb03ed7b6fe779a50debe4bb353ee397703aa41484c1f0"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-028",
+      "query": "围绕帮助旅行者发现京都传统工艺的旅行主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-028-3-template-best-cities-travel-infographic-13b8d69c56e6.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-thr--vir-v2-exploration-028--d03.jpg",
+      "bytes": 1030483,
+      "sha256": "427a80a844af442ea19f123f2d65ec4e89a96e449a630e5f5f9688968e7b0e20"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-029",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-029-1-template-fashion-inspired-gown-design-sheet-95f78631183a.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-029--d01.jpg",
+      "bytes": 560994,
+      "sha256": "878579c133f060f6aad3dd7782647d2b10c03730d4f75792c77ffcd00fc78a02"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-029",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-029-2-template-watercolor-theme-collage-illustration-5c30ece2d122.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-029--d02.jpg",
+      "bytes": 878298,
+      "sha256": "b90f30a2277560a07fdbd56fe149acf7031325a1d32c840672340b606d40ff2c"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-029",
+      "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 3,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-029-3-template-dessert-color-lab-infographic-59749f586732.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕从植物故事延伸到配色-材质和高定设计的兰花视--vir-v2-exploration-029--d03.jpg",
+      "bytes": 453654,
+      "sha256": "dfc3c3b4887d6572dd4a867f118579eb1872272c30a7a94c0a8f1f58d515bd00"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-030",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-030-1-template-lifestyle-habit-infographic-a52fd8af6b5e.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explo--vir-v2-exploration-030--d01.jpg",
+      "bytes": 900620,
+      "sha256": "cb8c3dcf27877475b1e45a06aa554bec84ab0155467a47b23479cfe5d1f8bca6"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-exploration-030",
+      "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+      "direction": 2,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/2026-08-03-production-gemini-exploration-vir-v2-exploration-030-2-template-self-care-illustration-poster-5e8d13cbdf5b.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/curify-gemini/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explo--vir-v2-exploration-030--d02.jpg",
+      "bytes": 775884,
+      "sha256": "9f9bce186a2f6dea2c5c176f2702c3d7fc29b6e9086eda3c4f8fdaade8a20b50"
+    }
+  ]
+}

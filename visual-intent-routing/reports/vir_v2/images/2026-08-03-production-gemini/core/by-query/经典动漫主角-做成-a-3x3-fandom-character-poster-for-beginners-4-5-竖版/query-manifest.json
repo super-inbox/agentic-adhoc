@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s05-13",
+  "query": "经典动漫主角 做成 a 3x3 fandom character poster，for beginners，4:5 竖版。",
+  "language": "mixed",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/经典动漫主角-做成-a-3x3-fandom-character-poster-for-beginners-4-5-竖版",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/经典动漫主角-做成-a-3x3-fandom-character-poster-for-beginners-4-5-竖版/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 389332,
+      "sha256": "aabba8b34160b32a4826393f108283f77ffba8cf4f99c16a569f956e213d1b1d"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "pending",
+      "local_path": null,
+      "template_id": "template-fandom-character-grid-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

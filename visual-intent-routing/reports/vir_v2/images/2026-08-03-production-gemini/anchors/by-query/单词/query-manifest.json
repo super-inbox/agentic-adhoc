@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-anchor-vir-s01",
+  "query": "单词",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/单词",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/单词/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 150489,
+      "sha256": "42f2ea5a5ca7398582d67fbca331ed9ec3909852cfe955d27ce315329753488c"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/单词/curify-gemini--d01.jpg",
+      "template_id": "template-vocabulary",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 555776,
+      "sha256": "942f7e18efaba5310d9e5db83bb52f8e8df8fd627a32050719ffb57a14f51c8b"
+    }
+  ],
+  "curify_omission": null
+}

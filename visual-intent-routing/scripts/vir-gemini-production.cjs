@@ -9,10 +9,16 @@ const {
   buildCurifyJobs,
   stageRecords,
 } = require("./vir-image-tasks.cjs");
+const {
+  queryFolderNames,
+  queryImageName,
+  queryImageStem,
+  systemImageName,
+} = require("./vir-image-names.cjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const DEFAULT_RUN_ID = "2026-08-03-production-gemini";
-const DEFAULT_PLAN_SOURCE_RUN = "2026-08-01-full";
+const DEFAULT_PLAN_SOURCE_RUN = DEFAULT_RUN_ID;
 const DEFAULT_BASE_URL = "http://localhost:3000";
 const MODEL = "gemini-3-pro-image-preview";
 
@@ -87,33 +93,32 @@ function sha256File(filePath) {
   return sha256(fs.readFileSync(filePath));
 }
 
-function safeName(value) {
-  return String(value)
-    .toLowerCase()
-    .replace(/[^a-z0-9-]+/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
-function productionSlug(runId, stage, queryId, direction, templateId) {
-  const identity = [runId, stage, queryId, direction, templateId].join("|");
-  const readable = safeName(
-    `${runId}-${stage}-${queryId}-${direction}-${templateId}`,
-  ).slice(0, 130);
-  return `${readable}-${sha256(identity).slice(0, 12)}`;
+function productionSlug(runId, stage, queryId, direction, templateId, query = null) {
+  return queryImageStem(query ?? queryId, queryId, direction);
 }
 
 function runPaths(runId, stage) {
   const stageDir = resolveRoot(`reports/vir_v2/images/${runId}/${stage}`);
+  const byQueryDir = path.join(stageDir, "by-query");
   return {
     stageDir,
+    byQueryDir,
     records: path.join(stageDir, "records.jsonl"),
     plans: path.join(stageDir, "curify-plans.jsonl"),
     input: path.join(stageDir, "curify-gemini-input.jsonl"),
     pending: path.join(stageDir, "curify-gemini-pending.jsonl"),
     results: path.join(stageDir, "curify-gemini-results.jsonl"),
     events: path.join(stageDir, "curify-gemini-events.jsonl"),
-    outDir: path.join(stageDir, "curify-gemini"),
+    outDir: byQueryDir,
+    legacyCurifyOut: path.join(stageDir, "curify-gemini"),
+    gptResults: path.join(stageDir, "gpt-direct-results.jsonl"),
+    gptInput: path.join(stageDir, "gpt-direct-input.jsonl"),
+    gptPending: path.join(stageDir, "gpt-direct-pending.jsonl"),
+    gptTerminal: path.join(stageDir, "gpt-direct-terminal-failures.jsonl"),
+    gptOut: byQueryDir,
+    legacyGptOut: path.join(stageDir, "gpt-direct"),
+    filenameMigration: path.join(stageDir, "query-filename-migration.json"),
+    folderMigration: path.join(stageDir, "query-folder-migration.json"),
     manifest: path.join(stageDir, "stage-manifest.json"),
     gallery: path.join(stageDir, "gallery.html"),
   };
@@ -196,6 +201,11 @@ async function completePlans({ rows, planPath, baseUrl, concurrency }) {
 }
 
 function buildGeminiJobs(curifyJobs, runId, stage) {
+  const folderRecords = new Map(curifyJobs.map((job) => [
+    job.vir_query_id,
+    { id: job.vir_query_id, query: job.vir_metadata.source_query },
+  ]));
+  const folderByQueryId = queryFolderNames([...folderRecords.values()]);
   return curifyJobs.map((job) => {
     const metadata = job.vir_metadata;
     const slug = productionSlug(
@@ -204,6 +214,7 @@ function buildGeminiJobs(curifyJobs, runId, stage) {
       job.vir_query_id,
       job.vir_direction,
       metadata.template_id,
+      metadata.source_query,
     );
     return {
       schema_version: 1,
@@ -220,6 +231,12 @@ function buildGeminiJobs(curifyJobs, runId, stage) {
       plan_source: metadata.plan_source ?? null,
       locale: metadata.language === "en" ? "en" : "zh",
       slug,
+      query_directory: folderByQueryId.get(job.vir_query_id),
+      local_basename: systemImageName(
+        "curify-gemini",
+        job.vir_direction,
+        "jpg",
+      ).replace(/\.jpg$/, ""),
       expected_prompt: job.prompt,
       expected_prompt_sha256: sha256(job.prompt),
       model: MODEL,
@@ -231,7 +248,11 @@ function buildGeminiJobs(curifyJobs, runId, stage) {
 function findGeminiOutput(job, outDir) {
   const absolute = resolveRoot(outDir);
   for (const extension of ["jpg", "png"] ) {
-    const candidate = path.join(absolute, `${job.slug}.${extension}`);
+    const candidate = path.join(
+      absolute,
+      job.query_directory ?? "",
+      `${job.local_basename ?? job.slug}.${extension}`,
+    );
     if (fs.existsSync(candidate) && fs.statSync(candidate).size > 0) {
       return candidate;
     }
@@ -310,8 +331,12 @@ async function generateGeminiJob({ job, outDir, baseUrl, maxAttempts }) {
       const fetched = await fetchGeneratedImage(baseUrl, payload.url, maxAttempts);
       validateImagePayload(fetched.buffer, extension);
       const absoluteOutDir = resolveRoot(outDir);
-      fs.mkdirSync(absoluteOutDir, { recursive: true });
-      const finalPath = path.join(absoluteOutDir, `${job.slug}.${extension}`);
+      const finalPath = path.join(
+        absoluteOutDir,
+        job.query_directory ?? "",
+        `${job.local_basename ?? job.slug}.${extension}`,
+      );
+      fs.mkdirSync(path.dirname(finalPath), { recursive: true });
       const temporaryPath = `${finalPath}.partial`;
       fs.writeFileSync(temporaryPath, fetched.buffer);
       fs.renameSync(temporaryPath, finalPath);
@@ -443,6 +468,440 @@ function resultForJob(job, outDir, cached) {
   };
 }
 
+function normalizeIntegratedGptResults(rows, outDir) {
+  const absoluteOutDir = resolveRoot(outDir);
+  return rows.map((row) => {
+    const outputName = row.out ?? (row.local_path ? path.basename(row.local_path) : null);
+    const output = outputName ? path.join(absoluteOutDir, outputName) : null;
+    if (!output || !fs.existsSync(output) || fs.statSync(output).size === 0) {
+      if (row.status === "failed") return row;
+      return {
+        ...row,
+        status: "pending",
+        local_path: null,
+        bytes: 0,
+        sha256: null,
+      };
+    }
+    const stats = fs.statSync(output);
+    return {
+      ...row,
+      status: "completed",
+      local_path: path.relative(ROOT, output),
+      bytes: stats.size,
+      sha256: sha256File(output),
+    };
+  });
+}
+
+function imageIdentity(row) {
+  return {
+    queryId: row.vir_query_id ?? row.query_id,
+    direction: row.vir_direction ?? row.direction,
+  };
+}
+
+function queryForImage(row, recordById) {
+  const { queryId } = imageIdentity(row);
+  const query = recordById.get(queryId)?.query ??
+    row.query ??
+    row.vir_metadata?.source_query;
+  if (!queryId || directionForImage(row) == null || !query) {
+    throw new Error(`Cannot derive query filename identity: ${JSON.stringify(row)}`);
+  }
+  return query;
+}
+
+function directionForImage(row) {
+  return row.vir_direction ?? row.direction;
+}
+
+function listImages(directory) {
+  if (!fs.existsSync(directory)) return [];
+  return fs.readdirSync(directory)
+    .filter((name) => /\.(?:jpe?g|png|webp)$/i.test(name))
+    .map((name) => path.join(directory, name));
+}
+
+function completedRenamePlan({ system, rows, outDir, recordById }) {
+  return rows
+    .filter((row) => row.status === "completed")
+    .map((row) => {
+      const { queryId, direction } = imageIdentity(row);
+      const query = queryForImage(row, recordById);
+      const oldName = row.local_path
+        ? path.basename(row.local_path)
+        : system === "gpt-direct"
+          ? path.basename(row.out)
+          : null;
+      if (!oldName) throw new Error(`Completed ${system} row has no filename: ${queryId}`);
+      const extension = path.extname(oldName).slice(1);
+      const newName = queryImageName(query, queryId, direction, extension);
+      const source = path.join(outDir, oldName);
+      const destination = path.join(outDir, newName);
+      return {
+        system,
+        query_id: queryId,
+        query,
+        direction,
+        from: path.relative(ROOT, source),
+        to: path.relative(ROOT, destination),
+        source,
+        destination,
+        bytes: row.bytes ?? null,
+        sha256: row.sha256 ?? null,
+      };
+    });
+}
+
+function preflightRenamePlan(plan, outputDirectories) {
+  const destinations = new Set();
+  for (const entry of plan) {
+    const collisionKey = entry.destination.normalize("NFKC").toLowerCase();
+    if (destinations.has(collisionKey)) {
+      throw new Error(`Query filename collision: ${entry.destination}`);
+    }
+    destinations.add(collisionKey);
+    if (entry.source === entry.destination) continue;
+    if (!fs.existsSync(entry.source)) {
+      if (fs.existsSync(entry.destination) &&
+          (!entry.sha256 || sha256File(entry.destination) === entry.sha256)) {
+        continue;
+      }
+      throw new Error(`Missing source image: ${entry.source}`);
+    }
+    if (fs.existsSync(entry.destination)) {
+      throw new Error(`Refusing to overwrite query image: ${entry.destination}`);
+    }
+  }
+  const plannedSources = new Set(plan.map((entry) => entry.source));
+  const plannedDestinations = new Set(plan.map((entry) => entry.destination));
+  for (const directory of outputDirectories) {
+    for (const image of listImages(directory)) {
+      if (!plannedSources.has(image) && !plannedDestinations.has(image)) {
+        throw new Error(`Unindexed image blocks filename migration: ${image}`);
+      }
+    }
+  }
+}
+
+function updateGptFilenameRow(row, recordById, outDir) {
+  const { queryId, direction } = imageIdentity(row);
+  if (!queryId || direction == null) return row;
+  const query = queryForImage(row, recordById);
+  const extension = path.extname(row.out ?? row.local_path ?? "image.jpeg").slice(1) || "jpeg";
+  const out = queryImageName(query, queryId, direction, extension);
+  const updated = { ...row, out };
+  if (row.local_path) updated.local_path = path.relative(ROOT, path.join(outDir, out));
+  return updated;
+}
+
+function updateCurifyFilenameRow(row, recordById, outDir) {
+  const { queryId, direction } = imageIdentity(row);
+  if (!queryId || direction == null) return row;
+  const query = queryForImage(row, recordById);
+  const slug = queryImageStem(query, queryId, direction);
+  const updated = { ...row, slug };
+  if (row.local_path) {
+    const extension = path.extname(row.local_path).slice(1);
+    updated.local_path = path.relative(ROOT, path.join(outDir, `${slug}.${extension}`));
+  }
+  return updated;
+}
+
+function rewriteJsonlRows(filePath, transform) {
+  if (!fs.existsSync(filePath)) return 0;
+  const rows = readJsonl(filePath).map(transform);
+  writeJsonl(filePath, rows);
+  return rows.length;
+}
+
+function renameQueryFiles(options) {
+  const stage = options.stage;
+  if (!stage) throw new Error("rename-query-files requires --stage");
+  const runId = options.run_id ?? DEFAULT_RUN_ID;
+  const paths = runPaths(runId, stage);
+  const records = readJsonl(paths.records);
+  const recordById = new Map(records.map((record) => [record.id, record]));
+  if (!records.length) throw new Error(`Missing stage records: ${paths.records}`);
+
+  const gptRows = readJsonl(paths.gptResults);
+  const curifyRows = readJsonl(paths.results);
+  const plan = [
+    ...completedRenamePlan({
+      system: "gpt-direct",
+      rows: gptRows,
+      outDir: paths.gptOut,
+      recordById,
+    }),
+    ...completedRenamePlan({
+      system: "curify-gemini",
+      rows: curifyRows,
+      outDir: paths.outDir,
+      recordById,
+    }),
+  ];
+  preflightRenamePlan(plan, [paths.gptOut, paths.outDir]);
+
+  let renamed = 0;
+  for (const entry of plan) {
+    if (entry.source !== entry.destination && fs.existsSync(entry.source)) {
+      fs.renameSync(entry.source, entry.destination);
+      renamed += 1;
+    }
+    if (!fs.existsSync(entry.destination)) {
+      throw new Error(`Renamed image is missing: ${entry.destination}`);
+    }
+    const digest = sha256File(entry.destination);
+    if (entry.sha256 && digest !== entry.sha256) {
+      throw new Error(`SHA256 changed while renaming: ${entry.destination}`);
+    }
+    entry.sha256 = digest;
+    entry.bytes = fs.statSync(entry.destination).size;
+    delete entry.source;
+    delete entry.destination;
+  }
+
+  const gptTransform = (row) => updateGptFilenameRow(row, recordById, paths.gptOut);
+  const curifyTransform = (row) => updateCurifyFilenameRow(row, recordById, paths.outDir);
+  const rewritten = {
+    gpt_input: rewriteJsonlRows(paths.gptInput, gptTransform),
+    gpt_pending: rewriteJsonlRows(paths.gptPending, gptTransform),
+    gpt_results: rewriteJsonlRows(paths.gptResults, gptTransform),
+    gpt_terminal_failures: rewriteJsonlRows(paths.gptTerminal, gptTransform),
+    curify_input: rewriteJsonlRows(paths.input, curifyTransform),
+    curify_pending: rewriteJsonlRows(paths.pending, curifyTransform),
+    curify_results: rewriteJsonlRows(paths.results, curifyTransform),
+  };
+  const migration = {
+    schema_version: 1,
+    naming_policy_version: "query-filename-v1",
+    run_id: runId,
+    stage,
+    renamed_at: new Date().toISOString(),
+    format: "<normalized-query>--<query-id>--d<direction>.<extension>",
+    completed_images: plan.length,
+    renamed_files: renamed,
+    metadata_rows_rewritten: rewritten,
+    entries: plan,
+  };
+  writeJson(paths.filenameMigration, migration);
+  finalize(options);
+  console.log(JSON.stringify({ stage, renamed_files: renamed, completed_images: plan.length }, null, 2));
+  return migration;
+}
+
+function groupedRenamePlan({ system, rows, byQueryDir, recordById, folderById }) {
+  return rows
+    .filter((row) => row.status === "completed")
+    .map((row) => {
+      const { queryId, direction } = imageIdentity(row);
+      const query = queryForImage(row, recordById);
+      if (!row.local_path) throw new Error(`Completed ${system} row has no local_path: ${queryId}`);
+      const source = resolveRoot(row.local_path);
+      const extension = path.extname(source).slice(1);
+      const folder = folderById.get(queryId);
+      const filename = systemImageName(system, direction, extension);
+      const destination = path.join(byQueryDir, folder, filename);
+      return {
+        system,
+        query_id: queryId,
+        query,
+        query_folder: folder,
+        direction,
+        from: path.relative(ROOT, source),
+        to: path.relative(ROOT, destination),
+        source,
+        destination,
+        bytes: row.bytes ?? null,
+        sha256: row.sha256 ?? null,
+      };
+    });
+}
+
+function updateGroupedGptRow(row, recordById, folderById, byQueryDir) {
+  const { queryId, direction } = imageIdentity(row);
+  if (!queryId || direction == null) return row;
+  queryForImage(row, recordById);
+  const extension = path.extname(row.out ?? row.local_path ?? "image.jpeg").slice(1) || "jpeg";
+  const out = path.posix.join(
+    folderById.get(queryId),
+    systemImageName("gpt-direct", direction, extension),
+  );
+  const updated = { ...row, out };
+  if (row.local_path) updated.local_path = path.relative(ROOT, path.join(byQueryDir, out));
+  return updated;
+}
+
+function updateGroupedCurifyRow(row, recordById, folderById, byQueryDir) {
+  const { queryId, direction } = imageIdentity(row);
+  if (!queryId || direction == null) return row;
+  queryForImage(row, recordById);
+  const queryDirectory = folderById.get(queryId);
+  const updated = {
+    ...row,
+    query_directory: queryDirectory,
+    local_basename: systemImageName("curify-gemini", direction, "jpg").replace(/\.jpg$/, ""),
+  };
+  if (row.local_path) {
+    const extension = path.extname(row.local_path).slice(1);
+    const filename = systemImageName("curify-gemini", direction, extension);
+    updated.local_path = path.relative(
+      ROOT,
+      path.join(byQueryDir, queryDirectory, filename),
+    );
+  }
+  return updated;
+}
+
+function writeQueryManifests({ paths, records, folderById, omissions }) {
+  const gptById = new Map();
+  for (const row of readJsonl(paths.gptResults)) {
+    const values = gptById.get(row.vir_query_id) ?? [];
+    values.push(row);
+    gptById.set(row.vir_query_id, values);
+  }
+  const curifyById = new Map();
+  for (const row of readJsonl(paths.results)) {
+    const values = curifyById.get(row.query_id) ?? [];
+    values.push(row);
+    curifyById.set(row.query_id, values);
+  }
+  const omissionById = new Map(omissions.map((row) => [row.query_id, row]));
+  let written = 0;
+  for (const record of records) {
+    const gptRows = gptById.get(record.id) ?? [];
+    const curifyRows = curifyById.get(record.id) ?? [];
+    if (![...gptRows, ...curifyRows].some((row) => row.status === "completed")) continue;
+    const folder = path.join(paths.byQueryDir, folderById.get(record.id));
+    fs.mkdirSync(folder, { recursive: true });
+    const summarize = (rows, system) => rows.map((row) => ({
+      system,
+      direction: row.vir_direction ?? row.direction,
+      status: row.status,
+      local_path: row.local_path ?? null,
+      template_id: row.template_id ?? null,
+      model: row.model ?? null,
+      bytes: row.bytes ?? 0,
+      sha256: row.sha256 ?? null,
+    }));
+    writeJson(path.join(folder, "query-manifest.json"), {
+      schema_version: 1,
+      query_id: record.id,
+      query: record.query,
+      language: record.language,
+      partition: record.partition,
+      difficulty: record.difficulty,
+      stage: record.stage ?? null,
+      query_folder: path.relative(paths.stageDir, folder),
+      images: [
+        ...summarize(gptRows, "gpt-direct"),
+        ...summarize(curifyRows, "curify-gemini"),
+      ],
+      curify_omission: omissionById.get(record.id) ?? null,
+    });
+    written += 1;
+  }
+  return written;
+}
+
+function groupByQuery(options) {
+  const stage = options.stage;
+  if (!stage) throw new Error("group-by-query requires --stage");
+  const runId = options.run_id ?? DEFAULT_RUN_ID;
+  const paths = runPaths(runId, stage);
+  const records = readJsonl(paths.records);
+  if (!records.length) throw new Error(`Missing stage records: ${paths.records}`);
+  const recordById = new Map(records.map((record) => [record.id, record]));
+  const folderById = queryFolderNames(records);
+  const gptRows = readJsonl(paths.gptResults);
+  const curifyRows = readJsonl(paths.results);
+  const plan = [
+    ...groupedRenamePlan({
+      system: "gpt-direct",
+      rows: gptRows,
+      byQueryDir: paths.byQueryDir,
+      recordById,
+      folderById,
+    }),
+    ...groupedRenamePlan({
+      system: "curify-gemini",
+      rows: curifyRows,
+      byQueryDir: paths.byQueryDir,
+      recordById,
+      folderById,
+    }),
+  ];
+  preflightRenamePlan(plan, [paths.legacyGptOut, paths.legacyCurifyOut]);
+
+  let moved = 0;
+  for (const entry of plan) {
+    if (entry.source !== entry.destination && fs.existsSync(entry.source)) {
+      fs.mkdirSync(path.dirname(entry.destination), { recursive: true });
+      fs.renameSync(entry.source, entry.destination);
+      moved += 1;
+    }
+    if (!fs.existsSync(entry.destination)) {
+      throw new Error(`Grouped image is missing: ${entry.destination}`);
+    }
+    const digest = sha256File(entry.destination);
+    if (entry.sha256 && digest !== entry.sha256) {
+      throw new Error(`SHA256 changed while grouping: ${entry.destination}`);
+    }
+    entry.sha256 = digest;
+    entry.bytes = fs.statSync(entry.destination).size;
+    delete entry.source;
+    delete entry.destination;
+  }
+
+  const gptTransform = (row) =>
+    updateGroupedGptRow(row, recordById, folderById, paths.byQueryDir);
+  const curifyTransform = (row) =>
+    updateGroupedCurifyRow(row, recordById, folderById, paths.byQueryDir);
+  const rewritten = {
+    gpt_input: rewriteJsonlRows(paths.gptInput, gptTransform),
+    gpt_pending: rewriteJsonlRows(paths.gptPending, gptTransform),
+    gpt_results: rewriteJsonlRows(paths.gptResults, gptTransform),
+    gpt_terminal_failures: rewriteJsonlRows(paths.gptTerminal, gptTransform),
+    curify_input: rewriteJsonlRows(paths.input, curifyTransform),
+    curify_pending: rewriteJsonlRows(paths.pending, curifyTransform),
+    curify_results: rewriteJsonlRows(paths.results, curifyTransform),
+  };
+  for (const directory of [paths.legacyGptOut, paths.legacyCurifyOut]) {
+    if (fs.existsSync(directory) && fs.readdirSync(directory).length === 0) {
+      fs.rmdirSync(directory);
+    }
+  }
+  const migration = {
+    schema_version: 1,
+    layout_version: "query-folder-v1",
+    run_id: runId,
+    stage,
+    grouped_at: new Date().toISOString(),
+    format: "by-query/<normalized-query>/<system>--d<direction>.<extension>",
+    completed_images: plan.length,
+    moved_files: moved,
+    metadata_rows_rewritten: rewritten,
+    entries: plan,
+  };
+  writeJson(paths.folderMigration, migration);
+  const updated = finalize(options);
+  migration.query_manifests = writeQueryManifests({
+    paths,
+    records,
+    folderById,
+    omissions: updated.image_jobs.omissions ?? [],
+  });
+  writeJson(paths.folderMigration, migration);
+  console.log(JSON.stringify({
+    stage,
+    moved_files: moved,
+    completed_images: plan.length,
+    query_folders: migration.query_manifests,
+  }, null, 2));
+  return migration;
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replace(/&/g, "&amp;")
@@ -452,29 +911,51 @@ function escapeHtml(value) {
     .replace(/'/g, "&#039;");
 }
 
-function productionGallery({ stage, records, results, omissions }) {
-  const byQuery = new Map();
-  for (const row of results) {
-    const values = byQuery.get(row.query_id) ?? [];
-    values.push(row);
-    byQuery.set(row.query_id, values);
-  }
+function productionGallery({
+  stage,
+  stageDir = null,
+  records,
+  results,
+  gptResults = [],
+  omissions,
+}) {
+  const groupByQuery = (rows, idKey) => {
+    const grouped = new Map();
+    for (const row of rows) {
+      const values = grouped.get(row[idKey]) ?? [];
+      values.push(row);
+      grouped.set(row[idKey], values);
+    }
+    return grouped;
+  };
+  const curifyByQuery = groupByQuery(results, "query_id");
+  const gptByQuery = groupByQuery(gptResults, "vir_query_id");
   const omissionByQuery = new Map(omissions.map((row) => [row.query_id, row]));
+  const renderRows = (rows, system) => rows.length
+    ? rows.map((row) => {
+        const isGpt = system === "gpt-direct";
+        const direction = isGpt ? row.vir_direction : row.direction;
+        const template = isGpt ? null : row.template_id;
+        const src = row.local_path
+          ? stageDir
+            ? path.relative(stageDir, resolveRoot(row.local_path)).split(path.sep).join("/")
+            : `${system}/${path.basename(row.local_path)}`
+          : null;
+        const caption = [
+          template,
+          `direction ${direction}`,
+          row.status,
+        ].filter(Boolean).join(" · ");
+        return `<figure>${src ? `<img loading="lazy" src="${escapeHtml(src)}" alt="${escapeHtml(caption)}">` : '<div class="placeholder">Pending / failed</div>'}<figcaption>${escapeHtml(caption)}</figcaption></figure>`;
+      }).join("")
+    : '<p class="missing">No image task.</p>';
   const cards = records.map((record) => {
-    const rows = byQuery.get(record.id) ?? [];
-    const images = rows.length
-      ? rows.map((row) => {
-          const src = row.local_path
-            ? `curify-gemini/${path.basename(row.local_path)}`
-            : null;
-          const caption = `${row.template_id} · direction ${row.direction} · ${row.status}`;
-          return `<figure>${src ? `<img loading="lazy" src="${escapeHtml(src)}" alt="${escapeHtml(caption)}">` : '<div class="placeholder">Pending / failed</div>'}<figcaption>${escapeHtml(caption)}</figcaption></figure>`;
-        }).join("")
-      : '<p class="missing">No image task.</p>';
+    const curifyRows = curifyByQuery.get(record.id) ?? [];
+    const gptRows = gptByQuery.get(record.id) ?? [];
     const omission = omissionByQuery.get(record.id);
-    return `<article><code>${escapeHtml(record.id)}</code><h2>${escapeHtml(record.query)}</h2><p>${escapeHtml(record.language)} · ${escapeHtml(record.partition)} · ${escapeHtml(record.difficulty)}</p>${omission ? `<p class="notice">${escapeHtml(omission.status)}: ${escapeHtml(omission.reason)}</p>` : ""}<div class="images">${images}</div></article>`;
+    return `<article><code>${escapeHtml(record.id)}</code><h2>${escapeHtml(record.query)}</h2><p>${escapeHtml(record.language)} · ${escapeHtml(record.partition)} · ${escapeHtml(record.difficulty)}</p>${omission ? `<p class="notice">${escapeHtml(omission.status)}: ${escapeHtml(omission.reason)}</p>` : ""}<div class="systems"><section><h3>GPT-direct · gpt-image-2</h3><div class="images">${renderRows(gptRows, "gpt-direct")}</div></section><section><h3>Curify · ${MODEL}</h3><div class="images">${renderRows(curifyRows, "curify-gemini")}</div></section></div></article>`;
   }).join("\n");
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VIR v2 ${escapeHtml(stage)} Curify Gemini gallery</title><style>body{font-family:ui-sans-serif,system-ui;margin:0;background:#f5f5f2;color:#171714}main{max-width:1500px;margin:auto;padding:32px}article{background:#fff;border:1px solid #ddd;border-radius:14px;padding:20px;margin:22px 0}h2{margin:8px 0;font-size:1.25rem}p,figcaption{color:#666}.images{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}figure{margin:0}img,.placeholder{width:100%;aspect-ratio:4/3;object-fit:contain;background:#eee;border-radius:8px}.placeholder{display:grid;place-items:center}.notice{padding:10px;background:#fff3cd;border-radius:8px}</style></head><body><main><h1>VIR v2 Production Track — ${escapeHtml(stage)}</h1><p>Curify routing/template prompt → ${MODEL}. Visual inspection only; routing Gold metrics remain separate.</p>${cards}</main></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VIR v2 ${escapeHtml(stage)} production comparison</title><style>body{font-family:ui-sans-serif,system-ui;margin:0;background:#f5f5f2;color:#171714}main{max-width:1500px;margin:auto;padding:32px}article{background:#fff;border:1px solid #ddd;border-radius:14px;padding:20px;margin:22px 0}h2{margin:8px 0;font-size:1.25rem}p,figcaption{color:#666}.systems{display:grid;grid-template-columns:1fr 1fr;gap:20px}.images{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}figure{margin:0}img,.placeholder{width:100%;aspect-ratio:4/3;object-fit:contain;background:#eee;border-radius:8px}.placeholder{display:grid;place-items:center}.notice{padding:10px;background:#fff3cd;border-radius:8px}@media(max-width:800px){.systems{grid-template-columns:1fr}}</style></head><body><main><h1>VIR v2 production comparison — ${escapeHtml(stage)}</h1><p>GPT-direct uses gpt-image-2. Curify uses routing/template prompts and ${MODEL}. Image backends are intentionally not controlled; routing Gold metrics remain separate.</p>${cards}</main></body></html>`;
 }
 
 async function prepare(options) {
@@ -565,6 +1046,13 @@ async function prepare(options) {
       gpt_direct_run_id: DEFAULT_PLAN_SOURCE_RUN,
       note: "End-to-end production comparison; image backends are intentionally not controlled.",
     },
+    image_naming: {
+      policy_version: "query-folder-v1",
+      format: "by-query/<normalized-query>/<system>--d<direction>.<extension>",
+      migration_manifest: fs.existsSync(paths.folderMigration)
+        ? path.relative(ROOT, paths.folderMigration)
+        : null,
+    },
   };
   writeJson(paths.manifest, manifest);
   console.log(JSON.stringify(manifest, null, 2));
@@ -605,20 +1093,50 @@ function finalize(options) {
   const jobs = readJsonl(paths.input);
   const cached = new Map(readJsonl(paths.results).map((row) => [row.slug, row]));
   const results = jobs.map((job) => resultForJob(job, paths.outDir, cached));
+  const gptResults = normalizeIntegratedGptResults(
+    readJsonl(paths.gptResults),
+    paths.gptOut,
+  );
   writeJsonl(paths.results, results);
+  if (fs.existsSync(paths.gptResults)) writeJsonl(paths.gptResults, gptResults);
   const pending = results.filter((row) => row.status === "pending");
   writeJsonl(paths.pending, pending);
   fs.writeFileSync(
     paths.gallery,
     productionGallery({
       stage,
+      stageDir: paths.stageDir,
       records: readJsonl(paths.records),
       results,
+      gptResults,
       omissions: manifest.image_jobs.omissions ?? [],
     }),
   );
   const completed = results.filter((row) => row.status === "completed");
   const failed = results.filter((row) => row.status === "failed");
+  const gptCompleted = gptResults.filter((row) => row.status === "completed");
+  const gptFailed = gptResults.filter((row) => row.status === "failed");
+  const gptPending = gptResults.filter((row) => row.status === "pending");
+  const curifyQueryIds = new Set(completed.map((row) => row.query_id));
+  const gptQueryIds = new Set(gptCompleted.map((row) => row.vir_query_id));
+  const queryUnion = new Set([...curifyQueryIds, ...gptQueryIds]);
+  const queryIntersection = new Set(
+    [...curifyQueryIds].filter((id) => gptQueryIds.has(id)),
+  );
+  const gptDirectionKeys = new Set(
+    gptCompleted.map((row) => `${row.vir_query_id}|${row.vir_direction}`),
+  );
+  const matchedImagePairs = completed.filter((row) =>
+    gptDirectionKeys.has(`${row.query_id}|${row.direction}`),
+  ).length;
+  const curifyLatencies = completed
+    .map((row) => row.latency_ms)
+    .filter((value) => Number.isFinite(value));
+  const gptLatencies = gptCompleted
+    .map((row) => row.latency_ms)
+    .filter((value) => Number.isFinite(value));
+  const originalPlanRunId = manifest.plan_source.original_run_id ??
+    (manifest.plan_source.run_id === runId ? null : manifest.plan_source.run_id);
   const updated = {
     ...manifest,
     finalized_at: new Date().toISOString(),
@@ -630,11 +1148,57 @@ function finalize(options) {
       bytes: completed.reduce((sum, row) => sum + row.bytes, 0),
       results: path.relative(ROOT, paths.results),
     },
-    system_metrics: {
-      latency_mean_ms: completed.length
-        ? completed.reduce((sum, row) => sum + (row.latency_ms ?? 0), 0) / completed.length
+    plan_source: {
+      ...manifest.plan_source,
+      run_id: runId,
+      path: path.relative(ROOT, paths.plans),
+      original_run_id: originalPlanRunId,
+      integrated: true,
+    },
+    gpt_direct: {
+      image_model: "gpt-image-2",
+      total: gptResults.length,
+      completed: gptCompleted.length,
+      failed: gptFailed.length,
+      pending: gptPending.length,
+      unique_queries: gptQueryIds.size,
+      bytes: gptCompleted.reduce((sum, row) => sum + row.bytes, 0),
+      results: path.relative(ROOT, paths.gptResults),
+      output_dir: path.relative(ROOT, paths.gptOut),
+      migrated_from_run: "2026-08-01-full",
+    },
+    combined: {
+      completed_images: completed.length + gptCompleted.length,
+      unique_queries: queryUnion.size,
+      query_folders: queryUnion.size,
+      queries_covered_by_both: queryIntersection.size,
+      matched_image_pairs: matchedImagePairs,
+    },
+    comparison_reference: {
+      integrated: true,
+      directory: path.relative(ROOT, paths.stageDir),
+      note: "End-to-end production comparison; image backends are intentionally not controlled.",
+    },
+    image_naming: {
+      policy_version: "query-folder-v1",
+      format: "by-query/<normalized-query>/<system>--d<direction>.<extension>",
+      migration_manifest: fs.existsSync(paths.folderMigration)
+        ? path.relative(ROOT, paths.folderMigration)
         : null,
-      error_rate: results.length ? failed.length / results.length : 0,
+    },
+    system_metrics: {
+      curify_gemini: {
+        latency_mean_ms: curifyLatencies.length
+          ? curifyLatencies.reduce((sum, value) => sum + value, 0) / curifyLatencies.length
+          : null,
+        error_rate: results.length ? failed.length / results.length : 0,
+      },
+      gpt_direct: {
+        latency_mean_ms: gptLatencies.length
+          ? gptLatencies.reduce((sum, value) => sum + value, 0) / gptLatencies.length
+          : null,
+        error_rate: gptResults.length ? gptFailed.length / gptResults.length : 0,
+      },
     },
     gallery: path.relative(ROOT, paths.gallery),
   };
@@ -656,13 +1220,16 @@ Usage:
   node scripts/vir-gemini-production.cjs prepare --stage anchors [--run-id ${DEFAULT_RUN_ID}] [--plan-source-run ${DEFAULT_PLAN_SOURCE_RUN}]
   node scripts/vir-gemini-production.cjs render --stage anchors [--base-url ${DEFAULT_BASE_URL}] [--concurrency 2]
   node scripts/vir-gemini-production.cjs finalize --stage anchors
+  node scripts/vir-gemini-production.cjs rename-query-files --stage anchors
+  node scripts/vir-gemini-production.cjs group-by-query --stage anchors
   node scripts/vir-gemini-production.cjs all --stage anchors [--limit 1]
 
 Stages: anchors | exploration | core | challenge-gap
 
 This track intentionally follows the production Curify pipeline:
-Curify route/template prompt -> ${MODEL}. Existing controlled gpt-image-2
-artifacts are preserved in a separate run and are never overwritten.`);
+Curify route/template prompt -> ${MODEL}. GPT-direct gpt-image-2 results live
+beside Curify outputs in the same stage directory. Controlled Curify artifacts
+are not part of this production comparison.`);
 }
 
 async function main() {
@@ -670,6 +1237,8 @@ async function main() {
   if (command === "prepare") await prepare(options);
   else if (command === "render") await render(options);
   else if (command === "finalize") finalize(options);
+  else if (command === "rename-query-files") renameQueryFiles(options);
+  else if (command === "group-by-query") groupByQuery(options);
   else if (command === "all") await all(options);
   else help();
 }
@@ -686,9 +1255,13 @@ module.exports = {
   buildGeminiJobs,
   findGeminiOutput,
   generateGeminiJob,
+  groupByQuery,
   parseArgs,
   pendingGeminiJobs,
+  normalizeIntegratedGptResults,
+  productionGallery,
   productionSlug,
+  renameQueryFiles,
   renderGeminiJobs,
   validateImagePayload,
 };

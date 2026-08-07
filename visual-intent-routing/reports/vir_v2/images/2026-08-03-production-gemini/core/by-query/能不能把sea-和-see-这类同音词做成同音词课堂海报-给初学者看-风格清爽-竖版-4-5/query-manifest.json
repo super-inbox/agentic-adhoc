@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s02-14",
+  "query": "能不能把sea 和 see 这类同音词做成同音词课堂海报？给初学者看，风格清爽，竖版 4:5。",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/能不能把sea-和-see-这类同音词做成同音词课堂海报-给初学者看-风格清爽-竖版-4-5",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/能不能把sea-和-see-这类同音词做成同音词课堂海报-给初学者看-风格清爽-竖版-4-5/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 236530,
+      "sha256": "af00e2354f31d7271717c8f6e4f0d26914389fe1e14a0567eedd798048e4db8f"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/能不能把sea-和-see-这类同音词做成同音词课堂海报-给初学者看-风格清爽-竖版-4-5/curify-gemini--d01.jpg",
+      "template_id": "template-english-homograph-educational-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 776601,
+      "sha256": "21fb07e7c7941b25a4537dcbcd9ae1be9984461d2514512fca6a5b75bc56eafc"
+    }
+  ],
+  "curify_omission": null
+}

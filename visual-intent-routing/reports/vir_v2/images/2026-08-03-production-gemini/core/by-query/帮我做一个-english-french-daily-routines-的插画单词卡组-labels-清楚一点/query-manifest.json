@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s01-05",
+  "query": "帮我做一个 English-French daily routines 的插画单词卡组，labels 清楚一点。",
+  "language": "mixed",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/帮我做一个-english-french-daily-routines-的插画单词卡组-labels-清楚一点",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/帮我做一个-english-french-daily-routines-的插画单词卡组-labels-清楚一点/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 361802,
+      "sha256": "eec095923e8b6ee282116330195d46e48f0b314eddaa453a705faa292a395717"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/帮我做一个-english-french-daily-routines-的插画单词卡组-labels-清楚一点/curify-gemini--d01.jpg",
+      "template_id": "template-daily-essentials-learning-card",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 629099,
+      "sha256": "29192b80f17db7beb1c6c260e5145b443a8f70eb7a6c4e5c5f6be007bd117607"
+    }
+  ],
+  "curify_omission": null
+}

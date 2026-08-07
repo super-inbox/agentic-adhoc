@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s02-12",
+  "query": "Could you make homonyms with short definitions into a boxed confusing-words guide for a beginner audience, with a calm editorial look in 4:5?",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/could-you-make-homonyms-with-short-definitions-into-a-boxed-confusing-words-guide-for-a-beginner-audience-with-a-calm-ed",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-homonyms-with-short-definitions-into-a-boxed-confusing-words-guide-for-a-beginner-audience-with-a-calm-ed/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 259571,
+      "sha256": "18ff0509a1e58f944a74764395de3ffa23728e77d7c5b488a6c30b83fcac4ea2"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-homonyms-with-short-definitions-into-a-boxed-confusing-words-guide-for-a-beginner-audience-with-a-calm-ed/curify-gemini--d01.jpg",
+      "template_id": "template-english-grammar-wordlist-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1062934,
+      "sha256": "db6438e2174483670d5e2970a9f66b27ff0f316646e9425c50710525672553b9"
+    }
+  ],
+  "curify_omission": null
+}
