@@ -22,7 +22,7 @@ Curify Design Agent 的首个可评测后端垂直切片：把「图片 + 一次
 | [`SPEC.md`](SPEC.md) | 架构、数据、能力 registry、评测与分期 |
 | [`curify-integration/`](curify-integration/) | 新增 runtime/router/test 源码快照，以及可应用到 Curify 的完整 patch |
 | [`demo/`](demo/) | 男士理容四方案投票输入、脚本与真实输出 |
-| [`eval/`](eval/) | 单轮黑盒 agent eval、routing benchmark、case schema 与 baseline |
+| [`eval/`](eval/) | 单轮黑盒 agent eval、routing benchmark、21 条真实多模态 query、参考图素材包与完整性校验 |
 | [`factory/`](factory/) | 图片到刀线、CMYK/PDF、spec 和生产 ZIP 的贴纸 exporter |
 | [`benchmarks/`](benchmarks/) | 创意探索 benchmark 案例 |
 
@@ -84,9 +84,25 @@ python design-agent-v0/eval/runtime_eval.py \
 评测覆盖 route、abstention/status、stage coverage、visual verdict、retry budget
 与 artifact 可达性，并按 `coverage` 聚合 routing accuracy 和缺口。
 
+### 真实参考图素材包
+
+`eval/assets/reference-pack-v0.1/` 包含 18 张项目自有 PNG（17 张生成图和 1 张
+已有男士理容 A–D 图），覆盖海报编辑、设计投票、试穿、生产文件、Logo 升级、
+商品精修、详情页替换和 SKU 系统。`eval/queries.jsonl` 已为 9 条严格图片必需的
+routing query 与 12 条 image-bearing agent-route query 建立 30 个显式素材绑定。
+
+~~~bash
+cd design-agent-v0
+python3 eval/reference_asset_eval.py
+~~~
+
+当前校验结果为 21/21 query、18/18 素材通过；检查范围包含解码、尺寸、SHA-256、
+隐私标记和透明贴纸 alpha。完整生成提示词保存在素材包的 `PROMPTS.md`。
+
 ## 当前边界
 
-- 线上真实图 benchmark 仍需合法 source fixtures、Gemini 与私有 GCS 配置。
+- 已有合法、项目自有的真实像素 fixtures；线上 Vision/生成 benchmark 仍需 Gemini
+  与私有 GCS 配置。
 - trace 目前持久化到 Curify `Project.runtime_config` 并输出结构化日志；
   LangWatch/Langfuse/Braintrust/Phoenix exporter 是下一步可插拔接线。
 - 异步执行沿用 FastAPI `BackgroundTasks`；放量前应切到 durable worker/queue。
