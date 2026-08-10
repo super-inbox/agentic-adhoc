@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-019",
+  "query": "Explore three visual directions for an orchid-inspired visual world spanning botanical story, colors, materials, and couture. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-an-orchid-inspired-visual-world-spanning-botanical-story-colors-materials-and-coutur",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-orchid-inspired-visual-world-spanning-botanical-story-colors-materials-and-coutur/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 365965,
+      "sha256": "6d7b9bf8e708a9ebbb2d8b867f250a1543e8315e069d86f078002df6dcee58e3"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-orchid-inspired-visual-world-spanning-botanical-story-colors-materials-and-coutur/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 240160,
+      "sha256": "ef0aa1d61439bff0187fbbf62bd0a16f16b813a96be98add740d1a6a31a545a4"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-orchid-inspired-visual-world-spanning-botanical-story-colors-materials-and-coutur/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 297435,
+      "sha256": "6ec803efa7e12c4473d205220436b4a56010e5237a4e2c617f4826eb13c1907a"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-orchid-inspired-visual-world-spanning-botanical-story-colors-materials-and-coutur/curify-gemini--d01.jpg",
+      "template_id": "template-fashion-inspired-gown-design-sheet",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 580371,
+      "sha256": "8411f8b7b68c69de2d69200a183b8ea84b2da4305b6f20306251b72a1b6befb5"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-orchid-inspired-visual-world-spanning-botanical-story-colors-materials-and-coutur/curify-gemini--d02.jpg",
+      "template_id": "template-watercolor-travel-journal-collage",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1215188,
+      "sha256": "6d8d37f7b065ec8a7469162b6c71b44b3f5ccb3fd0af4d56c4ab4b89dad5edec"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-orchid-inspired-visual-world-spanning-botanical-story-colors-materials-and-coutur/curify-gemini--d03.jpg",
+      "template_id": "template-dessert-color-lab-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 570417,
+      "sha256": "960187ba1a29b36333e81288fab2b9893f98a9cda77c3a96fc3c97f294936679"
+    }
+  ],
+  "curify_omission": null
+}

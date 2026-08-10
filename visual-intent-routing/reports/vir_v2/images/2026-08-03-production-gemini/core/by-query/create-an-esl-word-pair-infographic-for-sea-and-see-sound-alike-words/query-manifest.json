@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s02-04",
+  "query": "Create an ESL word-pair infographic for sea and see sound-alike words.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-an-esl-word-pair-infographic-for-sea-and-see-sound-alike-words",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-an-esl-word-pair-infographic-for-sea-and-see-sound-alike-words/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 245071,
+      "sha256": "3da299430bf01ef27ecb0760cb96c45835bcfd36e5bea9d557eb6604e8442301"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-an-esl-word-pair-infographic-for-sea-and-see-sound-alike-words/curify-gemini--d01.jpg",
+      "template_id": "template-english-word-difference-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 603107,
+      "sha256": "7d3535a4234620fb806329bd3d758237d61c2b3e93b40a4a2ca9ca217762907a"
+    }
+  ],
+  "curify_omission": null
+}

@@ -1,0 +1,23 @@
+{
+  "requested": {
+    "core": 450,
+    "content_gap": 80,
+    "ambiguous": 60,
+    "multi_intent": 60,
+    "exploration": 30,
+    "total": 680
+  },
+  "generated": {
+    "core": 450,
+    "content_gap": 80,
+    "challenge": 120,
+    "exploration": 30,
+    "total": 680
+  },
+  "provider": "rule",
+  "exploration_provider": "rule-profile",
+  "exploration_profile_count": 10,
+  "exploration_profiles_sha256": "c9dbf65db47f39c8fd46352d15981c5e025d9310e2c7f16fdd784ed2e4527650",
+  "random_seed": 1234,
+  "dry_run": false
+}

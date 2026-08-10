@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s01-27",
+  "query": "英西身体部位词汇，想做成一眼能看懂的竖版视觉，给新手看，别太学术哈",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/英西身体部位词汇-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "pending",
+      "local_path": null,
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/英西身体部位词汇-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈/curify-gemini--d01.jpg",
+      "template_id": "template-english-vocabulary-upgrade",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 508073,
+      "sha256": "a0b6fce11fa4a1df3868022fef653f096dcd9826aa4bb7a05840b3f7bf0d3882"
+    }
+  ],
+  "curify_omission": null
+}

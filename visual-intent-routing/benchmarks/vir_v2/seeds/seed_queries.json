@@ -1,0 +1,131 @@
+[
+  {
+    "seed_id": "vir-s01",
+    "subject": "vocabulary",
+    "query": "单词",
+    "seed_language": "zh",
+    "seed_difficulty": "high",
+    "gold_targets": ["template-vocabulary"]
+  },
+  {
+    "seed_id": "vir-s02",
+    "subject": "language",
+    "query": "homophones and homonyms",
+    "seed_language": "en",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-english-grammar-wordlist-infographic"]
+  },
+  {
+    "seed_id": "vir-s03",
+    "subject": "design",
+    "query": "家居装饰",
+    "seed_language": "zh",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-interior-design-mood-board-generator"]
+  },
+  {
+    "seed_id": "vir-s04",
+    "subject": "learning",
+    "query": "趣味经济学知识科普",
+    "seed_language": "zh",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-education-card"]
+  },
+  {
+    "seed_id": "vir-s05",
+    "subject": "character",
+    "query": "chiikawa",
+    "seed_language": "en",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-fandom-character-grid-poster"]
+  },
+  {
+    "seed_id": "vir-s06",
+    "subject": "lifestyle",
+    "query": "cozy reading aesthetic",
+    "seed_language": "en",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-lifestyle-watercolor-infographic"]
+  },
+  {
+    "seed_id": "vir-s07",
+    "subject": "travel",
+    "query": "remote destination",
+    "seed_language": "en",
+    "seed_difficulty": "high",
+    "gold_targets": ["template-travel"]
+  },
+  {
+    "seed_id": "vir-s08",
+    "subject": "culture",
+    "query": "paper cutting",
+    "seed_language": "en",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-intangible-heritage"]
+  },
+  {
+    "seed_id": "vir-s09",
+    "subject": "food",
+    "query": "cuban sandwich recipe poster",
+    "seed_language": "en",
+    "seed_difficulty": "low",
+    "gold_targets": ["template-recipe"]
+  },
+  {
+    "seed_id": "vir-s10",
+    "subject": "mbti",
+    "query": "marvel mbti character chart 16 types",
+    "seed_language": "en",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-mbti-generic"]
+  },
+  {
+    "seed_id": "vir-s11",
+    "subject": "science",
+    "query": "植物",
+    "seed_language": "zh",
+    "seed_difficulty": "high",
+    "gold_targets": ["template-species-science"]
+  },
+  {
+    "seed_id": "vir-s12",
+    "subject": "history",
+    "query": "historical character",
+    "seed_language": "en",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-figure-principles-infographic"]
+  },
+  {
+    "seed_id": "vir-s13",
+    "subject": "product",
+    "query": "香薰",
+    "seed_language": "zh",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-product-poster"]
+  },
+  {
+    "seed_id": "vir-s14",
+    "subject": "fashion",
+    "query": "met gala",
+    "seed_language": "en",
+    "seed_difficulty": "medium",
+    "gold_targets": ["template-fashion-inspired-gown-design-sheet"]
+  },
+  {
+    "seed_id": "vir-s15",
+    "subject": "personality",
+    "query": "infj vs entp dating compatibility chart",
+    "seed_language": "en",
+    "seed_difficulty": "low",
+    "gold_targets": ["template-mbti-personality-compatibility-infographic"]
+  },
+  {
+    "seed_id": "vir-s16",
+    "subject": "content-gap",
+    "query": "证件照",
+    "seed_language": "zh",
+    "seed_difficulty": "medium",
+    "gold_targets": [],
+    "expected_abstention": true
+  }
+]

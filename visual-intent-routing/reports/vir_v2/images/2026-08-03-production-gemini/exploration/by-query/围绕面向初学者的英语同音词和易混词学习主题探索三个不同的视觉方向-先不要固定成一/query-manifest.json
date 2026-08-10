@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-006",
+  "query": "围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向，先不要固定成一种风格。",
+  "language": "zh",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向-先不要固定成一",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向-先不要固定成一/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 302552,
+      "sha256": "03559f28de76e6b3d270daf0173d3037a0d7b0f13cfc08d0e5b38a02ac7da429"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向-先不要固定成一/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 253103,
+      "sha256": "d0386d2def852f729b4b92ecf5ced653a9e396032c1fcc50bbee94d897984cae"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向-先不要固定成一/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 398688,
+      "sha256": "87bdfcc9d916610d3c7855d3f411ccc7f4e7994e8c8d5553aafc56a1eaa89233"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向-先不要固定成一/curify-gemini--d01.jpg",
+      "template_id": "template-english-homograph-educational-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 820420,
+      "sha256": "b9501f4df013f9fd39545ab4bc1614089308cd73bb0f8b4c2cecd0dff37b60cf"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向-先不要固定成一/curify-gemini--d02.jpg",
+      "template_id": "template-english-grammar-wordlist-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1033475,
+      "sha256": "a0382226ac03c2fd2d05e0c95856a74b2f93af6facb656724d227cb85e1af11e"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初学者的英语同音词和易混词学习主题探索三个不同的视觉方向-先不要固定成一/curify-gemini--d03.jpg",
+      "template_id": "template-english-word-difference-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 740865,
+      "sha256": "7316ef81b2ab839617e94d73dfc2eb2250c074ad00e883b9b6d753651d555e0e"
+    }
+  ],
+  "curify_omission": null
+}

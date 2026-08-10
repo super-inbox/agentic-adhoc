@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-018",
+  "query": "Explore three visual directions for a Kyoto trip theme that helps visitors discover traditional crafts. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visitors-discover-traditional-crafts-vary-style-and-co",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visitors-discover-traditional-crafts-vary-style-and-co/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 271431,
+      "sha256": "7c0325ece05b8fb37def11aa89678c82cd764a4b37ceea34e58d1fa00555a6f2"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visitors-discover-traditional-crafts-vary-style-and-co/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 241940,
+      "sha256": "4a1019405ab233227a9f333da818f607195765c018d5ac05f36f6555f31481e8"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visitors-discover-traditional-crafts-vary-style-and-co/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 356412,
+      "sha256": "19689791dcec0527553f0d7438c6d0c8ba1c21811b0ce552441c24036d85391c"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visitors-discover-traditional-crafts-vary-style-and-co/curify-gemini--d01.jpg",
+      "template_id": "template-cultural-travel-journey-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1155203,
+      "sha256": "9e9a9d2731ab61f01caa215057f987c274d4a8e698407668c07a8c740cc14afd"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visitors-discover-traditional-crafts-vary-style-and-co/curify-gemini--d02.jpg",
+      "template_id": "template-tourist-spot-watercolor-map-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1015278,
+      "sha256": "d4d08f7dca5c43d51ec82594eb53be2ba068f891d6ba20b25315957661afe9f8"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-kyoto-trip-theme-that-helps-visitors-discover-traditional-crafts-vary-style-and-co/curify-gemini--d03.jpg",
+      "template_id": "template-ethnic-costume-deconstruction-board",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 862343,
+      "sha256": "66db9d6c997eea22e86c72638771c29b65907cc0e5a9a64cd43cb9592a300602"
+    }
+  ],
+  "curify_omission": null
+}

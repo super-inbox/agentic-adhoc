@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-20",
+  "query": "Could you make why eclipses occur into an educational explainer infographic for a beginner audience, with a calm editorial look in 4:5?",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/could-you-make-why-eclipses-occur-into-an-educational-explainer-infographic-for-a-beginner-audience-with-a-calm-editoria",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-why-eclipses-occur-into-an-educational-explainer-infographic-for-a-beginner-audience-with-a-calm-editoria/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 265807,
+      "sha256": "5ba8aae78759d8f6dd4116c1ca6359774437699910b939c8069f647ebb8f94c0"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "failed",
+      "local_path": null,
+      "template_id": "template-science-education-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

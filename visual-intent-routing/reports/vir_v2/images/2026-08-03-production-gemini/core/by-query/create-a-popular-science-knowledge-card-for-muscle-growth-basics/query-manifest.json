@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-07",
+  "query": "Create a popular-science knowledge card for muscle growth basics.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-a-popular-science-knowledge-card-for-muscle-growth-basics",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-popular-science-knowledge-card-for-muscle-growth-basics/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 335828,
+      "sha256": "420cfa00c3ce59e3cf635d7d934402a3ddd24942b1095990935715418d083de8"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-popular-science-knowledge-card-for-muscle-growth-basics/curify-gemini--d01.jpg",
+      "template_id": "template-weird-cold-knowledge-popular-science-card",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1087802,
+      "sha256": "31fe4cc15160097625a82ddc89fd943513ca19e017cc0beea910c0b17ea8cb41"
+    }
+  ],
+  "curify_omission": null
+}

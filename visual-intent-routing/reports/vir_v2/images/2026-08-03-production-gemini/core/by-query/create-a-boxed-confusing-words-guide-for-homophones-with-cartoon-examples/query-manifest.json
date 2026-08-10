@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s02-09",
+  "query": "Create a boxed confusing-words guide for homophones with cartoon examples.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-a-boxed-confusing-words-guide-for-homophones-with-cartoon-examples",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-boxed-confusing-words-guide-for-homophones-with-cartoon-examples/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 410118,
+      "sha256": "6e20236e53f4be5bbf688d37a26c53f5f03195a326cbf2fc6df25e5267067e87"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-boxed-confusing-words-guide-for-homophones-with-cartoon-examples/curify-gemini--d01.jpg",
+      "template_id": "template-english-grammar-wordlist-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1080178,
+      "sha256": "e5208fac5ff642b7b02a294242e92efb3780fb735aba01467d89e2d64e6f5851"
+    }
+  ],
+  "curify_omission": null
+}

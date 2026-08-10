@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-028",
+  "query": "围绕帮助旅行者发现京都传统工艺的旅行主题，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+  "language": "mixed",
+  "partition": "exploration",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-three-distinct-visual-directions-先别锁定一种",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-three-distinct-visual-directions-先别锁定一种/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 393381,
+      "sha256": "3677d3f74d7096ea38fcc7e7f28e809a6ca0c25105d12bd541fb93895338a240"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-three-distinct-visual-directions-先别锁定一种/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 343997,
+      "sha256": "cd8a2bd48ff48519f98f383f8a07bbca41c2fc456732455b132a2e3d15178526"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-three-distinct-visual-directions-先别锁定一种/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 424404,
+      "sha256": "61f465e84b48c3732417ad14feaa1246548d20551c07b4fa7bcc859380b98681"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-three-distinct-visual-directions-先别锁定一种/curify-gemini--d01.jpg",
+      "template_id": "template-cultural-travel-journey-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1044330,
+      "sha256": "0585ce5ad85747be77a3b26e9170ba6bee75c94ef0802ed3bb785b33ee5aa1fd"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-three-distinct-visual-directions-先别锁定一种/curify-gemini--d02.jpg",
+      "template_id": "template-tourist-spot-watercolor-map-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1154103,
+      "sha256": "53118e5c3774e6e8fccb03ed7b6fe779a50debe4bb353ee397703aa41484c1f0"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕帮助旅行者发现京都传统工艺的旅行主题-explore-three-distinct-visual-directions-先别锁定一种/curify-gemini--d03.jpg",
+      "template_id": "template-best-cities-travel-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1030483,
+      "sha256": "427a80a844af442ea19f123f2d65ec4e89a96e449a630e5f5f9688968e7b0e20"
+    }
+  ],
+  "curify_omission": null
+}

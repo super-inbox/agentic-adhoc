@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-15",
+  "query": "Could you make broken windows theory into a cartoon concept card for a beginner audience, with a calm editorial look in 4:5?",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/could-you-make-broken-windows-theory-into-a-cartoon-concept-card-for-a-beginner-audience-with-a-calm-editorial-look-in-4",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-broken-windows-theory-into-a-cartoon-concept-card-for-a-beginner-audience-with-a-calm-editorial-look-in-4/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 266011,
+      "sha256": "2e171cfe257793e0b62adef7734dbf14b8e853305d3087be94311837100915ea"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/could-you-make-broken-windows-theory-into-a-cartoon-concept-card-for-a-beginner-audience-with-a-calm-editorial-look-in-4/curify-gemini--d01.jpg",
+      "template_id": "template-cartoon-action-visual-guide-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 926760,
+      "sha256": "a149741cc3aec05682c2bc8323323c520d787c6304ef3258efcd600498a6ca60"
+    }
+  ],
+  "curify_omission": null
+}

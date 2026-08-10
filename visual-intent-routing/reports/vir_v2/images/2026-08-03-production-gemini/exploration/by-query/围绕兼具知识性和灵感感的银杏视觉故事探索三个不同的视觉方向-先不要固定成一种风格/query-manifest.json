@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-001",
+  "query": "围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向，先不要固定成一种风格。",
+  "language": "zh",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向-先不要固定成一种风格",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向-先不要固定成一种风格/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 435071,
+      "sha256": "db1afa7ff02a36a5066ec0842bc60767f1944ecba45dca2ac75958d7f60dabad"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向-先不要固定成一种风格/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 306311,
+      "sha256": "a99a6ae7cda7e96dd8a82df964bb433e60663516598c99b38ea6542ecebf4d17"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向-先不要固定成一种风格/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 340913,
+      "sha256": "fcf05f9862b152d5a72e0cd3d092e26594d4e6ebdee371f527ada68c96f1031a"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向-先不要固定成一种风格/curify-gemini--d01.jpg",
+      "template_id": "template-educational-topic-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1007479,
+      "sha256": "78c8bf6a983cd039af6b12fa15920ccc1d6277c8385dbb0556a4cac1aadc9a85"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕兼具知识性和灵感感的银杏视觉故事探索三个不同的视觉方向-先不要固定成一种风格/curify-gemini--d02.jpg",
+      "template_id": "template-lifestyle-watercolor-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 874418,
+      "sha256": "82d3ec3f40a1cb9adf123ea2b3d04877df0e9bbd101172bfb4d0f5fde317906d"
+    }
+  ],
+  "curify_omission": null
+}

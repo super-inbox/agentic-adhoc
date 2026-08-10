@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s01-07",
+  "query": "Create a bilingual vocabulary poster for English-Spanish body parts.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-a-bilingual-vocabulary-poster-for-english-spanish-body-parts",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-bilingual-vocabulary-poster-for-english-spanish-body-parts/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 287553,
+      "sha256": "55480871211b0805696ca6413ffb866ad4bc846c99fb487497ce8c6a29f4589e"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-bilingual-vocabulary-poster-for-english-spanish-body-parts/curify-gemini--d01.jpg",
+      "template_id": "template-bilingual-object-structure-labeling",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 460153,
+      "sha256": "c005d5fc3a12c50fa84bd9ae68e8f82ba15ccda24fadb663360652466abfba58"
+    }
+  ],
+  "curify_omission": null
+}

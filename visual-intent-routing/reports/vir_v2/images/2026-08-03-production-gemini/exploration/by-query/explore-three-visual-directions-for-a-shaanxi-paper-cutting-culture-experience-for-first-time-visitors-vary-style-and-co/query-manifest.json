@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-012",
+  "query": "Explore three visual directions for a Shaanxi paper-cutting culture experience for first-time visitors. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-experience-for-first-time-visitors-vary-style-and-co",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-experience-for-first-time-visitors-vary-style-and-co/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 491989,
+      "sha256": "1076cdcd0a90ce160f3bfdb42e18500dce6351d1717fd26b2dae492b9a7c55d2"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-experience-for-first-time-visitors-vary-style-and-co/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 415429,
+      "sha256": "efaf12d021b16d50a89f86dd145a633ea52578c7e6e2c1e76b7c51d8142e88a6"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-experience-for-first-time-visitors-vary-style-and-co/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 428603,
+      "sha256": "72492a092d1025f580b201ab325c63e89b4ce1043778f34ecf53093dccb6beae"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-experience-for-first-time-visitors-vary-style-and-co/curify-gemini--d01.jpg",
+      "template_id": "template-intangible-heritage",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1082630,
+      "sha256": "eefe22ff7a7a56838157eb3ce7e801ec633389b1b2095b211d58da22e99d9a31"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-experience-for-first-time-visitors-vary-style-and-co/curify-gemini--d02.jpg",
+      "template_id": "template-cultural-relic-retro-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1128721,
+      "sha256": "dce0e976e8bdaad8c54b7e9d1a1f9d97b2870b37e201ebc1b2f81cbd79a962f9"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-shaanxi-paper-cutting-culture-experience-for-first-time-visitors-vary-style-and-co/curify-gemini--d03.jpg",
+      "template_id": "template-ethnic-costume-deconstruction-board",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 998722,
+      "sha256": "857d5473fca9fa2a6a402e7a8b094791c956c90083ba6fd1688a43b47cb3cfe5"
+    }
+  ],
+  "curify_omission": null
+}

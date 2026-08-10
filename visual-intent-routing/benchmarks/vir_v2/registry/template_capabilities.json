@@ -1,0 +1,614 @@
+{
+  "registry_version": "vir-capabilities-2026-07-29-exploration-v1",
+  "benchmark_version": "vir-v2",
+  "catalog_scope": {
+    "catalog": "public/data/nano_templates.json",
+    "capability_kb": "scripts/configs/template_capability_kb.json",
+    "inspirations": "public/data/nano_inspiration.json",
+    "descriptions": ["messages/en/nano.json", "messages/zh/nano.json"],
+    "taxonomy": "lib/taxonomy.json",
+    "note": "Capability claims are grounded in the frozen standalone snapshot; current frontend files were inspected for router and content-gap conflicts."
+  },
+  "templates": [
+    {
+      "canonical_id": "template-vocabulary",
+      "aliases": [],
+      "description": "Bilingual illustrated vocabulary cards for a chosen topic and language pair, including English-Chinese, English-Spanish, English-Korean, English-Japanese, and English-French examples.",
+      "supported_subject_event_types": ["topic-based vocabulary", "language learning", "objects, animals, food, routines, places"],
+      "supported_information_structures": ["bilingual term-label pairs", "themed vocabulary collection", "flashcard-style learning"],
+      "expected_visual_layout_structure": ["illustrated card grid", "visual guide", "poster or flashcard set"],
+      "typical_user_goals": ["learn or teach words", "make bilingual classroom material", "label a themed word set"],
+      "required_inputs": ["language_pair", "topic_name"],
+      "optional_inputs": ["audience", "print orientation", "illustration tone"],
+      "known_exclusions": ["grammar relationships such as homophones", "scientific species explanation", "unlabeled decorative scenes"],
+      "positive_examples": ["English-Spanish fruit flashcards", "中英动物词汇卡", "Japanese kitchen vocabulary", "French weather words", "Korean daily-routine vocabulary"],
+      "negative_examples": ["explain why two English words sound alike", "ginkgo anatomy infographic", "cozy botanical wall art"],
+      "neighboring_templates": ["template-english-grammar-wordlist-infographic", "template-species-science"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-vocabulary", "public/data/nano_templates.json#template-vocabulary", "public/data/nano_inspiration.json#template-vocabulary", "messages/en/nano.json#template-vocabulary"],
+      "uncertainty": "Layout varies across the unusually large example family; bilingual term learning is the stable capability boundary.",
+      "ontology": {"subject_event": "language vocabulary on a chosen topic", "information_type": "bilingual vocabulary learning", "style_layout": "illustrated card grid or visual guide"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "illustrated-flashcard",
+        "visual_style_families": ["illustrated-flashcard", "classroom-education"],
+        "primary_layout_family": "card-grid",
+        "layout_families": ["card-grid", "visual-guide"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["bilingual vocabulary poster", "illustrated word-card set", "classroom vocabulary grid"],
+        "artifacts_zh": ["双语词汇海报", "插画单词卡组", "课堂词汇九宫格"],
+        "concepts": [
+          {"en": "English-Spanish fruits", "zh": "英西水果词汇"},
+          {"en": "English-Korean kitchen tools", "zh": "英韩厨房用品词汇"},
+          {"en": "English-Japanese weather words", "zh": "英日天气词汇"},
+          {"en": "English-Chinese farm animals", "zh": "中英农场动物词汇"},
+          {"en": "English-French daily routines", "zh": "英法日常活动词汇"},
+          {"en": "English-Chinese space terms", "zh": "中英太空词汇"},
+          {"en": "English-Spanish body parts", "zh": "英西身体部位词汇"},
+          {"en": "English-Korean desserts", "zh": "英韩甜点词汇"},
+          {"en": "English-Japanese transport words", "zh": "英日交通工具词汇"},
+          {"en": "English-Chinese musical instruments", "zh": "中英语乐器词汇"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-english-grammar-wordlist-infographic",
+      "aliases": [],
+      "description": "A colorful ESL word-list infographic for homophones, homonyms, and confusing English word pairs, using boxed definitions and cartoon examples.",
+      "supported_subject_event_types": ["English homophones", "English homonyms", "confusing English word pairs"],
+      "supported_information_structures": ["paired word list", "short definitions", "usage distinction"],
+      "expected_visual_layout_structure": ["colorful multi-box infographic", "roughly twenty paired entries", "cartoon-supported classroom poster"],
+      "typical_user_goals": ["teach easily confused English words", "make an ESL reference poster", "compare sound-alike or same-spelling terms"],
+      "required_inputs": ["topic"],
+      "optional_inputs": ["learner level", "number of pairs", "classroom tone"],
+      "known_exclusions": ["general bilingual topic vocabulary", "long-form grammar lessons", "non-English language pairs"],
+      "positive_examples": ["20 common homophones", "homonyms for middle school", "tricky English sound-alike words"],
+      "negative_examples": ["Spanish fruit vocabulary", "verb conjugation worksheet", "Chinese antonyms"],
+      "neighboring_templates": ["template-vocabulary", "template-education-card"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-english-grammar-wordlist-infographic", "public/data/nano_templates.json#template-english-grammar-wordlist-infographic", "public/data/nano_inspiration.json#template-english-grammar-wordlist-infographic", "messages/en/nano.json#template-english-grammar-wordlist-infographic"],
+      "uncertainty": "Evidence is strong for homophones/homonyms but limited for grammar topics outside confusing word lists.",
+      "ontology": {"subject_event": "English confusing word relationships", "information_type": "definition and distinction", "style_layout": "boxed educational word-list infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "boxed-cartoon-education",
+        "visual_style_families": ["boxed-cartoon-education", "classroom-education"],
+        "primary_layout_family": "boxed-wordlist-infographic",
+        "layout_families": ["boxed-wordlist-infographic", "paired-entry-grid"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["ESL word-pair infographic", "classroom homophone poster", "boxed confusing-words guide"],
+        "artifacts_zh": ["英语易混词信息图", "同音词课堂海报", "英语词对科普卡"],
+        "concepts": [
+          {"en": "common homophones for beginners", "zh": "初学者常见英语同音词"},
+          {"en": "homonyms with short definitions", "zh": "带简短释义的英语同形同音词"},
+          {"en": "there their and they're", "zh": "there、their 和 they're 易混词"},
+          {"en": "sea and see sound-alike words", "zh": "sea 和 see 这类同音词"},
+          {"en": "tricky homophones for grade five", "zh": "五年级易错英语同音词"},
+          {"en": "English words with two meanings", "zh": "一词多义英语词汇"},
+          {"en": "twenty classroom homonym pairs", "zh": "20 组课堂英语同音异义词"},
+          {"en": "frequently confused English pairs", "zh": "高频英语易混词对"},
+          {"en": "homophones with cartoon examples", "zh": "配卡通例子的英语同音词"},
+          {"en": "ESL sound-alike word review", "zh": "ESL 发音相同词复习"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-interior-design-mood-board-generator",
+      "aliases": [],
+      "description": "Professional room-specific interior mood boards combining a palette, materials, textures, furniture, and decor references.",
+      "supported_subject_event_types": ["home interiors", "hospitality interiors", "room decoration", "spa or workspace concepts"],
+      "supported_information_structures": ["design inspiration", "palette and material selection", "furniture and texture coordination"],
+      "expected_visual_layout_structure": ["mood board", "material swatches", "room references and palette"],
+      "typical_user_goals": ["plan a room style", "communicate an interior concept", "collect coordinated decor inspiration"],
+      "required_inputs": ["space_type", "reference image in the frozen catalog workflow"],
+      "optional_inputs": ["style", "palette", "audience", "aspect ratio"],
+      "known_exclusions": ["plant biology", "generic cozy lifestyle tips", "single-product advertisement"],
+      "positive_examples": ["Japandi living room mood board", "nursery palette and furniture board", "aromatherapy spa corner materials"],
+      "negative_examples": ["monstera care guide", "morning self-care routine", "diffuser product launch ad"],
+      "neighboring_templates": ["template-lifestyle-watercolor-infographic", "template-product-poster", "template-species-science"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-interior-design-mood-board-generator", "public/data/nano_templates.json#template-interior-design-mood-board-generator", "public/data/nano_inspiration.json#template-interior-design-mood-board-generator", "messages/en/nano.json#template-interior-design-mood-board-generator"],
+      "uncertainty": "The frozen catalog marks the template as requiring an image upload although its text capability is clear; routing is evaluated independently of downstream input collection.",
+      "ontology": {"subject_event": "interior space design", "information_type": "style and material inspiration", "style_layout": "interior mood board"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "editorial-material-collage",
+        "visual_style_families": ["editorial-material-collage", "interior-design"],
+        "primary_layout_family": "mood-board",
+        "layout_families": ["mood-board", "material-palette-board"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["interior mood board", "room palette and material board", "decor concept sheet"],
+        "artifacts_zh": ["室内设计情绪板", "空间配色材质板", "家居软装灵感板"],
+        "concepts": [
+          {"en": "Japandi living room", "zh": "侘寂日式客厅"},
+          {"en": "warm minimalist bedroom", "zh": "暖色极简卧室"},
+          {"en": "playful nursery room", "zh": "童趣婴儿房"},
+          {"en": "small home office", "zh": "小户型家庭办公室"},
+          {"en": "coastal bathroom", "zh": "海岸风浴室"},
+          {"en": "industrial dining bar", "zh": "工业风餐吧"},
+          {"en": "sage green kitchen", "zh": "鼠尾草绿厨房"},
+          {"en": "aromatherapy spa corner", "zh": "香薰疗愈角"},
+          {"en": "mid-century reading nook", "zh": "中古风阅读角"},
+          {"en": "pet-friendly studio apartment", "zh": "宠物友好单身公寓"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-education-card",
+      "aliases": [],
+      "description": "A flexible Chinese educational knowledge card that turns a topic into a cute cartoon or chalkboard-style popular-science infographic.",
+      "supported_subject_event_types": ["general science", "economics and social concepts", "health and fitness concepts", "environment and history topics"],
+      "supported_information_structures": ["topic explanation", "key facts", "concept breakdown", "popular-science summary"],
+      "expected_visual_layout_structure": ["3:4 knowledge card", "modular infographic", "cartoon or chalkboard scientific sketch"],
+      "typical_user_goals": ["explain a concept accessibly", "make classroom or social knowledge content", "summarize key facts"],
+      "required_inputs": ["topic"],
+      "optional_inputs": ["cartoon versus chalkboard style", "audience", "tone"],
+      "known_exclusions": ["single-species field-guide detail when a species template fits", "bilingual vocabulary drilling", "commercial product promotion"],
+      "positive_examples": ["fun economics knowledge", "plate tectonics for children", "broken windows theory explainer"],
+      "negative_examples": ["ginkgo species anatomy", "Spanish flashcards", "aroma diffuser ad"],
+      "neighboring_templates": ["template-species-science", "template-english-grammar-wordlist-infographic"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-education-card", "public/data/nano_templates.json#template-education-card", "public/data/nano_inspiration.json#template-education-card", "messages/en/nano.json#template-education-card"],
+      "uncertainty": "This is intentionally broad; a more specialized template should win when the subject and information structure are explicit.",
+      "ontology": {"subject_event": "general educational topic", "information_type": "accessible explanation and key facts", "style_layout": "modular 3:4 knowledge card infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "chalkboard-cartoon-education",
+        "visual_style_families": ["chalkboard-cartoon-education", "popular-science"],
+        "primary_layout_family": "knowledge-card",
+        "layout_families": ["knowledge-card", "modular-infographic"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["popular-science knowledge card", "educational explainer infographic", "cartoon concept card"],
+        "artifacts_zh": ["知识科普卡", "教育解释信息图", "卡通知识长图"],
+        "concepts": [
+          {"en": "opportunity cost in daily life", "zh": "生活中的机会成本"},
+          {"en": "why inflation happens", "zh": "通货膨胀为什么发生"},
+          {"en": "plate tectonics for children", "zh": "儿童版板块构造"},
+          {"en": "how optical illusions work", "zh": "视觉错觉原理"},
+          {"en": "broken windows theory", "zh": "破窗效应"},
+          {"en": "the greenhouse effect", "zh": "温室效应"},
+          {"en": "muscle growth basics", "zh": "肌肉增长基础"},
+          {"en": "DNA inheritance basics", "zh": "DNA 遗传入门"},
+          {"en": "how interest rates affect us", "zh": "利率如何影响生活"},
+          {"en": "why eclipses occur", "zh": "日食月食为什么发生"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-fandom-character-grid-poster",
+      "aliases": [],
+      "description": "A vertical cinematic grid poster presenting an ensemble of iconic characters from a fandom, franchise, game, show, or coherent character theme.",
+      "supported_subject_event_types": ["anime and game casts", "superhero or fantasy ensembles", "TV or film character groups", "coherent historical warrior groups"],
+      "supported_information_structures": ["character collection", "cast overview", "themed ensemble showcase"],
+      "expected_visual_layout_structure": ["vertical 3×3 character grid", "nine portraits", "bold labels and typography"],
+      "typical_user_goals": ["make fan art for a cast", "show a group of iconic characters", "create a collectible ensemble poster"],
+      "required_inputs": ["theme"],
+      "optional_inputs": ["franchise", "portrait tone", "labels"],
+      "known_exclusions": ["MBTI classification unless explicitly requested", "single historical figure principles", "relationship compatibility"],
+      "positive_examples": ["Chiikawa and friends cast grid", "Genshin Liyue characters", "comic book superhero ensemble"],
+      "negative_examples": ["Marvel characters mapped to 16 MBTI types", "Einstein life principles", "INFJ and ENTP compatibility"],
+      "neighboring_templates": ["template-mbti-generic", "template-figure-principles-infographic"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-fandom-character-grid-poster", "public/data/nano_templates.json#template-fandom-character-grid-poster", "public/data/nano_inspiration.json#template-fandom-character-grid-poster", "messages/en/nano.json#template-fandom-character-grid-poster"],
+      "uncertainty": "Examples extend beyond fictional fandoms to coherent sports and historical groups; the stable operation is ensemble showcase rather than classification.",
+      "ontology": {"subject_event": "fandom or themed character ensemble", "information_type": "character collection and showcase", "style_layout": "vertical cinematic character grid poster"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "cinematic-character-poster",
+        "visual_style_families": ["cinematic-character-poster", "fandom-illustration"],
+        "primary_layout_family": "character-grid",
+        "layout_families": ["character-grid", "ensemble-poster"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["3x3 fandom character poster", "nine-character cast grid", "cinematic ensemble poster"],
+        "artifacts_zh": ["九宫格角色海报", "九人阵容角色墙", "电影感群像海报"],
+        "concepts": [
+          {"en": "Chiikawa and friends", "zh": "吉伊卡哇主要角色"},
+          {"en": "Genshin Liyue characters", "zh": "原神璃月角色"},
+          {"en": "classic anime protagonists", "zh": "经典动漫主角"},
+          {"en": "comic book superheroes", "zh": "漫画超级英雄"},
+          {"en": "fantasy saga villains", "zh": "奇幻作品反派"},
+          {"en": "video game heroines", "zh": "电子游戏女主角"},
+          {"en": "Sengoku warlords", "zh": "战国武将群像"},
+          {"en": "iconic TV detectives", "zh": "经典电视剧侦探角色"},
+          {"en": "space opera crew", "zh": "太空歌剧主角团"},
+          {"en": "legendary fantasy warriors", "zh": "传奇奇幻战士"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-lifestyle-watercolor-infographic",
+      "aliases": [],
+      "description": "Warm watercolor lifestyle guides for self-care, mindfulness, routines, hobbies, and cozy everyday themes.",
+      "supported_subject_event_types": ["self-care", "mindfulness", "cozy hobbies", "healthy routines", "everyday lifestyle"],
+      "supported_information_structures": ["tips or habits", "routine guide", "themed lifestyle inspiration"],
+      "expected_visual_layout_structure": ["warm watercolor infographic", "small illustrated vignettes", "cozy poster"],
+      "typical_user_goals": ["make an aesthetic routine guide", "share self-care tips", "visualize a cozy hobby lifestyle"],
+      "required_inputs": ["infographic_topic", "number"],
+      "optional_inputs": ["season", "palette", "audience", "aspect ratio"],
+      "known_exclusions": ["professional room-material mood board", "commercial product ad", "scientific plant explanation"],
+      "positive_examples": ["cozy reading habits", "mindful morning routine", "seven rainy-day self-care ideas"],
+      "negative_examples": ["bedroom furniture mood board", "candle product launch", "monstera anatomy"],
+      "neighboring_templates": ["template-interior-design-mood-board-generator", "template-product-poster", "template-species-science"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-lifestyle-watercolor-infographic", "public/data/nano_templates.json#template-lifestyle-watercolor-infographic", "public/data/nano_inspiration.json#template-lifestyle-watercolor-infographic", "messages/en/nano.json#template-lifestyle-watercolor-infographic"],
+      "uncertainty": "Search aliases include craft language beyond the six direct examples; those craft boundaries need manual review.",
+      "ontology": {"subject_event": "cozy everyday lifestyle", "information_type": "tips, habits, or aesthetic inspiration", "style_layout": "warm watercolor infographic poster"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "warm-watercolor-illustration",
+        "visual_style_families": ["warm-watercolor-illustration", "cozy-lifestyle"],
+        "primary_layout_family": "vignette-infographic",
+        "layout_families": ["vignette-infographic", "lifestyle-poster"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["cozy watercolor lifestyle guide", "self-care infographic", "illustrated routine poster"],
+        "artifacts_zh": ["水彩生活方式指南", "自我关怀信息图", "治愈系日常海报"],
+        "concepts": [
+          {"en": "cozy reading rituals", "zh": "治愈系阅读仪式"},
+          {"en": "slow Sunday morning", "zh": "慢节奏周日早晨"},
+          {"en": "rainy-day self care", "zh": "雨天自我关怀"},
+          {"en": "mindful tea routine", "zh": "正念饮茶习惯"},
+          {"en": "gentle evening wind-down", "zh": "温柔睡前放松"},
+          {"en": "spring journaling habits", "zh": "春日手账习惯"},
+          {"en": "screen-free weekend ideas", "zh": "无屏幕周末灵感"},
+          {"en": "small daily mood boosters", "zh": "日常微小快乐清单"},
+          {"en": "cozy knitting afternoon", "zh": "温暖编织午后"},
+          {"en": "calm desk break routine", "zh": "办公桌放松小习惯"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-travel",
+      "aliases": ["template-travel-zh"],
+      "description": "A cute hand-drawn trip map showing day-by-day routes, landmarks, food, lodging, and transport for a destination.",
+      "supported_subject_event_types": ["city or country trips", "remote destinations", "weekend getaways", "multi-day itineraries"],
+      "supported_information_structures": ["daily itinerary", "route plan", "landmark and food recommendations", "transport and lodging cues"],
+      "expected_visual_layout_structure": ["hand-drawn travel map", "daily route blocks", "labeled illustrated itinerary"],
+      "typical_user_goals": ["plan a trip visually", "summarize an itinerary", "make a destination route map"],
+      "required_inputs": ["destination", "date_range"],
+      "optional_inputs": ["traveler type", "season", "pace"],
+      "known_exclusions": ["heritage craft explanation", "pure destination advertising without itinerary", "geographically exact navigation"],
+      "positive_examples": ["two days in Iceland", "hidden-gem Seoul itinerary", "remote Patagonia route"],
+      "negative_examples": ["paper-cutting history board", "couture poster inspired by Paris", "GPS road navigation"],
+      "neighboring_templates": ["template-intangible-heritage"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-travel", "public/data/nano_templates.json#template-travel", "public/data/nano_inspiration.json#template-travel", "messages/en/nano.json#template-travel"],
+      "uncertainty": "The description specifies Simplified Chinese labels, while examples cover international destinations; output-language flexibility is uncertain.",
+      "ontology": {"subject_event": "destination trip", "information_type": "itinerary and route planning", "style_layout": "cute hand-drawn map with daily blocks"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "hand-drawn-watercolor-map",
+        "visual_style_families": ["hand-drawn-watercolor-map", "travel-illustration"],
+        "primary_layout_family": "map-itinerary",
+        "layout_families": ["map-itinerary", "daily-route-blocks"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["hand-drawn travel itinerary map", "illustrated trip route", "day-by-day destination guide"],
+        "artifacts_zh": ["手绘旅行路线图", "插画行程地图", "按天旅行攻略"],
+        "concepts": [
+          {"en": "three days in Iceland", "zh": "冰岛三日行程"},
+          {"en": "remote Patagonia getaway", "zh": "巴塔哥尼亚小众旅行"},
+          {"en": "hidden corners of Kyoto", "zh": "京都小众角落之旅"},
+          {"en": "weekend in Mexico City", "zh": "墨西哥城周末游"},
+          {"en": "two days around Seoul", "zh": "首尔两日游"},
+          {"en": "food and landmarks in Singapore", "zh": "新加坡美食景点路线"},
+          {"en": "winter trip through Hokkaido", "zh": "北海道冬季行程"},
+          {"en": "slow travel in Porto", "zh": "波尔图慢旅行"},
+          {"en": "desert route in Morocco", "zh": "摩洛哥沙漠路线"},
+          {"en": "four-day Yunnan escape", "zh": "云南四日小众游"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-intangible-heritage",
+      "aliases": ["template-intangible-heritage-zh"],
+      "description": "A dense A3 educational board explaining a traditional or intangible cultural-heritage craft through history, process, motifs, meaning, and preservation.",
+      "supported_subject_event_types": ["traditional crafts", "intangible cultural heritage", "folk art techniques", "heritage preservation"],
+      "supported_information_structures": ["history", "making process", "motif interpretation", "modern preservation"],
+      "expected_visual_layout_structure": ["high-density A3 information board", "process and motif modules", "heritage infographic"],
+      "typical_user_goals": ["explain a traditional craft", "teach cultural context", "document craft process and preservation"],
+      "required_inputs": ["craft_name"],
+      "optional_inputs": ["region", "audience", "historical emphasis"],
+      "known_exclusions": ["travel itinerary", "generic DIY tutorial with no heritage context", "modern product promotion"],
+      "positive_examples": ["Chinese paper cutting", "cloisonné craft board", "Portuguese azulejo heritage"],
+      "negative_examples": ["Portugal travel route", "how to assemble flat-pack furniture", "paper-cutter product ad"],
+      "neighboring_templates": ["template-travel", "template-education-card"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-intangible-heritage", "public/data/nano_templates.json#template-intangible-heritage", "public/data/nano_inspiration.json#template-intangible-heritage", "messages/en/nano.json#template-intangible-heritage"],
+      "uncertainty": "The description says Chinese heritage, but an Azulejo example demonstrates at least some non-Chinese traditional-craft coverage.",
+      "ontology": {"subject_event": "traditional heritage craft", "information_type": "history, process, meaning, and preservation", "style_layout": "dense A3 heritage information board"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "heritage-editorial-illustration",
+        "visual_style_families": ["heritage-editorial-illustration", "traditional-craft"],
+        "primary_layout_family": "dense-information-board",
+        "layout_families": ["dense-information-board", "process-history-board"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["intangible-heritage explainer board", "traditional craft infographic", "A3 heritage process poster"],
+        "artifacts_zh": ["非遗科普展板", "传统工艺信息图", "A3 文化传承海报"],
+        "concepts": [
+          {"en": "Chinese paper cutting", "zh": "中国剪纸"},
+          {"en": "cloisonne enamel craft", "zh": "景泰蓝工艺"},
+          {"en": "woodblock New Year prints", "zh": "木版年画"},
+          {"en": "fish lantern making", "zh": "鱼灯制作技艺"},
+          {"en": "Anshun opera masks", "zh": "安顺地戏面具"},
+          {"en": "traditional lion dance", "zh": "传统舞狮"},
+          {"en": "Suzhou embroidery", "zh": "苏绣技艺"},
+          {"en": "blue calico dyeing", "zh": "蓝印花布"},
+          {"en": "Portuguese azulejo tiles", "zh": "葡萄牙花砖艺术"},
+          {"en": "bamboo weaving heritage", "zh": "竹编非遗"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-recipe",
+      "aliases": ["template-recipe-zh"],
+      "description": "A polished single-dish recipe visual guide with food photography, ingredients, cooking steps, and finishing touches.",
+      "supported_subject_event_types": ["named dishes", "regional recipes", "home cooking", "traditional cuisine"],
+      "supported_information_structures": ["ingredient list", "ordered recipe steps", "serving or finishing notes"],
+      "expected_visual_layout_structure": ["cookbook-style recipe poster", "food hero image plus modules", "visual cooking guide"],
+      "typical_user_goals": ["teach how to cook a dish", "make a printable recipe poster", "share a family or regional recipe"],
+      "required_inputs": ["dish_name"],
+      "optional_inputs": ["servings", "dietary notes", "tone"],
+      "known_exclusions": ["food product advertising", "multi-week meal plan", "food vocabulary lesson"],
+      "positive_examples": ["Cuban sandwich recipe poster", "pastel de nata cooking guide", "Kung Pao chicken recipe"],
+      "negative_examples": ["sandwich brand launch poster", "weekly meal-prep calendar", "bilingual fruit words"],
+      "neighboring_templates": ["template-product-poster", "template-vocabulary"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-recipe", "public/data/nano_templates.json#template-recipe", "public/data/nano_inspiration.json#template-recipe", "messages/en/nano.json#template-recipe"],
+      "uncertainty": "The stable capability is one named recipe; collection-scale meal planning remains outside observed evidence.",
+      "ontology": {"subject_event": "named dish", "information_type": "ingredients and cooking instructions", "style_layout": "food-photography recipe poster"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "food-photography",
+        "visual_style_families": ["food-photography", "culinary-editorial"],
+        "primary_layout_family": "recipe-poster",
+        "layout_families": ["recipe-poster", "ingredients-and-steps"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["recipe poster", "cookbook-style visual guide", "ingredients-and-steps card"],
+        "artifacts_zh": ["食谱海报", "菜谱视觉指南", "食材步骤卡"],
+        "concepts": [
+          {"en": "Cuban sandwich", "zh": "古巴三明治"},
+          {"en": "pastel de nata", "zh": "葡式蛋挞"},
+          {"en": "Kung Pao chicken", "zh": "宫保鸡丁"},
+          {"en": "mushroom risotto", "zh": "蘑菇烩饭"},
+          {"en": "Japanese curry rice", "zh": "日式咖喱饭"},
+          {"en": "shakshuka", "zh": "北非蛋"},
+          {"en": "Vietnamese spring rolls", "zh": "越南春卷"},
+          {"en": "sourdough focaccia", "zh": "酸种佛卡夏"},
+          {"en": "mapo tofu", "zh": "麻婆豆腐"},
+          {"en": "mango sticky rice", "zh": "芒果糯米饭"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-mbti-generic",
+      "aliases": [],
+      "description": "A cartoon MBTI visualization that compares how personality types or a character set behave in a chosen scenario, including full themed type charts.",
+      "supported_subject_event_types": ["MBTI types", "fandom characters classified by MBTI", "workplace or social scenarios", "sports or historical character sets"],
+      "supported_information_structures": ["personality classification", "behavior comparison", "type-to-character mapping"],
+      "expected_visual_layout_structure": ["labeled cartoon character chart", "multi-type comparison", "social-media personality grid"],
+      "typical_user_goals": ["map a cast to MBTI", "compare type behavior", "create a themed 16-type chart"],
+      "required_inputs": ["mbti_topic", "character_set"],
+      "optional_inputs": ["scenario", "tone", "fandom"],
+      "known_exclusions": ["plain fandom cast grid with no personality operation", "dedicated two-type relationship compatibility", "single historical biography"],
+      "positive_examples": ["Marvel MBTI chart with 16 types", "MBTI types at a group project", "anime cast personality mapping"],
+      "negative_examples": ["nine favorite Marvel heroes", "INFJ and ENTP dating compatibility", "Einstein biography"],
+      "neighboring_templates": ["template-fandom-character-grid-poster", "template-mbti-personality-compatibility-infographic", "template-figure-principles-infographic"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-mbti-generic", "public/data/nano_templates.json#template-mbti-generic", "public/data/nano_inspiration.json#template-mbti-generic", "messages/en/nano.json#template-mbti-generic"],
+      "uncertainty": "Examples mix full 16-type charts and smaller behavior comparisons; explicit compatibility should route to the dedicated template.",
+      "ontology": {"subject_event": "MBTI types or MBTI-mapped character set", "information_type": "personality classification and behavior comparison", "style_layout": "labeled cartoon multi-character chart"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "cartoon-personality-chart",
+        "visual_style_families": ["cartoon-personality-chart", "personality-education"],
+        "primary_layout_family": "personality-grid",
+        "layout_families": ["personality-grid", "sixteen-type-chart"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["16-type MBTI character chart", "MBTI behavior comparison", "personality mapping grid"],
+        "artifacts_zh": ["MBTI 十六型角色图", "人格行为对比图", "角色人格分类表"],
+        "concepts": [
+          {"en": "Marvel heroes as all 16 MBTI types", "zh": "漫威英雄 MBTI 十六型"},
+          {"en": "Genshin characters by MBTI", "zh": "原神角色 MBTI 分类"},
+          {"en": "MBTI types during a group project", "zh": "小组作业中的 MBTI"},
+          {"en": "MBTI personalities at a party", "zh": "聚会里的 MBTI 人格"},
+          {"en": "anime protagonists by personality type", "zh": "动漫主角人格分类"},
+          {"en": "football positions as MBTI types", "zh": "足球位置 MBTI"},
+          {"en": "office coworkers across 16 types", "zh": "办公室同事 MBTI 十六型"},
+          {"en": "mythology figures mapped to MBTI", "zh": "神话人物 MBTI 对照"},
+          {"en": "MBTI types planning a trip", "zh": "不同 MBTI 如何规划旅行"},
+          {"en": "sixteen personalities under deadline stress", "zh": "截止日前的十六型人格"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-species-science",
+      "aliases": ["template-species-science-zh"],
+      "description": "A centered single-species scientific illustration with surrounding modules about classification, traits, habitat, anatomy, or conservation.",
+      "supported_subject_event_types": ["plant species", "animal species", "endangered wildlife", "botanical and ecological subjects"],
+      "supported_information_structures": ["species facts", "classification", "habitat and traits", "anatomy or conservation"],
+      "expected_visual_layout_structure": ["3:4 scientific infographic", "central organism", "surrounding information modules"],
+      "typical_user_goals": ["explain one species", "make a field-guide card", "teach biodiversity or conservation"],
+      "required_inputs": ["species_name"],
+      "optional_inputs": ["conservation focus", "audience", "scientific tone"],
+      "known_exclusions": ["plant-themed room decoration", "general science concept", "plant vocabulary cards"],
+      "positive_examples": ["ginkgo tree species guide", "hawksbill turtle science card", "golden camellia conservation infographic"],
+      "negative_examples": ["botanical bedroom mood board", "photosynthesis concept card", "bilingual flower names"],
+      "neighboring_templates": ["template-education-card", "template-interior-design-mood-board-generator", "template-lifestyle-watercolor-infographic", "template-vocabulary"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-species-science", "public/data/nano_templates.json#template-species-science", "public/data/nano_inspiration.json#template-species-science", "messages/en/nano.json#template-species-science"],
+      "uncertainty": "Bare domain words like 植物 are intrinsically broad, but the supplied anchor fixes this route for anchor scoring.",
+      "ontology": {"subject_event": "single plant or animal species", "information_type": "scientific facts, anatomy, habitat, and conservation", "style_layout": "central-species modular science infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "scientific-illustration",
+        "visual_style_families": ["scientific-illustration", "natural-history"],
+        "primary_layout_family": "central-species-infographic",
+        "layout_families": ["central-species-infographic", "anatomy-fact-modules"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["species science infographic", "illustrated field-guide card", "scientific species poster"],
+        "artifacts_zh": ["物种科普信息图", "自然观察图鉴卡", "科学物种海报"],
+        "concepts": [
+          {"en": "ginkgo tree", "zh": "银杏"},
+          {"en": "hawksbill sea turtle", "zh": "玳瑁"},
+          {"en": "golden camellia", "zh": "金花茶"},
+          {"en": "red-crowned crane", "zh": "丹顶鹤"},
+          {"en": "dove tree", "zh": "珙桐"},
+          {"en": "snow leopard", "zh": "雪豹"},
+          {"en": "Chinese pangolin", "zh": "中华穿山甲"},
+          {"en": "tree fern", "zh": "桫椤"},
+          {"en": "green peafowl", "zh": "绿孔雀"},
+          {"en": "Paphiopedilum orchid", "zh": "兜兰"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-figure-principles-infographic",
+      "aliases": [],
+      "description": "An educational famous-figure visual guide focused on a person's life principles, habits, ideas, and lessons.",
+      "supported_subject_event_types": ["historical figures", "scientists", "artists", "writers", "entrepreneurs and thinkers"],
+      "supported_information_structures": ["principles and habits", "key ideas", "life lessons", "concise figure overview"],
+      "expected_visual_layout_structure": ["portrait-led infographic", "principle or habit modules", "educational visual guide"],
+      "typical_user_goals": ["learn from a famous person", "summarize a figure's principles", "make an inspirational educational poster"],
+      "required_inputs": ["famous_figure"],
+      "optional_inputs": ["number of principles", "audience", "historical tone"],
+      "known_exclusions": ["fictional fandom ensemble", "full event timeline", "MBTI classification"],
+      "positive_examples": ["Einstein's life principles", "Marie Curie's habits", "lessons from Leonardo da Vinci"],
+      "negative_examples": ["nine anime heroes", "timeline of World War II", "Marvel MBTI chart"],
+      "neighboring_templates": ["template-fandom-character-grid-poster", "template-mbti-generic"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-figure-principles-infographic", "public/data/nano_templates.json#template-figure-principles-infographic", "public/data/nano_inspiration.json#template-figure-principles-infographic", "messages/en/nano.json#template-figure-principles-infographic"],
+      "uncertainty": "The anchor phrase historical character is less specific than the principles operation; expanded core queries make that operation defensible.",
+      "ontology": {"subject_event": "single famous or historical person", "information_type": "life principles, habits, and lessons", "style_layout": "portrait-led educational principles infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "editorial-portrait-illustration",
+        "visual_style_families": ["editorial-portrait-illustration", "biographical-education"],
+        "primary_layout_family": "portrait-led-infographic",
+        "layout_families": ["portrait-led-infographic", "principles-card"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["famous-figure principles infographic", "life-lessons visual guide", "portrait-led habits poster"],
+        "artifacts_zh": ["名人原则信息图", "人物人生经验图解", "肖像式习惯海报"],
+        "concepts": [
+          {"en": "Albert Einstein's life principles", "zh": "爱因斯坦的人生原则"},
+          {"en": "Marie Curie's work habits", "zh": "居里夫人的工作习惯"},
+          {"en": "Leonardo da Vinci's creative lessons", "zh": "达芬奇的创作启示"},
+          {"en": "Jane Austen's writing principles", "zh": "简·奥斯汀的写作原则"},
+          {"en": "Sun Tzu's strategic lessons", "zh": "孙子的战略智慧"},
+          {"en": "Mozart's creative routine", "zh": "莫扎特的创作习惯"},
+          {"en": "Aristotle's guiding ideas", "zh": "亚里士多德的核心思想"},
+          {"en": "Steve Jobs on focus and design", "zh": "乔布斯的专注与设计原则"},
+          {"en": "Picasso's artistic lessons", "zh": "毕加索的艺术启示"},
+          {"en": "Shakespeare's storytelling habits", "zh": "莎士比亚的叙事经验"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-product-poster",
+      "aliases": [],
+      "description": "A cozy home-product advertising poster with a styled lifestyle scene, handwritten tagline, and feature badges.",
+      "supported_subject_event_types": ["home appliances", "small consumer products", "aroma and wellness devices", "lifestyle electronics"],
+      "supported_information_structures": ["product promotion", "feature highlights", "brand tagline", "lifestyle positioning"],
+      "expected_visual_layout_structure": ["single-product hero poster", "warm interior scene", "tagline and feature badges"],
+      "typical_user_goals": ["advertise a product", "make an ecommerce campaign visual", "show product features in context"],
+      "required_inputs": ["product_name"],
+      "optional_inputs": ["brand tone", "features", "palette", "aspect ratio"],
+      "known_exclusions": ["general lifestyle tip guide", "interior mood board", "food recipe instructions"],
+      "positive_examples": ["aroma diffuser launch poster", "warm desk lamp ad", "portable blender feature poster"],
+      "negative_examples": ["seven calming habits", "spa room materials board", "smoothie recipe"],
+      "neighboring_templates": ["template-lifestyle-watercolor-infographic", "template-interior-design-mood-board-generator", "template-recipe"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-product-poster", "public/data/nano_templates.json#template-product-poster", "public/data/nano_inspiration.json#template-product-poster", "messages/en/nano.json#template-product-poster"],
+      "uncertainty": "Observed examples emphasize cozy home products; support for unrelated product categories should not be assumed.",
+      "ontology": {"subject_event": "small home or lifestyle product", "information_type": "promotion and feature highlighting", "style_layout": "warm single-product advertising poster"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "lifestyle-product-advertising",
+        "visual_style_families": ["lifestyle-product-advertising", "warm-commercial"],
+        "primary_layout_family": "product-hero-poster",
+        "layout_families": ["product-hero-poster", "feature-callout-poster"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["cozy product poster", "lifestyle product advertisement", "feature-led launch visual"],
+        "artifacts_zh": ["温馨产品海报", "生活方式产品广告", "卖点型新品视觉"],
+        "concepts": [
+          {"en": "aroma diffuser", "zh": "香薰机"},
+          {"en": "ceramic scented candle", "zh": "陶瓷香薰蜡烛"},
+          {"en": "compact coffee maker", "zh": "小型咖啡机"},
+          {"en": "warm desk lamp", "zh": "暖光台灯"},
+          {"en": "portable blender", "zh": "便携榨汁杯"},
+          {"en": "label printer", "zh": "标签打印机"},
+          {"en": "Bluetooth speaker", "zh": "蓝牙音箱"},
+          {"en": "air purifier", "zh": "空气净化器"},
+          {"en": "electric kettle", "zh": "电热水壶"},
+          {"en": "smart cycling computer", "zh": "智能骑行码表"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-fashion-inspired-gown-design-sheet",
+      "aliases": [],
+      "description": "A couture gown concept sheet translating a nature or cultural inspiration into a fashion illustration, technical sketch, and handwritten design notes.",
+      "supported_subject_event_types": ["couture gowns", "nature-inspired fashion", "red-carpet concept design", "formalwear inspiration"],
+      "supported_information_structures": ["design concept translation", "silhouette and detail notes", "technical fashion sketch"],
+      "expected_visual_layout_structure": ["fashion design sheet", "hero gown illustration", "technical sketch and annotations"],
+      "typical_user_goals": ["design a statement gown", "visualize red-carpet couture", "turn an inspiration source into fashion"],
+      "required_inputs": ["inspiration_subject"],
+      "optional_inputs": ["event", "palette", "fabric", "silhouette"],
+      "known_exclusions": ["celebrity event recap", "ready-to-wear ecommerce listing", "generic outfit try-on"],
+      "positive_examples": ["ocean-wave couture gown sheet", "Met Gala orchid-inspired dress", "ice-crystal evening gown"],
+      "negative_examples": ["Met Gala photo recap", "sell a basic T-shirt", "put this jacket on my portrait"],
+      "neighboring_templates": [],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-fashion-inspired-gown-design-sheet", "public/data/nano_templates.json#template-fashion-inspired-gown-design-sheet", "public/data/nano_inspiration.json#template-fashion-inspired-gown-design-sheet", "messages/en/nano.json#template-fashion-inspired-gown-design-sheet"],
+      "uncertainty": "Met Gala is an alias and suitable context, but the underlying operation is gown concept design—not event coverage.",
+      "ontology": {"subject_event": "couture gown inspired by a theme", "information_type": "fashion concept development and annotation", "style_layout": "gown design sheet with technical sketch"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "fashion-illustration",
+        "visual_style_families": ["fashion-illustration", "couture-concept"],
+        "primary_layout_family": "design-sheet",
+        "layout_families": ["design-sheet", "technical-sketch-board"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["couture gown design sheet", "red-carpet dress concept board", "annotated fashion sketch"],
+        "artifacts_zh": ["高定礼服设计稿", "红毯礼服概念板", "带注释的时装设计图"],
+        "concepts": [
+          {"en": "ocean-wave inspired gown", "zh": "海浪灵感礼服"},
+          {"en": "orchid Met Gala dress", "zh": "兰花灵感 Met Gala 礼服"},
+          {"en": "ice-crystal evening gown", "zh": "冰晶晚礼服"},
+          {"en": "phoenix couture look", "zh": "凤凰高定造型"},
+          {"en": "butterfly-wing ball gown", "zh": "蝶翼舞会礼服"},
+          {"en": "cherry-blossom red-carpet gown", "zh": "樱花红毯礼服"},
+          {"en": "desert-dune couture dress", "zh": "沙丘灵感高定礼服"},
+          {"en": "moonlight silver gown", "zh": "月光银礼服"},
+          {"en": "lotus-inspired formal dress", "zh": "莲花灵感礼服"},
+          {"en": "volcanic-lava statement gown", "zh": "火山熔岩概念礼服"}
+        ]
+      }
+    },
+    {
+      "canonical_id": "template-mbti-personality-compatibility-infographic",
+      "aliases": [],
+      "description": "A cute two-type MBTI compatibility infographic comparing traits, cognitive functions, relationship dynamics, and compatibility sliders.",
+      "supported_subject_event_types": ["two MBTI types", "dating or friendship compatibility", "personality pairing"],
+      "supported_information_structures": ["side-by-side type comparison", "relationship strengths and tensions", "compatibility analysis"],
+      "expected_visual_layout_structure": ["two-character comparison infographic", "traits and cognitive-function modules", "relationship sliders"],
+      "typical_user_goals": ["assess a personality pairing", "explain dating dynamics", "compare two MBTI types"],
+      "required_inputs": ["topic"],
+      "optional_inputs": ["relationship context", "tone", "audience"],
+      "known_exclusions": ["full 16-type chart", "plain fandom cast showcase", "non-MBTI relationship advice"],
+      "positive_examples": ["INFJ vs ENTP dating compatibility", "INTJ and ENFP relationship", "ISTP and ESFJ pairing"],
+      "negative_examples": ["all 16 Marvel MBTI types", "nine Chiikawa characters", "generic long-distance relationship advice"],
+      "neighboring_templates": ["template-mbti-generic", "template-fandom-character-grid-poster"],
+      "evidence_paths": ["scripts/configs/template_capability_kb.json#template-mbti-personality-compatibility-infographic", "public/data/nano_templates.json#template-mbti-personality-compatibility-infographic", "public/data/nano_inspiration.json#template-mbti-personality-compatibility-infographic", "messages/en/nano.json#template-mbti-personality-compatibility-infographic"],
+      "uncertainty": "Evidence centers on two-type relationships; compatibility among larger groups is unsupported.",
+      "ontology": {"subject_event": "pair of MBTI personality types", "information_type": "relationship compatibility comparison", "style_layout": "cute dual-character comparison infographic"},
+      "style_taxonomy": {
+        "primary_visual_style_family": "cute-comparison-illustration",
+        "visual_style_families": ["cute-comparison-illustration", "relationship-education"],
+        "primary_layout_family": "comparison-chart",
+        "layout_families": ["comparison-chart", "dual-character-infographic"]
+      },
+      "generation_profile": {
+        "artifacts_en": ["MBTI compatibility chart", "two-type relationship infographic", "personality pairing comparison"],
+        "artifacts_zh": ["MBTI 兼容性图表", "双人格关系信息图", "人格配对对比图"],
+        "concepts": [
+          {"en": "INFJ and ENTP dating", "zh": "INFJ 与 ENTP 恋爱配对"},
+          {"en": "INTJ and ENFP relationship", "zh": "INTJ 与 ENFP 关系"},
+          {"en": "ISTP and ESFJ compatibility", "zh": "ISTP 与 ESFJ 兼容性"},
+          {"en": "INFP and ENTJ as a couple", "zh": "INFP 与 ENTJ 情侣相处"},
+          {"en": "ENFJ and ISTP friendship", "zh": "ENFJ 与 ISTP 友情"},
+          {"en": "ISFJ and ESTP dating dynamics", "zh": "ISFJ 与 ESTP 恋爱互动"},
+          {"en": "ENTP and INTJ long-term match", "zh": "ENTP 与 INTJ 长期配对"},
+          {"en": "ESFP and ISTJ relationship", "zh": "ESFP 与 ISTJ 关系"},
+          {"en": "ENFP and INFJ compatibility", "zh": "ENFP 与 INFJ 适配度"},
+          {"en": "ESTJ and INFP communication", "zh": "ESTJ 与 INFP 沟通模式"}
+        ]
+      }
+    }
+  ]
+}

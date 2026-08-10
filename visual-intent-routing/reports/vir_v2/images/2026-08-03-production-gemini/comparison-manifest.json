@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-08-03-production-gemini",
+  "comparison_type": "end_to_end_production",
+  "image_naming": {
+    "policy_version": "query-folder-v1",
+    "format": "by-query/<normalized-query>/<system>--d<direction>.<extension>"
+  },
+  "systems": {
+    "gpt_direct": {
+      "image_model": "gpt-image-2",
+      "input": "natural_language_query"
+    },
+    "curify": {
+      "router": "Curify search-generation-plan",
+      "image_model": "gemini-3-pro-image-preview",
+      "input": "routed_template_and_parameters"
+    }
+  },
+  "totals": {
+    "gpt_direct_images": 166,
+    "curify_gemini_images": 150,
+    "completed_images": 316,
+    "unique_queries": 115,
+    "query_folders": 115,
+    "queries_covered_by_both": 96,
+    "matched_query_direction_pairs": 144
+  },
+  "stages": {
+    "anchors": {
+      "gpt_direct_images": 16,
+      "curify_gemini_images": 15,
+      "completed_images": 31,
+      "unique_queries": 16,
+      "query_folders": 16,
+      "queries_covered_by_both": 15,
+      "matched_query_direction_pairs": 15
+    },
+    "exploration": {
+      "gpt_direct_images": 82,
+      "curify_gemini_images": 81,
+      "completed_images": 163,
+      "unique_queries": 30,
+      "query_folders": 30,
+      "queries_covered_by_both": 28,
+      "matched_query_direction_pairs": 76
+    },
+    "core": {
+      "gpt_direct_images": 68,
+      "curify_gemini_images": 54,
+      "completed_images": 122,
+      "unique_queries": 69,
+      "query_folders": 69,
+      "queries_covered_by_both": 53,
+      "matched_query_direction_pairs": 53
+    }
+  },
+  "excluded": {
+    "removed_run_id": "2026-08-01-full",
+    "controlled_curify_gpt_image_2_images": 158,
+    "reason": "Removed by request; controlled-track Curify images are not part of the production comparison."
+  }
+}

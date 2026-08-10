@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-anchor-vir-s09",
+  "query": "cuban sandwich recipe poster",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/cuban-sandwich-recipe-poster",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/cuban-sandwich-recipe-poster/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 451630,
+      "sha256": "49c12c70bc6e8d8d65a5f45df8ce04c3dd492eb93ab98987ae75fa730e04cc8f"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/cuban-sandwich-recipe-poster/curify-gemini--d01.jpg",
+      "template_id": "template-recipe",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1073378,
+      "sha256": "2a4ff669e098a40a79d2781babf7056c5d5b5f6b768390490d7b67af7677ed9c"
+    }
+  ],
+  "curify_omission": null
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s03-23",
+  "query": "playful nursery room — make the subject, key details, and visual organization instantly scannable; informal tone, 4:5 pls",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/playful-nursery-room-make-the-subject-key-details-and-visual-organization-instantly-scannable-informal-tone-4-5-pls",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/playful-nursery-room-make-the-subject-key-details-and-visual-organization-instantly-scannable-informal-tone-4-5-pls/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 330385,
+      "sha256": "16ddb6a8a03e0d4e81b5e863f784b8ed7425e211ab5c99a977d34675dbd043f6"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/playful-nursery-room-make-the-subject-key-details-and-visual-organization-instantly-scannable-informal-tone-4-5-pls/curify-gemini--d01.jpg",
+      "template_id": "template-room-vocabulary-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 563623,
+      "sha256": "148c73f57eace07bac45d372fb4f01f629786dce94df4b79f2c6ebb2f562d635"
+    }
+  ],
+  "curify_omission": null
+}

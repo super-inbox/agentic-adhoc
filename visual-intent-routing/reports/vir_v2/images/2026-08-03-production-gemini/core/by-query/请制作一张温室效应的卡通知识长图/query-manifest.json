@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-06",
+  "query": "请制作一张温室效应的卡通知识长图。",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/请制作一张温室效应的卡通知识长图",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/请制作一张温室效应的卡通知识长图/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 345995,
+      "sha256": "c640b29a049848f150c8b7acb11ceeb5b4510635adde4cb656a123a9922e6ce9"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/请制作一张温室效应的卡通知识长图/curify-gemini--d01.jpg",
+      "template_id": "template-education",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 835486,
+      "sha256": "233503710e13ffa2c927472de43e3424d56de06190fd0d610aca26d8fb002550"
+    }
+  ],
+  "curify_omission": null
+}

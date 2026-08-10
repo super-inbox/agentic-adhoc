@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-anchor-vir-s04",
+  "query": "趣味经济学知识科普",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/趣味经济学知识科普",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/趣味经济学知识科普/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 377556,
+      "sha256": "1a2fe227e6be7469ff3bb1a8241cf87c081de8bb1ae64d51a54b44a2bf8c35ed"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/趣味经济学知识科普/curify-gemini--d01.jpg",
+      "template_id": "template-financial-habit-infographic-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1050022,
+      "sha256": "018f6b9ab11944612f3b43b20a22d44f0e6ff8fec656d8304cce05a5afd1ef4a"
+    }
+  ],
+  "curify_omission": null
+}

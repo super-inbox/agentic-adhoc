@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-27",
+  "query": "肌肉增长基础，想做成一眼能看懂的竖版视觉，给新手看，别太学术哈",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/肌肉增长基础-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/肌肉增长基础-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 323255,
+      "sha256": "a66bc8e9f41693834c2a238384ac2f9937030cf908d55f59cdc4e68b84dfdd01"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "pending",
+      "local_path": null,
+      "template_id": "template-training-muscle-equipment",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

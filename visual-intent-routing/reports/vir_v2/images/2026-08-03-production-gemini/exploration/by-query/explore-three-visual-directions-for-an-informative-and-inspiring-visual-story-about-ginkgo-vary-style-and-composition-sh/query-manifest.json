@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-011",
+  "query": "Explore three visual directions for an informative and inspiring visual story about ginkgo. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-an-informative-and-inspiring-visual-story-about-ginkgo-vary-style-and-composition-sh",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-informative-and-inspiring-visual-story-about-ginkgo-vary-style-and-composition-sh/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 412167,
+      "sha256": "113d0039aea3fabc86a7c10a7803bf096c8a50485965311edb58a7f1f142092d"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-informative-and-inspiring-visual-story-about-ginkgo-vary-style-and-composition-sh/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 334339,
+      "sha256": "6ed3ce4e3bb9dd057d57b40660c51fc5b1166f0e47fe6d357ace063d476497ee"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-informative-and-inspiring-visual-story-about-ginkgo-vary-style-and-composition-sh/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 421878,
+      "sha256": "19cee6da05580e36acd04ebec5d5bae9bbea7cc10c61da91e87fc138fe84cf7a"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-informative-and-inspiring-visual-story-about-ginkgo-vary-style-and-composition-sh/curify-gemini--d01.jpg",
+      "template_id": "template-herbal",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 856862,
+      "sha256": "c051aad765ffc702f52a6ffc9c43c17e86c3c0a738b197724d10e32b57e048c3"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-informative-and-inspiring-visual-story-about-ginkgo-vary-style-and-composition-sh/curify-gemini--d02.jpg",
+      "template_id": "template-gardening-how-to-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 893584,
+      "sha256": "9f68d479d7c08849798d33295a47d530fa5c07e16a5beb74e986876d8c040ec6"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-an-informative-and-inspiring-visual-story-about-ginkgo-vary-style-and-composition-sh/curify-gemini--d03.jpg",
+      "template_id": "template-vintage-ultimate-guide-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1078295,
+      "sha256": "eae39af2e3f3d3f3076db0fbd682c2c2690baa931220495c00e131a36fc8d1fb"
+    }
+  ],
+  "curify_omission": null
+}

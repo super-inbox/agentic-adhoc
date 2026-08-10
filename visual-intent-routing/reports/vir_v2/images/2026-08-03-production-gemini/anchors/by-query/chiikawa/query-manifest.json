@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-anchor-vir-s05",
+  "query": "chiikawa",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/chiikawa",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/chiikawa/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 185013,
+      "sha256": "c9f70b355adad5c474117d08c7ba3e56cf33367ad6645233d1eeb7648ec30261"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/chiikawa/curify-gemini--d01.jpg",
+      "template_id": "template-education",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 612489,
+      "sha256": "66d976e4815c9f61342ceaa9567bd3cd3b367851c8f14c995de0833437a35ace"
+    }
+  ],
+  "curify_omission": null
+}

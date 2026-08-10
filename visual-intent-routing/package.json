@@ -1,0 +1,19 @@
+{
+  "name": "visual-intent-routing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Layer-1 routing eval — capability KB, routing gold, Path A/B/union scorers",
+  "scripts": {
+    "validate": "node scripts/validate_gold.cjs",
+    "ontology": "node scripts/build_gold_ontology.cjs",
+    "checklist": "node scripts/build_review_checklist.cjs",
+    "eval": "node scripts/eval_template_routing.cjs --path=all",
+    "vir-eval": "node scripts/vir-eval.cjs",
+    "vir-v2": "node scripts/vir-eval.cjs all --config benchmarks/vir_v2/configs/default.yaml",
+    "test": "node --test tests/vir_eval/*.test.cjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.67.3"
+  }
+}

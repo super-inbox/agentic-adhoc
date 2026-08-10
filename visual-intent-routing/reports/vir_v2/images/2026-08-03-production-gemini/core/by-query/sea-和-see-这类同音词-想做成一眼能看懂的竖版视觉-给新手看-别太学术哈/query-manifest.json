@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s02-24",
+  "query": "sea 和 see 这类同音词，想做成一眼能看懂的竖版视觉，给新手看，别太学术哈",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/sea-和-see-这类同音词-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/sea-和-see-这类同音词-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 261721,
+      "sha256": "901add39eeb0467700d39640d6183886f6fcb4ddbac581f06fbd97c5347010b0"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/sea-和-see-这类同音词-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈/curify-gemini--d01.jpg",
+      "template_id": "template-english-homograph-educational-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 807180,
+      "sha256": "adcac76182a6d98ec17382fb6a92cc01043e3f49ee4ff79a10572665e92b8709"
+    }
+  ],
+  "curify_omission": null
+}

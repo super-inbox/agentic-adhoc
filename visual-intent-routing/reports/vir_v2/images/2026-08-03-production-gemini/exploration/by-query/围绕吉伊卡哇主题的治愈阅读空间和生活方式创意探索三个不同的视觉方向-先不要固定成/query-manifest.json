@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-010",
+  "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向，先不要固定成一种风格。",
+  "language": "zh",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向-先不要固定成",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向-先不要固定成/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 260267,
+      "sha256": "0fd5fa5ff307ecc8131b46b1a46e5de91bc0be79c76e219fc40689ee8187d094"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向-先不要固定成/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 320349,
+      "sha256": "74c654f809d0c384be21023895f1b07d657b08f5a0e85dbba5cb61db125402fb"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向-先不要固定成/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 252877,
+      "sha256": "3fc03c5beb382fe130d13f6d629fd03d29c1cac37f1aac9a23c6ce92e88c5a6f"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向-先不要固定成/curify-gemini--d01.jpg",
+      "template_id": "template-lifestyle-watercolor-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 927757,
+      "sha256": "9cf009d3991f8bbebab4658025ddfa85a22e3172d4046caa7db3362400b75c5f"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向-先不要固定成/curify-gemini--d02.jpg",
+      "template_id": "template-lifestyle-habit-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 990957,
+      "sha256": "390b66a25165b99d4668502acf71b1027eae0a45d344f0e53acf58b4280e55be"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意探索三个不同的视觉方向-先不要固定成/curify-gemini--d03.jpg",
+      "template_id": "template-self-care-illustration-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 848647,
+      "sha256": "0f0d37b3fa3bf8dd570d7e1d8b81a3cf5e764d0f4d8993ce991f32e2baf2f29d"
+    }
+  ],
+  "curify_omission": null
+}

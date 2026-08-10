@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-014",
+  "query": "Explore three visual directions for a calm home-fragrance launch centered on an aroma diffuser. Vary style and composition. Show different options before I choose.",
+  "language": "en",
+  "partition": "exploration",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centered-on-an-aroma-diffuser-vary-style-and-compositio",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centered-on-an-aroma-diffuser-vary-style-and-compositio/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 164594,
+      "sha256": "0b36b284ce6cb7a40d54fba5a41010ff7e522e6311eb522526695c7dc40d4a76"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centered-on-an-aroma-diffuser-vary-style-and-compositio/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 190244,
+      "sha256": "9f3a8c62d00e0dad4166187cdc26ba86e7176d4e83a3a9b8b665eae4d9dd52a7"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centered-on-an-aroma-diffuser-vary-style-and-compositio/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 183561,
+      "sha256": "7ee7cfdf425678f3a2b74ff98f3a66474a0beff4a13fd08db3b2309456a158dd"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centered-on-an-aroma-diffuser-vary-style-and-compositio/curify-gemini--d01.jpg",
+      "template_id": "template-home-lifestyle-guide-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1032573,
+      "sha256": "da908460cd3f90f3baa6c8435662eaafbdffa98fe507339291508c628ba96a50"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centered-on-an-aroma-diffuser-vary-style-and-compositio/curify-gemini--d02.jpg",
+      "template_id": "template-watercolor-theme-collage-illustration",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 762103,
+      "sha256": "93c11774eda6cec026ae8d4ca1f61c4e2d30ebedbd5eccfb28a541bf9cc0c448"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/explore-three-visual-directions-for-a-calm-home-fragrance-launch-centered-on-an-aroma-diffuser-vary-style-and-compositio/curify-gemini--d03.jpg",
+      "template_id": "template-lifestyle-habit-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1026467,
+      "sha256": "4225909c992baa7be0a9e6e50501d3511140ffb5b9459f13bb439f825ca7a31d"
+    }
+  ],
+  "curify_omission": null
+}

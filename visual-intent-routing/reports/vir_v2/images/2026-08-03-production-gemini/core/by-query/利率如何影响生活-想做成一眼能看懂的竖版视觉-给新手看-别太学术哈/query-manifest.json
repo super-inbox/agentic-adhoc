@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-29",
+  "query": "利率如何影响生活，想做成一眼能看懂的竖版视觉，给新手看，别太学术哈",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/利率如何影响生活-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/利率如何影响生活-想做成一眼能看懂的竖版视觉-给新手看-别太学术哈/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 315896,
+      "sha256": "6a1652e0904b5c64a739d55e0566a62867e2c46346349728d2c564b3506d924e"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "pending",
+      "local_path": null,
+      "template_id": "template-finance-comparison-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

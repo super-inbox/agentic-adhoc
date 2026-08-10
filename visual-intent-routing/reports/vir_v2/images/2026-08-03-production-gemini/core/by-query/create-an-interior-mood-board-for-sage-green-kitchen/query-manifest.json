@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s03-07",
+  "query": "Create an interior mood board for sage green kitchen.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-an-interior-mood-board-for-sage-green-kitchen",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-an-interior-mood-board-for-sage-green-kitchen/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 239506,
+      "sha256": "b8355f01a0d8462c990d124206544aa88cf84787e2fa9be320ad5c01f4b92e7c"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-an-interior-mood-board-for-sage-green-kitchen/curify-gemini--d01.jpg",
+      "template_id": "template-watercolor-theme-collage-illustration",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 883888,
+      "sha256": "d9acbb328ff3f5127a04e9afd577e69ad1ba15c37bdfd2f2660dffd3bfc58d0b"
+    }
+  ],
+  "curify_omission": null
+}

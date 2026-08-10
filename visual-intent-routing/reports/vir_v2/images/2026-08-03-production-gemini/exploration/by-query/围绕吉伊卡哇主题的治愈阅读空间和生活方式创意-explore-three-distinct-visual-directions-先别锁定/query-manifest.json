@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-030",
+  "query": "围绕吉伊卡哇主题的治愈阅读空间和生活方式创意，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+  "language": "mixed",
+  "partition": "exploration",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explore-three-distinct-visual-directions-先别锁定",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explore-three-distinct-visual-directions-先别锁定/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 277536,
+      "sha256": "c031ac17d82a1818cd1c85600323f7ccda772d84e48027232b789df50ffb198d"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explore-three-distinct-visual-directions-先别锁定/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 249678,
+      "sha256": "6bd49ce9936c480658685546d2935a79c7f6209088875018e7c196ffff812b97"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explore-three-distinct-visual-directions-先别锁定/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 284693,
+      "sha256": "6eec24ba8039a844bb7619c6e2e14b62d49fc021c9c299a83d05a312d3bb1bb4"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explore-three-distinct-visual-directions-先别锁定/curify-gemini--d01.jpg",
+      "template_id": "template-lifestyle-habit-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 900620,
+      "sha256": "cb8c3dcf27877475b1e45a06aa554bec84ab0155467a47b23479cfe5d1f8bca6"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕吉伊卡哇主题的治愈阅读空间和生活方式创意-explore-three-distinct-visual-directions-先别锁定/curify-gemini--d02.jpg",
+      "template_id": "template-self-care-illustration-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 775884,
+      "sha256": "9f9bce186a2f6dea2c5c176f2702c3d7fc29b6e9086eda3c4f8fdaade8a20b50"
+    }
+  ],
+  "curify_omission": null
+}

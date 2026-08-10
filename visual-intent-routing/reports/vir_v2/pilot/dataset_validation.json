@@ -1,0 +1,317 @@
+{
+  "benchmark_version": "vir-v2",
+  "valid": true,
+  "record_count": 680,
+  "status_counts": {
+    "auto_accepted": 300,
+    "needs_review": 380
+  },
+  "schema_errors": [],
+  "duplicate_ids": [],
+  "exact_duplicates": [],
+  "normalized_duplicates": [],
+  "near_duplicates": [
+    {
+      "left_id": "vir-v2-core-vir-s11-25",
+      "right_id": "vir-v2-core-vir-s11-28",
+      "similarity": 0.8413,
+      "same_semantic_cluster": false
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-002",
+      "right_id": "vir-v2-challenge-amb-038",
+      "similarity": 0.9096,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-002",
+      "right_id": "vir-v2-challenge-amb-056",
+      "similarity": 0.8531,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-003",
+      "right_id": "vir-v2-challenge-amb-021",
+      "similarity": 0.8994,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-003",
+      "right_id": "vir-v2-challenge-amb-039",
+      "similarity": 0.8994,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-003",
+      "right_id": "vir-v2-challenge-amb-057",
+      "similarity": 0.9051,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-005",
+      "right_id": "vir-v2-challenge-amb-023",
+      "similarity": 0.8424,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-005",
+      "right_id": "vir-v2-challenge-amb-041",
+      "similarity": 0.9118,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-005",
+      "right_id": "vir-v2-challenge-amb-059",
+      "similarity": 0.8659,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-006",
+      "right_id": "vir-v2-challenge-amb-024",
+      "similarity": 0.9064,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-006",
+      "right_id": "vir-v2-challenge-amb-042",
+      "similarity": 0.9226,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-006",
+      "right_id": "vir-v2-challenge-amb-060",
+      "similarity": 0.8857,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-008",
+      "right_id": "vir-v2-challenge-amb-044",
+      "similarity": 0.8779,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-009",
+      "right_id": "vir-v2-challenge-amb-027",
+      "similarity": 0.9189,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-009",
+      "right_id": "vir-v2-challenge-amb-045",
+      "similarity": 0.9341,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-011",
+      "right_id": "vir-v2-challenge-amb-047",
+      "similarity": 0.9235,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-012",
+      "right_id": "vir-v2-challenge-amb-030",
+      "similarity": 0.9111,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-012",
+      "right_id": "vir-v2-challenge-amb-048",
+      "similarity": 0.9162,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-014",
+      "right_id": "vir-v2-challenge-amb-032",
+      "similarity": 0.8457,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-014",
+      "right_id": "vir-v2-challenge-amb-050",
+      "similarity": 0.9298,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-015",
+      "right_id": "vir-v2-challenge-amb-033",
+      "similarity": 0.9,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-015",
+      "right_id": "vir-v2-challenge-amb-051",
+      "similarity": 0.9057,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-016",
+      "right_id": "vir-v2-challenge-amb-034",
+      "similarity": 0.8523,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-017",
+      "right_id": "vir-v2-challenge-amb-035",
+      "similarity": 0.8571,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-017",
+      "right_id": "vir-v2-challenge-amb-053",
+      "similarity": 0.9091,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-018",
+      "right_id": "vir-v2-challenge-amb-036",
+      "similarity": 0.9219,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-018",
+      "right_id": "vir-v2-challenge-amb-054",
+      "similarity": 0.9267,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-024",
+      "right_id": "vir-v2-challenge-amb-042",
+      "similarity": 0.8525,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-027",
+      "right_id": "vir-v2-challenge-amb-045",
+      "similarity": 0.8724,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-030",
+      "right_id": "vir-v2-challenge-amb-048",
+      "similarity": 0.8505,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-036",
+      "right_id": "vir-v2-challenge-amb-054",
+      "similarity": 0.8683,
+      "same_semantic_cluster": true
+    },
+    {
+      "left_id": "vir-v2-challenge-amb-039",
+      "right_id": "vir-v2-challenge-amb-057",
+      "similarity": 0.843,
+      "same_semantic_cluster": true
+    }
+  ],
+  "language_warnings": [],
+  "leaked_template_ids": [],
+  "contradictory_annotations": [],
+  "exploration_taxonomy_conflicts": [],
+  "content_gap_collisions": [],
+  "full_catalog_gap_audit": {
+    "audit_version": "vir-gap-audit-2026-07-29",
+    "source_catalog_sha256": "df2fdda6337f44502147286defa196a58c44286b19aa9df6216c0b608b149586",
+    "source_template_count": 332,
+    "audited_subject_count": 17,
+    "unaudited_record_ids": []
+  },
+  "balance_warnings": [],
+  "distributions": {
+    "partition": {
+      "core": 450,
+      "content_gap": 80,
+      "challenge": 120,
+      "exploration": 30
+    },
+    "target": {
+      "template-vocabulary": 55,
+      "template-english-grammar-wordlist-infographic": 48,
+      "template-interior-design-mood-board-generator": 64,
+      "template-education-card": 68,
+      "template-fandom-character-grid-poster": 55,
+      "template-lifestyle-watercolor-infographic": 62,
+      "template-travel": 41,
+      "template-intangible-heritage": 47,
+      "template-recipe": 45,
+      "template-mbti-generic": 51,
+      "template-species-science": 63,
+      "template-figure-principles-infographic": 41,
+      "template-product-poster": 50,
+      "template-fashion-inspired-gown-design-sheet": 33,
+      "template-mbti-personality-compatibility-infographic": 45,
+      "__none__": 80
+    },
+    "language": {
+      "zh": 250,
+      "en": 270,
+      "mixed": 160
+    },
+    "difficulty": {
+      "low": 170,
+      "medium": 210,
+      "high": 300
+    },
+    "core_target": {
+      "template-vocabulary": 30,
+      "template-english-grammar-wordlist-infographic": 30,
+      "template-interior-design-mood-board-generator": 30,
+      "template-education-card": 30,
+      "template-fandom-character-grid-poster": 30,
+      "template-lifestyle-watercolor-infographic": 30,
+      "template-travel": 30,
+      "template-intangible-heritage": 30,
+      "template-recipe": 30,
+      "template-mbti-generic": 30,
+      "template-species-science": 30,
+      "template-figure-principles-infographic": 30,
+      "template-product-poster": 30,
+      "template-fashion-inspired-gown-design-sheet": 30,
+      "template-mbti-personality-compatibility-infographic": 30
+    },
+    "core_language": {
+      "zh": 180,
+      "en": 180,
+      "mixed": 90
+    },
+    "core_difficulty": {
+      "low": 150,
+      "medium": 150,
+      "high": 150
+    },
+    "transformation_type": {
+      "different_example": 210,
+      "explicit_artifact": 170,
+      "paraphrase": 210,
+      "conversational": 170,
+      "audience_modifier": 150,
+      "style_modifier": 75,
+      "aspect_ratio_modifier": 75,
+      "implicit_intent": 150,
+      "code_switch": 100,
+      "layout_modifier": 75,
+      "boundary_nearby": 150,
+      "underspecified": 120,
+      "typo_noise": 75,
+      "unsupported_visual_request": 60,
+      "clean": 40,
+      "noisy": 40,
+      "boundary_case": 60,
+      "ambiguous_intent": 60,
+      "conflicting_modifier": 40,
+      "multi_intent": 60,
+      "multi_clause": 40,
+      "paired_artifacts": 48,
+      "supported_plus_unsupported": 12,
+      "open_ended_exploration": 30,
+      "multiple_visual_directions": 30,
+      "style_unspecified": 20
+    },
+    "validation_status": {
+      "auto_accepted": 300,
+      "needs_review": 380
+    }
+  },
+  "similarity_layer": "character-3gram-jaccard",
+  "configuration_hash": "67ce3156d464b60b7e1b5568f861cf9720b2df09d8a14695c4118a38250ae4bf"
+}

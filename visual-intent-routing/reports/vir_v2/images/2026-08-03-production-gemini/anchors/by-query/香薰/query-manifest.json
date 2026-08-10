@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-anchor-vir-s13",
+  "query": "香薰",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/香薰",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/香薰/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 185841,
+      "sha256": "44a050405cea070ec9d0fcc9940b7722d3448c3f32c528d5225f479f89950d5c"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/香薰/curify-gemini--d01.jpg",
+      "template_id": "template-lifestyle-info-card",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 503883,
+      "sha256": "3fa4118f2e524f75582d9c03f9389ae3e6916f0d7e2238a41f6dc5c66203c53a"
+    }
+  ],
+  "curify_omission": null
+}

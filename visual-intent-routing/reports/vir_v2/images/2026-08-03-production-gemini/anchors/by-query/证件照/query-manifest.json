@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-anchor-vir-s16",
+  "query": "证件照",
+  "language": "zh",
+  "partition": "content_gap",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/证件照",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/by-query/证件照/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 112968,
+      "sha256": "6273c15e9b0a5c6c0e09e0ca5e7e4100d37ffebeb470635f0c150929ea220172"
+    }
+  ],
+  "curify_omission": {
+    "query_id": "vir-v2-anchor-vir-s16",
+    "status": "abstained",
+    "reason": "证件照需要上传本人照片，当前搜索页仅支持无需参考图的直接生成。"
+  }
+}

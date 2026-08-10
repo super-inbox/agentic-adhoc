@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-029",
+  "query": "围绕从植物故事延伸到配色、材质和高定设计的兰花视觉世界，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+  "language": "mixed",
+  "partition": "exploration",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/围绕从植物故事延伸到配色-材质和高定设计的兰花视觉世界-explore-three-distinct-visual-directions",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕从植物故事延伸到配色-材质和高定设计的兰花视觉世界-explore-three-distinct-visual-directions/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 275615,
+      "sha256": "5d390e0b27c4eb4cfeda2946738e84d00ff3799e15f5e8d55b572be9861972c6"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕从植物故事延伸到配色-材质和高定设计的兰花视觉世界-explore-three-distinct-visual-directions/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 302860,
+      "sha256": "c97c8fff980368a7788e02bc4a72db311fea66fab8509e6b06feb30b91b61cbd"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕从植物故事延伸到配色-材质和高定设计的兰花视觉世界-explore-three-distinct-visual-directions/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 311779,
+      "sha256": "969ae9dfcb5a0698c21c9c5454fdc1cfb7bdfac1097670e10b279493c03a1e1b"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕从植物故事延伸到配色-材质和高定设计的兰花视觉世界-explore-three-distinct-visual-directions/curify-gemini--d01.jpg",
+      "template_id": "template-fashion-inspired-gown-design-sheet",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 560994,
+      "sha256": "878579c133f060f6aad3dd7782647d2b10c03730d4f75792c77ffcd00fc78a02"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕从植物故事延伸到配色-材质和高定设计的兰花视觉世界-explore-three-distinct-visual-directions/curify-gemini--d02.jpg",
+      "template_id": "template-watercolor-theme-collage-illustration",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 878298,
+      "sha256": "b90f30a2277560a07fdbd56fe149acf7031325a1d32c840672340b606d40ff2c"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕从植物故事延伸到配色-材质和高定设计的兰花视觉世界-explore-three-distinct-visual-directions/curify-gemini--d03.jpg",
+      "template_id": "template-dessert-color-lab-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 453654,
+      "sha256": "dfc3c3b4887d6572dd4a867f118579eb1872272c30a7a94c0a8f1f58d515bd00"
+    }
+  ],
+  "curify_omission": null
+}

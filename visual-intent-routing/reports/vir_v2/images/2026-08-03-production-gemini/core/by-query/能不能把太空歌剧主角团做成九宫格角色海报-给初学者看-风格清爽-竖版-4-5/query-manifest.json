@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s05-19",
+  "query": "能不能把太空歌剧主角团做成九宫格角色海报？给初学者看，风格清爽，竖版 4:5。",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "medium",
+  "stage": null,
+  "query_folder": "by-query/能不能把太空歌剧主角团做成九宫格角色海报-给初学者看-风格清爽-竖版-4-5",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/能不能把太空歌剧主角团做成九宫格角色海报-给初学者看-风格清爽-竖版-4-5/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 342906,
+      "sha256": "b94e761d77bfeb9d7eff516889e5f6560e1ece141e74f0ac931f4293580aa345"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "pending",
+      "local_path": null,
+      "template_id": "template-fandom-character-grid-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

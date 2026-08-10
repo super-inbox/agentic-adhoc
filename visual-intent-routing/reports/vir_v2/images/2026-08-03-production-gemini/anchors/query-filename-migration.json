@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "naming_policy_version": "query-filename-v1",
+  "run_id": "2026-08-03-production-gemini",
+  "stage": "anchors",
+  "renamed_at": "2026-08-07T13:41:48.508Z",
+  "format": "<normalized-query>--<query-id>--d<direction>.<extension>",
+  "completed_images": 31,
+  "renamed_files": 31,
+  "metadata_rows_rewritten": {
+    "gpt_input": 16,
+    "gpt_pending": 0,
+    "gpt_results": 16,
+    "gpt_terminal_failures": 0,
+    "curify_input": 15,
+    "curify_pending": 0,
+    "curify_results": 15
+  },
+  "entries": [
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s01",
+      "query": "单词",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s01--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/单词--vir-v2-anchor-vir-s01--d01.jpeg",
+      "bytes": 150489,
+      "sha256": "42f2ea5a5ca7398582d67fbca331ed9ec3909852cfe955d27ce315329753488c"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s02",
+      "query": "homophones and homonyms",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s02--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/homophones-and-homonyms--vir-v2-anchor-vir-s02--d01.jpeg",
+      "bytes": 295592,
+      "sha256": "45e4ae313f7b358423b20428b199f95f66fd080d4768756738e112497f85230d"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s03",
+      "query": "家居装饰",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s03--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/家居装饰--vir-v2-anchor-vir-s03--d01.jpeg",
+      "bytes": 276192,
+      "sha256": "4c215b85d48c70aa4b2760c194566e4b88b4de15d6c56718d48998bd492b9d05"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s04",
+      "query": "趣味经济学知识科普",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s04--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/趣味经济学知识科普--vir-v2-anchor-vir-s04--d01.jpeg",
+      "bytes": 377556,
+      "sha256": "1a2fe227e6be7469ff3bb1a8241cf87c081de8bb1ae64d51a54b44a2bf8c35ed"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s05",
+      "query": "chiikawa",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s05--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/chiikawa--vir-v2-anchor-vir-s05--d01.jpeg",
+      "bytes": 185013,
+      "sha256": "c9f70b355adad5c474117d08c7ba3e56cf33367ad6645233d1eeb7648ec30261"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s06",
+      "query": "cozy reading aesthetic",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s06--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/cozy-reading-aesthetic--vir-v2-anchor-vir-s06--d01.jpeg",
+      "bytes": 199271,
+      "sha256": "54ee60033ce92cdcd1e7addbbe8b5c31efdfbc7b452735968a900a8c84bf31fa"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s07",
+      "query": "remote destination",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s07--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/remote-destination--vir-v2-anchor-vir-s07--d01.jpeg",
+      "bytes": 347272,
+      "sha256": "edabfc12ae0165b8e0585118771d036a29a796a03917ff4c22db61b325196d3d"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s08",
+      "query": "paper cutting",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s08--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/paper-cutting--vir-v2-anchor-vir-s08--d01.jpeg",
+      "bytes": 272365,
+      "sha256": "61e5f2f2b5273654d738d77655f2dd8c0c0a81205a3337ed1c2137951a7d60f1"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s09",
+      "query": "cuban sandwich recipe poster",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s09--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/cuban-sandwich-recipe-poster--vir-v2-anchor-vir-s09--d01.jpeg",
+      "bytes": 451630,
+      "sha256": "49c12c70bc6e8d8d65a5f45df8ce04c3dd492eb93ab98987ae75fa730e04cc8f"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s10",
+      "query": "marvel mbti character chart 16 types",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s10--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/marvel-mbti-character-chart-16-types--vir-v2-anchor-vir-s10--d01.jpeg",
+      "bytes": 422094,
+      "sha256": "84d2940cd59b0cd516f2b55fdfce4613596395ea10c5833dcb9ca0a5cf8742b8"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s11",
+      "query": "植物",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s11--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/植物--vir-v2-anchor-vir-s11--d01.jpeg",
+      "bytes": 216841,
+      "sha256": "d89cafef9ee4b89e19d44fd7bdad571364a3c9867fa74a475a40c6a40af34f75"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s12",
+      "query": "historical character",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s12--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/historical-character--vir-v2-anchor-vir-s12--d01.jpeg",
+      "bytes": 114737,
+      "sha256": "991e16484d6ce4e3542824b4e2c4076da4e30d8ce4737e3c3b3f8a60d72360bf"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s13",
+      "query": "香薰",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s13--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/香薰--vir-v2-anchor-vir-s13--d01.jpeg",
+      "bytes": 185841,
+      "sha256": "44a050405cea070ec9d0fcc9940b7722d3448c3f32c528d5225f479f89950d5c"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s14",
+      "query": "met gala",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s14--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/met-gala--vir-v2-anchor-vir-s14--d01.jpeg",
+      "bytes": 245202,
+      "sha256": "c8fbda7de1efbf8a3715d2e172cd0575f8b536171df2e4288ba7f47a91940dd7"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s15",
+      "query": "infj vs entp dating compatibility chart",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s15--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/infj-vs-entp-dating-compatibility-chart--vir-v2-anchor-vir-s15--d01.jpeg",
+      "bytes": 271846,
+      "sha256": "2af1d6260869789a5e984e22d2e922cd8270a9e94437573763e3593d5f802f08"
+    },
+    {
+      "system": "gpt-direct",
+      "query_id": "vir-v2-anchor-vir-s16",
+      "query": "证件照",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/vir-v2-anchor-vir-s16--01.jpeg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/gpt-direct/证件照--vir-v2-anchor-vir-s16--d01.jpeg",
+      "bytes": 112968,
+      "sha256": "6273c15e9b0a5c6c0e09e0ca5e7e4100d37ffebeb470635f0c150929ea220172"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s01",
+      "query": "单词",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s01-1-template-vocabulary-929aff89c2db.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/单词--vir-v2-anchor-vir-s01--d01.jpg",
+      "bytes": 555776,
+      "sha256": "942f7e18efaba5310d9e5db83bb52f8e8df8fd627a32050719ffb57a14f51c8b"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s02",
+      "query": "homophones and homonyms",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s02-1-template-english-grammar-wordlist-infographic-fb1221ae0018.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/homophones-and-homonyms--vir-v2-anchor-vir-s02--d01.jpg",
+      "bytes": 1094787,
+      "sha256": "d6c9fbf95ae6ec444938cb8d6450b4228e2fe301287ee09e44dbd6b20854453e"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s03",
+      "query": "家居装饰",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s03-1-template-education-1287fbc01e23.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/家居装饰--vir-v2-anchor-vir-s03--d01.jpg",
+      "bytes": 624356,
+      "sha256": "4d58377be8beb86500830074d7dbb2479dff05939f1dcb04b298f11de0d9de77"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s04",
+      "query": "趣味经济学知识科普",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s04-1-template-financial-habit-infographic-poster-b764526d83b6.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/趣味经济学知识科普--vir-v2-anchor-vir-s04--d01.jpg",
+      "bytes": 1050022,
+      "sha256": "018f6b9ab11944612f3b43b20a22d44f0e6ff8fec656d8304cce05a5afd1ef4a"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s05",
+      "query": "chiikawa",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s05-1-template-education-672a97a6c9bb.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/chiikawa--vir-v2-anchor-vir-s05--d01.jpg",
+      "bytes": 612489,
+      "sha256": "66d976e4815c9f61342ceaa9567bd3cd3b367851c8f14c995de0833437a35ace"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s06",
+      "query": "cozy reading aesthetic",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s06-1-template-lifestyle-watercolor-infographic-fa7cdd6bf7fc.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/cozy-reading-aesthetic--vir-v2-anchor-vir-s06--d01.jpg",
+      "bytes": 966061,
+      "sha256": "f47eccecd8a7f2d7336fa27b5876a45ef0022898430810a6059d3f5d88985c9f"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s07",
+      "query": "remote destination",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s07-1-template-country-top10-travel-destinations-1df491cd5599.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/remote-destination--vir-v2-anchor-vir-s07--d01.jpg",
+      "bytes": 979976,
+      "sha256": "1e8083a3f98efc84f2eec5313898302c396fdb726669cb6a73281d66b184b54d"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s08",
+      "query": "paper cutting",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s08-1-template-intangible-heritage-daa4fc6b971e.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/paper-cutting--vir-v2-anchor-vir-s08--d01.jpg",
+      "bytes": 1045450,
+      "sha256": "538c6547b6420d670ba67391741aaad8a3320b14955dbb77b654ce5c8e8298e1"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s09",
+      "query": "cuban sandwich recipe poster",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s09-1-template-recipe-ffb3d806140a.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/cuban-sandwich-recipe-poster--vir-v2-anchor-vir-s09--d01.jpg",
+      "bytes": 1073378,
+      "sha256": "2a4ff669e098a40a79d2781babf7056c5d5b5f6b768390490d7b67af7677ed9c"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s10",
+      "query": "marvel mbti character chart 16 types",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s10-1-template-education-9b33c4a686f8.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/marvel-mbti-character-chart-16-types--vir-v2-anchor-vir-s10--d01.jpg",
+      "bytes": 923867,
+      "sha256": "66cb9343e18e63b10ada18f6a26fd5cac7ca26c530aa62aa49fb9005ecd6e107"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s11",
+      "query": "植物",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s11-1-template-gardening-how-to-infographic-91fc66f7735a.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/植物--vir-v2-anchor-vir-s11--d01.jpg",
+      "bytes": 866793,
+      "sha256": "a20bb3336d535b2d504b2837d6cf1d0e1c23e53c75015fd279f9f3860706c1d5"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s12",
+      "query": "historical character",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s12-1-template-historical-figure-profile-infographic-ade69ca817ad.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/historical-character--vir-v2-anchor-vir-s12--d01.jpg",
+      "bytes": 1071514,
+      "sha256": "a4a82397e9d52ec90f90bc13556cf67d78c8d6b3c1a40b30303f91f77e719ac0"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s13",
+      "query": "香薰",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s13-1-template-lifestyle-info-card-1a471b4b01d0.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/香薰--vir-v2-anchor-vir-s13--d01.jpg",
+      "bytes": 503883,
+      "sha256": "3fa4118f2e524f75582d9c03f9389ae3e6916f0d7e2238a41f6dc5c66203c53a"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s14",
+      "query": "met gala",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s14-1-template-celebrity-movie-group-poster-4887e194c9f6.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/met-gala--vir-v2-anchor-vir-s14--d01.jpg",
+      "bytes": 742092,
+      "sha256": "460b8d4735342ad8c4f7eda3366032b85f5ef73764299faf038d2d454bf5780e"
+    },
+    {
+      "system": "curify-gemini",
+      "query_id": "vir-v2-anchor-vir-s15",
+      "query": "infj vs entp dating compatibility chart",
+      "direction": 1,
+      "from": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/2026-08-03-production-gemini-anchors-vir-v2-anchor-vir-s15-1-template-mbti-relationship-infographic-168b38491da9.jpg",
+      "to": "reports/vir_v2/images/2026-08-03-production-gemini/anchors/curify-gemini/infj-vs-entp-dating-compatibility-chart--vir-v2-anchor-vir-s15--d01.jpg",
+      "bytes": 730542,
+      "sha256": "65814b5bb86734b8a46f029c250151b38266c56a719e9916c6518ac8e793ad9b"
+    }
+  ]
+}

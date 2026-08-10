@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s01-02",
+  "query": "Create an illustrated word-card set for English-Korean kitchen tools.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-an-illustrated-word-card-set-for-english-korean-kitchen-tools",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-an-illustrated-word-card-set-for-english-korean-kitchen-tools/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 255429,
+      "sha256": "167ffb38c1b58601a9d8d0712380d7b85feb0db895cf161f64c7f49a205e20d3"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-an-illustrated-word-card-set-for-english-korean-kitchen-tools/curify-gemini--d01.jpg",
+      "template_id": "template-english-dialogue-scene",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 699013,
+      "sha256": "da1a019d57925991546c064351f9edbd2857481b9dbf9c441beab3683cb17693"
+    }
+  ],
+  "curify_omission": null
+}

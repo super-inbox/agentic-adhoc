@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s03-03",
+  "query": "请制作一张童趣婴儿房的家居软装灵感板。",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/请制作一张童趣婴儿房的家居软装灵感板",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/请制作一张童趣婴儿房的家居软装灵感板/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 266869,
+      "sha256": "864212e99a484ef2bb97584b42346e0737d8d0cee9e3b6325ba92750d1a8c3c2"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/请制作一张童趣婴儿房的家居软装灵感板/curify-gemini--d01.jpg",
+      "template_id": "template-home-lifestyle-guide-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 886673,
+      "sha256": "794a644248835e61cdff27b0c262f437b86e9c702b6678995b2fe274516b7f78"
+    }
+  ],
+  "curify_omission": null
+}

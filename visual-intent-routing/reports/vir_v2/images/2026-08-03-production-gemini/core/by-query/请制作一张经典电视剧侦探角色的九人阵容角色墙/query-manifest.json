@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s05-08",
+  "query": "请制作一张经典电视剧侦探角色的九人阵容角色墙。",
+  "language": "zh",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/请制作一张经典电视剧侦探角色的九人阵容角色墙",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/请制作一张经典电视剧侦探角色的九人阵容角色墙/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 263827,
+      "sha256": "5e1fdee68598f2b313fa7b105fb2104c00078b96c16bc953a2bd5c7646a16a0c"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "pending",
+      "local_path": null,
+      "template_id": "template-9-traits-info-grid",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

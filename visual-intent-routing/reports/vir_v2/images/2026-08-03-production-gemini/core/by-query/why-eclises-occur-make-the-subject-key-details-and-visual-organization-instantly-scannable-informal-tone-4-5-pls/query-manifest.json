@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s04-30",
+  "query": "why eclises occur — make the subject, key details, and visual organization instantly scannable; informal tone, 4:5 pls",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/why-eclises-occur-make-the-subject-key-details-and-visual-organization-instantly-scannable-informal-tone-4-5-pls",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/why-eclises-occur-make-the-subject-key-details-and-visual-organization-instantly-scannable-informal-tone-4-5-pls/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 316933,
+      "sha256": "6d831ce6ae91bb6aaeed42bbfa87071c9135745e40adc61b0df3e62dc9a0e6c7"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "pending",
+      "local_path": null,
+      "template_id": "template-space-planet-fact-infographic",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 0,
+      "sha256": null
+    }
+  ],
+  "curify_omission": null
+}

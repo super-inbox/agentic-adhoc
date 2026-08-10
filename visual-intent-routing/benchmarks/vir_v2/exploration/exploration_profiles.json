@@ -1,0 +1,142 @@
+[
+  {
+    "profile_id": "ginkgo-visual-story",
+    "subject": "plant visual exploration",
+    "concept_en": "an informative and inspiring visual story about ginkgo",
+    "concept_zh": "兼具知识性和灵感感的银杏视觉故事",
+    "required_subject_event": "ginkgo as a botanical and nature-inspired subject",
+    "required_information_type": "open educational and aesthetic exploration",
+    "targets": [
+      "template-species-science",
+      "template-education-card",
+      "template-lifestyle-watercolor-infographic"
+    ],
+    "rationale": "The broad request can validly become a scientific species guide, an accessible knowledge card, or a nature-inspired watercolor lifestyle visual."
+  },
+  {
+    "profile_id": "shaanxi-paper-cutting-visit",
+    "subject": "heritage travel exploration",
+    "concept_en": "a Shaanxi paper-cutting culture experience for first-time visitors",
+    "concept_zh": "面向初次到访者的陕西剪纸文化体验",
+    "required_subject_event": "Shaanxi paper-cutting culture and visitor discovery",
+    "required_information_type": "heritage explanation, accessible introduction, or trip-oriented discovery",
+    "targets": [
+      "template-intangible-heritage",
+      "template-education-card",
+      "template-travel"
+    ],
+    "rationale": "The request intentionally permits a deep heritage board, a lightweight explainer, or a visitor-oriented illustrated route."
+  },
+  {
+    "profile_id": "cozy-reading-world",
+    "subject": "cozy reading exploration",
+    "concept_en": "a cozy reading world for young adults, including atmosphere and useful ideas",
+    "concept_zh": "面向年轻人的治愈阅读世界，要有氛围也有实用内容",
+    "required_subject_event": "cozy reading as a room, routine, and learning theme",
+    "required_information_type": "open inspiration spanning atmosphere, habits, and accessible guidance",
+    "targets": [
+      "template-lifestyle-watercolor-infographic",
+      "template-interior-design-mood-board-generator",
+      "template-education-card"
+    ],
+    "rationale": "A watercolor routine guide, an interior mood board, and an educational reading-habit card are all defensible directions."
+  },
+  {
+    "profile_id": "home-fragrance-launch",
+    "subject": "home fragrance exploration",
+    "concept_en": "a calm home-fragrance launch centered on an aroma diffuser",
+    "concept_zh": "以香薰机为核心的平静家居香氛发布主题",
+    "required_subject_event": "aroma diffuser in a calm home-lifestyle context",
+    "required_information_type": "open exploration across product promotion, spatial mood, and self-care lifestyle",
+    "targets": [
+      "template-product-poster",
+      "template-interior-design-mood-board-generator",
+      "template-lifestyle-watercolor-infographic"
+    ],
+    "rationale": "The subject supports a product hero ad, a coordinated room mood board, or a watercolor self-care routine."
+  },
+  {
+    "profile_id": "marvel-personality-world",
+    "subject": "character personality exploration",
+    "concept_en": "a Marvel character world focused on personalities and relationship dynamics",
+    "concept_zh": "聚焦人物性格和关系互动的漫威角色世界",
+    "required_subject_event": "Marvel character ensemble and personality relationships",
+    "required_information_type": "open character showcase, classification, or relationship comparison",
+    "targets": [
+      "template-fandom-character-grid-poster",
+      "template-mbti-generic",
+      "template-mbti-personality-compatibility-infographic"
+    ],
+    "rationale": "The broad character request can emphasize ensemble spectacle, MBTI classification, or a focused relationship comparison."
+  },
+  {
+    "profile_id": "homophone-learning-campaign",
+    "subject": "language learning exploration",
+    "concept_en": "a beginner-friendly campaign for learning English homophones and confusing words",
+    "concept_zh": "面向初学者的英语同音词和易混词学习主题",
+    "required_subject_event": "English homophones and confusing vocabulary",
+    "required_information_type": "open language-learning explanation, drilling, or knowledge summary",
+    "targets": [
+      "template-english-grammar-wordlist-infographic",
+      "template-vocabulary",
+      "template-education-card"
+    ],
+    "rationale": "The request permits a specialist word-pair poster, an illustrated learning-card set, or a broad educational explainer."
+  },
+  {
+    "profile_id": "cuban-sandwich-story",
+    "subject": "food learning exploration",
+    "concept_en": "a Cuban sandwich visual story for people discovering the dish",
+    "concept_zh": "面向第一次了解古巴三明治的人做一组视觉故事",
+    "required_subject_event": "Cuban sandwich ingredients, preparation, and cultural introduction",
+    "required_information_type": "open food discovery spanning recipe, vocabulary, and explanation",
+    "targets": [
+      "template-recipe",
+      "template-vocabulary",
+      "template-education-card"
+    ],
+    "rationale": "A recipe poster, an illustrated ingredient vocabulary set, and an accessible food explainer each preserve the broad discovery goal."
+  },
+  {
+    "profile_id": "kyoto-craft-trip",
+    "subject": "destination culture exploration",
+    "concept_en": "a Kyoto trip theme that helps visitors discover traditional crafts",
+    "concept_zh": "帮助旅行者发现京都传统工艺的旅行主题",
+    "required_subject_event": "Kyoto travel and traditional-craft discovery",
+    "required_information_type": "open itinerary, heritage explanation, or accessible cultural introduction",
+    "targets": [
+      "template-travel",
+      "template-intangible-heritage",
+      "template-education-card"
+    ],
+    "rationale": "The request supports a mapped itinerary, a detailed craft board, or a friendly culture card."
+  },
+  {
+    "profile_id": "orchid-inspiration-system",
+    "subject": "orchid design exploration",
+    "concept_en": "an orchid-inspired visual world spanning botanical story, colors, materials, and couture",
+    "concept_zh": "从植物故事延伸到配色、材质和高定设计的兰花视觉世界",
+    "required_subject_event": "orchid as a botanical and design-inspiration theme",
+    "required_information_type": "open scientific, material-mood, or fashion-concept exploration",
+    "targets": [
+      "template-species-science",
+      "template-interior-design-mood-board-generator",
+      "template-fashion-inspired-gown-design-sheet"
+    ],
+    "rationale": "The broad theme can become a botanical infographic, a palette-and-material mood board, or a couture concept sheet."
+  },
+  {
+    "profile_id": "chiikawa-reading-space",
+    "subject": "fandom lifestyle exploration",
+    "concept_en": "a Chiikawa-themed cozy reading space and lifestyle idea",
+    "concept_zh": "吉伊卡哇主题的治愈阅读空间和生活方式创意",
+    "required_subject_event": "Chiikawa fandom in a cozy reading context",
+    "required_information_type": "open character, lifestyle, or room-design inspiration",
+    "targets": [
+      "template-fandom-character-grid-poster",
+      "template-lifestyle-watercolor-infographic",
+      "template-interior-design-mood-board-generator"
+    ],
+    "rationale": "Character showcase, watercolor lifestyle guidance, and interior mood exploration are all plausible user-facing directions."
+  }
+]

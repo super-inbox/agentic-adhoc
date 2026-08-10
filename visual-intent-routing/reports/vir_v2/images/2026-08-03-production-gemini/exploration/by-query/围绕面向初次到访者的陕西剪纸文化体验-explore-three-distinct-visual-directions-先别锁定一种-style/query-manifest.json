@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-exploration-022",
+  "query": "围绕面向初次到访者的陕西剪纸文化体验，explore three distinct visual directions，先别锁定一种 style。 Keep the core idea 一致，但表现路径要不同。",
+  "language": "mixed",
+  "partition": "exploration",
+  "difficulty": "high",
+  "stage": null,
+  "query_folder": "by-query/围绕面向初次到访者的陕西剪纸文化体验-explore-three-distinct-visual-directions-先别锁定一种-style",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初次到访者的陕西剪纸文化体验-explore-three-distinct-visual-directions-先别锁定一种-style/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 409836,
+      "sha256": "4768633fef86bf84eb9b472ec198d1be9676a273e32108ba086ef914bfb18a23"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初次到访者的陕西剪纸文化体验-explore-three-distinct-visual-directions-先别锁定一种-style/gpt-direct--d02.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 439537,
+      "sha256": "31cbb59d739436b7a8e6c87fe14ad77c4424fd767b8390d27642ce2daecb6db9"
+    },
+    {
+      "system": "gpt-direct",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初次到访者的陕西剪纸文化体验-explore-three-distinct-visual-directions-先别锁定一种-style/gpt-direct--d03.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 366117,
+      "sha256": "6b1037576cf1afcaba344ad88e07f7edee17e431ee61c94ca01baf200c62c4ab"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初次到访者的陕西剪纸文化体验-explore-three-distinct-visual-directions-先别锁定一种-style/curify-gemini--d01.jpg",
+      "template_id": "template-cultural-festival-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1187260,
+      "sha256": "6fe0994259fa83c8841129ac1a5b6fe0c055911dfe049fe90024915e54011b22"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 2,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初次到访者的陕西剪纸文化体验-explore-three-distinct-visual-directions-先别锁定一种-style/curify-gemini--d02.jpg",
+      "template_id": "template-ethnic-costume-deconstruction-board",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 977937,
+      "sha256": "02f0ca88e719cf5d6600836aab85eebd5d7bf0707d27de1439cfc0e7ab625000"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 3,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/exploration/by-query/围绕面向初次到访者的陕西剪纸文化体验-explore-three-distinct-visual-directions-先别锁定一种-style/curify-gemini--d03.jpg",
+      "template_id": "template-country-souvenirs-watercolor",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 1020200,
+      "sha256": "bcfaccdc6d33cc5a4d5db75199f1a7251b9464da55f5803875690543ec9b55a6"
+    }
+  ],
+  "curify_omission": null
+}

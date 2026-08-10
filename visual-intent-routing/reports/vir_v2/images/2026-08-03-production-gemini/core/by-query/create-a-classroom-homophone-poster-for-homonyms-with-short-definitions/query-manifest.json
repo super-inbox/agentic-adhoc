@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "query_id": "vir-v2-core-vir-s02-02",
+  "query": "Create a classroom homophone poster for homonyms with short definitions.",
+  "language": "en",
+  "partition": "core",
+  "difficulty": "low",
+  "stage": null,
+  "query_folder": "by-query/create-a-classroom-homophone-poster-for-homonyms-with-short-definitions",
+  "images": [
+    {
+      "system": "gpt-direct",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-classroom-homophone-poster-for-homonyms-with-short-definitions/gpt-direct--d01.jpeg",
+      "template_id": null,
+      "model": "gpt-image-2",
+      "bytes": 373276,
+      "sha256": "da452ac5121a81eaaad2a543a888a913d7cfa18acbe621dd9b2e58f39454d1df"
+    },
+    {
+      "system": "curify-gemini",
+      "direction": 1,
+      "status": "completed",
+      "local_path": "reports/vir_v2/images/2026-08-03-production-gemini/core/by-query/create-a-classroom-homophone-poster-for-homonyms-with-short-definitions/curify-gemini--d01.jpg",
+      "template_id": "template-english-homograph-educational-poster",
+      "model": "gemini-3-pro-image-preview",
+      "bytes": 800621,
+      "sha256": "a3b40aed1dfe1d9b163248c6811295bbc496aff30a01664b1f5a4792a28247bd"
+    }
+  ],
+  "curify_omission": null
+}
