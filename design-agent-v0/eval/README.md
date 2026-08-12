@@ -46,3 +46,39 @@ garment_bytes = inputs[1]["path"].read_bytes()
 The production matcher endpoint is still text-only. This pack supplies the real inputs for live
 Vision intent extraction, multi-image slot filling, executor task-success scoring, missing-image
 abstention, and mismatched-image rejection.
+
+## Workflow briefs (`briefs.jsonl`)
+
+11 multi-step **workflow briefs** — a whole design job with a known-good step
+sequence, which is what evaluation and distillation need and what the query
+layers do not provide (spec §7f). Built by `build_briefs.py` from the 18
+documented real jobs in
+`visual-search-adhoc/docs/daily_report/8.8/workflow-research-5-domains/candidates/`.
+
+| field | meaning |
+|---|---|
+| `brief` | the job stated as a user would state it |
+| `expected_steps` | ordered controlled-vocabulary step slugs (`intake_brief`, `research`, `explore_concepts`, `dieline`, `production_file`, `deliver`, …) |
+| `expected_step_count` | expected plan length |
+| `provenance` | case file, org, source URL |
+
+Coverage: brand 3 · packaging 2 · merch 2 · education 2 · product 2 · step counts 3–7.
+
+Only **process facts** are taken from the sources (domain, ordered stage labels,
+provenance); each `brief` is written fresh from those facts, so no source prose
+is reproduced.
+
+```bash
+python3 eval/build_briefs.py eval/briefs.jsonl   # re-extract
+```
+
+**Deliberately not added:** the 680-row `vir_v2` visual-intent set. It is a
+content-generation benchmark (MBTI charts, travel guides, science posters) —
+only ~69 of its rows touch brand/packaging/merch — so folding it in would grow a
+generic image benchmark rather than the workflow set. It remains useful for
+*routing* recall in its own repo.
+
+**Still missing: trajectories.** A brief says what the steps should be; a
+trajectory records what actually happened, including which option a human chose
+and why. Those only exist once real jobs are run and captured
+(`curify-frontend/lib/agent/trajectory.ts`).
