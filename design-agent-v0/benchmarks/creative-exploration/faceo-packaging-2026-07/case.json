@@ -1,0 +1,40 @@
+{
+  "id": "faceo-packaging-2026-07",
+  "capability": "creative-exploration",
+  "brief": {
+    "product": "FaCeo 男士洁面泡沫 (men's cleansing foam)",
+    "category": "men's grooming / 理容",
+    "positioning": "premium",
+    "ask": "站在消费者的角度，哪款包装更有质感？",
+    "axis": "质感 / premium feel",
+    "source_image": "curify-frontend/raw/creative-exploration-07-29/Weixin Image_20260729184852_1621_5.jpg"
+  },
+  "variants": [
+    {"id": "A", "design_language": "经典居中、对称；FaCeo 置顶，cleansing 竖排，稳妥"},
+    {"id": "B", "design_language": "与 A 近乎雷同，被视为冗余的安全牌"},
+    {"id": "C", "design_language": "编排式、品牌居中大字，CF logo 右上，偏两极"},
+    {"id": "D", "design_language": "品牌置顶 + CF logo 清晰层级，最自信/高级"}
+  ],
+  "panel": {
+    "note": "simulated + weighted; not real votes",
+    "n": 1240,
+    "segments": [
+      {"name": "年轻男性 18–28", "share": 0.25, "votes": {"A": 15, "B": 10, "C": 30, "D": 45}},
+      {"name": "都市白领 28–40", "share": 0.30, "votes": {"A": 12, "B": 10, "C": 23, "D": 55}},
+      {"name": "设计爱好者",      "share": 0.12, "votes": {"A": 8,  "B": 7,  "C": 55, "D": 30}},
+      {"name": "大众消费者",      "share": 0.23, "votes": {"A": 35, "B": 28, "C": 12, "D": 25}},
+      {"name": "女性 · 代购",     "share": 0.10, "votes": {"A": 15, "B": 12, "C": 18, "D": 55}}
+    ]
+  },
+  "result": {
+    "overall": {"A": 18, "B": 14, "C": 26, "D": 43},
+    "winner": "D",
+    "rationale": {
+      "D": "清晰品牌层级读作高级/自信；白领、女性代购、年轻男性均领先",
+      "C": "设计爱好者最爱（编排感），但两极化",
+      "A_vs_B": "A/B 稳妥但缺质感张力；B 与 A 雷同被视为冗余，故 A>B"
+    },
+    "recommendation": "以 D 款为主推；C 款作为面向设计敏感人群的备选",
+    "render": "result.png (build_vote.py, PIL + Hiragino Sans GB, minimal-text)"
+  }
+}

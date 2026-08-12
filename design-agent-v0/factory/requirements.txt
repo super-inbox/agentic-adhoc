@@ -1,0 +1,7 @@
+# Factory-Ready Sticker Exporter deps (backend venv). Pins keep audio-separator (numpy<2) happy.
+rembg[cpu]
+numpy==1.26.4
+opencv-python-headless==4.9.0.80
+scipy
+Pillow
+# system: ImageMagick (`magick`) for CMYK/PDF

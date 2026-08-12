@@ -1,0 +1,6 @@
+{
+  "task_type": "design_vote",
+  "prompt": "站在消费者角度，哪款男士理容包装更有质感？",
+  "image_urls": ["images/uploads/42/board.jpg"],
+  "max_iterations": 1
+}
