@@ -8,6 +8,19 @@ This directory contains three complementary evaluation layers:
 | `reference_asset_eval.py` | `queries.jsonl` + `assets/reference-pack-v0.1/` | real-pixel binding, integrity, provenance, privacy, and alpha validation |
 | `runtime_eval.py` | `runtime_cases.example.jsonl` | single-turn HTTP black-box route, trace, visual verdict, retry, and artifact scoring |
 
+## Published live experiment
+
+[`experiments/curify-web-live-2026-08-12/`](experiments/curify-web-live-2026-08-12/)
+publishes the sanitized 21-case live evaluation of the deployed Curify Design Agent. It includes
+the agent-neutral Dataset, reference-pack-v0.2 manifest, per-case runtime/score output, aggregate
+metrics, Braintrust provenance, and a Chinese diagnostic analysis. Headline result: 16 complete,
+5 partial, 0 program errors, 36.2% weighted design score on 16 judgeable outputs, 12.2%
+hard-gated total over all 21 cases, and 0/21 benchmark pass.
+
+The snapshot contains no API keys, browser session state, signed download URLs, local absolute
+paths, or user account identity. Exact source/output pixels and full nested source traces remain as
+access-controlled Braintrust attachments.
+
 ## Consolidated multimodal queries
 
 `queries.jsonl` has 118 rows:
