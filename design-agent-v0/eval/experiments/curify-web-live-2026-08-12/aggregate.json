@@ -1,0 +1,80 @@
+{
+  "schema_version": "design-agent-live-eval-summary-v1",
+  "published_at": "2026-08-12",
+  "project": "design-agent-benchmark",
+  "dataset": "design-agent-bench-v0.1-multimodal-pilot",
+  "benchmark_version": "v0.1-pilot",
+  "protocol_version": "single-turn-v1",
+  "input_pack": "reference-pack-v0.2",
+  "agent_target": "curify-web",
+  "runtime_mode": "live",
+  "judge": {
+    "version": "judge-v2",
+    "mode": "live",
+    "model": "gemini-2.5-pro",
+    "trial_count": 1,
+    "retry_note": "TIQ-088 was rescored after the first response omitted visual_quality. No Curify generation was repeated."
+  },
+  "braintrust": {
+    "consolidated_experiment": "https://www.braintrust.dev/app/curify/p/design-agent-benchmark/experiments/curify-web__bench-v0.1-pilot__protocol-web-single-turn-v1__judge-v2__consolidated-21-v1",
+    "initial_source_experiment": "https://www.braintrust.dev/app/curify/p/design-agent-benchmark/experiments/curify-web__bench-v0.1-pilot__protocol-web-single-turn-v1__judge-v2-e2b37aa5",
+    "topup_source_experiment": "https://www.braintrust.dev/app/curify/p/design-agent-benchmark/experiments/curify-web__bench-v0.1-pilot__protocol-web-single-turn-v1__judge-v2-a8c98468"
+  },
+  "execution": {
+    "cases": 21,
+    "completed": 16,
+    "partial": 5,
+    "blocked": 0,
+    "program_errors": 0,
+    "output_image_artifacts": 21,
+    "curify_credits_for_final_21_outputs": 210,
+    "separate_canary_credits_not_in_final_21": 10,
+    "latency_ms": {
+      "mean": 35267.476,
+      "median": 34462,
+      "p95": 42882,
+      "minimum": 28432,
+      "maximum": 54184
+    }
+  },
+  "scores": {
+    "target_capability_coverage": {"mean": 0.476190476190, "n": 21},
+    "target_stage_coverage": {"mean": 1.0, "n": 21},
+    "target_reference_utilization": {"mean": 0.817460317460, "n": 21},
+    "artifact_contract": {"mean": 0.523809523810, "n": 21},
+    "runtime_verification_pass": {"mean": 0.761904761905, "n": 21},
+    "reference_fidelity_gate": {"mean": 0.380952380952, "n": 21},
+    "provider_availability": {"mean": 1.0, "n": 21},
+    "quality_evaluable": {"mean": 0.761904761905, "n": 21},
+    "independent_judge_available": {"mean": 1.0, "n": 16},
+    "brief_adherence": {"mean": 0.0375, "n": 16},
+    "visual_quality": {"mean": 0.4875, "n": 16},
+    "creative_diversity": {"mean": 0.12, "n": 5},
+    "brand_consistency": {"mean": 0.6, "n": 1},
+    "refinement_ability": {"mean": 0.075, "n": 8},
+    "cross_asset_consistency": {"mean": 0.2, "n": 5},
+    "production_readiness": {"mean": 0.492063492063, "n": 21},
+    "efficiency": {"mean": 1.0, "n": 21},
+    "rubric_coverage": {"mean": 0.761904761905, "n": 21},
+    "weighted_design_score": {"mean": 0.362060708899, "n": 16},
+    "benchmark_total_score": {"mean": 0.122344322344, "n": 21},
+    "benchmark_case_pass": {"mean": 0.0, "n": 21}
+  },
+  "capabilities": {
+    "image_edit_variants": {"cases": 8, "completed": 8, "brief_adherence": 0.05, "visual_quality": 0.475, "weighted_design_score": 0.367307692308, "benchmark_total_score": 0.321153846154},
+    "design_vote": {"cases": 3, "completed": 2, "partial": 1, "brief_adherence": 0.0, "visual_quality": 0.7, "weighted_design_score": 0.48, "benchmark_total_score": 0.0},
+    "tryon_poster": {"cases": 4, "completed": 4, "brief_adherence": 0.0, "visual_quality": 0.2, "weighted_design_score": 0.158333333333, "benchmark_total_score": 0.0},
+    "detail_page_recompose": {"cases": 1, "completed": 1, "brief_adherence": 0.0, "visual_quality": 0.8, "weighted_design_score": 0.52, "benchmark_total_score": 0.0},
+    "sku_variants": {"cases": 1, "completed": 1, "brief_adherence": 0.2, "visual_quality": 1.0, "weighted_design_score": 0.741176470588, "benchmark_total_score": 0.0},
+    "sku_batch": {"cases": 1, "partial": 1, "benchmark_total_score": 0.0},
+    "factory_export": {"cases": 3, "partial": 3, "benchmark_total_score": 0.0}
+  },
+  "limitations": [
+    "The 21-case pilot is skewed and is not the final five-category, 100-task benchmark.",
+    "All 18 unique reference assets are project-owned AI-generated fixtures, not production user data.",
+    "Each case has one trial, so stochastic variance is not estimated.",
+    "The deployed UI accepts one reference image; omitted inputs are recorded as failures.",
+    "Internal model calls, tokens, and normalized USD cost are not exposed by the deployed product.",
+    "The consolidated Braintrust experiment replays cached roots and scores; full source traces remain in the two source experiments."
+  ]
+}
