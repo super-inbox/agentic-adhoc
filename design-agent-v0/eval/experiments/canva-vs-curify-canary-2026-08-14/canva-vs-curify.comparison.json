@@ -1,0 +1,136 @@
+{
+  "schema_version": "cross-agent-comparison-v0.1",
+  "created_at": "2026-08-14",
+  "scope": {
+    "dataset": "design-agent-bench-v0.1-multimodal-pilot",
+    "cases": ["AR-001", "AR-008"],
+    "agents": ["canva", "curify-web"],
+    "case_count": 2,
+    "ranking_scope": "canary_only"
+  },
+  "independent_judge": {
+    "version": "judge-v2",
+    "model": "gemini-2.5-pro",
+    "agent_identity_hidden": true,
+    "status": "BLOCKED",
+    "completed_requests": 0,
+    "error_code": "RESOURCE_EXHAUSTED",
+    "error_summary": "Gemini project exceeded its monthly spending cap.",
+    "numeric_visual_scores_available": false
+  },
+  "cases": [
+    {
+      "id": "AR-001",
+      "brief": "把海报的标题放大一点",
+      "contract": {
+        "minimum_artifacts": 1,
+        "minimum_image_artifacts": 1
+      },
+      "source_sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a",
+      "agents": {
+        "canva": {
+          "raw_image_count": 1,
+          "reference_utilization": 1.0,
+          "artifact_contract": true,
+          "production_gate": true,
+          "image_dimensions": [[928, 1152]],
+          "objective_image_diagnostics": {
+            "normalized_full_image_mae_vs_source": 0.0272,
+            "normalized_non_title_mae_vs_source": 0.0064,
+            "normalized_title_zone_mae_vs_source": 0.1235,
+            "title_zone_navy_pixels": 36003,
+            "source_title_zone_navy_pixels": 31950,
+            "title_ink_increase_ratio": 1.1269
+          },
+          "manual_findings": [
+            "The title is visibly but modestly enlarged, matching ‘一点’.",
+            "Unrelated layout, copy, palette, and imagery are preserved.",
+            "No unrelated logo or brand is introduced."
+          ]
+        },
+        "curify-web": {
+          "raw_image_count": 1,
+          "reference_utilization": 1.0,
+          "artifact_contract": true,
+          "production_gate": true,
+          "image_dimensions": [[928, 1152]],
+          "objective_image_diagnostics": {
+            "normalized_full_image_mae_vs_source": 0.0456,
+            "normalized_non_title_mae_vs_source": 0.0107,
+            "normalized_title_zone_mae_vs_source": 0.2074,
+            "title_zone_navy_pixels": 63183,
+            "source_title_zone_navy_pixels": 31950,
+            "title_ink_increase_ratio": 1.9776
+          },
+          "manual_findings": [
+            "The title is enlarged dramatically rather than slightly.",
+            "A Curify logo is added even though the task prohibits unrelated logos.",
+            "The requested edit is obvious, but preservation is weaker than Canva."
+          ]
+        }
+      },
+      "evidence_based_winner": "canva",
+      "winner_basis": "Better proportional edit and stronger preservation of unrelated content."
+    },
+    {
+      "id": "AR-008",
+      "brief": "try on this jacket on my photo for a lookbook",
+      "contract": {
+        "minimum_artifacts": 4,
+        "minimum_image_artifacts": 3,
+        "minimum_distinct_directions": 3
+      },
+      "agents": {
+        "canva": {
+          "raw_image_count": 2,
+          "ui_observed_image_count": 2,
+          "reference_utilization": 1.0,
+          "artifact_contract": false,
+          "production_gate": false,
+          "production_readiness_proxy": 0.6667,
+          "image_dimensions": [[928, 1152], [928, 1152]],
+          "manual_findings": [
+            "Candidate 1 broadly preserves the supplied person's recognizable identity and full-body pose.",
+            "Candidate 2 replaces the supplied person with a different white male model, failing identity preservation.",
+            "Both candidates use a navy bomber silhouette and color close to the garment reference.",
+            "Both invent a sleeve zipper pocket and change some garment details.",
+            "Two clean try-on images are delivered, not the required three poster directions plus manifest."
+          ]
+        },
+        "curify-web": {
+          "raw_image_count": 1,
+          "ui_observed_image_count": 1,
+          "reference_utilization": 0.5,
+          "artifact_contract": false,
+          "production_gate": false,
+          "production_readiness_proxy": 0.1667,
+          "image_dimensions": [[768, 1376]],
+          "manual_findings": [
+            "The deployed UI uploaded the person reference and omitted the navy bomber input.",
+            "The result replaces the requested bomber with an invented black leather biker jacket.",
+            "The result has a stronger poster hierarchy, but its core garment evidence contradicts the brief.",
+            "Only one image and no manifest were delivered."
+          ]
+        }
+      },
+      "evidence_based_winner": "canva",
+      "winner_basis": "Better garment-reference fidelity and one identity-preserving candidate, despite the second candidate's identity failure; both agents still fail the delivery contract."
+    }
+  ],
+  "aggregate": {
+    "evidence_based_case_wins": {
+      "canva": 2,
+      "curify-web": 0
+    },
+    "artifact_contract_passes": {
+      "canva": 1,
+      "curify-web": 1
+    },
+    "full_reference_utilization_cases": {
+      "canva": 2,
+      "curify-web": 1
+    },
+    "official_cross_agent_ranking_available": false,
+    "reason": "Only two cases are present and judge-v2 numeric scoring is blocked by provider spend cap."
+  }
+}

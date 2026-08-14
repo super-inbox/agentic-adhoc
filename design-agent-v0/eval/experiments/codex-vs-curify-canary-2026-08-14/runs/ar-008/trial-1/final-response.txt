@@ -1,0 +1,7 @@
+Created the photorealistic lookbook try-on using built-in image editing, preserving your identity and styling the referenced jacket zipped.
+
+Saved output:
+
+- [navy-bomber-jacket-lookbook-try-on.png](<RUN_WORKDIR>/outputs/navy-bomber-jacket-lookbook-try-on.png)
+
+Prompt: identity-preserving garment replacement with exact jacket details, original pose, background, trousers, shoes, lighting, and full-body framing retained.

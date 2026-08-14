@@ -1,0 +1,11 @@
+2026-08-14T19:24:36.338492Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-14T19:24:36.347902Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-14T19:24:36.407455Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-14T19:24:36.407476Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-14T19:24:36.429024Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-08-14T19:24:36.429856Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-08-14T19:24:36.430129Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-08-14T19:24:36.638905Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-14T19:24:36.638946Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-14T19:26:08.447018Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-14T19:26:14.838332Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

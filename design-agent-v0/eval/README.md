@@ -21,6 +21,17 @@ The snapshot contains no API keys, browser session state, signed download URLs, 
 paths, or user account identity. Exact source/output pixels and full nested source traces remain as
 access-controlled Braintrust attachments.
 
+## Published cross-Agent canaries
+
+- [`experiments/canva-vs-curify-canary-2026-08-14/`](experiments/canva-vs-curify-canary-2026-08-14/)
+  records four manually observed Canva cases and preserves downloaded outputs plus UI evidence.
+- [`experiments/codex-vs-curify-canary-2026-08-14/`](experiments/codex-vs-curify-canary-2026-08-14/)
+  records two isolated Codex CLI cases, frozen comparison artifacts, and JSONL execution traces.
+
+Both are small canaries rather than overall Agent rankings. Their independent Gemini judge-v2 run
+was blocked by the source project's monthly spending cap, so their published conclusions are
+limited to deterministic checks and evidence-based manual comparison.
+
 ## Consolidated multimodal queries
 
 `queries.jsonl` has 118 rows:

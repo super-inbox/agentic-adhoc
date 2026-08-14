@@ -1,0 +1,64 @@
+{
+  "schema_version": "raw-agent-output-manifest-v0.1",
+  "captured_at": "2026-08-14",
+  "dataset": "design-agent-bench-v0.1-multimodal-pilot",
+  "artifacts": [
+    {
+      "case_id": "AR-001",
+      "agent_name": "canva",
+      "path": "artifacts/canva/ar-001-output-1.png",
+      "sha256": "a81aa749ed7f6df1e08cd8b54345463d29436b59abd1f6c38e75f1e98fe05a91",
+      "content_type": "image/png",
+      "width": 928,
+      "height": 1152,
+      "byte_size": 1282630,
+      "provenance": "user_downloaded_original"
+    },
+    {
+      "case_id": "AR-001",
+      "agent_name": "curify-web",
+      "path": "artifacts/curify/ar-001-output-1.jpg",
+      "sha256": "373d8c84b9608a7118ccdcb707fc898bcd18d23e52546f5930634ff67265947a",
+      "content_type": "image/jpeg",
+      "width": 928,
+      "height": 1152,
+      "byte_size": 166464,
+      "provenance": "curify_web_experiment_artifact",
+      "artifact_id": "web_79463f0d55"
+    },
+    {
+      "case_id": "AR-008",
+      "agent_name": "canva",
+      "path": "artifacts/canva/ar-008-output-1.png",
+      "sha256": "f22fc1b9b7fc7c4faddf5f844ca8ee8a3d311a8bbd1f33fc1f71a2f0f84df152",
+      "content_type": "image/png",
+      "width": 928,
+      "height": 1152,
+      "byte_size": 1010872,
+      "provenance": "user_downloaded_original"
+    },
+    {
+      "case_id": "AR-008",
+      "agent_name": "canva",
+      "path": "artifacts/canva/ar-008-output-2.png",
+      "sha256": "1cd96ff6685ae1f2b4a9a608903ec89bad4e186b5f7f79fd0d0cd0165ab7b7b4",
+      "content_type": "image/png",
+      "width": 928,
+      "height": 1152,
+      "byte_size": 1010263,
+      "provenance": "user_downloaded_original"
+    },
+    {
+      "case_id": "AR-008",
+      "agent_name": "curify-web",
+      "path": "artifacts/curify/ar-008-output-1.jpg",
+      "sha256": "8491ea2afd7323a81587ba2a3bd0149dfc426a69a9e5de43eb73c90f2a01766c",
+      "content_type": "image/jpeg",
+      "width": 768,
+      "height": 1376,
+      "byte_size": 224115,
+      "provenance": "curify_web_experiment_artifact",
+      "artifact_id": "web_59551718a1"
+    }
+  ]
+}

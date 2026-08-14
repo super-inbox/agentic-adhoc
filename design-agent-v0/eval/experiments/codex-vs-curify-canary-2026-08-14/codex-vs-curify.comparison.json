@@ -1,0 +1,144 @@
+{
+  "schema_version": "cross-agent-comparison-v0.1",
+  "created_at": "2026-08-14",
+  "scope": {
+    "dataset": "design-agent-bench-v0.1-multimodal-pilot",
+    "cases": ["AR-001", "AR-008"],
+    "agents": ["codex-cli", "curify-web"],
+    "case_count": 2,
+    "ranking_scope": "canary_only"
+  },
+  "candidate_protocol": {
+    "codex_cli_version": "0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral",
+    "curify_outputs_visible_to_candidate": false,
+    "rubric_visible_to_candidate": false,
+    "hidden_deliverable_contract_visible_to_candidate": false
+  },
+  "independent_judge": {
+    "version": "judge-v2",
+    "model": "gemini-2.5-pro",
+    "status": "BLOCKED",
+    "completed_requests": 0,
+    "error_code": "RESOURCE_EXHAUSTED",
+    "error_summary": "Gemini project exceeded its monthly spending cap.",
+    "numeric_visual_scores_available": false
+  },
+  "cases": [
+    {
+      "id": "AR-001",
+      "brief": "把海报的标题放大一点",
+      "budget_ms": 120000,
+      "agents": {
+        "codex-cli": {
+          "artifact_count": 1,
+          "reference_utilization": 1.0,
+          "artifact_contract": true,
+          "production_readiness": 1.0,
+          "production_gate": true,
+          "latency_ms": 127000,
+          "efficiency_score": 0.9559,
+          "image_dimensions": [[1125, 1398]],
+          "objective_image_diagnostics": {
+            "normalized_full_image_mae_vs_source": 0.0357,
+            "normalized_non_title_mae_vs_source": 0.0147,
+            "normalized_title_zone_mae_vs_source": 0.1347,
+            "title_ink_increase_ratio": 1.2653
+          },
+          "manual_findings": [
+            "Title enlargement is visible and moderate relative to Curify.",
+            "No unrelated Codex logo is added.",
+            "All original copy and the geometric poster system remain recognizable."
+          ]
+        },
+        "curify-web": {
+          "artifact_count": 1,
+          "reference_utilization": 1.0,
+          "artifact_contract": true,
+          "production_readiness": 1.0,
+          "production_gate": true,
+          "latency_ms": 32010,
+          "efficiency_score": 1.0,
+          "estimated_credits": 10,
+          "image_dimensions": [[928, 1152]],
+          "objective_image_diagnostics": {
+            "normalized_full_image_mae_vs_source": 0.0456,
+            "normalized_non_title_mae_vs_source": 0.0107,
+            "normalized_title_zone_mae_vs_source": 0.2074,
+            "title_ink_increase_ratio": 1.9776
+          },
+          "manual_findings": [
+            "Title enlargement is much stronger than ‘一点’.",
+            "An unrelated Curify logo is added, violating the negative constraint.",
+            "Curify is approximately four times faster in this run."
+          ]
+        }
+      },
+      "evidence_based_winner": "codex-cli",
+      "winner_basis": "Better proportional edit and no unrelated brand insertion; Curify wins latency."
+    },
+    {
+      "id": "AR-008",
+      "brief": "try on this jacket on my photo for a lookbook",
+      "budget_ms": 240000,
+      "agents": {
+        "codex-cli": {
+          "artifact_count": 1,
+          "reference_utilization": 1.0,
+          "artifact_contract": false,
+          "production_readiness": 0.3333,
+          "production_gate": false,
+          "latency_ms": 114000,
+          "efficiency_score": 1.0,
+          "image_dimensions": [[1126, 1397]],
+          "manual_findings": [
+            "Identity, anatomy, pose, trousers, shoes, and studio setting are strongly preserved.",
+            "The supplied navy bomber is used with matching core silhouette, color, and zipped styling.",
+            "Only one image and no manifest are delivered."
+          ]
+        },
+        "curify-web": {
+          "artifact_count": 1,
+          "reference_utilization": 0.5,
+          "artifact_contract": false,
+          "production_readiness": 0.1667,
+          "production_gate": false,
+          "latency_ms": 36210,
+          "efficiency_score": 1.0,
+          "estimated_credits": 10,
+          "image_dimensions": [[768, 1376]],
+          "manual_findings": [
+            "The deployed UI omits the bomber reference and consumes only the person image.",
+            "The result invents a black leather biker jacket instead of the supplied navy bomber.",
+            "The result has a stronger poster layout but contradicts the core garment request."
+          ]
+        }
+      },
+      "evidence_based_winner": "codex-cli",
+      "winner_basis": "Substantially better identity and garment-reference fidelity; both fail the hidden multi-artifact contract."
+    }
+  ],
+  "aggregate": {
+    "evidence_based_case_wins": {
+      "codex-cli": 2,
+      "curify-web": 0
+    },
+    "artifact_contract_passes": {
+      "codex-cli": 1,
+      "curify-web": 1
+    },
+    "full_reference_utilization_cases": {
+      "codex-cli": 2,
+      "curify-web": 1
+    },
+    "mean_latency_ms": {
+      "codex-cli": 120500,
+      "curify-web": 34110
+    },
+    "official_cross_agent_ranking_available": false,
+    "reason": "Only two cases are present and judge-v2 numeric scoring is blocked by provider spend cap."
+  }
+}

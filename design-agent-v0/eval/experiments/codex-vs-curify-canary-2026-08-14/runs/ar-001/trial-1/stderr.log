@@ -1,0 +1,10 @@
+2026-08-14T19:22:02.256719Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-14T19:22:02.263668Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-14T19:22:02.313560Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-14T19:22:02.313588Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-14T19:22:02.333759Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-08-14T19:22:02.334653Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-08-14T19:22:02.334823Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-08-14T19:22:02.929916Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-14T19:22:02.929942Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-14T19:23:02.201912Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

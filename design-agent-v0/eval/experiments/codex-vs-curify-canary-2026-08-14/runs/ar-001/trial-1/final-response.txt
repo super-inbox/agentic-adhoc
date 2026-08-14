@@ -1,0 +1,7 @@
+已完成，标题 “SUMMER / FORM” 已适度放大并保持原有样式与排版。
+
+输出文件：
+
+- [summer-form-poster-title-enlarged.png](<RUN_WORKDIR>/outputs/summer-form-poster-title-enlarged.png)
+
+使用内置图像编辑，提示重点为“仅将主标题放大约 10–12%，保持其他海报元素不变”。

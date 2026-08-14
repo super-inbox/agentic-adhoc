@@ -1,0 +1,55 @@
+{
+  "schema_version": "raw-agent-output-manifest-v0.1",
+  "captured_at": "2026-08-14",
+  "dataset": "design-agent-bench-v0.1-multimodal-pilot",
+  "artifacts": [
+    {
+      "case_id": "AR-001",
+      "agent_name": "codex-cli",
+      "path": "artifacts/codex/ar-001-output-1.png",
+      "sha256": "218f0555199ccef36de6c64bda598de7fb41daca1c589c14675745cd9e5fdbfc",
+      "content_type": "image/png",
+      "width": 1125,
+      "height": 1398,
+      "byte_size": 1831239,
+      "provenance": "isolated_ephemeral_candidate_run",
+      "trace": "runs/ar-001/trial-1/trace.jsonl"
+    },
+    {
+      "case_id": "AR-001",
+      "agent_name": "curify-web",
+      "path": "artifacts/curify/ar-001-output-1.jpg",
+      "sha256": "373d8c84b9608a7118ccdcb707fc898bcd18d23e52546f5930634ff67265947a",
+      "content_type": "image/jpeg",
+      "width": 928,
+      "height": 1152,
+      "byte_size": 166464,
+      "provenance": "curify_web_experiment_artifact",
+      "artifact_id": "web_79463f0d55"
+    },
+    {
+      "case_id": "AR-008",
+      "agent_name": "codex-cli",
+      "path": "artifacts/codex/ar-008-output-1.png",
+      "sha256": "67e289d59d6b73b814162e2c0a72620e7e45e56d157d3c3e375268615e8b993d",
+      "content_type": "image/png",
+      "width": 1126,
+      "height": 1397,
+      "byte_size": 1747745,
+      "provenance": "isolated_ephemeral_candidate_run",
+      "trace": "runs/ar-008/trial-1/trace.jsonl"
+    },
+    {
+      "case_id": "AR-008",
+      "agent_name": "curify-web",
+      "path": "artifacts/curify/ar-008-output-1.jpg",
+      "sha256": "8491ea2afd7323a81587ba2a3bd0149dfc426a69a9e5de43eb73c90f2a01766c",
+      "content_type": "image/jpeg",
+      "width": 768,
+      "height": 1376,
+      "byte_size": 224115,
+      "provenance": "curify_web_experiment_artifact",
+      "artifact_id": "web_59551718a1"
+    }
+  ]
+}

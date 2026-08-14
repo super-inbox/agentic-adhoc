@@ -1,0 +1,39 @@
+{
+  "schema_version": "manual-evidence-manifest-v0.1",
+  "captured_at": "2026-08-14",
+  "agent_name": "canva",
+  "files": [
+    {
+      "case_id": "AR-006",
+      "path": "evidence/ar-006-design-vote-response.png",
+      "sha256": "0e1019024d38743fff5cf55477f450e14806f8792adb063208be9cee30e20c0a",
+      "width": 1326,
+      "height": 890,
+      "kind": "ui_evidence"
+    },
+    {
+      "case_id": "AR-008",
+      "path": "evidence/ar-008-tryon-response.png",
+      "sha256": "2e5d2c145ad0714e00684d22f247aa435908841e718eca565ada712d9095f9c6",
+      "width": 1460,
+      "height": 1184,
+      "kind": "ui_evidence"
+    },
+    {
+      "case_id": "TIQ-088",
+      "path": "evidence/tiq-088-clarification-1.png",
+      "sha256": "bc501765ef19477381048bb8bab94ba93579dba122648537114206e639f85ba4",
+      "width": 1358,
+      "height": 1132,
+      "kind": "ui_evidence"
+    },
+    {
+      "case_id": "TIQ-088",
+      "path": "evidence/tiq-088-clarification-2.png",
+      "sha256": "188df6f1f077f7f0e5dc4242d7989ade30a77340c2c2caef665b26d57e949368",
+      "width": 1260,
+      "height": 602,
+      "kind": "ui_evidence"
+    }
+  ]
+}
