@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-086",
+  "brief": "木质家具材质特写详情图",
+  "category": "Industrial/Product",
+  "capability_id": "image_edit_variants",
+  "started_at": "2026-08-17T02:42:12.766Z",
+  "finished_at": "2026-08-17T02:43:55.145Z",
+  "latency_ms": 102381,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-product_source.png"
+  ],
+  "uploaded_asset_roles": [
+    "product_source"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "walnut-chair-material-closeup.png",
+      "byte_size": 2078459,
+      "sha256": "88e47aa0fc1683b03b41261f5480aa6b878acc6e630137967a41f70d6e9049f0"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 19,
+    "command_count": 6,
+    "image_tool_count": 4,
+    "usage": {
+      "input_tokens": 247929,
+      "cached_input_tokens": 208896,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3179,
+      "reasoning_output_tokens": 1309
+    },
+    "thread_id": "01a00d99-1bfa-7e02-82ce-34364f8af17f"
+  },
+  "outcome": "completed"
+}

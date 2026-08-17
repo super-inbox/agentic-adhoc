@@ -1,0 +1,10 @@
+已完成，采用内置图像生成完成身份保留试穿，并统一为简洁电商影棚风格。
+
+输出文件：
+
+- [双造型对比海报 PNG](<WORKDIR>/outputs/tryon-lookbook-comparison-poster.png)
+- [绿色连帽卫衣试穿海报](<WORKDIR>/outputs/tryon-hoodie-poster.png)
+- [藏蓝飞行夹克试穿海报](<WORKDIR>/outputs/tryon-bomber-poster.png)
+- [双造型海报 SVG 源文件](<WORKDIR>/outputs/tryon-lookbook-comparison-poster.svg)
+
+提示词核心：保留自拍人物五官、发型与体型，仅替换指定服装；准确还原颜色、材质和版型，统一柔和影棚光线，避免品牌、水印和多余配饰。

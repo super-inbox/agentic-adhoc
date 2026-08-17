@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "AR-002",
+  "brief": "换个背景颜色，更清爽一些",
+  "category": "Marketing Creative",
+  "capability_id": "image_edit_variants",
+  "started_at": "2026-08-17T01:57:07.408Z",
+  "finished_at": "2026-08-17T02:01:14.404Z",
+  "latency_ms": 246999,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-edit_target.png"
+  ],
+  "uploaded_asset_roles": [
+    "edit_target"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "summer-form-fresh-mint-background.png",
+      "byte_size": 1041001,
+      "sha256": "d97ad6be7f4ac8b74ce06d10e75665250ceb5fa06a3cd00ababd6b3a47f0ef3d"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 33,
+    "command_count": 11,
+    "image_tool_count": 3,
+    "usage": {
+      "input_tokens": 559618,
+      "cached_input_tokens": 508032,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 8181,
+      "reasoning_output_tokens": 4790
+    },
+    "thread_id": "01a00d6f-d411-7af2-9637-629470c7fc9c"
+  },
+  "outcome": "completed"
+}

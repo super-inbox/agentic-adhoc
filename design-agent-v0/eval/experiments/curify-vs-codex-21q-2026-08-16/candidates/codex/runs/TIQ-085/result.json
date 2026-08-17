@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-085",
+  "brief": "金属五金工具产品细节增强",
+  "category": "Industrial/Product",
+  "capability_id": "image_edit_variants",
+  "started_at": "2026-08-17T02:40:13.613Z",
+  "finished_at": "2026-08-17T02:42:12.754Z",
+  "latency_ms": 119143,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-product_source.png"
+  ],
+  "uploaded_asset_roles": [
+    "product_source"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "adjustable-wrench-detail-enhanced.png",
+      "byte_size": 1723698,
+      "sha256": "c0bb3455adf091656c09818fa3bd0034c44d89f85dbd732895cc1ac8dcadbee4"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 21,
+    "command_count": 7,
+    "image_tool_count": 5,
+    "usage": {
+      "input_tokens": 318444,
+      "cached_input_tokens": 286976,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3326,
+      "reasoning_output_tokens": 1500
+    },
+    "thread_id": "01a00d97-4acd-7470-9c96-ccaa090b0516"
+  },
+  "outcome": "completed"
+}

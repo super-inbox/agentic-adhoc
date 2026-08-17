@@ -1,0 +1,5 @@
+已完成：主标题 “SUMMER FORM” 已适度放大，其余版式保持一致。
+
+- [summer-form-poster-title-enlarged.png](<WORKDIR>/outputs/summer-form-poster-title-enlarged.png)
+
+使用内置图像编辑；提示词要求仅放大标题约 12%，保留原字体、配色和其他元素。

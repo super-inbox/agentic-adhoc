@@ -1,0 +1,5 @@
+已完成木质家具材质特写详情图，突出胡桃木纹理、半哑光质感与靠背榫接工艺。
+
+- [walnut-chair-material-closeup.png](<WORKDIR>/outputs/walnut-chair-material-closeup.png)（1254 × 1254 PNG）
+
+使用内置图像生成模式；提示词以参考椅为唯一产品依据，生成同款胡桃木家具的微距电商详情摄影。

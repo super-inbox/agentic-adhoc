@@ -1,0 +1,21 @@
+{
+  "candidate": "curify-web-jwang-vercel@275f7d0a",
+  "cases": 21,
+  "outcomes": {
+    "completed": 16,
+    "partial": 5
+  },
+  "partial_task_ids": [
+    "AR-004",
+    "AR-010",
+    "AR-011",
+    "AR-012",
+    "TIQ-098"
+  ],
+  "downloaded_artifacts": 21,
+  "estimated_credits": 230,
+  "mean_latency_ms": 34268.61904761905,
+  "multi_input_tasks_with_omissions": 7,
+  "omitted_input_assets": 9,
+  "automatic_retries": 0
+}

@@ -1,0 +1,5 @@
+Enlarged the logo and moved it to the poster’s bottom-right corner.
+
+- [summer-form-logo-enlarged-corner.png](<WORKDIR>/outputs/summer-form-logo-enlarged-corner.png)
+
+Created with the built-in image-editing tool, preserving the poster’s text and overall design.

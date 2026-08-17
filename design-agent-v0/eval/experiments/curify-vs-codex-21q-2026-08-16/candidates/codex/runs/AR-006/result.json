@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "AR-006",
+  "brief": "vote on these four logo options, which is better",
+  "category": "Brand Identity",
+  "capability_id": "design_vote",
+  "started_at": "2026-08-17T02:05:26.884Z",
+  "finished_at": "2026-08-17T02:06:04.257Z",
+  "latency_ms": 37375,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-candidate_board.png"
+  ],
+  "uploaded_asset_roles": [
+    "candidate_board"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "noma_logo_vote.md",
+      "byte_size": 797,
+      "sha256": "3db032a9f656da010bd99f17791cc0f1564fdffe2252c0c2195c3b5de43ed735"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 11,
+    "command_count": 2,
+    "image_tool_count": 0,
+    "usage": {
+      "input_tokens": 69763,
+      "cached_input_tokens": 59648,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1067,
+      "reasoning_output_tokens": 440
+    },
+    "thread_id": "01a00d77-74f8-7173-9f75-4d48b895e366"
+  },
+  "outcome": "completed"
+}

@@ -1,0 +1,8 @@
+已完成模切生产文件：成品 67.70 × 70.00 mm、2 mm 白色出血、0.25 pt `CutContour` 洋红专色刀线，并设置叠印与独立图层。
+
+- `luna_club_diecut_production.pdf`：印厂主文件 :codex-file-citation{path="<WORKDIR>/outputs/luna_club_diecut_production.pdf" purpose="output"}
+- [luna_club_diecut_production.svg](<WORKDIR>/outputs/luna_club_diecut_production.svg)：可编辑刀线源文件
+- [luna_club_diecut_preview.png](<WORKDIR>/outputs/luna_club_diecut_preview.png)：刀线预览
+- [luna_club_diecut_specs.txt](<WORKDIR>/outputs/luna_club_diecut_specs.txt)：生产规格说明
+
+原图在该尺寸下约 185 ppi，建议不要再放大。

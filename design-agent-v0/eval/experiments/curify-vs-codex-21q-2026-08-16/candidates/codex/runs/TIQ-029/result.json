@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-029",
+  "brief": "logo升级前后对比提案板",
+  "category": "Brand Identity",
+  "capability_id": "image_edit_variants",
+  "started_at": "2026-08-17T02:34:00.237Z",
+  "finished_at": "2026-08-17T02:36:31.502Z",
+  "latency_ms": 151270,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-before_after_board.png"
+  ],
+  "uploaded_asset_roles": [
+    "before_after_board"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "grain-and-glow-logo-refresh-comparison-board.png",
+      "byte_size": 1711629,
+      "sha256": "2e53a31f676d5f531f31437d8ab8606aaa8258364607e511c40368e7667b2ab9"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 17,
+    "command_count": 5,
+    "image_tool_count": 4,
+    "usage": {
+      "input_tokens": 215229,
+      "cached_input_tokens": 185344,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 4034,
+      "reasoning_output_tokens": 2224
+    },
+    "thread_id": "01a00d91-96da-7a02-ac8f-1f02b93a6c2f"
+  },
+  "outcome": "completed"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-096",
+  "brief": "展示同款产品五种颜色",
+  "category": "Industrial/Product",
+  "capability_id": "sku_variants",
+  "started_at": "2026-08-17T02:50:28.713Z",
+  "finished_at": "2026-08-17T02:51:59.204Z",
+  "latency_ms": 90494,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 2,
+  "uploaded_assets": [
+    "01-product_reference.png",
+    "02-color_palette_reference.png"
+  ],
+  "uploaded_asset_roles": [
+    "product_reference",
+    "color_palette_reference"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "mori-tumbler-five-colorways.png",
+      "byte_size": 1674396,
+      "sha256": "78b20629e3dde14e7343d3e9f9537eaacf99b7873b4a236d8f9f4fdc0c7bd80e"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 13,
+    "command_count": 3,
+    "image_tool_count": 2,
+    "usage": {
+      "input_tokens": 114407,
+      "cached_input_tokens": 73984,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2283,
+      "reasoning_output_tokens": 961
+    },
+    "thread_id": "01a00da0-ad2f-7791-80d5-7200a27f0704"
+  },
+  "outcome": "completed"
+}

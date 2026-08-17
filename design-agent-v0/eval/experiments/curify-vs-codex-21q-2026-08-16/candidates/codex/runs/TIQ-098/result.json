@@ -1,0 +1,143 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-098",
+  "brief": "批量生成同一品牌的20个SKU主图",
+  "category": "Industrial/Product",
+  "capability_id": "sku_batch",
+  "started_at": "2026-08-17T02:51:59.219Z",
+  "finished_at": "2026-08-17T03:06:59.255Z",
+  "latency_ms": 900064,
+  "timeout_ms": 900000,
+  "exit_code": null,
+  "signal": "SIGTERM",
+  "error": null,
+  "input_capacity": 2,
+  "uploaded_assets": [
+    "01-brand_reference.png",
+    "02-sku_source_sheet.png"
+  ],
+  "uploaded_asset_roles": [
+    "brand_reference",
+    "sku_source_sheet"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "mori_sku_01_main.png",
+      "byte_size": 1408959,
+      "sha256": "30d6565276fe55d9efaf8832e8540d51e76797b0072529f97b650b41e6b61e69"
+    },
+    {
+      "filename": "mori_sku_02_main.png",
+      "byte_size": 1377543,
+      "sha256": "ac41e28b32760807997088b3503a6c0a1bd381c2a493ac3aa7cc7dd477dc3fed"
+    },
+    {
+      "filename": "mori_sku_03_main.png",
+      "byte_size": 1269069,
+      "sha256": "9610d685ee6fa840e3b518b04d7c36f170c7f08cea9aea600a63473f96b2e4e6"
+    },
+    {
+      "filename": "mori_sku_04_main.png",
+      "byte_size": 1434280,
+      "sha256": "2752a5d773d102c3ed6f916647804c9fe29f0ef03376cae1a0e4a12e19a76010"
+    },
+    {
+      "filename": "mori_sku_05_main.png",
+      "byte_size": 1580973,
+      "sha256": "b558a4b45bcfdb3916b10ab7c6dbfcb49014962c94b81aea04fde6c147927ca8"
+    },
+    {
+      "filename": "mori_sku_06_main.png",
+      "byte_size": 1418029,
+      "sha256": "472cd978e16a339bdffdda137b8971baeed4ce097b734a8d54778332ec7cd04d"
+    },
+    {
+      "filename": "mori_sku_07_main.png",
+      "byte_size": 1269761,
+      "sha256": "db21367dfaf77de40958f8ee45948ccb4b189cd8e7cdefa44d6dd3602cee4d3b"
+    },
+    {
+      "filename": "mori_sku_08_main.png",
+      "byte_size": 1553088,
+      "sha256": "4f35a571efa07b8f7353470ca167dc7e09e6f334a7d662cf8604bd34e6f69560"
+    },
+    {
+      "filename": "mori_sku_09_main.png",
+      "byte_size": 1342890,
+      "sha256": "6126231f3ee1cd77c31fd454518100a0536e8a7f5f543cc553355e3668d365c9"
+    },
+    {
+      "filename": "mori_sku_10_main.png",
+      "byte_size": 1429948,
+      "sha256": "1e03cd3d9553e1ea0b511710a6fa7b783b9c2af5cd374c904205c07b182c210d"
+    },
+    {
+      "filename": "mori_sku_11_main.png",
+      "byte_size": 1256349,
+      "sha256": "5f2457bc6d05026f0708407986aefc25906fdfb74b1f7cd5b2f4a18e0fb0d318"
+    },
+    {
+      "filename": "mori_sku_12_main.png",
+      "byte_size": 1214882,
+      "sha256": "acf2d60b3959d7bb8dc15f39f8c7218999b171a68728f2342a39a1526efdd2e8"
+    },
+    {
+      "filename": "mori_sku_13_main.png",
+      "byte_size": 1281909,
+      "sha256": "91a53255d3e7e09924a15ab957003af8ec083bde9296a80bca2dc7000b9334c9"
+    },
+    {
+      "filename": "mori_sku_14_main.png",
+      "byte_size": 1221566,
+      "sha256": "42ea0313e57a16042ae4f9ecd35cbc5c570c8f81d97af01780fbead5bc2f623e"
+    },
+    {
+      "filename": "mori_sku_15_main.png",
+      "byte_size": 1496275,
+      "sha256": "15f6c861a165e6a3d80975095c0770209b770cb194137357f8e5d333e4cd4e90"
+    },
+    {
+      "filename": "mori_sku_16_main.png",
+      "byte_size": 1138574,
+      "sha256": "c8637b4113cb3d67028d20102dde084d2040b0cca2c9d472c58c77f1e1204966"
+    },
+    {
+      "filename": "mori_sku_17_main.png",
+      "byte_size": 1417582,
+      "sha256": "2d60184f29f475d710b0292f4f085aadaf46cc68476cd0cbeb1b62220384219d"
+    },
+    {
+      "filename": "mori_sku_18_main.png",
+      "byte_size": 1326042,
+      "sha256": "91d126d33e86960a930ffd9629a70614d151a5212bafbfb72344ff838092d2ef"
+    },
+    {
+      "filename": "mori_sku_19_main.png",
+      "byte_size": 1366943,
+      "sha256": "54a7b818d0e0a32ee3a7fd1f90c758a9a687d95092f444063bb96e074747b726"
+    },
+    {
+      "filename": "mori_sku_20_main.png",
+      "byte_size": 1335013,
+      "sha256": "655c887e13ad999ebb01138e8e7eb76adf4556dbafaaf141762883a211ebcd4c"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 56,
+    "command_count": 24,
+    "image_tool_count": 2,
+    "usage": null,
+    "thread_id": "01a00da2-0ef2-7c11-881f-908268a41555"
+  },
+  "outcome": "timeout_or_signal"
+}

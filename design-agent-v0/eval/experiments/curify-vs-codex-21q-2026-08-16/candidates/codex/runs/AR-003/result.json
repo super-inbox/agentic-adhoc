@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "AR-003",
+  "brief": "make the logo bigger and move it to the corner",
+  "category": "Marketing Creative",
+  "capability_id": "image_edit_variants",
+  "started_at": "2026-08-17T02:01:14.421Z",
+  "finished_at": "2026-08-17T02:04:01.381Z",
+  "latency_ms": 166964,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-edit_target.png"
+  ],
+  "uploaded_asset_roles": [
+    "edit_target"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "summer-form-logo-enlarged-corner.png",
+      "byte_size": 1366588,
+      "sha256": "7891abd08c72d74fad7b92674aa4b3f6b7346a212baa8dbd381ce38fd49d5ba7"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 15,
+    "command_count": 4,
+    "image_tool_count": 2,
+    "usage": {
+      "input_tokens": 213629,
+      "cached_input_tokens": 186112,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2938,
+      "reasoning_output_tokens": 1573
+    },
+    "thread_id": "01a00d73-97f7-7840-abfa-ca89760c4fb3"
+  },
+  "outcome": "completed"
+}

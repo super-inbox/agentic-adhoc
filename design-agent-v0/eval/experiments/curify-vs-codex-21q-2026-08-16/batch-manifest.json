@@ -1,0 +1,62 @@
+{
+  "schema_version": "design-agent-comparison-batch-v1",
+  "batch_id": "curify-codex-21q-2026-08-16",
+  "dataset": {
+    "name": "design-agent-bench-v0.1-multimodal-pilot",
+    "pack_version": "v0.2",
+    "row_count": 21,
+    "sha256": "4eca24ca324737767bc54bfd24e1f5478851a5ca42c79aeecb249f3d9216eaa1"
+  },
+  "task_ids": [
+    "AR-001",
+    "AR-002",
+    "AR-003",
+    "AR-004",
+    "AR-005",
+    "AR-006",
+    "AR-007",
+    "AR-008",
+    "AR-009",
+    "AR-010",
+    "AR-011",
+    "AR-012",
+    "TIQ-029",
+    "TIQ-070",
+    "TIQ-084",
+    "TIQ-085",
+    "TIQ-086",
+    "TIQ-088",
+    "TIQ-096",
+    "TIQ-098",
+    "TIQ-100"
+  ],
+  "trial_policy": {
+    "candidate_runs_per_task": 1,
+    "user_turns": 1,
+    "automatic_retries": 0,
+    "candidate_identity_hidden_from_judge": true
+  },
+  "candidates": {
+    "curify-web": {
+      "candidate": "curify-web-jwang-vercel@275f7d0a",
+      "frontend_commit": "275f7d0a111b8fe0c4c5a5409c548932d003cb9f",
+      "surface": "local frontend connected to the configured Curify production API",
+      "input_capacity": 1
+    },
+    "codex-cli": {
+      "cli_version": "0.146.0",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "max",
+      "service_tier": "default",
+      "session_mode": "ephemeral",
+      "input_capacity": "all dataset images"
+    }
+  },
+  "judge": {
+    "version": "judge-v2",
+    "model": "gemini-2.5-pro",
+    "temperature": 0,
+    "status": "blocked_monthly_spending_cap",
+    "note": "Candidate artifacts are frozen and can be judged later without rerunning either candidate."
+  }
+}
