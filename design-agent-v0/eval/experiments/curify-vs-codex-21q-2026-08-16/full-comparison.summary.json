@@ -1,0 +1,26 @@
+{
+  "records": 42,
+  "raw_records_including_retries": 42,
+  "candidates": {
+    "curify-web": {
+      "scored_cases": 21,
+      "independent_judge_completed_cases": 0,
+      "independent_judge_blocked_cases": 21,
+      "errors": 0,
+      "weighted_design_mean": null,
+      "benchmark_total_mean": null,
+      "case_passes": 0,
+      "median_latency_ms": 33754.0
+    },
+    "codex-cli": {
+      "scored_cases": 21,
+      "independent_judge_completed_cases": 0,
+      "independent_judge_blocked_cases": 21,
+      "errors": 0,
+      "weighted_design_mean": null,
+      "benchmark_total_mean": null,
+      "case_passes": 0,
+      "median_latency_ms": 151270.0
+    }
+  }
+}

@@ -1,0 +1,5 @@
+已完成金属扳手产品细节增强，强化拉丝纹理、机械边缘、调节齿轮与金属光影，同时保留原构图和结构。
+
+- [adjustable-wrench-detail-enhanced.png](<WORKDIR>/outputs/adjustable-wrench-detail-enhanced.png)
+
+使用内置 ImageGen 编辑模式；提示词重点为仅增强金属材质与细节，避免结构变化、镜面镀铬、文字及多余零件。

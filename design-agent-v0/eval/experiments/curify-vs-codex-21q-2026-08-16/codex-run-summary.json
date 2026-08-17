@@ -1,0 +1,46 @@
+{
+  "candidate": "codex-cli@0.146.0/gpt-5.6-sol/max",
+  "cases": 21,
+  "outcomes": {
+    "completed": 20,
+    "timeout_or_signal": 1
+  },
+  "timeout_task_ids": [
+    "TIQ-098"
+  ],
+  "final_artifacts": 46,
+  "mean_latency_ms": 225389.2857142857,
+  "median_latency_ms": 151270,
+  "input_assets_loaded": 30,
+  "input_assets_required": 30,
+  "input_omissions": 0,
+  "input_tokens": 6991464,
+  "cached_input_tokens": 6226816,
+  "output_tokens": 133748,
+  "reasoning_output_tokens": 68723,
+  "image_tool_events": 53,
+  "automatic_retries": 0,
+  "artifact_counts": {
+    "AR-001": 1,
+    "AR-002": 1,
+    "AR-003": 1,
+    "AR-004": 1,
+    "AR-005": 1,
+    "AR-006": 1,
+    "AR-007": 1,
+    "AR-008": 1,
+    "AR-009": 1,
+    "AR-010": 4,
+    "AR-011": 1,
+    "AR-012": 1,
+    "TIQ-029": 1,
+    "TIQ-070": 1,
+    "TIQ-084": 1,
+    "TIQ-085": 1,
+    "TIQ-086": 1,
+    "TIQ-088": 1,
+    "TIQ-096": 1,
+    "TIQ-098": 20,
+    "TIQ-100": 4
+  }
+}

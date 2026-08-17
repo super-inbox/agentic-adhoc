@@ -1,0 +1,7 @@
+我投 **B 方案**。
+
+综合排序：**B > C > A > D**。B 的深蓝金配色、高级感、品牌辨识度和文字可读性最均衡，商业落地效果最好。
+
+已保存评选结果：
+
+- [candidate_design_vote.md](<WORKDIR>/outputs/candidate_design_vote.md)

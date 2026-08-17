@@ -1,0 +1,5 @@
+已完成卫衣试穿效果，保留人物姿势、裤鞋、背景与光线，仅替换上衣。
+
+- [virtual-tryon-sage-green-hoodie.png](<WORKDIR>/outputs/virtual-tryon-sage-green-hoodie.png)
+
+使用内置图像编辑模式生成。

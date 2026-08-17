@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "AR-012",
+  "brief": "导出可以直接打样的印刷文件",
+  "category": "Packaging",
+  "capability_id": "factory_export",
+  "started_at": "2026-08-17T02:30:15.896Z",
+  "finished_at": "2026-08-17T02:34:00.211Z",
+  "latency_ms": 224320,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-print_artwork.png"
+  ],
+  "uploaded_asset_roles": [
+    "print_artwork"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "orbit-coffee_print-proof_CMYK_300dpi.pdf",
+      "byte_size": 1198973,
+      "sha256": "79b84366a70a69360c060d57288ce541788af4c7a85b8b2dfae9a81277b7d779"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 39,
+    "command_count": 13,
+    "image_tool_count": 0,
+    "usage": {
+      "input_tokens": 514372,
+      "cached_input_tokens": 471296,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9443,
+      "reasoning_output_tokens": 4460
+    },
+    "thread_id": "01a00d8e-2bae-7f53-a9fa-c6dff9bc100d"
+  },
+  "outcome": "completed"
+}

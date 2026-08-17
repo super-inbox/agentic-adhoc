@@ -1,0 +1,5 @@
+已完成产品详情页替换，包含主视觉、功能卖点、材质特写和规格信息，尺寸为 1600×2400 PNG。
+
+- [terracotta_aroma_diffuser_detail_page.png](<<WORKDIR>/outputs/terracotta_aroma_diffuser_detail_page.png>)
+
+使用内置 imagegen 生成暖灰棚拍主图与赤陶磨砂特写，并确定性排版中文文案。

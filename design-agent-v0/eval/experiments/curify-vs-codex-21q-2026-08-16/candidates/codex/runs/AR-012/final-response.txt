@@ -1,0 +1,3 @@
+已导出可直接打样的 CMYK PDF：300 dpi、116.50 × 65.02 mm，保留正背面拼版及裁切标记，并已完成回渲检查。
+
+- `orbit-coffee_print-proof_CMYK_300dpi.pdf`：:codex-file-citation{path="<WORKDIR>/outputs/orbit-coffee_print-proof_CMYK_300dpi.pdf" purpose="output"}

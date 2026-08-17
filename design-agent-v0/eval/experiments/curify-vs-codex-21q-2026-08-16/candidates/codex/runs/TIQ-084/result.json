@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-084",
+  "brief": "香水瓶玻璃质感精修",
+  "category": "Packaging",
+  "capability_id": "image_edit_variants",
+  "started_at": "2026-08-17T02:38:21.895Z",
+  "finished_at": "2026-08-17T02:40:13.596Z",
+  "latency_ms": 111704,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-product_source.png"
+  ],
+  "uploaded_asset_roles": [
+    "product_source"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "perfume-bottle-glass-retouched.png",
+      "byte_size": 1803584,
+      "sha256": "7f709ce06c4d27a8d23b9e50196a44bf7755051f9b136a457f87ec2c50d7d21c"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 25,
+    "command_count": 9,
+    "image_tool_count": 6,
+    "usage": {
+      "input_tokens": 311328,
+      "cached_input_tokens": 237056,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3259,
+      "reasoning_output_tokens": 1179
+    },
+    "thread_id": "01a00d95-9638-7861-a169-0bdd8c9db0ae"
+  },
+  "outcome": "completed"
+}

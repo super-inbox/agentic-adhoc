@@ -1,0 +1,56 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "AR-009",
+  "brief": "用我的照片做商品试穿海报",
+  "category": "Marketing Creative",
+  "capability_id": "tryon_poster",
+  "started_at": "2026-08-17T02:11:20.760Z",
+  "finished_at": "2026-08-17T02:14:00.956Z",
+  "latency_ms": 160198,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 3,
+  "uploaded_assets": [
+    "01-person_reference.png",
+    "02-garment_reference.png",
+    "03-garment_reference.png"
+  ],
+  "uploaded_asset_roles": [
+    "person_reference",
+    "garment_reference",
+    "garment_reference"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "menswear-try-on-poster.png",
+      "byte_size": 2095549,
+      "sha256": "a7e3043333105575ef2cb535a03ff40631bddaf5c250c959c65fc315c9383c63"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 17,
+    "command_count": 5,
+    "image_tool_count": 3,
+    "usage": {
+      "input_tokens": 224481,
+      "cached_input_tokens": 186240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 4555,
+      "reasoning_output_tokens": 2704
+    },
+    "thread_id": "01a00d7c-da21-7411-b851-91826f0c54cf"
+  },
+  "outcome": "completed"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "AR-010",
+  "brief": "把这个贴纸做成模切刀线的生产文件",
+  "category": "Merch",
+  "capability_id": "factory_export",
+  "started_at": "2026-08-17T02:14:00.972Z",
+  "finished_at": "2026-08-17T02:22:31.345Z",
+  "latency_ms": 510389,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-sticker_artwork.png"
+  ],
+  "uploaded_asset_roles": [
+    "sticker_artwork"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "luna_club_diecut_preview.png",
+      "byte_size": 481299,
+      "sha256": "912ea8a617742ff82cc266a3d64149023e841f97523266ae31d19a1da9a548c1"
+    },
+    {
+      "filename": "luna_club_diecut_production.pdf",
+      "byte_size": 200607,
+      "sha256": "7f6afa65e4d58002e3053a8ab4885bb7b609e6d12b788d7593abd26d07f46c3e"
+    },
+    {
+      "filename": "luna_club_diecut_production.svg",
+      "byte_size": 259243,
+      "sha256": "00bad65f8553125de6396b6ec67154f3177da8c19f000dffad424bfa8c3d280b"
+    },
+    {
+      "filename": "luna_club_diecut_specs.txt",
+      "byte_size": 600,
+      "sha256": "90f3c4fdaaac64df4da24077f8a29314514a8300d7e35216bbac0f302b151c28"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 49,
+    "command_count": 19,
+    "image_tool_count": 0,
+    "usage": {
+      "input_tokens": 572997,
+      "cached_input_tokens": 505600,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 23370,
+      "reasoning_output_tokens": 11916
+    },
+    "thread_id": "01a00d7f-4bf8-7a71-bc5a-bef6341536d0"
+  },
+  "outcome": "completed"
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-100",
+  "brief": "上传自拍生成不同穿搭的商品试穿海报",
+  "category": "Marketing Creative",
+  "capability_id": "tryon_poster",
+  "started_at": "2026-08-17T03:06:59.319Z",
+  "finished_at": "2026-08-17T03:13:49.414Z",
+  "latency_ms": 410103,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 3,
+  "uploaded_assets": [
+    "01-person_reference.png",
+    "02-garment_reference.png",
+    "03-garment_reference.png"
+  ],
+  "uploaded_asset_roles": [
+    "person_reference",
+    "garment_reference",
+    "garment_reference"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "tryon-bomber-poster.png",
+      "byte_size": 1667872,
+      "sha256": "437bb54e55f072b3d658af2834690ab45bfd173bf538bf590864c7b1940b0278"
+    },
+    {
+      "filename": "tryon-hoodie-poster.png",
+      "byte_size": 1682924,
+      "sha256": "58d5f3a38927a7ef32116ba3ee651dbdcab409f551091a7d353d75652b6cbcfb"
+    },
+    {
+      "filename": "tryon-lookbook-comparison-poster.png",
+      "byte_size": 1861860,
+      "sha256": "53c725529d71dc50761a7631e71f7102270a43fa518263267baf02d2dbd99053"
+    },
+    {
+      "filename": "tryon-lookbook-comparison-poster.svg",
+      "byte_size": 5048,
+      "sha256": "8dca9c5cf3bfb5b4d21e8aac127b7a9dbdd110f2f0a77dc8acf9045377e8ad3b"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 41,
+    "command_count": 12,
+    "image_tool_count": 5,
+    "usage": {
+      "input_tokens": 989672,
+      "cached_input_tokens": 922496,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 14576,
+      "reasoning_output_tokens": 7911
+    },
+    "thread_id": "01a00daf-caf6-7a10-bfce-5ae011375a5b"
+  },
+  "outcome": "completed"
+}

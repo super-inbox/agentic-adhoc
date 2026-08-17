@@ -1,0 +1,54 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-088",
+  "brief": "根据参考详情页替换成我的产品和文案",
+  "category": "Marketing Creative",
+  "capability_id": "detail_page_recompose",
+  "started_at": "2026-08-17T02:43:55.162Z",
+  "finished_at": "2026-08-17T02:50:28.689Z",
+  "latency_ms": 393530,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 2,
+  "uploaded_assets": [
+    "01-layout_reference.png",
+    "02-product_reference.png"
+  ],
+  "uploaded_asset_roles": [
+    "layout_reference",
+    "product_reference"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "terracotta_aroma_diffuser_detail_page.png",
+      "byte_size": 2642374,
+      "sha256": "8eff6739ac17dc09f2c65b1ea3b4a08d26dcb7512d1f538f5cab2507709491d1"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 42,
+    "command_count": 15,
+    "image_tool_count": 5,
+    "usage": {
+      "input_tokens": 753433,
+      "cached_input_tokens": 701312,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 15240,
+      "reasoning_output_tokens": 7620
+    },
+    "thread_id": "01a00d9a-ac23-71c1-84b7-d3ac18b424a6"
+  },
+  "outcome": "completed"
+}

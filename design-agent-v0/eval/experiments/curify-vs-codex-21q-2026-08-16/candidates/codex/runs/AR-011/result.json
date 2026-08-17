@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "AR-011",
+  "brief": "die-cut cutline + CMYK for this sticker",
+  "category": "Merch",
+  "capability_id": "factory_export",
+  "started_at": "2026-08-17T02:22:31.368Z",
+  "finished_at": "2026-08-17T02:30:15.884Z",
+  "latency_ms": 464517,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-sticker_artwork.png"
+  ],
+  "uploaded_asset_roles": [
+    "sticker_artwork"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "luna_club_sticker_cmyk_cutcontour.pdf",
+      "byte_size": 197950,
+      "sha256": "c8081a3715d5f9ccf6d70e65067c6a99b85428bd7d8a79abd10433543663bc36"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 61,
+    "command_count": 24,
+    "image_tool_count": 0,
+    "usage": {
+      "input_tokens": 760803,
+      "cached_input_tokens": 712192,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 21768,
+      "reasoning_output_tokens": 12595
+    },
+    "thread_id": "01a00d87-15a6-70c0-bbc2-6faaf53649a1"
+  },
+  "outcome": "completed"
+}

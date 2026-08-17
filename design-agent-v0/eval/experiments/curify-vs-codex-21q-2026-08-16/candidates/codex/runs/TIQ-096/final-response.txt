@@ -1,0 +1,7 @@
+已完成同款产品五色展示（炭黑、暖米白、鼠尾草绿、陶土红、雾霾蓝），使用内置图像生成并参考两张附图。
+
+输出文件：
+
+- [mori-tumbler-five-colorways.png](<<WORKDIR>/outputs/mori-tumbler-five-colorways.png>)
+
+最终提示：保持原产品造型与深色杯盖一致，五款杯体等距排列于暖白色棚拍背景中，无文字及标识。

@@ -1,0 +1,54 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "AR-008",
+  "brief": "try on this jacket on my photo for a lookbook",
+  "category": "Marketing Creative",
+  "capability_id": "tryon_poster",
+  "started_at": "2026-08-17T02:09:25.205Z",
+  "finished_at": "2026-08-17T02:11:20.731Z",
+  "latency_ms": 115530,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 2,
+  "uploaded_assets": [
+    "01-person_reference.png",
+    "02-garment_reference.png"
+  ],
+  "uploaded_asset_roles": [
+    "person_reference",
+    "garment_reference"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "navy-bomber-lookbook-tryon.png",
+      "byte_size": 1719438,
+      "sha256": "4583af4cecf45dcda667fac62c46df197075266869414c6999ad5dab4390f998"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 16,
+    "command_count": 5,
+    "image_tool_count": 4,
+    "usage": {
+      "input_tokens": 262396,
+      "cached_input_tokens": 230272,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3256,
+      "reasoning_output_tokens": 1483
+    },
+    "thread_id": "01a00d7b-14fd-7210-8402-054937e5d6e3"
+  },
+  "outcome": "completed"
+}

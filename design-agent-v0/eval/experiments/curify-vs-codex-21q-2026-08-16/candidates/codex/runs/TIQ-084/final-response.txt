@@ -1,0 +1,5 @@
+已完成香水瓶玻璃质感精修：增强通透度、厚玻璃折射与边缘高光，保留空白标签、中性背景和原有产品设定。
+
+- [perfume-bottle-glass-retouched.png](<WORKDIR>/outputs/perfume-bottle-glass-retouched.png) — 1254 × 1254 PNG
+
+使用内置图像编辑生成；最终提示聚焦商业级玻璃材质、自然折射与克制高光，并禁止文字、品牌及瓶身重设计。

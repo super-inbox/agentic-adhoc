@@ -1,0 +1,52 @@
+{
+  "schema_version": "design-agent-candidate-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "task_id": "TIQ-070",
+  "brief": "把白底商品图换成高级感场景",
+  "category": "Marketing Creative",
+  "capability_id": "image_edit_variants",
+  "started_at": "2026-08-17T02:36:31.517Z",
+  "finished_at": "2026-08-17T02:38:21.877Z",
+  "latency_ms": 110366,
+  "timeout_ms": 900000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "input_capacity": 1,
+  "uploaded_assets": [
+    "01-product_source.png"
+  ],
+  "uploaded_asset_roles": [
+    "product_source"
+  ],
+  "omitted_assets": [],
+  "exact_input_preserved": true,
+  "artifacts": [
+    {
+      "filename": "product_luxury_scene.png",
+      "byte_size": 2360648,
+      "sha256": "1fb4068e26fd1f4eb48fe7578bb384747967be3c90f1517eee1290cc24650664"
+    }
+  ],
+  "trace_summary": {
+    "event_count": 16,
+    "command_count": 5,
+    "image_tool_count": 2,
+    "usage": {
+      "input_tokens": 243484,
+      "cached_input_tokens": 217344,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3312,
+      "reasoning_output_tokens": 1726
+    },
+    "thread_id": "01a00d93-e72d-76f2-8b7b-eb1d65aa4cac"
+  },
+  "outcome": "completed"
+}

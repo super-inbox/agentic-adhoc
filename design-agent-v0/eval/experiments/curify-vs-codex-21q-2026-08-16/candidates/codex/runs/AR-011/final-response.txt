@@ -1,0 +1,5 @@
+Done — CMYK artwork with a vector `CutContour` spot-color cutline set to overprint.
+
+Saved output:
+
+- `luna_club_sticker_cmyk_cutcontour.pdf` :codex-file-citation{path="<WORKDIR>/outputs/luna_club_sticker_cmyk_cutcontour.pdf" purpose="output"}

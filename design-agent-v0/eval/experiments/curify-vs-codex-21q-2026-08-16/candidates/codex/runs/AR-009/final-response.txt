@@ -1,0 +1,5 @@
+已完成竖版双造型试穿海报，保留人物特征，并分别展示灰绿色连帽衫与深蓝飞行夹克。
+
+- [menswear-try-on-poster.png](<WORKDIR>/outputs/menswear-try-on-poster.png)（1024 × 1536）
+
+使用内置图像生成工具。最终提示词聚焦于人物身份保持、两件服装精准还原、极简电商 lookbook 构图及真实棚拍质感。

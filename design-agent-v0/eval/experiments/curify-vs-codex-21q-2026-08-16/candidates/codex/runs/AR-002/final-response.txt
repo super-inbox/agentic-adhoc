@@ -1,0 +1,5 @@
+已完成：外部背景改为清爽的浅薄荷冰蓝，海报主体保持逐像素不变。
+
+- [summer-form-fresh-mint-background.png](<WORKDIR>/outputs/summer-form-fresh-mint-background.png)
+
+使用内置图像编辑；提示核心为“仅更换海报外部背景，完整保留文字、构图、纸张与配色”。

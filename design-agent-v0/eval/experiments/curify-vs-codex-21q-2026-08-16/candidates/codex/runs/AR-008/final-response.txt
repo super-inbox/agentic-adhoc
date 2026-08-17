@@ -1,0 +1,5 @@
+Created the polished lookbook try-on with the navy bomber fully zipped.
+
+- [navy-bomber-lookbook-tryon.png](<WORKDIR>/outputs/navy-bomber-lookbook-tryon.png)
+
+Mode: built-in identity-preserving image edit. Prompt: replace only the upper garment with the referenced jacket while preserving the person, pose, lower outfit, lighting, and studio setting.
