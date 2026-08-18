@@ -123,18 +123,38 @@ def _published_curify_run(task_id: str) -> tuple[Path, dict[str, Any]] | None:
     return None
 
 
-def _latest_run(root: Path, task_id: str) -> tuple[Path, dict[str, Any]]:
+def _latest_run(
+    root: Path, task_id: str, candidate_name: str
+) -> tuple[Path, dict[str, Any]]:
+    """Resolve a task's run directory for ONE named candidate.
+
+    `candidate_name` is required, and is the whole point. The previous version
+    took only `root` and, when the pre-export path was missing, guessed the
+    published location by substring-matching the root path. That routed
+    curify-web tasks into candidates/codex/runs: the results carried
+    candidate_name "curify-web" alongside a codex run_dir, so one agent's
+    artifacts were scored under the other's name. Resolution is now keyed on the
+    candidate, and the caller asserts the returned dir belongs to it.
+    """
     task_root = root / task_id
     if not task_root.exists():
-        # Published-layout fallback, PER CANDIDATE. An earlier version of this
-        # matched on substrings of `root` and mis-routed curify-web cases to the
-        # codex run dirs — the results carried candidate_name "curify-web" with a
-        # codex run_dir, i.e. it scored the wrong agent's artifacts under the
-        # other's name. Resolve from the candidate's own config instead.
-        raise FileNotFoundError(
-            f"No run directory for {task_id}: {task_root}. "
-            "Pass the published root explicitly; see PUBLISHED_ROOTS."
-        )
+        published = PUBLISHED_ROOTS.get(candidate_name)
+        if published is None:
+            raise FileNotFoundError(
+                f"No run directory for {task_id} and no published root known for "
+                f"candidate {candidate_name!r}: {task_root}"
+            )
+        if candidate_name == "curify-web":
+            rebuilt = _published_curify_run(task_id)
+            if rebuilt is None:
+                raise FileNotFoundError(
+                    f"No run directory for {task_id} under {published} "
+                    "(and no row in curify-output-paths.jsonl)"
+                )
+            return rebuilt
+        task_root = published / task_id
+        if not task_root.is_dir():
+            raise FileNotFoundError(f"No run directory for {task_id}: {task_root}")
 
     direct = task_root / "result.json"
     if direct.is_file():
@@ -345,8 +365,24 @@ async def _run(args: argparse.Namespace) -> None:
                 )
                 try:
                     run_dir, raw = _latest_run(
-                        Path(CANDIDATES[candidate_name]["root"]), task_id
+                        Path(CANDIDATES[candidate_name]["root"]),
+                        task_id,
+                        candidate_name,
                     )
+                    # Cheap invariant, expensive bug: a mislabelled run_dir
+                    # silently scores the other agent's work under this name.
+                    expected_root = PUBLISHED_ROOTS.get(candidate_name)
+                    if expected_root is not None and expected_root.is_dir():
+                        resolved = run_dir.resolve()
+                        legacy = Path(CANDIDATES[candidate_name]["root"]).resolve()
+                        if not (
+                            resolved.is_relative_to(expected_root.resolve())
+                            or resolved.is_relative_to(legacy)
+                        ):
+                            raise RuntimeError(
+                                f"run_dir {resolved} does not belong to candidate "
+                                f"{candidate_name!r} (expected under {expected_root})"
+                            )
                     output = _normalized_output(candidate_name, case, run_dir, raw)
                     runtime = runtime_scores(case["input"], output, case["expected"])
                     benchmark = await benchmark_judge_v2_scores(
