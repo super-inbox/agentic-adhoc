@@ -116,11 +116,63 @@ def _published_curify_run(task_id: str) -> tuple[Path, dict[str, Any]] | None:
                 {"filename": Path(rel).name}
                 for rel in (row.get("output_paths") or [])
             ],
+            # `uploaded_assets` is the key _normalized_output actually reads.
+            # Emitting only `uploaded_asset_roles` (as the first version did)
+            # made loaded_count 0 for every Curify case, which tripped the
+            # all_inputs_consumed hard gate and zeroed benchmark_total on all
+            # 21 — a key-name mismatch that read exactly like "Curify never
+            # consumes references". Codex's real result.json carries both keys,
+            # so only Curify was affected and the comparison looked decisive.
+            "uploaded_assets": list(row.get("uploaded_asset_roles") or []),
             "uploaded_asset_roles": row.get("uploaded_asset_roles") or [],
             "omitted_asset_roles": row.get("omitted_asset_roles") or [],
+            "omitted_assets": list(row.get("omitted_asset_roles") or []),
+            "estimated_credits_spent": row.get("estimated_credits"),
         }
         return run_dir, raw
     return None
+
+
+def validate_records(records: list[dict[str, Any]]) -> list[str]:
+    """Structural checks that must pass BEFORE any score is read.
+
+    Every wrong result this harness has produced came from the same place: the
+    data existed on disk, but did not reach the code that scored it, and the
+    summary looked plausible anyway. Three instances, all silent:
+
+      * run_dir resolved to the OTHER candidate's directory, so one agent's
+        artifacts were scored under the other's name;
+      * artifacts resolved to nothing, reported as artifact_contract 0/21;
+      * `uploaded_assets` was spelled `uploaded_asset_roles` in the Curify
+        shim, so loaded_count was 0 on every case, which failed the
+        all_inputs_consumed hard gate and zeroed benchmark_total — and read as
+        "Curify never consumes reference images".
+
+    None of these are scoring questions, so none of them show up as a bad
+    score. They show up as a confident one. Returns a list of problems; the
+    caller refuses to write a summary while it is non-empty.
+    """
+    problems: list[str] = []
+    for record in records:
+        name = record.get("candidate_name")
+        task = record.get("task_id")
+        run_dir = str(record.get("run_dir") or "")
+        expected_root = PUBLISHED_ROOTS.get(name)
+        if expected_root is not None and expected_root.name not in run_dir:
+            problems.append(
+                f"{task}/{name}: run_dir {run_dir!r} is not under this "
+                f"candidate's root {expected_root}"
+            )
+        if not record.get("artifact_count"):
+            problems.append(f"{task}/{name}: resolved 0 artifacts")
+        required = record.get("required_asset_count") or 0
+        if required and not record.get("loaded_asset_count"):
+            problems.append(
+                f"{task}/{name}: case supplies {required} asset(s) but "
+                "loaded_asset_count is 0 — check the candidate's raw-record "
+                "key names before believing all_inputs_consumed"
+            )
+    return problems
 
 
 def _latest_run(
@@ -494,6 +546,21 @@ def _summarize() -> None:
             "case_passes": passes,
             "median_latency_ms": statistics.median(latencies) if latencies else None,
         }
+    # Refuse to publish a summary over structurally broken records. A summary
+    # is the artifact people quote, so it is the last place a silent harness
+    # bug should be allowed to survive.
+    problems = validate_records([r for r in records if not r.get("error")])
+    summary["structural_problems"] = problems
+    if problems:
+        print(f"\n!! {len(problems)} STRUCTURAL PROBLEM(S) — scores are NOT valid:")
+        for problem in problems[:20]:
+            print(f"   - {problem}")
+        if len(problems) > 20:
+            print(f"   ... and {len(problems) - 20} more")
+        raise SystemExit(
+            "Refusing to write a summary: fix the harness, then re-run. "
+            "See validate_records() for why each check exists."
+        )
     SUMMARY_PATH.write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

@@ -7,9 +7,9 @@
       "independent_judge_completed_cases": 21,
       "independent_judge_blocked_cases": 0,
       "errors": 0,
-      "weighted_design_mean": 0.3823798237243616,
-      "benchmark_total_mean": 0.0,
-      "case_passes": 0,
+      "weighted_design_mean": 0.3971734334759545,
+      "benchmark_total_mean": 0.14065934065934066,
+      "case_passes": 1,
       "median_latency_ms": 33754.0
     },
     "codex-cli": {
@@ -17,8 +17,8 @@
       "independent_judge_completed_cases": 19,
       "independent_judge_blocked_cases": 2,
       "errors": 0,
-      "weighted_design_mean": 0.6903489395120905,
-      "benchmark_total_mean": 0.41093041649156253,
+      "weighted_design_mean": 0.6665432714958961,
+      "benchmark_total_mean": 0.42712474847536813,
       "case_passes": 7,
       "median_latency_ms": 151270.0
     }
