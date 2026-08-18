@@ -126,19 +126,16 @@ def _published_curify_run(task_id: str) -> tuple[Path, dict[str, Any]] | None:
 def _latest_run(root: Path, task_id: str) -> tuple[Path, dict[str, Any]]:
     task_root = root / task_id
     if not task_root.exists():
-        # Fall back to the published layout before giving up.
-        for name, published in PUBLISHED_ROOTS.items():
-            if published == root or not (published / task_id).is_dir():
-                continue
-        if (PUBLISHED_ROOTS["codex-cli"] / task_id).is_dir() and "codex" in str(root):
-            task_root = PUBLISHED_ROOTS["codex-cli"] / task_id
-        elif "curify" in str(root):
-            rebuilt = _published_curify_run(task_id)
-            if rebuilt:
-                return rebuilt
-            raise FileNotFoundError(f"No run directory for {task_id}: {task_root}")
-        else:
-            raise FileNotFoundError(f"No run directory for {task_id}: {task_root}")
+        # Published-layout fallback, PER CANDIDATE. An earlier version of this
+        # matched on substrings of `root` and mis-routed curify-web cases to the
+        # codex run dirs — the results carried candidate_name "curify-web" with a
+        # codex run_dir, i.e. it scored the wrong agent's artifacts under the
+        # other's name. Resolve from the candidate's own config instead.
+        raise FileNotFoundError(
+            f"No run directory for {task_id}: {task_root}. "
+            "Pass the published root explicitly; see PUBLISHED_ROOTS."
+        )
+
     direct = task_root / "result.json"
     if direct.is_file():
         # Published codex layout: result.json sits directly in the task dir.
