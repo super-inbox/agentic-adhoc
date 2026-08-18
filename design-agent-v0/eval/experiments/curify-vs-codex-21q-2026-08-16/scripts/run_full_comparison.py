@@ -78,10 +78,71 @@ def _load_env() -> None:
             os.environ.setdefault(key, value)
 
 
+# Published-layout fallbacks. `export_for_agentic.mjs` reorganises the working
+# tree into candidates/<name>/… before publishing, but these roots still point at
+# the pre-export working-directory names, so a fresh clone cannot re-judge
+# anything: every task fails with "No run directory". Codex keeps a full run dir
+# after export; Curify publishes only the final outputs, with the per-task
+# metadata that result.json carried moved into curify-output-paths.jsonl.
+PUBLISHED_ROOTS = {
+    "curify-web": HERE.parent / "candidates/curify/outputs",
+    "codex-cli": HERE.parent / "candidates/codex/runs",
+}
+_CURIFY_INDEX = HERE.parent / "curify-output-paths.jsonl"
+
+
+def _published_curify_run(task_id: str) -> tuple[Path, dict[str, Any]] | None:
+    """Rebuild a run record for Curify from the published export.
+
+    Reads the committed index rather than inventing anything: outcome, latency
+    and the artifact list all come from curify-output-paths.jsonl, and the files
+    are the ones actually on disk.
+    """
+    if not _CURIFY_INDEX.is_file():
+        return None
+    for line in _CURIFY_INDEX.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        if row.get("task_id") != task_id:
+            continue
+        run_dir = PUBLISHED_ROOTS["curify-web"] / task_id
+        if not run_dir.is_dir():
+            return None
+        raw = {
+            "outcome": row.get("outcome"),
+            "latency_ms": row.get("latency_ms"),
+            "artifacts": [
+                {"filename": Path(rel).name}
+                for rel in (row.get("output_paths") or [])
+            ],
+            "uploaded_asset_roles": row.get("uploaded_asset_roles") or [],
+            "omitted_asset_roles": row.get("omitted_asset_roles") or [],
+        }
+        return run_dir, raw
+    return None
+
+
 def _latest_run(root: Path, task_id: str) -> tuple[Path, dict[str, Any]]:
     task_root = root / task_id
     if not task_root.exists():
-        raise FileNotFoundError(f"No run directory for {task_id}: {task_root}")
+        # Fall back to the published layout before giving up.
+        for name, published in PUBLISHED_ROOTS.items():
+            if published == root or not (published / task_id).is_dir():
+                continue
+        if (PUBLISHED_ROOTS["codex-cli"] / task_id).is_dir() and "codex" in str(root):
+            task_root = PUBLISHED_ROOTS["codex-cli"] / task_id
+        elif "curify" in str(root):
+            rebuilt = _published_curify_run(task_id)
+            if rebuilt:
+                return rebuilt
+            raise FileNotFoundError(f"No run directory for {task_id}: {task_root}")
+        else:
+            raise FileNotFoundError(f"No run directory for {task_id}: {task_root}")
+    direct = task_root / "result.json"
+    if direct.is_file():
+        # Published codex layout: result.json sits directly in the task dir.
+        return task_root, json.loads(direct.read_text(encoding="utf-8"))
     for run_dir in sorted(
         (item for item in task_root.iterdir() if item.is_dir()), reverse=True
     ):

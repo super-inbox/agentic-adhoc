@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import io
+import mimetypes
+from pathlib import Path
 from typing import Any
 
 from braintrust import Score
@@ -297,15 +299,47 @@ def _efficiency(output: dict[str, Any], expected: dict[str, Any]) -> tuple[float
     }
 
 
-def _judge_images_from_input(input: dict[str, Any]) -> list[JudgeImage]:
-    return [
-        JudgeImage(
-            label=f"{asset['role']} ({asset['asset_id']})",
-            data=_attachment_bytes(asset["image"]),
-            content_type=getattr(asset["image"], "content_type", None) or "image/png",
+# Repo root, for assets published as repo-relative paths.
+_REPO_ROOT = Path(__file__).resolve().parents[5]
+
+
+def _asset_image(asset: dict[str, Any]) -> tuple[bytes, str]:
+    """Bytes + mime for one dataset asset.
+
+    Two shapes exist. In-run, assets carry a Braintrust Attachment under
+    "image". After publication they carry a repo-relative "path" instead — the
+    export rewrites them, as the experiment README notes. Reading only the first
+    shape is why every case failed with KeyError: 'image' on a fresh clone.
+    """
+    if asset.get("image") is not None:
+        img = asset["image"]
+        return _attachment_bytes(img), getattr(img, "content_type", None) or "image/png"
+
+    rel = asset.get("path")
+    if not rel:
+        raise KeyError(
+            f"asset {asset.get('asset_id')!r} has neither 'image' nor 'path'"
         )
-        for asset in input.get("assets") or []
-    ]
+    candidate = Path(rel)
+    if not candidate.is_absolute():
+        candidate = _REPO_ROOT / rel
+    data = candidate.read_bytes()
+    mime = mimetypes.guess_type(candidate.name)[0] or "image/png"
+    return data, mime
+
+
+def _judge_images_from_input(input: dict[str, Any]) -> list[JudgeImage]:
+    images: list[JudgeImage] = []
+    for asset in input.get("assets") or []:
+        data, mime = _asset_image(asset)
+        images.append(
+            JudgeImage(
+                label=f"{asset['role']} ({asset['asset_id']})",
+                data=data,
+                content_type=mime,
+            )
+        )
+    return images
 
 
 def _judge_evidence_from_output(
