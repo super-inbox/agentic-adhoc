@@ -96,6 +96,30 @@ is reproduced.
 python3 eval/build_briefs.py eval/briefs.jsonl   # re-extract
 ```
 
+## L3/L4 episode benchmark (`brief_bank/`)
+
+[`brief_bank/briefs.v0.1.jsonl`](brief_bank/briefs.v0.1.jsonl) extends the process-only workflow
+briefs into 24 executable Design Agent episodes. Each episode specifies inputs, constraints,
+available tools, observable checkpoints, simulated client feedback, intermediate/final
+deliverables, hard gates, and a weighted rubric.
+
+| axis | v0.1 coverage |
+|---|---|
+| capability | L3 Tool Agent: 8 · L4 Workflow Agent: 16 |
+| content | 8 benchmark categories × 3 cases |
+| primary intent | generate: 5 · edit: 5 · evaluate-rank: 5 · export: 5 · adapt: 4 |
+| messy work | 9/24 cases (37.5%) |
+
+The directory also contains a portable schema, semantic/fixture validator, unit tests, and a
+generated 24-row first-turn query projection for legacy routing adapters. That projection is a
+routing smoke test only; it cannot establish L4 workflow success without feedback turns,
+checkpoint evidence, and final deliverables.
+
+```bash
+python3 eval/brief_bank/validate_briefs.py
+python3 -m unittest discover -s eval/brief_bank -p 'test_*.py'
+```
+
 **Deliberately not added:** the 680-row `vir_v2` visual-intent set. It is a
 content-generation benchmark (MBTI charts, travel guides, science posters) —
 only ~69 of its rows touch brand/packaging/merch — so folding it in would grow a

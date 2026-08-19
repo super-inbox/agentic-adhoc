@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://curify.ai/schemas/design-agent-brief-v0.1.json",
+  "title": "Curify L3/L4 Design Agent Brief",
+  "type": "object",
+  "required": [
+    "id",
+    "schema_version",
+    "level",
+    "category",
+    "primary_intent",
+    "secondary_intents",
+    "language",
+    "provenance",
+    "user_context",
+    "initial_query",
+    "inputs",
+    "constraints",
+    "tools_available",
+    "expected_workflow",
+    "deliverables",
+    "feedback",
+    "messy_conditions",
+    "rubric",
+    "fixture_status"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^DAB-(L3|L4)-[A-Z]{2,4}-[0-9]{3}$"},
+    "schema_version": {"const": "0.1"},
+    "level": {"enum": ["L3", "L4"]},
+    "category": {
+      "enum": [
+        "brand_identity_directions",
+        "existing_brand_campaign",
+        "packaging_sku_family",
+        "ecommerce_launch_suite",
+        "multi_format_adaptation",
+        "client_feedback_revision",
+        "reference_to_original",
+        "concept_to_factory_ready"
+      ]
+    },
+    "primary_intent": {"enum": ["generate", "edit", "evaluate_rank", "export", "adapt"]},
+    "secondary_intents": {
+      "type": "array",
+      "items": {"enum": ["generate", "edit", "evaluate_rank", "export", "adapt"]},
+      "uniqueItems": true
+    },
+    "language": {"enum": ["zh-CN", "en", "mixed"]},
+    "provenance": {
+      "type": "object",
+      "required": ["kind", "source_refs", "customer_data", "notes"],
+      "properties": {
+        "kind": {"enum": ["reverse_constructed", "internal_scenario", "controlled_synthetic", "anonymized_real"]},
+        "source_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "customer_data": {"type": "boolean"},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "user_context": {
+      "type": "object",
+      "required": ["role", "organization_type", "business_goal"],
+      "properties": {
+        "role": {"type": "string", "minLength": 1},
+        "organization_type": {"type": "string", "minLength": 1},
+        "business_goal": {"type": "string", "minLength": 1}
+      }
+    },
+    "initial_query": {"type": "string", "minLength": 20},
+    "inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "role", "required", "availability"],
+        "properties": {
+          "id": {"type": "string"},
+          "kind": {"enum": ["reference_image", "brand_asset", "existing_design", "product_image", "copy", "spec", "candidate_set"]},
+          "role": {"type": "string"},
+          "required": {"type": "boolean"},
+          "availability": {"enum": ["provided", "intentionally_missing"]},
+          "asset_id": {"type": "string"},
+          "content": {"type": "string"}
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": ["hard", "soft", "negative"],
+      "properties": {
+        "hard": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "soft": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "negative": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "tools_available": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "expected_workflow": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["checkpoint", "required_outcomes"],
+        "properties": {
+          "checkpoint": {"type": "string"},
+          "required_outcomes": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+        }
+      }
+    },
+    "deliverables": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "stage", "type", "count", "formats", "requirements"],
+        "properties": {
+          "id": {"type": "string"},
+          "stage": {"enum": ["intermediate", "final"]},
+          "type": {"type": "string"},
+          "count": {"type": "integer", "minimum": 1},
+          "formats": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "requirements": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+        }
+      }
+    },
+    "feedback": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["after_checkpoint", "message", "expected_changes", "invariants"],
+        "properties": {
+          "after_checkpoint": {"type": "string"},
+          "message": {"type": "string"},
+          "expected_changes": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "invariants": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+        }
+      }
+    },
+    "messy_conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "detail", "expected_recovery"],
+        "properties": {
+          "type": {"enum": ["missing_asset", "conflicting_references", "late_scope_change", "invalid_spec", "ambiguous_feedback", "tool_failure", "copy_error", "constraint_conflict"]},
+          "detail": {"type": "string"},
+          "expected_recovery": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+        }
+      }
+    },
+    "rubric": {
+      "type": "object",
+      "required": ["checkpoint_weights", "hard_gates"],
+      "properties": {
+        "checkpoint_weights": {
+          "type": "object",
+          "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1},
+          "minProperties": 3
+        },
+        "hard_gates": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "fixture_status": {"enum": ["ready", "planned"]}
+  }
+}
