@@ -1,0 +1,240 @@
+[
+ {
+  "task_id": "TIQ-029",
+  "brief": "logo升级前后对比提案板",
+  "n_assets": 1,
+  "capability": "image_edit_variants",
+  "category": "Brand Identity",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "TIQ-070",
+  "brief": "把白底商品图换成高级感场景",
+  "n_assets": 1,
+  "capability": "image_edit_variants",
+  "category": "Marketing Creative",
+  "type": "single",
+  "tools": [
+   "generate_from_template"
+  ]
+ },
+ {
+  "task_id": "TIQ-084",
+  "brief": "香水瓶玻璃质感精修",
+  "n_assets": 1,
+  "capability": "image_edit_variants",
+  "category": "Packaging",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "TIQ-085",
+  "brief": "金属五金工具产品细节增强",
+  "n_assets": 1,
+  "capability": "image_edit_variants",
+  "category": "Industrial/Product",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "TIQ-086",
+  "brief": "木质家具材质特写详情图",
+  "n_assets": 1,
+  "capability": "image_edit_variants",
+  "category": "Industrial/Product",
+  "type": "single",
+  "tools": [
+   "generate_from_template"
+  ]
+ },
+ {
+  "task_id": "TIQ-088",
+  "brief": "根据参考详情页替换成我的产品和文案",
+  "n_assets": 2,
+  "capability": "detail_page_recompose",
+  "category": "Marketing Creative",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "TIQ-096",
+  "brief": "展示同款产品五种颜色",
+  "n_assets": 2,
+  "capability": "sku_variants",
+  "category": "Industrial/Product",
+  "type": "single",
+  "tools": [
+   "generate_from_template"
+  ]
+ },
+ {
+  "task_id": "TIQ-098",
+  "brief": "批量生成同一品牌的20个SKU主图",
+  "n_assets": 2,
+  "capability": "sku_batch",
+  "category": "Industrial/Product",
+  "type": "batch",
+  "tools": [
+   "generate_from_template",
+   "compose_grid",
+   "export_print_package"
+  ]
+ },
+ {
+  "task_id": "TIQ-100",
+  "brief": "上传自拍生成不同穿搭的商品试穿海报",
+  "n_assets": 3,
+  "capability": "tryon_poster",
+  "category": "Marketing Creative",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "AR-001",
+  "brief": "把海报的标题放大一点",
+  "n_assets": 1,
+  "capability": "image_edit_variants",
+  "category": "Marketing Creative",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "AR-002",
+  "brief": "换个背景颜色，更清爽一些",
+  "n_assets": 1,
+  "capability": "image_edit_variants",
+  "category": "Marketing Creative",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "AR-003",
+  "brief": "make the logo bigger and move it to the corner",
+  "n_assets": 1,
+  "capability": "image_edit_variants",
+  "category": "Marketing Creative",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "AR-004",
+  "brief": "这4款包装，站在消费者角度哪款更有质感？",
+  "n_assets": 1,
+  "capability": "design_vote",
+  "category": "Packaging",
+  "type": "batch",
+  "tools": [
+   "generate_from_template",
+   "compose_grid",
+   "export_print_package"
+  ]
+ },
+ {
+  "task_id": "AR-005",
+  "brief": "帮我给方案A到D投票，选出最好的一个",
+  "n_assets": 1,
+  "capability": "design_vote",
+  "category": "Packaging",
+  "type": "single",
+  "tools": [
+   "generate_from_template"
+  ]
+ },
+ {
+  "task_id": "AR-006",
+  "brief": "vote on these four logo options, which is better",
+  "n_assets": 1,
+  "capability": "design_vote",
+  "category": "Brand Identity",
+  "type": "single",
+  "tools": [
+   "generate_from_template"
+  ]
+ },
+ {
+  "task_id": "AR-007",
+  "brief": "上传自拍，试穿这件卫衣",
+  "n_assets": 2,
+  "capability": "tryon_poster",
+  "category": "Marketing Creative",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "AR-008",
+  "brief": "try on this jacket on my photo for a lookbook",
+  "n_assets": 2,
+  "capability": "tryon_poster",
+  "category": "Marketing Creative",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "AR-009",
+  "brief": "用我的照片做商品试穿海报",
+  "n_assets": 3,
+  "capability": "tryon_poster",
+  "category": "Marketing Creative",
+  "type": "edit",
+  "tools": [
+   "generate_freeform"
+  ]
+ },
+ {
+  "task_id": "AR-010",
+  "brief": "把这个贴纸做成模切刀线的生产文件",
+  "n_assets": 1,
+  "capability": "factory_export",
+  "category": "Merch",
+  "type": "single",
+  "tools": [
+   "generate_from_template",
+   "export_print_package"
+  ]
+ },
+ {
+  "task_id": "AR-011",
+  "brief": "die-cut cutline + CMYK for this sticker",
+  "n_assets": 1,
+  "capability": "factory_export",
+  "category": "Merch",
+  "type": "single",
+  "tools": [
+   "generate_from_template",
+   "export_print_package"
+  ]
+ },
+ {
+  "task_id": "AR-012",
+  "brief": "导出可以直接打样的印刷文件",
+  "n_assets": 1,
+  "capability": "factory_export",
+  "category": "Packaging",
+  "type": "single",
+  "tools": [
+   "generate_from_template",
+   "export_print_package"
+  ]
+ }
+]
