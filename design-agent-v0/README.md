@@ -19,12 +19,16 @@ Curify Design Agent 的首个可评测后端垂直切片：把「图片 + 一次
 
 | 路径 | 内容 |
 |---|---|
-| [`SPEC.md`](SPEC.md) | 架构、数据、能力 registry、评测与分期 |
+| [`SPEC.md`](SPEC.md) | **仅指针**——规范正文在 `curify-studio/docs/design-agent-v0-spec.md`（本仓库曾存一份分叉，停在 §7，已落后约 1,500 行） |
 | [`curify-integration/`](curify-integration/) | 新增 runtime/router/test 源码快照，以及可应用到 Curify 的完整 patch |
 | [`demo/`](demo/) | 男士理容四方案投票输入、脚本与真实输出 |
 | [`eval/`](eval/) | 单轮黑盒 agent eval、routing benchmark、21 条真实多模态 query、参考图素材包、完整性校验与版本化 live 实验快照 |
 | [`factory/`](factory/) | 图片到刀线、CMYK/PDF、spec 和生产 ZIP 的贴纸 exporter |
 | [`benchmarks/`](benchmarks/) | 创意探索 benchmark 案例 |
+
+> **仓库分工**：`curify-studio` / `curify-frontend` 放**生产代码与规范文档**；
+> 本仓库放**评测、数据、轨迹**（benchmark、数据集、实验快照、factory exporter、集成 patch）。
+> 规范与它所规范的产品同仓，证据与它所支撑的结论同仓。
 
 ## 男士理容投票 demo
 
