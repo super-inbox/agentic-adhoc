@@ -78,10 +78,140 @@ def _load_env() -> None:
             os.environ.setdefault(key, value)
 
 
-def _latest_run(root: Path, task_id: str) -> tuple[Path, dict[str, Any]]:
+# Published-layout fallbacks. `export_for_agentic.mjs` reorganises the working
+# tree into candidates/<name>/… before publishing, but these roots still point at
+# the pre-export working-directory names, so a fresh clone cannot re-judge
+# anything: every task fails with "No run directory". Codex keeps a full run dir
+# after export; Curify publishes only the final outputs, with the per-task
+# metadata that result.json carried moved into curify-output-paths.jsonl.
+PUBLISHED_ROOTS = {
+    "curify-web": HERE.parent / "candidates/curify/outputs",
+    "codex-cli": HERE.parent / "candidates/codex/runs",
+}
+_CURIFY_INDEX = HERE.parent / "curify-output-paths.jsonl"
+
+
+def _published_curify_run(task_id: str) -> tuple[Path, dict[str, Any]] | None:
+    """Rebuild a run record for Curify from the published export.
+
+    Reads the committed index rather than inventing anything: outcome, latency
+    and the artifact list all come from curify-output-paths.jsonl, and the files
+    are the ones actually on disk.
+    """
+    if not _CURIFY_INDEX.is_file():
+        return None
+    for line in _CURIFY_INDEX.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        if row.get("task_id") != task_id:
+            continue
+        run_dir = PUBLISHED_ROOTS["curify-web"] / task_id
+        if not run_dir.is_dir():
+            return None
+        raw = {
+            "outcome": row.get("outcome"),
+            "latency_ms": row.get("latency_ms"),
+            "artifacts": [
+                {"filename": Path(rel).name}
+                for rel in (row.get("output_paths") or [])
+            ],
+            # `uploaded_assets` is the key _normalized_output actually reads.
+            # Emitting only `uploaded_asset_roles` (as the first version did)
+            # made loaded_count 0 for every Curify case, which tripped the
+            # all_inputs_consumed hard gate and zeroed benchmark_total on all
+            # 21 — a key-name mismatch that read exactly like "Curify never
+            # consumes references". Codex's real result.json carries both keys,
+            # so only Curify was affected and the comparison looked decisive.
+            "uploaded_assets": list(row.get("uploaded_asset_roles") or []),
+            "uploaded_asset_roles": row.get("uploaded_asset_roles") or [],
+            "omitted_asset_roles": row.get("omitted_asset_roles") or [],
+            "omitted_assets": list(row.get("omitted_asset_roles") or []),
+            "estimated_credits_spent": row.get("estimated_credits"),
+        }
+        return run_dir, raw
+    return None
+
+
+def validate_records(records: list[dict[str, Any]]) -> list[str]:
+    """Structural checks that must pass BEFORE any score is read.
+
+    Every wrong result this harness has produced came from the same place: the
+    data existed on disk, but did not reach the code that scored it, and the
+    summary looked plausible anyway. Three instances, all silent:
+
+      * run_dir resolved to the OTHER candidate's directory, so one agent's
+        artifacts were scored under the other's name;
+      * artifacts resolved to nothing, reported as artifact_contract 0/21;
+      * `uploaded_assets` was spelled `uploaded_asset_roles` in the Curify
+        shim, so loaded_count was 0 on every case, which failed the
+        all_inputs_consumed hard gate and zeroed benchmark_total — and read as
+        "Curify never consumes reference images".
+
+    None of these are scoring questions, so none of them show up as a bad
+    score. They show up as a confident one. Returns a list of problems; the
+    caller refuses to write a summary while it is non-empty.
+    """
+    problems: list[str] = []
+    for record in records:
+        name = record.get("candidate_name")
+        task = record.get("task_id")
+        run_dir = str(record.get("run_dir") or "")
+        expected_root = PUBLISHED_ROOTS.get(name)
+        if expected_root is not None and expected_root.name not in run_dir:
+            problems.append(
+                f"{task}/{name}: run_dir {run_dir!r} is not under this "
+                f"candidate's root {expected_root}"
+            )
+        if not record.get("artifact_count"):
+            problems.append(f"{task}/{name}: resolved 0 artifacts")
+        required = record.get("required_asset_count") or 0
+        if required and not record.get("loaded_asset_count"):
+            problems.append(
+                f"{task}/{name}: case supplies {required} asset(s) but "
+                "loaded_asset_count is 0 — check the candidate's raw-record "
+                "key names before believing all_inputs_consumed"
+            )
+    return problems
+
+
+def _latest_run(
+    root: Path, task_id: str, candidate_name: str
+) -> tuple[Path, dict[str, Any]]:
+    """Resolve a task's run directory for ONE named candidate.
+
+    `candidate_name` is required, and is the whole point. The previous version
+    took only `root` and, when the pre-export path was missing, guessed the
+    published location by substring-matching the root path. That routed
+    curify-web tasks into candidates/codex/runs: the results carried
+    candidate_name "curify-web" alongside a codex run_dir, so one agent's
+    artifacts were scored under the other's name. Resolution is now keyed on the
+    candidate, and the caller asserts the returned dir belongs to it.
+    """
     task_root = root / task_id
     if not task_root.exists():
-        raise FileNotFoundError(f"No run directory for {task_id}: {task_root}")
+        published = PUBLISHED_ROOTS.get(candidate_name)
+        if published is None:
+            raise FileNotFoundError(
+                f"No run directory for {task_id} and no published root known for "
+                f"candidate {candidate_name!r}: {task_root}"
+            )
+        if candidate_name == "curify-web":
+            rebuilt = _published_curify_run(task_id)
+            if rebuilt is None:
+                raise FileNotFoundError(
+                    f"No run directory for {task_id} under {published} "
+                    "(and no row in curify-output-paths.jsonl)"
+                )
+            return rebuilt
+        task_root = published / task_id
+        if not task_root.is_dir():
+            raise FileNotFoundError(f"No run directory for {task_id}: {task_root}")
+
+    direct = task_root / "result.json"
+    if direct.is_file():
+        # Published codex layout: result.json sits directly in the task dir.
+        return task_root, json.loads(direct.read_text(encoding="utf-8"))
     for run_dir in sorted(
         (item for item in task_root.iterdir() if item.is_dir()), reverse=True
     ):
@@ -287,8 +417,24 @@ async def _run(args: argparse.Namespace) -> None:
                 )
                 try:
                     run_dir, raw = _latest_run(
-                        Path(CANDIDATES[candidate_name]["root"]), task_id
+                        Path(CANDIDATES[candidate_name]["root"]),
+                        task_id,
+                        candidate_name,
                     )
+                    # Cheap invariant, expensive bug: a mislabelled run_dir
+                    # silently scores the other agent's work under this name.
+                    expected_root = PUBLISHED_ROOTS.get(candidate_name)
+                    if expected_root is not None and expected_root.is_dir():
+                        resolved = run_dir.resolve()
+                        legacy = Path(CANDIDATES[candidate_name]["root"]).resolve()
+                        if not (
+                            resolved.is_relative_to(expected_root.resolve())
+                            or resolved.is_relative_to(legacy)
+                        ):
+                            raise RuntimeError(
+                                f"run_dir {resolved} does not belong to candidate "
+                                f"{candidate_name!r} (expected under {expected_root})"
+                            )
                     output = _normalized_output(candidate_name, case, run_dir, raw)
                     runtime = runtime_scores(case["input"], output, case["expected"])
                     benchmark = await benchmark_judge_v2_scores(
@@ -400,6 +546,21 @@ def _summarize() -> None:
             "case_passes": passes,
             "median_latency_ms": statistics.median(latencies) if latencies else None,
         }
+    # Refuse to publish a summary over structurally broken records. A summary
+    # is the artifact people quote, so it is the last place a silent harness
+    # bug should be allowed to survive.
+    problems = validate_records([r for r in records if not r.get("error")])
+    summary["structural_problems"] = problems
+    if problems:
+        print(f"\n!! {len(problems)} STRUCTURAL PROBLEM(S) — scores are NOT valid:")
+        for problem in problems[:20]:
+            print(f"   - {problem}")
+        if len(problems) > 20:
+            print(f"   ... and {len(problems) - 20} more")
+        raise SystemExit(
+            "Refusing to write a summary: fix the harness, then re-run. "
+            "See validate_records() for why each check exists."
+        )
     SUMMARY_PATH.write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
