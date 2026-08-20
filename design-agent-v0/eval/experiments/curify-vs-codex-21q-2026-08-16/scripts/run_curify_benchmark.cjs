@@ -174,6 +174,13 @@ function contentTypeExtension(contentType) {
   if (/png/i.test(contentType || "")) return ".png";
   if (/webp/i.test(contentType || "")) return ".webp";
   if (/jpe?g/i.test(contentType || "")) return ".jpg";
+  // Production packages are ZIPs. Saving them as .bin cost the export cases
+  // their media family: the deliverable contract accepts "archive", and the
+  // scorer keys off the extension, so a real cutline+CMYK+spec package was
+  // being counted as an unknown blob.
+  if (/zip|archive/i.test(contentType || "")) return ".zip";
+  if (/pdf/i.test(contentType || "")) return ".pdf";
+  if (/svg/i.test(contentType || "")) return ".svg";
   return ".bin";
 }
 
