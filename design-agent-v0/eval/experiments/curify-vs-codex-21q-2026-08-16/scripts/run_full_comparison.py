@@ -8,6 +8,7 @@ import asyncio
 import json
 import mimetypes
 import os
+import os
 import statistics
 import subprocess
 import sys
@@ -33,7 +34,12 @@ RESULTS_PATH = HERE / "full-comparison.judge-v2.results.jsonl"
 SUMMARY_PATH = HERE / "full-comparison.summary.json"
 CANDIDATES = {
     "curify-web": {
-        "root": HERE.parent / "curify-jwang-vercel-275f7d0a/runs",
+        # Override to score a FRESH run instead of the published 2026-08-16
+        # export: CURIFY_RUNS_ROOT=scripts/runs after run_curify_benchmark.cjs.
+        # Without it the judge silently re-scores the old artifacts and the
+        # summary reads as a result for the new build.
+        "root": Path(os.environ.get("CURIFY_RUNS_ROOT")
+                     or HERE.parent / "curify-jwang-vercel-275f7d0a/runs"),
         "artifact_subdir": "",
         "identity": {
             "agent": "curify-web",
@@ -158,6 +164,8 @@ def validate_records(records: list[dict[str, Any]]) -> list[str]:
         task = record.get("task_id")
         run_dir = str(record.get("run_dir") or "")
         expected_root = PUBLISHED_ROOTS.get(name)
+        if name == "curify-web" and os.environ.get("CURIFY_RUNS_ROOT"):
+            expected_root = Path(os.environ["CURIFY_RUNS_ROOT"])
         if expected_root is not None and expected_root.name not in run_dir:
             problems.append(
                 f"{task}/{name}: run_dir {run_dir!r} is not under this "
@@ -424,6 +432,8 @@ async def _run(args: argparse.Namespace) -> None:
                     # Cheap invariant, expensive bug: a mislabelled run_dir
                     # silently scores the other agent's work under this name.
                     expected_root = PUBLISHED_ROOTS.get(candidate_name)
+                    if candidate_name == "curify-web" and os.environ.get("CURIFY_RUNS_ROOT"):
+                        expected_root = Path(os.environ["CURIFY_RUNS_ROOT"])
                     if expected_root is not None and expected_root.is_dir():
                         resolved = run_dir.resolve()
                         legacy = Path(CANDIDATES[candidate_name]["root"]).resolve()
