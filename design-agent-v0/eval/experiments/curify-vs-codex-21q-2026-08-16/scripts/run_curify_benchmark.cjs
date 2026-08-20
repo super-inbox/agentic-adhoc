@@ -305,6 +305,11 @@ async function runProbe(browser, args, storageState) {
 }
 
 async function runCase(browser, args, storageState, testCase) {
+  // Function-scoped: the result object below is built outside the try block,
+  // so declaring these inside the upload loop left them out of scope there.
+  const uploaded = [];
+  const omitted = [];
+
   const runStartedAt = new Date();
   const caseDir = path.join(RUN_DIR, "runs", testCase.id, isoFileTimestamp());
   await fsp.mkdir(caseDir, { recursive: true });
@@ -380,8 +385,6 @@ async function runCase(browser, args, storageState, testCase) {
     // slot, and a filled slot swaps its input for a preview. So exactly one
     // input[type=file] exists at a time while under the cap, and the assets
     // must go in sequentially rather than as one multi-file setInputFiles.
-    const uploaded = [];
-    const omitted = [];
     for (const [index, assetPath] of testCase.assets.entries()) {
       if (index >= MAX_REFERENCE_SLOTS) {
         omitted.push(path.basename(assetPath));
