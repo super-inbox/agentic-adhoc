@@ -10,9 +10,19 @@
 const fs = require("node:fs");
 const fsp = require("node:fs/promises");
 const path = require("node:path");
-const { chromium } = require("playwright");
+// playwright-core, not playwright: the runner launches SYSTEM Chrome via
+// executablePath, so the 150MB bundled-browser download is dead weight.
+let chromium;
+try {
+  ({ chromium } = require("playwright-core"));
+} catch {
+  ({ chromium } = require("playwright"));
+}
 
-const CANDIDATE = "curify-web-jwang-vercel@275f7d0a";
+const CANDIDATE =
+  process.env.CURIFY_CANARY_CANDIDATE || "curify-web-jwang-vercel@275f7d0a";
+// ReferenceImagesUpload is mounted with max={5} in DesignAgentClient.
+const MAX_REFERENCE_SLOTS = Number(process.env.CURIFY_CANARY_MAX_SLOTS || 5);
 const DEFAULT_BASE_URL = "http://localhost:3100";
 const DEFAULT_TIMEOUT_MS = 15 * 60 * 1000;
 const SYSTEM_CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
@@ -43,9 +53,22 @@ function portableAssetPath(assetPath) {
   return path.join(EVAL_DIR, "assets", assetPath.slice(markerIndex + marker.length));
 }
 
+function resolveDatasetPath() {
+  // DATASET_PATH points into braintrust_eval/results/, which is not published
+  // in this repo — a fresh clone cannot load a single case. The experiment
+  // ships its own dataset.jsonl with the same shape, so fall back to it rather
+  // than failing on a path only the original machine had.
+  if (fs.existsSync(DATASET_PATH)) return DATASET_PATH;
+  const local = path.join(RUN_DIR, "..", "dataset.jsonl");
+  if (fs.existsSync(local)) return local;
+  throw new Error(
+    `No dataset found. Looked for:\n  ${DATASET_PATH}\n  ${local}`,
+  );
+}
+
 function loadBenchmarkCases() {
   const rows = fs
-    .readFileSync(DATASET_PATH, "utf8")
+    .readFileSync(resolveDatasetPath(), "utf8")
     .split(/\r?\n/)
     .filter(Boolean)
     .map((line) => JSON.parse(line));
@@ -74,6 +97,7 @@ function parseArgs(argv) {
     baseUrl: process.env.CURIFY_CANARY_BASE_URL || DEFAULT_BASE_URL,
     timeoutMs: Number(process.env.CURIFY_CANARY_TIMEOUT_MS || DEFAULT_TIMEOUT_MS),
     allowPaid: false,
+    uploadOnly: false,
     probe: false,
     allBenchmark: false,
     ids: [],
@@ -81,6 +105,10 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i += 1) {
     const value = argv[i];
     if (value === "--allow-paid-generation") args.allowPaid = true;
+    // Uploads every asset and stops before the Run button. Free — /images/upload
+    // costs nothing — so the multi-asset path can be validated without buying a
+    // generation for each of 21 cases.
+    else if (value === "--upload-only") args.uploadOnly = true;
     else if (value === "--probe") args.probe = true;
     else if (value === "--all-benchmark") args.allBenchmark = true;
     else if (value === "--base-url") args.baseUrl = argv[++i];
@@ -92,10 +120,10 @@ function parseArgs(argv) {
     throw new Error("Use either --all-benchmark or one or more --case values, not both");
   }
   if (args.allBenchmark) args.ids = Object.keys(CASES).sort();
-  if (!args.probe && args.ids.length === 0) {
+  if (!args.probe && args.ids.length === 0 && !args.allBenchmark) {
     throw new Error("Select --all-benchmark, at least one --case, or use --probe");
   }
-  if (!args.probe && !args.allowPaid) {
+  if (!args.probe && !args.uploadOnly && !args.allowPaid) {
     throw new Error(
       "Paid generation is disabled. Pass --allow-paid-generation after confirming the Curify credit budget.",
     );
@@ -146,6 +174,13 @@ function contentTypeExtension(contentType) {
   if (/png/i.test(contentType || "")) return ".png";
   if (/webp/i.test(contentType || "")) return ".webp";
   if (/jpe?g/i.test(contentType || "")) return ".jpg";
+  // Production packages are ZIPs. Saving them as .bin cost the export cases
+  // their media family: the deliverable contract accepts "archive", and the
+  // scorer keys off the extension, so a real cutline+CMYK+spec package was
+  // being counted as an unknown blob.
+  if (/zip|archive/i.test(contentType || "")) return ".zip";
+  if (/pdf/i.test(contentType || "")) return ".pdf";
+  if (/svg/i.test(contentType || "")) return ".svg";
   return ".bin";
 }
 
@@ -277,6 +312,11 @@ async function runProbe(browser, args, storageState) {
 }
 
 async function runCase(browser, args, storageState, testCase) {
+  // Function-scoped: the result object below is built outside the try block,
+  // so declaring these inside the upload loop left them out of scope there.
+  const uploaded = [];
+  const omitted = [];
+
   const runStartedAt = new Date();
   const caseDir = path.join(RUN_DIR, "runs", testCase.id, isoFileTimestamp());
   await fsp.mkdir(caseDir, { recursive: true });
@@ -340,18 +380,63 @@ async function runCase(browser, args, storageState, testCase) {
     );
     if (!authenticated) throw new Error("Saved Curify session did not mount on the local origin");
 
-    const input = page.locator('input[type="file"]');
-    await input.waitFor({ state: "attached", timeout: 20_000 });
-    const uploadPromise = page.waitForResponse(
-      (response) => sanitizedPath(response.url()).includes("/images/upload"),
-      { timeout: 90_000 },
-    );
-    await input.setInputFiles(testCase.assets[0]);
-    const uploadResponse = await uploadPromise;
-    if (!uploadResponse.ok()) {
-      throw new Error(`Reference upload failed (${uploadResponse.status()})`);
+    // Upload EVERY asset, one slot at a time.
+    //
+    // The previous version called setInputFiles(testCase.assets[0]) and
+    // recorded the rest as omitted by construction. That baked the old
+    // single-slot UI into the harness: after multi-reference upload shipped,
+    // this runner would still have reported 7 cases omitting 9 assets and
+    // all_inputs_consumed stuck at 14/21, no matter what the product did.
+    //
+    // ReferenceImagesUpload renders one slot per uploaded image PLUS one empty
+    // slot, and a filled slot swaps its input for a preview. So exactly one
+    // input[type=file] exists at a time while under the cap, and the assets
+    // must go in sequentially rather than as one multi-file setInputFiles.
+    for (const [index, assetPath] of testCase.assets.entries()) {
+      if (index >= MAX_REFERENCE_SLOTS) {
+        omitted.push(path.basename(assetPath));
+        continue;
+      }
+      const input = page.locator('input[type="file"]').last();
+      await input.waitFor({ state: "attached", timeout: 20_000 });
+      const uploadPromise = page.waitForResponse(
+        (response) => sanitizedPath(response.url()).includes("/images/upload"),
+        { timeout: 90_000 },
+      );
+      await input.setInputFiles(assetPath);
+      const uploadResponse = await uploadPromise;
+      if (!uploadResponse.ok()) {
+        throw new Error(
+          `Reference upload failed for ${path.basename(assetPath)} ` +
+            `(slot ${index + 1}, HTTP ${uploadResponse.status()})`,
+        );
+      }
+      // Wait for the preview COUNT to reach index+1 rather than for "a preview
+      // to be visible": slot 0's preview is already visible when slot 1 starts,
+      // so a visibility check would pass instantly and race the next upload.
+      await page
+        .locator('img[alt="Reference"]')
+        .nth(index)
+        .waitFor({ state: "visible", timeout: 60_000 });
+      uploaded.push(path.basename(assetPath));
     }
-    await page.locator('img[alt="Reference"]').waitFor({ state: "visible" });
+    if (uploaded.length === 0) throw new Error("No reference asset was uploaded");
+
+    if (args.uploadOnly) {
+      // Stop here: assets are in, nothing has been spent.
+      return {
+        caseDir: null,
+        result: {
+          task_id: testCase.id,
+          outcome: "upload_only",
+          uploaded_asset_roles: testCase.assetRoles.slice(0, uploaded.length),
+          omitted_asset_roles: testCase.assetRoles.slice(uploaded.length),
+          uploaded,
+          omitted,
+          artifacts: [],
+        },
+      };
+    }
 
     await page
       .getByPlaceholder("e.g. a modern coffee shop for young professionals")
@@ -395,13 +480,16 @@ async function runCase(browser, args, storageState, testCase) {
   }
 
   const runFinishedAt = new Date();
-  const uploaded = [path.basename(testCase.assets[0])];
-  const omitted = testCase.assets.slice(1).map((asset) => path.basename(asset));
+  // `uploaded` / `omitted` are built during the upload loop above from what
+  // actually succeeded, not assumed from the asset list.
   const result = {
     schema_version: "curify-canary-v1",
     candidate: CANDIDATE,
     frontend_branch: "jwang/vercel",
-    frontend_commit: "275f7d0a111b8fe0c4c5a5409c548932d003cb9f",
+    // Must be set per run. Hard-coding it mislabels every later run as the
+    // 2026-08-16 build, which is how a fixed result gets filed as the old one.
+    frontend_commit:
+      process.env.CURIFY_CANARY_COMMIT || "unspecified-set-CURIFY_CANARY_COMMIT",
     base_url: args.baseUrl,
     task_id: testCase.id,
     task_kind: testCase.kind,

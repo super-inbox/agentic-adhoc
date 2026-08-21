@@ -5,3 +5,8 @@ node_modules/
 # Path-B run dumps + generated eval reports (regenerate from scripts)
 **/*.pathB.json
 **/scratch/
+
+# Live session for the paid benchmark runner. Never commit.
+design-agent-v0/eval/.auth/
+capture_session.cjs
+design-agent-v0/eval/experiments/.auth/

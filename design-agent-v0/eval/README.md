@@ -120,6 +120,20 @@ python3 eval/brief_bank/validate_briefs.py
 python3 -m unittest discover -s eval/brief_bank -p 'test_*.py'
 ```
 
+## ZCOOL workflow briefs (`zcool_briefs/`)
+
+7 further workflow briefs (2026-08-19) covering the four brief classes the spec
+flagged as under-represented — packaging/SKU 3, brand visual exploration 2, brand
+campaign 1, concept-to-production 1. Same schema as `briefs.jsonl`; IDs continue
+the series (`BRF-PACK-03…06`, `BRF-BRAND-04…06`), so one loader reads both.
+
+Two deliberate differences: `evidence: "external_portfolio"` rather than
+`external_case_study`, and an empty `expected_steps` — portfolio pages publish
+outcomes, not stage sequences, and guessing one would be fabrication. Usable as
+**inputs and gold references**, not as step-sequence ground truth.
+
+See `zcool_briefs/README.md`.
+
 **Deliberately not added:** the 680-row `vir_v2` visual-intent set. It is a
 content-generation benchmark (MBTI charts, travel guides, science posters) —
 only ~69 of its rows touch brand/packaging/merch — so folding it in would grow a
