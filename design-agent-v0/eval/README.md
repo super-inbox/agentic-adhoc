@@ -98,25 +98,34 @@ python3 eval/build_briefs.py eval/briefs.jsonl   # re-extract
 
 ## L3/L4 episode benchmark (`brief_bank/`)
 
-[`brief_bank/briefs.v0.1.jsonl`](brief_bank/briefs.v0.1.jsonl) extends the process-only workflow
-briefs into 24 executable Design Agent episodes. Each episode specifies inputs, constraints,
-available tools, observable checkpoints, simulated client feedback, intermediate/final
-deliverables, hard gates, and a weighted rubric.
+[`brief_bank/briefs.v0.2.jsonl`](brief_bank/briefs.v0.2.jsonl) extends the process-only workflow
+briefs into 24 executable Design Agent episodes and 32 matched run conditions. Each episode
+specifies inputs, constraints, available tools, observable checkpoints, simulated client feedback,
+project state, reference roles, human decisions, intermediate/final deliverables, verification,
+hard gates, and a weighted rubric. The original
+[`briefs.v0.1.jsonl`](brief_bank/briefs.v0.1.jsonl) remains frozen as the business-task baseline.
 
-| axis | v0.1 coverage |
+| axis | v0.2 coverage |
 |---|---|
 | capability | L3 Tool Agent: 8 · L4 Workflow Agent: 16 |
 | content | 8 benchmark categories × 3 cases |
 | primary intent | generate: 5 · edit: 5 · evaluate-rank: 5 · export: 5 · adapt: 4 |
 | messy work | 9/24 cases (37.5%) |
+| designer-feedback probes | 8 multi-turn/state-recovery · 6 creative-exploration · 6 structured-editing |
+| context conditions | 24 reference-grounded · 4 zero-shot · 4 personalized = 32 runs |
 
-The directory also contains a portable schema, semantic/fixture validator, unit tests, and a
-generated 24-row first-turn query projection for legacy routing adapters. That projection is a
-routing smoke test only; it cannot establish L4 workflow success without feedback turns,
-checkpoint evidence, and final deliverables.
+The directory also contains versioned schemas, a deterministic v0.1→v0.2 builder,
+semantic/fixture validation, unit tests, and a generated 32-row first-turn projection. That
+projection intentionally excludes future feedback and is a routing/input smoke test only; it
+cannot establish L4 workflow success without later turns, checkpoint evidence, state continuity,
+verification, and final deliverables. `trajectory.jsonl` denotes observable actions and artifacts,
+not private chain-of-thought.
 
 ```bash
+python3 eval/brief_bank/build_v02.py
 python3 eval/brief_bank/validate_briefs.py
+python3 eval/brief_bank/export_initial_queries.py \
+  --output eval/brief_bank/initial_queries.v0.2.jsonl
 python3 -m unittest discover -s eval/brief_bank -p 'test_*.py'
 ```
 
