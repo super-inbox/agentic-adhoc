@@ -1,0 +1,338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://curify.ai/schemas/design-agent-brief-v0.2.json",
+  "title": "Curify L3/L4 Design Agent Brief v0.2",
+  "description": "A workflow episode with explicit context, state, reference, verification, and observable-trajectory contracts.",
+  "type": "object",
+  "required": [
+    "id",
+    "schema_version",
+    "revision",
+    "level",
+    "category",
+    "primary_intent",
+    "secondary_intents",
+    "language",
+    "provenance",
+    "user_context",
+    "initial_query",
+    "inputs",
+    "constraints",
+    "tools_available",
+    "expected_workflow",
+    "deliverables",
+    "feedback",
+    "messy_conditions",
+    "rubric",
+    "fixture_status",
+    "capability_tags",
+    "reference_contract",
+    "context_conditions",
+    "preference_memory",
+    "project_state",
+    "edit_parameters",
+    "structured_artifacts",
+    "human_checkpoints",
+    "verification_contract"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^DAB-(L3|L4)-[A-Z]{2,4}-[0-9]{3}$"},
+    "schema_version": {"const": "0.2"},
+    "revision": {
+      "type": "object",
+      "required": ["base_dataset", "base_brief_id", "business_scope_changed", "protocol_changes"],
+      "properties": {
+        "base_dataset": {"const": "briefs.v0.1.jsonl"},
+        "base_brief_id": {"type": "string"},
+        "business_scope_changed": {"const": false},
+        "protocol_changes": {"$ref": "#/$defs/nonEmptyStrings"}
+      }
+    },
+    "level": {"enum": ["L3", "L4"]},
+    "category": {
+      "enum": [
+        "brand_identity_directions",
+        "existing_brand_campaign",
+        "packaging_sku_family",
+        "ecommerce_launch_suite",
+        "multi_format_adaptation",
+        "client_feedback_revision",
+        "reference_to_original",
+        "concept_to_factory_ready"
+      ]
+    },
+    "primary_intent": {"enum": ["generate", "edit", "evaluate_rank", "export", "adapt"]},
+    "secondary_intents": {
+      "type": "array",
+      "items": {"enum": ["generate", "edit", "evaluate_rank", "export", "adapt"]},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "language": {"enum": ["zh-CN", "en", "mixed"]},
+    "provenance": {
+      "type": "object",
+      "required": ["kind", "source_refs", "customer_data", "notes"],
+      "properties": {
+        "kind": {"enum": ["reverse_constructed", "internal_scenario", "controlled_synthetic", "anonymized_real"]},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStrings"},
+        "customer_data": {"type": "boolean"},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "user_context": {
+      "type": "object",
+      "required": ["role", "organization_type", "business_goal"],
+      "properties": {
+        "role": {"type": "string", "minLength": 1},
+        "organization_type": {"type": "string", "minLength": 1},
+        "business_goal": {"type": "string", "minLength": 1}
+      }
+    },
+    "initial_query": {"type": "string", "minLength": 20},
+    "inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "role", "required", "availability"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["reference_image", "brand_asset", "existing_design", "product_image", "copy", "spec", "candidate_set"]},
+          "role": {"type": "string", "minLength": 1},
+          "required": {"type": "boolean"},
+          "availability": {"enum": ["provided", "intentionally_missing"]},
+          "asset_id": {"type": "string", "minLength": 1},
+          "content": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": ["hard", "soft", "negative"],
+      "properties": {
+        "hard": {"$ref": "#/$defs/nonEmptyStrings"},
+        "soft": {"$ref": "#/$defs/nonEmptyStrings"},
+        "negative": {"$ref": "#/$defs/nonEmptyStrings"}
+      }
+    },
+    "tools_available": {"$ref": "#/$defs/nonEmptyUniqueStrings"},
+    "expected_workflow": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["checkpoint", "required_outcomes"],
+        "properties": {
+          "checkpoint": {"type": "string", "minLength": 1},
+          "required_outcomes": {"$ref": "#/$defs/nonEmptyStrings"}
+        }
+      }
+    },
+    "deliverables": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "stage", "type", "count", "formats", "requirements"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "stage": {"enum": ["intermediate", "final"]},
+          "type": {"type": "string", "minLength": 1},
+          "count": {"type": "integer", "minimum": 1},
+          "formats": {"$ref": "#/$defs/nonEmptyStrings"},
+          "requirements": {"$ref": "#/$defs/nonEmptyStrings"}
+        }
+      }
+    },
+    "feedback": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "turn_id",
+          "session_id",
+          "input_version",
+          "expected_version",
+          "after_checkpoint",
+          "message",
+          "expected_changes",
+          "invariants",
+          "requires_confirmation"
+        ],
+        "properties": {
+          "turn_id": {"type": "string", "pattern": "^feedback-[0-9]{2}$"},
+          "session_id": {"type": "string", "pattern": "^session-[0-9]{2}$"},
+          "input_version": {"type": "string", "pattern": "^v[0-9]+$"},
+          "expected_version": {"type": "string", "pattern": "^v[0-9]+$"},
+          "resume_from_version": {"type": "string", "pattern": "^v[0-9]+$"},
+          "after_checkpoint": {"type": "string", "minLength": 1},
+          "message": {"type": "string", "minLength": 1},
+          "expected_changes": {"$ref": "#/$defs/nonEmptyStrings"},
+          "invariants": {"$ref": "#/$defs/nonEmptyStrings"},
+          "requires_confirmation": {"type": "boolean"}
+        }
+      }
+    },
+    "messy_conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "detail", "expected_recovery"],
+        "properties": {
+          "type": {"enum": ["missing_asset", "conflicting_references", "late_scope_change", "invalid_spec", "ambiguous_feedback", "tool_failure", "copy_error", "constraint_conflict"]},
+          "detail": {"type": "string", "minLength": 1},
+          "expected_recovery": {"$ref": "#/$defs/nonEmptyStrings"}
+        }
+      }
+    },
+    "rubric": {
+      "type": "object",
+      "required": ["checkpoint_weights", "hard_gates"],
+      "properties": {
+        "checkpoint_weights": {
+          "type": "object",
+          "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1},
+          "minProperties": 3
+        },
+        "hard_gates": {"$ref": "#/$defs/nonEmptyStrings"}
+      }
+    },
+    "fixture_status": {"enum": ["ready", "planned"]},
+    "capability_tags": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "tool_execution",
+          "workflow_orchestration",
+          "multi_reference_binding",
+          "multi_turn_revision",
+          "state_recovery",
+          "creative_exploration",
+          "structured_editing",
+          "context_ablation",
+          "production_execution"
+        ]
+      }
+    },
+    "reference_contract": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["input_id", "reference_role", "allowed_influence", "identity_policy", "optional_for_zero_shot"],
+        "properties": {
+          "input_id": {"type": "string", "minLength": 1},
+          "reference_role": {
+            "enum": ["product_identity", "brand_system", "candidate_option", "approved_master", "source_artwork", "edit_target", "layout_reference", "style_reference", "supporting_asset"]
+          },
+          "allowed_influence": {"$ref": "#/$defs/nonEmptyStrings"},
+          "identity_policy": {
+            "enum": ["preserve_exact", "preserve_rules", "analysis_only", "preserve_unedited_regions", "preserve_identity", "abstract_only"]
+          },
+          "optional_for_zero_shot": {"type": "boolean"}
+        }
+      }
+    },
+    "context_conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "include_input_ids", "include_preference_memory", "purpose"],
+        "properties": {
+          "id": {"enum": ["zero_shot", "reference_grounded", "personalized"]},
+          "include_input_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "include_preference_memory": {"type": "boolean"},
+          "query_override": {"type": "string", "minLength": 20},
+          "purpose": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "preference_memory": {
+      "type": "object",
+      "required": ["scope", "source", "accepted_signals", "rejected_signals"],
+      "properties": {
+        "scope": {"enum": ["none", "project"]},
+        "source": {"enum": ["none", "simulated_prior_sessions"]},
+        "accepted_signals": {"type": "array", "items": {"type": "string"}},
+        "rejected_signals": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "project_state": {
+      "type": "object",
+      "required": ["project_id", "starting_version", "locked_invariants", "editable_targets", "resume_policy", "preference_memory_scope"],
+      "properties": {
+        "project_id": {"type": "string", "minLength": 1},
+        "starting_version": {"type": "string", "pattern": "^v[0-9]+$"},
+        "locked_invariants": {"$ref": "#/$defs/nonEmptyStrings"},
+        "editable_targets": {"$ref": "#/$defs/nonEmptyUniqueStrings"},
+        "resume_policy": {"enum": ["checkpoint_only", "checkpoint_and_version"]},
+        "preference_memory_scope": {"enum": ["none", "project"]}
+      }
+    },
+    "edit_parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "target", "value_type", "allowed_change", "verification"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "target": {"type": "string", "minLength": 1},
+          "value_type": {"enum": ["number", "enum", "string", "dimension_list", "boolean"]},
+          "allowed_change": {"type": "string", "minLength": 1},
+          "verification": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "structured_artifacts": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["name", "format", "required", "validation"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "format": {"enum": ["PNG", "JSON", "JSONL"]},
+          "required": {"type": "boolean"},
+          "validation": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "human_checkpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["after_checkpoint", "decision_type", "required", "evidence"],
+        "properties": {
+          "after_checkpoint": {"type": "string", "minLength": 1},
+          "decision_type": {"enum": ["select_creative_territory", "confirm_revision_or_scope", "approve_production_parameters"]},
+          "required": {"type": "boolean"},
+          "evidence": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "verification_contract": {
+      "type": "object",
+      "required": ["checks", "evidence_required", "failure_policy"],
+      "properties": {
+        "checks": {"$ref": "#/$defs/nonEmptyUniqueStrings"},
+        "evidence_required": {"const": true},
+        "failure_policy": {"const": "block_delivery_on_hard_gate"}
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "nonEmptyUniqueStrings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    }
+  }
+}
