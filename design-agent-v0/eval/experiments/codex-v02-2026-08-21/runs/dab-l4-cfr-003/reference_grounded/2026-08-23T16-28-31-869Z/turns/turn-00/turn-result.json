@@ -1,0 +1,74 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T16:28:31.885Z",
+  "finished_at": "2026-08-23T16:44:57.986Z",
+  "latency_ms": 986123,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 83,
+    "command_count": 20,
+    "tool_count": 15,
+    "image_activity_count": 4,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02f73-d0bb-7a82-99b1-a47dd29bf799",
+    "usage": {
+      "input_tokens": 2299217,
+      "cached_input_tokens": 2187008,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 33256,
+      "reasoning_output_tokens": 11477
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 3145,
+      "sha256": "5bfa7da36bd208eff8b45c9a56875e759b36c66bb13d6b548dd845fd86722a36"
+    },
+    {
+      "filename": "v0/ambient_background_v0.png",
+      "byte_size": 1886265,
+      "sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 7473,
+      "sha256": "b1e426a50597ddd3e77a049ee0555835e0bba9407df3426a668d2e34cd2c5246"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 10273,
+      "sha256": "c521f6cd286136b07b50f176f1611e67ff4547b64d60d3c9c41c31ceac48bd47"
+    },
+    {
+      "filename": "v0/hero_detail_v0.svg",
+      "byte_size": 6056,
+      "sha256": "fc25139e79cf4aca0cc5177bad08596fa8490db5525b03d3251565f84754c0b0"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 1606561,
+      "sha256": "1e394bc9433f55a20f79dfe26d325b4cd0289e4352202aa1ade06de63822fea0"
+    },
+    {
+      "filename": "v0/product_reference_locked.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v0/render_preview.m",
+      "byte_size": 4256,
+      "sha256": "0b6ba5747c5d559973ad5d793827dfe366e17e49e0ee2301581374c8ff22e341"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 7215,
+      "sha256": "d53ec297566b0d4d62e2b4b890f3c811e2256d3c585e9311dd6b5d88aa244253"
+    }
+  ]
+}

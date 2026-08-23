@@ -1,0 +1,117 @@
+{
+  "version": "v0",
+  "artifact_under_review": "outputs/v0/mori-night-fragrance-kv-hypotheses-v0.pdf",
+  "checks": [
+    {
+      "id": "hypothesis_count",
+      "status": "pass",
+      "result": "9 KV hypotheses are present (A1-C3)",
+      "evidence": [
+        "outputs/v0/kv-hypotheses.md",
+        "outputs/v0/boards/mori-kv-territories-overview.png"
+      ]
+    },
+    {
+      "id": "territory_clustering",
+      "status": "pass",
+      "result": "3 distinct territories: graphic negative space, tactile materials, and low-light afterglow",
+      "evidence": [
+        "outputs/v0/boards/territory-a-quiet-geometry.png",
+        "outputs/v0/boards/territory-b-tactile-ritual.png",
+        "outputs/v0/boards/territory-c-afterglow.png"
+      ]
+    },
+    {
+      "id": "product_identity",
+      "status": "pass",
+      "result": "Every KV uses the original input PNG as a rectangular packshot; no generated or redrawn bottle is present",
+      "method": "source-level inspection plus visual inspection of all 9 rendered candidate pages",
+      "evidence": [
+        "inputs/02-launch_product.png",
+        "outputs/v0/build_review_pdf.py",
+        "outputs/v0/candidates/a1-horizon-field.png",
+        "outputs/v0/candidates/c3-quiet-threshold.png"
+      ]
+    },
+    {
+      "id": "logo_preservation",
+      "status": "pass",
+      "result": "MORI wordmark is an exact pixel crop from the supplied brand board and is not redrawn or recolored",
+      "evidence": [
+        "inputs/01-brand_guideline.png",
+        "outputs/v0/assets/mori-wordmark-exact-crop.png"
+      ]
+    },
+    {
+      "id": "required_palette",
+      "status": "pass",
+      "result": "Rice-white and terracotta red are retained across all 9 KVs; Territory C also uses an explicit rice-white ground/frame",
+      "method": "visual inspection of overview, territory boards, and full-size C2 candidate",
+      "evidence": [
+        "outputs/v0/boards/mori-kv-territories-overview.png",
+        "outputs/v0/candidates/c2-ember-halo.png"
+      ]
+    },
+    {
+      "id": "approved_copy_only",
+      "status": "pass",
+      "result": "Consumer-facing KV pages contain only the MORI wordmark and the two approved lines",
+      "method": "pypdf extraction across PDF pages 5-13 returned exactly three unique text lines: 'Quiet hours,', 'made tangible.', and '让夜晚慢下来。'; each approved line appears 9 times",
+      "approved_lines": [
+        "Quiet hours, made tangible.",
+        "让夜晚慢下来。"
+      ],
+      "evidence": [
+        "outputs/v0/candidates/a2-breathing-frame.png",
+        "outputs/v0/candidates/b2-paper-window.png",
+        "outputs/v0/candidates/c2-ember-halo.png"
+      ]
+    },
+    {
+      "id": "claims_and_symbol_safety",
+      "status": "pass",
+      "result": "No treatment, insomnia-improvement, medical-efficacy, clinical, pill, bed, moon, or star cues appear in consumer KVs",
+      "method": "manual visual inspection of all 9 full-size candidate renders",
+      "evidence": [
+        "outputs/v0/candidates"
+      ]
+    },
+    {
+      "id": "low_cost_feasibility",
+      "status": "pass",
+      "result": "All concepts use the supplied packshot plus paper/color cards, linen, a small ceramic tile, and/or one lamp",
+      "evidence": [
+        "outputs/v0/kv-hypotheses.md"
+      ]
+    },
+    {
+      "id": "pdf_render_quality",
+      "status": "pass",
+      "result": "13-page PDF rendered at 72 dpi to exact review dimensions; overview, all three territory boards, and representative full-size candidates were visually inspected with no clipping or broken glyphs",
+      "evidence": [
+        "outputs/v0/mori-night-fragrance-kv-hypotheses-v0.pdf",
+        "outputs/v0/boards/mori-kv-territories-overview.png",
+        "outputs/v0/boards/territory-a-quiet-geometry.png",
+        "outputs/v0/boards/territory-b-tactile-ritual.png",
+        "outputs/v0/boards/territory-c-afterglow.png",
+        "outputs/v0/candidates/b3-ceramic-marker.png",
+        "outputs/v0/candidates/c2-ember-halo.png"
+      ]
+    },
+    {
+      "id": "channel_extension_gate",
+      "status": "pass",
+      "result": "No website hero, Instagram vertical, or email header was produced before KV approval",
+      "evidence": [
+        "outputs/project-state.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "internal_kv_selection",
+      "status": "blocking_next_phase",
+      "required_input": "Select one lead KV from A1-C3 before channel extensions"
+    }
+  ]
+}

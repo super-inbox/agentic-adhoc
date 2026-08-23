@@ -1,0 +1,16 @@
+已完成首轮发散：9 个假设聚类为 3 个 Creative Territories，尚未替你选择方向，也未提前制作后续成品。
+
+- **T1 校准可信**：精度整理、校准刻度、受护核心。技术权威最强，需防止过冷。
+- **T2 稳态信号**：连续信号、环境分层、静默脉冲。技术感与温度较均衡。
+- **T3 人本工程**：柔性接点、工程字母构造、温暖感知点。人情味最强，需避免消费化。
+
+完整方向说明：[creative-territories-v0.md](<WORKDIR>/outputs/v0/creative-territories-v0.md)
+
+项目状态与校验：
+
+- [project-state.json](<WORKDIR>/outputs/project-state.json)
+- [verification.json](<WORKDIR>/outputs/v0/verification.json)
+
+请回复类似：`选择 T2；以 H4 为主，保留 H9；技术/温度 60/40。`
+
+另外，当前“旧视觉”图片实际是 Grain & Glow。进入下一阶段前，还需提供贵司真实旧 Logo，以及正式中文、英文品牌名；本轮方向选择不受影响。

@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "change_set_id": "aroma-detail-hero-v1-client-delta",
+  "version": "v1",
+  "base_version": "v0",
+  "target_document": "design_document.json",
+  "scope_policy": "apply_only_requested_delta",
+  "operations": [
+    {
+      "op": "set_text",
+      "object_id": "feature.low_noise",
+      "path": "label",
+      "client_reported_before": "低躁运行",
+      "observed_v0_value": "低噪运行",
+      "after": "低噪运行",
+      "summary": "Explicitly reassert the client-approved character 噪; keep typography, position, icon, and color unchanged.",
+      "visual_delta_from_v0": false
+    },
+    {
+      "op": "move",
+      "object_id": "feature.clay_touch",
+      "path": "bbox",
+      "before": [
+        697,
+        1010,
+        313,
+        286
+      ],
+      "after": [
+        697,
+        998,
+        313,
+        286
+      ],
+      "delta": [
+        0,
+        -12
+      ],
+      "unit": "px",
+      "summary": "Move only the third selling-point icon and label upward by 12 px; keep the strip rules and dividers fixed."
+    }
+  ],
+  "preserved_objects": [
+    "background.paper",
+    "background.veil",
+    "hero.media_frame",
+    "product.photo",
+    "headline",
+    "headline.accent",
+    "feature.timer",
+    "footer.rule"
+  ],
+  "preserved_properties": {
+    "feature.low_noise": [
+      "bbox",
+      "icon",
+      "icon_fill",
+      "typography"
+    ],
+    "feature.clay_touch": [
+      "label",
+      "icon",
+      "icon_fill",
+      "width",
+      "height"
+    ],
+    "features.strip": [
+      "bbox",
+      "stroke",
+      "stroke_width",
+      "divider_positions"
+    ]
+  },
+  "client_approved_and_locked": [
+    "overall composition",
+    "color system"
+  ],
+  "explicit_do_not_change": [
+    "product",
+    "main headline",
+    "background"
+  ]
+}

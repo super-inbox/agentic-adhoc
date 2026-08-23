@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "change_set_id": "aroma-detail-hero-v2-client-order-delta",
+  "version": "v2",
+  "base_version": "v1",
+  "target_document": "design_document.json",
+  "scope_policy": "apply_only_requested_delta",
+  "operations": [
+    {
+      "op": "reorder",
+      "object_id": "features.strip",
+      "path": "items",
+      "before": [
+        "feature.low_noise",
+        "feature.timer",
+        "feature.clay_touch"
+      ],
+      "after": [
+        "feature.low_noise",
+        "feature.clay_touch",
+        "feature.timer"
+      ],
+      "summary": "Exchange only the second and third selling-point objects."
+    },
+    {
+      "op": "move",
+      "object_id": "feature.clay_touch",
+      "path": "bbox",
+      "before": [
+        697,
+        998,
+        313,
+        286
+      ],
+      "after": [
+        383,
+        998,
+        313,
+        286
+      ],
+      "delta": [
+        -314,
+        0
+      ],
+      "unit": "px",
+      "summary": "Move the complete clay-touch object from the third slot to the second while preserving its v1 vertical lift."
+    },
+    {
+      "op": "move",
+      "object_id": "feature.timer",
+      "path": "bbox",
+      "before": [
+        383,
+        1010,
+        314,
+        286
+      ],
+      "after": [
+        697,
+        1010,
+        314,
+        286
+      ],
+      "delta": [
+        314,
+        0
+      ],
+      "unit": "px",
+      "summary": "Move the complete timer object from the second slot to the third without changing its vertical position."
+    }
+  ],
+  "preserved_objects": [
+    "background.paper",
+    "background.veil",
+    "hero.media_frame",
+    "product.photo",
+    "headline",
+    "headline.accent",
+    "feature.low_noise",
+    "footer.rule"
+  ],
+  "preserved_properties": {
+    "feature.clay_touch": [
+      "label",
+      "icon",
+      "icon_fill",
+      "y",
+      "width",
+      "height",
+      "typography"
+    ],
+    "feature.timer": [
+      "label",
+      "icon",
+      "icon_fill",
+      "y",
+      "width",
+      "height",
+      "typography"
+    ],
+    "features.strip": [
+      "bbox",
+      "stroke",
+      "stroke_width",
+      "divider_positions"
+    ],
+    "tokens.typography": [
+      "headline.size=74",
+      "feature_label.size=31"
+    ]
+  },
+  "explicit_do_not_change": [
+    "product",
+    "main headline",
+    "background",
+    "font sizes"
+  ]
+}

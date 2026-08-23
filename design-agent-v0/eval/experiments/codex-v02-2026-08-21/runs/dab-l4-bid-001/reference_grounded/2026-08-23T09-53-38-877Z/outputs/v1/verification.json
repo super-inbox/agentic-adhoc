@@ -1,0 +1,151 @@
+{
+  "version": "v1",
+  "stage": "selected_territory_refinement",
+  "overall_status": "pass_with_expected_blockers",
+  "requested_delta": {
+    "selected_direction": "02 日光麦场 / Daylight Grain",
+    "more_whitespace": true,
+    "logo_unchanged": true,
+    "gift_box_more_premium": true,
+    "unrelated_v0_territories_unchanged": true
+  },
+  "checks": [
+    {
+      "id": "version_isolation",
+      "status": "pass",
+      "method": "Path and checksum review",
+      "result": "All new candidate artifacts are under outputs/v1. The v0 selection boards retain the SHA-256 values recorded in outputs/v0/verification.json, and the v0 B edit target retains the checksum observed before v1 generation.",
+      "evidence": {
+        "outputs/v0/01-conflicts-and-10-hypotheses.png": "d7fc43c2af5942b76f488266bffac45a401161ab7a0d157b9ed555b82f03c4db",
+        "outputs/v0/02-three-creative-territories.png": "64a86b0183020df9d0ff881b985f55d9fcc8aaf143a5f25effab8cd99514e966",
+        "outputs/v0/assets/territory-02-daylight-grain-concept.png": "0e37ab2a5488eaa06133070da8859f75f684f504b7d6a97e8ce952bb665436f2"
+      },
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v0/01-conflicts-and-10-hypotheses.png",
+        "outputs/v0/02-three-creative-territories.png",
+        "outputs/v0/assets/territory-02-daylight-grain-concept.png"
+      ]
+    },
+    {
+      "id": "selected_direction_only",
+      "status": "pass",
+      "method": "Project-state and prompt-scope inspection",
+      "result": "Territory 02 is selected and refined. The image edit used only the v0 B concept as its edit target; A and C were not used or changed.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/imagegen-prompts.md",
+        "outputs/v1/refinement-notes.md"
+      ]
+    },
+    {
+      "id": "whitespace_increase",
+      "status": "pass",
+      "method": "Pillow HSV proxy: saturation < 50 and value > 220, measured on equal-size v0/v1 concept images",
+      "result": {
+        "overall_v0": 0.1758,
+        "overall_v1": 0.6644,
+        "packaging_panel_v0": 0.1655,
+        "packaging_panel_v1": 0.6895,
+        "ecommerce_panel_v0": 0.1384,
+        "ecommerce_panel_v1": 0.7166,
+        "interpretation": "The light-neutral negative-space proxy increased materially overall and in the two directly requested panels."
+      },
+      "evidence_paths": [
+        "outputs/v0/assets/territory-02-daylight-grain-concept.png",
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png"
+      ]
+    },
+    {
+      "id": "premium_gift_box",
+      "status": "pass",
+      "method": "Manual visual inspection of packaging panel",
+      "result": "The v1 package uses rigid-board proportions, deep lid, precise wrapped corners, crisp reveals, fitted pale-blue tray, generous spacing, and restrained satin-gold edge detail instead of the v0 casual color-block carton construction.",
+      "evidence_paths": [
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v1/01-daylight-grain-v1-refinement-board.png"
+      ]
+    },
+    {
+      "id": "logo_integrity",
+      "status": "pass_for_concept_blocked_for_final_placement",
+      "method": "Manual visual inspection plus identity-safety correction review",
+      "result": "No Logo was redrawn or altered. Generated semicircle and arrow motifs that could be mistaken for a second mark were removed. Package fronts and display cards remain blank for later placement of the unchanged approved Logo and Chinese wordmark.",
+      "evidence_paths": [
+        "inputs/01-current_logo_and_identity.png",
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v1/imagegen-prompts.md"
+      ]
+    },
+    {
+      "id": "b_system_preservation",
+      "status": "pass",
+      "method": "Manual before/after visual comparison",
+      "result": "The daylight lighting, warm-white/sky-blue/grain-yellow family, circular pastry crops, modular display logic, pale maple, and blue retail metal remain. Only color density, whitespace, package construction, and display spacing changed.",
+      "evidence_paths": [
+        "outputs/v0/assets/territory-02-daylight-grain-concept.png",
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v1/refinement-notes.md"
+      ]
+    },
+    {
+      "id": "visual_render_qa",
+      "status": "pass",
+      "method": "Manual inspection of final 2400x2600 board and 1536x1024 concept image",
+      "result": "No clipped sections, unsupported glyphs, readable pseudo-brand text, or deliberate new emblem were observed. Packaging, ecommerce, and retail panels are clearly legible.",
+      "evidence_paths": [
+        "outputs/v1/01-daylight-grain-v1-refinement-board.png",
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png"
+      ]
+    },
+    {
+      "id": "state_integrity",
+      "status": "pass",
+      "method": "JSON parse and required-field inspection",
+      "result": "outputs/project-state.json parses successfully and records current_version v1, selected territory 02, locked items, changed items, preserved items, artifact paths, and remaining blockers.",
+      "evidence_paths": [
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "artifact_integrity",
+      "status": "pass",
+      "method": "Filesystem existence, non-zero size, image decode, and dimension checks",
+      "result": {
+        "outputs/v1/01-daylight-grain-v1-refinement-board.png": "2400x2600 RGB",
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png": "1536x1024 RGB",
+        "outputs/v1/refinement-notes.md": "present",
+        "outputs/v1/imagegen-prompts.md": "present"
+      },
+      "evidence_paths": [
+        "outputs/v1/01-daylight-grain-v1-refinement-board.png",
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v1/refinement-notes.md",
+        "outputs/v1/imagegen-prompts.md"
+      ]
+    }
+  ],
+  "checksums": {
+    "outputs/v1/01-daylight-grain-v1-refinement-board.png": "7a1b57379bd1d87d622563fca6c00476ec0621fc0198a2e006019976899ee314",
+    "outputs/v1/assets/territory-02-daylight-grain-refined.png": "f21c83c08305464ec7f5923c248b953bc5445d912375c4d91d41ecf508be5818",
+    "outputs/v1/refinement-notes.md": "6fbeefeea234fe3155302f8ef133a5f84ce32cc86809c49cac834cd575b86574",
+    "outputs/v1/imagegen-prompts.md": "1988e407c03fc571d88f1ad3c71aec4b483c8543aa5c6b0ece09f1594ded9e09"
+  },
+  "unresolved_blockers": [
+    {
+      "blocker": "Approved Chinese wordmark and vector/transparent Logo source are absent.",
+      "impact": "The locked identity cannot yet be literally placed and verified on the refined gift box or retail cards.",
+      "required_input": "Provide the approved Logo and Chinese wordmark source files."
+    },
+    {
+      "blocker": "Production product and dimensional specifications are absent.",
+      "impact": "Rigid-box feasibility, fitted-tray sizing, Taobao safe areas, and store fabrication cannot be validated.",
+      "required_input": "Provide SKU/product photography, package dimensions, Taobao specs, store dimensions, materials, and budget limits."
+    },
+    {
+      "blocker": "The Friday deadline is ambiguous.",
+      "impact": "The proposal schedule is not locked.",
+      "required_input": "Confirm whether the intended proposal date is 2026-08-28 Asia/Shanghai."
+    }
+  ]
+}

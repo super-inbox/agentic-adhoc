@@ -1,0 +1,13 @@
+v3 已建立，但未执行视觉修改：保存状态中没有当前门店立牌或 v1 疏留白参考；`v2` 也没有客户提到的礼盒/淘宝主图成品。为避免重建设计，已记录阻塞并锁定“不恢复价格标签”。`v0–v2` 均未改动。
+
+请提供：
+
+1. 当前门店立牌原文件
+2. v1 疏留白立牌，或明确的边距/间距数据
+3. 如需补齐版本记录，可同时提供外部完成的 v2 淘宝主图
+
+新增或更新：
+
+- [v3 阻塞与编辑规范](/private<WORKDIR>/outputs/v3/store-sign-whitespace-delta-blocker.md)
+- [v3 验证记录](/private<WORKDIR>/outputs/v3/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)

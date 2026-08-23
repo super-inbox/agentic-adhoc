@@ -1,0 +1,9 @@
+已完成生产包，未包含说明海报：
+
+- [预览 PNG](/private<WORKDIR>/outputs/v0/LUNA_CLUB_60mm_preview.png)
+- [生产 SVG](/private<WORKDIR>/outputs/v0/LUNA_CLUB_60mm_production.svg)
+- 工厂 PDF：:codex-file-citation{path="/private<WORKDIR>/outputs/v0/LUNA_CLUB_60mm_factory.pdf" purpose="output"}
+
+已核验：成品长边 60.000 mm、3 mm 出血、CMYK 300 dpi；PDF 的 `CutContour` 是独立 Separation 专色矢量路径并启用叠印。
+
+注意：原图有效内容仅 498×516 px，60 mm 下原生约 218 ppi；交付文件已重采样至 300 dpi，但未虚构新细节。完整记录见 [verification.json](/private<WORKDIR>/outputs/v0/verification.json)。

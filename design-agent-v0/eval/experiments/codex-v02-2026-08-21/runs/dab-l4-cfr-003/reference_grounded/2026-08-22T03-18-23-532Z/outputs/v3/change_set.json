@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "change_set_id": "aroma-detail-hero-v3-order-reversion",
+  "version": "v3",
+  "base_version": "v2",
+  "target_document": "design_document.json",
+  "scope_policy": "apply_only_requested_delta",
+  "render_method": "deterministic_object_graph_render",
+  "full_image_regeneration": false,
+  "operations": [
+    {
+      "op": "reorder",
+      "object_id": "features.strip",
+      "path": "items",
+      "before": [
+        "feature.low_noise",
+        "feature.clay_touch",
+        "feature.timer"
+      ],
+      "after": [
+        "feature.low_noise",
+        "feature.timer",
+        "feature.clay_touch"
+      ],
+      "summary": "Restore the v1 selling-point order."
+    },
+    {
+      "op": "move",
+      "object_id": "feature.timer",
+      "path": "bbox",
+      "before": [
+        697,
+        1010,
+        314,
+        286
+      ],
+      "after": [
+        383,
+        1010,
+        314,
+        286
+      ],
+      "delta": [
+        -314,
+        0
+      ],
+      "unit": "px",
+      "summary": "Move the complete timer object back to the second slot; preserve its v2 vertical position and styling."
+    },
+    {
+      "op": "move",
+      "object_id": "feature.clay_touch",
+      "path": "bbox",
+      "before": [
+        383,
+        998,
+        313,
+        286
+      ],
+      "after": [
+        697,
+        998,
+        313,
+        286
+      ],
+      "delta": [
+        314,
+        0
+      ],
+      "unit": "px",
+      "summary": "Move the complete clay-touch object back to the third slot while retaining its raised y=998 position."
+    }
+  ],
+  "preserved_objects": [
+    "background.paper",
+    "background.veil",
+    "hero.media_frame",
+    "product.photo",
+    "headline",
+    "headline.accent",
+    "feature.low_noise",
+    "footer.rule"
+  ],
+  "preserved_properties": {
+    "feature.low_noise": [
+      "label=低噪运行",
+      "bbox",
+      "icon",
+      "icon_fill",
+      "typography"
+    ],
+    "feature.clay_touch": [
+      "label",
+      "icon",
+      "icon_fill",
+      "y=998",
+      "width",
+      "height",
+      "typography"
+    ],
+    "feature.timer": [
+      "label",
+      "icon",
+      "icon_fill",
+      "y=1010",
+      "width",
+      "height",
+      "typography"
+    ],
+    "features.strip": [
+      "bbox",
+      "stroke",
+      "stroke_width",
+      "divider_positions"
+    ],
+    "tokens.typography": [
+      "headline.size=74",
+      "feature_label.size=31"
+    ]
+  },
+  "explicit_do_not_change": [
+    "product",
+    "main headline",
+    "background",
+    "font sizes",
+    "any content outside the second and third selling-point objects"
+  ]
+}

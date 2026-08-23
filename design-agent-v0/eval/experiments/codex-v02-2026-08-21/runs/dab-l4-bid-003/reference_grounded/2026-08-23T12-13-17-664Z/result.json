@@ -1,0 +1,219 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-BID-003@reference_grounded",
+  "base_brief_id": "DAB-L4-BID-003",
+  "context_condition": "reference_grounded",
+  "category": "brand_identity_directions",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "creative_exploration"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T12:13:17.676Z",
+  "finished_at": "2026-08-23T12:28:57.895Z",
+  "latency_ms": 940219,
+  "intended_turns": 2,
+  "completed_turns": 2,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02e8a-25d4-7180-9590-95c211025c0a",
+  "input_assets": [
+    {
+      "input_id": "current-brand",
+      "asset_id": "logo-upgrade-grain-glow-before-after",
+      "role": "current_identity",
+      "reference_role": "edit_target",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-current_identity.png",
+      "source_path": "eval/assets/reference-pack-v0.2/logo-upgrade/grain-glow-before-after.png",
+      "byte_size": 588006,
+      "sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253"
+    },
+    {
+      "input_id": "logo-options-reference",
+      "asset_id": "design-vote-noma-logo-options",
+      "role": "monogram_reference",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "02-monogram_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/design-vote/noma-logo-options.png",
+      "byte_size": 630253,
+      "sha256": "0985be34801ead57e9aaea756b26b06d4e44bc4c909175139c4672a3fa9fc334"
+    }
+  ],
+  "input_context_ids": [
+    "current-brand",
+    "logo-options-reference",
+    "brand-copy"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 3946,
+      "sha256": "d4d67b74eb8a00369d3a05f5551e68fabcea847700a4a22487be982bb986aa25"
+    },
+    {
+      "filename": "v0/creative-territories-v0.md",
+      "byte_size": 7142,
+      "sha256": "00396fbdc92f04f277cd080210c538111b4fea95d2125726eccede4ae5da4767"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3261,
+      "sha256": "79c11f30ab9d84aed66ec43193d0d838e6ad136ef9b1478b9e6471227426f5fd"
+    },
+    {
+      "filename": "v1/selected-territory-t2-v1.md",
+      "byte_size": 4060,
+      "sha256": "57bbfe7b151f5dfc22666fd318f906b0b9f76c9c19691862eea4d14ace7c1698"
+    },
+    {
+      "filename": "v1/t2-application-wireframe-v1.svg",
+      "byte_size": 7643,
+      "sha256": "f09e9e18c463b4a21ee4d75811eac9f384e60c5449d80fee8885048b90da7c8a"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 4853,
+      "sha256": "2258cb010196fd3bf5c9fe3709577f8b3f1f149307155209d5550e2fbdb4bef5"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T12:13:17.676Z",
+      "finished_at": "2026-08-23T12:18:41.045Z",
+      "latency_ms": 323376,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 19,
+        "command_count": 4,
+        "tool_count": 2,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02e8a-25d4-7180-9590-95c211025c0a",
+        "usage": {
+          "input_tokens": 192479,
+          "cached_input_tokens": 159104,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 9938,
+          "reasoning_output_tokens": 3819
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 2769,
+          "sha256": "6d1ab0f77acd2df77bbe9df6a509f3a696b45873aff86c8a2bc4d09e075499d3"
+        },
+        {
+          "filename": "v0/creative-territories-v0.md",
+          "byte_size": 7142,
+          "sha256": "00396fbdc92f04f277cd080210c538111b4fea95d2125726eccede4ae5da4767"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3261,
+          "sha256": "79c11f30ab9d84aed66ec43193d0d838e6ad136ef9b1478b9e6471227426f5fd"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T12:18:41.052Z",
+      "finished_at": "2026-08-23T12:28:57.880Z",
+      "latency_ms": 616838,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 35,
+        "command_count": 8,
+        "tool_count": 5,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02e8a-25d4-7180-9590-95c211025c0a",
+        "usage": {
+          "input_tokens": 972813,
+          "cached_input_tokens": 904192,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 27098,
+          "reasoning_output_tokens": 10601
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 3946,
+          "sha256": "d4d67b74eb8a00369d3a05f5551e68fabcea847700a4a22487be982bb986aa25"
+        },
+        {
+          "filename": "v0/creative-territories-v0.md",
+          "byte_size": 7142,
+          "sha256": "00396fbdc92f04f277cd080210c538111b4fea95d2125726eccede4ae5da4767"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3261,
+          "sha256": "79c11f30ab9d84aed66ec43193d0d838e6ad136ef9b1478b9e6471227426f5fd"
+        },
+        {
+          "filename": "v1/selected-territory-t2-v1.md",
+          "byte_size": 4060,
+          "sha256": "57bbfe7b151f5dfc22666fd318f906b0b9f76c9c19691862eea4d14ace7c1698"
+        },
+        {
+          "filename": "v1/t2-application-wireframe-v1.svg",
+          "byte_size": 7643,
+          "sha256": "f09e9e18c463b4a21ee4d75811eac9f384e60c5449d80fee8885048b90da7c8a"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 4853,
+          "sha256": "2258cb010196fd3bf5c9fe3709577f8b3f1f149307155209d5550e2fbdb4bef5"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 1165292,
+    "cached_input_tokens": 1063296,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 37036,
+    "reasoning_output_tokens": 14420
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

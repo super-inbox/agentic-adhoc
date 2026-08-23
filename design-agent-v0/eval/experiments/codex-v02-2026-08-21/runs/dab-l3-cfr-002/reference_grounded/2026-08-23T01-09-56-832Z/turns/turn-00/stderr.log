@@ -1,0 +1,28 @@
+Reading additional input from stdin...
+2026-08-23T01:09:56.872982Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T01:09:56.874603Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T01:09:56.875093Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:10:01.872571Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to parse remote plugin catalog response from https://chatgpt.com/backend-api/ps/plugins/suggested?scope=GLOBAL: EOF while parsing a value at line 1 column 0
+2026-08-23T01:10:01.872648Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T01:10:01.876993Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T01:10:01.935569Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T01:10:01.935586Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T01:10:18.028253Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T01:11:55.499919Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:12:35.473167Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:13:03.021294Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:15:30.573048Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:15:53.259185Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:16:08.622070Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T01:16:13.615974Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:21:46.854030Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:22:06.360425Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T01:26:20.764425Z ERROR codex_core::tools::router: error=exec_command failed for `/bin/zsh -lc 'rm -rf tmp/build-compact tmp/build-native && mkdir -p tmp/build-compact tmp/build-native && java tools/RenderRevision.java inputs/01-revision_target.png tmp/build-compact compact && java tools/RenderRevision.java inputs/01-revision_target.png tmp/build-native native'`: CreateProcess { message: "Rejected(\"`/bin/zsh -lc 'rm -rf tmp/build-compact tmp/build-native && mkdir -p tmp/build-compact tmp/build-native && java tools/RenderRevision.java inputs/01-revision_target.png tmp/build-compact compact && java tools/RenderRevision.java inputs/01-revision_target.png tmp/build-native native'` rejected: rm -f style commands are not permitted. Use a safer approach\")" }
+2026-08-23T01:47:19.919480Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 201ms)... turn_id=01a02c2a-de04-77a3-a09a-663c2faade7c retries=1 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T01:47:36.708449Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 394ms)... turn_id=01a02c2a-de04-77a3-a09a-663c2faade7c retries=2 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T01:47:52.307383Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (3/5 in 849ms)... turn_id=01a02c2a-de04-77a3-a09a-663c2faade7c retries=3 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T01:48:07.888599Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T01:48:10.851890Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (4/5 in 1.532s)... turn_id=01a02c2a-de04-77a3-a09a-663c2faade7c retries=4 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T01:48:30.797105Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (5/5 in 3.347s)... turn_id=01a02c2a-de04-77a3-a09a-663c2faade7c retries=5 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T01:48:55.261748Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-08-23T01:48:57.239248Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)

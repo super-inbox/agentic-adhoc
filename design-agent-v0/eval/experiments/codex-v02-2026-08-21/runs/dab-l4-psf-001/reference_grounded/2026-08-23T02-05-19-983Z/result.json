@@ -1,0 +1,99 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-PSF-001@reference_grounded",
+  "base_brief_id": "DAB-L4-PSF-001",
+  "context_condition": "reference_grounded",
+  "category": "packaging_sku_family",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "creative_exploration"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T02:05:19.985Z",
+  "finished_at": "2026-08-23T02:05:48.686Z",
+  "latency_ms": 28701,
+  "intended_turns": 2,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02c5d-8acf-7992-8b82-96e23c2a16e7",
+  "input_assets": [
+    {
+      "input_id": "brand-board",
+      "asset_id": "sku-system-mori-brand-board",
+      "role": "brand_system",
+      "reference_role": "brand_system",
+      "identity_policy": "preserve_rules",
+      "filename": "01-brand_system.png",
+      "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+      "byte_size": 592086,
+      "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+    },
+    {
+      "input_id": "base-pack",
+      "asset_id": "sku-system-tumbler-base",
+      "role": "approved_base_packaging",
+      "reference_role": "approved_master",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "02-approved_base_packaging.png",
+      "source_path": "eval/assets/reference-pack-v0.2/sku-system/tumbler-base.png",
+      "byte_size": 807776,
+      "sha256": "40189e62be7b51c54e7752de041b554708feadf554c2c0d925c369310c9089e5"
+    }
+  ],
+  "input_context_ids": [
+    "brand-board",
+    "base-pack",
+    "sku-list"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T02:05:19.986Z",
+      "finished_at": "2026-08-23T02:05:48.683Z",
+      "latency_ms": 28699,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c5d-8acf-7992-8b82-96e23c2a16e7",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

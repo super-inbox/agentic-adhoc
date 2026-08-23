@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="750" height="1000" viewBox="0 0 750 1000">
+  <rect width="750" height="1000" fill="#EEE9D5"/>
+  <image x="0" y="0" width="750" height="1000" preserveAspectRatio="xMidYMid slice" xlink:href="pdp-first-screen-background-direction-a-v0.png"/>
+
+  <g fill="#393937">
+    <text x="50" y="82" font-family="Avenir Next, Avenir, Helvetica, sans-serif" font-size="39" font-weight="600" letter-spacing="8">MORI</text>
+    <text x="52" y="123" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="22" font-weight="400" letter-spacing="2.5" opacity="0.72">日常新作</text>
+
+    <text x="375" y="202" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="48" font-weight="600" letter-spacing="1">给空间一点</text>
+    <text x="375" y="265" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="52" font-weight="600" letter-spacing="1">松弛的余地</text>
+    <text x="375" y="316" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="24" font-weight="400" letter-spacing="0.8" opacity="0.68">克制配色与安静留白，自然融入日常</text>
+  </g>
+
+  <rect x="566" y="49" width="132" height="42" rx="21" fill="#AF543F"/>
+  <text x="632" y="77" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="20" font-weight="500" letter-spacing="0.8" fill="#EEE9D5">自在入室</text>
+
+  <rect x="28" y="790" width="694" height="187" rx="28" fill="#EEE9D5" fill-opacity="0.94" stroke="#393937" stroke-opacity="0.11"/>
+  <g font-family="PingFang SC, Hiragino Sans GB, sans-serif" text-anchor="middle">
+    <circle cx="139" cy="826" r="15" fill="#879466"/>
+    <circle cx="361" cy="826" r="15" fill="#AF543F"/>
+    <circle cx="583" cy="826" r="15" fill="#B7D2D9"/>
+    <g font-family="Avenir Next, Avenir, Helvetica, sans-serif" font-size="14" font-weight="600">
+      <text x="139" y="831" fill="#EEE9D5">1</text>
+      <text x="361" y="831" fill="#EEE9D5">2</text>
+      <text x="583" y="831" fill="#393937">3</text>
+    </g>
+    <g fill="#393937" font-size="22" font-weight="600" letter-spacing="0.6">
+      <text x="139" y="877">自然配色</text>
+      <text x="361" y="877">安静设计</text>
+      <text x="583" y="877">融入日常</text>
+    </g>
+    <g fill="#393937" fill-opacity="0.62" font-size="18" font-weight="400" letter-spacing="0.4">
+      <text x="139" y="905">延续品牌气质</text>
+      <text x="361" y="905">留白从容有序</text>
+      <text x="583" y="905">为空间留余地</text>
+    </g>
+  </g>
+
+  <rect x="110" y="923" width="530" height="45" rx="22.5" fill="#393937"/>
+  <text x="375" y="954" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="22" font-weight="500" letter-spacing="1" fill="#EEE9D5">发现 MORI 新作  →</text>
+</svg>

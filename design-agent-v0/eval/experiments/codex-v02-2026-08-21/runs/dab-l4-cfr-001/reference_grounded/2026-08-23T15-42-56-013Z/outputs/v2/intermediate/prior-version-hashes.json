@@ -1,0 +1,13 @@
+{
+  "outputs/v0/revision-interpretation.md": "146f3337a102a3ade215cbb23b47ab14706049cdfce013781e3b78d7da5431e4",
+  "outputs/v0/verification.json": "1e4c3fe82f6c7a718eb1d6f19425a6f7d2940a1821daf50e2a2b721227722c36",
+  "outputs/v1/apply-local-revision.py": "7aa2defee9e5e8dae9de56107976dfcacd46ddea4c5a30f078aadcc7740a20fe",
+  "outputs/v1/intermediate/imagegen-edit-source.png": "178f4b32fcdd82d4ca405da288b63c777fc0be8dc9d4a211bae0946b7f867def",
+  "outputs/v1/intermediate/local-edit-metrics.json": "b1ff9309d6c2fe6625eaac610add6721cff63fb6493fa769867c2cadb8dc041a",
+  "outputs/v1/intermediate/logo-alpha-mask.png": "f66547b61aaeeac6424b06d28511904da513f20dbeb30286fe3b9fb7b81ab2df",
+  "outputs/v1/intermediate/paper-edit-mask.png": "db6cf14422acddabfca437db8ea30539ab56edb3ff02bdae144c2937810dae4f",
+  "outputs/v1/summer-form-poster-local-revision-v1.png": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401",
+  "outputs/v1/summer-form-poster-v1-comparison.png": "59ffcd41998146adc18c527baced1d861eff56fe74f8149dbb885fd51a6eb113",
+  "outputs/v1/summer-form-poster-v1-diff-mask.png": "182fc8379cb75306e09aab247c9295564f17f88359ced4c981d8f1220ea4045b",
+  "outputs/v1/verification.json": "1296ec4a60b4947d858b24e48685da0cc07d9b8f0878e62140f503603b43373f"
+}

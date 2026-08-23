@@ -1,0 +1,176 @@
+{
+  "version": "v2",
+  "stage": "taobao_main_image_copy_refinement",
+  "overall_status": "pass_with_expected_blockers",
+  "requested_delta": {
+    "gift_box_direction_approved_and_unchanged": true,
+    "visual_system_unchanged": true,
+    "price_tag_removed_or_omitted": true,
+    "selling_point_reduced_to_one_sentence": true
+  },
+  "checks": [
+    {
+      "id": "version_isolation",
+      "status": "pass",
+      "method": "Recomputed SHA-256 comparison against v0 and v1 verification records",
+      "result": "Every file covered by the v0 and v1 checksum manifests still matches. All new candidate files are under outputs/v2; only outputs/project-state.json was updated outside that folder.",
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v1/verification.json",
+        "outputs/v2/01-taobao-main-v2.png",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "approved_gift_box_preserved",
+      "status": "pass",
+      "method": "v1 refined-asset checksum comparison and scope review",
+      "result": "The approved v1 gift-box asset remains byte-identical with SHA-256 f21c83c08305464ec7f5923c248b953bc5445d912375c4d91d41ecf508be5818. No packaging asset was created or edited in v2.",
+      "evidence_paths": [
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v1/verification.json",
+        "outputs/v2/delta-notes.md"
+      ]
+    },
+    {
+      "id": "visual_system_preserved",
+      "status": "pass",
+      "method": "Manual comparison between approved v1 ecommerce panel and v2 main image",
+      "result": "Warm-white negative space, pale sky-blue circular plates, lower-left hero pastry, upper-right secondary pastry, morning light, and thin grain-yellow edge remain. Packaging and retail panels were excluded from the edit rather than regenerated.",
+      "evidence_paths": [
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v2/assets/taobao-main-clean-background.png",
+        "outputs/v2/01-taobao-main-v2.png",
+        "outputs/v2/imagegen-prompts.md"
+      ]
+    },
+    {
+      "id": "price_and_promotion_absence",
+      "status": "pass",
+      "method": "Manual visual inspection, generation-constraint review, and deterministic-renderer review",
+      "result": "No price number, currency symbol, discount, coupon, crossed-out price, sale badge, price label, button, or promotion sticker is visible. The generator explicitly omitted these elements, and the renderer adds only one rule and one selling sentence.",
+      "evidence_paths": [
+        "outputs/v2/01-taobao-main-v2.png",
+        "outputs/v2/imagegen-prompts.md",
+        "outputs/v2/render_taobao_main.py"
+      ]
+    },
+    {
+      "id": "single_selling_sentence",
+      "status": "pass",
+      "method": "Renderer source inspection and visual inspection",
+      "result": {
+        "draw_text_calls": 1,
+        "sentence": "始于 1998，中式酥点成礼。",
+        "newline_count_in_sentence": 0,
+        "other_visible_copy": 0
+      },
+      "evidence_paths": [
+        "outputs/v2/01-taobao-main-v2.png",
+        "outputs/v2/render_taobao_main.py"
+      ]
+    },
+    {
+      "id": "selling_sentence_grounding",
+      "status": "pass",
+      "method": "Copy-to-input fact comparison",
+      "result": "The sentence uses only supplied facts: founded in 1998, signature category Chinese pastries, and required gifting relevance. It introduces no production-method, ingredient, health, freshness, or performance claim.",
+      "evidence_paths": [
+        "outputs/v2/delta-notes.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "localized_render_delta",
+      "status": "pass",
+      "method": "Pillow pixel difference between the clean fitted background and final main image",
+      "result": {
+        "difference_bounding_box": [500, 707, 1091, 784],
+        "changed_pixel_ratio": 0.006415,
+        "interpretation": "Deterministic changes are confined to the one-line copy and its short rule; 99.3585% of fitted background pixels are unchanged."
+      },
+      "evidence_paths": [
+        "outputs/v2/assets/taobao-main-clean-background.png",
+        "outputs/v2/01-taobao-main-v2.png",
+        "outputs/v2/render_taobao_main.py"
+      ]
+    },
+    {
+      "id": "logo_integrity",
+      "status": "pass_for_concept_blocked_for_final_placement",
+      "method": "Prompt, renderer, and final-image inspection",
+      "result": "No Logo or wordmark was generated, redrawn, moved, or altered. The approved upper identity area remains empty because the source Logo/Chinese wordmark file is still unavailable.",
+      "evidence_paths": [
+        "inputs/01-current_logo_and_identity.png",
+        "outputs/v2/01-taobao-main-v2.png",
+        "outputs/v2/render_taobao_main.py"
+      ]
+    },
+    {
+      "id": "format_and_visual_qa",
+      "status": "pass",
+      "method": "Pillow decode, dimension inspection, and manual visual review",
+      "result": "Final main image is 1200x1500 RGB, an exact 4:5 ratio. The single sentence is legible, remains on one line, and is not clipped or overlapped by the food crops.",
+      "evidence_paths": [
+        "outputs/v2/01-taobao-main-v2.png"
+      ]
+    },
+    {
+      "id": "state_integrity",
+      "status": "pass",
+      "method": "JSON parse and required-field inspection",
+      "result": "outputs/project-state.json parses successfully and records current_version v2, approved gift-box and visual-system locks, the localized change list, artifact paths, and unresolved blockers.",
+      "evidence_paths": [
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "artifact_integrity",
+      "status": "pass",
+      "method": "Filesystem existence, non-zero size, image decode, and checksum review",
+      "result": {
+        "outputs/v2/01-taobao-main-v2.png": "1200x1500 RGB",
+        "outputs/v2/assets/taobao-main-clean-background.png": "1122x1402 RGB",
+        "outputs/v2/delta-notes.md": "present",
+        "outputs/v2/imagegen-prompts.md": "present",
+        "outputs/v2/render_taobao_main.py": "present"
+      },
+      "evidence_paths": [
+        "outputs/v2/01-taobao-main-v2.png",
+        "outputs/v2/assets/taobao-main-clean-background.png",
+        "outputs/v2/delta-notes.md",
+        "outputs/v2/imagegen-prompts.md",
+        "outputs/v2/render_taobao_main.py"
+      ]
+    }
+  ],
+  "checksums": {
+    "outputs/v2/01-taobao-main-v2.png": "cbdef0a964e5f28708d0d5bdba700c495191be182fb08634d0551f0f977f4fc3",
+    "outputs/v2/assets/taobao-main-clean-background.png": "ec37a9b27c15d737e598fc39420fc4472aeb645409851b1252c6c877109ca71c",
+    "outputs/v2/delta-notes.md": "5cdfd84c21c26580c428ee1aa78d4a069c7475568078bdef5c71f931d807d39e",
+    "outputs/v2/imagegen-prompts.md": "83555710bbcf4336642700b60c15dd20e988f9d8deb07a01d7314417f9f8b470",
+    "outputs/v2/render_taobao_main.py": "d474891c2ac97987544cca43f41d23a3cb915b407144811644d079c82a93d014"
+  },
+  "unresolved_blockers": [
+    {
+      "blocker": "Approved Chinese wordmark and vector/transparent Logo source are absent.",
+      "impact": "The locked identity cannot yet be literally placed and verified in the reserved identity area.",
+      "required_input": "Provide the approved Logo and Chinese wordmark source files."
+    },
+    {
+      "blocker": "No production-approved selling sentence was supplied.",
+      "impact": "The factual v2 sentence remains subject to client/legal copy approval.",
+      "required_input": "Approve ‘始于 1998，中式酥点成礼。’ or provide replacement copy."
+    },
+    {
+      "blocker": "Actual product photography and Taobao delivery/safe-area requirements are absent.",
+      "impact": "Production color, crop, mandatory platform copy, and final safe areas cannot be validated.",
+      "required_input": "Provide approved product images and Taobao delivery specifications."
+    },
+    {
+      "blocker": "The Friday deadline is ambiguous.",
+      "impact": "The proposal schedule is not locked.",
+      "required_input": "Confirm whether the intended proposal date is 2026-08-28 Asia/Shanghai."
+    }
+  ]
+}

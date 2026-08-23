@@ -1,0 +1,53 @@
+{
+  "current_version": "v0",
+  "workflow_status": "evaluation_complete_recommendation_awaiting_client_confirmation",
+  "client_decisions": {
+    "candidate_scope": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "criteria": [
+      "现代感",
+      "友好度",
+      "小尺寸识别",
+      "品类独特性"
+    ],
+    "criteria_weighting": "equal",
+    "no_fifth_concept": true,
+    "client_selected_candidate": null
+  },
+  "agent_recommendation": {
+    "candidate": "C",
+    "status": "pending_client_confirmation",
+    "score": 32,
+    "maximum_score": 40
+  },
+  "locked_items": [
+    "Evaluation is limited to candidates A-D.",
+    "The four supplied criteria have equal weight.",
+    "No fifth logo concept may be generated."
+  ],
+  "changed_items": [
+    "Created the v0 evaluation and structured scorecard.",
+    "Created analysis-only 32 px symbol crops for small-size verification.",
+    "No candidate logo artwork was edited."
+  ],
+  "next_checkpoint": {
+    "required_input": "Client confirmation or rejection of candidate C before any next-round design edit.",
+    "proposed_edit_scope_if_confirmed": "Small-size optical correction of C only; preserve concept, silhouette, palette, wordmark, and composition."
+  },
+  "artifact_paths": [
+    "./outputs/v0/noma-logo-evaluation-v0.md",
+    "./outputs/v0/noma-logo-scorecard-v0.json",
+    "./outputs/v0/small-size-A-32px-check.png",
+    "./outputs/v0/small-size-B-32px-check.png",
+    "./outputs/v0/small-size-C-32px-check.png",
+    "./outputs/v0/small-size-D-32px-check.png",
+    "./outputs/v0/verification.json"
+  ],
+  "source_paths": [
+    "./inputs/01-logo_candidates.png"
+  ]
+}

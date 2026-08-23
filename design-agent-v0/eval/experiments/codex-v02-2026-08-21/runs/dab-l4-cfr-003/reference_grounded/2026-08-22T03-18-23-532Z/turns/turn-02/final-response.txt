@@ -1,0 +1,9 @@
+v2 已完成：卖点顺序为“低噪运行｜陶土触感｜定时关闭”。产品、主标题、背景、字号及其余区域均与 v1 一致；v0、v1 文件未修改。
+
+新增或更新路径：
+
+- [v2 预览](/private<WORKDIR>/outputs/v2/preview.png)
+- [可编辑对象图](/private<WORKDIR>/outputs/v2/design_document.json)
+- [对象级变更集](/private<WORKDIR>/outputs/v2/change_set.json)
+- [机器验证结果](/private<WORKDIR>/outputs/v2/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)

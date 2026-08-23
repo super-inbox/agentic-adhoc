@@ -1,0 +1,8 @@
+v3 已完成：恢复 v1 顺序“低噪运行｜定时关闭｜陶土触感”，保留正确用字及第三卖点上移 12 px。未整图重生成，v0–v2 均未改动。
+
+- [v3 预览](/private<WORKDIR>/outputs/v3/preview.png)
+- [可编辑 SVG](/private<WORKDIR>/outputs/v3/hero_detail_v3.svg)
+- [对象图](/private<WORKDIR>/outputs/v3/design_document.json)
+- [变更记录](/private<WORKDIR>/outputs/v3/change_set.json)
+- [验证结果](/private<WORKDIR>/outputs/v3/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)

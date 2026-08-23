@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0",
+  "verification_id": "aroma-detail-hero-v3-verification",
+  "version": "v3",
+  "verified_at": "2026-08-23",
+  "overall_status": "pass_with_pending_order_confirmation",
+  "checks": [
+    {
+      "check_id": "required_artifacts.present",
+      "status": "pass",
+      "method": "filesystem existence and nonzero-size check",
+      "result": {
+        "preview.png": true,
+        "design_document.json": true,
+        "change_set.json": true,
+        "verification.json": true
+      },
+      "evidence_paths": [
+        "preview.png",
+        "design_document.json",
+        "change_set.json",
+        "verification.json"
+      ]
+    },
+    {
+      "check_id": "preview.raster_properties",
+      "status": "pass",
+      "method": "Pillow image inspection and SHA-256",
+      "result": {
+        "width": 1080,
+        "height": 1440,
+        "mode": "RGB",
+        "sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44"
+      },
+      "evidence_paths": [
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "delta.restore_v1_order",
+      "status": "pass",
+      "method": "compare features.strip item order across v1, v2, and v3",
+      "result": {
+        "v1_order": [
+          "feature.low_noise",
+          "feature.timer",
+          "feature.clay_touch"
+        ],
+        "v2_order": [
+          "feature.low_noise",
+          "feature.clay_touch",
+          "feature.timer"
+        ],
+        "v3_order": [
+          "feature.low_noise",
+          "feature.timer",
+          "feature.clay_touch"
+        ],
+        "v3_visible_labels": [
+          "低噪运行",
+          "定时关闭",
+          "陶土触感"
+        ],
+        "v3_order_matches_v1": true
+      },
+      "evidence_paths": [
+        "../v1/design_document.json",
+        "../v2/design_document.json",
+        "design_document.json",
+        "change_set.json",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "delta.object_translations",
+      "status": "pass",
+      "method": "compare timer and clay-touch object bounding boxes between v2 and v3",
+      "result": {
+        "feature.timer": {
+          "v2_bbox": [
+            697,
+            1010,
+            314,
+            286
+          ],
+          "v3_bbox": [
+            383,
+            1010,
+            314,
+            286
+          ],
+          "delta": [
+            -314,
+            0
+          ]
+        },
+        "feature.clay_touch": {
+          "v2_bbox": [
+            383,
+            998,
+            313,
+            286
+          ],
+          "v3_bbox": [
+            697,
+            998,
+            313,
+            286
+          ],
+          "delta": [
+            314,
+            0
+          ],
+          "raised_y_position_preserved": true
+        },
+        "only_horizontal_coordinates_changed": true
+      },
+      "evidence_paths": [
+        "../v2/design_document.json",
+        "design_document.json",
+        "change_set.json"
+      ]
+    },
+    {
+      "check_id": "preserve.v2_corrected_spelling",
+      "status": "pass",
+      "method": "compare feature.low_noise label between v2 and v3",
+      "result": {
+        "v2_value": "低噪运行",
+        "v3_value": "低噪运行",
+        "corrected_character_preserved": true,
+        "feature.low_noise_object_equal": true
+      },
+      "evidence_paths": [
+        "../v2/design_document.json",
+        "design_document.json",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "preserve.third_feature_raised_position",
+      "status": "pass",
+      "method": "compare feature.clay_touch y coordinate between v2 and v3 and against the retained v1 value",
+      "result": {
+        "v1_y": 998,
+        "v2_y": 998,
+        "v3_y": 998,
+        "delta_from_v0_y": -12,
+        "position_preserved": true
+      },
+      "evidence_paths": [
+        "../v0/design_document.json",
+        "../v1/design_document.json",
+        "../v2/design_document.json",
+        "design_document.json"
+      ]
+    },
+    {
+      "check_id": "delta.pixel_isolation",
+      "status": "pass",
+      "method": "RGB pixel difference between v2/preview.png and v3/preview.png, then clear the permitted second/third-feature rectangle and assert no remaining difference",
+      "result": {
+        "changed_pixel_count": 18871,
+        "difference_bbox": [
+          479,
+          1045,
+          915,
+          1222
+        ],
+        "permitted_change_rect": [
+          383,
+          998,
+          1011,
+          1296
+        ],
+        "difference_outside_permitted_rect": null,
+        "only_requested_visual_region_changed": true
+      },
+      "evidence_paths": [
+        "../v2/preview.png",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "reference.v1_visual_match",
+      "status": "pass",
+      "method": "full-canvas RGB pixel comparison and SHA-256 equality between v1 and v3 previews",
+      "result": {
+        "difference_bbox": null,
+        "v1_sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44",
+        "v3_sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44",
+        "binary_equal": true
+      },
+      "evidence_paths": [
+        "../v1/preview.png",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "no_full_image_regeneration",
+      "status": "pass",
+      "method": "render-method record plus binary equality of renderer, background, generation prompt, and product source between v2 and v3",
+      "result": {
+        "change_set_full_image_regeneration": false,
+        "method": "editable object-graph update plus deterministic rerender",
+        "renderer_binary_equal": true,
+        "background_binary_equal": true,
+        "generation_prompt_binary_equal": true,
+        "product_source_binary_equal": true
+      },
+      "evidence_paths": [
+        "change_set.json",
+        "../v2/render_design.py",
+        "render_design.py",
+        "../v2/generated_warm_paper.png",
+        "generated_warm_paper.png",
+        "../v2/product_source_exact.png",
+        "product_source_exact.png"
+      ]
+    },
+    {
+      "check_id": "preserve.product_headline_background_and_sizes",
+      "status": "pass",
+      "method": "object equality, token equality, binary equality, and pixel-difference isolation between v2 and v3",
+      "result": {
+        "background.paper_equal": true,
+        "background.veil_equal": true,
+        "hero.media_frame_equal": true,
+        "product.photo_equal": true,
+        "headline_equal": true,
+        "headline.accent_equal": true,
+        "color_tokens_equal": true,
+        "typography_tokens_equal": true,
+        "headline_size_v2": 74,
+        "headline_size_v3": 74,
+        "feature_label_size_v2": 31,
+        "feature_label_size_v3": 31,
+        "preview_regions_outside_features_equal": true
+      },
+      "evidence_paths": [
+        "../v2/design_document.json",
+        "design_document.json",
+        "../v2/preview.png",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "prior_versions.immutable",
+      "status": "pass",
+      "method": "compare every v0, v1, and v2 artifact SHA-256 to the recorded pre-v3 baselines",
+      "result": {
+        "all_v0_hashes_unchanged": true,
+        "all_v1_hashes_unchanged": true,
+        "all_v2_hashes_unchanged": true,
+        "v2_hashes": {
+          "change_set.json": "5c1af99b569f27ee618239ec3f911ded7c42d0c0fba2f5c76025fdd945008b9e",
+          "design_document.json": "08bd061661cacacef86357f6cb9e4e1b43e86faf25665b6b1ded51b22ea10e7f",
+          "generated_warm_paper.png": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99",
+          "generation_prompt.txt": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c",
+          "preview.png": "7916b9d726421043d95206df5d797d41eb11e59e8e2f6ac29fe772e785527d3d",
+          "product_source_exact.png": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+          "render_design.py": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876",
+          "verification.json": "093418a9548f37bdefd3de264251277f1875b70f2100fd4a0ebd9afe62acaa3a"
+        }
+      },
+      "evidence_paths": [
+        "../v0",
+        "../v1",
+        "../v2"
+      ]
+    },
+    {
+      "check_id": "editable_graph.integrity",
+      "status": "pass",
+      "method": "JSON parse, stable object-ID uniqueness, change-set target resolution, and deterministic rerender",
+      "result": {
+        "json_parses": true,
+        "object_ids_unique": true,
+        "all_change_set_object_ids_resolve": true,
+        "renderer_reproduces_preview": true
+      },
+      "evidence_paths": [
+        "design_document.json",
+        "change_set.json",
+        "render_design.py"
+      ]
+    },
+    {
+      "check_id": "visual.review",
+      "status": "pass",
+      "method": "original-resolution visual inspection",
+      "result": {
+        "visible_order_correct": true,
+        "low_noise_spelling_correct": true,
+        "clay_touch_remains_raised": true,
+        "no_clipping": true,
+        "product_unchanged": true,
+        "headline_unchanged": true,
+        "background_unchanged": true
+      },
+      "evidence_paths": [
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "version_state.recorded",
+      "status": "pass",
+      "method": "project-state inspection",
+      "result": {
+        "current_version": "v3",
+        "v0_retained": true,
+        "v1_retained": true,
+        "v2_retained": true,
+        "v3_added": true,
+        "no_regeneration_recorded": true,
+        "next_checkpoint": "client_review_v3_order_reversion"
+      },
+      "evidence_paths": [
+        "../project-state.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "blocker_id": "client_confirmation.v3_order",
+      "severity": "workflow_checkpoint",
+      "status": "open",
+      "description": "The client has not yet visually confirmed the restored v3 selling-point order.",
+      "scope": "features.strip item order only"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "poster",
+    "asset_id": "image-edit-poster-summer-form",
+    "role": "revision_target",
+    "reference_role": "edit_target",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "01-revision_target.png",
+    "source_path": "eval/assets/reference-pack-v0.2/image-edit/poster-summer-form.png",
+    "byte_size": 1388454,
+    "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "schema_version": "codex-design-agent-v02-partial-v1",
+  "last_archived_turn": 0,
+  "artifact_count": 23,
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2606,
+      "sha256": "a6371aa68a9e993265d70299f5c515a941ab8a5ef20b42cd9573b1268533cd75"
+    },
+    {
+      "filename": "v0/assets/mori-wordmark-exact-crop.png",
+      "byte_size": 36400,
+      "sha256": "97e30e7794c95590021be690379e1314b149598f56b7aa0bfb286c15ce079dfb"
+    },
+    {
+      "filename": "v0/assets/territory-a-quiet-geometry-bg.png",
+      "byte_size": 2633722,
+      "sha256": "f71ca1b1f44e9bd2c6f687795227d693c458ffa85161ad1e07e71ebd31b0223b"
+    },
+    {
+      "filename": "v0/assets/territory-b-tactile-ritual-bg.png",
+      "byte_size": 2781779,
+      "sha256": "cc523b6acc0be4db24012ea2e9dc4db3162d461f7574b942682c0a255fcb2b3c"
+    },
+    {
+      "filename": "v0/assets/territory-c-afterglow-bg.png",
+      "byte_size": 1979746,
+      "sha256": "ab394990120453a226173cc91920813942c5203873e6601a9f9c6f984f1fdb0c"
+    },
+    {
+      "filename": "v0/boards/mori-kv-territories-overview.png",
+      "byte_size": 1017466,
+      "sha256": "0fa3ff4d321ff9dec592a4dce7aca4565fcf55528978b5cc103c5ea49c34686e"
+    },
+    {
+      "filename": "v0/boards/territory-a-quiet-geometry.png",
+      "byte_size": 846317,
+      "sha256": "7259c157f8e3571d065fe4b801c3a81ed687c7e074b48e6fd5e954829e866add"
+    },
+    {
+      "filename": "v0/boards/territory-b-tactile-ritual.png",
+      "byte_size": 1009926,
+      "sha256": "bf8d1b436572645c7691932e29aa13f868532505a1ecdaf706a044ff1cdeb5f1"
+    },
+    {
+      "filename": "v0/boards/territory-c-afterglow.png",
+      "byte_size": 735263,
+      "sha256": "96010c9251076f375bfd46914d215574c9da973661026005aedda1bba1cb9dcf"
+    },
+    {
+      "filename": "v0/build_review_pdf.py",
+      "byte_size": 13938,
+      "sha256": "89e0f12076a6dc8699063a469369378069aab5fb4c05c9f15d46ee95203fdf45"
+    },
+    {
+      "filename": "v0/candidates/a1-horizon-field.png",
+      "byte_size": 1592613,
+      "sha256": "2176aa3b367b3f3a115a22a823eca84e9b4da16257d4b12a1e0e598ec8b48bb6"
+    },
+    {
+      "filename": "v0/candidates/a2-breathing-frame.png",
+      "byte_size": 972731,
+      "sha256": "f85e3133c62b269fc0d238ec2c7aa229e53352c70569d01bff8db0bb3409d631"
+    },
+    {
+      "filename": "v0/candidates/a3-cadence-blocks.png",
+      "byte_size": 1143050,
+      "sha256": "149ec967fcc6d7298177fba3013c0c6ffd82f8f0c8563c5660789196d92e22a3"
+    },
+    {
+      "filename": "v0/candidates/b1-linen-fold.png",
+      "byte_size": 1751452,
+      "sha256": "5d1ae231a3f8e42c20dcd9eed4c351813eb3ede11ee52224eb86665ba74a1e4c"
+    },
+    {
+      "filename": "v0/candidates/b2-paper-window.png",
+      "byte_size": 1521578,
+      "sha256": "f7d9b16841fa93eb4456c354a22a52934edcc3df2f084f56d796e909a96c12f2"
+    },
+    {
+      "filename": "v0/candidates/b3-ceramic-marker.png",
+      "byte_size": 1398536,
+      "sha256": "64acc2107dc871105a3e9416f0a3eb3509a36daf9a9ba67e98922f066765c5d8"
+    },
+    {
+      "filename": "v0/candidates/c1-dusk-split.png",
+      "byte_size": 1339910,
+      "sha256": "00be7a8eef8c9983fba36bcb9018f05e6b52bb5f90864dba5679ab484875ea07"
+    },
+    {
+      "filename": "v0/candidates/c2-ember-halo.png",
+      "byte_size": 666639,
+      "sha256": "4863ed6f19555ea80009879a9b6f1ced6e720d791343a1429940aecbafd83919"
+    },
+    {
+      "filename": "v0/candidates/c3-quiet-threshold.png",
+      "byte_size": 818142,
+      "sha256": "bdeeb5dc6a28b6734a441660c960f74620f0f639a660e2a5b42615e59f288b46"
+    },
+    {
+      "filename": "v0/imagegen-prompts.md",
+      "byte_size": 4558,
+      "sha256": "805236bcc2779533a15d6ecd9d24503f1c9fb1bffd10adc4eb52e5b7748152c6"
+    },
+    {
+      "filename": "v0/kv-hypotheses.md",
+      "byte_size": 2976,
+      "sha256": "8371496002fdf45a43146f80b6bdef4843c03a8dc48436dc4ca242e49c9baea7"
+    },
+    {
+      "filename": "v0/mori-night-fragrance-kv-hypotheses-v0.pdf",
+      "byte_size": 13329701,
+      "sha256": "27ec219c768d1a4b9dcf63b8e7f8f03e6483b330a180f3253986f5951de3e9fb"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4478,
+      "sha256": "b1da7d0f717a4e1ec4fddc7755b9b12df62da884bb43fafc53946034bd3add21"
+    }
+  ],
+  "updated_at": "2026-08-23T14:12:01.225Z"
+}

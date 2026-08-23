@@ -1,0 +1,148 @@
+{
+  "version": "v1",
+  "status": "passed",
+  "source": {
+    "path": "inputs/01-revision_target.png",
+    "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a",
+    "dimensions": "928 x 1152 RGB PNG"
+  },
+  "requested_delta": [
+    "Scale only the bottom-right logo down by approximately 20 percent.",
+    "Make only the warm off-white poster-sheet background paper texture finer and subtler.",
+    "Keep the title font unchanged.",
+    "Keep the approved blue/coral palette unchanged."
+  ],
+  "locked_invariants": [
+    "composition and grid geometry",
+    "title typography and all approved copy",
+    "date and location",
+    "all colored artwork outside the logo",
+    "central folded-paper object and shadow",
+    "outer scene, poster edges, framing, and cast shadow",
+    "no new text, selling points, marks, or graphics"
+  ],
+  "checks_performed": [
+    {
+      "check": "output_dimensions_match_source",
+      "result": "pass",
+      "details": "Source and final are both 928 x 1152 RGB PNG files.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "changes_confined_to_approved_regions",
+      "result": "pass",
+      "details": "0 changed pixels were found outside the neutral poster-paper mask and bottom-right logo region.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-v1-diff-mask.png",
+        "outputs/v1/intermediate/paper-edit-mask.png",
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "logo_scaled_down_approximately_20_percent",
+      "result": "pass",
+      "details": "Measured saturated logo bounds changed from 161 x 161 px to 128 x 127 px (79.50% width, 78.88% height). Center delta is -0.5 px horizontally and 0.0 px vertically.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v1/summer-form-poster-v1-comparison.png",
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "logo_palette_preserved",
+      "result": "pass",
+      "details": "The resized logo uses the original extracted layer. Median coral RGB stayed [232,119,98]; median blue changed only from [53,82,150] to [54,82,151] through resampling, with the hue relationship preserved.",
+      "evidence_paths": [
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "poster_paper_texture_refined",
+      "result": "pass",
+      "details": "In the clean paper sample at [390,165,540,205], fine-grain standard deviation decreased from 0.7267 to 0.5210 and mid-grain standard deviation from 0.8982 to 0.5778, while mean luminance changed only from 237.7805 to 237.7728.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "title_font_and_letterforms_preserved",
+      "result": "pass",
+      "details": "Masked title-ink hashes are identical before and after: 22dfaaa7a991ee8ea0d2b58c6b02690c0270ff1b1d998929b0720dcf30695c68.",
+      "evidence_paths": [
+        "inputs/01-revision_target.png",
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "event_information_preserved",
+      "result": "pass",
+      "details": "Masked event-information ink hashes are identical before and after: e982aac48beb67b8153c8c9d9e1bf2c0319961026ee29548087c89493d840241.",
+      "evidence_paths": [
+        "inputs/01-revision_target.png",
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "approved_colored_art_preserved",
+      "result": "pass",
+      "details": "All protected blue/coral artwork outside the logo has a maximum channel difference of 0.",
+      "evidence_paths": [
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "unrelated_regions_preserved",
+      "result": "pass",
+      "details": "The outer scene and the central folded-paper exclusion region each have 0 changed pixels.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-v1-diff-mask.png",
+        "outputs/v1/intermediate/local-edit-metrics.json"
+      ]
+    },
+    {
+      "check": "prior_version_folder_unchanged",
+      "result": "pass",
+      "details": "v0 hashes remain revision-interpretation.md 146f3337a102a3ade215cbb23b47ab14706049cdfce013781e3b78d7da5431e4 and verification.json 1e4c3fe82f6c7a718eb1d6f19425a6f7d2940a1821daf50e2a2b721227722c36.",
+      "evidence_paths": [
+        "outputs/v0/revision-interpretation.md",
+        "outputs/v0/verification.json"
+      ]
+    },
+    {
+      "check": "visual_comparison_reviewed",
+      "result": "pass",
+      "details": "The final and side-by-side comparison were inspected at original resolution; the smaller logo and subtler paper grain are visible with no observed layout or typography drift.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v1/summer-form-poster-v1-comparison.png"
+      ]
+    }
+  ],
+  "generation_provenance": {
+    "mode": "built-in image edit followed by deterministic local compositing onto the approved original",
+    "use_case": "precise-object-edit",
+    "imagegen_source_path": "outputs/v1/intermediate/imagegen-edit-source.png",
+    "imagegen_source_status": "intermediate only; global layout drift was rejected",
+    "final_use": "Only its clean-paper high-frequency texture statistics informed the finer background grain. The logo was extracted from and scaled from the approved original.",
+    "prompt": "Apply exactly two local changes only: scale the bottom-right interlocking logo to approximately 80% around the same center, and refine only the warm off-white poster-sheet paper grain to be finer and subtler. Preserve the title typography exactly, preserve all text verbatim, preserve composition, grid geometry, central folded object, outer scene, and all blue/coral hues; add nothing."
+  },
+  "artifact_paths": {
+    "final_poster": "outputs/v1/summer-form-poster-local-revision-v1.png",
+    "comparison": "outputs/v1/summer-form-poster-v1-comparison.png",
+    "difference_mask": "outputs/v1/summer-form-poster-v1-diff-mask.png",
+    "metrics": "outputs/v1/intermediate/local-edit-metrics.json",
+    "process_script": "outputs/v1/apply-local-revision.py"
+  },
+  "artifact_sha256": {
+    "final_poster": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401",
+    "comparison": "59ffcd41998146adc18c527baced1d861eff56fe74f8149dbb885fd51a6eb113",
+    "difference_mask": "182fc8379cb75306e09aab247c9295564f17f88359ced4c981d8f1220ea4045b"
+  },
+  "unresolved_blockers": []
+}

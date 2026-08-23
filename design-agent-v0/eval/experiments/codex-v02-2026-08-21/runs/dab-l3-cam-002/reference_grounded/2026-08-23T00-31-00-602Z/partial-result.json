@@ -1,0 +1,43 @@
+{
+  "schema_version": "codex-design-agent-v02-partial-v1",
+  "last_archived_turn": 0,
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "filename": "v0/assets/approved-master-source.png",
+      "byte_size": 1388454,
+      "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+    },
+    {
+      "filename": "v0/assets/campaign-mark-approved-tile.png",
+      "byte_size": 63317,
+      "sha256": "c41c78fd47807862c439e81a484e42e435761845f87e0c0986a0df60cdb1cabf"
+    },
+    {
+      "filename": "v0/assets/origami-approved-tile.png",
+      "byte_size": 191551,
+      "sha256": "01b41d9c82157c3aea2a141b0e0563b83246ea6c9094f74740c11d51f2112fc1"
+    },
+    {
+      "filename": "v0/render_design.swift",
+      "byte_size": 15388,
+      "sha256": "07055f85c811ae1fef5ba07fc62a57e72197b470c843613beff365036b3a66dc"
+    },
+    {
+      "filename": "v0/studies/instagram-layout-study.png",
+      "byte_size": 1857235,
+      "sha256": "7c36353013752dda3ec7e1e5925e1fe292ea461ca3854265f8e38829d9e74328"
+    },
+    {
+      "filename": "v0/studies/story-layout-study.png",
+      "byte_size": 1731781,
+      "sha256": "37d45ec71964063329004698c727a07ad940682f531dfe96f4cdceabd6439b14"
+    },
+    {
+      "filename": "v0/studies/website-layout-study.png",
+      "byte_size": 1875104,
+      "sha256": "a38d7788d924b857719bc971024614025766a903a96b6fdb6a9d64deed130cb5"
+    }
+  ],
+  "updated_at": "2026-08-23T00:46:00.636Z"
+}

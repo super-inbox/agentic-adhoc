@@ -1,0 +1,761 @@
+{
+  "schema_version": "1.0",
+  "version": "v0",
+  "overall_status": "pass",
+  "checks": [
+    {
+      "id": "exactly_ten_target_formats",
+      "status": "pass",
+      "details": {
+        "expected_count": 10,
+        "actual_count": 10,
+        "format_ids": [
+          "square_1x1",
+          "portrait_4x5",
+          "portrait_9x16",
+          "landscape_16x9",
+          "landscape_3x2",
+          "portrait_2x3",
+          "a4_portrait",
+          "a3_portrait",
+          "social_1200x628",
+          "banner_1920x480"
+        ]
+      },
+      "evidence_paths": [
+        "outputs/v0/design_document.json"
+      ]
+    },
+    {
+      "id": "png_dimensions",
+      "status": "pass",
+      "details": [
+        {
+          "format_id": "square_1x1",
+          "expected": [
+            1080,
+            1080
+          ],
+          "actual": [
+            1080,
+            1080
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_4x5",
+          "expected": [
+            1080,
+            1350
+          ],
+          "actual": [
+            1080,
+            1350
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_9x16",
+          "expected": [
+            1080,
+            1920
+          ],
+          "actual": [
+            1080,
+            1920
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "landscape_16x9",
+          "expected": [
+            1920,
+            1080
+          ],
+          "actual": [
+            1920,
+            1080
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "landscape_3x2",
+          "expected": [
+            1500,
+            1000
+          ],
+          "actual": [
+            1500,
+            1000
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_2x3",
+          "expected": [
+            1000,
+            1500
+          ],
+          "actual": [
+            1000,
+            1500
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "a4_portrait",
+          "expected": [
+            2480,
+            3508
+          ],
+          "actual": [
+            2480,
+            3508
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "a3_portrait",
+          "expected": [
+            3508,
+            4961
+          ],
+          "actual": [
+            3508,
+            4961
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "social_1200x628",
+          "expected": [
+            1200,
+            628
+          ],
+          "actual": [
+            1200,
+            628
+          ],
+          "pass": true
+        },
+        {
+          "format_id": "banner_1920x480",
+          "expected": [
+            1920,
+            480
+          ],
+          "actual": [
+            1920,
+            480
+          ],
+          "pass": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/adaptations"
+      ]
+    },
+    {
+      "id": "paired_editable_svg_and_png",
+      "status": "pass",
+      "details": [
+        {
+          "format_id": "square_1x1",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "portrait_4x5",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "portrait_9x16",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "landscape_16x9",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "landscape_3x2",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "portrait_2x3",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "a4_portrait",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "a3_portrait",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "social_1200x628",
+          "png": true,
+          "svg": true
+        },
+        {
+          "format_id": "banner_1920x480",
+          "png": true,
+          "svg": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/adaptations"
+      ]
+    },
+    {
+      "id": "svg_xml_parse",
+      "status": "pass",
+      "details": [
+        {
+          "format_id": "square_1x1",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "portrait_4x5",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "portrait_9x16",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "landscape_16x9",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "landscape_3x2",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "portrait_2x3",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "a4_portrait",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "a3_portrait",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "social_1200x628",
+          "valid_svg_xml": true
+        },
+        {
+          "format_id": "banner_1920x480",
+          "valid_svg_xml": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/adaptations"
+      ]
+    },
+    {
+      "id": "required_text_complete",
+      "status": "pass",
+      "details": [
+        {
+          "format_id": "square_1x1",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_4x5",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_9x16",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "landscape_16x9",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "landscape_3x2",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_2x3",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "a4_portrait",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "a3_portrait",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "social_1200x628",
+          "text_objects": [
+            "SUMMER",
+            "FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        },
+        {
+          "format_id": "banner_1920x480",
+          "text_objects": [
+            "SUMMER FORM",
+            "Design Market",
+            "08 — 10 AUG",
+            "BROOKLYN"
+          ],
+          "missing": [],
+          "pass": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/design_document.json"
+      ]
+    },
+    {
+      "id": "essential_content_inside_5_percent_safe_area",
+      "status": "pass",
+      "details": [
+        {
+          "format_id": "square_1x1",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_4x5",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_9x16",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "landscape_16x9",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "landscape_3x2",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_2x3",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "a4_portrait",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "a3_portrait",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "social_1200x628",
+          "violations": [],
+          "pass": true
+        },
+        {
+          "format_id": "banner_1920x480",
+          "violations": [],
+          "pass": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/design_document.json"
+      ]
+    },
+    {
+      "id": "main_visual_uniform_scale_no_regeneration",
+      "status": "pass",
+      "details": [
+        {
+          "format_id": "square_1x1",
+          "scale_x": 1.703077,
+          "scale_y": 1.703077,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "portrait_4x5",
+          "scale_x": 1.786154,
+          "scale_y": 1.786154,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "portrait_9x16",
+          "scale_x": 2.201538,
+          "scale_y": 2.201538,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "landscape_16x9",
+          "scale_x": 1.883077,
+          "scale_y": 1.883077,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "landscape_3x2",
+          "scale_x": 1.471154,
+          "scale_y": 1.471154,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "portrait_2x3",
+          "scale_x": 1.653846,
+          "scale_y": 1.653846,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "a4_portrait",
+          "scale_x": 4.101538,
+          "scale_y": 4.101538,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "a3_portrait",
+          "scale_x": 5.801692,
+          "scale_y": 5.801692,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "social_1200x628",
+          "scale_x": 1.176923,
+          "scale_y": 1.176923,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        },
+        {
+          "format_id": "banner_1920x480",
+          "scale_x": 1.3056,
+          "scale_y": 1.3056,
+          "delta": 0.0,
+          "pixel_regeneration": false,
+          "pass": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/assets/main_visual_source_crop.png",
+        "outputs/v0/design_document.json"
+      ]
+    },
+    {
+      "id": "main_visual_crop_pixel_identity",
+      "status": "pass",
+      "details": {
+        "source_crop_px": [
+          200,
+          580,
+          460,
+          830
+        ],
+        "pixel_dimensions": [
+          260,
+          250
+        ],
+        "pixel_difference_bbox": null
+      },
+      "evidence_paths": [
+        "inputs/01-approved_master.png",
+        "outputs/v0/assets/main_visual_source_crop.png"
+      ]
+    },
+    {
+      "id": "blue_orange_palette_preserved",
+      "status": "pass",
+      "details": [
+        {
+          "format_id": "square_1x1",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_4x5",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_9x16",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "landscape_16x9",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "landscape_3x2",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "portrait_2x3",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "a4_portrait",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "a3_portrait",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "social_1200x628",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        },
+        {
+          "format_id": "banner_1920x480",
+          "used_colors": [
+            "#2A3F75",
+            "#3A5AA5",
+            "#EA7862",
+            "#F2EEE4",
+            "none"
+          ],
+          "disallowed": [],
+          "pass": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "ratio_specific_relayout_not_simple_stretch",
+      "status": "pass",
+      "details": {
+        "distinct_layout_strategies": [
+          "landscape_three_zone",
+          "portrait_modular",
+          "portrait_tall",
+          "square_editorial",
+          "ultrawide_linear"
+        ],
+        "count": 5
+      },
+      "evidence_paths": [
+        "outputs/v0/change_set.json",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "preview_generated",
+      "status": "pass",
+      "details": {
+        "path": "outputs/v0/preview.png",
+        "dimensions": [
+          2160,
+          1800
+        ]
+      },
+      "evidence_paths": [
+        "outputs/v0/preview.png"
+      ]
+    }
+  ],
+  "evidence_paths": [
+    "outputs/v0/adaptations/01_square_1x1_1080x1080.png",
+    "outputs/v0/adaptations/01_square_1x1_1080x1080.svg",
+    "outputs/v0/adaptations/02_portrait_4x5_1080x1350.png",
+    "outputs/v0/adaptations/02_portrait_4x5_1080x1350.svg",
+    "outputs/v0/adaptations/03_portrait_9x16_1080x1920.png",
+    "outputs/v0/adaptations/03_portrait_9x16_1080x1920.svg",
+    "outputs/v0/adaptations/04_landscape_16x9_1920x1080.png",
+    "outputs/v0/adaptations/04_landscape_16x9_1920x1080.svg",
+    "outputs/v0/adaptations/05_landscape_3x2_1500x1000.png",
+    "outputs/v0/adaptations/05_landscape_3x2_1500x1000.svg",
+    "outputs/v0/adaptations/06_portrait_2x3_1000x1500.png",
+    "outputs/v0/adaptations/06_portrait_2x3_1000x1500.svg",
+    "outputs/v0/adaptations/07_a4_portrait_2480x3508.png",
+    "outputs/v0/adaptations/07_a4_portrait_2480x3508.svg",
+    "outputs/v0/adaptations/08_a3_portrait_3508x4961.png",
+    "outputs/v0/adaptations/08_a3_portrait_3508x4961.svg",
+    "outputs/v0/adaptations/09_social_1200x628.png",
+    "outputs/v0/adaptations/09_social_1200x628.svg",
+    "outputs/v0/adaptations/10_banner_1920x480.png",
+    "outputs/v0/adaptations/10_banner_1920x480.svg",
+    "outputs/v0/change_set.json",
+    "outputs/v0/design_document.json",
+    "outputs/v0/preview.png"
+  ],
+  "unresolved_blockers": [],
+  "quality_warnings": [
+    {
+      "id": "approved_master_raster_resolution",
+      "severity": "warning",
+      "message": "The supplied approved master is 928×1152 px. A4/A3 PNGs are rendered at 300 dpi dimensions, but the embedded key visual remains limited by the approved source pixels to honor the no-regeneration constraint.",
+      "mitigation": "Editable SVGs link the untouched source crop and avoid non-uniform scaling; replace the linked asset with a higher-resolution approved master if print-close inspection requires it."
+    }
+  ]
+}

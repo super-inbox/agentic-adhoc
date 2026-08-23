@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1440" viewBox="0 0 1080 1440">
+  <rect width="1080" height="1440" fill="#EEE9D5"/>
+  <image x="0" y="0" width="1080" height="1440" preserveAspectRatio="xMidYMid slice" xlink:href="xiaohongshu-background-approved-v0-v1.png"/>
+
+  <text x="72" y="116"
+        font-family="Avenir Next, Avenir, Helvetica, sans-serif"
+        font-size="58" font-weight="600" letter-spacing="12"
+        fill="#393937">MORI</text>
+
+  <text x="540" y="330" text-anchor="middle"
+        font-family="PingFang SC, Hiragino Sans GB, sans-serif"
+        font-size="66" font-weight="600" letter-spacing="2"
+        fill="#393937">安静设计，自然融入日常</text>
+
+  <rect x="488" y="365" width="104" height="8" rx="4" fill="#AF543F"/>
+</svg>

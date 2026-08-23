@@ -1,0 +1,280 @@
+{
+  "schema": "summer-form.verification/v1",
+  "version": "v0",
+  "overall_status": "pass",
+  "checks": [
+    {
+      "id": "website.dimensions",
+      "status": "pass",
+      "expected": [
+        1200,
+        628
+      ],
+      "actual": [
+        1200,
+        628
+      ],
+      "evidence": "outputs/v0/website_card_1200x628.png"
+    },
+    {
+      "id": "website.required_copy",
+      "status": "pass",
+      "required": [
+        "SUMMER",
+        "FORM",
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "missing": [],
+      "evidence": "outputs/v0/website_card_1200x628.svg"
+    },
+    {
+      "id": "website.safe_margin",
+      "status": "pass",
+      "minimum_px": 64,
+      "essential_object_violations": [],
+      "evidence": "outputs/v0/design_document.json"
+    },
+    {
+      "id": "website.no_image_stretch",
+      "status": "pass",
+      "violations": [],
+      "method": "All raster objects use preserveAspectRatio=xMidYMid meet.",
+      "evidence": "outputs/v0/website_card_1200x628.svg"
+    },
+    {
+      "id": "website.no_text_stretch",
+      "status": "pass",
+      "violations": [],
+      "method": "Editable text nodes have no transform attribute; size changes are font-size based.",
+      "evidence": "outputs/v0/website_card_1200x628.svg"
+    },
+    {
+      "id": "website.palette",
+      "status": "pass",
+      "expected": [
+        "#273D70",
+        "#3A5CA3",
+        "#EF7D66",
+        "#F3EFE6"
+      ],
+      "missing": [],
+      "evidence": "outputs/v0/website_card_1200x628.svg"
+    },
+    {
+      "id": "website.editable_object_graph",
+      "status": "pass",
+      "missing_svg_ids": [],
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/website_card_1200x628.svg"
+      ]
+    },
+    {
+      "id": "instagram.dimensions",
+      "status": "pass",
+      "expected": [
+        1080,
+        1350
+      ],
+      "actual": [
+        1080,
+        1350
+      ],
+      "evidence": "outputs/v0/instagram_post_1080x1350.png"
+    },
+    {
+      "id": "instagram.required_copy",
+      "status": "pass",
+      "required": [
+        "SUMMER",
+        "FORM",
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "missing": [],
+      "evidence": "outputs/v0/instagram_post_1080x1350.svg"
+    },
+    {
+      "id": "instagram.safe_margin",
+      "status": "pass",
+      "minimum_px": 64,
+      "essential_object_violations": [],
+      "evidence": "outputs/v0/design_document.json"
+    },
+    {
+      "id": "instagram.no_image_stretch",
+      "status": "pass",
+      "violations": [],
+      "method": "All raster objects use preserveAspectRatio=xMidYMid meet.",
+      "evidence": "outputs/v0/instagram_post_1080x1350.svg"
+    },
+    {
+      "id": "instagram.no_text_stretch",
+      "status": "pass",
+      "violations": [],
+      "method": "Editable text nodes have no transform attribute; size changes are font-size based.",
+      "evidence": "outputs/v0/instagram_post_1080x1350.svg"
+    },
+    {
+      "id": "instagram.palette",
+      "status": "pass",
+      "expected": [
+        "#273D70",
+        "#3A5CA3",
+        "#EF7D66",
+        "#F3EFE6"
+      ],
+      "missing": [],
+      "evidence": "outputs/v0/instagram_post_1080x1350.svg"
+    },
+    {
+      "id": "instagram.editable_object_graph",
+      "status": "pass",
+      "missing_svg_ids": [],
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/instagram_post_1080x1350.svg"
+      ]
+    },
+    {
+      "id": "story.dimensions",
+      "status": "pass",
+      "expected": [
+        1080,
+        1920
+      ],
+      "actual": [
+        1080,
+        1920
+      ],
+      "evidence": "outputs/v0/story_1080x1920.png"
+    },
+    {
+      "id": "story.required_copy",
+      "status": "pass",
+      "required": [
+        "SUMMER",
+        "FORM",
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "missing": [],
+      "evidence": "outputs/v0/story_1080x1920.svg"
+    },
+    {
+      "id": "story.safe_margin",
+      "status": "pass",
+      "minimum_px": 64,
+      "essential_object_violations": [],
+      "evidence": "outputs/v0/design_document.json"
+    },
+    {
+      "id": "story.no_image_stretch",
+      "status": "pass",
+      "violations": [],
+      "method": "All raster objects use preserveAspectRatio=xMidYMid meet.",
+      "evidence": "outputs/v0/story_1080x1920.svg"
+    },
+    {
+      "id": "story.no_text_stretch",
+      "status": "pass",
+      "violations": [],
+      "method": "Editable text nodes have no transform attribute; size changes are font-size based.",
+      "evidence": "outputs/v0/story_1080x1920.svg"
+    },
+    {
+      "id": "story.palette",
+      "status": "pass",
+      "expected": [
+        "#273D70",
+        "#3A5CA3",
+        "#EF7D66",
+        "#F3EFE6"
+      ],
+      "missing": [],
+      "evidence": "outputs/v0/story_1080x1920.svg"
+    },
+    {
+      "id": "story.editable_object_graph",
+      "status": "pass",
+      "missing_svg_ids": [],
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/story_1080x1920.svg"
+      ]
+    },
+    {
+      "id": "shared.approved_asset_crops",
+      "status": "pass",
+      "assets": [
+        {
+          "path": "outputs/v0/assets/approved_origami_crop.png",
+          "expected": [
+            265,
+            245
+          ],
+          "actual": [
+            265,
+            245
+          ],
+          "source_pixel_sha256": "c4c3ae63e9aaea5bcb6ac995960970f422904a33c417ddf984315cf71aae1953",
+          "asset_pixel_sha256": "c4c3ae63e9aaea5bcb6ac995960970f422904a33c417ddf984315cf71aae1953",
+          "pixel_identical_to_source_crop": true,
+          "pass": true
+        },
+        {
+          "path": "outputs/v0/assets/approved_brand_mark_crop.png",
+          "expected": [
+            172,
+            172
+          ],
+          "actual": [
+            172,
+            172
+          ],
+          "source_pixel_sha256": "4f6766b1b10e02358f8ca481d5fa223a77a22241438efc450c33cab1f0c9c57f",
+          "asset_pixel_sha256": "4f6766b1b10e02358f8ca481d5fa223a77a22241438efc450c33cab1f0c9c57f",
+          "pixel_identical_to_source_crop": true,
+          "pass": true
+        }
+      ],
+      "method": "Pixel crops copied directly from the approved master; no generative edit or repainting.",
+      "evidence": [
+        "inputs/01-campaign_master.png",
+        "outputs/v0/assets/approved_origami_crop.png",
+        "outputs/v0/assets/approved_brand_mark_crop.png"
+      ]
+    },
+    {
+      "id": "shared.object_change_set",
+      "status": "pass",
+      "operation_count": 21,
+      "evidence": "outputs/v0/change_set.json"
+    },
+    {
+      "id": "shared.preview",
+      "status": "pass",
+      "evidence": "outputs/v0/preview.png"
+    }
+  ],
+  "unresolved_blockers": [],
+  "visual_review": {
+    "status": "pass",
+    "evidence": [
+      "outputs/v0/preview.png",
+      "outputs/v0/website_card_1200x628.png",
+      "outputs/v0/instagram_post_1080x1350.png",
+      "outputs/v0/story_1080x1920.png"
+    ],
+    "criteria": {
+      "clear_hierarchy": "pass",
+      "no_visible_clipping": "pass",
+      "approved_hero_intact": "pass",
+      "copy_legible": "pass"
+    }
+  }
+}

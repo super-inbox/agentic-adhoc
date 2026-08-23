@@ -1,0 +1,350 @@
+{
+  "schema_version": "design-document/1.0",
+  "document_id": "aroma-detail-hero-v2",
+  "version": "v2",
+  "base_version": "v1",
+  "created_at": "2026-08-24T00:56:44+08:00",
+  "status": "revision_ready_for_client_confirmation",
+  "client_feedback_delta": {
+    "approved_unchanged": ["product", "headline", "background", "font_sizes", "color", "all slot geometry"],
+    "order_swap": {
+      "before": ["feature-low-noise", "feature-timer", "feature-clay-touch"],
+      "after": ["feature-low-noise", "feature-clay-touch", "feature-timer"],
+      "implementation": "exchange complete second- and third-selling-point objects between the existing slots"
+    },
+    "carried_forward": {
+      "first_selling_point": "低噪运行",
+      "third_slot_translate_y": -12,
+      "unit": "px"
+    }
+  },
+  "canvas": {
+    "width": 1200,
+    "height": 1600,
+    "unit": "px",
+    "orientation": "portrait",
+    "background_token": "color.warm_ivory"
+  },
+  "approved_copy": {
+    "headline": "让香气慢下来。",
+    "selling_points": [
+      "低噪运行",
+      "陶土触感",
+      "定时关闭"
+    ],
+    "policy": "verbatim_only"
+  },
+  "reference_contract": [
+    {
+      "input_id": "layout-a",
+      "file": "../../inputs/01-composition_reference_a.png",
+      "reference_role": "layout_reference",
+      "identity_policy": "abstract_only",
+      "used_for": [
+        "centered product placement",
+        "image-to-headline-to-features information rhythm",
+        "three equal feature cells",
+        "generous vertical breathing room"
+      ],
+      "explicitly_not_used": [
+        "brand wording",
+        "brand name",
+        "feature wording",
+        "icons as copied artwork",
+        "product form"
+      ]
+    },
+    {
+      "input_id": "palette-b",
+      "file": "../../inputs/02-palette_reference_b.png",
+      "reference_role": "brand_system",
+      "identity_policy": "preserve_rules",
+      "used_for": [
+        "warm ivory field",
+        "charcoal typography",
+        "muted terracotta accent",
+        "muted olive accent",
+        "sans-serif-led editorial typography with a restrained serif secondary face"
+      ],
+      "explicitly_not_used": [
+        "logo mark",
+        "brand name",
+        "pattern artwork"
+      ]
+    },
+    {
+      "input_id": "product",
+      "file": "../../inputs/03-product_reference.png",
+      "reference_role": "product_identity",
+      "identity_policy": "preserve_exact",
+      "used_for": [
+        "exact raster identity",
+        "centered placement",
+        "scale"
+      ],
+      "explicitly_not_used": [
+        "shape generation",
+        "recoloring",
+        "material restyling",
+        "retouching"
+      ]
+    }
+  ],
+  "tokens": {
+    "color": {
+      "warm_ivory": "#F3EDDF",
+      "warm_ivory_light": "#F8F3E8",
+      "paper_white": "#FBFAF7",
+      "charcoal": "#2E2E2B",
+      "muted_terracotta": "#B85C43",
+      "muted_olive": "#8A9568"
+    },
+    "typography": {
+      "headline": {
+        "families": [
+          "PingFang SC",
+          "Noto Sans CJK SC",
+          "Heiti SC",
+          "sans-serif"
+        ],
+        "size": 72,
+        "weight": 500,
+        "letter_spacing": 3,
+        "color": "color.charcoal"
+      },
+      "feature_label": {
+        "families": [
+          "Songti SC",
+          "Noto Serif CJK SC",
+          "serif"
+        ],
+        "size": 32,
+        "weight": 500,
+        "letter_spacing": 1,
+        "color": "color.charcoal"
+      }
+    },
+    "radius": {
+      "product_card": 30,
+      "feature_card": 24,
+      "image_clip": 22
+    },
+    "spacing": {
+      "outer_rail": 64,
+      "content_left": 112,
+      "feature_gap": 24.5,
+      "feature_card_width": 309
+    }
+  },
+  "assets": [
+    {
+      "asset_id": "ambient-background-v0",
+      "path": "ambient_background_v0.png",
+      "media_type": "image/png",
+      "sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+      "origin": "built_in_imagegen",
+      "role": "non-identifying atmospheric backdrop",
+      "prompt_summary": "Warm ivory paper texture with a soft terracotta glow and restrained olive transition; no product, text, logo, icon, or brand mark."
+    },
+    {
+      "asset_id": "product-reference-locked",
+      "path": "product_reference_locked.png",
+      "media_type": "image/png",
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "source_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "origin": "exact_copy_of_input_product",
+      "role": "locked product identity"
+    }
+  ],
+  "object_graph": {
+    "root_id": "canvas",
+    "objects": [
+      {
+        "id": "canvas",
+        "type": "artboard",
+        "bounds": {"x": 0, "y": 0, "width": 1200, "height": 1600},
+        "children": [
+          "ambient-background",
+          "background-veil",
+          "editorial-grid",
+          "product-stage",
+          "headline-block",
+          "feature-row",
+          "bottom-rhythm"
+        ]
+      },
+      {
+        "id": "ambient-background",
+        "type": "raster_image",
+        "asset_id": "ambient-background-v0",
+        "bounds": {"x": 0, "y": 0, "width": 1200, "height": 1600},
+        "fit": "cover_center_crop",
+        "opacity": 1,
+        "editable_properties": ["crop_anchor", "opacity"],
+        "source_binding": "palette-b"
+      },
+      {
+        "id": "background-veil",
+        "type": "linear_gradient_overlay",
+        "bounds": {"x": 0, "y": 0, "width": 1200, "height": 1600},
+        "stops": [
+          {"offset": 0, "color": "#F7F2E7", "opacity": 0.86},
+          {"offset": 0.62, "color": "#F3EDDF", "opacity": 0.78},
+          {"offset": 1, "color": "#F3EDDF", "opacity": 0.60}
+        ],
+        "editable_properties": ["stops", "opacity"],
+        "source_binding": "palette-b"
+      },
+      {
+        "id": "editorial-grid",
+        "type": "line_group",
+        "bounds": {"x": 64, "y": 48, "width": 1072, "height": 1504},
+        "stroke": "#2E2E2B",
+        "stroke_opacity": 0.11,
+        "stroke_width": 1,
+        "editable_properties": ["bounds", "stroke_opacity"],
+        "source_binding": "layout-a"
+      },
+      {
+        "id": "product-stage",
+        "type": "group",
+        "bounds": {"x": 112, "y": 72, "width": 976, "height": 888},
+        "children": ["product-card", "product-image-locked"],
+        "editable_properties": ["x", "y", "width", "height"],
+        "source_binding": "layout-a"
+      },
+      {
+        "id": "product-card",
+        "type": "rounded_rectangle",
+        "bounds": {"x": 112, "y": 72, "width": 976, "height": 888},
+        "fill": "#FBFAF7",
+        "radius": 30,
+        "shadow": {"x": 0, "y": 18, "blur": 24, "color": "#2E2E2B", "opacity": 0.09},
+        "editable_properties": ["fill", "radius", "shadow"]
+      },
+      {
+        "id": "product-image-locked",
+        "type": "raster_image",
+        "asset_id": "product-reference-locked",
+        "bounds": {"x": 176, "y": 92, "width": 848, "height": 848},
+        "fit": "contain",
+        "crop": null,
+        "opacity": 1,
+        "blend_mode": "normal",
+        "filters": [],
+        "color_transform": null,
+        "editable_properties": ["x", "y", "uniform_scale"],
+        "locked_properties": [
+          "asset_id",
+          "source_pixels",
+          "aspect_ratio",
+          "crop",
+          "opacity",
+          "blend_mode",
+          "filters",
+          "color_transform"
+        ],
+        "source_binding": "product"
+      },
+      {
+        "id": "headline-block",
+        "type": "group",
+        "bounds": {"x": 250, "y": 992, "width": 700, "height": 128},
+        "children": ["headline", "headline-accent"],
+        "source_binding": "layout-a"
+      },
+      {
+        "id": "headline",
+        "type": "text",
+        "content": "让香气慢下来。",
+        "position": {"x": 600, "baseline_y": 1072},
+        "alignment": "center",
+        "style_token": "typography.headline",
+        "editable_properties": ["position", "style_token"],
+        "locked_properties": ["content"]
+      },
+      {
+        "id": "headline-accent",
+        "type": "rounded_rectangle",
+        "bounds": {"x": 565, "y": 1113, "width": 70, "height": 5},
+        "fill": "#B85C43",
+        "radius": 2.5,
+        "source_binding": "palette-b"
+      },
+      {
+        "id": "feature-row",
+        "type": "group",
+        "bounds": {"x": 112, "y": 1160, "width": 976, "height": 258},
+        "children": ["feature-low-noise", "feature-clay-touch", "feature-timer"],
+        "layout": {"direction": "horizontal", "columns": 3, "gap": 24.5, "child_offsets_y": {"feature-timer": -12}},
+        "editable_properties": ["y", "gap"],
+        "source_binding": "layout-a"
+      },
+      {
+        "id": "feature-low-noise",
+        "type": "feature_card",
+        "bounds": {"x": 112, "y": 1172, "width": 309, "height": 246},
+        "label": "低噪运行",
+        "icon": {"type": "original_vector", "semantic": "low volume", "disc_fill": "#8A9568"},
+        "card_fill": "#F8F3E8",
+        "copy_assertion": {
+          "required_value": "低噪运行",
+          "client_reported_incorrect_value": "低躁运行",
+          "v0_source_observation": "低噪运行",
+          "result": "required_value_locked"
+        },
+        "editable_properties": ["bounds", "icon", "card_fill"],
+        "locked_properties": ["label"]
+      },
+      {
+        "id": "feature-timer",
+        "type": "feature_card",
+        "slot": 3,
+        "bounds": {"x": 779, "y": 1160, "width": 309, "height": 246},
+        "transform": {"translate_x": 333.5, "translate_y": -12},
+        "label": "定时关闭",
+        "icon": {"type": "original_vector", "semantic": "timer", "disc_fill": "#B85C43"},
+        "card_fill": "#F8F3E8",
+        "editable_properties": ["bounds", "icon", "card_fill"],
+        "locked_properties": ["label"]
+      },
+      {
+        "id": "feature-clay-touch",
+        "type": "feature_card",
+        "slot": 2,
+        "bounds": {"x": 445.5, "y": 1172, "width": 309, "height": 246},
+        "transform": {"translate_x": -333.5, "translate_y": 0},
+        "label": "陶土触感",
+        "icon": {"type": "original_vector", "semantic": "tactile clay grain", "disc_fill": "#2E2E2B"},
+        "card_fill": "#F8F3E8",
+        "editable_properties": ["bounds", "icon", "card_fill"],
+        "locked_properties": ["label"]
+      },
+      {
+        "id": "bottom-rhythm",
+        "type": "two_color_rule",
+        "bounds": {"x": 112, "y": 1467, "width": 976, "height": 7},
+        "segments": [
+          {"width": 488, "fill": "#8A9568"},
+          {"width": 488, "fill": "#B85C43"}
+        ],
+        "source_binding": "palette-b"
+      }
+    ]
+  },
+  "visual_copy_inventory": [
+    {"object_id": "headline", "text": "让香气慢下来。"},
+    {"object_id": "feature-low-noise", "text": "低噪运行"},
+    {"object_id": "feature-clay-touch", "text": "陶土触感"},
+    {"object_id": "feature-timer", "text": "定时关闭"}
+  ],
+  "rendering": {
+    "editable_source": "hero_detail_v2.svg",
+    "native_raster_inserts": ["ambient-background", "product-image-locked"],
+    "renderer_source": "render_preview.m",
+    "preview": "preview.png",
+    "preview_sha256": "15d82d0c70da5ea0b56a8424cc97f4fa95c7b2da7b24bed7967f40a0e18be10a",
+    "unchanged_locked_objects": ["ambient-background", "product-stage", "product-image-locked", "headline-block", "headline", "headline-accent", "feature-low-noise", "bottom-rhythm"],
+    "unchanged_typography_tokens": ["typography.headline", "typography.feature_label"]
+  }
+}

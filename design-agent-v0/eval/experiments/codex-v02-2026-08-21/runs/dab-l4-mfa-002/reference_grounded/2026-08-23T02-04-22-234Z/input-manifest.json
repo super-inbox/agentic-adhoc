@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "campaign-master",
+    "asset_id": "image-edit-poster-summer-form",
+    "role": "approved_master",
+    "reference_role": "approved_master",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "01-approved_master.png",
+    "source_path": "eval/assets/reference-pack-v0.2/image-edit/poster-summer-form.png",
+    "byte_size": 1388454,
+    "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+  }
+]

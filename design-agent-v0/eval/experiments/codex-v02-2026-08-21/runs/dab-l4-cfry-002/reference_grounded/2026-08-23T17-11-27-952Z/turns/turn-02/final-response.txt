@@ -1,0 +1,12 @@
+已完成 v2：白墨整圈向外扩 0.2 mm，中心路径位移 0.000 mm。刀线、插槽、底座及 v0/v1 文件哈希均未变化。
+
+新增或更新路径：
+
+- [扩白 0.2 mm 矢量层](/private<WORKDIR>/outputs/v2/luna-club-white-ink-layer-expanded-0p2-v2.svg)
+- [600 dpi 白墨 PNG](/private<WORKDIR>/outputs/v2/luna-club-white-ink-mask-expanded-0p2-v2.png)
+- [套准检查图](/private<WORKDIR>/outputs/v2/luna-club-white-ink-registration-proof-v2.png)
+- [套准说明](/private<WORKDIR>/outputs/v2/luna-club-white-ink-registration-check-v2.md)
+- [v2 核验记录](/private<WORKDIR>/outputs/v2/verification.json)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+透明榫片未整块铺白，仅主体底边按要求外扩进入榫片顶端 0.2 mm。

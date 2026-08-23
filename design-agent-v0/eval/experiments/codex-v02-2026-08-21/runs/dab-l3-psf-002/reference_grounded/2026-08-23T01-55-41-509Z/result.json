@@ -1,0 +1,85 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-PSF-002@reference_grounded",
+  "base_brief_id": "DAB-L3-PSF-002",
+  "context_condition": "reference_grounded",
+  "category": "packaging_sku_family",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T01:55:41.511Z",
+  "finished_at": "2026-08-23T01:56:09.495Z",
+  "latency_ms": 27984,
+  "intended_turns": 1,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02c54-b717-7bd0-9bb7-d234a689e9c9",
+  "input_assets": [
+    {
+      "input_id": "packaging-board",
+      "asset_id": "design-vote-mens-grooming-abcd",
+      "role": "packaging_candidates",
+      "reference_role": "candidate_option",
+      "identity_policy": "analysis_only",
+      "filename": "01-packaging_candidates.png",
+      "source_path": "eval/assets/reference-pack-v0.2/design-vote/mens-grooming-abcd.png",
+      "byte_size": 1216397,
+      "sha256": "b4bbb640cc1941d34e156e50d74214b2d7828b4d077c0be5070cd408dea0023c"
+    }
+  ],
+  "input_context_ids": [
+    "packaging-board",
+    "decision-context"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T01:55:41.511Z",
+      "finished_at": "2026-08-23T01:56:09.492Z",
+      "latency_ms": 27983,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c54-b717-7bd0-9bb7-d234a689e9c9",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

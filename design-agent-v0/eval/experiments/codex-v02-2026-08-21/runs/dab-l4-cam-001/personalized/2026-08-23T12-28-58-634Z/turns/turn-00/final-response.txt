@@ -1,0 +1,19 @@
+已完成 KV 选择前阶段：9 个低成本假设，聚类为 3 个方向；尚未制作任何渠道延展。
+
+![MORI KV Territory Board](<WORKDIR>/outputs/v0/mori-kv-territories-v0.png)
+
+- A｜触感暮色：真实材质、柔和侧光
+- B｜安静刻度：留白与平面节奏，成本最低
+- C｜夜间停靠：冷暖台面，仪式感最强
+
+产品与 Logo 均直接取自原素材，没有生成式重绘；ImageGen 仅用于三个无字背景母版。
+
+文件：
+
+- [方案说明](<WORKDIR>/outputs/v0/creative-territories-v0.md)
+- [可编辑 SVG](<WORKDIR>/outputs/v0/mori-kv-territories-v0.svg)
+- [生成提示词记录](<WORKDIR>/outputs/v0/generation-prompts-v0.md)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+下一步请回复一个 Territory 和一个 KV 编号，例如：`Territory B + B2`。

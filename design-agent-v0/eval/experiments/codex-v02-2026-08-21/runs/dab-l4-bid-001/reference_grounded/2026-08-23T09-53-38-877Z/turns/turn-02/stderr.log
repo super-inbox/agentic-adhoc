@@ -1,0 +1,19 @@
+2026-08-23T10:31:08.621927Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T10:31:08.624981Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:31:10.030711Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T10:31:10.030735Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T10:33:02.618265Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:33:24.031586Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:36:23.401253Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:36:58.034840Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:38:53.886503Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:43:22.110382Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T10:44:34.243317Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 194ms)... turn_id=01a02e2c-9ad5-7ef3-80c5-79965fac6582 retries=1 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T10:44:52.359576Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 373ms)... turn_id=01a02e2c-9ad5-7ef3-80c5-79965fac6582 retries=2 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T10:45:10.897372Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (3/5 in 782ms)... turn_id=01a02e2c-9ad5-7ef3-80c5-79965fac6582 retries=3 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T10:45:38.790240Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (4/5 in 1.675s)... turn_id=01a02e2c-9ad5-7ef3-80c5-79965fac6582 retries=4 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-23T10:46:13.485141Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:47:13.445761Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (5/5 in 3.248s)... turn_id=01a02e2c-9ad5-7ef3-80c5-79965fac6582 retries=5 max_retries=5 sampling_error=stream disconnected before completion: Transport error: network error: error decoding response body
+2026-08-23T10:48:22.050960Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:51:44.781053Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T10:53:50.003432Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

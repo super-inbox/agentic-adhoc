@@ -1,0 +1,17 @@
+v1 已完成，仅沿 B 精修：
+
+- 增加暖白留白，蓝黄退到边缘、内托与少量节点。
+- 礼盒升级为精装硬盒、深盒盖、包角、适配内托与细缎金边。
+- Logo 未重画；已移除可能被误认作新标志的图形。
+- A、C 及整个 `outputs/v0` 保持不变。
+
+新增／更新路径：
+
+- [v1 精修方向板](/private<WORKDIR>/outputs/v1/01-daylight-grain-v1-refinement-board.png)
+- [精修视觉图](/private<WORKDIR>/outputs/v1/assets/territory-02-daylight-grain-refined.png)
+- [变更说明](/private<WORKDIR>/outputs/v1/refinement-notes.md)
+- [验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+- [imagegen 提示词记录](/private<WORKDIR>/outputs/v1/imagegen-prompts.md)
+
+中文字标与 Logo 源文件仍未提供，因此目前保留空白落位区，未擅自重建。

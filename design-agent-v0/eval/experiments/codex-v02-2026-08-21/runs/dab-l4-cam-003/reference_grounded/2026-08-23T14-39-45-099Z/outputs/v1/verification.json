@@ -1,0 +1,126 @@
+{
+  "version": "v1",
+  "status": "pass",
+  "verified_on": "2026-08-23",
+  "scope": "Requested delta only: add one Xiaohongshu 3:4 portrait while preserving the approved v0 main visual.",
+  "checks": [
+    {
+      "id": "requested_delta_only",
+      "status": "pass",
+      "method": "Created one new Xiaohongshu portrait and supporting verification files under outputs/v1; no replacement campaign direction was created.",
+      "observed": {
+        "new_campaign_assets": 1,
+        "direction": "A",
+        "third_direction_created": false,
+        "v0_folder_written": false
+      },
+      "evidence_paths": [
+        "outputs/v1/xiaohongshu-portrait-direction-a-v1.png",
+        "outputs/v1/xiaohongshu-portrait-direction-a-v1.svg"
+      ]
+    },
+    {
+      "id": "xiaohongshu_dimensions",
+      "status": "pass",
+      "method": "Read final PNG dimensions.",
+      "observed": {
+        "path": "outputs/v1/xiaohongshu-portrait-direction-a-v1.png",
+        "width": 1080,
+        "height": 1440,
+        "aspect_ratio": "3:4",
+        "sha256": "d8a95195b60b19f3309ff568116a678aabcf4cbfd6a59406e37ccfa63fab7daa"
+      },
+      "evidence_paths": [
+        "outputs/v1/xiaohongshu-portrait-direction-a-v1.png"
+      ]
+    },
+    {
+      "id": "approved_visual_preservation",
+      "status": "pass",
+      "method": "Reused byte-identical copies of the approved v0 portrait background and product cutout; retained the locked A-direction palette and lighting.",
+      "observed": {
+        "v0_background_sha256": "4fbd0a7292834ba6389625bc839045366428b1e2b680e158c8e4e57b25782d1c",
+        "v1_background_copy_sha256": "4fbd0a7292834ba6389625bc839045366428b1e2b680e158c8e4e57b25782d1c",
+        "v0_product_cutout_sha256": "0cb121dd1bbe5b4b92045e838816efc2f2677ef80a3a6ba6e91f8bbcd785ac00",
+        "v1_product_cutout_copy_sha256": "0cb121dd1bbe5b4b92045e838816efc2f2677ef80a3a6ba6e91f8bbcd785ac00",
+        "product_redrawn": false,
+        "product_recolored": false,
+        "palette": ["#393937", "#EEE9D5", "#879466", "#AF543F", "#B7D2D9"]
+      },
+      "evidence_paths": [
+        "outputs/v0/pdp-first-screen-background-direction-a-v0.png",
+        "outputs/v1/xiaohongshu-background-approved-v0-v1.png",
+        "outputs/v0/product-cutout-source-preserved-v0.png",
+        "outputs/v1/product-cutout-approved-v0-v1.png",
+        "outputs/v1/xiaohongshu-portrait-direction-a-v1.svg"
+      ]
+    },
+    {
+      "id": "single_selling_sentence",
+      "status": "pass",
+      "method": "Inspected SVG text elements and full-resolution render.",
+      "observed": {
+        "brand_identifier": "MORI",
+        "selling_sentence": "安静设计，自然融入日常",
+        "selling_sentence_count": 1,
+        "additional_marketing_copy_count": 0
+      },
+      "evidence_paths": [
+        "outputs/v1/xiaohongshu-portrait-direction-a-v1.svg",
+        "outputs/v1/xiaohongshu-portrait-direction-a-v1.png"
+      ]
+    },
+    {
+      "id": "mobile_readability",
+      "status": "pass",
+      "method": "Rendered and visually inspected a 360x480 feed-size preview.",
+      "observed": {
+        "headline_readable": true,
+        "product_is_primary_visual_focus": true,
+        "edge_clipping": false,
+        "preview_sha256": "88fa580071ea41e659bc74399ac3e5c61330a833d158388245c1111c28df9148"
+      },
+      "evidence_paths": [
+        "outputs/v1/verification/xiaohongshu-mobile-preview-360-v1.png"
+      ]
+    },
+    {
+      "id": "approved_v0_unchanged",
+      "status": "pass",
+      "method": "Compared current approved v0 artifact hashes with their recorded v0 values after creating v1.",
+      "observed": [
+        {
+          "path": "outputs/v0/tmall-hero-direction-a-v0.png",
+          "sha256": "bc1288398f85de17f9a3b9996a1a4ce819cd5458b7d19ec70127a219a23fd9d0",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v0/pdp-first-screen-direction-a-v0.png",
+          "sha256": "f621455e6185fed53045d6e7ad4c232efa3b00593013c2e5cfcf5b31cc98fd4a",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v0/pdp-first-screen-direction-a-v0.svg",
+          "sha256": "44dd501e044b1d11bdf03fe61401db352542fce3e573afd8755be88a60252873",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v0/product-source-preserved-v0.png",
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v0/product-cutout-source-preserved-v0.png",
+          "sha256": "0cb121dd1bbe5b4b92045e838816efc2f2677ef80a3a6ba6e91f8bbcd785ac00",
+          "unchanged": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v0/tmall-hero-direction-a-v0.png",
+        "outputs/v0/pdp-first-screen-direction-a-v0.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

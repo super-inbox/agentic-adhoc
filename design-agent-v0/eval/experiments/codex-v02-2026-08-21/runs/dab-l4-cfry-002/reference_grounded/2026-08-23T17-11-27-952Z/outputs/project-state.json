@@ -1,0 +1,99 @@
+{
+  "project": "LUNA CLUB desktop acrylic standee",
+  "current_version": "v3",
+  "workflow_stage": "cmf_and_mockup_revision",
+  "factory_ready": false,
+  "factory_ready_blockers": [
+    "Frosting method, one/two-side treatment, haze/transmission, gloss, and surface roughness are not specified.",
+    "The design-defined 7.2 mm slot length and 7.0 mm tab width still require factory review.",
+    "Print side and color/white-ink layer order are not specified.",
+    "The factory must accept approximately 149 ppi effective source resolution at final art size."
+  ],
+  "client_decisions": {
+    "artwork_master": "inputs/01-ip_artwork.png",
+    "artwork_status": "approved_master",
+    "product_type": "desktop acrylic standee",
+    "finished_height_mm": 90.0,
+    "body_material": "clear acrylic",
+    "base_material": "frosted transparent acrylic",
+    "base_visual": "frosted transparent, restrained, does not obscure artwork",
+    "acrylic_thickness_mm": 3.0,
+    "slot_net_width_mm": 3.2,
+    "slot_width_tolerance_mm": 0.1,
+    "base_dimensions_mm": {
+      "width": 55.0,
+      "depth": 25.0,
+      "corner_radius": 3.0
+    },
+    "hanging_hole": false,
+    "white_ink_outward_expansion_mm": 0.2
+  },
+  "locked_items": [
+    "Preserve the original LUNA CLUB illustration subject, wording, palette, and silhouette.",
+    "Keep the upright body as 3.0 mm clear acrylic.",
+    "Freeze all production geometry, dimensions, slot geometry, and cutlines from v1.",
+    "Freeze the expanded white-ink layer from v2.",
+    "Do not add a hanging hole.",
+    "Keep every file under outputs/v0, outputs/v1, and outputs/v2 unchanged."
+  ],
+  "white_ink_rule": {
+    "status": "factory_confirmed_and_frozen",
+    "outward_expansion_mm": 0.2,
+    "vector_path": "outputs/v2/luna-club-white-ink-layer-expanded-0p2-v2.svg",
+    "registration_centerline_shift_mm": 0.0,
+    "change_from_v2": "none"
+  },
+  "cmf_current": {
+    "path": "outputs/v3/luna-club-cmf-v3.json",
+    "body": "clear acrylic, unchanged",
+    "base": "frosted transparent acrylic",
+    "unresolved_frost_parameters": [
+      "manufacturing method",
+      "one-side or two-side frosting",
+      "haze or light transmission",
+      "gloss",
+      "surface roughness"
+    ]
+  },
+  "changed_items": [
+    "Changed only the base CMF from clear transparent acrylic to frosted transparent acrylic.",
+    "Created a v3 appearance mockup showing a frosted transparent base while retaining a polished-clear upright body.",
+    "Added a CMF delta note and image-generation prompt record."
+  ],
+  "unchanged_items": [
+    "Approved artwork and all print artwork files.",
+    "Body material and thickness.",
+    "Base thickness, 55 x 25 mm geometry, and four R3 corners.",
+    "Body cutline, base cutline, 7.2 x 3.2 mm slot, and +/-0.1 mm slot-width tolerance.",
+    "Overall height, three-view drawing, and no-hole requirement.",
+    "v2 white-ink path, 0.2 mm outward expansion, and registration.",
+    "All files under outputs/v0, outputs/v1, and outputs/v2."
+  ],
+  "open_inputs": [
+    "frosting manufacturing method",
+    "one-side or two-side base frosting",
+    "haze/light-transmission, gloss, and roughness targets",
+    "factory approval of 7.2 mm slot length and 7.0 mm tab width",
+    "assembly retention method if dry fit is insufficient",
+    "print side and color/white-ink layer order",
+    "factory acceptance of approximately 149 ppi effective artwork resolution"
+  ],
+  "artifact_paths": {
+    "v0_archive": "outputs/v0/",
+    "v1_archive": "outputs/v1/",
+    "v2_archive": "outputs/v2/",
+    "cmf_current": "outputs/v3/luna-club-cmf-v3.json",
+    "cmf_delta_note": "outputs/v3/luna-club-cmf-delta-note-v3.md",
+    "mockup_current": "outputs/v3/luna-club-acrylic-mockup-frosted-transparent-base-v3.png",
+    "mockup_rejected_study": "outputs/v3/luna-club-mockup-frosted-base-study-01-v3.png",
+    "imagegen_prompt_record": "outputs/v3/luna-club-imagegen-prompts-v3.md",
+    "three_view_frozen": "outputs/v1/luna-club-three-view-dimensioned-v1.svg",
+    "cutline_master_frozen": "outputs/v1/luna-club-cutline-master-v1.svg",
+    "body_cutline_frozen": "outputs/v1/luna-club-body-cutline-v1.svg",
+    "base_cutline_frozen": "outputs/v1/luna-club-base-cutline-v1.svg",
+    "print_layout_frozen": "outputs/v1/luna-club-print-layout-v1.svg",
+    "white_ink_vector_frozen": "outputs/v2/luna-club-white-ink-layer-expanded-0p2-v2.svg",
+    "white_ink_raster_frozen": "outputs/v2/luna-club-white-ink-mask-expanded-0p2-v2.png",
+    "verification": "outputs/v3/verification.json"
+  }
+}

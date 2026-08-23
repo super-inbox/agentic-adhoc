@@ -1,0 +1,145 @@
+{
+  "turn_index": 2,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T10:31:08.471Z",
+  "finished_at": "2026-08-23T10:54:08.365Z",
+  "latency_ms": 1379982,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 29,
+    "command_count": 6,
+    "tool_count": 3,
+    "image_activity_count": 5,
+    "runtime_error_count": 5,
+    "runtime_error_messages": [
+      "Reconnecting... 1/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))",
+      "Reconnecting... 2/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))",
+      "Reconnecting... 3/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))",
+      "Reconnecting... 4/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))",
+      "Reconnecting... 5/5 (stream disconnected before completion: Transport error: network error: error decoding response body)"
+    ],
+    "thread_id": "01a02e0a-46c7-7fd1-896d-c2455c0aee76",
+    "usage": {
+      "input_tokens": 5279756,
+      "cached_input_tokens": 5030528,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 63916,
+      "reasoning_output_tokens": 22688
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 3745,
+      "sha256": "16a8276866d24bf2369bacec14d974b226f77a6e94f642c115e92da12fdee4c3"
+    },
+    {
+      "filename": "v0/01-conflicts-and-10-hypotheses.png",
+      "byte_size": 489264,
+      "sha256": "d7fc43c2af5942b76f488266bffac45a401161ab7a0d157b9ed555b82f03c4db"
+    },
+    {
+      "filename": "v0/02-three-creative-territories.png",
+      "byte_size": 3380508,
+      "sha256": "64a86b0183020df9d0ff881b985f55d9fcc8aaf143a5f25effab8cd99514e966"
+    },
+    {
+      "filename": "v0/assets/territory-01-quiet-craft-concept.png",
+      "byte_size": 2070785,
+      "sha256": "06097ddacfe8894ee0589547d668dc6b381985bdcdc885539abcc86387e180a8"
+    },
+    {
+      "filename": "v0/assets/territory-02-daylight-grain-concept.png",
+      "byte_size": 2200709,
+      "sha256": "0e37ab2a5488eaa06133070da8859f75f684f504b7d6a97e8ce952bb665436f2"
+    },
+    {
+      "filename": "v0/assets/territory-03-fire-feast-concept.png",
+      "byte_size": 2114936,
+      "sha256": "15ba7015db103399fa46903b6e01e9a0889b5b713eda32b80915d86205958342"
+    },
+    {
+      "filename": "v0/creative-territories.md",
+      "byte_size": 6907,
+      "sha256": "47e32acdf1e93c5237f9703827cce50e6bb8165d5a89444cd2ba6a37c42ea531"
+    },
+    {
+      "filename": "v0/imagegen-prompts.md",
+      "byte_size": 8927,
+      "sha256": "19610eedd897ad205f662b73d5fea69b786e958bff3ca6e1727cc298f6a74d5a"
+    },
+    {
+      "filename": "v0/render_direction_boards.py",
+      "byte_size": 15005,
+      "sha256": "1a145578a6ffe1b18c5eaa24fa931e3dae24e79c26368b7dcf34756ccbd9100f"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 7017,
+      "sha256": "6453fb23ef6ef33c505b5f2888b959cd640d9e8cb5df3c17d7965f8e431986d7"
+    },
+    {
+      "filename": "v1/01-daylight-grain-v1-refinement-board.png",
+      "byte_size": 3683709,
+      "sha256": "7a1b57379bd1d87d622563fca6c00476ec0621fc0198a2e006019976899ee314"
+    },
+    {
+      "filename": "v1/assets/territory-02-daylight-grain-refined.png",
+      "byte_size": 2073103,
+      "sha256": "f21c83c08305464ec7f5923c248b953bc5445d912375c4d91d41ecf508be5818"
+    },
+    {
+      "filename": "v1/imagegen-prompts.md",
+      "byte_size": 4805,
+      "sha256": "1988e407c03fc571d88f1ad3c71aec4b483c8543aa5c6b0ece09f1594ded9e09"
+    },
+    {
+      "filename": "v1/refinement-notes.md",
+      "byte_size": 2223,
+      "sha256": "6fbeefeea234fe3155302f8ef133a5f84ce32cc86809c49cac834cd575b86574"
+    },
+    {
+      "filename": "v1/render_refinement_board.py",
+      "byte_size": 6148,
+      "sha256": "2af90305cf2265dcb7db6f46faa7a74a1a64b61c104ad716e8450e951f7f4bb5"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 7413,
+      "sha256": "79f1f28d14e9d6204dd7a9e216410ca1193a0895e806f5999d42bfb29811eb07"
+    },
+    {
+      "filename": "v2/01-taobao-main-v2.png",
+      "byte_size": 2036125,
+      "sha256": "cbdef0a964e5f28708d0d5bdba700c495191be182fb08634d0551f0f977f4fc3"
+    },
+    {
+      "filename": "v2/assets/taobao-main-clean-background.png",
+      "byte_size": 1811728,
+      "sha256": "ec37a9b27c15d737e598fc39420fc4472aeb645409851b1252c6c877109ca71c"
+    },
+    {
+      "filename": "v2/delta-notes.md",
+      "byte_size": 1394,
+      "sha256": "5cdfd84c21c26580c428ee1aa78d4a069c7475568078bdef5c71f931d807d39e"
+    },
+    {
+      "filename": "v2/imagegen-prompts.md",
+      "byte_size": 2265,
+      "sha256": "83555710bbcf4336642700b60c15dd20e988f9d8deb07a01d7314417f9f8b470"
+    },
+    {
+      "filename": "v2/render_taobao_main.py",
+      "byte_size": 1167,
+      "sha256": "d474891c2ac97987544cca43f41d23a3cb915b407144811644d079c82a93d014"
+    },
+    {
+      "filename": "v2/verification.json",
+      "byte_size": 8129,
+      "sha256": "396fc8b0e357287dff48fdc12556381341ac79b5d10cc015fc006d86b758c25b"
+    }
+  ]
+}

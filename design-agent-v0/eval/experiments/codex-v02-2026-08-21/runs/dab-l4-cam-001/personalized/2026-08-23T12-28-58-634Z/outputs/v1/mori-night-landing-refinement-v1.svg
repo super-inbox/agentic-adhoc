@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">MORI Night Landing KV refinement V1</title>
+  <desc id="desc">Territory C revision with grounded tabletop contact and softer side light across C1, C2, and C3.</desc>
+  <defs>
+    <filter id="cardShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#151615" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="darkSeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#242524" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#242524" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#242524" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="softSideWash" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F1ECD9" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#F1ECD9" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="logoClip" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="360" height="98"/>
+    </clipPath>
+    <symbol id="moriLogo" viewBox="0 0 360 98">
+      <rect width="360" height="98" fill="#F1ECD9"/>
+      <g clip-path="url(#logoClip)">
+        <image xlink:href="../../inputs/01-brand_guideline.png" href="../../inputs/01-brand_guideline.png" x="-236" y="-62" width="1376" height="768" preserveAspectRatio="none"/>
+      </g>
+    </symbol>
+    <style>
+      .ui { font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #333330; }
+      .ui-small { font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #6F6962; font-size: 17px; }
+      .eyebrow { font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; font-weight: 700; letter-spacing: 3px; font-size: 16px; fill: #B5563D; }
+      .territory { font-family: Georgia, "Songti SC", "STSong", serif; font-size: 36px; fill: #333330; }
+      .consumer-en { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+      .consumer-zh { font-family: "Songti SC", "STSong", Georgia, serif; }
+      .card-label { font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 22px; font-weight: 700; fill: #333330; }
+      .card-note { font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 15px; fill: #746E66; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="960" fill="#F1ECD9"/>
+  <rect x="0" y="0" width="34" height="960" fill="#B5563D"/>
+
+  <g id="proposal-header">
+    <use xlink:href="#moriLogo" href="#moriLogo" x="112" y="66" width="162" height="45"/>
+    <text class="eyebrow" x="112" y="157">CLIENT DELTA APPLIED / V1</text>
+    <text class="territory" x="112" y="207">夜间停靠 / Night Landing</text>
+    <text class="ui-small" x="570" y="202">仅调整：真实桌面接触 + 更柔的侧光；瓶型、标签、Logo、文案保持锁定</text>
+    <g transform="translate(1190 68)">
+      <rect width="288" height="126" rx="4" fill="#E9E1CC"/>
+      <text class="ui" x="22" y="34" font-size="14" font-weight="700" letter-spacing="2">DECISION STATE</text>
+      <text class="ui-small" x="22" y="63" font-size="15">Territory C：已选择</text>
+      <text class="ui-small" x="22" y="88" font-size="15">C1 / C2 / C3：待选择</text>
+      <rect x="22" y="104" width="104" height="6" fill="#B5563D"/>
+    </g>
+    <line x1="112" y1="242" x2="1478" y2="242" stroke="#CFC4AF" stroke-width="1"/>
+  </g>
+
+  <!-- C1 V1: full-height product photo plane shifted right; exact product pixels remain visible. -->
+  <g transform="translate(112 288)" filter="url(#cardShadow)">
+    <svg width="420" height="420" viewBox="0 0 420 420" overflow="hidden">
+      <image xlink:href="assets/territory-c-soft-side-light-bg-v1.png" href="assets/territory-c-soft-side-light-bg-v1.png" x="0" y="0" width="420" height="420" preserveAspectRatio="xMidYMid slice"/>
+      <image data-role="product-exact" xlink:href="../../inputs/02-launch_product.png" href="../../inputs/02-launch_product.png" x="82" y="0" width="420" height="420" preserveAspectRatio="xMidYMid meet"/>
+      <rect x="62" y="0" width="86" height="420" fill="url(#darkSeam)"/>
+      <rect x="0" y="0" width="82" height="420" fill="#252625" fill-opacity="0.96"/>
+      <rect x="0" y="286" width="82" height="134" fill="url(#softSideWash)"/>
+      <rect x="0" y="408" width="420" height="12" fill="#B5563D"/>
+      <rect x="14" y="17" width="57" height="39" fill="#F1ECD9"/>
+      <use xlink:href="#moriLogo" href="#moriLogo" x="20" y="25" width="45" height="23"/>
+      <text data-role="consumer-copy" class="consumer-en" x="15" y="100" font-size="16" fill="#F1ECD9">Quiet</text>
+      <text data-role="consumer-copy" class="consumer-en" x="15" y="122" font-size="16" fill="#F1ECD9">hours,</text>
+      <text data-role="consumer-copy" class="consumer-en" x="15" y="144" font-size="16" fill="#F1ECD9">made</text>
+      <text data-role="consumer-copy" class="consumer-en" x="15" y="166" font-size="16" fill="#F1ECD9">tangible.</text>
+      <text data-role="consumer-copy" class="consumer-zh" x="46" y="224" font-size="16" fill="#F1ECD9" transform="rotate(90 46 224)">让夜晚慢下来。</text>
+    </svg>
+  </g>
+
+  <!-- C2 V1: product photo plane lands directly on bottom and right edges. -->
+  <g transform="translate(590 288)" filter="url(#cardShadow)">
+    <svg width="420" height="420" viewBox="0 0 420 420" overflow="hidden">
+      <image xlink:href="assets/territory-c-soft-side-light-bg-v1.png" href="assets/territory-c-soft-side-light-bg-v1.png" x="0" y="0" width="420" height="420" preserveAspectRatio="xMidYMid slice"/>
+      <rect x="160" y="0" width="8" height="420" fill="#B5563D"/>
+      <image data-role="product-exact" xlink:href="../../inputs/02-launch_product.png" href="../../inputs/02-launch_product.png" x="168" y="90" width="330" height="330" preserveAspectRatio="xMidYMid meet"/>
+      <rect x="20" y="20" width="119" height="47" fill="#F1ECD9"/>
+      <use xlink:href="#moriLogo" href="#moriLogo" x="31" y="29" width="97" height="29"/>
+      <text data-role="consumer-copy" class="consumer-en" x="22" y="116" font-size="25" fill="#F1ECD9">Quiet hours,</text>
+      <text data-role="consumer-copy" class="consumer-en" x="22" y="145" font-size="25" fill="#F1ECD9">made tangible.</text>
+      <rect x="22" y="177" width="70" height="5" fill="#B5563D"/>
+      <text data-role="consumer-copy" class="consumer-zh" x="22" y="219" font-size="18" fill="#F1ECD9">让夜晚慢下来。</text>
+    </svg>
+  </g>
+
+  <!-- C3 V1: source product photo remains full-frame; night treatment stays outside the bottle silhouette. -->
+  <g transform="translate(1068 288)" filter="url(#cardShadow)">
+    <svg width="420" height="420" viewBox="0 0 420 420" overflow="hidden">
+      <image data-role="product-exact" xlink:href="../../inputs/02-launch_product.png" href="../../inputs/02-launch_product.png" x="0" y="0" width="420" height="420" preserveAspectRatio="xMidYMid meet"/>
+      <rect x="0" y="0" width="92" height="420" fill="#292A28" fill-opacity="0.96"/>
+      <rect x="334" y="0" width="86" height="420" fill="#2D373B" fill-opacity="0.94"/>
+      <rect x="0" y="0" width="420" height="14" fill="#B5563D"/>
+      <rect x="0" y="286" width="92" height="134" fill="url(#softSideWash)"/>
+      <rect x="15" y="29" width="64" height="41" fill="#F1ECD9"/>
+      <use xlink:href="#moriLogo" href="#moriLogo" x="21" y="37" width="52" height="25"/>
+      <text data-role="consumer-copy" class="consumer-en" x="15" y="119" font-size="16" fill="#F1ECD9">Quiet</text>
+      <text data-role="consumer-copy" class="consumer-en" x="15" y="141" font-size="16" fill="#F1ECD9">hours,</text>
+      <text data-role="consumer-copy" class="consumer-en" x="15" y="163" font-size="16" fill="#F1ECD9">made</text>
+      <text data-role="consumer-copy" class="consumer-en" x="15" y="185" font-size="16" fill="#F1ECD9">tangible.</text>
+      <text data-role="consumer-copy" class="consumer-zh" x="374" y="248" font-size="16" fill="#F1ECD9" transform="rotate(90 374 248)">让夜晚慢下来。</text>
+    </svg>
+  </g>
+
+  <g id="variant-notes">
+    <text class="card-label" x="112" y="754">C1 台面整幅</text>
+    <text class="card-note" x="112" y="783">产品照片延伸至底边；暗色信息轨保留夜感</text>
+    <text class="ui-small" x="112" y="810" font-size="14">变化：去相框、贴底；侧光只在空白区柔化</text>
+
+    <text class="card-label" x="590" y="754">C2 侧光停靠</text>
+    <text class="card-note" x="590" y="783">产品照片落在右下真实台面；夜色留白最完整</text>
+    <text class="ui-small" x="590" y="810" font-size="14">变化：右下贴边接触；使用新柔侧光母版</text>
+
+    <text class="card-label" x="1068" y="754">C3 夜色框景</text>
+    <text class="card-note" x="1068" y="783">原产品桌面整幅保留；暗色只处理两侧空区</text>
+    <text class="ui-small" x="1068" y="810" font-size="14">变化：取消悬浮窗；产品中心像素不受遮罩</text>
+  </g>
+
+  <g id="selection-footer">
+    <line x1="112" y1="866" x2="1478" y2="866" stroke="#CFC4AF" stroke-width="1"/>
+    <text class="ui" x="112" y="912" font-size="18" font-weight="700">下一检查点：选择 C1 / C2 / C3 之一后，才进入官网 Hero / Instagram 竖版 / 邮件头图。</text>
+  </g>
+</svg>

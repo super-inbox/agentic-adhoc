@@ -1,0 +1,172 @@
+{
+  "schema_version": "object-change-set/1.0",
+  "change_set_id": "aroma-detail-hero-v0-initial",
+  "version": "v0",
+  "base_version": null,
+  "created_at": "2026-08-24T00:39:36+08:00",
+  "summary": "Initial candidate detail-page hero using A-derived composition principles, B-derived warm brand tokens, approved Chinese copy, and the exact locked product raster.",
+  "operations": [
+    {
+      "operation": "create",
+      "object_id": "canvas",
+      "object_type": "artboard",
+      "properties": {"width": 1200, "height": 1600, "orientation": "portrait"},
+      "reason": "Create the v0 first-screen canvas."
+    },
+    {
+      "operation": "create",
+      "object_id": "ambient-background",
+      "object_type": "raster_image",
+      "properties": {
+        "asset": "ambient_background_v0.png",
+        "bounds": {"x": 0, "y": 0, "width": 1200, "height": 1600},
+        "fit": "cover_center_crop"
+      },
+      "source_attribution": {"input_id": "palette-b", "influence": ["palette", "brand_tokens"]},
+      "reason": "Establish B's warmer ivory/terracotta/olive atmosphere without copying its logo or pattern."
+    },
+    {
+      "operation": "create",
+      "object_id": "background-veil",
+      "object_type": "linear_gradient_overlay",
+      "properties": {
+        "bounds": {"x": 0, "y": 0, "width": 1200, "height": 1600},
+        "dominant_color": "#F3EDDF"
+      },
+      "source_attribution": {"input_id": "palette-b", "influence": ["palette"]},
+      "reason": "Keep the generated texture quiet and preserve breathing room."
+    },
+    {
+      "operation": "create",
+      "object_id": "editorial-grid",
+      "object_type": "line_group",
+      "properties": {"outer_rail": 64, "stroke": "#2E2E2B", "stroke_opacity": 0.11},
+      "source_attribution": {"input_id": "layout-a", "influence": ["layout_principles", "information_rhythm"]},
+      "reason": "Abstract A's restrained editorial frame; no identity artwork copied."
+    },
+    {
+      "operation": "create",
+      "object_id": "product-stage",
+      "object_type": "group",
+      "properties": {"bounds": {"x": 112, "y": 72, "width": 976, "height": 888}},
+      "source_attribution": {"input_id": "layout-a", "influence": ["centered product placement", "scale"]},
+      "reason": "Use a calm centered product-first composition."
+    },
+    {
+      "operation": "create",
+      "object_id": "product-card",
+      "object_type": "rounded_rectangle",
+      "properties": {"fill": "#FBFAF7", "radius": 30, "shadow_opacity": 0.09},
+      "reason": "Separate the exact source image's white field from the warm page without altering product pixels."
+    },
+    {
+      "operation": "create",
+      "object_id": "product-image-locked",
+      "object_type": "raster_image",
+      "properties": {
+        "asset": "product_reference_locked.png",
+        "bounds": {"x": 176, "y": 92, "width": 848, "height": 848},
+        "fit": "contain",
+        "opacity": 1,
+        "filters": [],
+        "color_transform": null,
+        "source_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+      },
+      "source_attribution": {"input_id": "product", "influence": ["exact identity", "placement", "scale"]},
+      "locked": ["asset", "source pixels", "aspect ratio", "crop", "opacity", "filters", "color transform"],
+      "reason": "Preserve product shape and color exactly while allowing only placement and uniform scale."
+    },
+    {
+      "operation": "create",
+      "object_id": "headline",
+      "object_type": "text",
+      "properties": {
+        "content": "让香气慢下来。",
+        "position": {"x": 600, "baseline_y": 1072},
+        "font_size": 72,
+        "font_weight": 500,
+        "fill": "#2E2E2B",
+        "alignment": "center"
+      },
+      "source_attribution": {
+        "copy": "approved_copy",
+        "layout": {"input_id": "layout-a", "influence": ["information_rhythm"]},
+        "style": {"input_id": "palette-b", "influence": ["typography", "brand_tokens"]}
+      },
+      "locked": ["content"],
+      "reason": "Place the exact approved headline after the product stage."
+    },
+    {
+      "operation": "create",
+      "object_id": "headline-accent",
+      "object_type": "rounded_rectangle",
+      "properties": {"bounds": {"x": 565, "y": 1113, "width": 70, "height": 5}, "fill": "#B85C43"},
+      "source_attribution": {"input_id": "palette-b", "influence": ["terracotta accent"]},
+      "reason": "Warm focal punctuation beneath the headline."
+    },
+    {
+      "operation": "create",
+      "object_id": "feature-row",
+      "object_type": "group",
+      "properties": {"columns": 3, "gap": 24.5, "bounds": {"x": 112, "y": 1172, "width": 976, "height": 246}},
+      "source_attribution": {"input_id": "layout-a", "influence": ["three-cell information rhythm"]},
+      "reason": "Abstract A's equal three-feature cadence."
+    },
+    {
+      "operation": "create",
+      "object_id": "feature-low-noise",
+      "object_type": "feature_card",
+      "properties": {"label": "低噪运行", "icon_semantic": "low volume", "icon_disc_fill": "#8A9568"},
+      "source_attribution": {"copy": "approved_copy", "style": {"input_id": "palette-b", "influence": ["olive token"]}},
+      "locked": ["label"],
+      "reason": "Render the first exact selling point with an original line icon."
+    },
+    {
+      "operation": "create",
+      "object_id": "feature-timer",
+      "object_type": "feature_card",
+      "properties": {"label": "定时关闭", "icon_semantic": "timer", "icon_disc_fill": "#B85C43"},
+      "source_attribution": {"copy": "approved_copy", "style": {"input_id": "palette-b", "influence": ["terracotta token"]}},
+      "locked": ["label"],
+      "reason": "Render the second exact selling point with an original line icon."
+    },
+    {
+      "operation": "create",
+      "object_id": "feature-clay-touch",
+      "object_type": "feature_card",
+      "properties": {"label": "陶土触感", "icon_semantic": "tactile clay grain", "icon_disc_fill": "#2E2E2B"},
+      "source_attribution": {"copy": "approved_copy", "style": {"input_id": "palette-b", "influence": ["charcoal token"]}},
+      "locked": ["label"],
+      "reason": "Render the third exact selling point with an original tactile-grain icon."
+    },
+    {
+      "operation": "create",
+      "object_id": "bottom-rhythm",
+      "object_type": "two_color_rule",
+      "properties": {"segments": [{"fill": "#8A9568", "width": 488}, {"fill": "#B85C43", "width": 488}]},
+      "source_attribution": {"input_id": "palette-b", "influence": ["olive and terracotta tokens"]},
+      "reason": "Close the first screen with a restrained warm brand-token cue."
+    }
+  ],
+  "protected_invariants": [
+    {
+      "invariant": "product_source_identity",
+      "object_id": "product-image-locked",
+      "enforcement": "hash lock plus no filters, no color transform, normal blend, opacity 1"
+    },
+    {
+      "invariant": "approved_copy_exactness",
+      "object_ids": ["headline", "feature-low-noise", "feature-timer", "feature-clay-touch"],
+      "enforcement": "text content locked"
+    },
+    {
+      "invariant": "layout_a_identity_exclusion",
+      "enforcement": "only abstract layout principles recorded; all A wording and brand identity excluded"
+    }
+  ],
+  "pending_decision": {
+    "decision_id": "client-confirm-v0-direction",
+    "status": "awaiting_client_confirmation",
+    "question": "Confirm the v0 composition and warm palette direction before any v1 refinement."
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "canvas": {
+    "width": 1600,
+    "height": 2000,
+    "format": "PNG",
+    "aspect_ratio": "4:5"
+  },
+  "approved_copy": {
+    "en": "Quiet hours, made tangible.",
+    "zh": "让夜晚慢下来。"
+  },
+  "product_source": "inputs/01-launch_product.png",
+  "product_policy": "Source photo placed without retouching, recoloring, warping, label edits, or overlays; only uniform scaling and placement used.",
+  "logo_policy": "No logo asset was supplied. Each draft reserves a clear area; no placeholder logo was invented.",
+  "candidates": [
+    {
+      "code": "A1",
+      "direction": "A",
+      "internal_name": "Paper halo / 纸面光晕",
+      "artifact": "outputs/v0/candidates/kv-a1.png",
+      "preview": "outputs/v0/previews/kv-a1-preview.jpg",
+      "copy_box": [
+        170,
+        160,
+        1180,
+        216
+      ],
+      "product_box": [
+        310,
+        760,
+        980,
+        980
+      ],
+      "logo_safe_zone": [
+        1260,
+        1914,
+        220,
+        64
+      ]
+    },
+    {
+      "code": "A2",
+      "direction": "A",
+      "internal_name": "Quiet margin / 安静留边",
+      "artifact": "outputs/v0/candidates/kv-a2.png",
+      "preview": "outputs/v0/previews/kv-a2-preview.jpg",
+      "copy_box": [
+        104,
+        270,
+        430,
+        304
+      ],
+      "product_box": [
+        555,
+        760,
+        930,
+        930
+      ],
+      "logo_safe_zone": [
+        104,
+        112,
+        220,
+        72
+      ]
+    },
+    {
+      "code": "A3",
+      "direction": "A",
+      "internal_name": "Clay header / 陶土标题带",
+      "artifact": "outputs/v0/candidates/kv-a3.png",
+      "preview": "outputs/v0/previews/kv-a3-preview.jpg",
+      "copy_box": [
+        145,
+        125,
+        1220,
+        209
+      ],
+      "product_box": [
+        180,
+        620,
+        1240,
+        1240
+      ],
+      "logo_safe_zone": [
+        1290,
+        1920,
+        220,
+        56
+      ]
+    },
+    {
+      "code": "B1",
+      "direction": "B",
+      "internal_name": "Portal focus / 门廊聚焦",
+      "artifact": "outputs/v0/candidates/kv-b1.png",
+      "preview": "outputs/v0/previews/kv-b1-preview.jpg",
+      "copy_box": [
+        132,
+        130,
+        590,
+        299
+      ],
+      "product_box": [
+        505,
+        850,
+        900,
+        900
+      ],
+      "logo_safe_zone": [
+        1280,
+        96,
+        220,
+        72
+      ]
+    },
+    {
+      "code": "B2",
+      "direction": "B",
+      "internal_name": "Edge light / 边缘光",
+      "artifact": "outputs/v0/candidates/kv-b2.png",
+      "preview": "outputs/v0/previews/kv-b2-preview.jpg",
+      "copy_box": [
+        890,
+        180,
+        540,
+        289
+      ],
+      "product_box": [
+        86,
+        860,
+        1000,
+        1000
+      ],
+      "logo_safe_zone": [
+        96,
+        110,
+        220,
+        72
+      ]
+    },
+    {
+      "code": "B3",
+      "direction": "B",
+      "internal_name": "Shadow split / 暗面切分",
+      "artifact": "outputs/v0/candidates/kv-b3.png",
+      "preview": "outputs/v0/previews/kv-b3-preview.jpg",
+      "copy_box": [
+        770,
+        140,
+        690,
+        304
+      ],
+      "product_box": [
+        360,
+        650,
+        1160,
+        1160
+      ],
+      "logo_safe_zone": [
+        98,
+        110,
+        220,
+        72
+      ]
+    },
+    {
+      "code": "C1",
+      "direction": "C",
+      "internal_name": "Folded touch / 折叠触感",
+      "artifact": "outputs/v0/candidates/kv-c1.png",
+      "preview": "outputs/v0/previews/kv-c1-preview.jpg",
+      "copy_box": [
+        140,
+        120,
+        1220,
+        209
+      ],
+      "product_box": [
+        310,
+        720,
+        980,
+        980
+      ],
+      "logo_safe_zone": [
+        1280,
+        1810,
+        220,
+        72
+      ]
+    },
+    {
+      "code": "C2",
+      "direction": "C",
+      "internal_name": "Close fabric / 近身织物",
+      "artifact": "outputs/v0/candidates/kv-c2.png",
+      "preview": "outputs/v0/previews/kv-c2-preview.jpg",
+      "copy_box": [
+        100,
+        1325,
+        480,
+        286
+      ],
+      "product_box": [
+        665,
+        1040,
+        855,
+        855
+      ],
+      "logo_safe_zone": [
+        100,
+        1200,
+        220,
+        72
+      ]
+    },
+    {
+      "code": "C3",
+      "direction": "C",
+      "internal_name": "Ribbon gesture / 缎带轨迹",
+      "artifact": "outputs/v0/candidates/kv-c3.png",
+      "preview": "outputs/v0/previews/kv-c3-preview.jpg",
+      "copy_box": [
+        150,
+        145,
+        790,
+        299
+      ],
+      "product_box": [
+        170,
+        600,
+        1260,
+        1260
+      ],
+      "logo_safe_zone": [
+        1260,
+        1918,
+        220,
+        56
+      ]
+    }
+  ]
+}

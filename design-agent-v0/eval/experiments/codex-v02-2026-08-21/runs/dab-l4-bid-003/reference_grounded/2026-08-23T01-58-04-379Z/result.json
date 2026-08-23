@@ -1,0 +1,99 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-BID-003@reference_grounded",
+  "base_brief_id": "DAB-L4-BID-003",
+  "context_condition": "reference_grounded",
+  "category": "brand_identity_directions",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "creative_exploration"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T01:58:04.381Z",
+  "finished_at": "2026-08-23T01:58:33.975Z",
+  "latency_ms": 29594,
+  "intended_turns": 2,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02c56-e5b5-75c0-af75-d7c57f4f4ed3",
+  "input_assets": [
+    {
+      "input_id": "current-brand",
+      "asset_id": "logo-upgrade-grain-glow-before-after",
+      "role": "current_identity",
+      "reference_role": "edit_target",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-current_identity.png",
+      "source_path": "eval/assets/reference-pack-v0.2/logo-upgrade/grain-glow-before-after.png",
+      "byte_size": 588006,
+      "sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253"
+    },
+    {
+      "input_id": "logo-options-reference",
+      "asset_id": "design-vote-noma-logo-options",
+      "role": "monogram_reference",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "02-monogram_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/design-vote/noma-logo-options.png",
+      "byte_size": 630253,
+      "sha256": "0985be34801ead57e9aaea756b26b06d4e44bc4c909175139c4672a3fa9fc334"
+    }
+  ],
+  "input_context_ids": [
+    "current-brand",
+    "logo-options-reference",
+    "brand-copy"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T01:58:04.381Z",
+      "finished_at": "2026-08-23T01:58:33.973Z",
+      "latency_ms": 29593,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c56-e5b5-75c0-af75-d7c57f4f4ed3",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

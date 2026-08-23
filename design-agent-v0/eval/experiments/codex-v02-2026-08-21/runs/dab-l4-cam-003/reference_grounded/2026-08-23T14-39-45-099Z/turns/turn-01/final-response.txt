@@ -1,0 +1,14 @@
+已完成小红书 3:4 竖版（1080×1440），唯一卖点文案为“安静设计，自然融入日常”。沿用已批准 A 方向，未重新生成或改动 v0 主视觉；产品与背景源文件哈希一致。
+
+新增：
+
+- [小红书竖版成品](/private<WORKDIR>/outputs/v1/xiaohongshu-portrait-direction-a-v1.png)
+- [可编辑 SVG](/private<WORKDIR>/outputs/v1/xiaohongshu-portrait-direction-a-v1.svg)
+- [移动端预览](/private<WORKDIR>/outputs/v1/verification/xiaohongshu-mobile-preview-360-v1.png)
+- [v1 验证报告](/private<WORKDIR>/outputs/v1/verification.json)
+
+已更新：
+
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+`outputs/v0` 保持不变，无未解决阻塞项。

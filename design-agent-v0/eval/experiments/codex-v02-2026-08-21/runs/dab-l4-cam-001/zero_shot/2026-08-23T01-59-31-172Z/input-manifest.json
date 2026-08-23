@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "product",
+    "asset_id": "product-retouch-perfume-bottle-source",
+    "role": "launch_product",
+    "reference_role": "product_identity",
+    "identity_policy": "preserve_exact",
+    "filename": "01-launch_product.png",
+    "source_path": "eval/assets/reference-pack-v0.2/product-retouch/perfume-bottle-source.png",
+    "byte_size": 1208397,
+    "sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286"
+  }
+]

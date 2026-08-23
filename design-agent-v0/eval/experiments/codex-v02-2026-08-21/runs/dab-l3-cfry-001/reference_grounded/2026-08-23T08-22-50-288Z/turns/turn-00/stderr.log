@@ -1,0 +1,34 @@
+Reading additional input from stdin...
+2026-08-23T08:22:50.342002Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T08:22:50.344268Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T08:22:50.344810Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:22:51.296874Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T08:22:51.296891Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T08:23:16.407377Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:23:26.332543Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:23:47.145814Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:23:59.306889Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:24:14.034841Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:24:23.496314Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:31:44.799979Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:32:43.246014Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:32:47.400898Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:32:58.848776Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:33:05.540619Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:33:20.337318Z ERROR codex_core::tools::router: error=exec_command failed for `/bin/zsh -lc "command -v qlmanage
+command -v sips
+command -v chromium
+command -v google-chrome
+command -v firefox
+rm -f outputs/v0/qa/LUNA_CLUB_60mm_production.svg.png
+qlmanage -t -s 900 -o outputs/v0/qa outputs/v0/LUNA_CLUB_60mm_production.svg 2>&1 | sed -n '1,80p'
+ls -lh outputs/v0/qa | sed -n '1,80p'"`: CreateProcess { message: "Rejected(\"`/bin/zsh -lc \\\"command -v qlmanage\\ncommand -v sips\\ncommand -v chromium\\ncommand -v google-chrome\\ncommand -v firefox\\nrm -f outputs/v0/qa/LUNA_CLUB_60mm_production.svg.png\\nqlmanage -t -s 900 -o outputs/v0/qa outputs/v0/LUNA_CLUB_60mm_production.svg 2>&1 | sed -n '1,80p'\\nls -lh outputs/v0/qa | sed -n '1,80p'\\\"` rejected: rm -f style commands are not permitted. Use a safer approach\")" }
+2026-08-23T08:33:22.322629Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:33:29.486394Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:35:19.272694Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:35:30.871096Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:36:14.048609Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:38:17.868414Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:38:29.998851Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:39:03.868914Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T08:39:14.350652Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

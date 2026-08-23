@@ -1,0 +1,122 @@
+{
+  "version": "v3",
+  "status": "cmf_and_mockup_delta_complete",
+  "factory_ready": false,
+  "requested_delta": {
+    "base_material_from": "clear transparent acrylic",
+    "base_material_to": "frosted transparent acrylic",
+    "allowed_output_changes": [
+      "CMF",
+      "mockup"
+    ],
+    "production_geometry_frozen": true,
+    "white_ink_frozen": true,
+    "cutlines_frozen": true
+  },
+  "checks_performed": [
+    {
+      "check": "CMF base-material delta",
+      "status": "pass",
+      "result": "The v3 CMF changes the base to frosted transparent acrylic while retaining 3.0 mm clear acrylic for the upright body.",
+      "evidence_paths": [
+        "outputs/v3/luna-club-cmf-v3.json",
+        "outputs/v3/luna-club-cmf-delta-note-v3.md"
+      ]
+    },
+    {
+      "check": "no hidden frosted-material parameters",
+      "status": "pass",
+      "result": "Frosting method, treated side count, haze/transmission, gloss, and surface roughness are explicitly recorded as not supplied.",
+      "evidence_paths": [
+        "outputs/v3/luna-club-cmf-v3.json",
+        "outputs/v3/luna-club-cmf-delta-note-v3.md"
+      ]
+    },
+    {
+      "check": "mockup material appearance",
+      "status": "pass_with_rendering_limit",
+      "result": "The selected v3 mockup visually presents a translucent lightly frosted base and a polished-clear upright body. It is an appearance reference only; the approved artwork master and production geometry remain authoritative.",
+      "evidence_paths": [
+        "outputs/v3/luna-club-acrylic-mockup-frosted-transparent-base-v3.png",
+        "inputs/01-ip_artwork.png",
+        "outputs/v0/luna-club-acrylic-mockup-study-02.png"
+      ]
+    },
+    {
+      "check": "production geometry frozen",
+      "status": "pass",
+      "result": "No geometry, dimension, slot, or cutline file was created under outputs/v3. Frozen v1 critical file hashes match the pre-v3 baseline.",
+      "evidence": {
+        "outputs/v1/luna-club-cutline-master-v1.svg": "98f4950599cefa580fe229e8897d04049598880187c96597ffe9247f5782ad0b",
+        "outputs/v1/luna-club-body-cutline-v1.svg": "5932fd1647a3db05437945cc9801870f94fe92ebe727fd8118715c6b321d12ab",
+        "outputs/v1/luna-club-base-cutline-v1.svg": "feb2b3661db8c7359b6df753d02162d43e2ec551aa2c8ad7378e91f5ace51048",
+        "outputs/v1/luna-club-three-view-dimensioned-v1.svg": "2f7b4f86bf969ab7380028645757a486e46750b2968cd71aca32af1d41a25167"
+      }
+    },
+    {
+      "check": "white-ink layer frozen",
+      "status": "pass",
+      "result": "The v2 white-ink vector and raster hashes match the pre-v3 baseline; no white-ink file exists under outputs/v3.",
+      "evidence": {
+        "outputs/v2/luna-club-white-ink-layer-expanded-0p2-v2.svg": "dadc2ebfe3ea0eaf4f1585555faabdc42783e4b99aa2b9108a0b9d8ed7b72962",
+        "outputs/v2/luna-club-white-ink-mask-expanded-0p2-v2.png": "d20db43e796c7dfde1affb87e20980eede2920968f1a30f1220734cd421c438d"
+      }
+    },
+    {
+      "check": "earlier version folders preserved",
+      "status": "pass",
+      "result": "Complete outputs/v0, outputs/v1, and outputs/v2 hash manifests match their pre-v3 baselines; no earlier artifact was rewritten.",
+      "evidence_paths": [
+        "outputs/v0/",
+        "outputs/v1/",
+        "outputs/v2/"
+      ]
+    },
+    {
+      "check": "v3 output scope",
+      "status": "pass",
+      "result": "v3 contains only CMF documentation, mockup images, an image-generation prompt record, and verification; it contains no production SVG, cutline, slot, dimension, print-art, or white-ink asset.",
+      "evidence_paths": [
+        "outputs/v3/"
+      ]
+    }
+  ],
+  "frozen_parameters": {
+    "acrylic_thickness_mm": 3.0,
+    "slot_length_mm": 7.2,
+    "slot_net_width_mm": 3.2,
+    "slot_width_tolerance_mm": 0.1,
+    "base_width_mm": 55.0,
+    "base_depth_mm": 25.0,
+    "base_corner_radius_mm": 3.0,
+    "white_ink_outward_expansion_mm": 0.2,
+    "hanging_hole": false,
+    "finished_height_mm": 90.0
+  },
+  "unresolved_blockers": [
+    "Frosting method and treated side count are not specified.",
+    "Haze/light-transmission, gloss, and surface roughness targets are not specified.",
+    "Factory approval of the design-defined 7.2 mm slot length and 7.0 mm tab width remains open.",
+    "Assembly retention method remains open if dry fit is insufficient.",
+    "Print side and color/white-ink layer order remain open.",
+    "Factory acceptance of approximately 149 ppi effective artwork resolution remains open."
+  ],
+  "new_or_changed_paths": [
+    "outputs/v3/luna-club-cmf-v3.json",
+    "outputs/v3/luna-club-cmf-delta-note-v3.md",
+    "outputs/v3/luna-club-acrylic-mockup-frosted-transparent-base-v3.png",
+    "outputs/v3/luna-club-mockup-frosted-base-study-01-v3.png",
+    "outputs/v3/luna-club-imagegen-prompts-v3.md",
+    "outputs/v3/verification.json",
+    "outputs/project-state.json"
+  ],
+  "evidence_paths": [
+    "outputs/project-state.json",
+    "outputs/v3/luna-club-cmf-v3.json",
+    "outputs/v3/luna-club-cmf-delta-note-v3.md",
+    "outputs/v3/luna-club-acrylic-mockup-frosted-transparent-base-v3.png",
+    "outputs/v3/luna-club-imagegen-prompts-v3.md",
+    "outputs/v1/luna-club-cutline-master-v1.svg",
+    "outputs/v2/luna-club-white-ink-layer-expanded-0p2-v2.svg"
+  ]
+}

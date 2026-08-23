@@ -1,0 +1,103 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T00:49:44.648Z",
+  "finished_at": "2026-08-23T01:09:56.803Z",
+  "latency_ms": 1212171,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 61,
+    "command_count": 19,
+    "tool_count": 7,
+    "image_activity_count": 2,
+    "runtime_error_count": 0,
+    "thread_id": "01a02c18-52ef-7703-9845-791ab81f2f69",
+    "usage": {
+      "input_tokens": 1748211,
+      "cached_input_tokens": 1652096,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 37213,
+      "reasoning_output_tokens": 14960
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1534,
+      "sha256": "81da012b0c9e2b0e6945d1866615381b66a708cb0fbdf2716a9452d433198f7f"
+    },
+    {
+      "filename": "v0/__pycache__/build_campaign_adaptations.cpython-39.pyc",
+      "byte_size": 32561,
+      "sha256": "7bf2840b05c263af430ef2c4d68000e89db3f40934d66e700d8391cfa8997fe6"
+    },
+    {
+      "filename": "v0/assets/approved_brand_mark_crop.png",
+      "byte_size": 50822,
+      "sha256": "f8351fdfec2760de5590195f4cc8e228b927348fc3a8571e8c78a1110e62a160"
+    },
+    {
+      "filename": "v0/assets/approved_origami_crop.png",
+      "byte_size": 93690,
+      "sha256": "b05401c749632bd30c484374d1196b68aec4adb3ac317f1a9466c1d413b40ed4"
+    },
+    {
+      "filename": "v0/build_campaign_adaptations.py",
+      "byte_size": 38528,
+      "sha256": "0dda8604debed086976180e3ed4c3cf041c974dc0fed79f80fe0b0f8b45ffc85"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 7037,
+      "sha256": "458059ecd35cd7f6833a8bc7a2d99f04a2e211b29cf7de5541040024bb43e2fd"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 11535,
+      "sha256": "25ef8793078a3a2495a3dab8d48e3b39afddd14a16f88985ea508ec939f495bd"
+    },
+    {
+      "filename": "v0/instagram_post_1080x1350.png",
+      "byte_size": 1018836,
+      "sha256": "4f1ad5b476e9d0df69a66f2581e8d6372859629362817d476df90331464e9cee"
+    },
+    {
+      "filename": "v0/instagram_post_1080x1350.svg",
+      "byte_size": 3937,
+      "sha256": "49d59e900aa2f12511c2376ad7477d67588b9f17634aad982d62a1529eaae56d"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 1142656,
+      "sha256": "58b0a30f699cde26d6b22ae78e52b37989639654d72e3c9b13c3f3f6a5debba6"
+    },
+    {
+      "filename": "v0/story_1080x1920.png",
+      "byte_size": 1315350,
+      "sha256": "33b8e6d7aec86fe6af42cde89ca181c92e6db1dd949319f6070d037729a29090"
+    },
+    {
+      "filename": "v0/story_1080x1920.svg",
+      "byte_size": 4003,
+      "sha256": "05460e4d462aa7283c1d3feb1657720a8a70c552c53fb2987394e923a98e1175"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 7222,
+      "sha256": "43258d37d4cebdc01e6a59355ac6c910e61d103e5144fabb90db3cf456ca5ebe"
+    },
+    {
+      "filename": "v0/website_card_1200x628.png",
+      "byte_size": 615193,
+      "sha256": "5e278bbb77e85111ef10f29aff74d1f767cd7a62cb1a8e0aa8f9f33fc5b6c0af"
+    },
+    {
+      "filename": "v0/website_card_1200x628.svg",
+      "byte_size": 3820,
+      "sha256": "4571b02f8abca194f52d5b311d2601d61d3e593934331e4ee8371b900cc052c4"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+已完成 v3：仅将底座 CMF 改为磨砂透明并更新 mockup；生产几何、刀线及 v2 白墨层均冻结，v0–v2 全量哈希未变化。
+
+- [v3 磨砂透明底座 Mockup](/private<WORKDIR>/outputs/v3/luna-club-acrylic-mockup-frosted-transparent-base-v3.png)
+- [v3 CMF](/private<WORKDIR>/outputs/v3/luna-club-cmf-v3.json)
+- [CMF 变更说明](/private<WORKDIR>/outputs/v3/luna-club-cmf-delta-note-v3.md)
+- [v3 核验记录](/private<WORKDIR>/outputs/v3/verification.json)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+Mockup 使用内置 imagegen 的局部编辑模式；[完整提示词记录](/private<WORKDIR>/outputs/v3/luna-club-imagegen-prompts-v3.md)。磨砂方式、单/双面、雾度及光泽度仍未指定，未作隐藏假设。

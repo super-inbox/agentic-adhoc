@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.2",
+  "candidate_version": "v0",
+  "candidate_path": "outputs/v0/perfume-bottle-retouched-v0.png",
+  "source_path": "inputs/01-edit_target.png",
+  "overall_status": "pass",
+  "checks": [
+    {
+      "name": "visual_quality_at_original_resolution",
+      "status": "pass",
+      "method": "visual inspection at 1024x1024",
+      "result": "Glass perimeter and base are subtly cleaner and clearer; no visible halos, synthetic CGI finish, or excessive sharpening.",
+      "evidence_paths": [
+        "outputs/v0/perfume-bottle-retouched-v0.png",
+        "outputs/v0/perfume-bottle-retouch-difference-v0.png"
+      ]
+    },
+    {
+      "name": "canvas_and_composition",
+      "status": "pass",
+      "method": "pixel dimensions and no geometric transform",
+      "expected": [
+        1024,
+        1024
+      ],
+      "observed": [
+        1024,
+        1024
+      ],
+      "result": "Original crop, framing, object coordinates, and square composition retained."
+    },
+    {
+      "name": "change_localization",
+      "status": "pass",
+      "method": "RGB pixel difference analysis",
+      "difference_bbox_xyxy": [
+        270,
+        309,
+        746,
+        937
+      ],
+      "changed_pixels": 114966,
+      "changed_fraction": 0.10964012145996094,
+      "max_channel_delta": 21,
+      "mean_abs_channel_delta_full_frame": 0.23643938700358072,
+      "result": "All changes are confined to the original bottle/glass footprint and are low amplitude.",
+      "evidence_paths": [
+        "outputs/v0/perfume-bottle-glass-retouch-mask-v0.png",
+        "outputs/v0/perfume-bottle-retouch-difference-v0.png"
+      ]
+    },
+    {
+      "name": "cap_identity_lock",
+      "status": "pass",
+      "method": "pixel-exact crop comparison",
+      "crop_xyxy": [
+        390,
+        80,
+        631,
+        336
+      ],
+      "source_crop_sha256": "55fbfbf1333ac85f994c5d98b7277e328a844d44e60eded2a073883dbd38ae2b",
+      "output_crop_sha256": "55fbfbf1333ac85f994c5d98b7277e328a844d44e60eded2a073883dbd38ae2b",
+      "result": "Cap and neck region are pixel-identical to the source."
+    },
+    {
+      "name": "label_and_text_lock",
+      "status": "pass",
+      "method": "pixel-exact crop comparison",
+      "crop_xyxy": [
+        435,
+        390,
+        701,
+        776
+      ],
+      "source_crop_sha256": "5d6af4554f34b9470927929c4e7d467794226c5fed2e0f83abc61fb3db169790",
+      "output_crop_sha256": "5d6af4554f34b9470927929c4e7d467794226c5fed2e0f83abc61fb3db169790",
+      "result": "Label, surrounding padding, and all existing label content are pixel-identical to the source."
+    },
+    {
+      "name": "liquid_color_and_tube_lock",
+      "status": "pass",
+      "method": "pixel-exact liquid-core comparison plus full-reservoir chroma measurement",
+      "liquid_core_crop_xyxy": [
+        350,
+        382,
+        671,
+        839
+      ],
+      "source_core_sha256": "b5299e3993494d7f3ab83d53b67e72ce8b1fe60c0cc2d36cf15118e8ab6ee0eb",
+      "output_core_sha256": "b5299e3993494d7f3ab83d53b67e72ce8b1fe60c0cc2d36cf15118e8ab6ee0eb",
+      "reservoir_mean_chroma_abs_delta": {
+        "cb": 0.07188471369916272,
+        "cr": 0.05166685964178441
+      },
+      "result": "Main liquid field and internal tube are pixel-identical; measured reservoir chroma change is below 0.08 on an 8-bit channel."
+    },
+    {
+      "name": "background_cleanliness_and_lock",
+      "status": "pass",
+      "method": "pixel-exact comparison outside the product footprint plus visual inspection",
+      "result": "Upper, left, and right background regions are pixel-identical; original neutral-gray tone, texture, and framing remain intact."
+    },
+    {
+      "name": "file_integrity",
+      "status": "pass",
+      "method": "PNG decode, mode, size, and SHA-256",
+      "source_sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286",
+      "candidate_sha256": "15789825f5d047bb51e40400cb86ac0b139ce05aafec6f3c67f052a8f1c7b9e8",
+      "candidate_mode": "RGB",
+      "candidate_file_bytes": 975639
+    }
+  ],
+  "evidence_paths": [
+    "inputs/01-edit_target.png",
+    "outputs/v0/perfume-bottle-retouched-v0.png",
+    "outputs/v0/perfume-bottle-glass-retouch-mask-v0.png",
+    "outputs/v0/perfume-bottle-retouch-difference-v0.png"
+  ],
+  "unresolved_blockers": []
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": "candidate-verification/1.0",
+  "version": "v1",
+  "base_version": "v0",
+  "verified_at": "2026-08-24T00:46:42+08:00",
+  "overall_status": "pass_with_pending_client_confirmation",
+  "checks_performed": [
+    {
+      "check_id": "v0-folder-preserved",
+      "category": "versioning",
+      "status": "pass",
+      "method": "SHA-256 comparison against the recorded v0 state",
+      "hashes": {
+        "../v0/preview.png": "1e394bc9433f55a20f79dfe26d325b4cd0289e4352202aa1ade06de63822fea0",
+        "../v0/hero_detail_v0.svg": "fc25139e79cf4aca0cc5177bad08596fa8490db5525b03d3251565f84754c0b0",
+        "../v0/design_document.json": "c521f6cd286136b07b50f176f1611e67ff4547b64d60d3c9c41c31ceac48bd47",
+        "../v0/change_set.json": "b1e426a50597ddd3e77a049ee0555835e0bba9407df3426a668d2e34cd2c5246",
+        "../v0/verification.json": "d53ec297566b0d4d62e2b4b890f3c811e2256d3c585e9311dd6b5d88aa244253"
+      },
+      "evidence_paths": ["../v0"]
+    },
+    {
+      "check_id": "required-v1-artifacts-present",
+      "category": "artifact_completeness",
+      "status": "pass",
+      "method": "filesystem presence check",
+      "expected": ["preview.png", "hero_detail_v1.svg", "design_document.json", "change_set.json", "verification.json"],
+      "found": ["preview.png", "hero_detail_v1.svg", "design_document.json", "change_set.json", "verification.json"],
+      "evidence_paths": ["preview.png", "hero_detail_v1.svg", "design_document.json", "change_set.json", "verification.json"]
+    },
+    {
+      "check_id": "structured-files-parse",
+      "category": "machine_readability",
+      "status": "pass",
+      "method": "jq JSON parse and xmllint SVG parse",
+      "evidence_paths": ["design_document.json", "change_set.json", "verification.json", "hero_detail_v1.svg", "../project-state.json"]
+    },
+    {
+      "check_id": "preview-dimensions",
+      "category": "render",
+      "status": "pass",
+      "method": "PNG metadata inspection",
+      "expected": {"width": 1200, "height": 1600},
+      "actual": {"width": 1200, "height": 1600},
+      "evidence_paths": ["preview.png"]
+    },
+    {
+      "check_id": "first-selling-point-copy",
+      "category": "copy",
+      "status": "pass",
+      "method": "SVG visible text-node and object-graph inspection",
+      "client_reported_incorrect_value": "低躁运行",
+      "observed_v0_source_value": "低噪运行",
+      "required_v1_value": "低噪运行",
+      "actual_v1_value": "低噪运行",
+      "handling": "The v0 source was already conformant, so v1 reasserts and locks the required value without fabricating a visual text delta.",
+      "evidence_paths": ["hero_detail_v1.svg", "design_document.json", "change_set.json"]
+    },
+    {
+      "check_id": "all-approved-copy-exact",
+      "category": "copy",
+      "status": "pass",
+      "method": "SVG visible text inventory",
+      "expected": ["让香气慢下来。", "低噪运行", "定时关闭", "陶土触感"],
+      "actual": ["让香气慢下来。", "低噪运行", "定时关闭", "陶土触感"],
+      "evidence_paths": ["hero_detail_v1.svg", "design_document.json"]
+    },
+    {
+      "check_id": "third-feature-upward-delta",
+      "category": "requested_delta",
+      "status": "pass",
+      "method": "SVG transform and object bounds inspection",
+      "object_id": "feature-clay-touch",
+      "expected": {"translate_y": -12, "unit": "px", "scope": ["card", "icon", "label"]},
+      "actual": {
+        "svg_transform": "translate(0,-12)",
+        "effective_bounds": {"x": 779, "y": 1160, "width": 309, "height": 246}
+      },
+      "evidence_paths": ["hero_detail_v1.svg", "design_document.json", "change_set.json"]
+    },
+    {
+      "check_id": "visual-diff-localized",
+      "category": "delta_isolation",
+      "status": "pass",
+      "method": "RGB pixel comparison of v0 and v1 previews",
+      "actual_diff_bbox": {"left": 778, "top": 1159, "right": 1089, "bottom": 1419},
+      "changed_pixel_count": 14591,
+      "pixels_changed_outside_bbox": 0,
+      "interpretation": "The only rasterized visual difference is the old/new coverage of the translated third selling-point card.",
+      "evidence_paths": ["../v0/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "product-unchanged",
+      "category": "locked_invariant",
+      "status": "pass",
+      "method": "asset hash equality, SVG object equality, and preview-region pixel equality",
+      "v0_asset_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "v1_asset_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "svg_object_equal": true,
+      "preview_product_region_equal": true,
+      "evidence_paths": ["../v0/product_reference_locked.png", "product_reference_locked.png", "../v0/hero_detail_v0.svg", "hero_detail_v1.svg", "../v0/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "headline-unchanged",
+      "category": "locked_invariant",
+      "status": "pass",
+      "method": "SVG object equality and preview-region pixel equality",
+      "content_before": "让香气慢下来。",
+      "content_after": "让香气慢下来。",
+      "position_before": {"x": 600, "baseline_y": 1072},
+      "position_after": {"x": 600, "baseline_y": 1072},
+      "svg_object_equal": true,
+      "preview_headline_region_equal": true,
+      "evidence_paths": ["../v0/hero_detail_v0.svg", "hero_detail_v1.svg", "../v0/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "background-unchanged",
+      "category": "locked_invariant",
+      "status": "pass",
+      "method": "asset hash equality, SVG object equality, and preview-region pixel equality",
+      "v0_asset_sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+      "v1_asset_sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+      "svg_object_equal": true,
+      "preview_background_region_equal": true,
+      "evidence_paths": ["../v0/ambient_background_v0.png", "ambient_background_v0.png", "../v0/hero_detail_v0.svg", "hero_detail_v1.svg", "../v0/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "unrelated-feature-objects-unchanged",
+      "category": "delta_isolation",
+      "status": "pass",
+      "method": "SVG object equality and preview-region pixel equality",
+      "objects": {
+        "feature-timer": "identical",
+        "bottom-rhythm": "identical"
+      },
+      "first_feature_visual_result": "identical; only a non-rendering copy-lock annotation was added",
+      "evidence_paths": ["../v0/hero_detail_v0.svg", "hero_detail_v1.svg", "../v0/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "preview-visual-qa",
+      "category": "visual_quality",
+      "status": "pass",
+      "method": "full-resolution visual inspection",
+      "observations": [
+        "The first selling point visibly reads 低噪运行.",
+        "The third selling-point card is slightly higher while preserving its internal spacing.",
+        "No clipping, missing-image markers, or unintended style changes are visible."
+      ],
+      "evidence_paths": ["preview.png"]
+    },
+    {
+      "check_id": "project-state-updated",
+      "category": "versioning",
+      "status": "pass",
+      "method": "project-state inspection",
+      "current_version": "v1",
+      "v0_history_preserved": true,
+      "v1_history_added": true,
+      "next_checkpoint": "client-confirm-v1",
+      "evidence_paths": ["../project-state.json"]
+    },
+    {
+      "check_id": "v1-artifact-hashes",
+      "category": "integrity",
+      "status": "pass",
+      "method": "SHA-256 digest",
+      "hashes": {
+        "preview.png": "b9a08420b9e1276fd892f6602854b1cb59dd33fcfc3826635148236eb43683cb",
+        "hero_detail_v1.svg": "a98c762e8a4f98da79c42e83df308b92baea53a48efcf9e6a044f9cdb0d48c2a",
+        "design_document.json": "05ec3448d053bad477c7f03926bc39727c556fbf0c6f8d88c6131d26877eb335",
+        "change_set.json": "d5872f908904d320076ed12c05ab6401ec179514b4b713209c5faca7b01ef097",
+        "ambient_background_v0.png": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+        "product_reference_locked.png": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "render_preview.m": "0b6ba5747c5d559973ad5d793827dfe366e17e49e0ee2301581374c8ff22e341"
+      },
+      "evidence_paths": ["preview.png", "hero_detail_v1.svg", "design_document.json", "change_set.json", "ambient_background_v0.png", "product_reference_locked.png", "render_preview.m"]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "blocker_id": "client-confirm-v1",
+      "severity": "workflow_checkpoint",
+      "status": "open",
+      "description": "v1 is ready for confirmation of the corrected wording and adjusted third-feature position.",
+      "blocks": ["v2", "final approval"],
+      "does_not_block": ["v1 delivery"]
+    }
+  ]
+}

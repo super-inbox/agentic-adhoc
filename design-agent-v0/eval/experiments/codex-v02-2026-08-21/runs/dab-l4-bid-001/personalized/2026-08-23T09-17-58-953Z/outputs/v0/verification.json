@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "version": "v0",
+  "status": "passed_with_documented_blockers",
+  "checked_at": "2026-08-23T17:30:59+08:00",
+  "checks": [
+    {
+      "id": "artifact_presence",
+      "result": "pass",
+      "check": "The written territory pack, responsive comparison board, and static overview image exist under outputs/v0.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.html",
+        "outputs/v0/creative-territories-overview.png"
+      ]
+    },
+    {
+      "id": "brief_facts_covered",
+      "result": "pass",
+      "check": "The pack records the 1998 founding fact, Chinese-pastry category, 30–45 core audience, 22–30 growth audience, and gifting requirement.",
+      "evidence_paths": ["outputs/v0/creative-territories.md"]
+    },
+    {
+      "id": "conflicts_organized",
+      "result": "pass",
+      "check": "Seven brief/reference/channel conflicts are stated with an explicit handling principle.",
+      "evidence_paths": ["outputs/v0/creative-territories.md"]
+    },
+    {
+      "id": "hypothesis_count_and_mapping",
+      "result": "pass",
+      "check": "Ten hypotheses (H01–H10) are present, each includes a risk, and every hypothesis maps exactly once into T1, T2, or T3.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.html",
+        "outputs/v0/creative-territories-overview.png"
+      ]
+    },
+    {
+      "id": "three_distinct_territories",
+      "result": "pass",
+      "check": "Exactly three territories are defined with different primary drivers, composition grammars, photography logic, and failure criteria.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-overview.png"
+      ]
+    },
+    {
+      "id": "palette_separation",
+      "result": "pass",
+      "check": "T1, T2, and T3 each use a separate four-color primary palette; no palette hex value is shared across territories.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.html",
+        "outputs/v0/creative-territories-overview.png"
+      ]
+    },
+    {
+      "id": "logo_preservation",
+      "result": "pass",
+      "check": "No Logo redraw or edit was created. Low-cost thumbnails use text-only placeholders marked as the existing Logo, and the written pack locks the existing structure and Chinese name.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.html",
+        "outputs/v0/creative-territories-overview.png"
+      ]
+    },
+    {
+      "id": "reference_contract",
+      "result": "pass",
+      "check": "Reference A contributes hierarchy/close-up principles, Reference B contributes controlled system logic, and Reference C contributes only secondary friendliness/line-language principles; no reference Logo, icon, or layout is reproduced.",
+      "evidence_paths": ["outputs/v0/creative-territories.md"]
+    },
+    {
+      "id": "channel_extensions",
+      "result": "pass",
+      "check": "Every territory includes explicit Taobao hero/detail/SKU logic and physical-store wall, display, signage, or wayfinding logic.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.html",
+        "outputs/v0/creative-territories-overview.png"
+      ]
+    },
+    {
+      "id": "static_board_structure",
+      "result": "pass",
+      "check": "The 20,770-byte HTML fragment parsed with Python html.parser, contains 10 hypothesis cards and 3 territory cards, and includes responsive reflow rules at 880 px and 420 px.",
+      "evidence_paths": ["outputs/v0/creative-territories-board.html"]
+    },
+    {
+      "id": "static_overview_visual_inspection",
+      "result": "pass",
+      "check": "The 1800 × 2480 PNG was inspected at original detail: all sections are visible, the three thumbnail systems are distinguishable, and no content is clipped.",
+      "evidence_paths": ["outputs/v0/creative-territories-overview.png"]
+    },
+    {
+      "id": "selection_gate",
+      "result": "pass",
+      "check": "The pack stops at the requested checkpoint and does not select, hybridize, or refine a territory on the client's behalf.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/project-state.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "territory_selection_pending",
+      "severity": "blocking_next_stage",
+      "detail": "Client selection of T1, T2, or T3 is required before refinement and Friday proposal executions."
+    },
+    {
+      "id": "logo_master_missing",
+      "severity": "blocking_exact_logo_application",
+      "detail": "The supplied image does not expose an editable Chinese standard wordmark or complete Logo usage rules. Exact placement proofs require the current vector master and clear-space/reverse/monochrome rules."
+    },
+    {
+      "id": "html_runtime_preview_unavailable",
+      "severity": "non_blocking_for_selection",
+      "detail": "No preview browser was available in the execution environment. The HTML was statically parsed and the separate PNG overview was visually inspected, but host-rendered desktop/mobile screenshots could not be captured."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+operational_attempt=1; completed=false
+2026-08-22T03:32:11.712902Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-22T03:32:12.206559Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-22T03:32:12.206627Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-22T03:32:12.306426Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-22T03:32:12.306463Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+
+
+operational_attempt=2; completed=true
+2026-08-22T23:44:31.174072Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-22T23:44:31.181878Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 94 column 5
+2026-08-22T23:44:36.100879Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to parse remote plugin catalog response from https://chatgpt.com/backend-api/ps/plugins/suggested?scope=GLOBAL: EOF while parsing a value at line 1 column 0
+2026-08-22T23:44:36.182935Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-22T23:44:36.255027Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-22T23:44:36.255050Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-22T23:45:07.352515Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 185ms)... turn_id=01a02bdc-a856-7d53-9709-7578cf1e67cb retries=1 max_retries=5 sampling_error=request timed out
+2026-08-22T23:45:22.544990Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 428ms)... turn_id=01a02bdc-a856-7d53-9709-7578cf1e67cb retries=2 max_retries=5 sampling_error=request timed out
+2026-08-22T23:45:37.991309Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (3/5 in 827ms)... turn_id=01a02bdc-a856-7d53-9709-7578cf1e67cb retries=3 max_retries=5 sampling_error=request timed out
+2026-08-22T23:45:53.830902Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (4/5 in 1.564s)... turn_id=01a02bdc-a856-7d53-9709-7578cf1e67cb retries=4 max_retries=5 sampling_error=request timed out
+2026-08-22T23:46:10.407756Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (5/5 in 3.023s)... turn_id=01a02bdc-a856-7d53-9709-7578cf1e67cb retries=5 max_retries=5 sampling_error=request timed out
+2026-08-22T23:46:28.445143Z  WARN codex_core::client: falling back to HTTP
+2026-08-22T23:47:02.265253Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-22T23:47:17.582233Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-22T23:49:56.415626Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+

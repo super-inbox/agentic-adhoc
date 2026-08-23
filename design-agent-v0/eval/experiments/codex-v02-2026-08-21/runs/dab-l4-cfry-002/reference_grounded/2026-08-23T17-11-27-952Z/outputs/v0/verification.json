@@ -1,0 +1,79 @@
+{
+  "version": "v0",
+  "status": "checkpoint_complete_with_blockers",
+  "factory_ready": false,
+  "checks_performed": [
+    {
+      "check": "approved master presence and metadata",
+      "status": "pass",
+      "result": "Source is a 1408 x 768 RGBA PNG with alpha.",
+      "evidence_paths": [
+        "inputs/01-ip_artwork.png"
+      ]
+    },
+    {
+      "check": "approved master integrity recorded",
+      "status": "pass",
+      "result": "SHA-256: 7956c4e5900e53317128d7733ecf0c7729be48edc9d76e5f7a13962aca5cc718",
+      "evidence_paths": [
+        "inputs/01-ip_artwork.png"
+      ]
+    },
+    {
+      "check": "visual direction and mockup delivered",
+      "status": "pass",
+      "result": "Direction board and two 1536 x 1024 concept mockups are present; study 02 is the preferred review image.",
+      "evidence_paths": [
+        "outputs/v0/luna-club-direction-board-v0.svg",
+        "outputs/v0/luna-club-acrylic-mockup-study-01.png",
+        "outputs/v0/luna-club-acrylic-mockup-study-02.png"
+      ]
+    },
+    {
+      "check": "artwork identity handling",
+      "status": "pass_with_limit",
+      "result": "The direction board embeds the approved master unchanged. Generated mockups were visually checked for subject, wording, palette, and silhouette, but remain illustrative renders and are not artwork masters or prepress sources.",
+      "evidence_paths": [
+        "inputs/01-ip_artwork.png",
+        "outputs/v0/luna-club-direction-board-v0.svg",
+        "outputs/v0/luna-club-acrylic-mockup-study-02.png"
+      ]
+    },
+    {
+      "check": "no unconfirmed manufacturing parameters invented",
+      "status": "pass",
+      "result": "No acrylic thickness, slot width/depth/length, fit tolerance, or finalized base dimensions are specified.",
+      "evidence_paths": [
+        "outputs/v0/luna-club-direction-and-quote-gaps-v0.md",
+        "outputs/v0/luna-club-direction-board-v0.svg"
+      ]
+    },
+    {
+      "check": "production-package scope gate",
+      "status": "pass",
+      "result": "Three views, final dimensions, CMF, white-ink layer, and cutline were intentionally not generated before parameter confirmation.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v0/luna-club-direction-and-quote-gaps-v0.md"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    "Main acrylic thickness and material grade are not confirmed.",
+    "Base acrylic thickness and final external dimensions are not confirmed.",
+    "Slot width, depth, length, and fit tolerance are not confirmed.",
+    "Assembly method is not confirmed.",
+    "Print side/viewing requirement, white-ink coverage, and color standard are not confirmed.",
+    "Order quantity, edge finishing, packaging, delivery region, and schedule are not confirmed.",
+    "Factory-specific cutline, bleed, white-ink spot-color, and file-format conventions are not supplied."
+  ],
+  "evidence_paths": [
+    "inputs/01-ip_artwork.png",
+    "outputs/project-state.json",
+    "outputs/v0/luna-club-direction-board-v0.svg",
+    "outputs/v0/luna-club-direction-and-quote-gaps-v0.md",
+    "outputs/v0/luna-club-acrylic-mockup-study-01.png",
+    "outputs/v0/luna-club-acrylic-mockup-study-02.png",
+    "outputs/v0/luna-club-imagegen-prompts-v0.md"
+  ]
+}

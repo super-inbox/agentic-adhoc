@@ -1,0 +1,64 @@
+{
+  "version": "v3",
+  "status": "factory_review_draft",
+  "requested_delta": "base material changed from clear transparent acrylic to frosted transparent acrylic",
+  "material": {
+    "body": {
+      "material": "clear acrylic",
+      "nominal_thickness_mm": 3.0,
+      "change_from_v2": "none"
+    },
+    "base": {
+      "material": "frosted transparent acrylic",
+      "nominal_thickness_mm": 3.0,
+      "appearance": "transparent with diffused reflections and a frosted surface appearance",
+      "color_tint": "none specified",
+      "change_from_v2": "material/finish appearance only"
+    }
+  },
+  "frosted_base_parameters_not_supplied": [
+    "frosting manufacturing method",
+    "one-side or two-side frosting",
+    "haze or light-transmission target",
+    "gloss value",
+    "surface roughness"
+  ],
+  "color": {
+    "artwork": "preserve approved master colors; no redraw or recolor",
+    "master_path": "outputs/v1/luna-club-print-art-master-v1.png",
+    "effective_resolution_ppi_at_87mm_art_height": 148.9,
+    "change_from_v2": "none"
+  },
+  "print_layers": {
+    "color_art": "outputs/v1/luna-club-print-art-crop-v1.png",
+    "white_ink_vector_current": "outputs/v2/luna-club-white-ink-layer-expanded-0p2-v2.svg",
+    "white_ink_raster_current": "outputs/v2/luna-club-white-ink-mask-expanded-0p2-v2.png",
+    "white_ink_outward_expansion_mm": 0.2,
+    "change_from_v2": "none; frozen"
+  },
+  "production_geometry": {
+    "cutline_master": "outputs/v1/luna-club-cutline-master-v1.svg",
+    "body_cutline": "outputs/v1/luna-club-body-cutline-v1.svg",
+    "base_cutline": "outputs/v1/luna-club-base-cutline-v1.svg",
+    "base_dimensions_mm": {
+      "width": 55.0,
+      "depth": 25.0,
+      "corner_radius": 3.0
+    },
+    "slot_length_mm": 7.2,
+    "slot_net_width_mm": 3.2,
+    "slot_width_tolerance_mm": 0.1,
+    "change_from_v2": "none; frozen"
+  },
+  "mockup": {
+    "path": "outputs/v3/luna-club-acrylic-mockup-frosted-transparent-base-v3.png",
+    "status": "appearance reference only; not a production drawing"
+  },
+  "open_items": [
+    "Factory/client to specify or approve the frosting method and whether one or both base faces are frosted.",
+    "Factory/client to specify or approve haze/transmission, gloss, and surface roughness targets.",
+    "Factory approval of the previously design-defined 7.2 mm slot length and 7.0 mm tab width remains open.",
+    "Print side and color/white-ink layer order remain open.",
+    "Factory acceptance of approximately 149 ppi effective artwork resolution remains open."
+  ]
+}

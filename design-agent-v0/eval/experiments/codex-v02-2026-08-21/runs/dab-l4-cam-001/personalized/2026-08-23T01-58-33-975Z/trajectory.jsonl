@@ -1,0 +1,9 @@
+{"type":"codex.thread_started","turn_index":0,"logical_session_id":"session-01","thread_id":"01a02c57-587a-7b01-820e-e883eaaf57de"}
+{"type":"codex.turn_started","turn_index":0,"logical_session_id":"session-01"}
+{"type":"codex.runtime_error","turn_index":0,"logical_session_id":"session-01","message":"Reconnecting... 1/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))"}
+{"type":"codex.runtime_error","turn_index":0,"logical_session_id":"session-01","message":"Reconnecting... 2/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))"}
+{"type":"codex.runtime_error","turn_index":0,"logical_session_id":"session-01","message":"Reconnecting... 3/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))"}
+{"type":"codex.runtime_error","turn_index":0,"logical_session_id":"session-01","message":"Reconnecting... 4/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))"}
+{"type":"codex.runtime_error","turn_index":0,"logical_session_id":"session-01","message":"Reconnecting... 5/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))"}
+{"type":"codex.runtime_error","turn_index":0,"logical_session_id":"session-01","message":"stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)"}
+{"type":"codex.turn_failed","turn_index":0,"logical_session_id":"session-01","error":{"message":"stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)"}}

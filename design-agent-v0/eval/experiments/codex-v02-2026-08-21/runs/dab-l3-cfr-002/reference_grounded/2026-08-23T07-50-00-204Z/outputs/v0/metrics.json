@@ -1,0 +1,50 @@
+{
+  "canvasHeight" : 1152,
+  "canvasWidth" : 928,
+  "changedBounds" : {
+    "height" : 885,
+    "width" : 587,
+    "x" : 190,
+    "y" : 126
+  },
+  "changedPixelRatio" : 0.12107223569204981,
+  "changedPixels" : 129433,
+  "exactUntouchedPixelMatch" : 1,
+  "markDestinationBounds" : {
+    "height" : 161,
+    "width" : 161,
+    "x" : 596,
+    "y" : 126
+  },
+  "markScaleX" : 1,
+  "markScaleY" : 1,
+  "markSourceBounds" : {
+    "height" : 161,
+    "width" : 161,
+    "x" : 597,
+    "y" : 837
+  },
+  "notes" : [
+    "The poster canvas is never resampled.",
+    "Only extracted title\/mark colored pixels are transformed; all pixels outside source cleanup and destination boxes remain byte-identical after decode.",
+    "Source cleanup uses nearby untouched paper samples and local interpolation because the raster source contains no hidden background beneath printed objects."
+  ],
+  "outsideAuthorizedRegionsChangedPixels" : 0,
+  "sourceMarkMaskPixels" : 12132,
+  "sourceTitleMaskPixels" : 32379,
+  "titleDestinationBounds" : {
+    "height" : 198,
+    "width" : 550,
+    "x" : 190,
+    "y" : 293
+  },
+  "titleScaleX" : 1.1506276150627615,
+  "titleScaleY" : 1.1511627906976745,
+  "titleSourceBounds" : {
+    "height" : 172,
+    "width" : 478,
+    "x" : 260,
+    "y" : 306
+  },
+  "unchangedPixels" : 939623
+}

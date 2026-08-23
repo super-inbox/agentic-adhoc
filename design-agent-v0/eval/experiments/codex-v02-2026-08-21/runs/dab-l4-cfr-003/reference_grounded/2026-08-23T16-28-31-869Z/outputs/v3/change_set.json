@@ -1,0 +1,117 @@
+{
+  "schema_version": "object-change-set/1.0",
+  "change_set_id": "aroma-detail-hero-v3-restore-v1-order",
+  "version": "v3",
+  "base_version": "v2",
+  "created_at": "2026-08-24T01:05:24+08:00",
+  "scope_policy": "requested_delta_only",
+  "render_policy": "edit existing objects; no full-image regeneration",
+  "summary": "Restore the v1 selling-point order while preserving the corrected first label and the existing raised third-slot position.",
+  "operations": [
+    {
+      "operation": "reorder_children",
+      "object_id": "feature-row",
+      "property": "children",
+      "before": ["feature-low-noise", "feature-clay-touch", "feature-timer"],
+      "after": ["feature-low-noise", "feature-timer", "feature-clay-touch"],
+      "reference_order": "v1",
+      "reason": "Apply the client-requested return to the v1 selling-point order."
+    },
+    {
+      "operation": "update",
+      "object_id": "feature-timer",
+      "object_type": "feature_card",
+      "properties": {
+        "slot": {"before": 3, "after": 2},
+        "effective_bounds": {
+          "before": {"x": 779, "y": 1160, "width": 309, "height": 246},
+          "after": {"x": 445.5, "y": 1172, "width": 309, "height": 246}
+        },
+        "transform": {
+          "before": {"translate_x": 333.5, "translate_y": -12},
+          "after": {"translate_x": 0, "translate_y": 0}
+        }
+      },
+      "preserved": ["label", "icon", "card style", "font family", "font size", "font weight", "internal spacing"],
+      "reason": "Return the complete 定时关闭 object to the unchanged second slot."
+    },
+    {
+      "operation": "update",
+      "object_id": "feature-clay-touch",
+      "object_type": "feature_card",
+      "properties": {
+        "slot": {"before": 2, "after": 3},
+        "effective_bounds": {
+          "before": {"x": 445.5, "y": 1172, "width": 309, "height": 246},
+          "after": {"x": 779, "y": 1160, "width": 309, "height": 246}
+        },
+        "transform": {
+          "before": {"translate_x": -333.5, "translate_y": 0},
+          "after": {"translate_x": 0, "translate_y": -12}
+        }
+      },
+      "preserved": ["label", "icon", "card style", "font family", "font size", "font weight", "internal spacing"],
+      "reason": "Return the complete 陶土触感 object to the unchanged raised third slot."
+    }
+  ],
+  "carried_forward": [
+    {
+      "object_id": "feature-low-noise",
+      "property": "label",
+      "value": "低噪运行",
+      "status": "corrected_copy_preserved"
+    },
+    {
+      "object_id": "slot-3",
+      "property": "bounds",
+      "value": {"x": 779, "y": 1160, "width": 309, "height": 246},
+      "status": "raised_position_preserved"
+    }
+  ],
+  "slot_geometry": {
+    "slot_1": {"x": 112, "y": 1172, "width": 309, "height": 246},
+    "slot_2": {"x": 445.5, "y": 1172, "width": 309, "height": 246},
+    "slot_3": {"x": 779, "y": 1160, "width": 309, "height": 246},
+    "comparison_to_v2": "identical"
+  },
+  "explicitly_unchanged": [
+    {
+      "object_id": "ambient-background",
+      "v2_sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+      "v3_sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3"
+    },
+    {
+      "object_id": "product-image-locked",
+      "v2_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "v3_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "object_id": "headline",
+      "content_before": "让香气慢下来。",
+      "content_after": "让香气慢下来。",
+      "position_before": {"x": 600, "baseline_y": 1072},
+      "position_after": {"x": 600, "baseline_y": 1072},
+      "font_size_before": 72,
+      "font_size_after": 72
+    },
+    {
+      "object_id": "typography.feature_label",
+      "font_size_before": 32,
+      "font_size_after": 32
+    },
+    {
+      "object_id": "feature-low-noise",
+      "result": "identical"
+    },
+    {
+      "object_id": "bottom-rhythm",
+      "result": "identical"
+    }
+  ],
+  "visual_diff_expectation": {
+    "allowed_bbox": {"left": 538, "top": 1199, "right": 1002, "bottom": 1367},
+    "allowed_reason": "Only the second and third icons and labels return to their v1 positions; the existing card slots remain fixed.",
+    "all_pixels_outside_bbox": "must_match_v2",
+    "expected_preview_equivalence": "v3 preview must be pixel-identical to v1 preview"
+  }
+}

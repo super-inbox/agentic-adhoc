@@ -1,0 +1,191 @@
+{
+  "version": "v3",
+  "stage": "store_signage_whitespace_reversion",
+  "overall_status": "pass_with_expected_blockers",
+  "requested_delta": {
+    "v2_gift_box_preserved": true,
+    "v2_taobao_main_preserved": true,
+    "store_signage_whitespace_reverted_to_v1": true,
+    "price_label_not_restored": true,
+    "unrelated_visual_system_unchanged": true
+  },
+  "execution_mode": {
+    "type": "deterministic_source_reuse",
+    "image_generation_called": false,
+    "reason": "The request was an exact historical-version rollback. Direct v1 pixel reuse avoids generative drift and is the highest-fidelity edit."
+  },
+  "checks": [
+    {
+      "id": "version_isolation",
+      "status": "pass",
+      "method": "Recomputed SHA-256 comparison against v0, v1, and v2 verification manifests",
+      "result": "Every prior-version file covered by the three checksum manifests still matches. New candidate artifacts are under outputs/v3; only outputs/project-state.json was updated outside that folder.",
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v1/verification.json",
+        "outputs/v2/verification.json",
+        "outputs/v3/01-store-signage-v3.png",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "v2_gift_box_preserved",
+      "status": "pass",
+      "method": "Approved v1 gift-box source checksum comparison through the v2 lock",
+      "result": "The approved premium gift-box source remains byte-identical with SHA-256 f21c83c08305464ec7f5923c248b953bc5445d912375c4d91d41ecf508be5818. No packaging file was created or edited in v3.",
+      "evidence_paths": [
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v1/verification.json",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "v2_taobao_main_preserved",
+      "status": "pass",
+      "method": "v2 checksum-manifest comparison",
+      "result": "outputs/v2/01-taobao-main-v2.png remains byte-identical with SHA-256 cbdef0a964e5f28708d0d5bdba700c495191be182fb08634d0551f0f977f4fc3. Its one-line selling point and price-free state are unchanged.",
+      "evidence_paths": [
+        "outputs/v2/01-taobao-main-v2.png",
+        "outputs/v2/verification.json"
+      ]
+    },
+    {
+      "id": "exact_v1_store_signage_reversion",
+      "status": "pass",
+      "method": "Pillow pixel comparison between the declared crop of the v1 source and the saved v3 source crop",
+      "result": {
+        "source": "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "crop_box": [1024, 256, 1536, 896],
+        "expected_size": [512, 640],
+        "pixel_difference_bounding_box": null,
+        "interpretation": "The v3 source crop is pixel-identical to the selected v1 retail region."
+      },
+      "evidence_paths": [
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v3/assets/store-signage-v1-source-crop.png",
+        "outputs/v3/render_store_signage.py"
+      ]
+    },
+    {
+      "id": "review_output_is_resample_only",
+      "status": "pass",
+      "method": "Pillow pixel comparison between a fresh 1200x1500 LANCZOS resize of the v1 source crop and the final v3 review image",
+      "result": {
+        "pixel_difference_bounding_box": null,
+        "interpretation": "No text, label, symbol, price, or generated element was added during review-output creation."
+      },
+      "evidence_paths": [
+        "outputs/v3/assets/store-signage-v1-source-crop.png",
+        "outputs/v3/01-store-signage-v3.png",
+        "outputs/v3/render_store_signage.py"
+      ]
+    },
+    {
+      "id": "sparse_whitespace_match",
+      "status": "pass",
+      "method": "Exact-source provenance plus manual visual inspection",
+      "result": "The upright retail cards use the v1 warm-white blank faces with thin blue lower edges and large unoccupied areas. Because the pixels are reused directly, their whitespace density and spacing match v1 rather than a newly interpreted approximation.",
+      "evidence_paths": [
+        "outputs/v3/01-store-signage-v3.png",
+        "outputs/v3/assets/store-signage-v1-source-crop.png"
+      ]
+    },
+    {
+      "id": "price_and_promotion_absence",
+      "status": "pass",
+      "method": "Manual visual inspection, source-provenance review, and renderer-source inspection",
+      "result": "No price number, currency symbol, discount, coupon, crossed-out price, sale badge, label, button, or promotional copy is visible. The renderer contains no text-drawing or graphic-overlay operation, and the approved price-free v2 Taobao main remains unchanged.",
+      "evidence_paths": [
+        "outputs/v3/01-store-signage-v3.png",
+        "outputs/v3/render_store_signage.py",
+        "outputs/v2/01-taobao-main-v2.png"
+      ]
+    },
+    {
+      "id": "visual_system_preserved",
+      "status": "pass",
+      "method": "Manual visual comparison and edit-scope inspection",
+      "result": "Warm white, pale maple, sky-blue shelf/tray edges, daylight, gift-box construction, and display architecture remain v1/v2-derived. No new palette, typography, motif, Logo, packaging, ecommerce, or store-system decision was introduced.",
+      "evidence_paths": [
+        "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+        "outputs/v3/01-store-signage-v3.png",
+        "outputs/v3/delta-notes.md"
+      ]
+    },
+    {
+      "id": "logo_integrity",
+      "status": "pass_for_concept_blocked_for_final_placement",
+      "method": "Source-reuse and renderer inspection",
+      "result": "No Logo or wordmark was drawn, moved, replaced, or altered. Blank identity faces remain unchanged from v1 because approved source artwork is still unavailable.",
+      "evidence_paths": [
+        "inputs/01-current_logo_and_identity.png",
+        "outputs/v3/01-store-signage-v3.png",
+        "outputs/v3/render_store_signage.py"
+      ]
+    },
+    {
+      "id": "format_and_visual_qa",
+      "status": "pass",
+      "method": "Pillow decode, dimension inspection, and manual visual review",
+      "result": "Source crop is 512x640 RGB and final review output is 1200x1500 RGB, both exact 4:5. The signage, trays, and counter are visible without clipping artifacts or added copy.",
+      "evidence_paths": [
+        "outputs/v3/assets/store-signage-v1-source-crop.png",
+        "outputs/v3/01-store-signage-v3.png"
+      ]
+    },
+    {
+      "id": "state_integrity",
+      "status": "pass",
+      "method": "JSON parse and required-field inspection",
+      "result": "outputs/project-state.json parses successfully and records current_version v3, v2 gift-box/Taobao locks, v1 store-signage source provenance, localized changes, preserved items, artifact paths, and remaining blockers.",
+      "evidence_paths": [
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "artifact_integrity",
+      "status": "pass",
+      "method": "Filesystem existence, non-zero size, image decode, and checksum review",
+      "result": {
+        "outputs/v3/01-store-signage-v3.png": "1200x1500 RGB",
+        "outputs/v3/assets/store-signage-v1-source-crop.png": "512x640 RGB",
+        "outputs/v3/delta-notes.md": "present",
+        "outputs/v3/render_store_signage.py": "present"
+      },
+      "evidence_paths": [
+        "outputs/v3/01-store-signage-v3.png",
+        "outputs/v3/assets/store-signage-v1-source-crop.png",
+        "outputs/v3/delta-notes.md",
+        "outputs/v3/render_store_signage.py"
+      ]
+    }
+  ],
+  "checksums": {
+    "outputs/v3/01-store-signage-v3.png": "cc3ba46a202110ce59297b51f4c654af3274d52f9fc29173c3684dce6ca37688",
+    "outputs/v3/assets/store-signage-v1-source-crop.png": "ac7fca21b964fdfe3434655fa3fc420313180ba7dc56388978d426c999f1e0d3",
+    "outputs/v3/delta-notes.md": "8b727cf28a4d40ef0e620bc0b3eb5874ced50edf1207dbe890b6bc6abef61dce",
+    "outputs/v3/render_store_signage.py": "7ab1ceeea8151e2f3b0b85264bcccc2fc5206c90b2d40fe120ab39f0b279f1a1"
+  },
+  "unresolved_blockers": [
+    {
+      "blocker": "Approved Chinese wordmark and vector/transparent Logo source are absent.",
+      "impact": "The locked identity cannot yet be literally placed and verified on the blank signage faces.",
+      "required_input": "Provide the approved Logo and Chinese wordmark source files."
+    },
+    {
+      "blocker": "Final store-sign dimensions, physical constraints, copy hierarchy, and fabrication specifications are absent.",
+      "impact": "Production typography, margins, substrate, stability, and fabrication cannot be validated.",
+      "required_input": "Provide sign size, viewing distance, required copy, substrate, stand hardware, and fabrication limits."
+    },
+    {
+      "blocker": "Actual product photography and final delivery specifications are absent.",
+      "impact": "Production color, product accuracy, and delivery exports cannot be validated.",
+      "required_input": "Provide approved product images and final Taobao/store delivery specifications."
+    },
+    {
+      "blocker": "The Friday deadline is ambiguous.",
+      "impact": "The proposal schedule is not locked.",
+      "required_input": "Confirm whether the intended proposal date is 2026-08-28 Asia/Shanghai."
+    }
+  ]
+}

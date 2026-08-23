@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350" data-format="4:5">
+  <metadata>{&quot;format_id&quot;: &quot;portrait_4x5&quot;, &quot;safe_margin_percent&quot;: 5, &quot;main_visual_source&quot;: &quot;approved master crop; no regeneration&quot;, &quot;editable_object_ids&quot;: [&quot;background&quot;, &quot;content_frame&quot;, &quot;grid_top_h&quot;, &quot;grid_left_v&quot;, &quot;grid_mid_v&quot;, &quot;block_top_blue&quot;, &quot;block_top_orange&quot;, &quot;strip_top_orange&quot;, &quot;circle_top&quot;, &quot;title_summer&quot;, &quot;title_form&quot;, &quot;approved_main_visual&quot;, &quot;ringmark_outer&quot;, &quot;ringmark_blue_a&quot;, &quot;ringmark_orange&quot;, &quot;block_bottom_blue&quot;, &quot;block_bottom_orange&quot;, &quot;block_bottom_orange_small&quot;, &quot;arc_lower&quot;, &quot;grid_visual_h&quot;, &quot;grid_info_h&quot;, &quot;info_design_market&quot;, &quot;info_date&quot;, &quot;info_location&quot;]}</metadata>
+  <rect id="background" x="0" y="0" width="1080" height="1350" fill="#F2EEE4" stroke="none" stroke-width="0"/>
+  <rect id="content_frame" x="54.0" y="67.5" width="972.0" height="1215.0" fill="none" stroke="#2A3F75" stroke-width="2.376"/>
+  <line id="grid_top_h" x1="54.0" y1="195.75" x2="1026.0" y2="195.75" fill="none" stroke="#2A3F75" stroke-width="2.376"/>
+  <line id="grid_left_v" x1="216.0" y1="67.5" x2="216.0" y2="1282.5" fill="none" stroke="#2A3F75" stroke-width="2.376"/>
+  <line id="grid_mid_v" x1="594.0" y1="67.5" x2="594.0" y2="1282.5" fill="none" stroke="#2A3F75" stroke-width="2.376"/>
+  <rect id="block_top_blue" x="777.6" y="67.5" width="183.6" height="128.25" fill="#3A5AA5" stroke="none" stroke-width="0"/>
+  <rect id="block_top_orange" x="961.2" y="67.5" width="64.8" height="128.25" fill="#EA7862" stroke="none" stroke-width="0"/>
+  <rect id="strip_top_orange" x="302.4" y="195.75" width="291.6" height="74.25" fill="#EA7862" stroke="none" stroke-width="0"/>
+  <ellipse id="circle_top" cx="216.0" cy="159.3" rx="91.8" ry="91.8" fill="none" stroke="#2A3F75" stroke-width="2.376"/>
+  <text id="title_summer" x="81.0" y="276.75" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="157" dominant-baseline="hanging">SUMMER</text>
+  <text id="title_form" x="464.4" y="427.95" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="157" dominant-baseline="hanging">FORM</text>
+  <image id="approved_main_visual" href="../assets/main_visual_source_crop.png" x="75.6" y="661.5" width="464.4" height="446.538" preserveAspectRatio="xMidYMid meet" data-identity-policy="preserve_unedited_regions" data-transform="uniform-scale"/>
+  <ellipse id="ringmark_outer" cx="880.1999999999999" cy="1151.55" rx="91.8" ry="91.8" fill="none" stroke="#2A3F75" stroke-width="4.752"/>
+  <ellipse id="ringmark_blue_a" cx="860.004" cy="1149.714" rx="53.244" ry="71.604" fill="none" stroke="#3A5AA5" stroke-width="7.603"/>
+  <ellipse id="ringmark_orange" cx="891.216" cy="1151.55" rx="47.736" ry="69.768" fill="none" stroke="#EA7862" stroke-width="7.603"/>
+  <rect id="block_bottom_blue" x="54.0" y="1107.0" width="183.6" height="175.5" fill="#3A5AA5" stroke="none" stroke-width="0"/>
+  <rect id="block_bottom_orange" x="367.2" y="1161.0" width="226.8" height="121.5" fill="#EA7862" stroke="none" stroke-width="0"/>
+  <rect id="block_bottom_orange_small" x="594.0" y="1053.0" width="118.8" height="108.0" fill="#EA7862" stroke="none" stroke-width="0"/>
+  <path id="arc_lower" d="M 54.000 1128.600 A 183.600 183.600 0 1 1 54.000 1128.600" fill="none" stroke="#2A3F75" stroke-width="2.376"/>
+  <line id="grid_visual_h" x1="54.0" y1="661.5" x2="1026.0" y2="661.5" fill="none" stroke="#2A3F75" stroke-width="2.376"/>
+  <line id="grid_info_h" x1="54.0" y1="999.0" x2="1026.0" y2="999.0" fill="none" stroke="#2A3F75" stroke-width="2.376"/>
+  <text id="info_design_market" x="594.0" y="681.75" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="45" dominant-baseline="hanging">Design Market</text>
+  <text id="info_date" x="594.0" y="737.543" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="44" dominant-baseline="hanging">08 — 10 AUG</text>
+  <text id="info_location" x="594.0" y="793.336" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="47" dominant-baseline="hanging">BROOKLYN</text>
+</svg>

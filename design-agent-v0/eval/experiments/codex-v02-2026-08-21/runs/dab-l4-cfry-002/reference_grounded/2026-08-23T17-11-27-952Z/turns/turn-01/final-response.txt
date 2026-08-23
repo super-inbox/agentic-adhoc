@@ -1,0 +1,14 @@
+已生成 v1，应用了 3 mm 亚克力、槽宽 3.2 ±0.1 mm、55×25 mm / R3 底座及无挂孔要求；v0 文件哈希保持不变。
+
+主要新增文件：
+
+- [三视图、尺寸及 CMF](/private<WORKDIR>/outputs/v1/luna-club-three-view-dimensioned-v1.svg)
+- [三视图 PNG 预览](/private<WORKDIR>/outputs/v1/luna-club-three-view-dimensioned-v1.png)
+- [合并刀线](/private<WORKDIR>/outputs/v1/luna-club-cutline-master-v1.svg)
+- [印刷排版](/private<WORKDIR>/outputs/v1/luna-club-print-layout-v1.svg)
+- [白墨矢量层](/private<WORKDIR>/outputs/v1/luna-club-white-ink-layer-v1.svg)
+- [生产说明](/private<WORKDIR>/outputs/v1/luna-club-production-spec-v1.md)
+- [v1 核验记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+工厂未提供槽长，因此文件中显式定义为 7.2 mm 槽长、7.0 mm 榫片，仍需工厂复核；印刷面顺序、边缘工艺及约 149 ppi 原图分辨率也保持开放，所以当前标记为工厂复核稿，未冒称 factory-ready。

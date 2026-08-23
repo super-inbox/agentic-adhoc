@@ -1,0 +1,16 @@
+v0 已完成，并停在方向选择关口：
+
+- **01 静序新礼**：克制秩序与纸张工艺，最稳妥、礼赠感最强。
+- **02 日光麦场**：明亮模块与快速识别，最年轻、最适合电商。
+- **03 炉火夜宴**：电影式食欲与拆礼仪式，最具记忆点和节庆表现力。
+
+交付文件：
+
+- [冲突地图与 10 个假设](<WORKDIR>/outputs/v0/01-conflicts-and-10-hypotheses.png)
+- [三个 Creative Territories 选择板](<WORKDIR>/outputs/v0/02-three-creative-territories.png)
+- [完整策略说明](<WORKDIR>/outputs/v0/creative-territories.md)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+- [imagegen 最终提示词记录](<WORKDIR>/outputs/v0/imagegen-prompts.md)
+
+视觉校验中已移除自动生成的伪标识；缩略图保留空白区域，等待原 Logo 与中文字标原样植入。下一步请只选择 **01、02 或 03**。中文品牌名字标/Logo 源文件仍缺失；“周五”暂按 2026-08-28 记录，尚待确认。

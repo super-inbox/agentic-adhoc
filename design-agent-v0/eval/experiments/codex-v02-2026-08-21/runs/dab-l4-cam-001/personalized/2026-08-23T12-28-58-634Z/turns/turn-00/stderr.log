@@ -1,0 +1,21 @@
+Reading additional input from stdin...
+2026-08-23T12:28:58.726144Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T12:28:58.729750Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T12:28:58.730644Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:29:02.600606Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T12:29:02.600646Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T12:31:23.942767Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:35:02.383817Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:38:48.731653Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 180ms)... turn_id=01a02e98-854e-7383-b3a6-6364d11ad990 retries=1 max_retries=5 sampling_error=stream disconnected before completion: Transport error: network error: error decoding response body
+2026-08-23T12:40:50.911942Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 379ms)... turn_id=01a02e98-854e-7383-b3a6-6364d11ad990 retries=2 max_retries=5 sampling_error=stream disconnected before completion: Transport error: network error: error decoding response body
+2026-08-23T12:46:46.436573Z ERROR codex_core::tools::router: error=patch rejected: writing outside of the project; rejected by user approval settings
+2026-08-23T12:48:34.655343Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:49:29.149611Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:49:57.815161Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:56:12.025985Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 191ms)... turn_id=01a02e98-854e-7383-b3a6-6364d11ad990 retries=1 max_retries=5 sampling_error=stream disconnected before completion: idle timeout waiting for SSE
+2026-08-23T12:57:37.142698Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:59:29.346197Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T13:02:33.226959Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T13:02:34.350898Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T13:03:53.245965Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 192ms)... turn_id=01a02e98-854e-7383-b3a6-6364d11ad990 retries=1 max_retries=5 sampling_error=stream disconnected before completion: Transport error: network error: error decoding response body
+2026-08-23T13:06:42.809423Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

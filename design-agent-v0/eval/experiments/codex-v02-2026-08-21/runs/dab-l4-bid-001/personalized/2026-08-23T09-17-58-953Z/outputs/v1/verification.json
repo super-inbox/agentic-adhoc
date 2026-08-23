@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "version": "v1",
+  "status": "passed_with_documented_blockers",
+  "checked_at": "2026-08-23T17:39:58+08:00",
+  "checks": [
+    {
+      "id": "version_isolation",
+      "result": "pass",
+      "check": "All v1 candidate files are stored under outputs/v1 and no v0 file was edited during this turn.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.html",
+        "outputs/v0/creative-territories-overview.png",
+        "outputs/v0/verification.json",
+        "outputs/v1/quiet-gifting-refinement.md",
+        "outputs/v1/quiet-gifting-premium-box-mockup.png"
+      ],
+      "v0_sha256_snapshot": {
+        "outputs/v0/creative-territories.md": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7",
+        "outputs/v0/creative-territories-board.html": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d",
+        "outputs/v0/creative-territories-overview.png": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc",
+        "outputs/v0/verification.json": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd"
+      }
+    },
+    {
+      "id": "client_selection_recorded",
+      "result": "pass",
+      "check": "T2 is recorded as selected; T1 is rejected as too influencer-led and T3 as too old.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/quiet-gifting-refinement.md"
+      ]
+    },
+    {
+      "id": "requested_delta_only",
+      "result": "pass",
+      "check": "The v1 change set is limited to increased whitespace and a more premium gift-box expression. Unrelated T2 palette, channel logic, and brand facts are explicitly preserved.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/quiet-gifting-refinement.md"
+      ]
+    },
+    {
+      "id": "logo_preservation",
+      "result": "pass",
+      "check": "The final image contains no generated Logo, brand name, letters, numbers, or replacement symbol. The recessed Logo plaque remains blank, and the current Logo is locked for later source-file placement.",
+      "evidence_paths": [
+        "outputs/v1/quiet-gifting-premium-box-mockup.png",
+        "outputs/v1/quiet-gifting-refinement.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "premium_box_expression",
+      "result": "pass",
+      "check": "Visual inspection confirms a low-wide rigid-box proportion, precise shadow gap, tactile light paper, charcoal inner tray, muted grey-green tab, restrained low-gloss metal edge, and controlled lighting without red-gold flooding or decorative clutter.",
+      "evidence_paths": ["outputs/v1/quiet-gifting-premium-box-mockup.png"]
+    },
+    {
+      "id": "whitespace_expression",
+      "result": "pass",
+      "check": "Visual inspection confirms that the box occupies roughly the lower central third of the 1536 × 1024 frame and the composition retains generous uninterrupted negative space with no props or overlays.",
+      "evidence_paths": ["outputs/v1/quiet-gifting-premium-box-mockup.png"]
+    },
+    {
+      "id": "anti_influencer_and_anti_retro_guardrails",
+      "result": "pass",
+      "check": "The final visual omits collage, stickers, handwritten type, bright filters, seals, calligraphy, traditional repeating patterns, festival red, glossy gold flooding, and vintage borders.",
+      "evidence_paths": [
+        "outputs/v1/quiet-gifting-premium-box-mockup.png",
+        "outputs/v1/quiet-gifting-refinement.md"
+      ]
+    },
+    {
+      "id": "single_change_visual_iteration",
+      "result": "pass",
+      "check": "A radiating lid texture observed in the first draft was removed through one targeted edit. The final retains the original composition and replaces the texture with a quiet hairline rectangular blind-deboss frame.",
+      "evidence_paths": ["outputs/v1/quiet-gifting-premium-box-mockup.png"]
+    },
+    {
+      "id": "reference_contract",
+      "result": "pass",
+      "check": "No source image was passed into the base image generation. The final is an original product mockup based on the selected T2 principles and does not reproduce a reference Logo, product, icon, or layout.",
+      "evidence_paths": ["outputs/v1/quiet-gifting-refinement.md"]
+    },
+    {
+      "id": "image_file_integrity",
+      "result": "pass",
+      "check": "The final mockup opens successfully as a 1536 × 1024 RGB PNG and was inspected at original detail with no clipping or visible corruption.",
+      "evidence_paths": ["outputs/v1/quiet-gifting-premium-box-mockup.png"],
+      "sha256": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa"
+    },
+    {
+      "id": "prompt_and_mode_record",
+      "result": "pass",
+      "check": "The built-in image generation mode and both the base-generation and final targeted-edit prompts are recorded verbatim.",
+      "evidence_paths": ["outputs/v1/quiet-gifting-refinement.md"]
+    },
+    {
+      "id": "state_file_validity",
+      "result": "pass",
+      "check": "outputs/project-state.json and outputs/v1/verification.json both parsed successfully as JSON after writing.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/verification.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "client_v1_approval_pending",
+      "severity": "blocking_next_stage",
+      "detail": "Client confirmation of the v1 whitespace scale and premium gift-box expression is required before full Taobao and store refinement."
+    },
+    {
+      "id": "logo_master_missing",
+      "severity": "blocking_exact_logo_application",
+      "detail": "Exact Logo placement cannot be produced without the editable current Logo and Chinese standard-wordmark master plus clear-space, reverse, and monochrome rules."
+    },
+    {
+      "id": "packaging_production_constraints_missing",
+      "severity": "blocking_production_specification",
+      "detail": "The mockup is directional. Box dimensions, board thickness, paper stock, metal-edge feasibility, unit cost, and production budget were not supplied and therefore were not assumed as production specifications."
+    }
+  ]
+}

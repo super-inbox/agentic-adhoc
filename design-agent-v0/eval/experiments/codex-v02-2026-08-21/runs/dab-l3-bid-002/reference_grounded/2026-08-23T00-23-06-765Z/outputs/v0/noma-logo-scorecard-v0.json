@@ -1,0 +1,116 @@
+{
+  "version": "v0",
+  "subject": "NOMA logo candidates A-D",
+  "source": {
+    "input_id": "candidate-board",
+    "path": "./inputs/01-logo_candidates.png",
+    "identity_use": "analysis_only"
+  },
+  "method": {
+    "scale_per_criterion": 10,
+    "criteria": [
+      "现代感",
+      "友好度",
+      "小尺寸识别",
+      "品类独特性"
+    ],
+    "weights": {
+      "现代感": 0.25,
+      "友好度": 0.25,
+      "小尺寸识别": 0.25,
+      "品类独特性": 0.25
+    },
+    "maximum_total": 40,
+    "small_size_check": "symbol-only crops normalized to 32 x 32 px",
+    "category_distinctiveness_scope": "Avoidance of real-estate cues and generic app-icon conventions, because no specific industry or competitor set was supplied.",
+    "evidence_limit": "Expert visual assessment only; not user research, competitor clearance, or trademark clearance."
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "candidate": "C",
+      "scores": {
+        "现代感": 8,
+        "友好度": 8,
+        "小尺寸识别": 7,
+        "品类独特性": 9
+      },
+      "total": 32,
+      "evidence": {
+        "现代感": "Black and terracotta continuous lines interlock without a generic enclosing badge; the organic, light construction reads contemporary, though crossings add some complexity.",
+        "友好度": "Rounded contours, soft curves, and warm color create an approachable expression without sharp outer corners.",
+        "小尺寸识别": "At 32 px the combined upper/lower silhouette remains recognizable, while the two-color neck join, central crossover, and nested lower return lines begin to soften.",
+        "品类独特性": "The asymmetric upper vessel-like and lower folded/rolled combination creates the most proprietary silhouette and avoids both house imagery and a standard app badge."
+      }
+    },
+    {
+      "rank": 2,
+      "candidate": "B",
+      "scores": {
+        "现代感": 8,
+        "友好度": 9,
+        "小尺寸识别": 8,
+        "品类独特性": 5
+      },
+      "total": 30,
+      "evidence": {
+        "现代感": "Clean circular geometry, reduced strokes, and centered balance are current and polished, but familiar.",
+        "友好度": "The dot, arcs, and bowl-like curve combine into a smile-like expression; it is the friendliest of the four.",
+        "小尺寸识别": "At 32 px the outer ring and bowl remain clear; the upper arcs and dot soften without damaging the primary read.",
+        "品类独特性": "A circular badge plus face/container motif overlaps common food, wellness, and lifestyle app conventions."
+      }
+    },
+    {
+      "rank": 3,
+      "candidate": "D",
+      "scores": {
+        "现代感": 8,
+        "友好度": 6,
+        "小尺寸识别": 8,
+        "品类独特性": 4
+      },
+      "total": 26,
+      "evidence": {
+        "现代感": "A bold arch block and black N create a minimal, ordered geometric monogram.",
+        "友好度": "The warm rounded arch softens the mark, but the heavy black N, straight strokes, and sharp join feel formal and rigid.",
+        "小尺寸识别": "The strong silhouette survives at 32 px; the narrow white channel and internal black upright tighten but remain legible.",
+        "品类独特性": "The arch/entrance/facade cue and letter monogram overlap real-estate, hospitality, and generic branded-app conventions."
+      }
+    },
+    {
+      "rank": 4,
+      "candidate": "A",
+      "scores": {
+        "现代感": 7,
+        "友好度": 6,
+        "小尺寸识别": 6,
+        "品类独特性": 3
+      },
+      "total": 22,
+      "evidence": {
+        "现代感": "Geometric linework and a two-color circle feel current, but the roof, N, and O create a busier overlap than the other options.",
+        "友好度": "The warm circle adds softness, while the peaked roof, heavy diagonal, and hard intersections keep the tone rigid.",
+        "小尺寸识别": "At 32 px the overall mark survives, but roof/N/O strokes crowd at the lower-right join and the house reads before the letter relationship.",
+        "品类独特性": "The explicit roof and doorway outline is the strongest real-estate/home cue and directly conflicts with the stated avoidance goal."
+      }
+    }
+  ],
+  "recommendation": {
+    "candidate": "C",
+    "selection_status": "recommended_pending_client_confirmation",
+    "only_next_round_change": "Small-size optical correction of the symbol.",
+    "preserve": [
+      "core concept",
+      "overall silhouette",
+      "black and terracotta palette",
+      "NOMA wordmark",
+      "current symbol-wordmark composition"
+    ],
+    "adjust": [
+      "Reduce or increase spacing around the nested lower return lines so they do not merge at 24-32 px.",
+      "Open the central crossover with slightly more negative space.",
+      "Clean the two-color neck join so it does not become a dark color lump."
+    ],
+    "acceptance_check": "At 24 px and 32 px on light and dark backgrounds, the three dense areas remain separated without changing the existing silhouette or tone."
+  }
+}

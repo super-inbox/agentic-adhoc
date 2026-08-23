@@ -1,0 +1,143 @@
+{
+  "version": "v0",
+  "status": "pass",
+  "verified_on": "2026-08-23",
+  "checks": [
+    {
+      "id": "selection_before_generation",
+      "status": "pass",
+      "method": "Compared A and B on the four requested criteria and locked one winner before producing campaign assets.",
+      "observed": {
+        "winner": "A",
+        "score_A": 18,
+        "score_B": 10,
+        "third_direction_created": false
+      },
+      "evidence_paths": [
+        "outputs/v0/direction-selection-v0.md"
+      ]
+    },
+    {
+      "id": "required_deliverables",
+      "status": "pass",
+      "method": "Read final PNG dimensions and visually inspected both full-resolution files.",
+      "observed": [
+        {
+          "artifact": "tmall_hero",
+          "path": "outputs/v0/tmall-hero-direction-a-v0.png",
+          "width": 1200,
+          "height": 1200,
+          "sha256": "bc1288398f85de17f9a3b9996a1a4ce819cd5458b7d19ec70127a219a23fd9d0"
+        },
+        {
+          "artifact": "detail_page_first_screen",
+          "path": "outputs/v0/pdp-first-screen-direction-a-v0.png",
+          "width": 750,
+          "height": 1000,
+          "sha256": "f621455e6185fed53045d6e7ad4c232efa3b00593013c2e5cfcf5b31cc98fd4a"
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/tmall-hero-direction-a-v0.png",
+        "outputs/v0/pdp-first-screen-direction-a-v0.png"
+      ]
+    },
+    {
+      "id": "brand_palette",
+      "status": "pass",
+      "method": "Sampled the center pixel of each supplied palette swatch and applied those five representative tokens to both layouts.",
+      "observed": {
+        "tokens": ["#393937", "#EEE9D5", "#879466", "#AF543F", "#B7D2D9"],
+        "off_palette_direction_B_navy_used": false,
+        "off_palette_direction_B_bright_coral_used": false
+      },
+      "evidence_paths": [
+        "inputs/01-brand_guideline.png",
+        "outputs/v0/verification/brand-palette-samples-v0.json",
+        "outputs/v0/tmall-hero-direction-a-v0.svg",
+        "outputs/v0/pdp-first-screen-direction-a-v0.svg"
+      ]
+    },
+    {
+      "id": "product_identity_preservation",
+      "status": "pass",
+      "method": "Copied the supplied product source byte-for-byte, changed alpha only for background removal, then used proportional resizing and placement. Compared all fully opaque cutout pixels against the source RGB values.",
+      "observed": {
+        "source_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "preserved_copy_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "cutout_sha256": "0cb121dd1bbe5b4b92045e838816efc2f2677ef80a3a6ba6e91f8bbcd785ac00",
+        "fully_opaque_pixels_checked": 215923,
+        "opaque_pixels_with_rgb_difference": 0,
+        "maximum_core_channel_difference": 0,
+        "product_redrawn": false,
+        "product_recolored": false
+      },
+      "evidence_paths": [
+        "inputs/04-campaign_product.png",
+        "outputs/v0/product-source-preserved-v0.png",
+        "outputs/v0/product-cutout-source-preserved-v0.png",
+        "outputs/v0/tmall-hero-direction-a-v0.png",
+        "outputs/v0/pdp-first-screen-direction-a-v0.png"
+      ]
+    },
+    {
+      "id": "reference_copy_non_reuse",
+      "status": "pass",
+      "method": "Scanned both editable layouts for candidate-reference wording and removed unsupported category/function language. MORI is retained only as the supplied brand identifier.",
+      "observed": {
+        "candidate_terms_scanned": [
+          "QUIET",
+          "RITUAL",
+          "AROMA",
+          "DIFFUSER",
+          "SUMMER",
+          "FORM",
+          "DESIGN MARKET",
+          "BROOKLYN",
+          "MIST",
+          "LIGHT",
+          "TIMER",
+          "MATERIAL DETAIL",
+          "SPECIFICATIONS"
+        ],
+        "candidate_term_matches": 0,
+        "unsupported_function_claims": 0
+      },
+      "evidence_paths": [
+        "outputs/v0/tmall-hero-direction-a-v0.svg",
+        "outputs/v0/pdp-first-screen-direction-a-v0.svg"
+      ]
+    },
+    {
+      "id": "mobile_readability",
+      "status": "pass",
+      "method": "Rendered and visually inspected 375-pixel-wide previews after increasing benefit and CTA text sizes.",
+      "observed": {
+        "primary_headline_readable": true,
+        "product_is_primary_visual_focus": true,
+        "three_brand_messages_readable": true,
+        "cta_readable": true,
+        "edge_clipping": false
+      },
+      "evidence_paths": [
+        "outputs/v0/verification/tmall-hero-mobile-preview-375-v0.png",
+        "outputs/v0/verification/pdp-first-screen-mobile-preview-375-v0.png"
+      ]
+    },
+    {
+      "id": "conversion_path",
+      "status": "pass",
+      "method": "Visually inspected information order in both assets.",
+      "observed": {
+        "tmall_hero_flow": "brand -> original campaign statement -> product -> three concise brand messages",
+        "detail_first_screen_flow": "brand -> original campaign statement -> product -> three concise brand messages -> discovery CTA",
+        "unsupported_price_or_promotion_added": false
+      },
+      "evidence_paths": [
+        "outputs/v0/tmall-hero-direction-a-v0.png",
+        "outputs/v0/pdp-first-screen-direction-a-v0.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

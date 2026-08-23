@@ -1,0 +1,166 @@
+{
+  "product_source": "inputs/01-launch_product.png",
+  "product_source_sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286",
+  "metadata": "outputs/v0/candidate-metadata.json",
+  "selection_board": "outputs/v0/kv-hypotheses-selection-board.png",
+  "checks": [
+    {
+      "check": "approved_copy_source",
+      "passed": true,
+      "observed": {
+        "en": "Quiet hours, made tangible.",
+        "zh": "让夜晚慢下来。"
+      }
+    },
+    {
+      "check": "candidate_count",
+      "passed": true,
+      "observed": 9
+    },
+    {
+      "check": "direction_count",
+      "passed": true,
+      "observed": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "check": "candidate_dimensions",
+      "passed": true,
+      "observed": "1600x2000 for all candidates"
+    },
+    {
+      "check": "product_identity_pixel_match",
+      "passed": true,
+      "observed": "Every pasted product-photo region exactly matches a uniform LANCZOS resize of the supplied source; no recolor, retouch, warp, label overlay, or copy overlay."
+    },
+    {
+      "check": "copy_product_separation",
+      "passed": true,
+      "observed": "No approved-copy bounding box intersects a product-photo bounding box."
+    },
+    {
+      "check": "logo_safe_zones",
+      "passed": true,
+      "observed": "All reserved zones are clear of copy and product-photo boxes; logo itself is pending because no asset was supplied."
+    },
+    {
+      "check": "candidate_uniqueness",
+      "passed": true,
+      "observed": 9
+    }
+  ],
+  "per_candidate": [
+    {
+      "code": "A1",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "4d53ecd6ebd72f8ca282407b0d711863be4587d224ce32c18975ff76dc8c4acb"
+    },
+    {
+      "code": "A2",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "26d2274de99d835d3a48d2928b085315c9bbaed6c8a59f96ef406beeefb52a47"
+    },
+    {
+      "code": "A3",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "2c489f826d5cfc2402479161c09ca9cc6c95e4afeeb924da59146560e00aaa11"
+    },
+    {
+      "code": "B1",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "7e539bf1c2cc79b995d7c742762c99869cb4b33d36743ebd6be20d030b0fde1a"
+    },
+    {
+      "code": "B2",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "7645db70c4816a03a3ef04359e4707ab820faf1d95460d25fd418a782d0ea5c1"
+    },
+    {
+      "code": "B3",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "4b47c190c95fe10d32a2d31c9c61c879bf84b3fdcc0a5583ca1592c6085db24c"
+    },
+    {
+      "code": "C1",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "ac77feaf9c601badab1a784315e6c697e08042ef04fbe368739e52c80460b5c9"
+    },
+    {
+      "code": "C2",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "69653add1249d1109e31c06e022af5beb9a84f911f41267d4b6aa46aa6d3d183"
+    },
+    {
+      "code": "C3",
+      "dimensions": [
+        1600,
+        2000
+      ],
+      "dimensions_ok": true,
+      "product_pixels_match_uniformly_resized_source": true,
+      "copy_does_not_overlap_product_photo": true,
+      "reserved_logo_zone_clear": true,
+      "sha256": "ca41d387b3d86dd369b1e8081a21aa5ddb953db0fbbb223fdf32498a56792e02"
+    }
+  ],
+  "all_automated_checks_passed": true
+}

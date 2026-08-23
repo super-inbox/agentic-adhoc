@@ -1,0 +1,12 @@
+已完成三版适配，未新增主视觉；批准稿的折纸视觉与标志均为原图像素裁切并等比使用。
+
+- [三版总预览](<WORKDIR>/outputs/v0/preview.png)
+- [Website 1200×628 PNG](<WORKDIR>/outputs/v0/website_card_1200x628.png) · [可编辑 SVG](<WORKDIR>/outputs/v0/website_card_1200x628.svg)
+- [Instagram 1080×1350 PNG](<WORKDIR>/outputs/v0/instagram_post_1080x1350.png) · [可编辑 SVG](<WORKDIR>/outputs/v0/instagram_post_1080x1350.svg)
+- [Story 1080×1920 PNG](<WORKDIR>/outputs/v0/story_1080x1920.png) · [可编辑 SVG](<WORKDIR>/outputs/v0/story_1080x1920.svg)
+- [对象图 design_document.json](<WORKDIR>/outputs/v0/design_document.json)
+- [对象级 change_set.json](<WORKDIR>/outputs/v0/change_set.json)
+- [机器验证 verification.json](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+验证结果：24 项全部通过，无未解决 blocker；包括精确尺寸、64 px 安全边距、完整文案、文字无变形、Logo/主视觉等比缩放及源裁切像素一致性。

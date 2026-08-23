@@ -1,0 +1,85 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-RTO-002@reference_grounded",
+  "base_brief_id": "DAB-L3-RTO-002",
+  "context_condition": "reference_grounded",
+  "category": "reference_to_original",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T01:56:09.497Z",
+  "finished_at": "2026-08-23T01:56:38.231Z",
+  "latency_ms": 28734,
+  "intended_turns": 1,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02c55-2421-75d3-9c0f-5dd8c46334c6",
+  "input_assets": [
+    {
+      "input_id": "candidate-board",
+      "asset_id": "design-vote-noma-logo-options",
+      "role": "logo_candidates",
+      "reference_role": "candidate_option",
+      "identity_policy": "analysis_only",
+      "filename": "01-logo_candidates.png",
+      "source_path": "eval/assets/reference-pack-v0.2/design-vote/noma-logo-options.png",
+      "byte_size": 630253,
+      "sha256": "0985be34801ead57e9aaea756b26b06d4e44bc4c909175139c4672a3fa9fc334"
+    }
+  ],
+  "input_context_ids": [
+    "candidate-board",
+    "brand-brief"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T01:56:09.497Z",
+      "finished_at": "2026-08-23T01:56:38.229Z",
+      "latency_ms": 28733,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c55-2421-75d3-9c0f-5dd8c46334c6",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

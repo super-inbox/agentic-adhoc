@@ -1,0 +1,11 @@
+v3 已完成。Logo 恢复至 v0 原始几何与中心，低对比度明确设为 64%；可见尺寸与 v0 相差不足 1%，Logo 区域外变化像素为 0。v2 细颗粒背景完整保留，`v0–v2` 文件未改动。
+
+新增/更新路径：
+
+- [v3 海报](/private<WORKDIR>/outputs/v3/summer-form-poster-local-revision-v3.png)
+- [v2／v3 对照图](/private<WORKDIR>/outputs/v3/summer-form-poster-v2-v3-comparison.png)
+- [差异范围图](/private<WORKDIR>/outputs/v3/summer-form-poster-v3-diff-mask.png)
+- [v3 验证记录](/private<WORKDIR>/outputs/v3/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+本轮未调用新的内置生成或 CLI；采用确定性局部合成，直接复用 v0 Logo 与 v2 纸面。

@@ -1,0 +1,132 @@
+{
+  "current_version": "v3",
+  "phase": "logo_restore_low_contrast_complete",
+  "client_decisions": {
+    "previously_approved": [
+      "composition",
+      "blue_coral_palette",
+      "SUMMER FORM title copy",
+      "date",
+      "location"
+    ],
+    "approved_from_v1": [
+      "bottom-right logo size and placement",
+      "composition",
+      "title typography",
+      "all geometric artwork",
+      "all activity information",
+      "blue/coral palette"
+    ],
+    "confirmed_v2_delta": [
+      "reduce only the v1 poster-sheet paper grain intensity by approximately 30 percent",
+      "do not change the approved v1 logo",
+      "do not change the title, geometry, or any activity information"
+    ],
+    "confirmed_v3_delta": [
+      "restore the logo to the v0 size",
+      "make the restored logo low contrast",
+      "retain the v2 fine-grain paper background",
+      "leave all other approved content unchanged"
+    ],
+    "superseded_by_v3": [
+      "the v1/v2 reduced logo size is no longer current"
+    ],
+    "superseded_unconfirmed_v0_proposals": [
+      "title-weight reduction",
+      "event-information weight adjustment",
+      "central folded-paper material or shadow adjustment"
+    ]
+  },
+  "documented_interpretations": [
+    {
+      "item": "low-contrast logo",
+      "implementation": "64 percent local contrast relative to the surrounding v2 paper",
+      "rationale": "The previously approved 80 percent linear logo size corresponds to 64 percent area; using the same 0.64 factor after restoring v0 size retains comparable visual weight without changing geometry."
+    }
+  ],
+  "locked_items": [
+    "grid and overall composition",
+    "all element positions, with the logo restored from the v0 source mask at its v0 center",
+    "title font, letterforms, weight, size, tracking, line breaks, color, and position",
+    "all approved copy, date, and location",
+    "deep-blue and coral-orange palette outside the logo; logo hue identity retained at lower contrast",
+    "all colored geometric art outside the logo",
+    "central folded-paper object and its shadow",
+    "outer tabletop/background, poster framing, sheet edges, and cast shadow",
+    "no new selling points, copy, logos, marks, or graphics"
+  ],
+  "changed_items": [
+    {
+      "version": "v1",
+      "item": "bottom-right logo",
+      "change": "scaled proportionally to approximately 80 percent of its original visual diameter around the same center",
+      "measured_result": "79.50 percent width and 78.88 percent height; center delta -0.5 px x / 0.0 px y"
+    },
+    {
+      "version": "v1",
+      "item": "neutral warm off-white poster-sheet background",
+      "change": "coarse paper grain reduced and replaced with a finer, subtler grain while preserving mean luminance and underlying lighting"
+    },
+    {
+      "version": "v2",
+      "item": "neutral warm off-white poster-sheet background",
+      "change": "retained the same v1 texture and reduced only its grain amplitude to 70 percent",
+      "measured_result": "fine-grain intensity reduced 28.52 percent and high-pass intensity reduced 27.36 percent versus v1; mean luminance delta -0.0006"
+    },
+    {
+      "version": "v3",
+      "item": "bottom-right logo",
+      "change": "restored the v0 source geometry and center on the v2 background, then reduced only its local contrast to 64 percent",
+      "measured_result": "source and applied antialiased masks are 165 x 165 px centered at (677,917); visible color envelope is 99.38 percent of v0 within a 1 px antialias tolerance; measured RMS contrast ratio is 0.6400"
+    }
+  ],
+  "artifact_paths": {
+    "revision_target": "inputs/01-revision_target.png",
+    "version_history": {
+      "v0": {
+        "modification_interpretation": "outputs/v0/revision-interpretation.md",
+        "verification": "outputs/v0/verification.json"
+      },
+      "v1": {
+        "edited_poster": "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "comparison": "outputs/v1/summer-form-poster-v1-comparison.png",
+        "difference_mask": "outputs/v1/summer-form-poster-v1-diff-mask.png",
+        "verification": "outputs/v1/verification.json",
+        "process_script": "outputs/v1/apply-local-revision.py",
+        "metrics": "outputs/v1/intermediate/local-edit-metrics.json"
+      },
+      "v2": {
+        "edited_poster": "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "comparison": "outputs/v2/summer-form-poster-v1-v2-comparison.png",
+        "difference_mask": "outputs/v2/summer-form-poster-v2-diff-mask.png",
+        "verification": "outputs/v2/verification.json",
+        "process_script": "outputs/v2/apply-paper-grain-reduction.py",
+        "metrics": "outputs/v2/intermediate/paper-grain-reduction-metrics.json",
+        "prior_version_hashes": "outputs/v2/intermediate/prior-version-hashes.json"
+      },
+      "v3": {
+        "edited_poster": "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "comparison": "outputs/v3/summer-form-poster-v2-v3-comparison.png",
+        "difference_mask": "outputs/v3/summer-form-poster-v3-diff-mask.png",
+        "verification": "outputs/v3/verification.json",
+        "process_script": "outputs/v3/apply-logo-restore-low-contrast.py",
+        "metrics": "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json",
+        "prior_version_hashes": "outputs/v3/intermediate/prior-version-hashes.json"
+      }
+    }
+  },
+  "verification_summary": {
+    "status": "passed",
+    "outside_allowed_changed_pixels": 0,
+    "v0_logo_source_mask_restored": true,
+    "v0_logo_visible_size_match_percent": 99.38,
+    "logo_local_contrast_percent": 64.0,
+    "v2_paper_sample_pixel_identical": true,
+    "title_ink_pixel_identical": true,
+    "event_information_ink_pixel_identical": true,
+    "entire_image_outside_logo_roi_changed_pixels": 0,
+    "central_folded_object_changed_pixels": 0,
+    "prior_version_files_unchanged": true
+  },
+  "unresolved_blockers": []
+}

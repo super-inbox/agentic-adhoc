@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "packaging-board",
+    "asset_id": "design-vote-mens-grooming-abcd",
+    "role": "packaging_candidates",
+    "reference_role": "candidate_option",
+    "identity_policy": "analysis_only",
+    "filename": "01-packaging_candidates.png",
+    "source_path": "eval/assets/reference-pack-v0.2/design-vote/mens-grooming-abcd.png",
+    "byte_size": 1216397,
+    "sha256": "b4bbb640cc1941d34e156e50d74214b2d7828b4d077c0be5070cd408dea0023c"
+  }
+]

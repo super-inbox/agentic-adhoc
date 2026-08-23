@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "project": "grain-and-glow-brand-refresh",
+  "current_version": "v3",
+  "current_stage": "blocked_pending_store_sign_targets_and_state_reconciliation",
+  "updated_at": "2026-08-23T17:50:22+08:00",
+  "client_decisions": [
+    {
+      "decision": "Keep the approved gift-box direction unchanged.",
+      "status": "accepted_and_locked"
+    },
+    {
+      "decision": "Keep the client-referenced v2 Taobao hero unchanged.",
+      "status": "accepted_and_locked_but_artifact_missing"
+    },
+    {
+      "decision": "Do not restore the deleted price label in any output.",
+      "status": "accepted_and_locked"
+    },
+    {
+      "decision": "Change only the store standing-sign whitespace back to the sparser v1 version.",
+      "status": "requested_pending_targets"
+    },
+    {
+      "decision": "Do not redesign the gift box or T2 visual system.",
+      "status": "accepted_and_locked"
+    },
+    {
+      "decision": "Keep the existing Logo unchanged, including its structure and Chinese brand name.",
+      "status": "accepted_and_locked"
+    },
+    {
+      "decision": "Continue with T2, 素笺礼序 / QUIET GIFTING.",
+      "status": "selected_and_locked"
+    },
+    {
+      "decision": "T1 remains rejected as too influencer-led and T3 remains rejected as too old.",
+      "status": "rejected"
+    }
+  ],
+  "state_discrepancy": {
+    "client_reference": "Client refers to completed v2 gift-box and Taobao-hero artifacts plus a v1 sparse store-sign version.",
+    "saved_state_evidence": "outputs/v2 contains only a blocker note and verification file; outputs/v1 contains one gift-box mockup and no store-sign file; no saved Taobao-hero raster exists.",
+    "resolution_required": "Attach or restore the missing current store-sign target, v1 sparse store-sign reference, and optionally the external v2 final artifacts for version reconciliation."
+  },
+  "locked_items": [
+    "Saved approved gift-box artifact at outputs/v1/quiet-gifting-premium-box-mockup.png",
+    "Client-referenced v2 Taobao hero, including the absence of a price label, pending restoration to the workspace",
+    "Existing Logo structure, proportions, Chinese brand name, and standard wordmark",
+    "T2 Quiet Gifting visual system: paper, charcoal, muted grey-green, restrained low-gloss metal, editorial order, and gifting ritual",
+    "Store-sign canvas, copy, Logo, typography, palette, imagery, materials, stand structure, and all design elements other than whitespace",
+    "1998 founding fact and Chinese pastry gifting role",
+    "Reference images may influence only the requested spatial relationship; no direct redesign or copying"
+  ],
+  "requested_delta_pending": [
+    "Adjust only the current store standing-sign whitespace to match the sparser v1 version.",
+    "Keep all other artifacts and system attributes unchanged.",
+    "Do not reintroduce any price label."
+  ],
+  "changed_items": [
+    "Recorded the later-session instruction to lock the gift box and Taobao hero and never restore the price label.",
+    "Advanced the saved project state to v3 with a documented edit-target/reference blocker.",
+    "Created a v3 delta specification and verification record only; no raster or design artifact was generated or altered."
+  ],
+  "preserved_unrelated_items": [
+    "No changes to outputs/v0",
+    "No changes to outputs/v1",
+    "No changes to outputs/v2",
+    "No change to the saved approved gift-box artifact",
+    "No change to the T2 visual system, Logo, palette, typography, Taobao strategy, or other store materials",
+    "No price label introduced"
+  ],
+  "pending_inputs": [
+    "Current store standing-sign source file to use as the sole edit target",
+    "v1 sparser store standing-sign image or exact spacing and margin measurements to use as the whitespace reference",
+    "Optional for state reconciliation: the external v2 Taobao hero and gift-box files referenced by the client"
+  ],
+  "unresolved_project_inputs": [
+    "Editable vector master for the current Logo and Chinese standard wordmark",
+    "Current Logo clear-space, reverse, and monochrome usage rules",
+    "Production constraints for box and store-material fabrication"
+  ],
+  "territory_status": [
+    {
+      "id": "T1",
+      "status": "rejected"
+    },
+    {
+      "id": "T2",
+      "status": "selected_and_locked"
+    },
+    {
+      "id": "T3",
+      "status": "rejected"
+    }
+  ],
+  "artifact_paths": [
+    "outputs/v3/store-sign-whitespace-delta-blocker.md",
+    "outputs/v3/verification.json"
+  ],
+  "version_history": [
+    {
+      "version": "v0",
+      "status": "superseded_by_client_selection",
+      "folder": "outputs/v0",
+      "artifacts": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.html",
+        "outputs/v0/creative-territories-overview.png",
+        "outputs/v0/verification.json"
+      ]
+    },
+    {
+      "version": "v1",
+      "status": "gift_box_approved_and_locked",
+      "folder": "outputs/v1",
+      "artifacts": [
+        "outputs/v1/quiet-gifting-refinement.md",
+        "outputs/v1/quiet-gifting-premium-box-mockup.png",
+        "outputs/v1/verification.json"
+      ]
+    },
+    {
+      "version": "v2",
+      "status": "blocked_missing_taobao_edit_target_and_copy",
+      "folder": "outputs/v2",
+      "artifacts": [
+        "outputs/v2/taobao-hero-delta-blocker.md",
+        "outputs/v2/verification.json"
+      ]
+    },
+    {
+      "version": "v3",
+      "status": "blocked_missing_store_sign_targets",
+      "folder": "outputs/v3",
+      "artifacts": [
+        "outputs/v3/store-sign-whitespace-delta-blocker.md",
+        "outputs/v3/verification.json"
+      ]
+    }
+  ]
+}

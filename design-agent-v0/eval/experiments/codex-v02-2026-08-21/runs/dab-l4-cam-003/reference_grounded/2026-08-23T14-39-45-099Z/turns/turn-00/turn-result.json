@@ -1,0 +1,114 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T14:39:45.115Z",
+  "finished_at": "2026-08-23T15:13:18.069Z",
+  "latency_ms": 2013003,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 106,
+    "command_count": 16,
+    "tool_count": 31,
+    "image_activity_count": 5,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02f10-35df-7f71-8873-1b15d74c891a",
+    "usage": {
+      "input_tokens": 4539671,
+      "cached_input_tokens": 4396032,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 54964,
+      "reasoning_output_tokens": 23550
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2576,
+      "sha256": "f509e582629819fada10d1151badfc1cd7527145833644a6e60b6f4b10755463"
+    },
+    {
+      "filename": "v0/direction-selection-v0.md",
+      "byte_size": 1420,
+      "sha256": "9c14fb336a9557a0cc69411db46aeebec9f62881e2f814072121c3263f58be1b"
+    },
+    {
+      "filename": "v0/generation-prompts-v0.md",
+      "byte_size": 2770,
+      "sha256": "127ef8081c05615e47cd345f900abc1356971fdcea10fe8019ade6840e09162b"
+    },
+    {
+      "filename": "v0/pdp-first-screen-background-direction-a-v0.png",
+      "byte_size": 1719782,
+      "sha256": "4fbd0a7292834ba6389625bc839045366428b1e2b680e158c8e4e57b25782d1c"
+    },
+    {
+      "filename": "v0/pdp-first-screen-base-direction-a-v0.png",
+      "byte_size": 878107,
+      "sha256": "9cc64780f46a628dea67e9be935c968498a3c028d54ee7dbd0b0357c8349f181"
+    },
+    {
+      "filename": "v0/pdp-first-screen-direction-a-v0.png",
+      "byte_size": 1055030,
+      "sha256": "f621455e6185fed53045d6e7ad4c232efa3b00593013c2e5cfcf5b31cc98fd4a"
+    },
+    {
+      "filename": "v0/pdp-first-screen-direction-a-v0.svg",
+      "byte_size": 2949,
+      "sha256": "44dd501e044b1d11bdf03fe61401db352542fce3e573afd8755be88a60252873"
+    },
+    {
+      "filename": "v0/product-cutout-source-preserved-v0.png",
+      "byte_size": 580209,
+      "sha256": "0cb121dd1bbe5b4b92045e838816efc2f2677ef80a3a6ba6e91f8bbcd785ac00"
+    },
+    {
+      "filename": "v0/product-source-preserved-v0.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v0/tmall-hero-background-direction-a-v0.png",
+      "byte_size": 1765331,
+      "sha256": "b3f125d8ef9ed66756ae2f758005bbadfbe43e1b158e45115565753708b43af1"
+    },
+    {
+      "filename": "v0/tmall-hero-base-direction-a-v0.png",
+      "byte_size": 1788280,
+      "sha256": "5bc31d0b1a3fdf0a6343a2960ff83c69ce6a39cbac80719f035b4109d0f4f7c5"
+    },
+    {
+      "filename": "v0/tmall-hero-direction-a-v0.png",
+      "byte_size": 2090499,
+      "sha256": "bc1288398f85de17f9a3b9996a1a4ce819cd5458b7d19ec70127a219a23fd9d0"
+    },
+    {
+      "filename": "v0/tmall-hero-direction-a-v0.svg",
+      "byte_size": 2024,
+      "sha256": "3fc7743262081d01766b471365fb2093bc69b6b44f721413262c3c7ce2077dfa"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5281,
+      "sha256": "57374b535837aa1a81d7cd49e420bb924fa48bfe10a6d21589e2b1f8a5663bfd"
+    },
+    {
+      "filename": "v0/verification/brand-palette-samples-v0.json",
+      "byte_size": 837,
+      "sha256": "5fa2539067906dfc7d76d0441c0a9ea7d7acba717d27051faf74e162516d98c2"
+    },
+    {
+      "filename": "v0/verification/pdp-first-screen-mobile-preview-375-v0.png",
+      "byte_size": 290844,
+      "sha256": "176787f43705a44f3c6e492cba2372042ad3b45660d55add306a0cc6b1b96dfe"
+    },
+    {
+      "filename": "v0/verification/tmall-hero-mobile-preview-375-v0.png",
+      "byte_size": 214682,
+      "sha256": "d4565363290c54376121232837d2344ac82ca40a126eac959ac4d278d40fe219"
+    }
+  ]
+}

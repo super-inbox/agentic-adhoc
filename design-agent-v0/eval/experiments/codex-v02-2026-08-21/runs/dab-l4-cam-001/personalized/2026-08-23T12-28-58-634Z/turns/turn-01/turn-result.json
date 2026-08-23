@@ -1,0 +1,139 @@
+{
+  "turn_index": 1,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T13:07:08.046Z",
+  "finished_at": "2026-08-23T13:27:00.381Z",
+  "latency_ms": 1192472,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 45,
+    "command_count": 14,
+    "tool_count": 5,
+    "image_activity_count": 4,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02e98-84b4-7472-8eb9-a52f9035aab2",
+    "usage": {
+      "input_tokens": 5066112,
+      "cached_input_tokens": 4904704,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 57403,
+      "reasoning_output_tokens": 21406
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 3334,
+      "sha256": "ad3762558258fe9d385b53d14d6becf7bd42aa0b15c53e90f967cdb190e8fda2"
+    },
+    {
+      "filename": "v0/assets/territory-a-tactile-dusk-bg.png",
+      "byte_size": 2200447,
+      "sha256": "a2cc15e226f0ceb257e8e8c65a7bb57bd1dd4eb65cd16de52e034a43e9b244c0"
+    },
+    {
+      "filename": "v0/assets/territory-b-quiet-measure-bg.png",
+      "byte_size": 1865475,
+      "sha256": "b5ad3eadb9ed19c671086fc4ca3569826adc4625fa1d6c628e503ffa0ab6fe6d"
+    },
+    {
+      "filename": "v0/assets/territory-c-night-landing-bg.png",
+      "byte_size": 1858966,
+      "sha256": "c6e9c7d2aa2e8f15623a10262e6a922f00c0a33dda5ceeeb8570d438f4e71fe2"
+    },
+    {
+      "filename": "v0/creative-territories-v0.md",
+      "byte_size": 2827,
+      "sha256": "8abda227179739ae46accf29c2eb57657ae6cc7a05f7a0d99e0e4fcff4239112"
+    },
+    {
+      "filename": "v0/generation-prompts-v0.md",
+      "byte_size": 5492,
+      "sha256": "9961c39856018e8ec03d53fc533bc56d46d520d50f53d33835a6bfdac20ca397"
+    },
+    {
+      "filename": "v0/mori-kv-territories-v0-self-contained.svg",
+      "byte_size": 34040420,
+      "sha256": "f9b75201f2d5e034e38d66613856b7537f8cffa6edd005984b0b08a07de0faf9"
+    },
+    {
+      "filename": "v0/mori-kv-territories-v0.png",
+      "byte_size": 2043886,
+      "sha256": "0b58c456042436c21b4d34621d507d686f31db87caefe18f4be5828e82eda58b"
+    },
+    {
+      "filename": "v0/mori-kv-territories-v0.svg",
+      "byte_size": 17548,
+      "sha256": "ad3cca0b37b19c307326c0bbc43b8f8e1d1a1d70c81d5588ab91af976611d7f9"
+    },
+    {
+      "filename": "v0/tools/embed-assets.mjs",
+      "byte_size": 1398,
+      "sha256": "787277e261bc9f4a67f43c7ca446986f05bf68851eca7c00187b4489ba3acfa4"
+    },
+    {
+      "filename": "v0/tools/render-svg",
+      "byte_size": 51912,
+      "sha256": "cbb568ca1da79d312d624364386b2002a07378d166304aae351b64abdfa262a1"
+    },
+    {
+      "filename": "v0/tools/render-svg.m",
+      "byte_size": 2011,
+      "sha256": "a1af506ce5cdf9947bc468949265e8b90c2b0c08a109b75947f2a20fa7dd2a38"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4682,
+      "sha256": "dbc2cd3a2b5483070541a3f6c28bb33ce69436b0c8483b2fbb877d3561e8f4ae"
+    },
+    {
+      "filename": "v1/assets/territory-c-soft-side-light-bg-v1.png",
+      "byte_size": 1822500,
+      "sha256": "97f526e80215718a57b01c143948a07632232125de947105c32ae8b7a7b48e1d"
+    },
+    {
+      "filename": "v1/generation-prompt-v1.md",
+      "byte_size": 1929,
+      "sha256": "a89faeb86a0198617540d182616d6c419cf9892f8c6b924de02c3ba32a54c763"
+    },
+    {
+      "filename": "v1/mori-night-landing-refinement-v1-self-contained.svg",
+      "byte_size": 10492136,
+      "sha256": "6c5381e47912175f9a7b6e2253d35e251b744e4f820e75213a0b4369011aeb51"
+    },
+    {
+      "filename": "v1/mori-night-landing-refinement-v1.png",
+      "byte_size": 693805,
+      "sha256": "f46bbf8567590a920ecfc0e96201de4a4059d1bbc6f23cc51605023d166b7fba"
+    },
+    {
+      "filename": "v1/mori-night-landing-refinement-v1.svg",
+      "byte_size": 9466,
+      "sha256": "bdcb6c3ef07e9a36776e2cfd5f2d251943715452fa36e36b48f14a158f716c39"
+    },
+    {
+      "filename": "v1/tools/embed-assets-v1.mjs",
+      "byte_size": 1184,
+      "sha256": "8b27196247c1d90d1a25b6c5d86d48040a75aa4cd5fd661bc41d968d1b95477a"
+    },
+    {
+      "filename": "v1/tools/render-svg-v1",
+      "byte_size": 51920,
+      "sha256": "b6331880854d022dc10dfdd2cbfb72ca10405e297aae156049d1130293ba5715"
+    },
+    {
+      "filename": "v1/tools/render-svg-v1.m",
+      "byte_size": 2029,
+      "sha256": "5b85e4b326d357aa3f625a67c804acb898b7976341ccd94113556cca3625ca20"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 5941,
+      "sha256": "7497ca895e429a18a57b0937dbabe45746c9835cb31ece5743d5fcfa6037a039"
+    }
+  ]
+}

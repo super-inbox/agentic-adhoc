@@ -1,0 +1,184 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T14:12:02.475Z",
+  "finished_at": "2026-08-23T14:26:04.824Z",
+  "latency_ms": 842448,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 55,
+    "command_count": 19,
+    "tool_count": 5,
+    "image_activity_count": 4,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02ef6-d18f-79d0-8167-ec5483661231",
+    "usage": {
+      "input_tokens": 1317441,
+      "cached_input_tokens": 1174656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 24786,
+      "reasoning_output_tokens": 8454
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2943,
+      "sha256": "cbb0753a1a0e6146b7a5902c53373b1c90c988fd6ccad18185ff262943ded963"
+    },
+    {
+      "filename": "v0/build_kv_hypotheses.py",
+      "byte_size": 14294,
+      "sha256": "982ae299808611198e11bf74e613025df563f7260ee9d6f4ce4a7c23341b7047"
+    },
+    {
+      "filename": "v0/candidate-metadata.json",
+      "byte_size": 4786,
+      "sha256": "72591a84ddd1f6cf890a71fda14ae653b6a07a41dead5128545b705241435968"
+    },
+    {
+      "filename": "v0/candidates/kv-a1.png",
+      "byte_size": 2889775,
+      "sha256": "4d53ecd6ebd72f8ca282407b0d711863be4587d224ce32c18975ff76dc8c4acb"
+    },
+    {
+      "filename": "v0/candidates/kv-a2.png",
+      "byte_size": 2205418,
+      "sha256": "26d2274de99d835d3a48d2928b085315c9bbaed6c8a59f96ef406beeefb52a47"
+    },
+    {
+      "filename": "v0/candidates/kv-a3.png",
+      "byte_size": 2477409,
+      "sha256": "2c489f826d5cfc2402479161c09ca9cc6c95e4afeeb924da59146560e00aaa11"
+    },
+    {
+      "filename": "v0/candidates/kv-b1.png",
+      "byte_size": 3150958,
+      "sha256": "7e539bf1c2cc79b995d7c742762c99869cb4b33d36743ebd6be20d030b0fde1a"
+    },
+    {
+      "filename": "v0/candidates/kv-b2.png",
+      "byte_size": 3154454,
+      "sha256": "7645db70c4816a03a3ef04359e4707ab820faf1d95460d25fd418a782d0ea5c1"
+    },
+    {
+      "filename": "v0/candidates/kv-b3.png",
+      "byte_size": 2437859,
+      "sha256": "4b47c190c95fe10d32a2d31c9c61c879bf84b3fdcc0a5583ca1592c6085db24c"
+    },
+    {
+      "filename": "v0/candidates/kv-c1.png",
+      "byte_size": 2827938,
+      "sha256": "ac77feaf9c601badab1a784315e6c697e08042ef04fbe368739e52c80460b5c9"
+    },
+    {
+      "filename": "v0/candidates/kv-c2.png",
+      "byte_size": 2839087,
+      "sha256": "69653add1249d1109e31c06e022af5beb9a84f911f41267d4b6aa46aa6d3d183"
+    },
+    {
+      "filename": "v0/candidates/kv-c3.png",
+      "byte_size": 2786776,
+      "sha256": "ca41d387b3d86dd369b1e8081a21aa5ddb953db0fbbb223fdf32498a56792e02"
+    },
+    {
+      "filename": "v0/hypotheses.md",
+      "byte_size": 2329,
+      "sha256": "32fcd1d27da458ba7ceff126b9781a8dd21965b4fc17ed71f1262a2f4bbb6625"
+    },
+    {
+      "filename": "v0/imagegen-prompts.md",
+      "byte_size": 4624,
+      "sha256": "2a9d49dc03e2069a32b9d92861a89ce3734052dc5dd5171aa0f304fa16a46d20"
+    },
+    {
+      "filename": "v0/kv-hypotheses-selection-board.png",
+      "byte_size": 3874016,
+      "sha256": "247428a04afa5850913ba84cdd9293d3aec594fd01339d4bc699681fd8f53111"
+    },
+    {
+      "filename": "v0/previews/kv-a1-preview.jpg",
+      "byte_size": 95109,
+      "sha256": "fb6648102771e4fa9e082ed88803079e791092ad36047d99c1f4df0dff6f6ad7"
+    },
+    {
+      "filename": "v0/previews/kv-a2-preview.jpg",
+      "byte_size": 73944,
+      "sha256": "170258b31205d88057fb158719b013d8307119bfa7a9c79bd3a64b0a762deddb"
+    },
+    {
+      "filename": "v0/previews/kv-a3-preview.jpg",
+      "byte_size": 75529,
+      "sha256": "2a44663bf185f2d71f3b09ad0eb2c8cce06bdb66a1e44b2507ab311d3eb6f10b"
+    },
+    {
+      "filename": "v0/previews/kv-b1-preview.jpg",
+      "byte_size": 82494,
+      "sha256": "bb1b036ce3004c03886e664769ff3c8fb14fc6cbfb93c26808b7b5919a0f6655"
+    },
+    {
+      "filename": "v0/previews/kv-b2-preview.jpg",
+      "byte_size": 83563,
+      "sha256": "76358976c93053addfba709b2623ce6f9742cf2cfc922ae9a3a3a15a642fa90f"
+    },
+    {
+      "filename": "v0/previews/kv-b3-preview.jpg",
+      "byte_size": 75590,
+      "sha256": "2e9c0620de9a12626288e9bea6185a446171873944a82fcc35131aa27d88e7a6"
+    },
+    {
+      "filename": "v0/previews/kv-c1-preview.jpg",
+      "byte_size": 100025,
+      "sha256": "254abc90f714aa548df69d384deb0ddfe9f1fbb77ab6e33a80051427993cf1ef"
+    },
+    {
+      "filename": "v0/previews/kv-c2-preview.jpg",
+      "byte_size": 92316,
+      "sha256": "de374b453590307de1b1d32f42dfb6777253a9cc286a75870601e4fe1595ec5f"
+    },
+    {
+      "filename": "v0/previews/kv-c3-preview.jpg",
+      "byte_size": 83001,
+      "sha256": "b65509cf5f9050c9513accf6d8d9581b6a071ed223d8ab122498c681aa6d5b35"
+    },
+    {
+      "filename": "v0/previews/kv-hypotheses-selection-board-preview.jpg",
+      "byte_size": 335630,
+      "sha256": "92db0473ed03f06c39e2a88ed93870d9f80e9d4cb3928e6f0815d4d9d5169daf"
+    },
+    {
+      "filename": "v0/qa-evidence.json",
+      "byte_size": 4806,
+      "sha256": "80c7f7054acb60bd3b1b8ca06b3d008153d5d2c8f7805380aa39fe797e10d7e0"
+    },
+    {
+      "filename": "v0/sources/direction-a-soft-field.png",
+      "byte_size": 2325664,
+      "sha256": "efabd086742d88e49073dea1fd3cc1290d820c4c216113f348e72d7ca20dfc56"
+    },
+    {
+      "filename": "v0/sources/direction-b-threshold.png",
+      "byte_size": 2041005,
+      "sha256": "eef25572fa80e76f5eefe7277e969cc890b6ef83de5f520ee7ed19ac58f3b65a"
+    },
+    {
+      "filename": "v0/sources/direction-c-tactile-ribbon.png",
+      "byte_size": 2157425,
+      "sha256": "89619b3c278da0240a6ad5e2f22a66e330f2f8c73017777c3b63cfc90550954d"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3999,
+      "sha256": "f04b0c25dbf232586e1b29b67920f4d62c4d428ff0dca2eb5378a7f79b8e3007"
+    },
+    {
+      "filename": "v0/verify_kv.py",
+      "byte_size": 4539,
+      "sha256": "a0e3bc70e9a38a70ce594823ea41269c1116191941578bab2f231d439cea4a25"
+    }
+  ]
+}

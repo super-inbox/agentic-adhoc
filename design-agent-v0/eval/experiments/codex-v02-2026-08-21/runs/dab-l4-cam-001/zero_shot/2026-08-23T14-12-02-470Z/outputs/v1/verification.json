@@ -1,0 +1,106 @@
+{
+  "version": "v1",
+  "artifact_scope": "One consolidated dark-direction KV refinement; no channel extensions",
+  "checks_performed": [
+    {
+      "id": "requested_delta_tabletop_contact",
+      "status": "pass",
+      "result": "The white matte and floating drop shadow were removed. The product is unframed, sits below the full-width tabletop horizon, and retains the source photo's natural contact shadow.",
+      "evidence_paths": [
+        "outputs/v1/candidates/kv-dark-direction-refinement-v1.png",
+        "outputs/v1/dark-direction-v0-v1-comparison.png",
+        "outputs/v1/qa-evidence.json"
+      ]
+    },
+    {
+      "id": "requested_delta_soft_side_light",
+      "status": "pass",
+      "result": "The v0 hard light pool was replaced by a broad, low-contrast left-side light with soft falloff across wall and tabletop.",
+      "evidence_paths": [
+        "outputs/v1/sources/direction-b-dark-tabletop-soft-side-light.png",
+        "outputs/v1/candidates/kv-dark-direction-refinement-v1.png",
+        "outputs/v1/imagegen-prompt.md"
+      ]
+    },
+    {
+      "id": "dark_direction_preserved",
+      "status": "pass",
+      "result": "The dark B-direction architectural language, charcoal threshold, muted terracotta plane, and nocturnal low-stimulation atmosphere remain intact.",
+      "evidence_paths": [
+        "outputs/v1/dark-direction-v0-v1-comparison.png",
+        "outputs/v1/candidates/kv-dark-direction-refinement-v1.png"
+      ]
+    },
+    {
+      "id": "product_identity_preservation",
+      "status": "pass",
+      "result": "The verified product core, including bottle, cap, liquid, and label, pixel-matches the uniformly resized supplied source. Feathering is confined to surrounding source-photo backdrop pixels.",
+      "evidence_paths": [
+        "inputs/01-launch_product.png",
+        "outputs/v1/qa-evidence.json",
+        "outputs/v1/sources/product-feather-mask-v1.png"
+      ]
+    },
+    {
+      "id": "approved_copy_and_palette",
+      "status": "pass",
+      "result": "The bilingual approved copy and the established warm off-white, terracotta, and charcoal palette were preserved; no new consumer-facing copy was introduced.",
+      "evidence_paths": [
+        "outputs/v1/candidate-metadata.json",
+        "outputs/v1/build_dark_refinement.py"
+      ]
+    },
+    {
+      "id": "medical_claim_avoidance",
+      "status": "pass",
+      "result": "No medical, treatment, insomnia-improvement, clinical, or therapeutic copy or symbolism was added.",
+      "evidence_paths": [
+        "outputs/v1/candidates/kv-dark-direction-refinement-v1.png",
+        "outputs/v1/imagegen-prompt.md"
+      ]
+    },
+    {
+      "id": "v0_integrity",
+      "status": "pass",
+      "result": "All 9 recorded v0 candidate hashes remain unchanged.",
+      "evidence_paths": [
+        "outputs/v1/qa-evidence.json",
+        "outputs/v0/qa-evidence.json"
+      ]
+    },
+    {
+      "id": "workflow_gate",
+      "status": "pass",
+      "result": "No website hero, Instagram vertical, or email-header adaptation was produced in v1.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/qa-evidence.json"
+      ]
+    },
+    {
+      "id": "visual_qa",
+      "status": "pass",
+      "result": "Original-resolution inspection confirms visible tabletop contact, softer lateral light, unobscured product, readable approved copy, and no floating frame treatment.",
+      "evidence_paths": [
+        "outputs/v1/candidates/kv-dark-direction-refinement-v1.png",
+        "outputs/v1/dark-direction-v0-v1-comparison.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "v1_kv_approval",
+      "blocking_next_stage": true,
+      "detail": "The consolidated dark-direction v1 KV requires approval before website, Instagram, or email adaptations."
+    },
+    {
+      "id": "logo_asset_missing",
+      "blocking_next_stage": true,
+      "detail": "Provide the existing Logo in SVG, PDF, or transparent PNG for exact placement in production channel assets."
+    }
+  ],
+  "automated_qa": {
+    "status": "pass",
+    "evidence": "outputs/v1/qa-evidence.json"
+  }
+}

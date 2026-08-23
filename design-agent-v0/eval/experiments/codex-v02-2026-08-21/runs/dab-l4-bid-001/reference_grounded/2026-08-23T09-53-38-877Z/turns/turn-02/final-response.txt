@@ -1,0 +1,15 @@
+v2 已完成：
+
+- 删除全部价格／促销表达。
+- 卖点缩为一句：**「始于 1998，中式酥点成礼。」**
+- 礼盒方向与 B 视觉系统保持不变；v0、v1 校验值未变化。
+- 主图背景使用内置 imagegen 编辑，最终文字为确定性排版。
+
+新增／更新路径：
+
+- [淘宝主图 v2](/private<WORKDIR>/outputs/v2/01-taobao-main-v2.png)
+- [变更说明](/private<WORKDIR>/outputs/v2/delta-notes.md)
+- [验证记录](/private<WORKDIR>/outputs/v2/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+- [imagegen 提示词](/private<WORKDIR>/outputs/v2/imagegen-prompts.md)
+- [排版脚本](/private<WORKDIR>/outputs/v2/render_taobao_main.py)

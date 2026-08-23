@@ -1,0 +1,7 @@
+精修已完成，严格保留瓶型、瓶盖、标签、液体颜色、导管和构图，仅对玻璃外缘、肩部及底座做轻微去雾、反光清理和通透度增强。
+
+- [精修成品 PNG](<WORKDIR>/outputs/v0/perfume-bottle-retouched-v0.png)
+- [核验记录](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+成品为 1024×1024。瓶盖、标签、液体主体及导管均通过像素级一致性检查。内置图像编辑模式的生成结果因几何漂移被弃用，最终采用确定性局部蒙版精修；无未解决阻塞项。

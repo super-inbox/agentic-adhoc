@@ -1,0 +1,205 @@
+{
+  "schema": "codex.design_document/1.0",
+  "document_id": "summer-form-poster-revision-v0",
+  "version": "v0",
+  "coordinate_system": {
+    "origin": "top-left",
+    "units": "pixels",
+    "x_axis": "right",
+    "y_axis": "down"
+  },
+  "canvas": {
+    "width": 928,
+    "height": 1152,
+    "color_space": "sRGB",
+    "alpha": true,
+    "resize_applied": false
+  },
+  "source": {
+    "path": "inputs/01-revision_target.png",
+    "role": "edit_target",
+    "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a",
+    "identity_policy": "preserve_unedited_regions"
+  },
+  "editable_object_map": {
+    "root_object_id": "poster",
+    "stack_order_bottom_to_top": [
+      "base_cleaned",
+      "main_title",
+      "event_mark"
+    ],
+    "objects": [
+      {
+        "id": "poster",
+        "type": "document_root",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 928,
+          "height": 1152
+        },
+        "editable": false,
+        "locked": true
+      },
+      {
+        "id": "base_cleaned",
+        "parent_id": "poster",
+        "type": "raster_base",
+        "path": "outputs/v0/layers/base-cleaned.png",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 928,
+          "height": 1152
+        },
+        "editable": false,
+        "locked": true,
+        "construction": {
+          "source_path": "inputs/01-revision_target.png",
+          "title_source_cleanup_mask": "outputs/v0/masks/title-source-mask.png",
+          "title_source_cleanup_regions": [
+            {
+              "x": 248,
+              "y": 296,
+              "width": 504,
+              "height": 101
+            },
+            {
+              "x": 436,
+              "y": 394,
+              "width": 316,
+              "height": 94
+            }
+          ],
+          "event_mark_source_cleanup_region": {
+            "x": 582,
+            "y": 824,
+            "width": 196,
+            "height": 188
+          },
+          "cleanup_method": "nearby-paper sampling with local interpolation; no global regeneration"
+        }
+      },
+      {
+        "id": "main_title",
+        "parent_id": "poster",
+        "type": "extracted_raster_text_object",
+        "text_lines": [
+          "SUMMER",
+          "FORM"
+        ],
+        "source_layer_path": "outputs/v0/layers/title-source.png",
+        "render_layer_path": "outputs/v0/layers/title-scaled-115.png",
+        "source_mask_path": "outputs/v0/masks/title-source-mask.png",
+        "source_bounds": {
+          "x": 260,
+          "y": 306,
+          "width": 478,
+          "height": 172
+        },
+        "destination_bounds": {
+          "x": 190,
+          "y": 293,
+          "width": 550,
+          "height": 198
+        },
+        "transform": {
+          "scale_x": 1.1506276150627615,
+          "scale_y": 1.1511627906976745,
+          "rotation_degrees": 0,
+          "destination_x": 190,
+          "destination_y": 293
+        },
+        "appearance": {
+          "font_source": "original raster glyphs",
+          "retyped": false,
+          "recolored": false,
+          "line_arrangement_preserved": true
+        },
+        "editable": true,
+        "editable_properties": [
+          "destination_x",
+          "destination_y",
+          "scale_x",
+          "scale_y"
+        ],
+        "locked_properties": [
+          "text_lines",
+          "glyph_shapes",
+          "color",
+          "rotation_degrees"
+        ]
+      },
+      {
+        "id": "event_mark",
+        "parent_id": "poster",
+        "type": "extracted_raster_graphic_object",
+        "source_layer_path": "outputs/v0/layers/event-mark-source.png",
+        "source_mask_path": "outputs/v0/masks/event-mark-source-mask.png",
+        "source_bounds": {
+          "x": 597,
+          "y": 837,
+          "width": 161,
+          "height": 161
+        },
+        "destination_bounds": {
+          "x": 596,
+          "y": 126,
+          "width": 161,
+          "height": 161
+        },
+        "transform": {
+          "translation_x": -1,
+          "translation_y": -711,
+          "scale_x": 1,
+          "scale_y": 1,
+          "rotation_degrees": 0
+        },
+        "appearance": {
+          "source_pixels_reused": true,
+          "recolored": false,
+          "geometry_preserved": true
+        },
+        "editable": true,
+        "editable_properties": [
+          "translation_x",
+          "translation_y"
+        ],
+        "locked_properties": [
+          "scale_x",
+          "scale_y",
+          "rotation_degrees",
+          "colors",
+          "ring_geometry"
+        ]
+      }
+    ]
+  },
+  "copy_inventory": {
+    "main_title": [
+      "SUMMER",
+      "FORM"
+    ],
+    "event_copy": [
+      "Design Market",
+      "08 — 10 AUG",
+      "BROOKLYN"
+    ],
+    "added_copy": [],
+    "removed_copy": []
+  },
+  "locked_invariants": [
+    "canvas size",
+    "all copy",
+    "all non-target colors",
+    "all non-target geometry",
+    "paper sculpture",
+    "grid and colored blocks",
+    "paper and environmental texture",
+    "poster framing and shadow"
+  ],
+  "export": {
+    "preview_path": "outputs/v0/preview.png",
+    "sha256": "1c242adacbb13bb6a79963d11f209991ce2c96520099ddb2b994f7519dd4288f"
+  }
+}

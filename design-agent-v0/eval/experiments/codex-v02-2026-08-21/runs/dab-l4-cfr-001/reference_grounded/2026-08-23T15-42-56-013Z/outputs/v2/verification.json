@@ -1,0 +1,147 @@
+{
+  "version": "v2",
+  "status": "passed",
+  "source": {
+    "path": "outputs/v1/summer-form-poster-local-revision-v1.png",
+    "sha256": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401",
+    "dimensions": "928 x 1152 RGB PNG"
+  },
+  "requested_delta": [
+    "Reduce only the v1 poster-sheet paper grain intensity by approximately 30 percent.",
+    "Keep the approved v1 logo unchanged.",
+    "Keep the title, geometric artwork, and all activity information unchanged."
+  ],
+  "locked_invariants": [
+    "approved v1 logo size, position, geometry, and ink pixels",
+    "title font, letterforms, weight, size, tracking, line breaks, color, and position",
+    "all approved activity copy, date, and location",
+    "all grid lines, arcs, color blocks, and blue/coral values",
+    "central folded-paper object and its shadow",
+    "outer scene, poster edges, framing, and cast shadow",
+    "no new text, marks, graphics, materials, or effects"
+  ],
+  "checks_performed": [
+    {
+      "check": "output_dimensions_match_v1",
+      "result": "pass",
+      "details": "v1 and v2 are both 928 x 1152 RGB PNG files.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "grain_amplitude_reduced_approximately_30_percent",
+      "result": "pass",
+      "details": "The same v1 grain source was multiplied by 0.70. In the clean paper sample [390,165,540,205], measured fine-grain standard deviation decreased from 0.5210 to 0.3724 (28.52%) and high-pass standard deviation from 0.9328 to 0.6776 (27.36%).",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v2/summer-form-poster-v1-v2-comparison.png",
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "paper_lighting_and_tone_preserved",
+      "result": "pass",
+      "details": "Mean luminance in the measured paper sample changed by only -0.0006 on the 0–255 scale.",
+      "evidence_paths": [
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "changes_confined_to_neutral_poster_paper",
+      "result": "pass",
+      "details": "0 changed pixels were found outside the approved neutral poster-paper mask.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-v2-diff-mask.png",
+        "outputs/v2/intermediate/v2-paper-edit-mask.png",
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "approved_v1_logo_preserved",
+      "result": "pass",
+      "details": "Logo bounds remain [613,854,740,980]; every measured logo-ink pixel is identical and logo-ink changed-pixel count is 0.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "title_preserved",
+      "result": "pass",
+      "details": "Masked title-ink hashes are identical in v1 and v2: 22dfaaa7a991ee8ea0d2b58c6b02690c0270ff1b1d998929b0720dcf30695c68.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "all_activity_information_preserved",
+      "result": "pass",
+      "details": "Masked event-information ink hashes are identical in v1 and v2: e982aac48beb67b8153c8c9d9e1bf2c0319961026ee29548087c89493d840241.",
+      "evidence_paths": [
+        "outputs/v1/summer-form-poster-local-revision-v1.png",
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "geometry_and_palette_preserved",
+      "result": "pass",
+      "details": "Maximum channel difference across protected grid, arc, text, color-block, and logo art pixels is 0.",
+      "evidence_paths": [
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "unrelated_regions_preserved",
+      "result": "pass",
+      "details": "The outer scene and central folded-paper exclusion region each have 0 changed pixels.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-v2-diff-mask.png",
+        "outputs/v2/intermediate/paper-grain-reduction-metrics.json"
+      ]
+    },
+    {
+      "check": "prior_version_folders_unchanged",
+      "result": "pass",
+      "details": "All 11 files under outputs/v0 and outputs/v1 match their pre-v2 SHA-256 snapshot.",
+      "evidence_paths": [
+        "outputs/v2/intermediate/prior-version-hashes.json"
+      ]
+    },
+    {
+      "check": "visual_comparison_reviewed",
+      "result": "pass",
+      "details": "v2 and the v1/v2 comparison were inspected at original resolution; the paper grain is quieter without observed typography, geometry, logo, color, or layout drift.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v2/summer-form-poster-v1-v2-comparison.png"
+      ]
+    }
+  ],
+  "execution_provenance": {
+    "mode": "deterministic local raster edit under the imagegen precise-object-edit invariant workflow",
+    "fresh_generation": false,
+    "reason": "A new generative pass would introduce unrequested texture or layout drift. v2 reuses the exact v1 texture basis and numerically scales only its grain amplitude.",
+    "edit_spec": "Use v1 as the sole edit target. Multiply only the neutral poster-sheet paper grain amplitude by 0.70. Keep the approved v1 logo, title, geometric artwork, blue/coral values, all activity information, folded object, outer scene, and every unrelated pixel unchanged. Add nothing."
+  },
+  "artifact_paths": {
+    "final_poster": "outputs/v2/summer-form-poster-local-revision-v2.png",
+    "comparison": "outputs/v2/summer-form-poster-v1-v2-comparison.png",
+    "difference_mask": "outputs/v2/summer-form-poster-v2-diff-mask.png",
+    "metrics": "outputs/v2/intermediate/paper-grain-reduction-metrics.json",
+    "edit_mask": "outputs/v2/intermediate/v2-paper-edit-mask.png",
+    "process_script": "outputs/v2/apply-paper-grain-reduction.py",
+    "prior_version_hashes": "outputs/v2/intermediate/prior-version-hashes.json"
+  },
+  "artifact_sha256": {
+    "final_poster": "4e62be78154fa5ff9bf3e4e680aae8c2795eb0edddb513b221cb67f499f99e8c",
+    "comparison": "482adcceb55fd4882fc09280ecee0cee01e7a33afcfea81dfc323670dd981d25",
+    "difference_mask": "d162646e0930e0a52e68e21625b3899d5091c247b8d62a9621812cbaf1288e44"
+  },
+  "unresolved_blockers": []
+}

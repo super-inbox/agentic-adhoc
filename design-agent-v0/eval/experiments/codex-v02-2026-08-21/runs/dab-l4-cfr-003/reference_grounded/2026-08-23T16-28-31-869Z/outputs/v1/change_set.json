@@ -1,0 +1,74 @@
+{
+  "schema_version": "object-change-set/1.0",
+  "change_set_id": "aroma-detail-hero-v1-client-delta",
+  "version": "v1",
+  "base_version": "v0",
+  "created_at": "2026-08-24T00:46:42+08:00",
+  "scope_policy": "requested_delta_only",
+  "summary": "Assert the approved glyph in the first selling point and move the complete third selling-point card upward by 12 px. Preserve all unrelated and approved areas.",
+  "operations": [
+    {
+      "operation": "assert",
+      "object_id": "feature-low-noise",
+      "object_type": "feature_card",
+      "property": "label",
+      "client_reported_before": "低躁运行",
+      "observed_base_value": "低噪运行",
+      "required_after": "低噪运行",
+      "result": "already_conformant_value_reasserted_and_locked",
+      "visual_delta": false,
+      "reason": "Honor the requested character correction without falsely recording a source change that was not present in v0."
+    },
+    {
+      "operation": "update",
+      "object_id": "feature-clay-touch",
+      "object_type": "feature_card",
+      "property": "transform.translate_y",
+      "before": 0,
+      "after": -12,
+      "unit": "px",
+      "effective_bounds_before": {"x": 779, "y": 1172, "width": 309, "height": 246},
+      "effective_bounds_after": {"x": 779, "y": 1160, "width": 309, "height": 246},
+      "scope": ["card", "icon", "label"],
+      "preserved_within_object": ["x", "width", "height", "card style", "icon style", "label content", "internal spacing"],
+      "reason": "Apply the requested slight upward movement as a minimal visible 12 px translation."
+    }
+  ],
+  "explicitly_unchanged": [
+    {
+      "object_id": "ambient-background",
+      "evidence": {
+        "v0_sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+        "v1_sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3"
+      }
+    },
+    {
+      "object_id": "product-image-locked",
+      "evidence": {
+        "v0_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "v1_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+      }
+    },
+    {
+      "object_id": "headline",
+      "content": "让香气慢下来。",
+      "position_before": {"x": 600, "baseline_y": 1072},
+      "position_after": {"x": 600, "baseline_y": 1072}
+    },
+    {
+      "object_id": "product-stage",
+      "bounds_before": {"x": 112, "y": 72, "width": 976, "height": 888},
+      "bounds_after": {"x": 112, "y": 72, "width": 976, "height": 888}
+    },
+    {
+      "object_id": "feature-timer",
+      "bounds_before": {"x": 445.5, "y": 1172, "width": 309, "height": 246},
+      "bounds_after": {"x": 445.5, "y": 1172, "width": 309, "height": 246}
+    }
+  ],
+  "visual_diff_expectation": {
+    "allowed_bbox": {"left": 778, "top": 1159, "right": 1089, "bottom": 1419},
+    "allowed_reason": "Antialiasing around the third card translated from y=1172 to y=1160.",
+    "all_pixels_outside_bbox": "must_match_v0"
+  }
+}

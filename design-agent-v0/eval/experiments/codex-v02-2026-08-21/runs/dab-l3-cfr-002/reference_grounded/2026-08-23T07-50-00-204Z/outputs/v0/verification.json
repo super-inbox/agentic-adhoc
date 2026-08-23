@@ -1,0 +1,128 @@
+{
+  "schema": "codex.visual_verification/1.0",
+  "document_id": "summer-form-poster-revision-v0",
+  "status": "pass",
+  "checks": [
+    {
+      "id": "canvas-size-preserved",
+      "status": "pass",
+      "expected": {
+        "width": 928,
+        "height": 1152
+      },
+      "actual": {
+        "width": 928,
+        "height": 1152
+      },
+      "evidence_paths": [
+        "inputs/01-revision_target.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "title-enlarged-about-15-percent",
+      "status": "pass",
+      "tolerance_percent": 1,
+      "actual_delta_percent": {
+        "width": 15.06276150627615,
+        "height": 15.11627906976745
+      },
+      "evidence_paths": [
+        "outputs/v0/layers/title-source.png",
+        "outputs/v0/layers/title-scaled-115.png",
+        "outputs/v0/metrics.json"
+      ]
+    },
+    {
+      "id": "event-mark-moved-top-right",
+      "status": "pass",
+      "source_bounds": {
+        "x": 597,
+        "y": 837,
+        "width": 161,
+        "height": 161
+      },
+      "destination_bounds": {
+        "x": 596,
+        "y": 126,
+        "width": 161,
+        "height": 161
+      },
+      "safe_bounds": {
+        "x": 142,
+        "y": 125,
+        "width": 644,
+        "height": 902
+      },
+      "title_clearance_pixels": 6,
+      "scale": 1,
+      "evidence_paths": [
+        "outputs/v0/preview.png",
+        "outputs/v0/layers/event-mark-source.png"
+      ]
+    },
+    {
+      "id": "only-authorized-regions-changed",
+      "status": "pass",
+      "decoded_pixel_comparison": {
+        "total_pixels": 1069056,
+        "changed_pixels": 129433,
+        "unchanged_pixels": 939623,
+        "changed_pixel_ratio": 0.12107223569204981,
+        "outside_authorized_regions_changed_pixels": 0,
+        "exact_untouched_pixel_match": true
+      },
+      "evidence_paths": [
+        "outputs/v0/masks/authorized-change-region.png",
+        "outputs/v0/masks/source-vs-preview-diff.png",
+        "outputs/v0/metrics.json"
+      ]
+    },
+    {
+      "id": "copy-preserved",
+      "status": "pass",
+      "method": "All non-title text pixels are byte-identical because they lie outside authorized change regions; title glyphs are extracted from the approved source rather than retyped.",
+      "expected_copy": [
+        "SUMMER",
+        "FORM",
+        "Design Market",
+        "08 — 10 AUG",
+        "BROOKLYN"
+      ],
+      "added_copy": [],
+      "removed_copy": [],
+      "evidence_paths": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/masks/source-vs-preview-diff.png"
+      ]
+    },
+    {
+      "id": "colors-geometry-texture-preserved",
+      "status": "pass",
+      "method": "Source-derived raster layers were reused without recoloring; all pixels outside source cleanups and the two destination boxes match exactly.",
+      "evidence_paths": [
+        "outputs/v0/layers/base-cleaned.png",
+        "outputs/v0/layers/title-source.png",
+        "outputs/v0/layers/event-mark-source.png",
+        "outputs/v0/metrics.json"
+      ]
+    },
+    {
+      "id": "visual-qa",
+      "status": "pass",
+      "method": "Full-resolution visual inspection of the final preview for spelling, object completeness, edge quality, title balance, safe-area containment, and source-vacancy cleanup.",
+      "evidence_paths": [
+        "outputs/v0/preview.png"
+      ]
+    }
+  ],
+  "hashes": {
+    "source_sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a",
+    "preview_sha256": "1c242adacbb13bb6a79963d11f209991ce2c96520099ddb2b994f7519dd4288f",
+    "base_cleaned_sha256": "ef3f4a51559b9518c86ff149e5b4cfc7beee95d4f4be0bb413d5c0dcd9e15958",
+    "title_source_sha256": "4225b72c3d2aab64fb800ee5bee2bfdf579cbc1b1c4324360e0f3eec6292867d",
+    "title_scaled_sha256": "0dcc567d7d5efd5eaeef90d14141dd57ac1c677c6636ca4b301a32fb7905ab66",
+    "event_mark_source_sha256": "dfa321fa05019716a9944e3f99d2860fe6830f3084720cd740798ab85e4a81a1"
+  },
+  "unresolved_blockers": []
+}

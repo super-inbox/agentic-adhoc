@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="628" viewBox="0 0 1200 628" data-format="1200×628">
+  <metadata>{&quot;format_id&quot;: &quot;social_1200x628&quot;, &quot;safe_margin_percent&quot;: 5, &quot;main_visual_source&quot;: &quot;approved master crop; no regeneration&quot;, &quot;editable_object_ids&quot;: [&quot;background&quot;, &quot;content_frame&quot;, &quot;grid_h_top&quot;, &quot;grid_h_bottom&quot;, &quot;grid_v_title&quot;, &quot;grid_v_info&quot;, &quot;block_top_blue&quot;, &quot;block_top_orange&quot;, &quot;strip_orange&quot;, &quot;circle_left&quot;, &quot;title_summer&quot;, &quot;title_form&quot;, &quot;approved_main_visual&quot;, &quot;info_design_market&quot;, &quot;info_date&quot;, &quot;info_location&quot;, &quot;ringmark_outer&quot;, &quot;ringmark_blue_a&quot;, &quot;ringmark_orange&quot;, &quot;block_bottom_blue&quot;, &quot;block_bottom_orange&quot;, &quot;arc_bottom_left&quot;]}</metadata>
+  <rect id="background" x="0" y="0" width="1200" height="628" fill="#F2EEE4" stroke="none" stroke-width="0"/>
+  <rect id="content_frame" x="60.0" y="31.4" width="1080.0" height="565.2" fill="none" stroke="#2A3F75" stroke-width="2.0"/>
+  <line id="grid_h_top" x1="60.0" y1="113.04" x2="1140.0" y2="113.04" fill="none" stroke="#2A3F75" stroke-width="2.0"/>
+  <line id="grid_h_bottom" x1="60.0" y1="489.84" x2="1140.0" y2="489.84" fill="none" stroke="#2A3F75" stroke-width="2.0"/>
+  <line id="grid_v_title" x1="504.0" y1="31.4" x2="504.0" y2="596.6" fill="none" stroke="#2A3F75" stroke-width="2.0"/>
+  <line id="grid_v_info" x1="864.0" y1="31.4" x2="864.0" y2="596.6" fill="none" stroke="#2A3F75" stroke-width="2.0"/>
+  <rect id="block_top_blue" x="696.0" y="31.4" width="168.0" height="81.64" fill="#3A5AA5" stroke="none" stroke-width="0"/>
+  <rect id="block_top_orange" x="864.0" y="31.4" width="84.0" height="81.64" fill="#EA7862" stroke="none" stroke-width="0"/>
+  <rect id="strip_orange" x="264.0" y="113.04" width="240.0" height="50.24" fill="#EA7862" stroke="none" stroke-width="0"/>
+  <ellipse id="circle_left" cx="129.07999999999998" cy="100.47999999999999" rx="69.08" ry="69.08" fill="none" stroke="#2A3F75" stroke-width="2.0"/>
+  <text id="title_summer" x="78.0" y="175.84" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="89" dominant-baseline="hanging">SUMMER</text>
+  <text id="title_form" x="216.0" y="288.88" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="89" dominant-baseline="hanging">FORM</text>
+  <image id="approved_main_visual" href="../assets/main_visual_source_crop.png" x="522.0" y="153.86" width="306.0" height="294.231" preserveAspectRatio="xMidYMid meet" data-identity-policy="preserve_unedited_regions" data-transform="uniform-scale"/>
+  <text id="info_design_market" x="894.0" y="207.24" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="28" dominant-baseline="hanging">Design Market</text>
+  <text id="info_date" x="894.0" y="245.391" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="28" dominant-baseline="hanging">08 — 10 AUG</text>
+  <text id="info_location" x="894.0" y="283.542" fill="#2A3F75" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="30" dominant-baseline="hanging">BROOKLYN</text>
+  <ellipse id="ringmark_outer" cx="1010.8" cy="496.12" rx="62.8" ry="62.8" fill="none" stroke="#2A3F75" stroke-width="4.0"/>
+  <ellipse id="ringmark_blue_a" cx="996.9839999999999" cy="494.864" rx="36.424" ry="48.984" fill="none" stroke="#3A5AA5" stroke-width="6.4"/>
+  <ellipse id="ringmark_orange" cx="1018.3359999999999" cy="496.12" rx="32.656" ry="47.728" fill="none" stroke="#EA7862" stroke-width="6.4"/>
+  <rect id="block_bottom_blue" x="60.0" y="489.84" width="156.0" height="106.76" fill="#3A5AA5" stroke="none" stroke-width="0"/>
+  <rect id="block_bottom_orange" x="336.0" y="540.08" width="168.0" height="56.52" fill="#EA7862" stroke="none" stroke-width="0"/>
+  <path id="arc_bottom_left" d="M 64.545 540.735 A 75.360 75.360 0 1 1 64.545 540.735" fill="none" stroke="#2A3F75" stroke-width="2.0"/>
+</svg>

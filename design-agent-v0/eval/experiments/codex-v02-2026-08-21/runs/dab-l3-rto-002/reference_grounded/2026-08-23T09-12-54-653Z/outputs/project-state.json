@@ -1,0 +1,44 @@
+{
+  "current_version": "v0",
+  "workflow_status": "review_complete_pending_client_decision",
+  "client_decisions": {
+    "selected_candidate": null,
+    "selection_status": "pending",
+    "review_recommendation": "D"
+  },
+  "locked_items": [
+    {
+      "item": "candidate_scope",
+      "value": ["A", "B", "C", "D"],
+      "basis": "user_constraint"
+    },
+    {
+      "item": "new_logo_generation",
+      "value": "prohibited",
+      "basis": "user_constraint"
+    },
+    {
+      "item": "brand_brief",
+      "value": "Warm contemporary neighborhood food brand; recognizable at 24 px; avoid generic home, smile-app, or literal noodle clichés.",
+      "basis": "provided_brief"
+    }
+  ],
+  "changed_items": [
+    {
+      "item": "candidate_artwork",
+      "change": "none"
+    },
+    {
+      "item": "candidate_evaluation",
+      "change": "Ranked A-D on four dimensions; recommended D; flagged A, B, and C for category-cliché rejection."
+    }
+  ],
+  "artifact_paths": [
+    "outputs/v0/noma-logo-candidate-review.md",
+    "outputs/v0/verification.json",
+    "outputs/v0/evidence/candidate-a-symbol-24px.png",
+    "outputs/v0/evidence/candidate-b-symbol-24px.png",
+    "outputs/v0/evidence/candidate-c-symbol-24px.png",
+    "outputs/v0/evidence/candidate-d-symbol-24px.png"
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "$schema": "https://example.local/schemas/editable-design-document-1.0.json",
+  "schema_version": "1.0",
+  "document_id": "aroma-detail-hero-v3",
+  "version": "v3",
+  "status": "client_order_reversion_applied_pending_review",
+  "client_feedback_application": {
+    "request": "Return to the v1 selling-point order while preserving the corrected low-noise spelling and the raised clay-touch position; do not regenerate the full image.",
+    "before_order": [
+      "feature.low_noise",
+      "feature.clay_touch",
+      "feature.timer"
+    ],
+    "after_order": [
+      "feature.low_noise",
+      "feature.timer",
+      "feature.clay_touch"
+    ],
+    "edit_method": "Editable object-graph update plus deterministic rerender; no image generation.",
+    "swap_policy": "Translate the two complete selling-point objects horizontally back to their v1 columns; keep feature.clay_touch at y=998 and feature.timer at y=1010.",
+    "explicitly_preserved": [
+      "low-noise spelling: 低噪运行",
+      "feature.clay_touch y=998",
+      "product",
+      "main headline",
+      "background",
+      "all font sizes"
+    ]
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1440,
+    "unit": "px",
+    "color_space": "sRGB",
+    "orientation": "portrait",
+    "intended_use": "ecommerce_product_detail_first_screen"
+  },
+  "approved_copy": {
+    "headline": "让香气慢下来。",
+    "feature_labels": [
+      "低噪运行",
+      "定时关闭",
+      "陶土触感"
+    ],
+    "copy_policy": "verbatim_only"
+  },
+  "reference_map": {
+    "layout-a": {
+      "file": "../../inputs/01-composition_reference_a.png",
+      "role": "layout_reference",
+      "identity_policy": "abstract_only",
+      "used_for": [
+        "centered_upper_product_stage",
+        "image_then_headline_then_three_features_rhythm",
+        "generous_outer_margins"
+      ],
+      "explicitly_not_used": [
+        "brand_words",
+        "English_copy",
+        "product_identity",
+        "literal_border_replication"
+      ]
+    },
+    "palette-b": {
+      "file": "../../inputs/02-palette_reference_b.png",
+      "role": "brand_system",
+      "identity_policy": "preserve_rules",
+      "used_for": [
+        "warm_ivory_base",
+        "muted_olive_accent",
+        "restrained_terracotta_accent",
+        "charcoal_text",
+        "editorial_serif_plus_utility_sans_typographic_rule"
+      ],
+      "explicitly_not_used": [
+        "MORI_wordmark",
+        "leaf_logo",
+        "leaf_pattern",
+        "brand_copy"
+      ]
+    },
+    "product": {
+      "file": "product_source_exact.png",
+      "original_file": "../../inputs/03-product_reference.png",
+      "role": "product_identity",
+      "identity_policy": "preserve_exact",
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "allowed_operations": [
+        "crop_surrounding_whitespace",
+        "uniform_scale",
+        "placement"
+      ],
+      "forbidden_operations": [
+        "reshape",
+        "recolor",
+        "retouch",
+        "relight",
+        "regenerate"
+      ]
+    }
+  },
+  "tokens": {
+    "colors": {
+      "charcoal": "#3A3A38",
+      "warm_cream": "#EEE8D4",
+      "muted_olive": "#879466",
+      "terracotta": "#AF543F",
+      "paper_highlight": "#FBF8EE",
+      "line_warm_gray": "#D8D0BE",
+      "icon_ink": "#F8F2DF",
+      "photo_white": "#FFFFFF"
+    },
+    "typography": {
+      "headline": {
+        "family": "Songti SC",
+        "font_file": "/opt/X11/share/system_fonts/Supplemental/Songti.ttc",
+        "font_index": 3,
+        "size": 74,
+        "tracking": 2,
+        "color": "#3A3A38"
+      },
+      "feature_label": {
+        "family": "Hiragino Sans GB",
+        "font_file": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+        "font_index": 0,
+        "size": 31,
+        "tracking": 1,
+        "color": "#3A3A38"
+      }
+    },
+    "spacing": {
+      "outer_margin": 70,
+      "photo_inset": 22,
+      "feature_gap": 0
+    }
+  },
+  "root": {
+    "id": "root",
+    "type": "group",
+    "name": "Aroma diffuser first-screen candidate",
+    "children": [
+      {
+        "id": "background.paper",
+        "type": "image",
+        "name": "Generated warm paper foundation",
+        "source": "generated_warm_paper.png",
+        "generation": {
+          "mode": "built_in_image_generation",
+          "prompt_file": "generation_prompt.txt"
+        },
+        "bbox": [
+          0,
+          0,
+          1080,
+          1440
+        ],
+        "fit": "cover",
+        "opacity": 1.0,
+        "provenance": {
+          "primary": "palette-b",
+          "influence": "warm palette and quiet brand mood",
+          "secondary": "layout-a",
+          "secondary_influence": "central breathing room only"
+        },
+        "locked": false
+      },
+      {
+        "id": "background.veil",
+        "type": "rounded_rect",
+        "name": "Warm restraint veil",
+        "bbox": [
+          0,
+          0,
+          1080,
+          1440
+        ],
+        "radius": 0,
+        "fill": "#FBF8EE",
+        "opacity": 0.17,
+        "provenance": {
+          "primary": "palette-b",
+          "influence": "warm ivory dominance"
+        },
+        "locked": false
+      },
+      {
+        "id": "hero.media_frame",
+        "type": "frame",
+        "name": "Upper centered product stage",
+        "bbox": [
+          70,
+          70,
+          940,
+          690
+        ],
+        "radius": 6,
+        "fill": "#FBF8EE",
+        "fill_opacity": 0.84,
+        "stroke": "#D8D0BE",
+        "stroke_width": 2,
+        "shadow": {
+          "color": "#3A3A38",
+          "opacity": 0.09,
+          "blur": 22,
+          "offset": [
+            0,
+            12
+          ]
+        },
+        "provenance": {
+          "primary": "layout-a",
+          "influence": "prominent upper product image and gallery-like margin"
+        },
+        "locked": false
+      },
+      {
+        "id": "product.photo",
+        "type": "image",
+        "name": "Exact supplied diffuser product photo",
+        "source": "product_source_exact.png",
+        "source_crop": [
+          32,
+          215,
+          992,
+          835
+        ],
+        "bbox": [
+          92,
+          92,
+          896,
+          579
+        ],
+        "fit": "stretch",
+        "clip_radius": 3,
+        "opacity": 1.0,
+        "color_adjustments": [],
+        "filters": [],
+        "provenance": {
+          "primary": "product",
+          "influence": "exact product identity, scaled and placed only"
+        },
+        "locked": [
+          "source_pixels",
+          "shape",
+          "color",
+          "orientation"
+        ]
+      },
+      {
+        "id": "headline",
+        "type": "text",
+        "name": "Approved main headline",
+        "text": "让香气慢下来。",
+        "bbox": [
+          100,
+          817,
+          880,
+          104
+        ],
+        "align": "center",
+        "valign": "middle",
+        "typography_token": "headline",
+        "provenance": {
+          "primary": "approved_copy",
+          "layout_influence": "layout-a",
+          "typography_influence": "palette-b"
+        },
+        "locked": [
+          "text"
+        ]
+      },
+      {
+        "id": "headline.accent",
+        "type": "rounded_rect",
+        "name": "Quiet headline accent",
+        "bbox": [
+          496,
+          948,
+          88,
+          6
+        ],
+        "radius": 3,
+        "fill": "#AF543F",
+        "opacity": 0.95,
+        "provenance": {
+          "primary": "palette-b",
+          "influence": "restrained terracotta accent"
+        },
+        "locked": false
+      },
+      {
+        "id": "features.strip",
+        "type": "feature_strip",
+        "name": "Three approved selling points",
+        "bbox": [
+          70,
+          1010,
+          940,
+          286
+        ],
+        "stroke": "#D8D0BE",
+        "stroke_width": 2,
+        "items": [
+          {
+            "id": "feature.low_noise",
+            "label": "低噪运行",
+            "revision_note": "Approved spelling explicitly reasserted from client feedback.",
+            "bbox": [
+              70,
+              1010,
+              313,
+              286
+            ],
+            "icon": "low_noise",
+            "icon_fill": "#879466",
+            "provenance": {
+              "copy": "approved_copy",
+              "layout": "layout-a",
+              "color": "palette-b"
+            },
+            "locked": [
+              "label"
+            ]
+          },
+          {
+            "id": "feature.timer",
+            "label": "定时关闭",
+            "bbox": [
+              383,
+              1010,
+              314,
+              286
+            ],
+            "position_delta_from_v2": [
+              -314,
+              0
+            ],
+            "icon": "timer",
+            "icon_fill": "#AF543F",
+            "provenance": {
+              "copy": "approved_copy",
+              "layout": "layout-a",
+              "color": "palette-b"
+            },
+            "locked": [
+              "label"
+            ]
+          },
+          {
+            "id": "feature.clay_touch",
+            "label": "陶土触感",
+            "bbox": [
+              697,
+              998,
+              313,
+              286
+            ],
+            "position_delta_from_v0": [
+              0,
+              -12
+            ],
+            "position_delta_from_v2": [
+              314,
+              0
+            ],
+            "matches_v1_position": true,
+            "icon": "clay_touch",
+            "icon_fill": "#3A3A38",
+            "provenance": {
+              "copy": "approved_copy",
+              "layout": "layout-a",
+              "color": "palette-b"
+            },
+            "locked": [
+              "label"
+            ]
+          }
+        ],
+        "provenance": {
+          "primary": "layout-a",
+          "influence": "three equal feature cells under the headline"
+        },
+        "locked": false
+      },
+      {
+        "id": "footer.rule",
+        "type": "line",
+        "name": "Lower breathing-space rule",
+        "points": [
+          420,
+          1360,
+          660,
+          1360
+        ],
+        "stroke": "#879466",
+        "stroke_width": 2,
+        "opacity": 0.55,
+        "provenance": {
+          "primary": "palette-b",
+          "influence": "muted olive accent"
+        },
+        "locked": false
+      }
+    ]
+  },
+  "editability": {
+    "object_ids_stable": true,
+    "renderer": "render_design.py",
+    "editable_fields": [
+      "bbox",
+      "fill",
+      "opacity",
+      "stroke",
+      "stroke_width",
+      "typography_token",
+      "icon",
+      "icon_fill"
+    ],
+    "locked_fields_require_client_reapproval": [
+      "approved_copy",
+      "product.photo.source_pixels",
+      "product.photo.shape",
+      "product.photo.color"
+    ]
+  }
+}

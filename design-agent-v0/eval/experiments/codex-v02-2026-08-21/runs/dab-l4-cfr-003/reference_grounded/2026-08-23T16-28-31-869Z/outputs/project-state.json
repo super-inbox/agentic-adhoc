@@ -1,0 +1,232 @@
+{
+  "schema_version": "project-state/1.0",
+  "project_id": "aroma-detail-page",
+  "current_version": "v3",
+  "current_status": "revision_ready_for_client_confirmation",
+  "updated_at": "2026-08-24T01:05:24+08:00",
+  "client_decisions": [
+    {
+      "decision_id": "direction-composition-a",
+      "statement": "Use A's product composition and information rhythm.",
+      "status": "client_approved_locked",
+      "scope": "abstract layout principles only"
+    },
+    {
+      "decision_id": "direction-palette-b-warm",
+      "statement": "Use B's warmer color system.",
+      "status": "client_approved_locked",
+      "scope": "palette, typography, and brand tokens; no logo or pattern copying"
+    },
+    {
+      "decision_id": "approved-copy",
+      "statement": "Use the supplied headline and three selling points verbatim.",
+      "status": "locked",
+      "scope": ["让香气慢下来。", "低噪运行", "定时关闭", "陶土触感"]
+    },
+    {
+      "decision_id": "confirm-v0-next-round",
+      "statement": "Present this first version for client confirmation in the next round.",
+      "status": "feedback_received"
+    },
+    {
+      "decision_id": "client-feedback-v1-copy",
+      "statement": "Ensure the first selling point reads 低噪运行 rather than the client-reported 低躁运行.",
+      "status": "applied_as_assertion",
+      "observed_v0_source_value": "低噪运行",
+      "current_value": "低噪运行"
+    },
+    {
+      "decision_id": "client-feedback-v1-third-feature-position",
+      "statement": "Move the third selling point upward slightly.",
+      "status": "applied",
+      "implementation": "Translate the complete feature-clay-touch card upward by 12 px."
+    },
+    {
+      "decision_id": "client-feedback-v1-preserve",
+      "statement": "Do not change the product, headline, or background.",
+      "status": "locked_and_verified"
+    },
+    {
+      "decision_id": "client-confirm-v1-copy",
+      "statement": "The typo is fixed.",
+      "status": "client_approved_locked"
+    },
+    {
+      "decision_id": "client-feedback-v2-order",
+      "statement": "Exchange the second and third selling-point order.",
+      "status": "applied",
+      "before": ["低噪运行", "定时关闭", "陶土触感"],
+      "after": ["低噪运行", "陶土触感", "定时关闭"]
+    },
+    {
+      "decision_id": "client-feedback-v2-preserve",
+      "statement": "Keep product, headline, background, and font sizes unchanged from v1.",
+      "status": "locked_and_verified"
+    },
+    {
+      "decision_id": "client-feedback-v3-order-restore",
+      "statement": "In the later session, return to the v1 selling-point order.",
+      "status": "applied",
+      "before": ["低噪运行", "陶土触感", "定时关闭"],
+      "after": ["低噪运行", "定时关闭", "陶土触感"],
+      "reference_order": "v1"
+    },
+    {
+      "decision_id": "client-feedback-v3-preserve",
+      "statement": "Preserve the corrected first label and the raised third-selling-point position; do not regenerate the full image.",
+      "status": "locked_and_verified",
+      "implementation": "Existing editable objects only; third slot remains at y=1160."
+    }
+  ],
+  "locked_items": [
+    {
+      "item_id": "product-identity",
+      "rule": "Do not modify product shape or color.",
+      "asset": "v3/product_reference_locked.png",
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "item_id": "headline-copy",
+      "value": "让香气慢下来。"
+    },
+    {
+      "item_id": "selling-point-copy",
+      "value": ["低噪运行", "定时关闭", "陶土触感"]
+    },
+    {
+      "item_id": "layout-a-identity-exclusion",
+      "rule": "Do not copy A's brand wording or identity."
+    },
+    {
+      "item_id": "approved-composition",
+      "rule": "Preserve the client-approved composition and slot geometry; v3 only restores the complete second and third selling-point objects to the v1 order."
+    },
+    {
+      "item_id": "approved-color-system",
+      "rule": "Preserve the client-approved warm color system."
+    },
+    {
+      "item_id": "background-asset",
+      "rule": "Do not change the background.",
+      "asset": "v3/ambient_background_v0.png",
+      "sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3"
+    },
+    {
+      "item_id": "typography-sizes",
+      "rule": "Do not change font sizes from v1.",
+      "values": {"headline": 72, "feature_label": 32},
+      "unit": "px"
+    }
+  ],
+  "changed_items": [
+    {
+      "version": "v0",
+      "change_set": "v0/change_set.json",
+      "summary": [
+        "Created a 1200x1600 portrait first-screen candidate.",
+        "Applied A-derived centered product, headline, and three-feature rhythm.",
+        "Applied B-derived warm ivory, terracotta, olive, charcoal, and typography tokens.",
+        "Placed the exact product raster as a locked image object.",
+        "Added only the approved Chinese headline and selling-point copy."
+      ]
+    },
+    {
+      "version": "v1",
+      "change_set": "v1/change_set.json",
+      "summary": [
+        "Reasserted and locked the required first selling-point copy as 低噪运行; v0 source was already conformant.",
+        "Moved the complete third selling-point card upward by 12 px.",
+        "Preserved product, headline, background, first-card position, second-card position, and all unrelated styling."
+      ]
+    },
+    {
+      "version": "v2",
+      "change_set": "v2/change_set.json",
+      "summary": [
+        "Swapped the complete second and third selling-point objects to produce 低噪运行 | 陶土触感 | 定时关闭.",
+        "Preserved all three slot geometries, including the existing -12 px third-slot offset.",
+        "Preserved product, headline, background, font sizes, first selling point, and all unrelated styling."
+      ]
+    },
+    {
+      "version": "v3",
+      "change_set": "v3/change_set.json",
+      "summary": [
+        "Restored the v1 selling-point order: 低噪运行 | 定时关闭 | 陶土触感.",
+        "Preserved the corrected 低噪运行 label and the existing -12 px raised third slot.",
+        "Edited existing objects only; preserved product, headline, background, font sizes, slot geometry, and unrelated styling."
+      ]
+    }
+  ],
+  "version_history": [
+    {
+      "version": "v0",
+      "created_at": "2026-08-24T00:39:36+08:00",
+      "status": "candidate_awaiting_client_confirmation",
+      "artifacts": {
+        "preview": "v0/preview.png",
+        "editable_source": "v0/hero_detail_v0.svg",
+        "editable_object_graph": "v0/design_document.json",
+        "object_change_set": "v0/change_set.json",
+        "verification": "v0/verification.json",
+        "ambient_asset": "v0/ambient_background_v0.png",
+        "locked_product_asset": "v0/product_reference_locked.png",
+        "renderer_source": "v0/render_preview.m"
+      }
+    },
+    {
+      "version": "v1",
+      "base_version": "v0",
+      "created_at": "2026-08-24T00:46:42+08:00",
+      "status": "revision_ready_for_client_confirmation",
+      "artifacts": {
+        "preview": "v1/preview.png",
+        "editable_source": "v1/hero_detail_v1.svg",
+        "editable_object_graph": "v1/design_document.json",
+        "object_change_set": "v1/change_set.json",
+        "verification": "v1/verification.json",
+        "ambient_asset": "v1/ambient_background_v0.png",
+        "locked_product_asset": "v1/product_reference_locked.png",
+        "renderer_source": "v1/render_preview.m"
+      }
+    },
+    {
+      "version": "v2",
+      "base_version": "v1",
+      "created_at": "2026-08-24T00:56:44+08:00",
+      "status": "revision_ready_for_client_confirmation",
+      "artifacts": {
+        "preview": "v2/preview.png",
+        "editable_source": "v2/hero_detail_v2.svg",
+        "editable_object_graph": "v2/design_document.json",
+        "object_change_set": "v2/change_set.json",
+        "verification": "v2/verification.json",
+        "ambient_asset": "v2/ambient_background_v0.png",
+        "locked_product_asset": "v2/product_reference_locked.png",
+        "renderer_source": "v2/render_preview.m"
+      }
+    },
+    {
+      "version": "v3",
+      "base_version": "v2",
+      "created_at": "2026-08-24T01:05:24+08:00",
+      "status": "revision_ready_for_client_confirmation",
+      "artifacts": {
+        "preview": "v3/preview.png",
+        "editable_source": "v3/hero_detail_v3.svg",
+        "editable_object_graph": "v3/design_document.json",
+        "object_change_set": "v3/change_set.json",
+        "verification": "v3/verification.json",
+        "ambient_asset": "v3/ambient_background_v0.png",
+        "locked_product_asset": "v3/product_reference_locked.png",
+        "renderer_source": "v3/render_preview.m"
+      }
+    }
+  ],
+  "next_checkpoint": {
+    "checkpoint_id": "client-confirm-v3",
+    "status": "waiting",
+    "required_input": "Client confirmation of the restored v1 selling-point order with the corrected copy and raised third slot.",
+    "no_assumption_policy": "Do not create v4 until feedback is provided."
+  }
+}

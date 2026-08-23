@@ -1,0 +1,117 @@
+{
+  "version": "v3",
+  "status": "pass",
+  "verified_on": "2026-08-23",
+  "scope": "Requested delta only: add one 1:1 social asset derived from the approved v2 main visual and retain its single selling sentence. The three previously approved campaign images remain locked and were not re-exported.",
+  "checks": [
+    {
+      "id": "requested_delta_only",
+      "status": "pass",
+      "method": "Inspected outputs/v3 contents and the locked campaign artifact hashes.",
+      "observed": {
+        "new_campaign_asset": "social_square_1x1_only",
+        "winning_direction": "A",
+        "returned_to_direction_b": false,
+        "new_direction_created": false,
+        "approved_tmall_hero_reexported": false,
+        "approved_detail_first_screen_reexported": false,
+        "approved_xiaohongshu_v2_reexported": false
+      },
+      "evidence_paths": [
+        "outputs/v3/social-square-from-v2-v3.png",
+        "outputs/v3/social-square-from-v2-v3.svg"
+      ]
+    },
+    {
+      "id": "v2_main_visual_continuity",
+      "status": "pass",
+      "method": "Compared the approved v2 PNG with the self-contained v3 source copy, then compared raw pixels of the square final with source region x=0..1079,y=0..1079.",
+      "observed": {
+        "v2_source_path": "outputs/v2/xiaohongshu-portrait-safe-area-v2.png",
+        "v3_source_copy_path": "outputs/v3/v2-main-visual-approved-source-v3.png",
+        "v2_source_sha256": "8af7526a3960baa0db94e7ff24070ce896623e2e68000d2cc9fb40eb9f75cee8",
+        "v3_source_copy_sha256": "8af7526a3960baa0db94e7ff24070ce896623e2e68000d2cc9fb40eb9f75cee8",
+        "source_copy_byte_identical": true,
+        "crop_region": "x=0..1079,y=0..1079",
+        "scaling_applied": false,
+        "repositioning_applied": false,
+        "different_pixels": 0,
+        "pixel_exact_crop": true,
+        "palette_treatment_changed": false,
+        "product_redrawn_or_recolored": false
+      },
+      "evidence_paths": [
+        "outputs/v2/xiaohongshu-portrait-safe-area-v2.png",
+        "outputs/v3/v2-main-visual-approved-source-v3.png",
+        "outputs/v3/social-square-from-v2-v3.png"
+      ]
+    },
+    {
+      "id": "copy_and_visual_review",
+      "status": "pass",
+      "method": "Visually inspected the full-resolution square and its 360-pixel preview.",
+      "observed": {
+        "brand_identifier": "MORI",
+        "selling_sentence": "安静设计，自然融入日常",
+        "additional_marketing_copy_added": false,
+        "product_fully_visible": true,
+        "product_bottom_visible": true,
+        "selling_sentence_readable_at_preview_size": true
+      },
+      "evidence_paths": [
+        "outputs/v3/social-square-from-v2-v3.png",
+        "outputs/v3/verification/social-square-preview-360-v3.png"
+      ]
+    },
+    {
+      "id": "final_dimensions_and_hashes",
+      "status": "pass",
+      "method": "Read raster dimensions and computed SHA-256 hashes for the v3 deliverables.",
+      "observed": {
+        "final_path": "outputs/v3/social-square-from-v2-v3.png",
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "final_sha256": "2b7b0d0ecc2e219910c3dc61a748476c51c8b174d1a4281f475277ba8db39ed6",
+        "editable_layout_path": "outputs/v3/social-square-from-v2-v3.svg",
+        "editable_layout_sha256": "1d6e6e8fc013eac84b261e9c1f4b1d011b8ad716e6d03ce285228b3e66084165",
+        "preview_path": "outputs/v3/verification/social-square-preview-360-v3.png",
+        "preview_width": 360,
+        "preview_height": 360,
+        "preview_sha256": "2cf1ce86ebfb46032008d7a3b039e9fdfa025ce3a314449412caa696f1b6f313"
+      },
+      "evidence_paths": [
+        "outputs/v3/social-square-from-v2-v3.png",
+        "outputs/v3/social-square-from-v2-v3.svg",
+        "outputs/v3/verification/social-square-preview-360-v3.png"
+      ]
+    },
+    {
+      "id": "first_three_approved_images_unchanged",
+      "status": "pass",
+      "method": "Recomputed SHA-256 hashes after creating v3 and matched them to their previously recorded values.",
+      "observed": [
+        {
+          "path": "outputs/v0/tmall-hero-direction-a-v0.png",
+          "sha256": "bc1288398f85de17f9a3b9996a1a4ce819cd5458b7d19ec70127a219a23fd9d0",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v0/pdp-first-screen-direction-a-v0.png",
+          "sha256": "f621455e6185fed53045d6e7ad4c232efa3b00593013c2e5cfcf5b31cc98fd4a",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v2/xiaohongshu-portrait-safe-area-v2.png",
+          "sha256": "8af7526a3960baa0db94e7ff24070ce896623e2e68000d2cc9fb40eb9f75cee8",
+          "unchanged": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v2/verification.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-BID-001@personalized",
+  "base_brief_id": "DAB-L4-BID-001",
+  "context_condition": "personalized",
+  "category": "brand_identity_directions",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "multi_turn_revision",
+    "state_recovery",
+    "creative_exploration",
+    "context_ablation"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T01:56:38.236Z",
+  "finished_at": "2026-08-23T01:57:07.360Z",
+  "latency_ms": 29124,
+  "intended_turns": 4,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01",
+    "session-02"
+  ],
+  "codex_thread_id": "01a02c55-94c5-7453-be7a-69a4ba0377fe",
+  "input_assets": [
+    {
+      "input_id": "current-identity",
+      "asset_id": "logo-upgrade-grain-glow-before-after",
+      "role": "current_logo_and_identity",
+      "reference_role": "edit_target",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-current_logo_and_identity.png",
+      "source_path": "eval/assets/reference-pack-v0.2/logo-upgrade/grain-glow-before-after.png",
+      "byte_size": 588006,
+      "sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253"
+    },
+    {
+      "input_id": "reference-a",
+      "asset_id": "detail-page-quiet-ritual-reference-page",
+      "role": "premium_minimal_reference",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "02-premium_minimal_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/quiet-ritual-reference-page.png",
+      "byte_size": 815623,
+      "sha256": "f941e16e01835e825f6b0a2b4d65e5d021329ae6e223b451c307998ec5a97af2"
+    },
+    {
+      "input_id": "reference-b",
+      "asset_id": "sku-system-mori-brand-board",
+      "role": "color_system_reference",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "03-color_system_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+      "byte_size": 592086,
+      "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+    },
+    {
+      "input_id": "reference-c",
+      "asset_id": "design-vote-noma-logo-options",
+      "role": "friendly_logo_reference",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "04-friendly_logo_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/design-vote/noma-logo-options.png",
+      "byte_size": 630253,
+      "sha256": "0985be34801ead57e9aaea756b26b06d4e44bc4c909175139c4672a3fa9fc334"
+    }
+  ],
+  "input_context_ids": [
+    "current-identity",
+    "reference-a",
+    "reference-b",
+    "reference-c",
+    "brand-facts"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T01:56:38.236Z",
+      "finished_at": "2026-08-23T01:57:07.358Z",
+      "latency_ms": 29123,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c55-94c5-7453-be7a-69a4ba0377fe",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

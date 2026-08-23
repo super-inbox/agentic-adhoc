@@ -1,0 +1,23 @@
+Mode: built-in image generation
+Use case: ads-marketing
+Asset type: warm background foundation for a vertical ecommerce product-detail hero
+
+Primary request: Create only an original, quiet, breathable warm-toned backdrop for a premium aroma diffuser hero. Do not include any product, text, icons, logos, patterns, frames, or brand marks.
+
+Input images:
+- Image 1 / layout-a: layout-rhythm reference only. Abstract its spacious gallery-like calm; do not copy wording, product, border system, or identity.
+- Image 2 / palette-b: palette and typography-mood reference only. Use warm ivory, muted olive, restrained terracotta, and charcoal-neutral sensibility; do not copy its logo, leaf motif, letters, pattern, or brand identity.
+
+Scene/backdrop: Warm ivory paper-like field with an extremely subtle natural-fiber texture, a gentle cream-to-warm-beige tonal drift, and very faint diffused olive/terracotta ambient color near the outer edges. Keep the central field clean and bright for later product compositing.
+
+Style/medium: Premium editorial art-direction background, photorealistic paper and soft studio light, minimalist.
+
+Composition/framing: Vertical 3:4 portrait, generous clear central negative space, soft tonal grounding in the upper-middle and lower sections without any distinct horizon line.
+
+Lighting/mood: Soft indirect morning light; calm, quiet, airy, meditative.
+
+Color palette: Warm ivory dominant; muted olive and restrained terracotta only as very low-opacity peripheral warmth; no blue cast.
+
+Constraints: Background only; no text; no typography; no product; no objects; no shadows that imply an unseen object; no logos; no watermark; no copied design elements.
+
+Avoid: Busy texture, high contrast, gradients that look digital, leaf shapes, circles resembling a logo, borders copied from Image 1, any English words.

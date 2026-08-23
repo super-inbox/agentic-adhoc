@@ -1,0 +1,46 @@
+{
+  "schema": "summer-form.project-state/v1",
+  "current_version": "v0",
+  "client_decisions": [
+    "Use the approved SUMMER FORM master as the sole campaign source.",
+    "Adapt to website 1200×628, Instagram 1080×1350, and Story 1080×1920.",
+    "Reflow the geometric system; do not rely on a blunt full-poster crop.",
+    "Keep a minimum 64 px safe margin for essential content."
+  ],
+  "locked_items": [
+    "Title: SUMMER FORM",
+    "Event date: 08—10 AUG",
+    "Location: BROOKLYN",
+    "Event label: Design Market",
+    "Approved origami hero pixels",
+    "Approved ring mark proportions",
+    "Navy/blue/coral/paper palette",
+    "Geometric circle, arc, line, and block language"
+  ],
+  "changed_items": [
+    "Canvas dimensions",
+    "Responsive object positions and scale",
+    "Title line placement and size",
+    "Event information placement and size",
+    "Geometric grid divisions, arcs, and color-block positions"
+  ],
+  "artifact_paths": {
+    "preview": "outputs/v0/preview.png",
+    "design_document": "outputs/v0/design_document.json",
+    "change_set": "outputs/v0/change_set.json",
+    "verification": "outputs/v0/verification.json",
+    "website": [
+      "outputs/v0/website_card_1200x628.svg",
+      "outputs/v0/website_card_1200x628.png"
+    ],
+    "instagram": [
+      "outputs/v0/instagram_post_1080x1350.svg",
+      "outputs/v0/instagram_post_1080x1350.png"
+    ],
+    "story": [
+      "outputs/v0/story_1080x1920.svg",
+      "outputs/v0/story_1080x1920.png"
+    ]
+  },
+  "unresolved_blockers": []
+}

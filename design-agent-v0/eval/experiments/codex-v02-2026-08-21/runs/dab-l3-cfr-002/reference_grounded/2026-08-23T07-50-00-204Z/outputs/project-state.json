@@ -1,0 +1,58 @@
+{
+  "schema": "codex.project_state/1.0",
+  "workflow": "controlled-v0.2",
+  "current_version": "v0",
+  "status": "candidate_complete",
+  "client_decisions": [
+    {
+      "decision": "Enlarge only the main title by about 15%.",
+      "status": "approved_delta",
+      "applied_in_version": "v0"
+    },
+    {
+      "decision": "Move the small event mark to the top-right safe area.",
+      "status": "approved_delta",
+      "applied_in_version": "v0"
+    }
+  ],
+  "locked_items": [
+    "canvas size 928x1152",
+    "all copy",
+    "all non-target colors",
+    "all non-target geometry",
+    "paper sculpture",
+    "grid and colored blocks",
+    "paper texture",
+    "background, framing, and shadow"
+  ],
+  "changed_items": [
+    {
+      "object_id": "main_title",
+      "change": "source-derived 15% enlargement with balanced placement"
+    },
+    {
+      "object_id": "event_mark",
+      "change": "1:1 translation from lower-right to upper-right safe area"
+    }
+  ],
+  "artifact_paths": {
+    "preview": "outputs/v0/preview.png",
+    "design_document": "outputs/v0/design_document.json",
+    "change_set": "outputs/v0/change_set.json",
+    "verification": "outputs/v0/verification.json",
+    "metrics": "outputs/v0/metrics.json",
+    "editable_layers": [
+      "outputs/v0/layers/base-cleaned.png",
+      "outputs/v0/layers/title-source.png",
+      "outputs/v0/layers/title-scaled-115.png",
+      "outputs/v0/layers/event-mark-source.png"
+    ],
+    "evidence_masks": [
+      "outputs/v0/masks/title-source-mask.png",
+      "outputs/v0/masks/event-mark-source-mask.png",
+      "outputs/v0/masks/authorized-change-region.png",
+      "outputs/v0/masks/source-vs-preview-diff.png"
+    ]
+  },
+  "unresolved_blockers": []
+}

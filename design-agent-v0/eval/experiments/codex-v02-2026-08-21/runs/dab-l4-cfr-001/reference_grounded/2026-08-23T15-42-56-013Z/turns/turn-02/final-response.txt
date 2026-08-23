@@ -1,0 +1,11 @@
+v2 已完成：纸面颗粒按 v1 基底缩至 70%，实测降低约 27–29%；Logo、标题、几何及活动信息均与 v1 像素一致，允许范围外变化为 0。`v0`、`v1` 文件未改动。
+
+新增/更新路径：
+
+- [v2 海报](/private<WORKDIR>/outputs/v2/summer-form-poster-local-revision-v2.png)
+- [v1／v2 对照图](/private<WORKDIR>/outputs/v2/summer-form-poster-v1-v2-comparison.png)
+- [差异范围图](/private<WORKDIR>/outputs/v2/summer-form-poster-v2-diff-mask.png)
+- [v2 验证记录](/private<WORKDIR>/outputs/v2/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+本轮未重新调用生成模型或 CLI；采用确定性局部光栅处理，编辑规范为：仅将 v1 中性纸面颗粒振幅乘以 `0.70`，其他像素全部锁定。

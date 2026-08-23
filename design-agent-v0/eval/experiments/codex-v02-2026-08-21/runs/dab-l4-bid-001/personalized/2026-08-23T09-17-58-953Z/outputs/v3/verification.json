@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "version": "v3",
+  "status": "blocked_missing_required_edit_and_reference_targets",
+  "checked_at": "2026-08-23T17:50:22+08:00",
+  "checks": [
+    {
+      "id": "saved_state_reconciliation",
+      "result": "blocked",
+      "check": "The client refers to completed v2 gift-box and Taobao-hero artifacts, but the saved v2 folder contains only a blocker note and verification file. No v2 raster exists in the workspace.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v2/taobao-hero-delta-blocker.md",
+        "outputs/v2/verification.json",
+        "outputs/v3/store-sign-whitespace-delta-blocker.md"
+      ]
+    },
+    {
+      "id": "current_store_sign_edit_target",
+      "result": "blocked",
+      "check": "A complete inventory of inputs and outputs found no current store standing-sign raster or editable source file to use as the edit target.",
+      "evidence_paths": [
+        "inputs",
+        "outputs/v0",
+        "outputs/v1",
+        "outputs/v2",
+        "outputs/v3/store-sign-whitespace-delta-blocker.md"
+      ]
+    },
+    {
+      "id": "v1_sparse_store_sign_reference",
+      "result": "blocked",
+      "check": "No v1 store-sign artifact exists, so the requested sparser whitespace proportions cannot be measured or reproduced without guessing.",
+      "evidence_paths": [
+        "outputs/v1",
+        "outputs/v1/quiet-gifting-refinement.md",
+        "outputs/v3/store-sign-whitespace-delta-blocker.md"
+      ]
+    },
+    {
+      "id": "approved_gift_box_preserved",
+      "result": "pass",
+      "check": "The only saved approved gift-box raster remains unchanged and was not used as an edit target.",
+      "evidence_paths": ["outputs/v1/quiet-gifting-premium-box-mockup.png"],
+      "sha256": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa"
+    },
+    {
+      "id": "price_label_non_reintroduction",
+      "result": "pass_with_artifact_gap",
+      "check": "No v3 raster was generated, so no price label was introduced. The client-referenced v2 Taobao hero is absent and therefore its current pixels cannot be independently verified.",
+      "evidence_paths": [
+        "outputs/v3/store-sign-whitespace-delta-blocker.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "requested_delta_scope",
+      "result": "pass",
+      "check": "The recorded future edit is limited to store-sign whitespace, margins, and only the element scaling or movement necessary to match the supplied v1 reference. All copy, Logo, colors, type, materials, imagery, canvas, and unrelated artifacts are invariant.",
+      "evidence_paths": ["outputs/v3/store-sign-whitespace-delta-blocker.md"]
+    },
+    {
+      "id": "scope_protection",
+      "result": "pass",
+      "check": "No image generation or reconstruction was performed because both the edit target and spatial reference are missing. Generating a replacement would require hidden assumptions and could alter approved areas.",
+      "evidence_paths": [
+        "outputs/v3/store-sign-whitespace-delta-blocker.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "prior_versions_unchanged",
+      "result": "pass",
+      "check": "All v0, v1, and v2 files retain their pre-v3 SHA-256 values.",
+      "evidence_paths": [
+        "outputs/v0",
+        "outputs/v1",
+        "outputs/v2"
+      ],
+      "sha256_snapshot": {
+        "outputs/v0/creative-territories.md": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7",
+        "outputs/v0/creative-territories-board.html": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d",
+        "outputs/v0/creative-territories-overview.png": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc",
+        "outputs/v0/verification.json": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd",
+        "outputs/v1/quiet-gifting-premium-box-mockup.png": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa",
+        "outputs/v1/quiet-gifting-refinement.md": "4223cd355bd5df631a38752bd77e0ae78d744db1583c2d26b13a5845003310cd",
+        "outputs/v1/verification.json": "6c307324b06d190374b643e1e137ab274b72deb3805d625c23fad0ce5ba0144c",
+        "outputs/v2/taobao-hero-delta-blocker.md": "ddd47cc5ebbbda076fe883a12fbb93115a28498362ef81ca9df0a917bbacdd06",
+        "outputs/v2/verification.json": "0adde4d2f11a1a3ce1eb128b07300d09a89ab69930faacc4a4fdf1b907e01b33"
+      }
+    },
+    {
+      "id": "state_file_validity",
+      "result": "pass",
+      "check": "outputs/project-state.json and outputs/v3/verification.json both parsed successfully as JSON after writing.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v3/verification.json"
+      ]
+    }
+  ],
+  "image_generation": {
+    "mode": "not_run",
+    "reason": "The current store-sign edit target and the v1 sparse-whitespace reference are both missing. The image-edit workflow requires inspected targets and explicit invariants before a localized edit."
+  },
+  "unresolved_blockers": [
+    {
+      "id": "current_store_sign_missing",
+      "severity": "blocking",
+      "detail": "Provide the current store standing-sign source file to edit."
+    },
+    {
+      "id": "v1_sparse_store_sign_reference_missing",
+      "severity": "blocking",
+      "detail": "Provide the v1 sparse store-sign version, or exact margins and spacing measurements."
+    },
+    {
+      "id": "v2_artifact_state_mismatch",
+      "severity": "state_reconciliation",
+      "detail": "The client-referenced v2 Taobao hero and gift-box files are not in saved v2. Restore them if they should be authoritative project artifacts; they will remain locked and unedited."
+    }
+  ]
+}

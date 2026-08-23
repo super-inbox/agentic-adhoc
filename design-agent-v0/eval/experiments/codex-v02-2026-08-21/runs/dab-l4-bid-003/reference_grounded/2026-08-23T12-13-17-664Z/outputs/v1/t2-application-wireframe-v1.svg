@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">T2 稳态信号 v1 应用线框</title>
+  <desc id="desc">展示不改变深蓝与 Logo 的前提下，为官网 Hero 和展会背板加入适度圆角与人物使用场景。</desc>
+  <defs>
+    <style>
+      .sans { font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif; }
+      .navy { fill: #0B2744; }
+      .mineral { fill: #496C78; }
+      .sand { fill: #D0A36A; }
+      .paper { fill: #F4F0E8; }
+      .ink { fill: #173047; }
+      .muted { fill: #667985; }
+      .line { fill: none; stroke: #0B2744; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #496C78; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .label { font-size: 16px; font-weight: 700; letter-spacing: 1.8px; }
+      .small { font-size: 18px; }
+    </style>
+    <clipPath id="heroSceneClip">
+      <rect x="472" y="255" width="284" height="360" rx="42"/>
+    </clipPath>
+    <clipPath id="boothSceneClip">
+      <rect x="906" y="282" width="544" height="300" rx="44"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#E9E5DD"/>
+  <rect x="64" y="55" width="1472" height="890" rx="32" fill="#FAF8F3"/>
+
+  <text x="112" y="118" class="sans navy" font-size="20" font-weight="800" letter-spacing="2.8">SELECTED TERRITORY / V1 DELTA</text>
+  <text x="112" y="168" class="sans ink" font-size="38" font-weight="750">T2 稳态信号：秩序仍在，接触面更柔和</text>
+  <text x="112" y="204" class="sans muted" font-size="19">深蓝与现有 Logo 锁定不变 · 圆角适度 · 人物在真实工作动作中出现</text>
+
+  <!-- Web hero direction -->
+  <rect x="112" y="235" width="680" height="430" rx="30" fill="#F4F0E8" stroke="#D9D4CB" stroke-width="2"/>
+  <text x="150" y="280" class="sans navy label">WEB HERO / LOW-FIDELITY</text>
+
+  <rect x="150" y="309" width="170" height="54" rx="8" fill="none" stroke="#0B2744" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="235" y="342" text-anchor="middle" class="sans navy" font-size="15" font-weight="700">现有 Logo（锁定）</text>
+
+  <text x="150" y="430" class="sans ink" font-size="34" font-weight="760">面向严苛环境的</text>
+  <text x="150" y="471" class="sans ink" font-size="34" font-weight="760">可靠感知</text>
+  <text x="150" y="514" class="sans muted small">Reliable sensing for harsh environments</text>
+  <rect x="150" y="552" width="156" height="48" rx="12" class="navy"/>
+  <text x="228" y="582" text-anchor="middle" class="sans paper" font-size="16" font-weight="700">了解解决方案</text>
+
+  <!-- Hero people scene -->
+  <g clip-path="url(#heroSceneClip)">
+    <rect x="472" y="255" width="284" height="360" fill="#E6DED1"/>
+    <rect x="472" y="508" width="284" height="107" fill="#C8D0CD"/>
+    <path d="M472 316 C540 284 620 296 756 268" class="thin" opacity="0.45"/>
+    <rect x="600" y="360" width="132" height="177" rx="13" fill="#83939A"/>
+    <rect x="622" y="386" width="88" height="62" rx="9" fill="#F4F0E8"/>
+    <circle cx="641" cy="418" r="9" class="navy"/>
+    <path d="M650 418 H691" class="thin"/>
+    <rect x="624" y="471" width="83" height="17" rx="8.5" class="mineral"/>
+    <circle cx="652" cy="323" r="30" fill="#C78E67"/>
+    <path d="M619 322 Q652 282 686 322" fill="#D0A36A" stroke="#0B2744" stroke-width="5"/>
+    <path d="M617 367 Q651 343 686 369 L704 474 L598 474 Z" class="navy"/>
+    <path d="M620 381 L566 433 L587 449 L641 411" class="line"/>
+    <circle cx="573" cy="441" r="12" fill="#C78E67"/>
+    <path d="M632 472 L616 566 M678 472 L694 566" class="line"/>
+    <path d="M569 441 C589 438 603 432 624 418" class="thin" stroke-dasharray="8 10"/>
+    <circle cx="624" cy="418" r="7" class="sand"/>
+  </g>
+  <rect x="472" y="255" width="284" height="360" rx="42" fill="none" stroke="#0B2744" stroke-width="3"/>
+  <rect x="494" y="574" width="238" height="28" rx="10" fill="#F4F0E8" opacity="0.92"/>
+  <text x="613" y="594" text-anchor="middle" class="sans navy" font-size="13" font-weight="700">人物现场调试 · 产品位置可见</text>
+
+  <!-- Booth direction -->
+  <rect x="832" y="235" width="656" height="430" rx="30" class="navy"/>
+  <text x="870" y="280" class="sans paper label">EXHIBITION BACKDROP / LOW-FIDELITY</text>
+
+  <g clip-path="url(#boothSceneClip)">
+    <rect x="906" y="282" width="544" height="300" fill="#E6DED1"/>
+    <rect x="906" y="497" width="544" height="85" fill="#C8D0CD"/>
+    <path d="M906 339 C1050 285 1242 310 1450 264" class="thin" opacity="0.5"/>
+    <!-- engineer 1 -->
+    <circle cx="1010" cy="376" r="27" fill="#B97D5B"/>
+    <path d="M982 373 Q1010 339 1039 373" fill="#D0A36A" stroke="#0B2744" stroke-width="5"/>
+    <path d="M979 419 Q1010 395 1043 420 L1052 510 L968 510 Z" class="navy"/>
+    <path d="M985 432 L1044 463" class="line"/>
+    <!-- engineer 2 -->
+    <circle cx="1117" cy="365" r="28" fill="#C9906C"/>
+    <path d="M1088 363 Q1117 329 1147 363" fill="#D0A36A" stroke="#0B2744" stroke-width="5"/>
+    <path d="M1082 410 Q1117 386 1151 411 L1164 510 L1069 510 Z" class="mineral"/>
+    <path d="M1097 428 L1044 463" class="line"/>
+    <!-- equipment -->
+    <rect x="1242" y="347" width="156" height="173" rx="15" fill="#7E8F96"/>
+    <rect x="1265" y="371" width="109" height="77" rx="11" fill="#F4F0E8"/>
+    <circle cx="1290" cy="410" r="10" class="sand"/>
+    <path d="M1309 398 H1352 M1309 416 H1340 M1309 434 H1331" class="thin"/>
+    <path d="M1052 464 C1113 452 1175 447 1290 410" class="thin" stroke-dasharray="10 12"/>
+  </g>
+  <rect x="906" y="282" width="544" height="300" rx="44" fill="none" stroke="#F4F0E8" stroke-width="3"/>
+  <text x="870" y="621" class="sans paper" font-size="25" font-weight="730">制造商 × 系统集成商 × 现场设备</text>
+  <rect x="1270" y="602" width="180" height="38" rx="7" fill="none" stroke="#F4F0E8" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="1360" y="627" text-anchor="middle" class="sans paper" font-size="14" font-weight="700">现有 Logo（锁定）</text>
+
+  <!-- Delta notes -->
+  <text x="112" y="728" class="sans navy label">ONLY THE REQUESTED DELTA</text>
+
+  <rect x="112" y="754" width="430" height="116" rx="22" fill="#FFFFFF" stroke="#DED8CF" stroke-width="2"/>
+  <circle cx="156" cy="800" r="17" class="navy"/>
+  <text x="188" y="797" class="sans ink" font-size="20" font-weight="720">网格退后</text>
+  <text x="188" y="826" class="sans muted" font-size="16">保留对齐秩序，不显示冷硬分割线</text>
+
+  <rect x="585" y="754" width="430" height="116" rx="22" fill="#FFFFFF" stroke="#DED8CF" stroke-width="2"/>
+  <rect x="627" y="782" width="38" height="38" rx="12" class="mineral"/>
+  <text x="688" y="797" class="sans ink" font-size="20" font-weight="720">圆角适度</text>
+  <text x="688" y="826" class="sans muted" font-size="16">柔和接触面，不做胶囊或软团造型</text>
+
+  <rect x="1058" y="754" width="430" height="116" rx="22" fill="#FFFFFF" stroke="#DED8CF" stroke-width="2"/>
+  <circle cx="1101" cy="797" r="14" fill="#C78E67"/>
+  <path d="M1082 833 Q1101 810 1121 833" class="navy"/>
+  <text x="1139" y="797" class="sans ink" font-size="20" font-weight="720">人物在工作</text>
+  <text x="1139" y="826" class="sans muted" font-size="16">调试与协同，不用握手式图库场景</text>
+
+  <text x="112" y="914" class="sans muted" font-size="14">V1 方向线框，不是最终成品。#0B2744 沿用 v0 T2 方向色；正式品牌色值、真实 Logo 与人物素材仍待提供。</text>
+</svg>

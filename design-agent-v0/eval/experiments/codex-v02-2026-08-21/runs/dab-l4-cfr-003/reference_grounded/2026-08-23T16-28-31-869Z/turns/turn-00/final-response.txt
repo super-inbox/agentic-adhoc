@@ -1,0 +1,17 @@
+已完成 v0 首屏候选稿，并停在客户确认节点。
+
+- [预览图 preview.png](<WORKDIR>/outputs/v0/preview.png)
+- [可编辑 SVG](<WORKDIR>/outputs/v0/hero_detail_v0.svg)
+- [可编辑对象图](<WORKDIR>/outputs/v0/design_document.json)
+- [对象级 change set](<WORKDIR>/outputs/v0/change_set.json)
+- [机器验证结果](<WORKDIR>/outputs/v0/verification.json)
+- [项目版本状态](<WORKDIR>/outputs/project-state.json)
+
+来源记录：
+
+- A：仅采用居中产品、标题承接和三栏卖点的信息节奏。
+- B：采用暖象牙、陶土红、橄榄绿、炭黑及字体气质。
+- 产品：直接使用哈希一致的原图，无滤镜、裁切、改色或重绘。
+- 文案：四处可见文字均为批准原文，未复制 A 的品牌文字。
+
+暖色底图使用内置 ImageGen；最终提示为暖象牙纸张质感、柔和陶土色光晕与克制橄榄过渡，并明确禁止产品、文字、Logo、图标及 A 的品牌元素。v1 尚未创建，等待下一轮客户确认。

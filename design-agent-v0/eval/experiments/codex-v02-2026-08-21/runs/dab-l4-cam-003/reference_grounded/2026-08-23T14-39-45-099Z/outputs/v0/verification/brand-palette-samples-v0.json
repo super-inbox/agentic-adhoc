@@ -1,0 +1,13 @@
+{
+  "source": "inputs/01-brand_guideline.png",
+  "method": "Single-pixel samples at the visual center of each palette swatch; coordinates use top-left origin.",
+  "reference_samples": [
+    {"name": "charcoal", "x": 204, "y": 382, "rgb": [57, 57, 55], "hex": "#393937"},
+    {"name": "ivory", "x": 446, "y": 382, "rgb": [238, 233, 213], "hex": "#EEE9D5"},
+    {"name": "sage", "x": 688, "y": 382, "rgb": [135, 148, 102], "hex": "#879466"},
+    {"name": "terracotta", "x": 929, "y": 382, "rgb": [175, 84, 63], "hex": "#AF543F"},
+    {"name": "powder_blue", "x": 1171, "y": 382, "rgb": [183, 210, 217], "hex": "#B7D2D9"}
+  ],
+  "applied_tokens": ["#393937", "#EEE9D5", "#879466", "#AF543F", "#B7D2D9"],
+  "note": "Samples are representative pixels from the supplied textured swatches, not claimed as an external official specification."
+}

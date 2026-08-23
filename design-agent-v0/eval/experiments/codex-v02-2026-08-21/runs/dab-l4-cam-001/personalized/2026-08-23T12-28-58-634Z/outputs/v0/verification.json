@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "artifact_version": "v0",
+  "verified_at": "2026-08-23T21:02:00+08:00",
+  "status": "pass_with_expected_selection_blocker",
+  "checks": [
+    {
+      "id": "territory_count",
+      "status": "pass",
+      "result": "3 Creative Territories found: A, B, C.",
+      "method": "Counted territory markers in the editable SVG.",
+      "evidence_paths": [
+        "outputs/v0/mori-kv-territories-v0.svg",
+        "outputs/v0/creative-territories-v0.md"
+      ]
+    },
+    {
+      "id": "kv_hypothesis_count",
+      "status": "pass",
+      "result": "9 KV hypotheses found: A1–A3, B1–B3, C1–C3.",
+      "method": "Counted KV markers and visually inspected the rendered review board.",
+      "evidence_paths": [
+        "outputs/v0/mori-kv-territories-v0.svg",
+        "outputs/v0/mori-kv-territories-v0.png"
+      ]
+    },
+    {
+      "id": "product_identity_preservation",
+      "status": "pass",
+      "result": "All 9 KVs reference the supplied product PNG directly; no generative redraw was used for the bottle or label.",
+      "method": "Confirmed 9 data-role=product-exact image references to inputs/02-launch_product.png in the editable SVG; inspected the rendered board.",
+      "source_sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286",
+      "evidence_paths": [
+        "inputs/02-launch_product.png",
+        "outputs/v0/mori-kv-territories-v0.svg",
+        "outputs/v0/mori-kv-territories-v0-self-contained.svg",
+        "outputs/v0/mori-kv-territories-v0.png"
+      ]
+    },
+    {
+      "id": "brand_lock",
+      "status": "pass",
+      "result": "Every KV contains the MORI wordmark plus warm off-white and terracotta red.",
+      "method": "Confirmed 10 MORI logo uses including the board header, 34 off-white tokens, and 16 terracotta tokens; visually inspected all 9 KVs.",
+      "brand_source_sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53",
+      "evidence_paths": [
+        "inputs/01-brand_guideline.png",
+        "outputs/v0/mori-kv-territories-v0.svg",
+        "outputs/v0/mori-kv-territories-v0.png"
+      ]
+    },
+    {
+      "id": "approved_consumer_copy_only",
+      "status": "pass",
+      "result": "Consumer-facing copy is limited to the approved English and Chinese lines; line breaks do not change the wording.",
+      "method": "Extracted all text nodes marked data-role=consumer-copy and checked for disallowed therapeutic or insomnia terms; zero forbidden matches.",
+      "approved_copy": [
+        "Quiet hours, made tangible.",
+        "让夜晚慢下来。"
+      ],
+      "evidence_paths": [
+        "outputs/v0/mori-kv-territories-v0.svg",
+        "outputs/v0/mori-kv-territories-v0.png"
+      ]
+    },
+    {
+      "id": "avoid_medical_and_sleep_claims",
+      "status": "pass",
+      "result": "No medical devices, pills, beds, sleep icons, insomnia claims, treatment claims, neon, or floating product were observed.",
+      "method": "Visual inspection of the final 1600 × 2240 PNG plus prompt avoid-list review.",
+      "evidence_paths": [
+        "outputs/v0/mori-kv-territories-v0.png",
+        "outputs/v0/generation-prompts-v0.md"
+      ]
+    },
+    {
+      "id": "render_integrity",
+      "status": "pass",
+      "result": "Final PNG is 1600 × 2240 RGBA; all linked imagery is visible and the corrected MORI wordmark and copy line breaks render fully.",
+      "method": "File metadata check and full-board visual inspection after embedding source assets.",
+      "output_sha256": "0b58c456042436c21b4d34621d507d686f31db87caefe18f4be5828e82eda58b",
+      "evidence_paths": [
+        "outputs/v0/mori-kv-territories-v0.png"
+      ]
+    },
+    {
+      "id": "channel_extensions_deferred",
+      "status": "pass",
+      "result": "No website hero, Instagram portrait, or email header artifact was created before selection.",
+      "method": "Searched outputs/v0 for hero, Instagram, and email artifact names; found zero.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v0"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "internal_selection_required",
+      "type": "expected_workflow_checkpoint",
+      "description": "Internal team must select one Creative Territory and one KV number before channel extensions can begin.",
+      "accepted_response_format": "Territory A + A1 (example)"
+    }
+  ],
+  "evidence_paths": [
+    "outputs/v0/mori-kv-territories-v0.png",
+    "outputs/v0/mori-kv-territories-v0.svg",
+    "outputs/v0/mori-kv-territories-v0-self-contained.svg",
+    "outputs/v0/creative-territories-v0.md",
+    "outputs/v0/generation-prompts-v0.md",
+    "outputs/project-state.json"
+  ]
+}
