@@ -1,0 +1,111 @@
+{
+  "schema_version": "0.2",
+  "current_version": "v1",
+  "workflow_stage": "selected_territory_visual_tone_refinement",
+  "status": "territory_locked_delta_applied_final_assets_blocked",
+  "current_turn_scope": {
+    "requested": "Select the urban-commute territory and make only the requested tone delta: less inexpensive, no gold, more restrained light, more whitespace, fewer decorative words, and no product-color change.",
+    "completed": [
+      "Locked A 城市轻行 as the selected territory.",
+      "Created a premium minimal urban-commute background with restrained morning light and generous negative space.",
+      "Composited the exact supplied product pixels without color adjustment or product regeneration.",
+      "Created a refined keyframe and single-territory visual-direction board under v1."
+    ],
+    "not_completed_due_to_existing_blocker": [
+      "Tmall hero image",
+      "three selling-point images",
+      "detail-page first screen",
+      "social scene poster"
+    ]
+  },
+  "client_decisions": {
+    "selected_creative_territory": "A 城市轻行 / 城市通勤",
+    "visual_tone": {
+      "premium_and_restrained": true,
+      "gold_allowed": false,
+      "lighting": "restrained",
+      "whitespace": "increased",
+      "decorative_copy": "reduced",
+      "product_color_change_allowed": false
+    },
+    "approved_claims": [
+      "12 小时续航",
+      "IPX4 防泼水",
+      "一体式挂环"
+    ]
+  },
+  "locked_items": [
+    "Preserve product exterior exactly.",
+    "Do not change or invent ports, logo, controls, color, accessories, or attachment hardware.",
+    "Use supplied MORI board only for palette, typography direction, and brand tokens.",
+    "Use only the three approved claims.",
+    "Do not depict immersion or describe IPX4 splash resistance as waterproof.",
+    "Use no gold, metallic gold, yellow-gold, brass, bronze, copper, or gilded treatment in the selected territory.",
+    "Use restrained light and shadow, increased negative space, and fewer decorative words.",
+    "Final delivery requires six visual assets after territory selection."
+  ],
+  "preserved_from_v0": [
+    "All files under outputs/v0 remain unchanged.",
+    "The four urban-commute scene hypotheses remain: entryway canvas bag, street-cafe threshold, bicycle short stop, and city-park bench.",
+    "B 轻水留白 and C 晨昏慢陪 remain archived and unmodified.",
+    "All product-identity, claim, accessory, and IPX4 safety constraints remain locked."
+  ],
+  "changed_items": [
+    "Replaced the card-heavy selection-board tone with a single premium editorial keyframe.",
+    "Introduced matte mineral surfaces, a slim charcoal architectural plane, soft morning light, and low-saturation city greenery.",
+    "Increased negative space to over half of the keyframe and reduced keyframe typography to one direction name plus one approved claim.",
+    "Removed gold and other metallic-luxury cues from the palette and material direction.",
+    "Extracted the product from its white background using alpha only; source RGB pixels remain unchanged."
+  ],
+  "open_decisions": [
+    "Provide an official product side/back/transparent view or CAD showing the integrated hanging ring and exact attachment method, or explicitly approve a copy-led alternative that does not show the bag connection."
+  ],
+  "unresolved_inputs": [
+    "Official side/back/transparent product view or CAD showing the integrated hanging ring and its exact attachment method is required to depict a real bag-hanging scene without inventing product structure.",
+    "Vector MORI logo, production color values, and licensed brand font files are recommended for final production accuracy; the supplied PNG is sufficient only for directional approximation."
+  ],
+  "final_asset_package": {
+    "required_count": 6,
+    "completed_count": 0,
+    "status": "blocked_before_final_production",
+    "reason": "The required hanging-ring selling-point visual cannot be produced faithfully from the supplied front-only master."
+  },
+  "versions": [
+    {
+      "version": "v0",
+      "status": "archived_unchanged",
+      "artifact_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.svg",
+        "outputs/v0/creative-territories-board.png",
+        "outputs/v0/render_creative_board.py",
+        "outputs/v0/verification.json"
+      ]
+    },
+    {
+      "version": "v1",
+      "status": "current",
+      "artifact_paths": [
+        "outputs/v1/city-loop-refinement.md",
+        "outputs/v1/city-loop-premium-keyframe.png",
+        "outputs/v1/city-loop-visual-direction-v1.png",
+        "outputs/v1/assets/city-commute-minimal-background.png",
+        "outputs/v1/assets/product-cutout-exact.png",
+        "outputs/v1/imagegen-prompt.txt",
+        "outputs/v1/render_v1.py",
+        "outputs/v1/verification.json"
+      ]
+    }
+  ],
+  "artifact_paths": [
+    "outputs/v1/city-loop-refinement.md",
+    "outputs/v1/city-loop-premium-keyframe.png",
+    "outputs/v1/city-loop-visual-direction-v1.png",
+    "outputs/v1/assets/city-commute-minimal-background.png",
+    "outputs/v1/assets/product-cutout-exact.png",
+    "outputs/v1/imagegen-prompt.txt",
+    "outputs/v1/render_v1.py",
+    "outputs/v1/verification.json"
+  ],
+  "next_checkpoint": "Receive an official hanging-ring product view or explicit approval for a non-literal copy-led alternative; then produce the six final assets in a new version folder without overwriting v0 or v1."
+}

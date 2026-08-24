@@ -63,14 +63,20 @@ v0.2 workflow result because it omits feedback handling and state continuity.
 
 ## Status
 
-Checkpoint captured on 2026-08-24 after resumed-batch Run 17/30:
+Final candidate-execution snapshot captured on 2026-08-24:
 
-- 17/32 primary conditions completed successfully;
-- 2/32 reached the candidate turn timeout and are retained as reliability/efficiency evidence;
-- 13/32 still have earlier infrastructure-error rows and remain to be rerun;
-- the next condition is `DAB-L4-CFRY-003@reference_grounded`.
+- 30/32 conditions completed their full multi-turn episodes successfully;
+- 2/32 reached the 45-minute candidate turn timeout and are retained as reliability/efficiency
+  evidence:
+  - `DAB-L4-BID-001@zero_shot`;
+  - `DAB-L4-CAM-001@reference_grounded`;
+- no condition remains in an unresolved infrastructure-error state.
 
-The live runner was interrupted during that next condition before it could be archived, so its
-partial raw events remain only under ignored `.private/` storage and are not part of this public
-checkpoint. `run-index.jsonl` is the authoritative public attempt ledger. Resume with
-`--skip-completed`; successful conditions will not be rerun.
+`run-index.jsonl` is the authoritative public attempt ledger and contains 64 attempts for 32 unique
+conditions. Status totals use the latest attempt for each condition. One
+`DAB-L4-RTO-003@reference_grounded` attempt was interrupted by a network disconnect after five
+automatic reconnects; that failed attempt is retained for observability and is superseded by the
+successful full-episode rerun immediately after it.
+
+This status covers candidate execution and artifact/trajectory capture. Independent `judge-v2`
+scoring is a separate experiment stage and is not implied by the 30/32 completion count.

@@ -1,0 +1,15 @@
+已完成本轮方向探索，共 10 个低成本场景假设：
+
+- A 城市轻行：玄关、街角咖啡、单车短停、公园长椅。突出“一体式挂环”，电商表达最直接。
+- B 轻水留白：雨后桌面、露台浇花、冷饮凝露。突出“IPX4 防泼水”，视觉记忆最强。
+- C 晨昏慢陪：早餐台、阅读角、黄昏阳台。突出“12 小时续航”，MORI 品牌气质最完整。
+
+请查看：
+
+- [Creative Territories 选择板 PNG](<WORKDIR>/outputs/v0/creative-territories-board.png)
+- [完整场景与延展说明](<WORKDIR>/outputs/v0/creative-territories.md)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json)
+
+请回复选择 `A`、`B` 或 `C`。六张成品尚未制作。
+
+另需补充一张能清楚显示一体式挂环及连接方式的官方侧/背面图、透明底图或 CAD；当前正面图未露出挂环，不能凭空补画挂点或配件。

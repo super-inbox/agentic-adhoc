@@ -1,0 +1,100 @@
+{
+  "schema_version": "0.2",
+  "version": "v0",
+  "stage": "creative_territory_selection",
+  "status": "verified_for_current_checkpoint",
+  "checks": [
+    {
+      "check": "scope_checkpoint",
+      "result": "pass",
+      "details": "Only territory exploration was produced; the six final visual assets were intentionally deferred pending client selection.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "check": "scene_hypothesis_count",
+      "result": "pass",
+      "details": "10 hypotheses are present, within the requested range of 8–12.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md"
+      ]
+    },
+    {
+      "check": "territory_count_and_differentiation",
+      "result": "pass",
+      "details": "Three territories are defined with distinct hero claims and visual grammars: mobility, controlled splash context, and morning-to-evening time progression.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.svg"
+      ]
+    },
+    {
+      "check": "approved_claims_only",
+      "result": "pass",
+      "details": "All numeric/specification claims are limited to 12 小时续航, IPX4 防泼水, and 一体式挂环.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.svg"
+      ]
+    },
+    {
+      "check": "product_identity_preservation_in_selection_board",
+      "result": "pass",
+      "details": "The selection board references the supplied product master directly and applies placement/scale only; no product pixels or structure were edited.",
+      "evidence_paths": [
+        "inputs/01-product_master.png",
+        "outputs/v0/creative-territories-board.svg"
+      ]
+    },
+    {
+      "check": "forbidden_waterproof_implication",
+      "result": "pass",
+      "details": "The concepts explicitly prohibit immersion, strong water jets, heavy-rain drenching, and waterproof wording.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md"
+      ]
+    },
+    {
+      "check": "visual_board_render_and_layout",
+      "result": "pass",
+      "details": "The board was rendered to a 1600 × 2200 PNG and visually inspected at original resolution. The header, 3 territory columns, all 10 scene cards, tradeoffs, selection checkpoint, and product thumbnail are present without clipping. The thumbnail uses a direct scaled copy of the supplied master.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories-board.svg",
+        "outputs/v0/creative-territories-board.png",
+        "outputs/v0/render_creative_board.py"
+      ]
+    }
+  ],
+  "evidence_paths": [
+    "inputs/01-product_master.png",
+    "inputs/02-brand_guideline.png",
+    "outputs/v0/creative-territories.md",
+    "outputs/v0/creative-territories-board.svg",
+    "outputs/v0/creative-territories-board.png",
+    "outputs/project-state.json"
+  ],
+  "sha256": {
+    "inputs/01-product_master.png": "f1c9a2c5895dfef128d4a52de1025bf8afad7cf59ca4bff0c04d5a653b392406",
+    "inputs/02-brand_guideline.png": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53",
+    "outputs/v0/creative-territories-board.png": "80ce20b584fcd8557b345400398cb58ee0bd27c48a59b85d74dd3218d58912b3"
+  },
+  "unresolved_blockers": [
+    {
+      "blocker": "No creative territory has been selected.",
+      "impact": "The six final visual assets must not be produced yet.",
+      "resolution": "Client selects A, B, or C."
+    },
+    {
+      "blocker": "The supplied front master does not visibly show the integrated hanging ring, ports, or product logo.",
+      "impact": "A literal bag-hanging scene cannot be generated or composited while guaranteeing exact product identity.",
+      "resolution": "Provide an official side/back/transparent view or CAD that clearly shows the hanging ring and attachment method, or explicitly approve a copy-led scene that does not show the connection."
+    },
+    {
+      "blocker": "The brand guideline is a raster board without production color values, vector logo, or font files.",
+      "impact": "Current palette/type use is directional; exact final brand reproduction cannot be verified from source data alone.",
+      "resolution": "Provide source brand assets for final production if exact values are required."
+    }
+  ]
+}

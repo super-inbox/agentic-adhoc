@@ -1,0 +1,104 @@
+{
+  "version": "v0",
+  "stage": "direction_selection_pending",
+  "verification_date": "2026-08-24",
+  "checks_performed": [
+    {
+      "id": "source_identity",
+      "status": "pass",
+      "check": "Confirmed the supplied master is a 1024 x 1024 RGB PNG and recorded its SHA-256 digest.",
+      "result": "f1c9a2c5895dfef128d4a52de1025bf8afad7cf59ca4bff0c04d5a653b392406",
+      "evidence_paths": [
+        "inputs/01-product_master.png"
+      ]
+    },
+    {
+      "id": "identity_preservation_in_board",
+      "status": "pass",
+      "check": "Confirmed the direction board references the unchanged master PNG directly three times. Only placement and scale are applied; no alternate product drawing, added control, port, logo, color, or accessory exists.",
+      "evidence_paths": [
+        "outputs/v0/scene-direction-board.svg",
+        "inputs/01-product_master.png"
+      ]
+    },
+    {
+      "id": "hypothesis_and_cluster_count",
+      "status": "pass",
+      "check": "Counted 12 numbered scene hypotheses and 3 direction clusters (A, B, C).",
+      "result": {
+        "scene_hypotheses": 12,
+        "direction_clusters": 3
+      },
+      "evidence_paths": [
+        "outputs/v0/scene-hypotheses.md",
+        "outputs/v0/scene-direction-board.svg"
+      ]
+    },
+    {
+      "id": "approved_claims_only",
+      "status": "pass",
+      "check": "Confirmed the three customer-facing claim tags on the visual board are exactly the approved claims and appear once each.",
+      "result": [
+        "12 小时续航",
+        "IPX4 防泼水",
+        "一体式挂环"
+      ],
+      "evidence_paths": [
+        "outputs/v0/scene-direction-board.svg"
+      ]
+    },
+    {
+      "id": "splash_claim_boundary",
+      "status": "pass",
+      "check": "Reviewed all splash scenarios: they use only droplets, drizzle in the background, or incidental spray; no submersion, underwater use, washing, or pool immersion is proposed.",
+      "evidence_paths": [
+        "outputs/v0/scene-hypotheses.md"
+      ]
+    },
+    {
+      "id": "low_cost_and_light_outdoor_fit",
+      "status": "pass",
+      "check": "Confirmed every cluster is producible with one compact location set, natural light or a simple lighting change, and a small common-prop kit; no expedition or extreme-sport setting is included.",
+      "evidence_paths": [
+        "outputs/v0/scene-hypotheses.md",
+        "outputs/v0/scene-direction-board.svg"
+      ]
+    },
+    {
+      "id": "svg_structure",
+      "status": "pass",
+      "check": "Validated the SVG as well-formed XML with xmllint.",
+      "evidence_paths": [
+        "outputs/v0/scene-direction-board.svg"
+      ]
+    },
+    {
+      "id": "rendered_visual_qa",
+      "status": "partial",
+      "check": "The SVG passed structural validation, but the sandboxed system previewer and in-app browser were unavailable, so no flattened PNG render was produced in this turn.",
+      "evidence_paths": [
+        "outputs/v0/scene-direction-board.svg"
+      ]
+    },
+    {
+      "id": "six_final_assets",
+      "status": "not_run_authorization_pending",
+      "check": "No final ecommerce or social assets were generated because the user explicitly requested a direction-selection checkpoint first.",
+      "evidence_paths": [
+        "outputs/project-state.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "direction_selection",
+      "blocking_for": "six final ecommerce and social assets",
+      "needed_from_client": "Choose A, B, or C; optionally add 更商业 or 更生活."
+    },
+    {
+      "id": "visible_loop_source_angle",
+      "blocking_for": "a physically accurate shot showing the speaker attached to a bag",
+      "needed_from_client": "Provide a product angle that clearly shows the integrated loop and its connection method, if such a proof shot is required. The current front master does not reveal that structure."
+    }
+  ]
+}

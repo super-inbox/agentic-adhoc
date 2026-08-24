@@ -1,0 +1,104 @@
+{
+  "turn_index": 1,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T23:44:59.562Z",
+  "finished_at": "2026-08-23T23:56:23.521Z",
+  "latency_ms": 683980,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 32,
+    "command_count": 7,
+    "tool_count": 5,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a030f8-08e9-7ef0-9894-ca3733b0943f",
+    "usage": {
+      "input_tokens": 2113715,
+      "cached_input_tokens": 1955328,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 48291,
+      "reasoning_output_tokens": 20988
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2863,
+      "sha256": "6d9196bb56b0c38ec0c720c8b6a1832540fb8a7ac2b428078dfa5b0ecf85e156"
+    },
+    {
+      "filename": "v0/creative-territories-board.png",
+      "byte_size": 669062,
+      "sha256": "a4f34318428cd84f6582bd84ee387158ddac0a3b67e8e8e5de30b63061fed645"
+    },
+    {
+      "filename": "v0/creative-territories-board.svg",
+      "byte_size": 12534,
+      "sha256": "03b6b0a1c975870408800780cb056bbe118ef036d0c95d2b54af4d69f13ae332"
+    },
+    {
+      "filename": "v0/product-reference-exact.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v0/reference-deconstruction-and-territories.md",
+      "byte_size": 6861,
+      "sha256": "87f18efc7e5f2240dfdca866be71e0be108f481146e41e520be706c71ff89c47"
+    },
+    {
+      "filename": "v0/render_territories_board.py",
+      "byte_size": 8933,
+      "sha256": "ba824bfa5ad3da47f9d0b5e87c675bc57480a4194fcabc83145b9add90433ddd"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3512,
+      "sha256": "9189acfd77b5ca13954adb7a7b3d33af92c21e50c633dbc90195b0cb990566ad"
+    },
+    {
+      "filename": "v1/design-delta.md",
+      "byte_size": 1079,
+      "sha256": "7cd2f9904042374bd35a2b565dc8040933bb62cee88e8967fea15b4b4c762538"
+    },
+    {
+      "filename": "v1/detail-page-scroll-preview.png",
+      "byte_size": 1228468,
+      "sha256": "ac5599771d5cd5438fff136f3bec9ee7b3fddf664807ae8af4254373e5709443"
+    },
+    {
+      "filename": "v1/hero-quiet-sequence-clay-drift.png",
+      "byte_size": 363593,
+      "sha256": "ac952966b9e1e4c22ae43490a98eaf0056166a1f6184dd48d4d396e2bfec714c"
+    },
+    {
+      "filename": "v1/product-reference-exact.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v1/render_v1.py",
+      "byte_size": 10662,
+      "sha256": "63711c52c238a6807f8f5fe3c59186ad677d4d24509b00453752e9e4ffb27263"
+    },
+    {
+      "filename": "v1/selling-point-01-low-noise.png",
+      "byte_size": 341571,
+      "sha256": "ba295b83b49d19812d51c4f8d3223fb41f0ea3f2c778fe6adee7e86dd442ad7d"
+    },
+    {
+      "filename": "v1/selling-point-02-timer-tactility.png",
+      "byte_size": 523840,
+      "sha256": "4e44d5f6564222d1fb21bdda0d404f1472718ea54be82c7266ae73145ef88626"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 5636,
+      "sha256": "ec82f8708620dda529ef2d4763c025bf638fe74402a028ce5f409cb11dcb0fd3"
+    }
+  ]
+}

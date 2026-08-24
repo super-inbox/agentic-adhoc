@@ -1,0 +1,12 @@
+已仅将 Story 报名信息区上移 `260px`。局部编辑区外像素与原 Story 完全一致；邮件 `600×240`、官网及其他渠道哈希未变化。
+
+新增：
+
+- [Story 1080×1920 v3](/private<WORKDIR>/outputs/v3/summer-form-story-registration-up-1080x1920.png)
+- [v3 manifest](/private<WORKDIR>/outputs/v3/manifest.json)
+- [v3 verification](/private<WORKDIR>/outputs/v3/verification.json)
+- [编辑提示记录](/private<WORKDIR>/outputs/v3/generation-prompt.json)
+
+已更新：
+
+- [project-state.json](/private<WORKDIR>/outputs/project-state.json)

@@ -1,0 +1,84 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-24T00:51:09.863Z",
+  "finished_at": "2026-08-24T01:13:24.159Z",
+  "latency_ms": 1334327,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 44,
+    "command_count": 14,
+    "tool_count": 4,
+    "image_activity_count": 5,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a0313f-f45a-71b3-a94a-9755a0734a6a",
+    "usage": {
+      "input_tokens": 1048427,
+      "cached_input_tokens": 968832,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 28593,
+      "reasoning_output_tokens": 10359
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1722,
+      "sha256": "697d19fb2584bef88d97da49248182eba01518d3017cc37c3ee28d491c7dd22e"
+    },
+    {
+      "filename": "v0/assets/mori_clay_texture.png",
+      "byte_size": 3261241,
+      "sha256": "421ce27b20fd5c0d46941ccf76911f1bae9639ec753b019e74f85b68a068b27d"
+    },
+    {
+      "filename": "v0/assets/product_cutout.png",
+      "byte_size": 384391,
+      "sha256": "46ce045f40f06c3d5a48d88fd8d9138d2ede3ee93d6e8417cf9a79d51b5fb6e7"
+    },
+    {
+      "filename": "v0/assets/product_identity_metrics.json",
+      "byte_size": 398,
+      "sha256": "db3461a767b37c77f18af3dab9621231da919d45398fd39043b36d39c124f028"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 3747,
+      "sha256": "9cb24777dcf36c88f3507b4a8ebe448d3607aae15418295051158853413d46c1"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 12885,
+      "sha256": "e2bac6e8387e1ceb96e29316e3676004564e8d2bcc2a0d7dd6fb99353710a86f"
+    },
+    {
+      "filename": "v0/mori_aroma_poster_editable.svg",
+      "byte_size": 5720,
+      "sha256": "e38aac21f885bfed5438e340a0473ff535d83bc74d7bbe6d4555a64af95a01eb"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 1977223,
+      "sha256": "b62937753c7a23c3b7dc1b1745b090b6632d7b8903592f935c450ccb0ec4e44d"
+    },
+    {
+      "filename": "v0/render_design.py",
+      "byte_size": 11183,
+      "sha256": "54b7d3c75586a7d4491bd7e0d3ea91f7e84e3c3161d3c3af65ef5c9c3591a11f"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 6988,
+      "sha256": "3571b58283b979e61771885b2a43219cf92102cefc6da282cd3cfad70754c851"
+    },
+    {
+      "filename": "v0/verify_outputs.py",
+      "byte_size": 8997,
+      "sha256": "61095c81696ddd582d90becd89f3da0c576c41f95bf99b3d7e2f282d0d4a1443"
+    }
+  ]
+}

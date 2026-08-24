@@ -1,0 +1,101 @@
+{
+  "schema": "candidate-object-change-set/1.0",
+  "version": "v0",
+  "basis": {
+    "layout_reference": "../../inputs/01-layout_reference.png",
+    "product_reference": "../../inputs/02-product_reference.png",
+    "brand_guideline": "../../inputs/03-brand_guideline.png"
+  },
+  "summary": "保留主标题—一句话卖点—三个功能—底部规格的阅读节奏；删除参考页全部身份与具体装饰，以 MORI 暖色体系和原产品像素重建对象语言。",
+  "changes": [
+    {
+      "change_id": "chg-001",
+      "operation": "remove",
+      "source_object": "reference/brand/quiet-ritual",
+      "target_object": null,
+      "reason": "参考品牌身份不可保留",
+      "verification": "candidate text excludes QUIET RITUAL and AROMA DIFFUSER"
+    },
+    {
+      "change_id": "chg-002",
+      "operation": "remove",
+      "source_object": "reference/hero/vase-and-mist",
+      "target_object": null,
+      "reason": "参考花瓶与蒸汽属于禁止复用的具体内容",
+      "verification": "candidate hero uses only asset/product-cutout"
+    },
+    {
+      "change_id": "chg-003",
+      "operation": "add",
+      "source_object": "product/source-pixels",
+      "target_object": "product/cutout",
+      "reason": "替换为客户提供的陶土红香薰机，直接像素合成以锁定形状和颜色",
+      "identity_policy": "preserve_exact"
+    },
+    {
+      "change_id": "chg-004",
+      "operation": "replace",
+      "source_object": "reference/hero/framed-photo-panel",
+      "target_object": "group/background",
+      "reason": "由相框式产品照改为全幅暖陶土氛围层，避免直接套皮",
+      "kept_principle": "大面积主视觉与充分留白"
+    },
+    {
+      "change_id": "chg-005",
+      "operation": "replace",
+      "source_object": "reference/title/english-centered-stack",
+      "target_object": "group/title",
+      "reason": "改为不对称中文宋体主标题与右侧一句话卖点",
+      "copy": ["让香气慢下来", "安静融入每个夜晚"]
+    },
+    {
+      "change_id": "chg-006",
+      "operation": "remove",
+      "source_object": "reference/features/mist-light-timer-icons",
+      "target_object": null,
+      "reason": "参考图标禁止保留"
+    },
+    {
+      "change_id": "chg-007",
+      "operation": "replace",
+      "source_object": "reference/features/icon-cells",
+      "target_object": "group/features",
+      "reason": "以 01/02/03 纯文字卡表达三项功能，不复制圆形图标与分隔网格",
+      "copy": ["低噪运行", "定时关闭", "陶土触感"]
+    },
+    {
+      "change_id": "chg-008",
+      "operation": "remove",
+      "source_object": "reference/material-detail/photo-and-caption",
+      "target_object": null,
+      "reason": "材料细节照片与标签属于参考页具体装饰，当前信息结构不需要"
+    },
+    {
+      "change_id": "chg-009",
+      "operation": "replace",
+      "source_object": "reference/specs/table-module",
+      "target_object": "group/specs",
+      "reason": "将表格式规格改为全宽炭黑信息带，以大字号并列显示准确规格",
+      "copy": ["USB-C", "6 h", "280 ml"]
+    },
+    {
+      "change_id": "chg-010",
+      "operation": "apply_brand_tokens",
+      "source_object": "brand-board/palette-and-type",
+      "target_object": "tokens",
+      "reason": "使用 MORI 暖白、陶土红、炭黑为主色，橄榄绿与浅蓝为低占比辅助色，并采用宋体/无衬线组合"
+    }
+  ],
+  "locked_objects": [
+    "product/cutout",
+    "title/line-1",
+    "title/line-2",
+    "subtitle/copy",
+    "feature/card-1-copy",
+    "feature/card-2-copy",
+    "feature/card-3-copy",
+    "spec/value-usbc",
+    "spec/value-6h",
+    "spec/value-280ml"
+  ]
+}

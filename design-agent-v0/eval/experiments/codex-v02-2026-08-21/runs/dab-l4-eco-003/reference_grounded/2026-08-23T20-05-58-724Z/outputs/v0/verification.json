@@ -1,0 +1,74 @@
+{
+  "version": "v0",
+  "verified_at": "2026-08-24T04:11:26+08:00",
+  "candidate_path": "outputs/v0/taobao-first-screen-brand-led-v0.png",
+  "checks": [
+    {
+      "check": "file_integrity_and_canvas",
+      "status": "pass",
+      "method": "file and sips inspection",
+      "result": "Valid RGB PNG, 1086 x 1448 pixels, portrait 3:4 ratio.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    },
+    {
+      "check": "approved_copy_accuracy",
+      "status": "pass",
+      "method": "original-resolution visual inspection",
+      "result": "Headline and all three benefits appear once and read exactly: 让香气慢下来 / 低噪运行 / 定时关闭 / 陶土触感. No additional copy is present.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    },
+    {
+      "check": "product_identity_preservation",
+      "status": "pass",
+      "method": "visual comparison against the supplied product reference followed by a targeted color-fidelity iteration",
+      "result": "The final hero retains the muted terracotta-red finish, low cylindrical body, flat floating circular lid, black narrow gap, centered round front button, camera angle, and single-product composition.",
+      "evidence_paths": [
+        "inputs/02-product_reference.png",
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    },
+    {
+      "check": "brand_system_alignment",
+      "status": "pass",
+      "method": "visual comparison against the brand board",
+      "result": "Warm cream and terracotta dominate; charcoal supports typography; a small muted-sage accent is used without returning to a cold-white dominant treatment.",
+      "evidence_paths": [
+        "inputs/03-brand_guideline.png",
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    },
+    {
+      "check": "reference_use_contract",
+      "status": "pass",
+      "method": "visual inspection for abstraction versus direct copying",
+      "result": "The output retains only the spacious hero-to-headline-to-three-benefits rhythm. It does not reproduce the reference brand, wording, diffuser identity, exact grid, or icon designs.",
+      "evidence_paths": [
+        "inputs/01-reference_detail_page.png",
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    },
+    {
+      "check": "mobile_first_scanability",
+      "status": "pass",
+      "method": "original-resolution hierarchy review",
+      "result": "The product, large headline, and three equal-width benefit labels form a clear top-to-bottom scan path with large Chinese type and generous spacing.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    },
+    {
+      "check": "must_avoid_items",
+      "status": "pass",
+      "method": "visual inspection",
+      "result": "No reference-page brand or words, no copied reference icons, no English copy, no phone frame, no duplicated product, and no watermark were found.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

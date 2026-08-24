@@ -1,0 +1,208 @@
+{
+  "schema_version": "0.2",
+  "version": "v1",
+  "selected_territory": "C 慢刻序列（方向 3）",
+  "status": "pass",
+  "checks": [
+    {
+      "id": "requested_delta_scope",
+      "status": "pass",
+      "method": "对照客户反馈与 v0 方向 3 锁定项",
+      "result": {
+        "preserved": [
+          "大胆左文右物构图",
+          "灰粉陶红、深墨与暖骨白配色",
+          "三屏批准文案分配",
+          "产品位置与尺度"
+        ],
+        "removed": [
+          "直线间隔刻度",
+          "封闭几何",
+          "同心环"
+        ],
+        "added": [
+          "从薄盖轮廓提炼的非闭合开放弧线",
+          "非网格不规则陶土颗粒"
+        ]
+      },
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v1/design-delta.md",
+        "outputs/v1/render-metadata.json"
+      ]
+    },
+    {
+      "id": "required_deliverables",
+      "status": "pass",
+      "method": "检查文件存在与像素尺寸",
+      "result": {
+        "hero": {
+          "path": "outputs/v1/hero-slow-arcs.png",
+          "dimensions": [1440, 1080]
+        },
+        "selling_module_1": {
+          "path": "outputs/v1/selling-module-low-noise-timer.png",
+          "dimensions": [1440, 1080]
+        },
+        "selling_module_2": {
+          "path": "outputs/v1/selling-module-clay-touch.png",
+          "dimensions": [1440, 1080]
+        },
+        "combined_page": {
+          "path": "outputs/v1/detail-page-v1.png",
+          "dimensions": [1440, 3240]
+        }
+      },
+      "evidence_paths": [
+        "outputs/v1/hero-slow-arcs.png",
+        "outputs/v1/selling-module-low-noise-timer.png",
+        "outputs/v1/selling-module-clay-touch.png",
+        "outputs/v1/detail-page-v1.png"
+      ]
+    },
+    {
+      "id": "product_position_locked",
+      "status": "pass",
+      "method": "比较三张画面的渲染元数据",
+      "result": {
+        "product_slot": [340, 190, 1070, 850],
+        "product_image_xy": [340, 214],
+        "product_visible_box": [461, 303, 1288, 910],
+        "unique_positions_across_three_panels": 1,
+        "unique_scales_across_three_panels": 1
+      },
+      "evidence_paths": [
+        "outputs/v1/render-metadata.json",
+        "outputs/v1/render_detail_page_v1.py"
+      ]
+    },
+    {
+      "id": "product_identity_preservation",
+      "status": "pass",
+      "method": "对三张输出逐一比较产品完全不透明像素与同尺度产品源像素",
+      "result": {
+        "product_source": "outputs/v0/product-cutout-preserve-identity.png",
+        "product_source_sha256": "7139b5b8749e4f4481a5b6473b61e197cac4f51a2c02bb6fafd7cd5d71d45d3d",
+        "opaque_product_pixels_checked_per_panel": 455417,
+        "rgb_mismatches": {
+          "hero": 0,
+          "selling_module_1": 0,
+          "selling_module_2": 0
+        },
+        "edge_cleanup": "仅降低原白底污染边缘的透明度并采用预乘透明度缩放；未重绘、变色、变形、镜像或覆盖产品"
+      },
+      "evidence_paths": [
+        "outputs/v0/product-cutout-preserve-identity.png",
+        "outputs/v1/render_detail_page_v1.py",
+        "outputs/v1/hero-slow-arcs.png",
+        "outputs/v1/selling-module-low-noise-timer.png",
+        "outputs/v1/selling-module-clay-touch.png"
+      ]
+    },
+    {
+      "id": "open_arc_language",
+      "status": "pass",
+      "method": "检查每段弧线角跨度与渲染原语",
+      "result": {
+        "arc_spans_degrees": [132, 116, 124, 138, 111, 126, 138, 111, 128],
+        "all_segments_under_180_degrees": true,
+        "straight_bar_primitives": 0,
+        "closed_ring_primitives": 0
+      },
+      "evidence_paths": [
+        "outputs/v1/render_detail_page_v1.py",
+        "outputs/v1/render-metadata.json",
+        "outputs/v1/detail-page-v1.png"
+      ]
+    },
+    {
+      "id": "clay_particle_language",
+      "status": "pass",
+      "method": "检查随机种子、数量、尺寸变化与非网格曲线路径",
+      "result": {
+        "particle_counts": [230, 205, 285],
+        "deterministic_seeds": [311, 517, 829],
+        "grid_layout": false,
+        "size_and_density_variation": true,
+        "palette_limited_to": ["陶土红", "灰粉陶红", "深陶褐", "暖骨白"]
+      },
+      "evidence_paths": [
+        "outputs/v1/render_detail_page_v1.py",
+        "outputs/v1/detail-page-v1.png"
+      ]
+    },
+    {
+      "id": "approved_copy_only",
+      "status": "pass",
+      "method": "核对渲染元数据与画面文字",
+      "result": {
+        "consumer_copy": [
+          "让香气慢下来",
+          "低噪运行",
+          "定时关闭",
+          "陶土触感"
+        ],
+        "unapproved_consumer_copy_count": 0,
+        "new_claims_or_parameters": 0
+      },
+      "evidence_paths": [
+        "outputs/v1/render-metadata.json",
+        "outputs/v1/hero-slow-arcs.png",
+        "outputs/v1/selling-module-low-noise-timer.png",
+        "outputs/v1/selling-module-clay-touch.png"
+      ]
+    },
+    {
+      "id": "originality_boundary",
+      "status": "pass",
+      "method": "检查渲染脚本、素材来源与最终画面",
+      "result": {
+        "external_visual_assets": 0,
+        "external_brand_names_or_logos_in_artwork": 0,
+        "external_urls": 0,
+        "visual_sources": [
+          "附件产品图",
+          "代码生成的开放弧线",
+          "代码生成的陶土颗粒"
+        ]
+      },
+      "evidence_paths": [
+        "outputs/v1/render_detail_page_v1.py",
+        "outputs/v1/detail-page-v1.png"
+      ]
+    },
+    {
+      "id": "v0_preserved",
+      "status": "pass",
+      "method": "增量前后比较 outputs/v0 全部文件 SHA-256",
+      "result": {
+        "files_checked": 9,
+        "changed_files": 0,
+        "hashes_match": true
+      },
+      "evidence_paths": [
+        "outputs/v0"
+      ]
+    },
+    {
+      "id": "visual_qa",
+      "status": "pass",
+      "method": "以原始像素尺寸检查三张模块和组合页",
+      "result": {
+        "text_clipping": false,
+        "product_clipping": false,
+        "product_position_shift": false,
+        "corrected_issue": "放大缩放时透明白底造成的细白描边",
+        "remaining_blockers": 0
+      },
+      "evidence_paths": [
+        "outputs/v1/hero-slow-arcs.png",
+        "outputs/v1/selling-module-low-noise-timer.png",
+        "outputs/v1/selling-module-clay-touch.png",
+        "outputs/v1/detail-page-v1.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}
+

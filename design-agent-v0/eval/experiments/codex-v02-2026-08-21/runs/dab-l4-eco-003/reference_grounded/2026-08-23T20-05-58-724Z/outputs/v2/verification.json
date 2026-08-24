@@ -1,0 +1,80 @@
+{
+  "version": "v2",
+  "verified_at": "2026-08-24T04:30:15+08:00",
+  "candidate_path": "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+  "base_path": "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+  "authoritative_color_source": "inputs/02-product_reference.png",
+  "checks": [
+    {
+      "check": "file_integrity_and_canvas",
+      "status": "pass",
+      "method": "file and sips inspection",
+      "result": "Valid RGBA PNG, 1086 x 1448 pixels, portrait 3:4 ratio.",
+      "evidence_paths": [
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png"
+      ]
+    },
+    {
+      "check": "source_color_match",
+      "status": "pass",
+      "method": "source-calibrated HSV measurement over red product surfaces",
+      "result": "Source hue is 8.573 degrees and v2 hue is 8.565 degrees (0.008-degree error). Source saturation is 0.58069 and v2 saturation is 0.58048 (0.00020 error).",
+      "evidence_paths": [
+        "inputs/02-product_reference.png",
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+        "outputs/v2/product-color-source-calibration.c"
+      ]
+    },
+    {
+      "check": "brightness_texture_and_geometry_preservation",
+      "status": "pass",
+      "method": "color-transform parameter and original-resolution visual inspection",
+      "result": "Mean product value remains 0.65243 before and after calibration. Position, silhouette, lid geometry, black gap, button geometry, texture, highlights, shadows, and edges remain unchanged.",
+      "evidence_paths": [
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png"
+      ]
+    },
+    {
+      "check": "requested_delta_scope",
+      "status": "pass",
+      "method": "decoded RGBA pixel comparison with the v1 base",
+      "result": "188565 pixels changed only within the red product-surface mask at bounds x277..815,y333..726. Mismatched pixels outside the permitted red-surface mask: 0.",
+      "evidence_paths": [
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+        "outputs/v2/product-color-source-calibration.c"
+      ]
+    },
+    {
+      "check": "background_and_text_lock",
+      "status": "pass",
+      "method": "decoded RGBA pixel comparison with the v1 base",
+      "result": "All background pixels and both approved text/layout areas are pixel-identical to v1; no text or element moved.",
+      "evidence_paths": [
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png"
+      ]
+    },
+    {
+      "check": "previous_versions_immutability",
+      "status": "pass",
+      "method": "SHA-256 comparison with recorded hashes",
+      "result": "v1 final remains f77dc530429e348d17255d04fb6609a0c2f7b99f03bd3f42a68ac81a816345db; v0 final remains cf96ec1460be2d40a9fa013dfe82fe2909084129886246af8fc3af613de98a07.",
+      "evidence_paths": [
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    },
+    {
+      "check": "final_checksum",
+      "status": "pass",
+      "method": "SHA-256",
+      "result": "eac43fb005680ecc1cac58aa22c29e66357e3f8f13acdc43242e8d92f154a86a",
+      "evidence_paths": [
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

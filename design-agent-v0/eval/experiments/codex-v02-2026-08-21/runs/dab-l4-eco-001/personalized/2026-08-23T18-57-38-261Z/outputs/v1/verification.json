@@ -1,0 +1,169 @@
+{
+  "schema_version": "0.2",
+  "version": "v1",
+  "verified_at": "2026-08-24T03:16:37+08:00",
+  "overall_status": "requested_delta_applied_complete_six_asset_set_blocked_on_missing_loop_source",
+  "checks_performed": [
+    {
+      "id": "client_selection_applied",
+      "status": "pass",
+      "expected": "城市通勤方向",
+      "actual": "A / 城市留白 / URBAN PAUSE",
+      "evidence_paths": [
+        "outputs/v1/selected-territory-urban-commute-v1.md",
+        "outputs/v1/selected-territory-urban-commute-v1.png",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "delta_scope_only",
+      "status": "pass",
+      "evidence": {
+        "changed": [
+          "lighting restraint",
+          "negative space",
+          "decorative text reduction",
+          "perceived visual finish"
+        ],
+        "preserved": [
+          "selected urban-commute concept",
+          "four v0 A scenarios",
+          "brand palette",
+          "approved claims",
+          "product identity",
+          "all unrelated constraints"
+        ]
+      },
+      "evidence_paths": [
+        "outputs/v1/selected-territory-urban-commute-v1.md",
+        "outputs/v1/generation-prompt-v1.md"
+      ]
+    },
+    {
+      "id": "v0_preserved",
+      "status": "pass",
+      "method": "Current v0 artifact hashes match the hashes recorded before v1 work.",
+      "artifact_hashes_sha256": {
+        "outputs/v0/creative-territories-overview-v0.png": "bae54a9b17fb8e22bb0944bfdd6a833aae87691b9b2f4de10ae2e2520b29c4ea",
+        "outputs/v0/moodboards/territory-a-urban-pause-v0.png": "c0564ef8328fe5c3a41734825515399e22eaf7ec651dedaba1e8e5b849834c3c",
+        "outputs/v0/moodboards/territory-b-after-rain-v0.png": "196b6429874929fd2a54d999c674fcdbe6b844c34bf20a1473593aad97193dd9",
+        "outputs/v0/moodboards/territory-c-carry-ritual-v0.png": "6f3341062ba559d69a3720fe5b80a00c6300e48da3f091ed969a0b32844758c7"
+      }
+    },
+    {
+      "id": "restrained_lighting",
+      "status": "pass",
+      "method": "Visual review of the refined moodboard and selected-territory board.",
+      "evidence": [
+        "Soft directional light with gentle falloff",
+        "Low-contrast shadows",
+        "Cool-neutral overall balance",
+        "No dramatic flare or theatrical spotlight"
+      ],
+      "evidence_paths": [
+        "outputs/v1/moodboards/territory-a-urban-commute-refined-v1.png",
+        "outputs/v1/selected-territory-urban-commute-v1.png"
+      ]
+    },
+    {
+      "id": "more_negative_space",
+      "status": "pass",
+      "method": "Visual review against v0 A moodboard.",
+      "evidence": [
+        "Entry scene uses a large clean wall area",
+        "Transit scene uses broad open paving",
+        "Park scene keeps open pale ground around the bench",
+        "Riverside scene gives substantial space to sky and horizon",
+        "v1 board itself uses a simplified single-territory layout"
+      ],
+      "evidence_paths": [
+        "outputs/v0/moodboards/territory-a-urban-pause-v0.png",
+        "outputs/v1/moodboards/territory-a-urban-commute-refined-v1.png",
+        "outputs/v1/selected-territory-urban-commute-v1.png"
+      ]
+    },
+    {
+      "id": "less_decorative_text",
+      "status": "pass",
+      "evidence": "The v1 board contains one primary Chinese title, one concise scene line, three functional delta rows, approved claims, and the required blocker note. It contains no decorative slogan and no text over the scene photographs.",
+      "evidence_paths": [
+        "scripts/render_selected_territory_v1.py",
+        "outputs/v1/selected-territory-urban-commute-v1.png"
+      ]
+    },
+    {
+      "id": "no_gold",
+      "status": "pass",
+      "method": "Prompt guardrail, deterministic board palette review, and visual inspection.",
+      "evidence": "Gold, brass, metallic-gold reflections, marble glamour and ornamental luxury décor were explicitly excluded. The deterministic board uses MORI brand colors only plus neutral warning backgrounds.",
+      "evidence_paths": [
+        "outputs/v1/generation-prompt-v1.md",
+        "scripts/render_selected_territory_v1.py",
+        "outputs/v1/selected-territory-urban-commute-v1.png"
+      ]
+    },
+    {
+      "id": "product_identity_and_color",
+      "status": "pass_for_v1",
+      "method": "The refined moodboard contains no product. The selected-territory board loads the supplied product master directly and only scales it proportionally inside a white tile; no generative edit, recolor, redraw or added control/accessory is used.",
+      "source_sha256": "f1c9a2c5895dfef128d4a52de1025bf8afad7cf59ca4bff0c04d5a653b392406",
+      "evidence_paths": [
+        "inputs/01-product_master.png",
+        "scripts/render_selected_territory_v1.py",
+        "outputs/v1/selected-territory-urban-commute-v1.png"
+      ]
+    },
+    {
+      "id": "approved_claims_only",
+      "status": "pass",
+      "observed_product_claims": [
+        "12 小时续航",
+        "IPX4 防泼水",
+        "一体式挂环"
+      ],
+      "unapproved_parameters_found": [],
+      "evidence_paths": [
+        "outputs/v1/selected-territory-urban-commute-v1.md",
+        "outputs/v1/selected-territory-urban-commute-v1.png"
+      ]
+    },
+    {
+      "id": "visual_layout_review",
+      "status": "pass",
+      "method": "Rendered at 2600 × 1800 and inspected at original detail.",
+      "evidence": [
+        "No clipping or overlap",
+        "Product remains clear at overview scale",
+        "Moodboard has no embedded labels or decorative copy",
+        "Functional text hierarchy is readable"
+      ],
+      "evidence_paths": [
+        "outputs/v1/selected-territory-urban-commute-v1.png"
+      ]
+    },
+    {
+      "id": "final_six_assets",
+      "status": "blocked_missing_required_source",
+      "expected_final_count": 6,
+      "actual_final_count": 0,
+      "reason": "One required selling-point asset must truthfully communicate 一体式挂环 / 可挂包, but the only supplied product master does not show the loop. Producing the set would require guessing the loop geometry, location, or attachment method, which is explicitly prohibited."
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v1/selected-territory-urban-commute-v1.png": "7855126778df904c73561f8d2d90ae7a0f06476840d469a3cd4dcda18e2db777",
+    "outputs/v1/moodboards/territory-a-urban-commute-refined-v1.png": "7be1e09f201b737963c6d6becdf6a5a6bf5a36f36c154fdb89de72ec1270c618"
+  },
+  "unresolved_blockers": [
+    {
+      "id": "integrated-loop-view-missing",
+      "description": "A real side/rear product image showing the integrated loop is required before the complete six-asset set can be produced without altering or inventing product structure.",
+      "required_input": "显示真实挂环形状、位置和实际挂法的侧面或背面产品实拍/抠图",
+      "evidence_paths": [
+        "inputs/01-product_master.png",
+        "outputs/v1/selected-territory-urban-commute-v1.png",
+        "outputs/project-state.json"
+      ]
+    }
+  ]
+}
+

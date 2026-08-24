@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "project": "summer-form-channel-exports",
+  "version": "v3",
+  "verified_at": "2026-08-24T05:46:55+08:00",
+  "overall_status": "pass",
+  "scope": "story_registration_position_only",
+  "checks_performed": [
+    {
+      "check": "story_exact_dimensions_and_decode",
+      "result": "pass",
+      "detail": "PNG decoded successfully at exactly 1080×1920 pixels and has nonzero file size.",
+      "evidence_paths": [
+        "outputs/v3/summer-form-story-registration-up-1080x1920.png"
+      ]
+    },
+    {
+      "check": "registration_group_vertical_shift",
+      "result": "pass",
+      "detail": "The original rasterized glyph pixels for Design Market / 08—10 AUG / BROOKLYN were reused exactly with a 260 px upward shift and 0 px horizontal shift.",
+      "metrics": {
+        "vertical_shift_pixels": -260,
+        "horizontal_shift_pixels": 0,
+        "glyph_pixel_equality_after_shift": true,
+        "old_text_region_navy_pixels": 0
+      },
+      "evidence_paths": [
+        "outputs/v0/summer-form-story-1080x1920.png",
+        "outputs/v3/summer-form-story-registration-up-1080x1920.png"
+      ]
+    },
+    {
+      "check": "localized_pixel_lock",
+      "result": "pass",
+      "detail": "All changed pixels are contained within the declared right-side registration edit region; every pixel outside it is identical to the v0 Story source.",
+      "metrics": {
+        "declared_edit_box_xyxy": [
+          550,
+          718,
+          1007,
+          1220
+        ],
+        "observed_diff_box_xyxy": [
+          550,
+          722,
+          1007,
+          1220
+        ],
+        "changed_pixels": 146233,
+        "changed_pixels_outside_declared_box": 0
+      },
+      "evidence_paths": [
+        "outputs/v0/summer-form-story-1080x1920.png",
+        "outputs/v3/summer-form-story-registration-up-1080x1920.png"
+      ]
+    },
+    {
+      "check": "visual_review",
+      "result": "pass",
+      "detail": "The registration group is fully legible above the horizontal grid line; its former position is clean, with no ghost text. SUMMER FORM, origami, palette, grid outside the local edit region, and all other artwork remain visually unchanged.",
+      "evidence_paths": [
+        "outputs/v3/summer-form-story-registration-up-1080x1920.png"
+      ]
+    },
+    {
+      "check": "frozen_artifact_integrity",
+      "result": "pass",
+      "detail": "The v0 Story source, v0 unrelated channel PNGs, v1 website PNG, and v2 email 600×240 PNG still match their prior recorded SHA-256 values. Earlier version folders were not rewritten.",
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v1/verification.json",
+        "outputs/v2/verification.json"
+      ]
+    },
+    {
+      "check": "manifest_completeness",
+      "result": "pass",
+      "detail": "The v3 manifest records all five current channels and points only Story to the new v3 artifact.",
+      "evidence_paths": [
+        "outputs/v3/manifest.json"
+      ]
+    }
+  ],
+  "new_artifact": {
+    "channel": "Story",
+    "path": "outputs/v3/summer-form-story-registration-up-1080x1920.png",
+    "format": "png",
+    "pixel_width": 1080,
+    "pixel_height": 1920,
+    "bytes": 2304076,
+    "sha256": "2f8354812dd2d1947e5e935b7c9ed7e4a3ae4e1e2043f4477c1dc8a7d2758f0d",
+    "dimension_check": "pass",
+    "nonzero_file_check": "pass",
+    "decode_check": "pass"
+  },
+  "frozen_artifacts": [
+    {
+      "channel": "小红书",
+      "path": "outputs/v0/summer-form-xhs-1080x1440.png",
+      "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "Story v0 source（保留）",
+      "path": "outputs/v0/summer-form-story-1080x1920.png",
+      "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "旧邮件版本（保留）",
+      "path": "outputs/v0/summer-form-email-600x200.png",
+      "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "LED",
+      "path": "outputs/v0/summer-form-led-4096x1024.png",
+      "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "官网",
+      "path": "outputs/v1/summer-form-website-1440x560.png",
+      "sha256": "57e902355f1f863ae3ed93913e31c4ba9df5b2cddc01eda1a5840d248c81676a",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "邮件 600×240",
+      "path": "outputs/v2/summer-form-email-600x240.png",
+      "sha256": "954176842186f6f3e39d113909e1dae4823514ec8e340459b460dc8c8b70f50b",
+      "unchanged_check": "pass"
+    }
+  ],
+  "unresolved_blockers": []
+}

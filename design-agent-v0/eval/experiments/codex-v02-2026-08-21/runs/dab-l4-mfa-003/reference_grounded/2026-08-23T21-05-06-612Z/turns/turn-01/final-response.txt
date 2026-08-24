@@ -1,0 +1,14 @@
+已仅补充官网 `1440×560`，其余四张 v0 文件未重新导出，哈希保持一致。当前无阻塞项。
+
+新增：
+
+- [官网 1440×560](/private<WORKDIR>/outputs/v1/summer-form-website-1440x560.png)
+- [v1 manifest](/private<WORKDIR>/outputs/v1/manifest.json)
+- [v1 verification](/private<WORKDIR>/outputs/v1/verification.json)
+- [生成提示记录](/private<WORKDIR>/outputs/v1/generation-prompt.json)
+
+已更新：
+
+- [project-state.json](/private<WORKDIR>/outputs/project-state.json)
+
+视觉适配使用内置图像生成/编辑模式。

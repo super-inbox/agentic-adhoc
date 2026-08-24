@@ -1,0 +1,11 @@
+已完成 v1：仅替换为均匀细颗粒陶土纸感。33 个版式对象、产品像素和全部文字均与 v0 一致；v0 文件未改动，10 项验证全部通过。
+
+- [新版预览](/private<WORKDIR>/outputs/v1/preview.png)
+- [新背景纹理](/private<WORKDIR>/outputs/v1/assets/mori_fine_grain_clay_paper.png)
+- [可编辑 SVG](/private<WORKDIR>/outputs/v1/mori_aroma_poster_editable.svg)
+- [设计文档](/private<WORKDIR>/outputs/v1/design_document.json)
+- [变更清单](/private<WORKDIR>/outputs/v1/change_set.json)
+- [验证结果](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+生成方式：built-in imagegen。提示词核心为：“Uniform fine-grain warm-ivory clay paper with subtle mineral particles and paper fibers; no watercolor wash, cloudy mottling, broad gradients, objects, text, logos or decorative motifs.”

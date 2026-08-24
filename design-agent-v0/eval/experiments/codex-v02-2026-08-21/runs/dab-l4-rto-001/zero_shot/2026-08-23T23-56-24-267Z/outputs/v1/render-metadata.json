@@ -1,0 +1,115 @@
+{
+  "version": "v1",
+  "selected_territory": "C 慢刻序列",
+  "canvas_dimensions": [
+    1440,
+    1080
+  ],
+  "product_slot_locked": [
+    340,
+    190,
+    1070,
+    850
+  ],
+  "product_image_xy_locked": [
+    340,
+    214
+  ],
+  "product_visible_box_locked": [
+    461,
+    303,
+    1288,
+    910
+  ],
+  "product_source": "outputs/v0/product-cutout-preserve-identity.png",
+  "consumer_copy": {
+    "hero": [
+      "让香气慢下来"
+    ],
+    "function": [
+      "低噪运行",
+      "定时关闭"
+    ],
+    "material": [
+      "陶土触感"
+    ]
+  },
+  "visual_language": {
+    "removed": [
+      "直线间隔刻度",
+      "封闭几何",
+      "同心环"
+    ],
+    "added": [
+      "非闭合开放弧线",
+      "非网格不规则陶土颗粒"
+    ],
+    "arc_span_rule": "每段小于 180 度"
+  },
+  "panels": [
+    {
+      "name": "hero",
+      "path": "outputs/v1/hero-slow-arcs.png",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "product_image_xy": [
+        340,
+        214
+      ],
+      "arc_spans_degrees": [
+        132,
+        116,
+        124
+      ],
+      "particle_count": 230,
+      "particle_seed": 311
+    },
+    {
+      "name": "function",
+      "path": "outputs/v1/selling-module-low-noise-timer.png",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "product_image_xy": [
+        340,
+        214
+      ],
+      "arc_spans_degrees": [
+        138,
+        111,
+        126
+      ],
+      "particle_count": 205,
+      "particle_seed": 517
+    },
+    {
+      "name": "material",
+      "path": "outputs/v1/selling-module-clay-touch.png",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "product_image_xy": [
+        340,
+        214
+      ],
+      "arc_spans_degrees": [
+        138,
+        111,
+        128
+      ],
+      "particle_count": 285,
+      "particle_seed": 829
+    }
+  ],
+  "combined_page": {
+    "path": "outputs/v1/detail-page-v1.png",
+    "dimensions": [
+      1440,
+      3240
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "tool_mode": "built-in image generation/editing with localized pixel-preserving composite",
+  "input": {
+    "path": "outputs/v0/summer-form-story-1080x1920.png",
+    "role": "approved current Story artwork and edit target"
+  },
+  "prompt": {
+    "use_case": "precise-object-edit",
+    "primary_request": "Move only the right-side Design Market / 08—10 AUG / BROOKLYN registration group upward so it clears platform buttons, while keeping its size, line spacing, alignment, color, and all unrelated artwork unchanged.",
+    "text_verbatim": [
+      "Design Market",
+      "08—10 AUG",
+      "BROOKLYN"
+    ],
+    "constraints": [
+      "Restore the old text location with matching cream paper texture and no ghost text.",
+      "Preserve SUMMER FORM, origami, navy/coral geometry, loop mark, margins, and 9:16 framing.",
+      "No new copy, CTA, watermark, resize, restyle, or unrelated reflow."
+    ]
+  },
+  "production_adjustment": {
+    "initial_prompt_shift_pixels": -220,
+    "final_shift_pixels": -260,
+    "reason": "The 220 px position intersected the existing horizontal grid line; 260 px places the full group above it.",
+    "preservation_method": "Original registration glyph pixels were reused exactly. The built-in edit supplied matching clean paper texture for the localized background repair; its whole-frame layout was not used because it changed unrelated regions."
+  }
+}

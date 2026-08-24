@@ -1,0 +1,23 @@
+已完成 v0，并停在方向选择检查点；尚未制作最终首屏与卖点模块。
+
+参考提炼：
+
+- 布局：45–55% 大留白，按“产品 → 主张 → 卖点 → 材质”递进。
+- 色彩：暖奶油 / 陶土红 / 炭黑 / 橄榄约 70 / 20 / 8 / 2。
+- 构图：只取错位、跨栏和尺度反差；不沿用圆弧网格或具体图形。
+- 产品：方向板使用与原图哈希完全一致的产品资产，仅裁切、缩放。
+
+三个方向：
+
+- A｜余温留白：最安静、克制、生活方式。
+- B｜陶土切面：新品冲击与几何张力最强。
+- C｜静音时序：功能扫读与电商效率最高。
+
+文件：
+
+- [方向选择板 PNG](<WORKDIR>/outputs/v0/creative-territories-board.png)
+- [完整拆解与 10 个假设](<WORKDIR>/outputs/v0/reference-deconstruction-and-territories.md)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+请回复选择 **A、B 或 C**。选定后我再完成 1 张首屏和 2 张卖点模块。

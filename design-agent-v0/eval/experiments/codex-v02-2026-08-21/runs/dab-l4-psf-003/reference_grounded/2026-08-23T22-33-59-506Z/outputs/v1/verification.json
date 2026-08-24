@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "version": "v1",
+  "verified_at": "2026-08-24T06:46:48+08:00",
+  "overall_status": "blocked",
+  "production_pdf_generated": false,
+  "production_pdf_reason": "The factory size interpretation is resolved, but the approved front reads 250 g while the requested back value is 200 g. A proof with contradictory net quantities was not generated, and no unrequested front edit was made. Existing source-quality and print-condition blockers also remain.",
+  "applied_delta": [
+    {
+      "id": "factory_page_size",
+      "status": "resolved",
+      "value": "125×205 mm Media/Bleed page including 3 mm bleed on every edge"
+    },
+    {
+      "id": "trim_size",
+      "status": "resolved",
+      "value": "119×199 mm"
+    },
+    {
+      "id": "requested_back_net_content",
+      "status": "recorded_not_applied",
+      "value": "200 g",
+      "reason": "Conflicts with the approved front value 250 g."
+    }
+  ],
+  "checks": [
+    {
+      "id": "bleed_arithmetic",
+      "status": "pass",
+      "method": "Subtract 3 mm from both edges of each dimension",
+      "result": "125-6=119 mm and 205-6=199 mm; confirmed Trim is 119×199 mm."
+    },
+    {
+      "id": "approved_source_identity",
+      "status": "pass",
+      "method": "SHA-256 digest and read-only handling",
+      "result": "The approved source remains unchanged.",
+      "evidence": "inputs/01-print_artwork.png",
+      "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f"
+    },
+    {
+      "id": "net_content_cross_panel_consistency",
+      "status": "blocked",
+      "method": "Visual comparison of approved front content with requested back content",
+      "result": "Approved front shows 250 g; requested back value is 200 g. The values cannot coexist on one proof.",
+      "evidence": "outputs/v1/approved-artwork_v1-net-content-conflict-annotated.png"
+    },
+    {
+      "id": "requested_delta_scope",
+      "status": "pass",
+      "method": "Artifact and state review",
+      "result": "No approved artwork pixels were changed. The 200 g request is recorded only in the delta review artifacts; unrelated regions remain untouched."
+    },
+    {
+      "id": "existing_source_quality",
+      "status": "blocked",
+      "method": "Carry-forward of verified v0 metadata",
+      "result": "The only source remains a 1376×768 px untagged RGB flattened presentation board with insufficient and incompatible per-panel geometry for the confirmed 119×199 mm trim."
+    },
+    {
+      "id": "existing_print_condition",
+      "status": "blocked",
+      "method": "Carry-forward of verified v0 print-condition review",
+      "result": "No factory CMYK ICC profile, total ink limit, or formal structural dieline was supplied."
+    },
+    {
+      "id": "v1_report_pdf_structure",
+      "status": "pass",
+      "method": "pdfinfo and direct PDF object inspection",
+      "result": "One A4 landscape page, 841.92×595.2 pt, containing one 3508×2480 DeviceCMYK image and no DeviceRGB image, equivalent to 300 dpi.",
+      "evidence": "outputs/v1/orbit-coffee_v1-delta-gate_NOT-FOR-PRODUCTION.pdf",
+      "sha256": "fdb90634cdf040068896d2bc1d1c776264c2ee13fe96ebbeda1cfb77cb0d1b7c"
+    },
+    {
+      "id": "v1_report_visual_render",
+      "status": "pass",
+      "method": "Poppler render at 150 dpi followed by visual inspection",
+      "result": "The final page renders legibly with no clipping, overlap, missing glyphs, or broken layout; non-production warning is prominent.",
+      "evidence": "outputs/v1/evidence/v1-delta-gate-page-1.png",
+      "sha256": "ced2c7337e89e2367a0896b518069818c161b5c7d499559ec0053e5425ffb891"
+    },
+    {
+      "id": "v0_folder_integrity",
+      "status": "pass",
+      "method": "SHA-256 manifest comparison after v1 creation",
+      "result": "All six files under outputs/v0 retain their prior hashes.",
+      "hashes": {
+        "outputs/v0/approved-artwork_preflight-annotated_v0.png": "fa6c46e08c2e486ea0919861ebf978b3915336c1d6dcd7e3647ee9781a6c706d",
+        "outputs/v0/evidence/preflight-report-page-1.png": "37297489290431d60830e61792bf25a40e880c46f82c163673c1eb8361748e9a",
+        "outputs/v0/evidence/preflight-report-page-2.png": "91c08b8ec1a5b1b6e9ce94d9c3811c788e01b698651abbe0336a27169dfbc871",
+        "outputs/v0/orbit-coffee_preflight-checklist_v0.md": "e8a93f0f86245780cc7af6866074a54b0147585acb8f066e8e6aea540b9e55f4",
+        "outputs/v0/orbit-coffee_preflight-report_v0_NOT-FOR-PRODUCTION.pdf": "ca675f2329601400d2785fd775d0b9cbc20924ba49fb74d432a1947ea5930f32",
+        "outputs/v0/verification.json": "c7144cdc2d996714c49a6d37a335b1eba6210b8ff59f4714aa6636f13b650834"
+      }
+    }
+  ],
+  "unresolved_blockers": [
+    "Confirm whether the approved front 250 g must also change to 200 g, or provide another exact cross-panel-consistent instruction.",
+    "Provide separated vector artwork or high-resolution per-side production masters matching the confirmed 119×199 mm trim and 125×205 mm bleed page.",
+    "Provide the factory CMYK ICC profile and total ink coverage requirement, or explicitly approve a named standard profile.",
+    "Provide the formal dieline with structural zones and front/back orientation."
+  ],
+  "evidence_paths": [
+    "inputs/01-print_artwork.png",
+    "outputs/v1/approved-artwork_v1-net-content-conflict-annotated.png",
+    "outputs/v1/orbit-coffee_v1-delta-gate_NOT-FOR-PRODUCTION.pdf",
+    "outputs/v1/evidence/v1-delta-gate-page-1.png"
+  ]
+}

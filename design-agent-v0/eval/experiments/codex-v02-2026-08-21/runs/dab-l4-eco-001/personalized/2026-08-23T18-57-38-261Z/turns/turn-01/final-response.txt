@@ -1,0 +1,12 @@
+已完成 v1 精修：锁定 A「城市通勤」，改为更克制光影、更多留白和更少文字；无金色，产品蓝绿色未改。v0 已验证保持不变。
+
+新增或更新：
+
+- [v1 方向精修板](/private<WORKDIR>/outputs/v1/selected-territory-urban-commute-v1.png)
+- [v1 场景情绪板](/private<WORKDIR>/outputs/v1/moodboards/territory-a-urban-commute-refined-v1.png)
+- [修改说明](/private<WORKDIR>/outputs/v1/selected-territory-urban-commute-v1.md)
+- [内置 imagegen 提示词](/private<WORKDIR>/outputs/v1/generation-prompt-v1.md)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+完整六张资产仍需真实侧面或背面挂环图；当前正面图看不到挂环，不能猜测其形状、位置或挂法。

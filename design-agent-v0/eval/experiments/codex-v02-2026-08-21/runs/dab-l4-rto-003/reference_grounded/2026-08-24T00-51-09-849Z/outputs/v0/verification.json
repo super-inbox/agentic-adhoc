@@ -1,0 +1,244 @@
+{
+  "schema": "candidate-verification/1.0",
+  "version": "v0",
+  "overall_result": "pass",
+  "checks": [
+    {
+      "check_id": "artifact-presence",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/change_set.json",
+        "outputs/project-state.json",
+        "outputs/v0/preview.png",
+        "outputs/v0/mori_aroma_poster_editable.svg",
+        "outputs/v0/assets/product_identity_metrics.json",
+        "outputs/v0/assets/product_cutout.png",
+        "outputs/v0/assets/mori_clay_texture.png"
+      ],
+      "details": "全部要求文件及其可编辑/来源资产存在。"
+    },
+    {
+      "check_id": "json-parse",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/change_set.json",
+        "outputs/project-state.json",
+        "outputs/v0/assets/product_identity_metrics.json"
+      ],
+      "details": "四个 JSON 文件均已被解析器成功读取。"
+    },
+    {
+      "check_id": "preview-dimensions",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/preview.png"
+      ],
+      "observed": {
+        "width": 1200,
+        "height": 1800,
+        "mode": "RGB"
+      }
+    },
+    {
+      "check_id": "approved-copy-verbatim",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/mori_aroma_poster_editable.svg",
+        "outputs/v0/preview.png"
+      ],
+      "observed": {
+        "让香气慢下来": true,
+        "安静融入每个夜晚": true,
+        "低噪运行": true,
+        "定时关闭": true,
+        "陶土触感": true,
+        "USB-C": true,
+        "6 h": true,
+        "280 ml": true
+      }
+    },
+    {
+      "check_id": "required-information-structure",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/design_document.json"
+      ],
+      "observed": {
+        "title": "让香气慢下来",
+        "selling_line": "安静融入每个夜晚",
+        "features": [
+          "低噪运行",
+          "定时关闭",
+          "陶土触感"
+        ],
+        "bottom_specs": [
+          "USB-C",
+          "6 h",
+          "280 ml"
+        ],
+        "reading_order": [
+          "group/brand",
+          "group/product",
+          "group/title",
+          "group/features",
+          "group/specs"
+        ]
+      }
+    },
+    {
+      "check_id": "reference-brand-and-icon-copy-removed",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/mori_aroma_poster_editable.svg"
+      ],
+      "observed": {
+        "forbidden_text_hits": [],
+        "svg_path_icon_count": 0,
+        "feature_image_object_count": 0
+      },
+      "details": "功能区仅含编号、文字、矩形色条与卡片；没有复用参考圆形图标。"
+    },
+    {
+      "check_id": "product-identity-pixel-preservation",
+      "result": "pass",
+      "evidence": [
+        "inputs/02-product_reference.png",
+        "outputs/v0/assets/product_cutout.png",
+        "outputs/v0/assets/product_identity_metrics.json",
+        "outputs/v0/design_document.json"
+      ],
+      "observed": {
+        "source_size": [
+          1024,
+          1024
+        ],
+        "crop_box_source": [
+          206,
+          289,
+          926,
+          765
+        ],
+        "cutout_size": [
+          720,
+          476
+        ],
+        "opaque_core_pixel_count": 219623,
+        "opaque_core_rgb_exact": true,
+        "sample_source_xy": [
+          512,
+          545
+        ],
+        "sample_source_rgb": [
+          139,
+          51,
+          39
+        ],
+        "sample_cutout_rgb": [
+          139,
+          51,
+          39
+        ],
+        "sample_exact": true
+      },
+      "details": "高置信度产品核心区像素与原图逐字节相同；仅对白底建立透明蒙版并裁切画布。"
+    },
+    {
+      "check_id": "product-alpha-and-linked-asset",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/assets/product_cutout.png",
+        "outputs/v0/mori_aroma_poster_editable.svg"
+      ],
+      "observed": {
+        "mode": "RGBA",
+        "size": [
+          720,
+          476
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "check_id": "editable-object-graph",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/mori_aroma_poster_editable.svg"
+      ],
+      "observed": {
+        "group_count": 6,
+        "object_count": 33,
+        "svg_named_groups": [
+          "group-background",
+          "group-brand",
+          "group-product",
+          "group-title",
+          "group-features",
+          "group-specs"
+        ]
+      },
+      "details": "JSON 对象图与 SVG 均保留命名分组、独立文字、几何对象和链接图像。"
+    },
+    {
+      "check_id": "brand-token-application",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "inputs/03-brand_guideline.png"
+      ],
+      "details": "主色为暖白、陶土红、炭黑；绿与浅蓝只用于局部线条/卡片强调。"
+    },
+    {
+      "check_id": "manual-visual-qa",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/preview.png"
+      ],
+      "details": "已在原始 1200×1800 分辨率检查：产品完整可辨、文字无重叠或溢出、三卡等宽、底部规格对齐、无参考花瓶或参考图标。"
+    }
+  ],
+  "artifact_hashes": {
+    "outputs/v0/preview.png": {
+      "sha256": "b62937753c7a23c3b7dc1b1745b090b6632d7b8903592f935c450ccb0ec4e44d",
+      "bytes": 1977223
+    },
+    "outputs/v0/design_document.json": {
+      "sha256": "e2bac6e8387e1ceb96e29316e3676004564e8d2bcc2a0d7dd6fb99353710a86f",
+      "bytes": 12885
+    },
+    "outputs/v0/change_set.json": {
+      "sha256": "9cb24777dcf36c88f3507b4a8ebe448d3607aae15418295051158853413d46c1",
+      "bytes": 3747
+    },
+    "outputs/v0/mori_aroma_poster_editable.svg": {
+      "sha256": "e38aac21f885bfed5438e340a0473ff535d83bc74d7bbe6d4555a64af95a01eb",
+      "bytes": 5720
+    },
+    "outputs/v0/assets/product_cutout.png": {
+      "sha256": "46ce045f40f06c3d5a48d88fd8d9138d2ede3ee93d6e8417cf9a79d51b5fb6e7",
+      "bytes": 384391
+    },
+    "outputs/v0/assets/mori_clay_texture.png": {
+      "sha256": "421ce27b20fd5c0d46941ccf76911f1bae9639ec753b019e74f85b68a068b27d",
+      "bytes": 3261241
+    }
+  },
+  "evidence_paths": [
+    "outputs/v0/assets/mori_clay_texture.png",
+    "outputs/v0/assets/product_cutout.png",
+    "outputs/v0/change_set.json",
+    "outputs/v0/design_document.json",
+    "outputs/v0/mori_aroma_poster_editable.svg",
+    "outputs/v0/preview.png"
+  ],
+  "unresolved_blockers": [],
+  "visual_review_scope": "1200×1800 final preview plus linked editable SVG/object graph",
+  "generated_asset_note": "背景肌理由 built-in image_gen 生成后保存到项目；产品图未交给生成模型重绘。"
+}

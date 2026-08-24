@@ -1,0 +1,14 @@
+Reading additional input from stdin...
+2026-08-24T00:24:06.388360Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-24T00:24:06.390604Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-24T00:24:06.419209Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:24:06.419222Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:24:07.640569Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:24:07.640588Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:31:26.773542Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 186ms)... turn_id=01a03127-2e65-7141-bc18-a385796556c6 retries=1 max_retries=5 sampling_error=stream disconnected before completion: Transport error: network error: error decoding response body
+2026-08-24T00:32:38.611130Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 411ms)... turn_id=01a03127-2e65-7141-bc18-a385796556c6 retries=2 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-24T00:33:00.790935Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (3/5 in 756ms)... turn_id=01a03127-2e65-7141-bc18-a385796556c6 retries=3 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-24T00:33:17.401792Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-24T00:33:29.469447Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (4/5 in 1.573s)... turn_id=01a03127-2e65-7141-bc18-a385796556c6 retries=4 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-24T00:33:56.430327Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (5/5 in 3.321s)... turn_id=01a03127-2e65-7141-bc18-a385796556c6 retries=5 max_retries=5 sampling_error=stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)
+2026-08-24T00:34:20.039013Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)

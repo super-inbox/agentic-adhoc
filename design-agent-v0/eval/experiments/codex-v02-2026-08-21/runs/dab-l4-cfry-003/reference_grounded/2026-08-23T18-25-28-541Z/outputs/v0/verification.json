@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "project": "Orbit Coffee packaging artwork",
+  "version": "v0",
+  "verified_at": "2026-08-24T00:00:00+08:00",
+  "status": "verified_with_unresolved_blockers",
+  "checks_performed": [
+    {
+      "check": "production_pdf_structure",
+      "result": "PASS",
+      "details": {
+        "page_count": 2,
+        "pages": [
+          {
+            "page": 1,
+            "role": "front",
+            "media_box_pt": [
+              0.0,
+              0.0,
+              357.1654,
+              583.937
+            ],
+            "trim_box_pt": [
+              8.5039,
+              8.5039,
+              348.6614,
+              575.4331
+            ],
+            "images": [
+              {
+                "width_px": 1488,
+                "height_px": 2433,
+                "color_space": "/DeviceCMYK"
+              }
+            ]
+          },
+          {
+            "page": 2,
+            "role": "back",
+            "media_box_pt": [
+              0.0,
+              0.0,
+              357.1654,
+              583.937
+            ],
+            "trim_box_pt": [
+              8.5039,
+              8.5039,
+              348.6614,
+              575.4331
+            ],
+            "images": [
+              {
+                "width_px": 1488,
+                "height_px": 2433,
+                "color_space": "/DeviceCMYK"
+              }
+            ]
+          }
+        ],
+        "all_page_images_device_cmyk": true,
+        "all_page_images_expected_pixels": true,
+        "output_intent_count": 1,
+        "font_resource_count": 0,
+        "transparency_resource_present": false
+      },
+      "evidence": [
+        "outputs/v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf"
+      ]
+    },
+    {
+      "check": "visual_render_proof",
+      "result": "PASS",
+      "details": "All proof, production, and preflight pages rendered through Poppler without errors for visual inspection.",
+      "evidence": [
+        "outputs/v0/evidence/preflight-report-1.png",
+        "outputs/v0/evidence/production-1.png",
+        "outputs/v0/evidence/production-2.png",
+        "outputs/v0/evidence/proof-1.png",
+        "outputs/v0/evidence/proof-2.png"
+      ]
+    },
+    {
+      "check": "page_geometry",
+      "result": "PASS",
+      "details": "Both production pages have 126 x 206 mm Media/Bleed boxes and 120 x 200 mm TrimBoxes inset 3 mm.",
+      "evidence": [
+        "outputs/v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf",
+        "outputs/v0/orbit-coffee_preflight_v0.json"
+      ]
+    },
+    {
+      "check": "color_and_resolution",
+      "result": "PARTIAL",
+      "details": "DeviceCMYK, ICC output intent, and nominal 300 ppi page rasters pass; original effective detail is approximately 104 ppi.",
+      "evidence": [
+        "outputs/v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf",
+        "outputs/v0/orbit-coffee_preflight_v0.json"
+      ]
+    },
+    {
+      "check": "identity_lock",
+      "result": "PASS",
+      "details": "Front central composition and brand wordmark were uniformly scaled without redraw, distortion, or repositioning; only non-art guide strokes and perimeter background were adapted.",
+      "evidence": [
+        "inputs/01-approved_print_artwork.png",
+        "outputs/v0/orbit-coffee_print-proof_v0.pdf"
+      ]
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v0/orbit-coffee_print-proof_v0.pdf": "ec223b094d500baa13e56bc467dad3be9188dcd5744fb75c48586099e625927d",
+    "outputs/v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf": "d813430ee3e1c43f6471e7dcde42009aa493fa3d353c638661760225f03c1498",
+    "outputs/v0/orbit-coffee_preflight-report_v0.pdf": "418db18c0708a18d0d84e89b0f7593f2dc7ae2ec571fb16770f08d5ad6eb2cf9",
+    "outputs/v0/orbit-coffee_preflight_v0.json": "0934f876c2c9c5f47f661fda22d4e9e620058c6e735ce2d1aa49bffe03fdb708"
+  },
+  "unresolved_blockers": [
+    {
+      "id": "native_resolution",
+      "severity": "blocking_final_release",
+      "detail": "The supplied flattened preview has about 104 ppi effective source detail at final width, below 300 ppi.",
+      "resolution": "Supply layered/vector or native 300 ppi final-size artwork, or explicitly approve the quality waiver after factory proof."
+    },
+    {
+      "id": "press_profile",
+      "severity": "factory_confirmation_required",
+      "detail": "No press-specific ICC/output condition was supplied.",
+      "resolution": "Factory to confirm Generic CMYK acceptance or provide the required ICC profile."
+    },
+    {
+      "id": "back_editability",
+      "severity": "soft_preference_unmet",
+      "detail": "The back information area is legible but flattened and not text-editable.",
+      "resolution": "Supply layered/vector back artwork for editable copy fields."
+    }
+  ]
+}

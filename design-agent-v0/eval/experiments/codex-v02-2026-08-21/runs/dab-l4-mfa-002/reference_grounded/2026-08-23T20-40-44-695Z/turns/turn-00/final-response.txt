@@ -1,0 +1,13 @@
+适配地图 v0 已提交：竖版采用延展重排，横版采用模块重构，现场横屏使用远距可读的三分区；母版未修改，也未机械居中裁切。
+
+visualize{"path":"/private/tmp/codex-v02-kANtHB/summer-form-adaptation-map.html"}
+
+批量输出暂未开始。请回复两项：准确的报名 URL，以及“地图通过”或具体修改意见。
+
+文件：
+
+- [适配地图预览](<WORKDIR>/outputs/v0/preview.png)
+- [可编辑对象图](<WORKDIR>/outputs/v0/design_document.json)
+- [对象级变更集](<WORKDIR>/outputs/v0/change_set.json)
+- [机器验证结果](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)

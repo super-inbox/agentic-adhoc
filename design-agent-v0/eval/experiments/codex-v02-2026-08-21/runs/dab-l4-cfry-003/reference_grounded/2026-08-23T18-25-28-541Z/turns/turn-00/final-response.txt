@@ -1,0 +1,12 @@
+已完成 v0，并通过 PDF 结构检查及 Poppler 渲染复核。
+
+- Print proof：:codex-file-citation{path="<WORKDIR>/outputs/v0/orbit-coffee_print-proof_v0.pdf" purpose="output"}
+- 生产 PDF：:codex-file-citation{path="<WORKDIR>/outputs/v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf" purpose="output"}
+- Preflight 报告：:codex-file-citation{path="<WORKDIR>/outputs/v0/orbit-coffee_preflight-report_v0.pdf" purpose="output"}
+- [结构化 preflight JSON](<WORKDIR>/outputs/v0/orbit-coffee_preflight_v0.json)
+- [verification.json](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+生产文件为正反两页：TrimBox 120×200 mm、四周 3 mm bleed、页面 126×206 mm、1488×2433 px、DeviceCMYK，并嵌入 Generic CMYK output intent。正面主体和品牌字样未拉伸或重绘，仅清除展示辅助线并延展外围底色。
+
+Preflight 当前为 `HOLD`：原始扁平 RGB 稿在成品宽度下只有约 104 ppi 的有效细节；此外尚缺工厂 ICC，背面文字也不是可编辑矢量。文件可用于受控工厂打样，但正式制版前应由工厂确认色彩配置，并补充高分辨率/分层源文件或批准清晰度豁免。

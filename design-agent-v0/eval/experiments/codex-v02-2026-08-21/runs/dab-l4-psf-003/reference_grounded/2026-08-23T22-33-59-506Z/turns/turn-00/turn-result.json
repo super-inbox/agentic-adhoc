@@ -1,0 +1,64 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T22:33:59.512Z",
+  "finished_at": "2026-08-23T22:42:25.498Z",
+  "latency_ms": 506019,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 48,
+    "command_count": 17,
+    "tool_count": 3,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a030c2-5e29-7ba3-9c51-6b9a7c07a6ff",
+    "usage": {
+      "input_tokens": 663322,
+      "cached_input_tokens": 581504,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 21012,
+      "reasoning_output_tokens": 8510
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 3390,
+      "sha256": "6d6a17716265d019d208769479a0b4b61139dc3f57a55ab31cef81bae2e0d354"
+    },
+    {
+      "filename": "v0/approved-artwork_preflight-annotated_v0.png",
+      "byte_size": 857610,
+      "sha256": "fa6c46e08c2e486ea0919861ebf978b3915336c1d6dcd7e3647ee9781a6c706d"
+    },
+    {
+      "filename": "v0/evidence/preflight-report-page-1.png",
+      "byte_size": 869443,
+      "sha256": "37297489290431d60830e61792bf25a40e880c46f82c163673c1eb8361748e9a"
+    },
+    {
+      "filename": "v0/evidence/preflight-report-page-2.png",
+      "byte_size": 301700,
+      "sha256": "91c08b8ec1a5b1b6e9ce94d9c3811c788e01b698651abbe0336a27169dfbc871"
+    },
+    {
+      "filename": "v0/orbit-coffee_preflight-checklist_v0.md",
+      "byte_size": 3502,
+      "sha256": "e8a93f0f86245780cc7af6866074a54b0147585acb8f066e8e6aea540b9e55f4"
+    },
+    {
+      "filename": "v0/orbit-coffee_preflight-report_v0_NOT-FOR-PRODUCTION.pdf",
+      "byte_size": 4696583,
+      "sha256": "ca675f2329601400d2785fd775d0b9cbc20924ba49fb74d432a1947ea5930f32"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4587,
+      "sha256": "c7144cdc2d996714c49a6d37a335b1eba6210b8ff59f4714aa6636f13b650834"
+    }
+  ]
+}

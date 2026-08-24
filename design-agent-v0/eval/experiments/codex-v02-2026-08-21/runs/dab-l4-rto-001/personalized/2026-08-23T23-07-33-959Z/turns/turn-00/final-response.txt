@@ -1,0 +1,22 @@
+v0 方向选择检查点已完成；尚未提前制作首屏与两张卖点模块。
+
+visualize{"path":"/private<WORKDIR>/outputs/v0/creative-territories-inline.html","mode":"wide","title":"陶土红香薰机 Creative Territories"}
+
+参考拆解结论：
+
+- 参考 1：提取大留白、单列阅读与“产品—主张—功能—材质”的停顿节奏。
+- 参考 2：采用暖纸白、炭黑、陶土红为主体，鼠尾草与雾蓝仅作低占比缓冲。
+- 参考 3：只采用“规则网格 + 单个越界大几何 + 非对称切点”的构图原则。
+- 产品：源文件保持一致，只允许等比缩放、裁切和背景语境调整。
+
+10 个假设为：切边慢弧、安静空场、跨模块弧线、陶土颗粒、错位陶层、原图微距裁片、大字编号替代图标、静音波形归零、未闭合计时轨迹、暖场冷边。
+
+三个方向：
+
+- A「慢弧场」：最贴合“让香气慢下来”，情绪与品牌记忆最强。
+- B「陶层编辑」：材质证据和电商阅读效率最好。
+- C「静时轨」：低噪与定时的功能识别最快、图形感最强。
+
+请回复 `A`、`B` 或 `C`；也可以附一句希望从另一方向保留的元素。选定后我再完成 1 张首屏和 2 张卖点模块。
+
+文件：[完整拆解与假设](/private<WORKDIR>/outputs/v0/reference-deconstruction-and-territories.md) · [方向板 PNG](/private<WORKDIR>/outputs/v0/creative-territories-board.png) · [验证记录](/private<WORKDIR>/outputs/v0/verification.json) · [项目状态](/private<WORKDIR>/outputs/project-state.json)

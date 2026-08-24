@@ -1,0 +1,8 @@
+Reading additional input from stdin...
+2026-08-23T21:05:06.662290Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T21:05:06.664422Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T21:05:06.692931Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T21:05:06.692946Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T21:05:08.090825Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T21:05:08.090843Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T21:11:15.225911Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit

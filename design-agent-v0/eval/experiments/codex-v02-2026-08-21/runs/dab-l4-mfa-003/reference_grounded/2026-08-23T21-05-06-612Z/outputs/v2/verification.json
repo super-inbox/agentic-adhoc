@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "project": "summer-form-channel-exports",
+  "version": "v2",
+  "verified_at": "2026-08-24T05:28:22+08:00",
+  "overall_status": "pass",
+  "scope": "email_delta_only",
+  "checks_performed": [
+    {
+      "check": "email_exact_dimensions_and_decode",
+      "result": "pass",
+      "detail": "PNG decoded successfully at exactly 600×240 pixels and has nonzero file size.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-email-600x240.png"
+      ]
+    },
+    {
+      "check": "email_visual_identity_and_copy_review",
+      "result": "pass",
+      "detail": "Manual visual review confirmed the approved cream/navy/coral geometry, paper texture, origami focal element, and exact visible copy: SUMMER FORM / Design Market / 08—10 AUG / BROOKLYN. The added height was used for layout breathing room without adding content.",
+      "evidence_paths": [
+        "outputs/v0/summer-form-email-600x200.png",
+        "inputs/01-approved_master.png",
+        "outputs/v2/summer-form-email-600x240.png"
+      ]
+    },
+    {
+      "check": "delta_isolation_for_earlier_deliverables",
+      "result": "pass",
+      "detail": "The v0 channel PNG hashes and the v1 website PNG hash still match their prior verification records. No earlier version folder was rewritten.",
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v1/verification.json",
+        "outputs/v0/summer-form-xhs-1080x1440.png",
+        "outputs/v0/summer-form-story-1080x1920.png",
+        "outputs/v0/summer-form-email-600x200.png",
+        "outputs/v0/summer-form-led-4096x1024.png",
+        "outputs/v1/summer-form-website-1440x560.png"
+      ]
+    },
+    {
+      "check": "manifest_completeness",
+      "result": "pass",
+      "detail": "The v2 manifest records all five current channels, referencing prior artifacts for unchanged channels and the new v2 email artifact.",
+      "evidence_paths": [
+        "outputs/v2/manifest.json"
+      ]
+    }
+  ],
+  "new_artifact": {
+    "channel": "邮件",
+    "path": "outputs/v2/summer-form-email-600x240.png",
+    "format": "png",
+    "pixel_width": 600,
+    "pixel_height": 240,
+    "bytes": 184795,
+    "sha256": "954176842186f6f3e39d113909e1dae4823514ec8e340459b460dc8c8b70f50b",
+    "dimension_check": "pass",
+    "nonzero_file_check": "pass",
+    "decode_check": "pass"
+  },
+  "unchanged_artifacts": [
+    {
+      "channel": "小红书",
+      "path": "outputs/v0/summer-form-xhs-1080x1440.png",
+      "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "Story",
+      "path": "outputs/v0/summer-form-story-1080x1920.png",
+      "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "旧邮件版本（保留）",
+      "path": "outputs/v0/summer-form-email-600x200.png",
+      "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "LED",
+      "path": "outputs/v0/summer-form-led-4096x1024.png",
+      "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0",
+      "unchanged_check": "pass"
+    },
+    {
+      "channel": "官网",
+      "path": "outputs/v1/summer-form-website-1440x560.png",
+      "sha256": "57e902355f1f863ae3ed93913e31c4ba9df5b2cddc01eda1a5840d248c81676a",
+      "unchanged_check": "pass"
+    }
+  ],
+  "unresolved_blockers": []
+}

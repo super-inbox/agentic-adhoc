@@ -1,0 +1,12 @@
+已完成 v1：保留大胆构图及产品位置，直线/封闭几何已替换为开放弧线和陶土颗粒。三张产品坐标均为 `[340, 214]`，v0 文件未改动。
+
+新增：
+
+- [组合详情页](/private<WORKDIR>/outputs/v1/detail-page-v1.png)
+- [首屏](/private<WORKDIR>/outputs/v1/hero-slow-arcs.png)
+- [低噪／定时模块](/private<WORKDIR>/outputs/v1/selling-module-low-noise-timer.png)
+- [陶土触感模块](/private<WORKDIR>/outputs/v1/selling-module-clay-touch.png)
+- [增量说明](/private<WORKDIR>/outputs/v1/design-delta.md)
+- [核验记录](/private<WORKDIR>/outputs/v1/verification.json)
+
+已更新：[project-state.json](/private<WORKDIR>/outputs/project-state.json)

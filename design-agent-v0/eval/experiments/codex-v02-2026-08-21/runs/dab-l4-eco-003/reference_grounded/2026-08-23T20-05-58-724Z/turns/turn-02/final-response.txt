@@ -1,0 +1,13 @@
+已完成 v2，仅校正产品红色表面：
+
+- 产品陶土红已由偏橙调整为源图的红褐陶土色。
+- 背景、文字位置及所有非产品像素保持 v1 不变，差异像素为 0。
+- v0、v1 文件夹未改动。
+
+新建或更新路径：
+
+- [v2 首屏成稿](/private<WORKDIR>/outputs/v2/taobao-first-screen-product-color-corrected-v2.png)
+- [v2 验证记录](/private<WORKDIR>/outputs/v2/verification.json)
+- [生成提示词](/private<WORKDIR>/outputs/v2/generation-prompt.md)
+- [颜色校正记录源码](/private<WORKDIR>/outputs/v2/product-color-source-calibration.c)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)

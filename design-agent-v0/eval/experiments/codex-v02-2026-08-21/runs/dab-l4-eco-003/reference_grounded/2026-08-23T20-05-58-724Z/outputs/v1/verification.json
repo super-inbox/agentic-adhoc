@@ -1,0 +1,78 @@
+{
+  "version": "v1",
+  "verified_at": "2026-08-24T04:21:36+08:00",
+  "candidate_path": "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+  "checks": [
+    {
+      "check": "file_integrity_and_canvas",
+      "status": "pass",
+      "method": "file and sips inspection",
+      "result": "Valid RGBA PNG, 1086 x 1448 pixels, portrait 3:4 ratio.",
+      "evidence_paths": [
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png"
+      ]
+    },
+    {
+      "check": "requested_first_screen_copy",
+      "status": "pass",
+      "method": "original-resolution visual inspection",
+      "result": "The first screen contains exactly the headline 让香气慢下来 and the retained benefit 低噪运行. 定时关闭 and 陶土触感 are absent from the first screen.",
+      "evidence_paths": [
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+        "outputs/v1/next-screen-content-handoff.md"
+      ]
+    },
+    {
+      "check": "product_position_and_background_lock",
+      "status": "pass",
+      "method": "decoded RGBA pixel comparison against approved v0",
+      "result": "Rows 0 through 1058 contain 0 mismatched pixels versus v0. The product position, product appearance, lighting, headline, and full upper background are pixel-identical.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png",
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+        "outputs/v1/pixel-lock-composite.c"
+      ]
+    },
+    {
+      "check": "footer_background_lock",
+      "status": "pass",
+      "method": "decoded RGBA pixel comparison against approved v0",
+      "result": "Rows 1386 through 1447 contain 0 mismatched pixels versus v0; the terracotta footer band is pixel-identical.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png",
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+        "outputs/v1/pixel-lock-composite.c"
+      ]
+    },
+    {
+      "check": "delta_scope",
+      "status": "pass",
+      "method": "pixel-region comparison and visual inspection",
+      "result": "All changes are confined to the existing benefits panel at rows 1059 through 1385. The two removed benefit groups and dividers are gone; the retained low-noise group is centered.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png",
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png"
+      ]
+    },
+    {
+      "check": "previous_version_immutability",
+      "status": "pass",
+      "method": "SHA-256 comparison with the recorded v0 hashes",
+      "result": "v0 final remains cf96ec1460be2d40a9fa013dfe82fe2909084129886246af8fc3af613de98a07; v0 draft remains 584f0f147e60c9ed41a0ddabbc43c0500bd29f2ba099fc21414a072325681225.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png",
+        "outputs/v0/taobao-first-screen-brand-led-draft-v0.png"
+      ]
+    },
+    {
+      "check": "final_checksum",
+      "status": "pass",
+      "method": "SHA-256",
+      "result": "f77dc530429e348d17255d04fb6609a0c2f7b99f03bd3f42a68ac81a816345db",
+      "evidence_paths": [
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

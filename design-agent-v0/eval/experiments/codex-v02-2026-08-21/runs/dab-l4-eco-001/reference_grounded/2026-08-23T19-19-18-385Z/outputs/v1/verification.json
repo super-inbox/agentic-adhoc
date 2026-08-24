@@ -1,0 +1,168 @@
+{
+  "schema_version": "0.2",
+  "version": "v1",
+  "stage": "selected_territory_visual_tone_refinement",
+  "status": "verified_requested_delta_with_final_asset_blocker",
+  "checks": [
+    {
+      "check": "version_isolation",
+      "result": "pass",
+      "details": "All new work is stored under outputs/v1. Files under outputs/v0 were not edited; the v0 board PNG still matches its recorded v0 SHA-256.",
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v0/creative-territories-board.png",
+        "outputs/v1/city-loop-refinement.md"
+      ]
+    },
+    {
+      "check": "client_territory_decision",
+      "result": "pass",
+      "details": "A 城市轻行 / 城市通勤 is recorded as the selected and locked Creative Territory; B and C were not revised.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/city-loop-visual-direction-v1.png"
+      ]
+    },
+    {
+      "check": "requested_delta_only",
+      "result": "pass",
+      "details": "The v1 changes are limited to premium tone, restrained lighting, increased whitespace, reduced decorative typography, removal of gold cues, and product-color preservation. The four A-territory scene hypotheses and all unrelated constraints remain unchanged.",
+      "evidence_paths": [
+        "outputs/v1/city-loop-refinement.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "check": "no_gold_treatment",
+      "result": "pass",
+      "details": "The generated scene and composed keyframe were visually inspected. No gold, metallic gold, yellow-gold, brass, bronze, copper, or gilded material was introduced; the material system is matte mineral plaster, honed light stone, charcoal architecture, and off-white canvas.",
+      "evidence_paths": [
+        "outputs/v1/assets/city-commute-minimal-background.png",
+        "outputs/v1/city-loop-premium-keyframe.png",
+        "outputs/v1/imagegen-prompt.txt"
+      ]
+    },
+    {
+      "check": "restrained_light_and_whitespace",
+      "result": "pass",
+      "details": "Visual QA confirms one soft morning-light direction, one restrained long shadow, low saturation, sparse props, and more than half of the frame functioning as quiet environment/negative space.",
+      "evidence_paths": [
+        "outputs/v1/city-loop-premium-keyframe.png",
+        "outputs/v1/city-loop-visual-direction-v1.png"
+      ]
+    },
+    {
+      "check": "reduced_decorative_typography",
+      "result": "pass",
+      "details": "The keyframe contains only one direction name and one approved claim. Decorative English subtitles, floating badges, and stacked labels were removed from the campaign image.",
+      "evidence_paths": [
+        "outputs/v1/city-loop-premium-keyframe.png"
+      ]
+    },
+    {
+      "check": "product_rgb_integrity",
+      "result": "pass",
+      "details": "Pixel comparison between inputs/01-product_master.png RGB and outputs/v1/assets/product-cutout-exact.png RGB returned max_abs_diff=0 and changed_pixels=0. Only a derived alpha channel was added; four transparent-canvas corner alpha values are all 0.",
+      "evidence_paths": [
+        "inputs/01-product_master.png",
+        "outputs/v1/assets/product-cutout-exact.png",
+        "outputs/v1/render_v1.py"
+      ]
+    },
+    {
+      "check": "product_identity_and_color_in_keyframe",
+      "result": "pass",
+      "details": "The supplied product was composited by alpha extraction, proportional scaling, placement, and a separate environmental contact shadow. No generative product redraw, recolor, shape change, interface change, logo change, or invented control was applied.",
+      "evidence_paths": [
+        "outputs/v1/city-loop-premium-keyframe.png",
+        "outputs/v1/render_v1.py"
+      ]
+    },
+    {
+      "check": "approved_claims_only",
+      "result": "pass",
+      "details": "The campaign keyframe uses the approved claim 一体式挂环 only. The direction board references only 12 小时续航, IPX4 防泼水, and 一体式挂环; no additional product parameter is introduced.",
+      "evidence_paths": [
+        "outputs/v1/city-loop-premium-keyframe.png",
+        "outputs/v1/city-loop-visual-direction-v1.png",
+        "outputs/v1/city-loop-refinement.md"
+      ]
+    },
+    {
+      "check": "no_invented_attachment_or_accessory",
+      "result": "pass",
+      "details": "No bag-to-product connection, hook, strap, carabiner, mounting bracket, or invented product accessory is shown. The plain canvas tote is a distant environment prop with no product connection.",
+      "evidence_paths": [
+        "outputs/v1/city-loop-premium-keyframe.png",
+        "outputs/v1/assets/city-commute-minimal-background.png"
+      ]
+    },
+    {
+      "check": "visual_render_quality",
+      "result": "pass",
+      "details": "The 1600 × 900 keyframe and 1600 × 1900 visual-direction board were inspected after rendering. Product silhouette is clear, the initial white-background halo was removed, the product sits on the stone ledge with a restrained contact shadow, typography is legible, and no content is clipped.",
+      "evidence_paths": [
+        "outputs/v1/city-loop-premium-keyframe.png",
+        "outputs/v1/city-loop-visual-direction-v1.png"
+      ]
+    },
+    {
+      "check": "final_six_asset_package",
+      "result": "blocked",
+      "details": "The final six-asset package was not produced because the supplied front-only master does not show the integrated hanging ring or its attachment method. Completing a literal bag-hanging selling-point asset would require inventing product structure, which is prohibited.",
+      "evidence_paths": [
+        "inputs/01-product_master.png",
+        "outputs/project-state.json",
+        "outputs/v1/city-loop-refinement.md"
+      ]
+    }
+  ],
+  "generation_provenance": {
+    "mode": "OpenAI built-in image generation tool",
+    "generated_component": "background environment only",
+    "reference_input": "inputs/02-brand_guideline.png",
+    "reference_role": "palette and brand-system style reference",
+    "product_generation_used": false,
+    "prompt_path": "outputs/v1/imagegen-prompt.txt",
+    "project_output_path": "outputs/v1/assets/city-commute-minimal-background.png"
+  },
+  "evidence_paths": [
+    "inputs/01-product_master.png",
+    "inputs/02-brand_guideline.png",
+    "outputs/v1/city-loop-refinement.md",
+    "outputs/v1/city-loop-premium-keyframe.png",
+    "outputs/v1/city-loop-visual-direction-v1.png",
+    "outputs/v1/assets/city-commute-minimal-background.png",
+    "outputs/v1/assets/product-cutout-exact.png",
+    "outputs/v1/imagegen-prompt.txt",
+    "outputs/v1/render_v1.py",
+    "outputs/project-state.json"
+  ],
+  "sha256": {
+    "inputs/01-product_master.png": "f1c9a2c5895dfef128d4a52de1025bf8afad7cf59ca4bff0c04d5a653b392406",
+    "inputs/02-brand_guideline.png": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53",
+    "outputs/v0/creative-territories.md": "1826b6527eb58651007d42bd31c179e24e99175a64272133341610309d347754",
+    "outputs/v0/creative-territories-board.svg": "b62c3d7703946875fb86d275b46715242c72252456226c7efe064e40b7f32ca4",
+    "outputs/v0/creative-territories-board.png": "80ce20b584fcd8557b345400398cb58ee0bd27c48a59b85d74dd3218d58912b3",
+    "outputs/v0/verification.json": "5f1ea940234ce1cddd15d67e7b32b90f67b4884c9e4675d3554885fd72a44669",
+    "outputs/v1/assets/city-commute-minimal-background.png": "50faa4685eb3b17ca5d32e7c37b1587c5b06b8708ab90d730b3505d5a2ac07d5",
+    "outputs/v1/assets/product-cutout-exact.png": "b45e2eabbd231f4e89d75c25eef4a0147dc8d2b5bab5ffc7abc8e3153206fb50",
+    "outputs/v1/city-loop-premium-keyframe.png": "0989e4d9704f2033f9063dbcc8286c281075a4881371abb1da46e95cd07b609f",
+    "outputs/v1/city-loop-visual-direction-v1.png": "119358981e8989dcce8aafc904620496ad9b1031df01b690bcdf7f59b2c187b2",
+    "outputs/v1/city-loop-refinement.md": "035b25a9ff98eba218c00db0f3e3a5889d9746f5b509915970a34e52f975ba1a",
+    "outputs/v1/imagegen-prompt.txt": "6ea65fb1f07737ce5c6ccf49b1ff15a33276a2f5e3fabcfb30dcf2c442a1a774",
+    "outputs/v1/render_v1.py": "86ea6d9040dcefa6cce16bd3d26fb0df4fa5e676f7377f7e35ef4fea3cf46c08"
+  },
+  "unresolved_blockers": [
+    {
+      "blocker": "The integrated hanging ring and exact bag-attachment method are not visible in the supplied front master.",
+      "impact": "The literal 一体式挂环 selling-point image and therefore the complete six-asset final package cannot be produced while preserving exact product identity.",
+      "resolution": "Provide an official side/back/transparent product image or CAD showing the hanging ring, or explicitly approve a copy-led alternative that does not show the connection."
+    },
+    {
+      "blocker": "The brand board is raster-only and does not include production color values, vector logo, or licensed font files.",
+      "impact": "The current visual direction is brand-grounded but production-exact brand token verification remains unavailable.",
+      "resolution": "Provide source brand assets if exact production reproduction is required."
+    }
+  ]
+}

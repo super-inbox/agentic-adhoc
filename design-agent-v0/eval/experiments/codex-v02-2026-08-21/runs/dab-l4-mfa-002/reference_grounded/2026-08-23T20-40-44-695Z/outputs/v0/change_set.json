@@ -1,0 +1,403 @@
+{
+  "schema": "object-change-set/v1",
+  "changeSetId": "summer-form-adaptation-plan-v0",
+  "baseInputId": "campaign-master",
+  "baseArtifact": "inputs/01-approved_master.png",
+  "scope": "proposal_only",
+  "status": "awaiting_client_approval",
+  "approvedMasterMutation": false,
+  "summary": "Seven channel-specific layout plans. No final channel artwork has been generated and no approved-master pixels have been edited.",
+  "globalPreservationRules": [
+    {
+      "objectId": "approved-master",
+      "operation": "preserve",
+      "region": "entire_source",
+      "policy": "locked_no_edits"
+    },
+    {
+      "objectId": "campaign-visual-concept",
+      "operation": "preserve",
+      "properties": [
+        "navy_coral_offwhite_palette",
+        "thin_blue_modular_grid",
+        "circle_arc_geometry",
+        "folded_paper_sculpture_focal_object",
+        "bold_geometric_title_hierarchy"
+      ]
+    },
+    {
+      "objectId": "registration-url",
+      "operation": "reserve_slot",
+      "value": null,
+      "status": "blocked_missing_client_input",
+      "appliesTo": "all_channels"
+    }
+  ],
+  "channelChanges": [
+    {
+      "channelId": "xhs",
+      "targetCanvas": {
+        "aspectRatio": "3:4",
+        "proposedPixels": [1080, 1440]
+      },
+      "status": "planned_not_applied",
+      "operations": [
+        {
+          "objectId": "canvas",
+          "operation": "extend_and_recompose",
+          "before": "approved_master_bounds",
+          "after": "3:4"
+        },
+        {
+          "objectId": "title",
+          "operation": "reflow_and_anchor",
+          "afterNormalizedBbox": [0.08, 0.08, 0.84, 0.22],
+          "content": "SUMMER FORM",
+          "contentLocked": true
+        },
+        {
+          "objectId": "folded-paper-sculpture",
+          "operation": "reposition_scale",
+          "afterNormalizedBbox": [0.08, 0.43, 0.4, 0.31],
+          "identityLocked": true
+        },
+        {
+          "objectId": "event-info",
+          "operation": "group_and_reposition",
+          "afterNormalizedBbox": [0.52, 0.46, 0.4, 0.22],
+          "children": [
+            "date",
+            "location"
+          ],
+          "contentLocked": true
+        },
+        {
+          "objectId": "registration-url",
+          "operation": "reserve_text_slot",
+          "afterNormalizedBbox": [0.08, 0.87, 0.84, 0.07],
+          "blocked": true
+        },
+        {
+          "objectId": "decorative-grid",
+          "operation": "reduce_density",
+          "constraint": "retain_grid_and_arc_language"
+        }
+      ]
+    },
+    {
+      "channelId": "instagram",
+      "targetCanvas": {
+        "aspectRatio": "4:5",
+        "proposedPixels": [1080, 1350]
+      },
+      "status": "planned_not_applied",
+      "operations": [
+        {
+          "objectId": "canvas",
+          "operation": "proportional_rebuild",
+          "after": "4:5"
+        },
+        {
+          "objectId": "title",
+          "operation": "preserve_hierarchy_reposition_minor",
+          "afterNormalizedBbox": [0.1, 0.12, 0.8, 0.22],
+          "contentLocked": true
+        },
+        {
+          "objectId": "folded-paper-sculpture",
+          "operation": "preserve_scale_reposition_minor",
+          "afterNormalizedBbox": [0.08, 0.48, 0.4, 0.29],
+          "identityLocked": true
+        },
+        {
+          "objectId": "event-info",
+          "operation": "reposition_minor",
+          "afterNormalizedBbox": [0.51, 0.48, 0.42, 0.22],
+          "children": [
+            "date",
+            "location"
+          ],
+          "contentLocked": true
+        },
+        {
+          "objectId": "registration-url",
+          "operation": "reserve_bottom_info_band",
+          "afterNormalizedBbox": [0.08, 0.88, 0.84, 0.06],
+          "blocked": true
+        },
+        {
+          "objectId": "decorative-grid",
+          "operation": "preserve_proportion"
+        }
+      ]
+    },
+    {
+      "channelId": "story",
+      "targetCanvas": {
+        "aspectRatio": "9:16",
+        "proposedPixels": [1080, 1920]
+      },
+      "status": "planned_not_applied",
+      "operations": [
+        {
+          "objectId": "canvas",
+          "operation": "extend_vertical",
+          "after": "9:16"
+        },
+        {
+          "objectId": "ui-safe-area",
+          "operation": "add_constraint",
+          "after": {
+            "topPercent": 12,
+            "bottomPercent": 12,
+            "sidePercent": 7
+          }
+        },
+        {
+          "objectId": "title",
+          "operation": "reflow_and_anchor",
+          "afterNormalizedBbox": [0.09, 0.14, 0.82, 0.18],
+          "contentLocked": true
+        },
+        {
+          "objectId": "event-info",
+          "operation": "stack_center_band",
+          "afterNormalizedBbox": [0.1, 0.39, 0.8, 0.16],
+          "children": [
+            "date",
+            "location"
+          ],
+          "contentLocked": true
+        },
+        {
+          "objectId": "folded-paper-sculpture",
+          "operation": "scale_down_reposition",
+          "afterNormalizedBbox": [0.18, 0.6, 0.64, 0.18],
+          "identityLocked": true
+        },
+        {
+          "objectId": "registration-url",
+          "operation": "reserve_above_bottom_safe_area",
+          "afterNormalizedBbox": [0.1, 0.82, 0.8, 0.06],
+          "blocked": true
+        }
+      ]
+    },
+    {
+      "channelId": "wechat",
+      "targetCanvas": {
+        "aspectRatio": "2.35:1",
+        "proposedPixels": [1880, 800]
+      },
+      "status": "planned_not_applied",
+      "operations": [
+        {
+          "objectId": "canvas",
+          "operation": "rebuild_landscape_modules",
+          "after": "2.35:1",
+          "explicitlyNot": "center_crop"
+        },
+        {
+          "objectId": "title",
+          "operation": "two_line_left_anchor",
+          "afterNormalizedBbox": [0.04, 0.17, 0.29, 0.62],
+          "contentLocked": true
+        },
+        {
+          "objectId": "folded-paper-sculpture",
+          "operation": "center_reposition",
+          "afterNormalizedBbox": [0.36, 0.15, 0.22, 0.7],
+          "identityLocked": true
+        },
+        {
+          "objectId": "event-info",
+          "operation": "right_column",
+          "afterNormalizedBbox": [0.62, 0.13, 0.34, 0.38],
+          "children": [
+            "date",
+            "location"
+          ],
+          "contentLocked": true
+        },
+        {
+          "objectId": "registration-url",
+          "operation": "reserve_right_bottom_slot",
+          "afterNormalizedBbox": [0.62, 0.67, 0.34, 0.16],
+          "blocked": true
+        },
+        {
+          "objectId": "decorative-grid",
+          "operation": "retain_key_lines_and_arcs_only"
+        }
+      ]
+    },
+    {
+      "channelId": "meta",
+      "targetCanvas": {
+        "aspectRatio": "1200:628",
+        "pixels": [1200, 628]
+      },
+      "status": "planned_not_applied",
+      "operations": [
+        {
+          "objectId": "canvas",
+          "operation": "rebuild_landscape_modules",
+          "afterPixels": [1200, 628],
+          "explicitlyNot": "center_crop"
+        },
+        {
+          "objectId": "title",
+          "operation": "left_top_anchor",
+          "afterNormalizedBbox": [0.05, 0.12, 0.43, 0.28],
+          "contentLocked": true
+        },
+        {
+          "objectId": "folded-paper-sculpture",
+          "operation": "left_bottom_reposition",
+          "afterNormalizedBbox": [0.11, 0.49, 0.3, 0.36],
+          "identityLocked": true
+        },
+        {
+          "objectId": "event-info",
+          "operation": "right_column_expand",
+          "afterNormalizedBbox": [0.55, 0.16, 0.4, 0.35],
+          "children": [
+            "date",
+            "location"
+          ],
+          "contentLocked": true
+        },
+        {
+          "objectId": "registration-url",
+          "operation": "reserve_right_bottom_slot",
+          "afterNormalizedBbox": [0.55, 0.69, 0.4, 0.13],
+          "blocked": true
+        },
+        {
+          "objectId": "decorative-grid",
+          "operation": "reduce_nonessential_blocks"
+        }
+      ]
+    },
+    {
+      "channelId": "web",
+      "targetCanvas": {
+        "aspectRatio": "16:9",
+        "proposedPixels": [1920, 1080]
+      },
+      "status": "planned_not_applied",
+      "operations": [
+        {
+          "objectId": "canvas",
+          "operation": "rebuild_three_zone_landscape",
+          "after": "16:9",
+          "explicitlyNot": "center_crop"
+        },
+        {
+          "objectId": "title",
+          "operation": "left_anchor",
+          "afterNormalizedBbox": [0.05, 0.16, 0.31, 0.31],
+          "contentLocked": true
+        },
+        {
+          "objectId": "folded-paper-sculpture",
+          "operation": "center_reposition",
+          "afterNormalizedBbox": [0.37, 0.23, 0.25, 0.54],
+          "identityLocked": true
+        },
+        {
+          "objectId": "event-info",
+          "operation": "right_column",
+          "afterNormalizedBbox": [0.66, 0.18, 0.29, 0.34],
+          "children": [
+            "date",
+            "location"
+          ],
+          "contentLocked": true
+        },
+        {
+          "objectId": "registration-url",
+          "operation": "reserve_right_bottom_slot",
+          "afterNormalizedBbox": [0.66, 0.69, 0.29, 0.12],
+          "blocked": true
+        },
+        {
+          "objectId": "decorative-grid",
+          "operation": "preserve_more_background_grid"
+        }
+      ]
+    },
+    {
+      "channelId": "event-wall",
+      "targetCanvas": {
+        "aspectRatio": "32:9",
+        "pixels": [3840, 1080]
+      },
+      "status": "planned_not_applied",
+      "operations": [
+        {
+          "objectId": "canvas",
+          "operation": "rebuild_ultrawide_three_zone",
+          "afterPixels": [3840, 1080],
+          "explicitlyNot": "center_crop"
+        },
+        {
+          "objectId": "distance-readability",
+          "operation": "add_constraint",
+          "after": {
+            "titleMinCanvasHeightPercent": 35,
+            "dateLocationMinCanvasHeightPercent": 12,
+            "urlMinCanvasHeightPercent": 5,
+            "sideSafeAreaPercent": 5
+          }
+        },
+        {
+          "objectId": "title",
+          "operation": "left_zone_large_scale",
+          "afterNormalizedBbox": [0.05, 0.19, 0.29, 0.45],
+          "contentLocked": true
+        },
+        {
+          "objectId": "folded-paper-sculpture",
+          "operation": "center_zone_reposition",
+          "afterNormalizedBbox": [0.39, 0.12, 0.19, 0.76],
+          "identityLocked": true
+        },
+        {
+          "objectId": "event-info",
+          "operation": "right_zone_large_scale",
+          "afterNormalizedBbox": [0.63, 0.17, 0.32, 0.39],
+          "children": [
+            "date",
+            "location"
+          ],
+          "contentLocked": true
+        },
+        {
+          "objectId": "registration-url",
+          "operation": "reserve_right_zone_slot",
+          "afterNormalizedBbox": [0.63, 0.67, 0.32, 0.15],
+          "blocked": true
+        },
+        {
+          "objectId": "decorative-grid",
+          "operation": "span_background_with_low_density"
+        }
+      ]
+    }
+  ],
+  "unresolvedBlockers": [
+    {
+      "id": "missing-registration-url",
+      "severity": "blocking",
+      "requiredFrom": "client",
+      "resolution": "Provide the exact registration URL before production artwork is generated."
+    },
+    {
+      "id": "adaptation-map-approval",
+      "severity": "blocking_checkpoint",
+      "requiredFrom": "client",
+      "resolution": "Approve or revise the proposed channel tradeoffs before batch output."
+    }
+  ]
+}

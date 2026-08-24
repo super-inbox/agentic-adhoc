@@ -1,0 +1,12 @@
+Reading additional input from stdin...
+2026-08-24T00:51:10.028463Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-24T00:51:10.035277Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-24T00:51:10.085921Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:51:10.085942Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:51:14.049440Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:51:14.049462Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:57:12.965128Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-24T01:06:27.245391Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-24T01:12:20.691156Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-24T01:12:34.458483Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-24T01:12:40.005415Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

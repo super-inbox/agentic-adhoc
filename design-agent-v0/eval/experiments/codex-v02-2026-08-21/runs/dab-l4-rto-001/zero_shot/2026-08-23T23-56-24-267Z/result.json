@@ -1,0 +1,363 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-RTO-001@zero_shot",
+  "base_brief_id": "DAB-L4-RTO-001",
+  "context_condition": "zero_shot",
+  "category": "reference_to_original",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "creative_exploration",
+    "context_ablation"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T23:56:24.272Z",
+  "finished_at": "2026-08-24T00:24:05.577Z",
+  "latency_ms": 1661305,
+  "intended_turns": 2,
+  "completed_turns": 2,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a0310d-d180-70e3-9a35-7907758f4e72",
+  "input_assets": [
+    {
+      "input_id": "product",
+      "asset_id": "detail-page-terra-diffuser-product",
+      "role": "product_reference",
+      "reference_role": "product_identity",
+      "identity_policy": "preserve_exact",
+      "filename": "01-product_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/terra-diffuser-product.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    }
+  ],
+  "input_context_ids": [
+    "product",
+    "copy"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 4921,
+      "sha256": "f6b16b769d68867de055f174ad3483b236482e6a5dda84bbc637f718521963b4"
+    },
+    {
+      "filename": "v0/creative-territories-board.png",
+      "byte_size": 448890,
+      "sha256": "23bc75f116930eb0dfe5d84b86196155451e1910763185b48197ff9b64a6ee5f"
+    },
+    {
+      "filename": "v0/creative-territories.md",
+      "byte_size": 4405,
+      "sha256": "adf5141f026f854c6fa115186732656c2ab01a80a53bac929710dc0c12569f4a"
+    },
+    {
+      "filename": "v0/creative-territory-selector.fragment.html.template",
+      "byte_size": 8164,
+      "sha256": "3c0ce2bb50cfd90c89feaa37284ef0f21aa15e5e44d7ba859d65ba129620367e"
+    },
+    {
+      "filename": "v0/creative-territory-selector.html",
+      "byte_size": 487966,
+      "sha256": "2f1f0a6db91ab1c7feeb8ac8574f0942b11be945cd12b725c6f19a7dfd803309"
+    },
+    {
+      "filename": "v0/product-cutout-preserve-identity.png",
+      "byte_size": 359846,
+      "sha256": "7139b5b8749e4f4481a5b6473b61e197cac4f51a2c02bb6fafd7cd5d71d45d3d"
+    },
+    {
+      "filename": "v0/reference-deconstruction.md",
+      "byte_size": 1794,
+      "sha256": "a3014d66398d64279a6012b0e049fa62cdc7dba07313f2bb0a6f9fd252001028"
+    },
+    {
+      "filename": "v0/reference-deconstruction.png",
+      "byte_size": 490249,
+      "sha256": "3af089c392004061401b720f0d3631bf47800ff1c3e12dca3755dc1bc2575cc8"
+    },
+    {
+      "filename": "v0/render_direction_boards.py",
+      "byte_size": 13003,
+      "sha256": "b922555347fbf22f089f75b832fa8ea8596ed796960e53f655f9341145eb6fdf"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5272,
+      "sha256": "2386d6448ada384271a9cba63a17c11675a9390f43d1d9686ef5bb0e4ac5ae90"
+    },
+    {
+      "filename": "v1/design-delta.md",
+      "byte_size": 1128,
+      "sha256": "c2a72fe62a8da4b57ad939e2943c221b2aca336faf242bb5b83550a3758884b7"
+    },
+    {
+      "filename": "v1/detail-page-v1.png",
+      "byte_size": 1961492,
+      "sha256": "c48404d6b2344fceb05e2e0017770aa68f39efb557b00a7e145021aeb2d1103a"
+    },
+    {
+      "filename": "v1/hero-slow-arcs.png",
+      "byte_size": 645457,
+      "sha256": "6dd1ae851e771626c00ccf08e8e604889ed159912f60cdd695708904aed770d2"
+    },
+    {
+      "filename": "v1/render_detail_page_v1.py",
+      "byte_size": 10120,
+      "sha256": "02f692d27c47943e3a913e68bd29cae21b7fa8df92952035abffe3cfbc010296"
+    },
+    {
+      "filename": "v1/render-metadata.json",
+      "byte_size": 1998,
+      "sha256": "4745683cda1eb7555742aee8baf62b646cca9de9e77ad83a21283dc94ba743ed"
+    },
+    {
+      "filename": "v1/selling-module-clay-touch.png",
+      "byte_size": 667912,
+      "sha256": "190f5e85c2956088ba3be0d039789d2d5143a3a4b99cd95db105f7f7720c92c0"
+    },
+    {
+      "filename": "v1/selling-module-low-noise-timer.png",
+      "byte_size": 645340,
+      "sha256": "ae9b793e6dde6fd980d96566027ffe8cc208354242d8e8ef12f7488b83b36daa"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 6531,
+      "sha256": "e2c20a3c9172f168422560d164a4fb4008d68b000d3a4391f2355b36e43e7765"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T23:56:24.272Z",
+      "finished_at": "2026-08-24T00:11:34.453Z",
+      "latency_ms": 910196,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 67,
+        "command_count": 21,
+        "tool_count": 8,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a0310d-d180-70e3-9a35-7907758f4e72",
+        "usage": {
+          "input_tokens": 1866044,
+          "cached_input_tokens": 1745792,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 34876,
+          "reasoning_output_tokens": 15856
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 2949,
+          "sha256": "0a0e8721d55eaea2fe01cea323078541e32054fa2949953c6f4d01bd6074be5f"
+        },
+        {
+          "filename": "v0/creative-territories-board.png",
+          "byte_size": 448890,
+          "sha256": "23bc75f116930eb0dfe5d84b86196155451e1910763185b48197ff9b64a6ee5f"
+        },
+        {
+          "filename": "v0/creative-territories.md",
+          "byte_size": 4405,
+          "sha256": "adf5141f026f854c6fa115186732656c2ab01a80a53bac929710dc0c12569f4a"
+        },
+        {
+          "filename": "v0/creative-territory-selector.fragment.html.template",
+          "byte_size": 8164,
+          "sha256": "3c0ce2bb50cfd90c89feaa37284ef0f21aa15e5e44d7ba859d65ba129620367e"
+        },
+        {
+          "filename": "v0/creative-territory-selector.html",
+          "byte_size": 487966,
+          "sha256": "2f1f0a6db91ab1c7feeb8ac8574f0942b11be945cd12b725c6f19a7dfd803309"
+        },
+        {
+          "filename": "v0/product-cutout-preserve-identity.png",
+          "byte_size": 359846,
+          "sha256": "7139b5b8749e4f4481a5b6473b61e197cac4f51a2c02bb6fafd7cd5d71d45d3d"
+        },
+        {
+          "filename": "v0/reference-deconstruction.md",
+          "byte_size": 1794,
+          "sha256": "a3014d66398d64279a6012b0e049fa62cdc7dba07313f2bb0a6f9fd252001028"
+        },
+        {
+          "filename": "v0/reference-deconstruction.png",
+          "byte_size": 490249,
+          "sha256": "3af089c392004061401b720f0d3631bf47800ff1c3e12dca3755dc1bc2575cc8"
+        },
+        {
+          "filename": "v0/render_direction_boards.py",
+          "byte_size": 13003,
+          "sha256": "b922555347fbf22f089f75b832fa8ea8596ed796960e53f655f9341145eb6fdf"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 5272,
+          "sha256": "2386d6448ada384271a9cba63a17c11675a9390f43d1d9686ef5bb0e4ac5ae90"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-24T00:11:34.469Z",
+      "finished_at": "2026-08-24T00:24:05.533Z",
+      "latency_ms": 751093,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 48,
+        "command_count": 13,
+        "tool_count": 7,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a0310d-d180-70e3-9a35-7907758f4e72",
+        "usage": {
+          "input_tokens": 5105215,
+          "cached_input_tokens": 4915712,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 59566,
+          "reasoning_output_tokens": 27617
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 4921,
+          "sha256": "f6b16b769d68867de055f174ad3483b236482e6a5dda84bbc637f718521963b4"
+        },
+        {
+          "filename": "v0/creative-territories-board.png",
+          "byte_size": 448890,
+          "sha256": "23bc75f116930eb0dfe5d84b86196155451e1910763185b48197ff9b64a6ee5f"
+        },
+        {
+          "filename": "v0/creative-territories.md",
+          "byte_size": 4405,
+          "sha256": "adf5141f026f854c6fa115186732656c2ab01a80a53bac929710dc0c12569f4a"
+        },
+        {
+          "filename": "v0/creative-territory-selector.fragment.html.template",
+          "byte_size": 8164,
+          "sha256": "3c0ce2bb50cfd90c89feaa37284ef0f21aa15e5e44d7ba859d65ba129620367e"
+        },
+        {
+          "filename": "v0/creative-territory-selector.html",
+          "byte_size": 487966,
+          "sha256": "2f1f0a6db91ab1c7feeb8ac8574f0942b11be945cd12b725c6f19a7dfd803309"
+        },
+        {
+          "filename": "v0/product-cutout-preserve-identity.png",
+          "byte_size": 359846,
+          "sha256": "7139b5b8749e4f4481a5b6473b61e197cac4f51a2c02bb6fafd7cd5d71d45d3d"
+        },
+        {
+          "filename": "v0/reference-deconstruction.md",
+          "byte_size": 1794,
+          "sha256": "a3014d66398d64279a6012b0e049fa62cdc7dba07313f2bb0a6f9fd252001028"
+        },
+        {
+          "filename": "v0/reference-deconstruction.png",
+          "byte_size": 490249,
+          "sha256": "3af089c392004061401b720f0d3631bf47800ff1c3e12dca3755dc1bc2575cc8"
+        },
+        {
+          "filename": "v0/render_direction_boards.py",
+          "byte_size": 13003,
+          "sha256": "b922555347fbf22f089f75b832fa8ea8596ed796960e53f655f9341145eb6fdf"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 5272,
+          "sha256": "2386d6448ada384271a9cba63a17c11675a9390f43d1d9686ef5bb0e4ac5ae90"
+        },
+        {
+          "filename": "v1/design-delta.md",
+          "byte_size": 1128,
+          "sha256": "c2a72fe62a8da4b57ad939e2943c221b2aca336faf242bb5b83550a3758884b7"
+        },
+        {
+          "filename": "v1/detail-page-v1.png",
+          "byte_size": 1961492,
+          "sha256": "c48404d6b2344fceb05e2e0017770aa68f39efb557b00a7e145021aeb2d1103a"
+        },
+        {
+          "filename": "v1/hero-slow-arcs.png",
+          "byte_size": 645457,
+          "sha256": "6dd1ae851e771626c00ccf08e8e604889ed159912f60cdd695708904aed770d2"
+        },
+        {
+          "filename": "v1/render_detail_page_v1.py",
+          "byte_size": 10120,
+          "sha256": "02f692d27c47943e3a913e68bd29cae21b7fa8df92952035abffe3cfbc010296"
+        },
+        {
+          "filename": "v1/render-metadata.json",
+          "byte_size": 1998,
+          "sha256": "4745683cda1eb7555742aee8baf62b646cca9de9e77ad83a21283dc94ba743ed"
+        },
+        {
+          "filename": "v1/selling-module-clay-touch.png",
+          "byte_size": 667912,
+          "sha256": "190f5e85c2956088ba3be0d039789d2d5143a3a4b99cd95db105f7f7720c92c0"
+        },
+        {
+          "filename": "v1/selling-module-low-noise-timer.png",
+          "byte_size": 645340,
+          "sha256": "ae9b793e6dde6fd980d96566027ffe8cc208354242d8e8ef12f7488b83b36daa"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6531,
+          "sha256": "e2c20a3c9172f168422560d164a4fb4008d68b000d3a4391f2355b36e43e7765"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 6971259,
+    "cached_input_tokens": 6661504,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 94442,
+    "reasoning_output_tokens": 43473
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

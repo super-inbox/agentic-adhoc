@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "tool_mode": "built-in image generation/editing",
+  "inputs": [
+    {
+      "path": "outputs/v0/summer-form-email-600x200.png",
+      "role": "previously completed email banner and edit target"
+    },
+    {
+      "path": "inputs/01-approved_master.png",
+      "role": "approved master and identity reference"
+    }
+  ],
+  "selected_prompt": {
+    "use_case": "ads-marketing",
+    "asset_type": "Email campaign banner, exact 5:2 composition for 600×240 export",
+    "primary_request": "Re-layout only the email banner from 3:1 to 5:2, using the added vertical space to improve breathing room while preserving the existing approved composition and campaign identity.",
+    "composition": "Headline left, origami focal point center, event details right; full-bleed and safe-margin aware.",
+    "text_verbatim": [
+      "SUMMER FORM",
+      "Design Market",
+      "08—10 AUG",
+      "BROOKLYN"
+    ],
+    "constraints": [
+      "Change only the email layout and canvas height.",
+      "Preserve exact spelling and punctuation; each text string appears once.",
+      "Preserve the approved palette, geometry, paper texture, origami focal element, and hierarchy.",
+      "No new copy, CTA, watermark, environmental mockup, logo replacement, or unrelated redesign."
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+已完成 v1 城市通勤套图：3 张电商方图、3 张社媒竖图。整体改为冷灰克制光影、更多留白、每张最多一条批准文案；未使用金色，产品未重绘或改色。
+
+- [六张联页预览](</private<WORKDIR>/outputs/v1/contact-sheet.jpg>)
+- 电商：[主图](</private<WORKDIR>/outputs/v1/ecommerce/ecom-01-urban-entry-hero.png>) · [12 小时](</private<WORKDIR>/outputs/v1/ecommerce/ecom-02-cafe-12h.png>) · [IPX4](</private<WORKDIR>/outputs/v1/ecommerce/ecom-03-riverside-ipx4.png>)
+- 社媒：[一体式挂环](</private<WORKDIR>/outputs/v1/social/social-01-entry-loop.png>) · [12 小时](</private<WORKDIR>/outputs/v1/social/social-02-cafe-12h.png>) · [IPX4](</private<WORKDIR>/outputs/v1/social/social-03-riverside-ipx4.png>)
+- [执行规范](</private<WORKDIR>/outputs/v1/creative-spec.md>) · [imagegen 提示记录](</private<WORKDIR>/outputs/v1/imagegen-prompts.md>)
+- [v1 验证记录](</private<WORKDIR>/outputs/v1/verification.json>) · [更新后的项目状态](</private<WORKDIR>/outputs/project-state.json>)
+
+v0 文件保持不变。

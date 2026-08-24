@@ -1,0 +1,131 @@
+{
+  "version": "v0",
+  "checkpoint": "strategy_selection",
+  "overall_status": "pass_for_v0_checkpoint_with_client_decision_blocker",
+  "checks_performed": [
+    {
+      "id": "input_reference_review",
+      "result": "pass",
+      "method": "Full-resolution visual inspection of both attached inputs before design work.",
+      "evidence_paths": [
+        "inputs/01-brand_system.png",
+        "inputs/02-approved_base_packaging.png"
+      ],
+      "observations": "Brand palette, MORI wordmark character, leaf asset, approved container silhouette, black lid, and front-view proportions were recorded as constraints."
+    },
+    {
+      "id": "hypothesis_count",
+      "result": "pass",
+      "method": "Renderer-source count plus full-resolution visual inspection.",
+      "evidence_paths": [
+        "outputs/v0/03_locked_color_encoding_hypotheses.png",
+        "outputs/v0/render_locked_boards.m"
+      ],
+      "observations": "Exactly 10 numbered hypotheses are present: 01 through 10."
+    },
+    {
+      "id": "strategy_cluster_count",
+      "result": "pass",
+      "method": "Project-state parse and full-resolution visual inspection.",
+      "evidence_paths": [
+        "outputs/v0/04_locked_three_strategy_choice_board.png",
+        "outputs/project-state.json"
+      ],
+      "observations": "Exactly three selectable series strategies are present: A, B, and C."
+    },
+    {
+      "id": "sku_count_and_names",
+      "result": "pass_at_strategy_checkpoint",
+      "method": "JSON parse of project state and visual inspection of all five palette labels under each strategy.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v0/04_locked_three_strategy_choice_board.png"
+      ],
+      "observations": "The controlled SKU list contains exactly five names: 茉莉、乌龙、白桃、桂花、青柠. No finished five-pack lineup was created before client selection."
+    },
+    {
+      "id": "approved_container_preservation",
+      "result": "pass",
+      "method": "Final boards directly reuse the approved source-photo crop. A pixel comparison of the untouched lid zone between the source crop and each A/B/C mockup measured mean absolute RGB error of 1.724, 1.629, and 1.810 respectively; the small difference is attributable to board resampling.",
+      "evidence_paths": [
+        "inputs/02-approved_base_packaging.png",
+        "outputs/v0/04_locked_three_strategy_choice_board.png",
+        "outputs/v0/render_locked_boards.m"
+      ],
+      "observations": "Container silhouette, black lid, and proportions come from the approved master; only printed graphics are overlaid inside the body clip."
+    },
+    {
+      "id": "logo_and_information_hierarchy",
+      "result": "pass",
+      "method": "Renderer-source inspection and side-by-side full-resolution visual QA.",
+      "evidence_paths": [
+        "outputs/v0/03_locked_color_encoding_hypotheses.png",
+        "outputs/v0/04_locked_three_strategy_choice_board.png",
+        "outputs/v0/render_locked_boards.m"
+      ],
+      "observations": "Every candidate calls the same hierarchy function with identical MORI, flavor-name, net-content, and shared-selling-point rectangles; only permitted color variables change."
+    },
+    {
+      "id": "five_color_distinction",
+      "result": "pass",
+      "method": "CIE Lab Delta-E 76 calculation across the five proposed sRGB colors.",
+      "evidence_paths": [
+        "outputs/v0/04_locked_three_strategy_choice_board.png",
+        "outputs/v0/05_strategy_decision_notes.md"
+      ],
+      "observations": "Minimum pairwise Delta-E 76 is 28.78 (茉莉 vs 青柠); all other pairs are at least 30.26, supporting one-glance hue separation within a restrained family palette."
+    },
+    {
+      "id": "thumbnail_and_shelf_proxy",
+      "result": "pass_for_strategy_comparison",
+      "method": "Visual inspection at full 2400×1350 size and a 480×270 downsample proxy.",
+      "evidence_paths": [
+        "outputs/v0/evidence/03_hypotheses_thumbnail_480.png",
+        "outputs/v0/evidence/04_strategies_thumbnail_480.png"
+      ],
+      "observations": "A/B/C remain visibly distinct at 480 px; A has the strongest distance signal, B retains the brand-leaf cue, and C is intentionally more restrained."
+    },
+    {
+      "id": "low_cost_scope",
+      "result": "pass_with_production_confirmation_pending",
+      "method": "Visual and specification review against avoid list.",
+      "evidence_paths": [
+        "outputs/v0/03_locked_color_encoding_hypotheses.png",
+        "outputs/v0/05_strategy_decision_notes.md"
+      ],
+      "observations": "All options assume black plus one SKU spot color and no gradients, foil, embossing, die-cutting, or structural change. Supplier pricing and press gamut remain to be confirmed."
+    },
+    {
+      "id": "artifact_integrity",
+      "result": "pass",
+      "method": "Image metadata check and JSON parse.",
+      "evidence_paths": [
+        "outputs/v0/03_locked_color_encoding_hypotheses.png",
+        "outputs/v0/04_locked_three_strategy_choice_board.png",
+        "outputs/project-state.json",
+        "outputs/v0/verification.json"
+      ],
+      "observations": "Both primary PNG boards are readable RGBA images at 2400×1350; project-state.json parses successfully."
+    }
+  ],
+  "rejected_process_drafts": [
+    {
+      "reason": "Generated exploration mockups introduced slight container-proportion drift and were therefore not used as primary candidate boards.",
+      "paths": [
+        "scratch/imagegen/01_color_encoding_hypotheses_generated_draft.png",
+        "scratch/imagegen/02_three_series_strategies_generated_draft.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "blocking_stage": "complete_five_sku_extension",
+      "blocker": "Client has not selected strategy A, B, or C.",
+      "required_resolution": "Client replies with A, B, or C before any complete five-SKU series is developed."
+    }
+  ],
+  "open_non_blocking_production_checks": [
+    "Confirm spot-color gamut, plate setup, and changeover pricing with the packaging supplier.",
+    "After strategy selection, run the final five-pack shelf lineup and e-commerce thumbnail test with actual approved net-content and selling-point copy."
+  ]
+}

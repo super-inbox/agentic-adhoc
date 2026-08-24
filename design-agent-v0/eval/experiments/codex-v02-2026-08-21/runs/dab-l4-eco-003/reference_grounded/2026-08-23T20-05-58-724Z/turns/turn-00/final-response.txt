@@ -1,0 +1,11 @@
+已完成并选择“优先跟品牌语言”方向。
+
+参考页的冷白黑灰虽然信息节奏清晰，但会削弱陶土红产品的温度；品牌优先更适合淘宝首屏。成稿保留“大图—标题—三卖点”节奏，改用暖米色、陶土红与炭黑，并对产品进行了单点校色，未复用参考页品牌、文字或图标。
+
+- [淘宝首屏成稿 PNG](<WORKDIR>/outputs/v0/taobao-first-screen-brand-led-v0.png)
+- [方向比较与决策](<WORKDIR>/outputs/v0/design-direction-decision.md)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+- [Imagegen 提示词记录](<WORKDIR>/outputs/v0/generation-prompts.md)
+
+成稿尺寸为 1086 × 1448，3:4 移动端比例；当前无未解决阻塞项。

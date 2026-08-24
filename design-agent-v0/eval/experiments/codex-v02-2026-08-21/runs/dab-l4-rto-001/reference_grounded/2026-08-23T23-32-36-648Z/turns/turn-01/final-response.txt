@@ -1,0 +1,14 @@
+已完成 v1：保留方向 C、大胆构图与固定产品位置，几何改为原创开放缓弧和不规则陶土颗粒。首屏及两张卖点模块均已完成，v0 文件哈希保持不变。
+
+新增：
+
+- [详情页纵向预览](/private<WORKDIR>/outputs/v1/detail-page-scroll-preview.png)
+- [首屏](/private<WORKDIR>/outputs/v1/hero-quiet-sequence-clay-drift.png)
+- [卖点 01：低噪运行](/private<WORKDIR>/outputs/v1/selling-point-01-low-noise.png)
+- [卖点 02：定时关闭与陶土触感](/private<WORKDIR>/outputs/v1/selling-point-02-timer-tactility.png)
+- [变更说明](/private<WORKDIR>/outputs/v1/design-delta.md)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+
+已更新：
+
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)

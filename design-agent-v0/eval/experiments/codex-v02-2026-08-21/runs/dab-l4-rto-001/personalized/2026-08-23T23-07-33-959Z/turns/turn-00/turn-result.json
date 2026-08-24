@@ -1,0 +1,69 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T23:07:33.972Z",
+  "finished_at": "2026-08-23T23:21:54.739Z",
+  "latency_ms": 860783,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 81,
+    "command_count": 31,
+    "tool_count": 7,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a030e1-1b26-74a2-8ceb-fddc40c5f19c",
+    "usage": {
+      "input_tokens": 1379791,
+      "cached_input_tokens": 1300224,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 30445,
+      "reasoning_output_tokens": 12775
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1907,
+      "sha256": "4e42f76f219cdccb0fb572876d15208e4b4761de2de20e31b1fd4d8d2f68a159"
+    },
+    {
+      "filename": "v0/creative-territories-board.png",
+      "byte_size": 337679,
+      "sha256": "b35dba9301f380c6c8d8e124ad7ea470a1e72d223953723c91f2fd5356af0785"
+    },
+    {
+      "filename": "v0/creative-territories-board.svg",
+      "byte_size": 10506,
+      "sha256": "531c3866eae32de815d1a71f0ebcd4e7503c231551454e3c5b6a3faac28f19d4"
+    },
+    {
+      "filename": "v0/creative-territories-inline.html",
+      "byte_size": 450605,
+      "sha256": "0df10c92a1d40619938d4f5208a8c35b71a134f8abf40c983e0720fa2457eff9"
+    },
+    {
+      "filename": "v0/product-reference-exact.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v0/reference-deconstruction-and-territories.md",
+      "byte_size": 6596,
+      "sha256": "cad69faf6dd232b9f245be37cf61296ed73391ce3af93bee241f8ce83466e983"
+    },
+    {
+      "filename": "v0/render_territory_board.py",
+      "byte_size": 8059,
+      "sha256": "66122a676742896a1ef5488a142ceb3867c8760a3cfb8b6f07562aa46c29af22"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4133,
+      "sha256": "06636cac7a36fdce5fe26eb3bc57fa6c4023d2e5013c11516eeb3fee93cb1f1d"
+    }
+  ]
+}

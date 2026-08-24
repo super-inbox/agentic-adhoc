@@ -1,0 +1,162 @@
+{
+  "schema_version": "0.2",
+  "version": "v0",
+  "checkpoint": "creative_territory_selection",
+  "status": "passed_at_checkpoint_with_open_client_decision",
+  "checks": [
+    {
+      "id": "source_binding",
+      "status": "pass",
+      "method": "文件元数据与 SHA-256",
+      "result": {
+        "dimensions": [1024, 1024],
+        "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+      },
+      "evidence_paths": [
+        "inputs/01-product_reference.png"
+      ]
+    },
+    {
+      "id": "reference_deconstructed_before_direction_generation",
+      "status": "pass",
+      "method": "检查参考边界、身份锁定、原创提炼原则和不做项",
+      "result": "六项产品身份已锁定；提炼范围限定为节奏、配色与构图。",
+      "evidence_paths": [
+        "outputs/v0/reference-deconstruction.md",
+        "outputs/v0/reference-deconstruction.png"
+      ]
+    },
+    {
+      "id": "product_identity_pixel_preservation",
+      "status": "pass",
+      "method": "逐像素比较裁切区域中所有非透明输出像素与原图 RGB",
+      "result": {
+        "cutout_dimensions": [714, 535],
+        "visible_pixels_checked": 208723,
+        "rgb_mismatches": 0,
+        "allowed_operation": "背景去除与尺度/摆放变化"
+      },
+      "evidence_paths": [
+        "inputs/01-product_reference.png",
+        "outputs/v0/product-cutout-preserve-identity.png",
+        "outputs/v0/render_direction_boards.py"
+      ]
+    },
+    {
+      "id": "low_cost_hypothesis_count",
+      "status": "pass",
+      "method": "解析唯一假设编号",
+      "result": {
+        "count": 10,
+        "ids": ["H01", "H02", "H03", "H04", "H05", "H06", "H07", "H08", "H09", "H10"]
+      },
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md"
+      ]
+    },
+    {
+      "id": "creative_territory_count",
+      "status": "pass",
+      "method": "解析方向标题与假设簇",
+      "result": {
+        "count": 3,
+        "territories": [
+          "A 陶土留白",
+          "B 静域圆场",
+          "C 慢刻序列"
+        ]
+      },
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/creative-territories-board.png"
+      ]
+    },
+    {
+      "id": "approved_copy_and_claim_boundary",
+      "status": "pass",
+      "method": "人工核对方向画面中的消费者文案与批准白名单",
+      "result": "画面示例只使用四条批准文案的全部或子集；未新增参数、时长、功效或功能承诺。",
+      "evidence_paths": [
+        "outputs/v0/reference-deconstruction.png",
+        "outputs/v0/creative-territories-board.png",
+        "outputs/v0/creative-territory-selector.html"
+      ]
+    },
+    {
+      "id": "originality_boundary",
+      "status": "pass",
+      "method": "检查外部 URL、外部素材引用、品牌与标志",
+      "result": {
+        "external_urls": 0,
+        "external_visual_assets": 0,
+        "brands_or_logos": 0,
+        "abstract_graphics_source": "产品自身椭圆、圆点与水平间隔的代码化抽象"
+      },
+      "evidence_paths": [
+        "outputs/v0/creative-territories-board.png",
+        "outputs/v0/creative-territory-selector.html",
+        "outputs/v0/render_direction_boards.py"
+      ]
+    },
+    {
+      "id": "visual_qa_static_boards",
+      "status": "pass",
+      "method": "原尺寸视觉检查并修正深色方向的背景软阴影误读",
+      "result": {
+        "reference_board_dimensions": [1600, 1100],
+        "territory_board_dimensions": [1800, 1450],
+        "corrected_issue": "白底软阴影在深色底上近似发光"
+      },
+      "evidence_paths": [
+        "outputs/v0/reference-deconstruction.png",
+        "outputs/v0/creative-territories-board.png"
+      ]
+    },
+    {
+      "id": "selector_structure_and_script",
+      "status": "pass_with_nonblocking_runtime_limit",
+      "method": "HTML 结构解析、JavaScript 语法检查、外链与体积检查",
+      "result": {
+        "articles": 3,
+        "selection_buttons": 3,
+        "javascript_syntax": "pass",
+        "responsive_breakpoint_present": "max-width: 760px",
+        "bytes": 487966,
+        "under_1mb": true,
+        "runtime_visual_preview": "not_executed_browser_unavailable"
+      },
+      "evidence_paths": [
+        "outputs/v0/creative-territory-selector.html"
+      ]
+    },
+    {
+      "id": "selection_checkpoint_scope",
+      "status": "pass",
+      "method": "检查输出文件名与项目状态",
+      "result": "未创建首屏或卖点模块候选；流程停在方向选择。",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v0"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "client_territory_selection",
+      "status": "open",
+      "required_input": "选择 A 陶土留白、B 静域圆场或 C 慢刻序列",
+      "blocked_work": [
+        "首屏",
+        "卖点模块 1",
+        "卖点模块 2"
+      ]
+    }
+  ],
+  "nonblocking_environment_limits": [
+    {
+      "id": "in_app_browser_unavailable",
+      "impact": "附加的交互选择界面未做运行时截图；静态方向板已完成原尺寸视觉核验，HTML 已完成结构和脚本语法核验。"
+    }
+  ]
+}
+

@@ -1,0 +1,354 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-PSF-001@reference_grounded",
+  "base_brief_id": "DAB-L4-PSF-001",
+  "context_condition": "reference_grounded",
+  "category": "packaging_sku_family",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "creative_exploration"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T21:49:42.847Z",
+  "finished_at": "2026-08-23T22:33:58.809Z",
+  "latency_ms": 2655962,
+  "intended_turns": 2,
+  "completed_turns": 2,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a03099-d473-78f1-81cb-06c666784d6a",
+  "input_assets": [
+    {
+      "input_id": "brand-board",
+      "asset_id": "sku-system-mori-brand-board",
+      "role": "brand_system",
+      "reference_role": "brand_system",
+      "identity_policy": "preserve_rules",
+      "filename": "01-brand_system.png",
+      "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+      "byte_size": 592086,
+      "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+    },
+    {
+      "input_id": "base-pack",
+      "asset_id": "sku-system-tumbler-base",
+      "role": "approved_base_packaging",
+      "reference_role": "approved_master",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "02-approved_base_packaging.png",
+      "source_path": "eval/assets/reference-pack-v0.2/sku-system/tumbler-base.png",
+      "byte_size": 807776,
+      "sha256": "40189e62be7b51c54e7752de041b554708feadf554c2c0d925c369310c9089e5"
+    }
+  ],
+  "input_context_ids": [
+    "brand-board",
+    "base-pack",
+    "sku-list"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 3778,
+      "sha256": "53aa42e0515f9a8ae82d99254d50a0e0ad17b73e3fd179d46bb5649ade51d5ab"
+    },
+    {
+      "filename": "v0/03_locked_color_encoding_hypotheses.png",
+      "byte_size": 943694,
+      "sha256": "b90fe8af59bd906c9417c854f041d2b093d54f7bdeb35b69c9ce09075147411d"
+    },
+    {
+      "filename": "v0/04_locked_three_strategy_choice_board.png",
+      "byte_size": 800162,
+      "sha256": "3daef6b04ee5c5d81942f9f7503db4b15ebecdb0edb812687a527e03faed0711"
+    },
+    {
+      "filename": "v0/05_strategy_decision_notes.md",
+      "byte_size": 3354,
+      "sha256": "5409d9821becea2bcc00a59212b7d51b2af8507ffc58b810ed956507f69fa4ff"
+    },
+    {
+      "filename": "v0/evidence/03_hypotheses_thumbnail_480.png",
+      "byte_size": 68099,
+      "sha256": "f9f425c684d0f7b36fd0ee1da47e3ec1248f808f80793205e95e0d6b71aa12d7"
+    },
+    {
+      "filename": "v0/evidence/04_strategies_thumbnail_480.png",
+      "byte_size": 59363,
+      "sha256": "e6746b9b3867643872b70affa9ceb53b4612050834e404456d9e5d3e8afd4830"
+    },
+    {
+      "filename": "v0/render_locked_boards.m",
+      "byte_size": 20919,
+      "sha256": "6af9622d88b12f89ddaaee11fd0b262e7ace495d5264f2cb456b802377d1d265"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 6236,
+      "sha256": "fcb9cb8c9c84d4682196c4f704b271421fce8d0a83501b10ebad944f9026c0d1"
+    },
+    {
+      "filename": "v1/01_strategy_b_full_five_sku_series.png",
+      "byte_size": 1415811,
+      "sha256": "0b863713da2b96eddd76968af0d709f6bad1c619c6b1afc2775f637482411309"
+    },
+    {
+      "filename": "v1/02_strategy_b_shelf_thumbnail_check.png",
+      "byte_size": 1074055,
+      "sha256": "0d787848ddb67c3f5d84490eb154e2da2c19ee39f77d25c56a1c8dcb6c02f438"
+    },
+    {
+      "filename": "v1/03_strategy_b_generated_shelf_context.png",
+      "byte_size": 1715009,
+      "sha256": "6dfc16a825034c629f6c1f0f11d17e8bfa24956506997f61f72c75afa25c5d08"
+    },
+    {
+      "filename": "v1/04_client_delta_and_prompt.md",
+      "byte_size": 1812,
+      "sha256": "8aedf94a628045b307bfa78dcbd9746de3852bdd9f2affcecd7617af580d9b67"
+    },
+    {
+      "filename": "v1/evidence/01_full_series_thumbnail_480.png",
+      "byte_size": 89992,
+      "sha256": "28f698bc7907c42533d3bad6c429b18238731ca97b80cc24fa6d2d2741b374f7"
+    },
+    {
+      "filename": "v1/evidence/02_shelf_check_thumbnail_480.png",
+      "byte_size": 69707,
+      "sha256": "9b82ea1a21a1e722e3badb35787a270ecd4440c741878f42a3a4461273d846bb"
+    },
+    {
+      "filename": "v1/evidence/03_generated_shelf_thumbnail_480.png",
+      "byte_size": 148270,
+      "sha256": "e34c1ba60e030a8c2bd09f7c395c287248762fb432ed52bc57e609a7ebd9df30"
+    },
+    {
+      "filename": "v1/render_strategy_b_series.m",
+      "byte_size": 30348,
+      "sha256": "2c6dc2ad7c08f6bca9468fb41d0b02442b07be1b482c4e0b22a41dcdb903a329"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 6841,
+      "sha256": "197278017448182495f1dafab43232334df223146e4950ef8711aba7ab9af203"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T21:49:42.847Z",
+      "finished_at": "2026-08-23T22:15:41.782Z",
+      "latency_ms": 1558957,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 107,
+        "command_count": 32,
+        "tool_count": 16,
+        "image_activity_count": 8,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a03099-d473-78f1-81cb-06c666784d6a",
+        "usage": {
+          "input_tokens": 4043529,
+          "cached_input_tokens": 3897216,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 47276,
+          "reasoning_output_tokens": 18977
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 2510,
+          "sha256": "e5d57fe5aaa081eb5059ac78f070a3b8474b995b96f8cac3bc830f1b7f864393"
+        },
+        {
+          "filename": "v0/03_locked_color_encoding_hypotheses.png",
+          "byte_size": 943694,
+          "sha256": "b90fe8af59bd906c9417c854f041d2b093d54f7bdeb35b69c9ce09075147411d"
+        },
+        {
+          "filename": "v0/04_locked_three_strategy_choice_board.png",
+          "byte_size": 800162,
+          "sha256": "3daef6b04ee5c5d81942f9f7503db4b15ebecdb0edb812687a527e03faed0711"
+        },
+        {
+          "filename": "v0/05_strategy_decision_notes.md",
+          "byte_size": 3354,
+          "sha256": "5409d9821becea2bcc00a59212b7d51b2af8507ffc58b810ed956507f69fa4ff"
+        },
+        {
+          "filename": "v0/evidence/03_hypotheses_thumbnail_480.png",
+          "byte_size": 68099,
+          "sha256": "f9f425c684d0f7b36fd0ee1da47e3ec1248f808f80793205e95e0d6b71aa12d7"
+        },
+        {
+          "filename": "v0/evidence/04_strategies_thumbnail_480.png",
+          "byte_size": 59363,
+          "sha256": "e6746b9b3867643872b70affa9ceb53b4612050834e404456d9e5d3e8afd4830"
+        },
+        {
+          "filename": "v0/render_locked_boards.m",
+          "byte_size": 20919,
+          "sha256": "6af9622d88b12f89ddaaee11fd0b262e7ace495d5264f2cb456b802377d1d265"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 6236,
+          "sha256": "fcb9cb8c9c84d4682196c4f704b271421fce8d0a83501b10ebad944f9026c0d1"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T22:15:41.805Z",
+      "finished_at": "2026-08-23T22:33:58.740Z",
+      "latency_ms": 1096975,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 46,
+        "command_count": 12,
+        "tool_count": 7,
+        "image_activity_count": 4,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a03099-d473-78f1-81cb-06c666784d6a",
+        "usage": {
+          "input_tokens": 8030563,
+          "cached_input_tokens": 7705728,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 67873,
+          "reasoning_output_tokens": 26351
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 3778,
+          "sha256": "53aa42e0515f9a8ae82d99254d50a0e0ad17b73e3fd179d46bb5649ade51d5ab"
+        },
+        {
+          "filename": "v0/03_locked_color_encoding_hypotheses.png",
+          "byte_size": 943694,
+          "sha256": "b90fe8af59bd906c9417c854f041d2b093d54f7bdeb35b69c9ce09075147411d"
+        },
+        {
+          "filename": "v0/04_locked_three_strategy_choice_board.png",
+          "byte_size": 800162,
+          "sha256": "3daef6b04ee5c5d81942f9f7503db4b15ebecdb0edb812687a527e03faed0711"
+        },
+        {
+          "filename": "v0/05_strategy_decision_notes.md",
+          "byte_size": 3354,
+          "sha256": "5409d9821becea2bcc00a59212b7d51b2af8507ffc58b810ed956507f69fa4ff"
+        },
+        {
+          "filename": "v0/evidence/03_hypotheses_thumbnail_480.png",
+          "byte_size": 68099,
+          "sha256": "f9f425c684d0f7b36fd0ee1da47e3ec1248f808f80793205e95e0d6b71aa12d7"
+        },
+        {
+          "filename": "v0/evidence/04_strategies_thumbnail_480.png",
+          "byte_size": 59363,
+          "sha256": "e6746b9b3867643872b70affa9ceb53b4612050834e404456d9e5d3e8afd4830"
+        },
+        {
+          "filename": "v0/render_locked_boards.m",
+          "byte_size": 20919,
+          "sha256": "6af9622d88b12f89ddaaee11fd0b262e7ace495d5264f2cb456b802377d1d265"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 6236,
+          "sha256": "fcb9cb8c9c84d4682196c4f704b271421fce8d0a83501b10ebad944f9026c0d1"
+        },
+        {
+          "filename": "v1/01_strategy_b_full_five_sku_series.png",
+          "byte_size": 1415811,
+          "sha256": "0b863713da2b96eddd76968af0d709f6bad1c619c6b1afc2775f637482411309"
+        },
+        {
+          "filename": "v1/02_strategy_b_shelf_thumbnail_check.png",
+          "byte_size": 1074055,
+          "sha256": "0d787848ddb67c3f5d84490eb154e2da2c19ee39f77d25c56a1c8dcb6c02f438"
+        },
+        {
+          "filename": "v1/03_strategy_b_generated_shelf_context.png",
+          "byte_size": 1715009,
+          "sha256": "6dfc16a825034c629f6c1f0f11d17e8bfa24956506997f61f72c75afa25c5d08"
+        },
+        {
+          "filename": "v1/04_client_delta_and_prompt.md",
+          "byte_size": 1812,
+          "sha256": "8aedf94a628045b307bfa78dcbd9746de3852bdd9f2affcecd7617af580d9b67"
+        },
+        {
+          "filename": "v1/evidence/01_full_series_thumbnail_480.png",
+          "byte_size": 89992,
+          "sha256": "28f698bc7907c42533d3bad6c429b18238731ca97b80cc24fa6d2d2741b374f7"
+        },
+        {
+          "filename": "v1/evidence/02_shelf_check_thumbnail_480.png",
+          "byte_size": 69707,
+          "sha256": "9b82ea1a21a1e722e3badb35787a270ecd4440c741878f42a3a4461273d846bb"
+        },
+        {
+          "filename": "v1/evidence/03_generated_shelf_thumbnail_480.png",
+          "byte_size": 148270,
+          "sha256": "e34c1ba60e030a8c2bd09f7c395c287248762fb432ed52bc57e609a7ebd9df30"
+        },
+        {
+          "filename": "v1/render_strategy_b_series.m",
+          "byte_size": 30348,
+          "sha256": "2c6dc2ad7c08f6bca9468fb41d0b02442b07be1b482c4e0b22a41dcdb903a329"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6841,
+          "sha256": "197278017448182495f1dafab43232334df223146e4950ef8711aba7ab9af203"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 12074092,
+    "cached_input_tokens": 11602944,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 115149,
+    "reasoning_output_tokens": 45328
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

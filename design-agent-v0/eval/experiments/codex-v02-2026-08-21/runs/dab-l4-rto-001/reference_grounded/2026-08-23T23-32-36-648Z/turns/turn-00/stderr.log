@@ -1,0 +1,9 @@
+Reading additional input from stdin...
+2026-08-23T23:32:36.708601Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T23:32:36.712311Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T23:32:36.743482Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T23:32:36.743499Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T23:32:41.216418Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T23:32:41.216433Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T23:38:19.024346Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)
+2026-08-23T23:43:10.274788Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

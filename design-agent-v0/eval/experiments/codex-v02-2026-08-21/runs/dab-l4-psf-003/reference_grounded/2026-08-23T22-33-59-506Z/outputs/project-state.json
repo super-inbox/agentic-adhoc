@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "current_version": "v3",
+  "updated_at": "2026-08-24T07:03:43+08:00",
+  "workflow_status": "blocked_at_back_legal_copy_placement_checkpoint",
+  "production_file_status": "not_generated",
+  "client_decisions": [
+    {
+      "id": "visual_identity",
+      "decision": "The attached Orbit Coffee visual is approved artwork.",
+      "source": "approved-artwork",
+      "status": "approved_and_locked"
+    },
+    {
+      "id": "client_finished_size_note",
+      "decision": "Client form states finished size 120×200 mm with 3 mm bleed.",
+      "source": "size-note-a",
+      "status": "superseded_by_factory_confirmation"
+    },
+    {
+      "id": "factory_artboard_note",
+      "decision": "Factory confirms 125×205 mm is the total artboard including 3 mm bleed on every edge; finished Trim is 119×199 mm.",
+      "source": "client_feedback_v1",
+      "status": "confirmed_and_locked"
+    },
+    {
+      "id": "back_legal_net_content",
+      "decision": "Requested back net-content value changed from 200 g to 180 g.",
+      "source": "client_feedback_v3",
+      "status": "content_resolved_placement_not_applied"
+    },
+    {
+      "id": "front_net_content",
+      "decision": "Approved artwork currently shows 250 g on the front; v2 explicitly limits changes to the back legal copy and locks the front from movement or editing.",
+      "source": "client_feedback_v2",
+      "status": "locked_unchanged_with_known_cross_panel_conflict"
+    },
+    {
+      "id": "back_minimum_type_size",
+      "decision": "Factory requires all back text to be at least 6 pt.",
+      "source": "client_feedback_v2",
+      "status": "confirmed_and_locked"
+    },
+    {
+      "id": "v2_edit_scope",
+      "decision": "Only inspect and correct the back legal copy; do not move the dieline, front, or barcode zone.",
+      "source": "client_feedback_v2",
+      "status": "confirmed_and_locked"
+    },
+    {
+      "id": "v3_edit_scope",
+      "decision": "Based on v2, update only the corresponding text from 200 g to 180 g and rerun preflight; do not redo layout or color.",
+      "source": "client_feedback_v3",
+      "status": "confirmed_and_locked"
+    }
+  ],
+  "locked_items": [
+    {
+      "item": "approved artwork visual identity",
+      "policy": "preserve_unedited_regions",
+      "source_path": "inputs/01-print_artwork.png",
+      "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f"
+    },
+    {
+      "item": "dieline, front, barcode zone, and all unrelated artwork",
+      "policy": "Locked against movement or editing through v3. The source master remains byte-identical."
+    },
+    {
+      "item": "back legal copy specification",
+      "policy": "Exact text is 180 g; minimum nominal size remains 6.00 pt. Placement is not assumed without a target object or coordinates."
+    },
+    {
+      "item": "v2 layout and color",
+      "policy": "Preserved as the v3 pixel base; only localized text/specimen/version fields may change."
+    }
+  ],
+  "changed_items": [
+    {
+      "item": "back legal copy text",
+      "change": "Updated 200 g to 180 g in the standalone 6 pt specimen and corresponding v3 review fields."
+    },
+    {
+      "item": "preflight version markers",
+      "change": "Updated review-only version labels from v2 to v3 without reflow."
+    },
+    {
+      "item": "v3 verification artifacts",
+      "change": "Created the v3 report, checklist, localized pixel-diff evidence, and verification record; layout and global colors were preserved."
+    }
+  ],
+  "unresolved_decisions": [
+    {
+      "id": "back_legal_copy_placement",
+      "blocker": "The flattened approved master has no editable back legal-copy object and no identifiable barcode-zone boundary.",
+      "required_resolution": "Provide the editable back production master or explicit legal-copy frame X/Y coordinates, dimensions, alignment, and barcode clearance."
+    },
+    {
+      "id": "net_content_consistency",
+      "blocker": "The front remains locked at 250 g while the requested back value is now 180 g.",
+      "required_resolution": "This remains a known cross-panel risk. A future instruction must resolve the values before production release; v3 does not alter the locked front."
+    },
+    {
+      "id": "production_master",
+      "blocker": "The supplied 1376×768 RGB flattened preview has insufficient pixels and incompatible per-panel geometry for the confirmed 119×199 mm Trim.",
+      "required_resolution": "Supply separated vector artwork or high-resolution per-side production masters sized to the confirmed 125×205 mm bleed page."
+    },
+    {
+      "id": "cmyk_condition",
+      "blocker": "No factory CMYK ICC profile or total ink limit is specified.",
+      "required_resolution": "Factory must supply the print condition, or client/factory must explicitly approve a named standard profile."
+    },
+    {
+      "id": "formal_dieline",
+      "blocker": "The page and Trim dimensions are confirmed, but no formal structural dieline has been supplied.",
+      "required_resolution": "Supply the template showing structural zones, safety areas, and front/back orientation."
+    }
+  ],
+  "artifact_paths": {
+    "back_legal_copy_report_pdf": "outputs/v3/orbit-coffee_v3-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf",
+    "back_legal_copy_checklist": "outputs/v3/orbit-coffee_v3-back-legal-copy-checklist.md",
+    "back_legal_copy_specimen": "outputs/v3/back-legal-copy_180g_6pt_300dpi-specimen.png",
+    "target_audit": "outputs/v2/approved-artwork_v2-back-legal-target-audit.png",
+    "verification": "outputs/v3/verification.json",
+    "rendered_evidence": [
+      "outputs/v3/evidence/v3-back-legal-check-page-1.png",
+      "outputs/v3/evidence/v3-v2-localized-diff-mask.png"
+    ],
+    "previous_version_artifacts": [
+      "outputs/v2/orbit-coffee_v2-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf",
+      "outputs/v2/orbit-coffee_v2-back-legal-copy-checklist.md",
+      "outputs/v2/back-legal-copy_200g_6pt_300dpi-specimen.png",
+      "outputs/v2/approved-artwork_v2-back-legal-target-audit.png",
+      "outputs/v2/verification.json",
+      "outputs/v1/orbit-coffee_v1-delta-gate_NOT-FOR-PRODUCTION.pdf",
+      "outputs/v1/orbit-coffee_v1-delta-checklist.md",
+      "outputs/v1/approved-artwork_v1-net-content-conflict-annotated.png",
+      "outputs/v1/verification.json",
+      "outputs/v0/orbit-coffee_preflight-report_v0_NOT-FOR-PRODUCTION.pdf",
+      "outputs/v0/orbit-coffee_preflight-checklist_v0.md",
+      "outputs/v0/approved-artwork_preflight-annotated_v0.png",
+      "outputs/v0/verification.json"
+    ]
+  }
+}

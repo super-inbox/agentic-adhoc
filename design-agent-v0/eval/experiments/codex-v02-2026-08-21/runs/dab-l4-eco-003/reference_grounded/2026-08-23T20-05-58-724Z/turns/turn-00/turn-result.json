@@ -1,0 +1,59 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T20:05:58.733Z",
+  "finished_at": "2026-08-23T20:13:23.165Z",
+  "latency_ms": 444444,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 32,
+    "command_count": 11,
+    "tool_count": 1,
+    "image_activity_count": 7,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a0303a-db7b-7c00-9e0b-b04226d44e27",
+    "usage": {
+      "input_tokens": 673966,
+      "cached_input_tokens": 594432,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 12035,
+      "reasoning_output_tokens": 5130
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2042,
+      "sha256": "f2a969310ab776252f3706685e19a9064aedc237d585e1d6ee7f68b2161bd3a3"
+    },
+    {
+      "filename": "v0/design-direction-decision.md",
+      "byte_size": 1611,
+      "sha256": "eb563625ec882868584bbaf5d493ecd89dbef42133cc967c79cdce998b0219ff"
+    },
+    {
+      "filename": "v0/generation-prompts.md",
+      "byte_size": 4718,
+      "sha256": "f98a31c0f6935720622c34e38202a381184e1427903be073af014d9ffde62dc5"
+    },
+    {
+      "filename": "v0/taobao-first-screen-brand-led-draft-v0.png",
+      "byte_size": 1746383,
+      "sha256": "584f0f147e60c9ed41a0ddabbc43c0500bd29f2ba099fc21414a072325681225"
+    },
+    {
+      "filename": "v0/taobao-first-screen-brand-led-v0.png",
+      "byte_size": 1774309,
+      "sha256": "cf96ec1460be2d40a9fa013dfe82fe2909084129886246af8fc3af613de98a07"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3141,
+      "sha256": "b786ebf4bd6c688b4ea0e4332fa0690450503512aa3c082ed455a15c3c1f120b"
+    }
+  ]
+}

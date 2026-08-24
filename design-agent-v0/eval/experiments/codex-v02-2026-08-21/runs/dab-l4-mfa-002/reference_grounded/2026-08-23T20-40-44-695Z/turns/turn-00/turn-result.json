@@ -1,0 +1,59 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T20:40:44.704Z",
+  "finished_at": "2026-08-23T20:55:40.233Z",
+  "latency_ms": 895537,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 59,
+    "command_count": 18,
+    "tool_count": 8,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a0305a-afcf-7d41-a935-31a361cf3b1d",
+    "usage": {
+      "input_tokens": 1428250,
+      "cached_input_tokens": 1296128,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 39821,
+      "reasoning_output_tokens": 11278
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2858,
+      "sha256": "850fb059968bda7ed39c62b6b97e6d5b04d6366ccae8c7997e76c614ed2977a4"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 11597,
+      "sha256": "05a411cdc7cebf2acbf37e320bbca3b9f0558b4ab1e905903cd14e961291f628"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 9163,
+      "sha256": "9221b52252e31d89917b09781b03b0f61b67c01a16024d36bfdd7fe4514a397e"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 646794,
+      "sha256": "9dc8ac8ab76d4576388554655a5d8f427c221497c6ea49ac461d852d92c4d434"
+    },
+    {
+      "filename": "v0/render_adaptation_map.py",
+      "byte_size": 12254,
+      "sha256": "a12187fba5385d59e8fac5d80c521a53e2642c3637c76bdc63c1cb843ffc4862"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 6399,
+      "sha256": "b4b54cca3196d753c41500433e5c85fdd2b6bd4781e2bff87bde25118326d940"
+    }
+  ]
+}

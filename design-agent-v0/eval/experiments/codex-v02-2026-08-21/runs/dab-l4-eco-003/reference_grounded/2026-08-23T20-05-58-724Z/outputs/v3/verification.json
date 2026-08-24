@@ -1,0 +1,88 @@
+{
+  "version": "v3",
+  "verified_at": "2026-08-24T04:38:47+08:00",
+  "candidate_path": "outputs/v3/taobao-first-screen-bottom-tag-v3.png",
+  "base_path": "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+  "checks": [
+    {
+      "check": "file_integrity_and_canvas",
+      "status": "pass",
+      "method": "file and sips inspection",
+      "result": "Valid RGBA PNG, 1086 x 1448 pixels, portrait 3:4 ratio.",
+      "evidence_paths": [
+        "outputs/v3/taobao-first-screen-bottom-tag-v3.png"
+      ]
+    },
+    {
+      "check": "requested_third_benefit_tag",
+      "status": "pass",
+      "method": "original-resolution visual inspection",
+      "result": "陶土触感 appears exactly once as a compact warm-cream rounded tag centered inside the bottom terracotta band; it has no icon.",
+      "evidence_paths": [
+        "outputs/v3/taobao-first-screen-bottom-tag-v3.png"
+      ]
+    },
+    {
+      "check": "no_crowded_v0_layout_regression",
+      "status": "pass",
+      "method": "visual comparison with v0 and v2",
+      "result": "The main benefits panel still contains only the centered 低噪运行 group. No three-column grid, divider lines, clock feature, or third feature icon was restored.",
+      "evidence_paths": [
+        "outputs/v0/taobao-first-screen-brand-led-v0.png",
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+        "outputs/v3/taobao-first-screen-bottom-tag-v3.png"
+      ]
+    },
+    {
+      "check": "requested_delta_scope",
+      "status": "pass",
+      "method": "decoded RGBA pixel comparison against v2",
+      "result": "Only 5744 pixels changed within bounds x468..617,y1398..1438. Mismatched pixels outside the permitted tag capsule: 0.",
+      "evidence_paths": [
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+        "outputs/v3/taobao-first-screen-bottom-tag-v3.png",
+        "outputs/v3/bottom-tag-pixel-lock-composite.c"
+      ]
+    },
+    {
+      "check": "approved_v2_content_lock",
+      "status": "pass",
+      "method": "decoded RGBA pixel comparison against v2",
+      "result": "Rows above the footer contain 0 mismatched pixels. Product color and geometry, background, headline, 低噪运行 position, and all approved spacing are pixel-identical to v2.",
+      "evidence_paths": [
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+        "outputs/v3/taobao-first-screen-bottom-tag-v3.png"
+      ]
+    },
+    {
+      "check": "content_exclusions",
+      "status": "pass",
+      "method": "original-resolution visual inspection",
+      "result": "定时关闭 is absent from the first screen; no extra copy, icon, watermark, or enlarged footer treatment was added.",
+      "evidence_paths": [
+        "outputs/v3/taobao-first-screen-bottom-tag-v3.png"
+      ]
+    },
+    {
+      "check": "previous_versions_immutability",
+      "status": "pass",
+      "method": "SHA-256 comparison with recorded hashes",
+      "result": "v2 remains eac43fb005680ecc1cac58aa22c29e66357e3f8f13acdc43242e8d92f154a86a; v1 remains f77dc530429e348d17255d04fb6609a0c2f7b99f03bd3f42a68ac81a816345db; v0 remains cf96ec1460be2d40a9fa013dfe82fe2909084129886246af8fc3af613de98a07.",
+      "evidence_paths": [
+        "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+        "outputs/v1/taobao-first-screen-text-reduced-v1.png",
+        "outputs/v0/taobao-first-screen-brand-led-v0.png"
+      ]
+    },
+    {
+      "check": "final_checksum",
+      "status": "pass",
+      "method": "SHA-256",
+      "result": "c8a254e76f9cd2b57362f3cd0c65b13b56ec7078a23604fbfe9d07954f653478",
+      "evidence_paths": [
+        "outputs/v3/taobao-first-screen-bottom-tag-v3.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

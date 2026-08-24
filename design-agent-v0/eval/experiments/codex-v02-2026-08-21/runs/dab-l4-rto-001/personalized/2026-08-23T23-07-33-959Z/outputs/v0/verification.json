@@ -1,0 +1,104 @@
+{
+  "schema_version": "0.2",
+  "version": "v0",
+  "status": "pass_with_expected_decision_blocker",
+  "checks": [
+    {
+      "id": "reference_deconstruction_precedes_generation",
+      "status": "pass",
+      "method": "Reviewed the written reference-use breakdown before constructing the territory board.",
+      "evidence_paths": [
+        "./outputs/v0/reference-deconstruction-and-territories.md"
+      ]
+    },
+    {
+      "id": "hypothesis_count_and_uniqueness",
+      "status": "pass",
+      "method": "Enumerated unique IDs H01 through H10; total = 10, within the requested 8–12 range.",
+      "evidence_paths": [
+        "./outputs/v0/reference-deconstruction-and-territories.md",
+        "./outputs/v0/creative-territories-board.png"
+      ]
+    },
+    {
+      "id": "three_creative_territories",
+      "status": "pass",
+      "method": "Confirmed three distinct clusters: A Slow Arc Field, B Clay Strata Editorial, C Quiet Time Track.",
+      "evidence_paths": [
+        "./outputs/v0/reference-deconstruction-and-territories.md",
+        "./outputs/v0/creative-territories-board.png"
+      ]
+    },
+    {
+      "id": "product_identity_source_integrity",
+      "status": "pass",
+      "method": "Compared SHA-256 hashes of the input product image and the exact output copy; both equal 241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0. Board previews use that source with crop, scale and background removal only; no recolor or structural redraw.",
+      "evidence_paths": [
+        "./inputs/04-product_reference.png",
+        "./outputs/v0/product-reference-exact.png",
+        "./outputs/v0/render_territory_board.py"
+      ]
+    },
+    {
+      "id": "approved_copy_only",
+      "status": "pass",
+      "method": "Confirmed use of the approved phrases 让香气慢下来、低噪运行、定时关闭、陶土触感; no unsupported timer duration or absolute-silence claim was added.",
+      "evidence_paths": [
+        "./outputs/v0/reference-deconstruction-and-territories.md",
+        "./outputs/v0/creative-territories-board.svg",
+        "./outputs/v0/creative-territories-board.png"
+      ]
+    },
+    {
+      "id": "forbidden_identity_copy_in_visuals",
+      "status": "pass",
+      "method": "Searched visual source files for MORI, SUMMER FORM and reference-logo/pattern labels; no matches. Geometry is newly drawn for the product narrative.",
+      "evidence_paths": [
+        "./outputs/v0/creative-territories-board.svg",
+        "./outputs/v0/render_territory_board.py"
+      ]
+    },
+    {
+      "id": "visual_render_and_layout_qa",
+      "status": "pass",
+      "method": "Rendered and visually inspected the 1800 × 1200 PNG at original resolution. Three columns are separated, product button/lid/seam remain recognizable, headings and hypothesis IDs are legible, and major geometry does not overlap adjacent territories.",
+      "evidence_paths": [
+        "./outputs/v0/creative-territories-board.png"
+      ]
+    },
+    {
+      "id": "structured_file_validity",
+      "status": "pass",
+      "method": "Validated project-state.json with the Python JSON parser and creative-territories-board.svg with xmllint.",
+      "evidence_paths": [
+        "./outputs/project-state.json",
+        "./outputs/v0/creative-territories-board.svg"
+      ]
+    },
+    {
+      "id": "scope_checkpoint_respected",
+      "status": "pass",
+      "method": "No final hero or selling-point modules were produced before client territory selection.",
+      "evidence_paths": [
+        "./outputs/project-state.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "client_territory_selection",
+      "status": "awaiting_input",
+      "required_input": "Choose A, B or C; optionally name one element to borrow from another territory.",
+      "blocks": [
+        "final hero visual",
+        "selling-point module 1",
+        "selling-point module 2"
+      ]
+    }
+  ],
+  "checks_deferred_until_next_version": [
+    "Final hero copy hierarchy and mobile-safe crop",
+    "Two selling-point module continuity and legibility",
+    "Selected-territory consistency across all three final assets"
+  ]
+}

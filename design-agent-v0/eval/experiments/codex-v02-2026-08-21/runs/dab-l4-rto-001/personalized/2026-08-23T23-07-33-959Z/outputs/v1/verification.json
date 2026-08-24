@@ -1,0 +1,118 @@
+{
+  "schema_version": "0.2",
+  "version": "v1",
+  "status": "pass",
+  "checks": [
+    {
+      "id": "requested_delta_only",
+      "status": "pass",
+      "method": "Compared v1 design delta against the selected v0 Territory C. Only the circular/track geometry language was replaced; bold asymmetry, palette, copy, left-product/right-copy structure and information rhythm were retained.",
+      "evidence_paths": [
+        "./outputs/v1/design-delta.md",
+        "./outputs/project-state.json",
+        "./outputs/v0/creative-territories-board.png",
+        "./outputs/v1/detail-page-composite.png"
+      ]
+    },
+    {
+      "id": "product_position_lock",
+      "status": "pass",
+      "method": "Mapped the v0 Territory C product center to a normalized anchor and reused it in the v1 hero. Locked anchor = (0.3203125, 0.5846938776); on the 1440 × 1800 hero this equals (461.25, 1052.44897968) px.",
+      "evidence_paths": [
+        "./outputs/v0/render_territory_board.py",
+        "./outputs/v1/render_direction_03.py",
+        "./outputs/v1/hero-direction-03-clay-arc.png",
+        "./outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "product_identity_integrity",
+      "status": "pass",
+      "method": "SHA-256 of input and v1 exact product copy both equal 241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0. Visual inspection confirmed the terracotta color, cylinder, floating lid, black seam and front button remain recognizable and unchanged.",
+      "evidence_paths": [
+        "./inputs/04-product_reference.png",
+        "./outputs/v1/product-reference-exact.png",
+        "./outputs/v1/hero-direction-03-clay-arc.png"
+      ]
+    },
+    {
+      "id": "geometry_delta",
+      "status": "pass",
+      "method": "Removed the prior near-complete ring, zigzag waveform and track combination. v1 uses unequal, non-concentric, open cubic-Bezier ribbons plus irregular polygonal clay particles; no copied circle grid or reference-specific geometry is drawn.",
+      "evidence_paths": [
+        "./outputs/v1/render_direction_03.py",
+        "./outputs/v1/hero-direction-03-clay-arc.png",
+        "./outputs/v1/module-01-low-noise.png",
+        "./outputs/v1/module-02-timer-clay-touch.png"
+      ]
+    },
+    {
+      "id": "approved_copy",
+      "status": "pass",
+      "method": "Confirmed all four approved phrases appear in the render source and no duration, absolute-silence claim, reference brand name or reference headline appears in the final visual source.",
+      "evidence_paths": [
+        "./outputs/v1/render_direction_03.py",
+        "./outputs/v1/detail-page-composite.png"
+      ]
+    },
+    {
+      "id": "required_deliverable_set",
+      "status": "pass",
+      "method": "Confirmed one 1440 × 1800 hero, two 1440 × 1200 selling-point modules and one 1440 × 4224 stacked composite.",
+      "evidence_paths": [
+        "./outputs/v1/hero-direction-03-clay-arc.png",
+        "./outputs/v1/module-01-low-noise.png",
+        "./outputs/v1/module-02-timer-clay-touch.png",
+        "./outputs/v1/detail-page-composite.png"
+      ]
+    },
+    {
+      "id": "visual_layout_qa",
+      "status": "pass",
+      "method": "Inspected the hero and both modules individually at original resolution and inspected the stacked page. Headings and approved copy are legible; geometry does not cover the product or primary text; module boundaries and color continuity are clear; the low-contrast footer copy in module 01 was corrected before final verification.",
+      "evidence_paths": [
+        "./outputs/v1/hero-direction-03-clay-arc.png",
+        "./outputs/v1/module-01-low-noise.png",
+        "./outputs/v1/module-02-timer-clay-touch.png",
+        "./outputs/v1/detail-page-composite.png"
+      ]
+    },
+    {
+      "id": "render_source_validity",
+      "status": "pass",
+      "method": "Compiled the Python render source in memory without syntax errors and executed it successfully to regenerate every v1 PNG.",
+      "evidence_paths": [
+        "./outputs/v1/render_direction_03.py"
+      ]
+    },
+    {
+      "id": "prior_version_immutability",
+      "status": "pass",
+      "method": "Computed SHA-256 for every file in outputs/v0 before and after v1 work; the manifests matched exactly.",
+      "evidence_paths": [
+        "./outputs/v0",
+        "./outputs/v1/v0-integrity-sha256.txt"
+      ]
+    },
+    {
+      "id": "state_file_validity",
+      "status": "pass",
+      "method": "Parsed outputs/project-state.json successfully as JSON after updating current version, decisions, locks, preserved items, changed items and artifact paths.",
+      "evidence_paths": [
+        "./outputs/project-state.json"
+      ]
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "hero-direction-03-clay-arc.png": "6f8dae9179006ac4cda42a1957d4efdbb9787b3b50a1d73aaf3519995d5c6229",
+    "module-01-low-noise.png": "b5af93d690e455264a7baa2623f6b8df8872d8a109f5acba0c54d76dc9ce39aa",
+    "module-02-timer-clay-touch.png": "fa15afde77cafe613cdf6c2db3608a22b896b75a055aa49f81984a6b8829f249",
+    "detail-page-composite.png": "7f0a3c2c900fafd1c12165cddcde7f2bb98011fac8f6a0c3db6631c603c5823f",
+    "render_direction_03.py": "4d3f8d4ecde29ff990fc8f047aac1452ad9fc9dafc9797e541ed632d0449de20",
+    "design-delta.md": "37798020cc2648e398f3536fd93aa31f6a96ef78b4253f35ef100921593a6801"
+  },
+  "unresolved_blockers": [],
+  "checks_not_performed": [
+    "No external similarity service was used; originality was verified against the supplied references through source inspection and rendered visual review only."
+  ]
+}

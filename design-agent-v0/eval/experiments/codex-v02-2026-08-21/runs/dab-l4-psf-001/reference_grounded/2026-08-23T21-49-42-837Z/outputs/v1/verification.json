@@ -1,0 +1,141 @@
+{
+  "version": "v1",
+  "checkpoint": "complete_five_sku_extension",
+  "overall_status": "pass",
+  "checks_performed": [
+    {
+      "id": "client_strategy_selection",
+      "result": "pass",
+      "method": "Project-state inspection and full-resolution visual review.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/01_strategy_b_full_five_sku_series.png"
+      ],
+      "observations": "Strategy B (叶印章) is selected and the same large-leaf-watermark plus small-leaf-badge mechanism is applied to every SKU."
+    },
+    {
+      "id": "exact_five_skus",
+      "result": "pass",
+      "method": "Renderer-source count plus visual inspection of the full-series, shelf-check, and generated shelf-context images.",
+      "evidence_paths": [
+        "outputs/v1/01_strategy_b_full_five_sku_series.png",
+        "outputs/v1/02_strategy_b_shelf_thumbnail_check.png",
+        "outputs/v1/03_strategy_b_generated_shelf_context.png",
+        "outputs/v1/render_strategy_b_series.m"
+      ],
+      "observations": "Exactly five SKUs are present in the required order: 茉莉、乌龙、白桃、桂花、青柠."
+    },
+    {
+      "id": "requested_lime_delta",
+      "result": "pass",
+      "method": "sRGB source inspection, CIELAB conversion, HSL saturation calculation, and visual review.",
+      "evidence_paths": [
+        "outputs/v1/01_strategy_b_full_five_sku_series.png",
+        "outputs/v1/04_client_delta_and_prompt.md",
+        "outputs/project-state.json"
+      ],
+      "observations": "Lime changed from #7FB5AD to muted yellow-green #A1B36B. Old L*=69.88; new L*=70.09; absolute lightness delta=0.21. New HSL saturation is approximately 32.1%, supporting a muted rather than fluorescent appearance."
+    },
+    {
+      "id": "unrequested_colors_preserved",
+      "result": "pass",
+      "method": "v0/v1 palette-value comparison.",
+      "evidence_paths": [
+        "outputs/v0/05_strategy_decision_notes.md",
+        "outputs/v1/04_client_delta_and_prompt.md",
+        "outputs/project-state.json"
+      ],
+      "observations": "茉莉 #E3DFC6, 乌龙 #6F7D50, 白桃 #D98F79, and 桂花 #C79543 are unchanged from v0."
+    },
+    {
+      "id": "lime_vs_oolong_distinction",
+      "result": "pass",
+      "method": "CIE Lab Delta-E 76 calculation across the v1 palette.",
+      "evidence_paths": [
+        "outputs/v1/02_strategy_b_shelf_thumbnail_check.png"
+      ],
+      "observations": "The closest v1 color pair is 乌龙 vs 青柠 at Delta-E 76=23.56, preserving visible distinction despite their shared green family."
+    },
+    {
+      "id": "approved_container_preservation",
+      "result": "pass_for_structure_locked_boards",
+      "method": "The deterministic boards directly reuse the approved source-photo crop. Pixel comparison of the untouched lid zone across the five main-board packs produced mean absolute RGB errors of 1.317, 0.899, 0.811, 0.821, and 0.988, attributable to board resampling.",
+      "evidence_paths": [
+        "inputs/02-approved_base_packaging.png",
+        "outputs/v1/01_strategy_b_full_five_sku_series.png",
+        "outputs/v1/render_strategy_b_series.m"
+      ],
+      "observations": "Container silhouette, faceted lower edge, black lid, and proportions are sourced from the approved master; print graphics alone are overlaid inside the body clip."
+    },
+    {
+      "id": "logo_and_information_hierarchy",
+      "result": "pass",
+      "method": "Renderer-source coordinate inspection and side-by-side visual QA.",
+      "evidence_paths": [
+        "outputs/v0/render_locked_boards.m",
+        "outputs/v1/render_strategy_b_series.m",
+        "outputs/v1/01_strategy_b_full_five_sku_series.png"
+      ],
+      "observations": "MORI, flavor name, net-content, and shared-selling-point rectangles retain the v0 coordinates and order on all five packs."
+    },
+    {
+      "id": "thumbnail_and_shelf_review",
+      "result": "pass",
+      "method": "Full-resolution review, built-in 120 px proxy layout, and 480×270 downsample inspection.",
+      "evidence_paths": [
+        "outputs/v1/02_strategy_b_shelf_thumbnail_check.png",
+        "outputs/v1/evidence/01_full_series_thumbnail_480.png",
+        "outputs/v1/evidence/02_shelf_check_thumbnail_480.png",
+        "outputs/v1/evidence/03_generated_shelf_thumbnail_480.png"
+      ],
+      "observations": "All five SKUs remain visually separable; the new lime reads as yellow-green without becoming a neon shelf outlier."
+    },
+    {
+      "id": "generated_shelf_context",
+      "result": "pass_as_supplemental_visualization",
+      "method": "Full-resolution visual inspection for count, order, copy, color direction, and gross geometry.",
+      "evidence_paths": [
+        "outputs/v1/03_strategy_b_generated_shelf_context.png",
+        "outputs/v1/04_client_delta_and_prompt.md"
+      ],
+      "observations": "The built-in image-generation result contains exactly five front-facing packs with correct MORI spelling and flavor names. It is a shelf-context visualization, not prepress artwork; the structure-locked boards remain authoritative."
+    },
+    {
+      "id": "v0_preservation",
+      "result": "pass",
+      "method": "v0 file inventory and SHA-256 capture after v1 creation; no command wrote to outputs/v0.",
+      "evidence_paths": [
+        "outputs/v0/03_locked_color_encoding_hypotheses.png",
+        "outputs/v0/04_locked_three_strategy_choice_board.png",
+        "outputs/v0/05_strategy_decision_notes.md",
+        "outputs/v0/render_locked_boards.m",
+        "outputs/v0/verification.json"
+      ],
+      "observations": {
+        "03_locked_color_encoding_hypotheses.png": "b90fe8af59bd906c",
+        "04_locked_three_strategy_choice_board.png": "3daef6b04ee5c5d8",
+        "05_strategy_decision_notes.md": "5409d9821becea2b",
+        "render_locked_boards.m": "6af9622d88b12f89",
+        "verification.json": "fcb9cb8c9c84d468"
+      }
+    },
+    {
+      "id": "artifact_integrity",
+      "result": "pass",
+      "method": "Image metadata check and JSON parse.",
+      "evidence_paths": [
+        "outputs/v1/01_strategy_b_full_five_sku_series.png",
+        "outputs/v1/02_strategy_b_shelf_thumbnail_check.png",
+        "outputs/v1/03_strategy_b_generated_shelf_context.png",
+        "outputs/project-state.json",
+        "outputs/v1/verification.json"
+      ],
+      "observations": "The two structure-locked boards are readable RGBA PNGs at 2400×1350; the generated context is a readable RGB PNG at 1672×941; project-state.json parses successfully."
+    }
+  ],
+  "unresolved_blockers": [],
+  "open_non_blocking_production_checks": [
+    "Confirm a physical #A1B36B spot-color drawdown on the actual substrate before prepress.",
+    "Replace placeholder net-content and shared-selling-point text with the approved production copy before final artwork release."
+  ]
+}

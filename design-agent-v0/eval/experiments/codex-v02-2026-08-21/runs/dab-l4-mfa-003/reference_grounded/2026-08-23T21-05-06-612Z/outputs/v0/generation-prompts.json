@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "tool_mode": "built-in image generation/editing",
+  "input_role": "edit target",
+  "input_path": "inputs/01-approved_master.png",
+  "shared_invariants": [
+    "Preserve the SUMMER FORM campaign identity.",
+    "Preserve exact copy: SUMMER FORM; Design Market; 08—10 AUG; BROOKLYN.",
+    "Preserve cream paper texture, navy and coral palette, thin navy geometry, and origami focal element.",
+    "Add no new copy, CTA, watermark, or replacement imagery."
+  ],
+  "channel_prompts": [
+    {
+      "channel": "小红书",
+      "prompt_summary": "Adapt the approved master to a full-bleed 3:4 vertical social post with all copy legible and inside safe margins."
+    },
+    {
+      "channel": "Story",
+      "prompt_summary": "Extend and reflow the approved system into a full-screen 9:16 Story with generous top and bottom safe margins."
+    },
+    {
+      "channel": "邮件",
+      "prompt_summary": "Recompose the approved elements into a 3:1 email banner with headline left, origami bridge, and event details right."
+    },
+    {
+      "channel": "LED",
+      "prompt_summary": "Create the full 4:1 LED composition inside a central safe band, with sacrificial cream crop margins, large headline left, compact origami center, and event details right."
+    }
+  ]
+}

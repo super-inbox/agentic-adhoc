@@ -1,0 +1,323 @@
+{
+  "schema": "design-object-graph/v1",
+  "documentId": "summer-form-adaptation-map-v0",
+  "documentType": "adaptation_map",
+  "status": "proposed_for_client_approval",
+  "canvas": {
+    "width": 2560,
+    "height": 1800,
+    "color": "paper",
+    "units": "px"
+  },
+  "palette": {
+    "paper": "#F3EFE5",
+    "paperDeep": "#E7E0D3",
+    "navy": "#223A73",
+    "blue": "#355A9C",
+    "coral": "#EE7860",
+    "ink": "#1E2F58",
+    "muted": "#736F68",
+    "white": "#FBF8F0"
+  },
+  "fonts": {
+    "display": "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+    "latin": "/System/Library/Fonts/Helvetica.ttc",
+    "cjk": "/System/Library/Fonts/STHeiti Light.ttc",
+    "cjkMedium": "/System/Library/Fonts/STHeiti Medium.ttc"
+  },
+  "sourceBinding": {
+    "inputId": "campaign-master",
+    "path": "inputs/01-approved_master.png",
+    "businessRole": "approved_master",
+    "referenceRole": "approved_master",
+    "allowedInfluence": [
+      "localized_edit",
+      "adaptation"
+    ],
+    "identityPolicy": "preserve_unedited_regions"
+  },
+  "contentLocks": [
+    {
+      "id": "lock-title",
+      "label": "标题",
+      "value": "SUMMER FORM",
+      "required": true,
+      "status": "available"
+    },
+    {
+      "id": "lock-date",
+      "label": "日期",
+      "value": "08—10 AUG",
+      "required": true,
+      "status": "available"
+    },
+    {
+      "id": "lock-location",
+      "label": "地点",
+      "value": "BROOKLYN",
+      "required": true,
+      "status": "available"
+    },
+    {
+      "id": "lock-registration-url",
+      "label": "报名 URL",
+      "value": null,
+      "required": true,
+      "status": "blocked_missing_input",
+      "reservedPlacement": "all_channel_frames"
+    }
+  ],
+  "identityLocks": [
+    "navy_coral_offwhite_palette",
+    "thin_blue_modular_grid",
+    "circle_arc_geometry",
+    "folded_paper_sculpture_focal_object",
+    "bold_geometric_title_hierarchy",
+    "approved_master_unedited"
+  ],
+  "objects": [
+    {
+      "id": "background",
+      "type": "rect",
+      "bbox": [0, 0, 2560, 1800],
+      "fill": "paper",
+      "editable": true
+    },
+    {
+      "id": "header-title",
+      "type": "text",
+      "bbox": [80, 58, 1120, 92],
+      "text": "SUMMER FORM / ADAPTATION MAP",
+      "style": "display_navy",
+      "editable": true
+    },
+    {
+      "id": "header-version",
+      "type": "text",
+      "bbox": [80, 154, 1120, 44],
+      "text": "v0 · 先审构图策略，批准后再批量出图",
+      "style": "cjk_coral",
+      "editable": true
+    },
+    {
+      "id": "header-locks",
+      "type": "text_group",
+      "bbox": [1450, 58, 1030, 132],
+      "text": [
+        "LOCK / 标题 · 日期 · 地点 · 报名 URL",
+        "BLOCKER / 母版未见报名 URL，全部版式已预留位置"
+      ],
+      "style": "header_status",
+      "editable": true
+    },
+    {
+      "id": "approved-master-panel",
+      "type": "group",
+      "bbox": [80, 250, 500, 1460],
+      "children": [
+        {
+          "id": "approved-master-image",
+          "type": "image",
+          "bbox": [140, 372, 380, 472],
+          "source": "inputs/01-approved_master.png",
+          "fit": "contain",
+          "editPolicy": "locked_no_edits"
+        },
+        {
+          "id": "approved-master-lock-summary",
+          "type": "text_group",
+          "bbox": [130, 900, 400, 640],
+          "text": [
+            "批准母版 · 928 × 1152",
+            "不做机械裁切",
+            "保留蓝/珊瑚/暖白配色",
+            "保留网格、圆弧、折纸焦点",
+            "保留粗体标题层级",
+            "母版本身不改动"
+          ],
+          "style": "source_notes"
+        }
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "id": "xhs",
+      "name": "小红书",
+      "ratio": "3:4",
+      "proposedExport": "1080×1440",
+      "cardBbox": [650, 250, 580, 680],
+      "frameBbox": [690, 384, 270, 360],
+      "strategy": "纵向延展；标题保持上部主导，折纸下移，信息与 URL 分层落底",
+      "tradeoffs": [
+        "扩画布，不放大裁切",
+        "减少底部装饰密度",
+        "URL 进入独立安全条"
+      ],
+      "safeArea": {
+        "insetPercent": 6
+      },
+      "layout": {
+        "title": [0.08, 0.08, 0.84, 0.22],
+        "sculpture": [0.08, 0.43, 0.40, 0.31],
+        "eventInfo": [0.52, 0.46, 0.40, 0.22],
+        "registrationUrl": [0.08, 0.87, 0.84, 0.07]
+      }
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "ratio": "4:5",
+      "proposedExport": "1080×1350",
+      "cardBbox": [1260, 250, 580, 680],
+      "frameBbox": [1300, 389, 280, 350],
+      "strategy": "最接近母版；维持标题与折纸关系，仅为 URL 新增底部信息带",
+      "tradeoffs": [
+        "母版构图改动最小",
+        "信息块轻微上提",
+        "装饰比例保持"
+      ],
+      "safeArea": {
+        "insetPercent": 5
+      },
+      "layout": {
+        "title": [0.10, 0.12, 0.80, 0.22],
+        "sculpture": [0.08, 0.48, 0.40, 0.29],
+        "eventInfo": [0.51, 0.48, 0.42, 0.22],
+        "registrationUrl": [0.08, 0.88, 0.84, 0.06]
+      }
+    },
+    {
+      "id": "story",
+      "name": "Story",
+      "ratio": "9:16",
+      "proposedExport": "1080×1920",
+      "cardBbox": [1870, 250, 580, 680],
+      "frameBbox": [1910, 384, 203, 360],
+      "strategy": "上下延展；标题、信息、折纸改为三段式，避开界面遮挡区",
+      "tradeoffs": [
+        "顶部/底部各留 12%",
+        "折纸缩至中下段",
+        "URL 位于底部安全区之上"
+      ],
+      "safeArea": {
+        "topPercent": 12,
+        "bottomPercent": 12,
+        "sidePercent": 7
+      },
+      "layout": {
+        "title": [0.09, 0.14, 0.82, 0.18],
+        "eventInfo": [0.10, 0.39, 0.80, 0.16],
+        "sculpture": [0.18, 0.60, 0.64, 0.18],
+        "registrationUrl": [0.10, 0.82, 0.80, 0.06]
+      }
+    },
+    {
+      "id": "wechat",
+      "name": "微信头图",
+      "ratio": "2.35:1",
+      "proposedExport": "1880×800",
+      "cardBbox": [650, 970, 430, 710],
+      "frameBbox": [690, 1098, 350, 149],
+      "strategy": "模块横向重排；标题左、折纸中、信息与 URL 右，不做居中裁切",
+      "tradeoffs": [
+        "装饰仅留关键网格/圆弧",
+        "标题拆两行",
+        "URL 右下独立"
+      ],
+      "safeArea": {
+        "insetPercent": 5
+      },
+      "layout": {
+        "title": [0.04, 0.17, 0.29, 0.62],
+        "sculpture": [0.36, 0.15, 0.22, 0.70],
+        "eventInfo": [0.62, 0.13, 0.34, 0.38],
+        "registrationUrl": [0.62, 0.67, 0.34, 0.16]
+      }
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "ratio": "≈1.91:1",
+      "proposedExport": "1200×628",
+      "cardBbox": [1100, 970, 430, 710],
+      "frameBbox": [1140, 1098, 350, 183],
+      "strategy": "左右信息分栏；标题左上、折纸左下、日期地点与 URL 右侧",
+      "tradeoffs": [
+        "优先移动端缩略图可读",
+        "信息区扩大",
+        "裁减非核心装饰"
+      ],
+      "safeArea": {
+        "insetPercent": 6
+      },
+      "layout": {
+        "title": [0.05, 0.12, 0.43, 0.28],
+        "sculpture": [0.11, 0.49, 0.30, 0.36],
+        "eventInfo": [0.55, 0.16, 0.40, 0.35],
+        "registrationUrl": [0.55, 0.69, 0.40, 0.13]
+      }
+    },
+    {
+      "id": "web",
+      "name": "官网",
+      "ratio": "16:9",
+      "proposedExport": "1920×1080",
+      "cardBbox": [1550, 970, 430, 710],
+      "frameBbox": [1590, 1098, 350, 197],
+      "strategy": "三段式横排；标题左、折纸居中、信息右，保留较完整背景网格",
+      "tradeoffs": [
+        "兼顾桌面与响应式安全区",
+        "URL 右下",
+        "焦点不压文字"
+      ],
+      "safeArea": {
+        "insetPercent": 5
+      },
+      "layout": {
+        "title": [0.05, 0.16, 0.31, 0.31],
+        "sculpture": [0.37, 0.23, 0.25, 0.54],
+        "eventInfo": [0.66, 0.18, 0.29, 0.34],
+        "registrationUrl": [0.66, 0.69, 0.29, 0.12]
+      }
+    },
+    {
+      "id": "event-wall",
+      "name": "现场横屏",
+      "ratio": "32:9",
+      "proposedExport": "3840×1080",
+      "cardBbox": [2000, 970, 450, 710],
+      "frameBbox": [2040, 1098, 370, 104],
+      "strategy": "超宽三分区；标题占左 34%，折纸居中，日期地点与 URL 占右 34%",
+      "tradeoffs": [
+        "标题约画高 35%",
+        "日期/地点约画高 12%",
+        "URL 约画高 5%，两侧留 5%"
+      ],
+      "safeArea": {
+        "sidePercent": 5,
+        "topBottomPercent": 8
+      },
+      "layout": {
+        "title": [0.05, 0.19, 0.29, 0.45],
+        "sculpture": [0.39, 0.12, 0.19, 0.76],
+        "eventInfo": [0.63, 0.17, 0.32, 0.39],
+        "registrationUrl": [0.63, 0.67, 0.32, 0.15]
+      },
+      "distanceReadability": {
+        "priority": "high",
+        "titleMinCanvasHeightPercent": 35,
+        "dateLocationMinCanvasHeightPercent": 12,
+        "urlMinCanvasHeightPercent": 5
+      }
+    }
+  ],
+  "approvalGate": {
+    "requiredBeforeBatchOutput": true,
+    "requiredInputs": [
+      "exact_registration_url",
+      "adaptation_map_approval"
+    ],
+    "batchOutputCreated": false
+  }
+}

@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200">
+  <defs>
+    <style>
+      .sans { font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif; }
+      .serif { font-family: "Songti SC", "Noto Serif CJK SC", Georgia, serif; }
+      .charcoal { fill: #30312f; }
+      .muted { fill: #6d716c; }
+      .small { font-size: 22px; }
+      .body { font-size: 25px; }
+      .label { font-size: 18px; letter-spacing: 2px; font-weight: 650; }
+      .title { font-size: 54px; font-weight: 650; letter-spacing: 1px; }
+      .territory { font-size: 38px; font-weight: 650; }
+      .cardTitle { font-size: 25px; font-weight: 650; }
+    </style>
+    <clipPath id="productClip"><rect x="1190" y="70" width="330" height="330" rx="28"/></clipPath>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#1d241f" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="2200" fill="#f7f6f0"/>
+  <rect x="0" y="0" width="1600" height="18" fill="#30312f"/>
+
+  <g class="sans">
+    <text x="80" y="90" class="label charcoal">MORI · CREATIVE TERRITORIES / V0</text>
+    <text x="80" y="174" class="title charcoal">便携音箱创意方向选择板</text>
+    <text x="80" y="226" class="body muted">10 个低成本场景假设 · 3 个差异化方向 · 本轮仅供选择，不生成六张成品</text>
+
+    <rect x="80" y="278" width="1010" height="122" rx="22" fill="#eeeadf"/>
+    <text x="112" y="322" class="label charcoal">LOCKED / 不可改变</text>
+    <text x="112" y="360" class="small charcoal">产品外观、接口、Logo、蓝绿色保持原样；只使用 12 小时续航 / IPX4 防泼水 / 一体式挂环。</text>
+    <text x="112" y="390" class="small muted">不增加虚构按钮或配件；不出现浸泡、强水柱或“防水”表述。</text>
+
+    <rect x="1180" y="60" width="350" height="350" rx="34" fill="#ffffff" filter="url(#softShadow)"/>
+    <image href="../../inputs/01-product_master.png" x="1190" y="70" width="330" height="330" preserveAspectRatio="xMidYMid slice" clip-path="url(#productClip)"/>
+    <text x="1180" y="444" class="small muted">原产品图仅缩放 / 未改色、未改结构</text>
+
+    <g transform="translate(80 468)">
+      <rect width="460" height="1250" rx="28" fill="#eef3f2" stroke="#c9d9d6" stroke-width="2"/>
+      <rect width="460" height="15" rx="8" fill="#93bec2"/>
+      <text x="30" y="72" class="label charcoal">TERRITORY A</text>
+      <text x="30" y="126" class="territory charcoal">城市轻行</text>
+      <text x="30" y="160" class="small muted">CITY LOOP</text>
+      <rect x="30" y="194" width="170" height="38" rx="19" fill="#30312f"/>
+      <text x="52" y="221" class="small" fill="#ffffff">一体式挂环</text>
+      <text x="30" y="278" class="body charcoal">从玄关到街角，</text>
+      <text x="30" y="315" class="body charcoal">用包带与路径线表达轻便出发。</text>
+      <text x="30" y="365" class="small muted">视觉：高明度自然光 / 斜向动势 / 产品大轮廓</text>
+
+      <g transform="translate(30 410)">
+        <rect width="400" height="146" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#93bec2"/><text x="29" y="44" class="small" fill="#ffffff">1</text>
+        <text x="68" y="44" class="cardTitle charcoal">玄关帆布包</text>
+        <text x="22" y="82" class="small muted">长凳＋墙钩＋帆布包，形成“即将出门”线索。</text>
+        <text x="22" y="116" class="small muted">挂包连接须等官方挂环视角，绝不虚构结构。</text>
+      </g>
+      <g transform="translate(30 574)">
+        <rect width="400" height="132" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#93bec2"/><text x="29" y="44" class="small" fill="#ffffff">2</text>
+        <text x="68" y="44" class="cardTitle charcoal">街角咖啡外摆</text>
+        <text x="22" y="82" class="small muted">桌角＋包带斜线＋浅景深城市背景。</text>
+        <text x="22" y="112" class="small muted">产品前景完整，缩略图识别最直接。</text>
+      </g>
+      <g transform="translate(30 724)">
+        <rect width="400" height="132" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#93bec2"/><text x="29" y="44" class="small" fill="#ffffff">3</text>
+        <text x="68" y="44" class="cardTitle charcoal">单车短暂停靠</text>
+        <text x="22" y="82" class="small muted">车篮与包提示移动，不表现骑行中操作。</text>
+        <text x="22" y="112" class="small muted">不添加固定支架或未提供配件。</text>
+      </g>
+      <g transform="translate(30 874)">
+        <rect width="400" height="132" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#93bec2"/><text x="29" y="44" class="small" fill="#ffffff">4</text>
+        <text x="68" y="44" class="cardTitle charcoal">城市公园长椅</text>
+        <text x="22" y="82" class="small muted">包＋书＋浅绿背景，无模特也能成立。</text>
+        <text x="22" y="112" class="small muted">产品占画面约一半，保持主体清楚。</text>
+      </g>
+      <rect x="30" y="1045" width="400" height="165" rx="18" fill="#dfeae8"/>
+      <text x="52" y="1084" class="label charcoal">BEST AT</text>
+      <text x="52" y="1122" class="small charcoal">天猫主图 · 挂环卖点图 · 社媒海报</text>
+      <text x="52" y="1162" class="small muted">优势：电商信息最直给</text>
+      <text x="52" y="1192" class="small muted">风险：需要补充准确挂环视角</text>
+    </g>
+
+    <g transform="translate(570 468)">
+      <rect width="460" height="1250" rx="28" fill="#edf5f7" stroke="#c5dce3" stroke-width="2"/>
+      <rect width="460" height="15" rx="8" fill="#b5d4df"/>
+      <text x="30" y="72" class="label charcoal">TERRITORY B</text>
+      <text x="30" y="126" class="territory charcoal">轻水留白</text>
+      <text x="30" y="160" class="small muted">FRESH SPLASH</text>
+      <rect x="30" y="194" width="178" height="38" rx="19" fill="#30312f"/>
+      <text x="51" y="221" class="small" fill="#ffffff">IPX4 防泼水</text>
+      <text x="30" y="278" class="body charcoal">用水珠与雨后反光，</text>
+      <text x="30" y="315" class="body charcoal">克制表现日常泼溅中的从容。</text>
+      <text x="30" y="365" class="small muted">视觉：浅蓝冷光 / 水珠微距 / 橄榄绿植物</text>
+
+      <g transform="translate(30 410)">
+        <rect width="400" height="154" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#b5d4df"/><text x="29" y="44" class="small charcoal">5</text>
+        <text x="68" y="44" class="cardTitle charcoal">雨后公园桌</text>
+        <text x="22" y="82" class="small muted">桌面薄反光，背景叶片带水珠。</text>
+        <text x="22" y="116" class="small muted">产品处于稳定区域；不制造积水包围。</text>
+      </g>
+      <g transform="translate(30 584)">
+        <rect width="400" height="154" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#b5d4df"/><text x="29" y="44" class="small charcoal">6</text>
+        <text x="68" y="44" class="cardTitle charcoal">露台浇花</text>
+        <text x="22" y="82" class="small muted">浇水壶虚化，少量飞溅停留在叶片/空气。</text>
+        <text x="22" y="116" class="small muted">产品不置于直流水柱或暴雨下。</text>
+      </g>
+      <g transform="translate(30 758)">
+        <rect width="400" height="154" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#b5d4df"/><text x="29" y="44" class="small charcoal">7</text>
+        <text x="68" y="44" class="cardTitle charcoal">野餐冷饮凝露</text>
+        <text x="22" y="82" class="small muted">杯壁凝露＋水果＋桌布边缘少量水点。</text>
+        <text x="22" y="116" class="small muted">只作场景道具，不暗示随箱附赠。</text>
+      </g>
+      <rect x="30" y="1045" width="400" height="165" rx="18" fill="#dcecf1"/>
+      <text x="52" y="1084" class="label charcoal">BEST AT</text>
+      <text x="52" y="1122" class="small charcoal">防泼水卖点图 · 详情首屏 · 社媒海报</text>
+      <text x="52" y="1162" class="small muted">优势：视觉记忆最强</text>
+      <text x="52" y="1192" class="small muted">风险：必须避免“可浸泡”误读</text>
+    </g>
+
+    <g transform="translate(1060 468)">
+      <rect width="460" height="1250" rx="28" fill="#f3f0e7" stroke="#ddd5c3" stroke-width="2"/>
+      <rect width="460" height="15" rx="8" fill="#8f9b6c"/>
+      <text x="30" y="72" class="label charcoal">TERRITORY C</text>
+      <text x="30" y="126" class="territory charcoal">晨昏慢陪</text>
+      <text x="30" y="160" class="small muted">DAYLONG CALM</text>
+      <rect x="30" y="194" width="176" height="38" rx="19" fill="#30312f"/>
+      <text x="52" y="221" class="small" fill="#ffffff">12 小时续航</text>
+      <text x="30" y="278" class="body charcoal">同一桌面从晨光到夜色，</text>
+      <text x="30" y="315" class="body charcoal">用时间层次讲清 12 小时续航。</text>
+      <text x="30" y="365" class="small muted">视觉：奶油白 / 橄榄绿 / 陶土红 / 三段光色</text>
+
+      <g transform="translate(30 410)">
+        <rect width="400" height="154" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#8f9b6c"/><text x="29" y="44" class="small" fill="#ffffff">8</text>
+        <text x="68" y="44" class="cardTitle charcoal">晨间早餐台</text>
+        <text x="22" y="82" class="small muted">杯碟＋一枝绿叶，柔和晨光。</text>
+        <text x="22" y="116" class="small muted">产品占画面 45% 以上，缩略图清楚。</text>
+      </g>
+      <g transform="translate(30 584)">
+        <rect width="400" height="154" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#8f9b6c"/><text x="29" y="44" class="small" fill="#ffffff">9</text>
+        <text x="68" y="44" class="cardTitle charcoal">午后阅读角</text>
+        <text x="22" y="82" class="small muted">同一机位换书与织物，光线转中性。</text>
+        <text x="22" y="116" class="small muted">不出现音质、连接距离等未批准参数。</text>
+      </g>
+      <g transform="translate(30 758)">
+        <rect width="400" height="154" rx="18" fill="#ffffff"/>
+        <circle cx="35" cy="36" r="18" fill="#8f9b6c"/><text x="25" y="44" class="small" fill="#ffffff">10</text>
+        <text x="68" y="44" class="cardTitle charcoal">黄昏阳台桌</text>
+        <text x="22" y="82" class="small muted">陶土红夕照＋小型暖灯，收束晨至暮。</text>
+        <text x="22" y="116" class="small muted">不写“全天/整日”，只写 12 小时。</text>
+      </g>
+      <rect x="30" y="1045" width="400" height="165" rx="18" fill="#e9e4d5"/>
+      <text x="52" y="1084" class="label charcoal">BEST AT</text>
+      <text x="52" y="1122" class="small charcoal">续航卖点图 · 详情首屏 · 品牌社媒</text>
+      <text x="52" y="1162" class="small muted">优势：MORI 品牌气质最完整</text>
+      <text x="52" y="1192" class="small muted">风险：便携动作弱，需放大产品</text>
+    </g>
+
+    <g transform="translate(80 1780)">
+      <rect width="1440" height="300" rx="28" fill="#30312f"/>
+      <text x="40" y="62" class="label" fill="#f7f6f0">SELECTION CHECKPOINT / 请选择一个方向</text>
+      <text x="40" y="126" class="territory" fill="#ffffff">A 城市轻行　　B 轻水留白　　C 晨昏慢陪</text>
+      <text x="40" y="178" class="body" fill="#e7e5dc">选择后再制作：天猫主图 ×1 / 卖点图 ×3 / 详情页首屏 ×1 / 社媒场景海报 ×1</text>
+      <text x="40" y="226" class="small" fill="#bfc4bd">后续输入缺口：要真实表现“挂包”，需官方侧/背面图、透明底图或 CAD，清楚展示一体式挂环与连接方式。</text>
+      <text x="40" y="260" class="small" fill="#bfc4bd">当前状态：AWAITING CLIENT DECISION · 六张最终视觉资产尚未授权制作</text>
+    </g>
+
+    <text x="80" y="2146" class="small muted">Palette visually approximated from supplied MORI brand-board PNG. Final production values require source brand specifications.</text>
+  </g>
+</svg>
+

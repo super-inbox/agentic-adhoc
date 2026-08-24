@@ -1,0 +1,166 @@
+{
+  "schema": "object-change-set/v1",
+  "changeSetId": "summer-form-story-safe-zone-delta-v1",
+  "baseVersion": "v0",
+  "targetVersion": "v1",
+  "baseArtifacts": {
+    "designDocument": "outputs/v0/design_document.json",
+    "preview": "outputs/v0/preview.png"
+  },
+  "scope": "requested_delta_only",
+  "status": "applied_to_adaptation_map",
+  "clientRequest": "Move only the Story registration URL and date upward; do not change the other six versions.",
+  "approvedMasterMutation": false,
+  "changedChannelIds": [
+    "story"
+  ],
+  "unchangedChannelIds": [
+    "xhs",
+    "instagram",
+    "wechat",
+    "meta",
+    "web",
+    "event-wall"
+  ],
+  "operations": [
+    {
+      "operationId": "story-date-move-up",
+      "channelId": "story",
+      "objectId": "date",
+      "operation": "translate_y",
+      "content": "08—10 AUG",
+      "contentLocked": true,
+      "beforeNormalizedBbox": [
+        0.1,
+        0.39,
+        0.8,
+        0.05
+      ],
+      "afterNormalizedBbox": [
+        0.1,
+        0.34,
+        0.8,
+        0.05
+      ],
+      "deltaNormalized": [
+        0,
+        -0.05
+      ],
+      "mapFramePixelDeltaY": -18,
+      "preservedProperties": [
+        "x",
+        "width",
+        "height",
+        "content",
+        "font",
+        "color"
+      ]
+    },
+    {
+      "operationId": "story-registration-url-move-up",
+      "channelId": "story",
+      "objectId": "registrationUrl",
+      "operation": "translate_y",
+      "content": null,
+      "placeholder": "URL · 待提供",
+      "contentStatus": "blocked_missing_client_input",
+      "beforeNormalizedBbox": [
+        0.1,
+        0.82,
+        0.8,
+        0.06
+      ],
+      "afterNormalizedBbox": [
+        0.1,
+        0.53,
+        0.8,
+        0.06
+      ],
+      "deltaNormalized": [
+        0,
+        -0.29
+      ],
+      "mapFramePixelDeltaY": -105,
+      "preservedProperties": [
+        "x",
+        "width",
+        "height",
+        "placeholder",
+        "font",
+        "fill_color"
+      ],
+      "safeAreaResult": {
+        "urlBottomNormalized": 0.59,
+        "platformBottomSafeZoneStartsNormalized": 0.88,
+        "clearanceNormalized": 0.29
+      }
+    }
+  ],
+  "storyUnchangedObjects": [
+    {
+      "objectId": "title",
+      "normalizedBbox": [
+        0.09,
+        0.14,
+        0.82,
+        0.18
+      ]
+    },
+    {
+      "objectId": "location",
+      "content": "BROOKLYN",
+      "renderedMapBaselineYBefore": 548,
+      "renderedMapBaselineYAfter": 548
+    },
+    {
+      "objectId": "folded-paper-sculpture",
+      "normalizedBbox": [
+        0.18,
+        0.6,
+        0.64,
+        0.18
+      ]
+    },
+    {
+      "objectId": "safe-area",
+      "value": {
+        "topPercent": 12,
+        "bottomPercent": 12,
+        "sidePercent": 7
+      }
+    },
+    {
+      "objectId": "decorative-grid",
+      "operation": "preserve"
+    }
+  ],
+  "nonDesignMetadataChanges": [
+    "document_version_v0_to_v1",
+    "story_strategy_annotation_updated_to_describe_requested_delta"
+  ],
+  "explicitlyUnchanged": [
+    "outputs/v0",
+    "inputs/01-approved_master.png",
+    "all_six_non_story_channel_objects",
+    "story.title",
+    "story.location",
+    "story.folded-paper-sculpture",
+    "story.safe-area",
+    "story.decorative-grid",
+    "registration_url_actual_value"
+  ],
+  "unresolvedBlockers": [
+    {
+      "id": "missing-registration-url",
+      "severity": "blocking",
+      "requiredFrom": "client",
+      "resolution": "Provide the exact registration URL before final channel artwork is generated."
+    },
+    {
+      "id": "v1-story-revision-approval",
+      "severity": "blocking_checkpoint",
+      "requiredFrom": "client",
+      "resolution": "Approve the revised Story placement before batch output."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+v1 已完成。保留方向 3 的大胆构图及产品位置，移除近完整圆环、折线与轨道组合，改为原创非同心呼吸弧和不规则陶土颗粒。产品锚点与原图身份均验证未变，v0 文件哈希全部一致。
+
+新增或变更路径：
+
+- [整页合成图](/private<WORKDIR>/outputs/v1/detail-page-composite.png)
+- [首屏](/private<WORKDIR>/outputs/v1/hero-direction-03-clay-arc.png)
+- [低噪运行模块](/private<WORKDIR>/outputs/v1/module-01-low-noise.png)
+- [定时关闭／陶土触感模块](/private<WORKDIR>/outputs/v1/module-02-timer-clay-touch.png)
+- [修订说明](/private<WORKDIR>/outputs/v1/design-delta.md)
+- [验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)

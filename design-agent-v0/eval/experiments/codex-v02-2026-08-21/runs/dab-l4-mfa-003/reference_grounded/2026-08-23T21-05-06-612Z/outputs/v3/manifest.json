@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "project": "summer-form-channel-exports",
+  "version": "v3",
+  "version_scope": "story_registration_position_only",
+  "source_edit_target": "outputs/v0/summer-form-story-1080x1920.png",
+  "created_at": "2026-08-24T05:46:55+08:00",
+  "overall_status": "all_five_channels_delivered",
+  "items": [
+    {
+      "id": "xhs",
+      "channel": "小红书",
+      "requested_dimensions": {
+        "width": 1080,
+        "height": 1440,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "frozen_unchanged",
+      "artifact_path": "outputs/v0/summer-form-xhs-1080x1440.png"
+    },
+    {
+      "id": "story",
+      "channel": "Story",
+      "requested_dimensions": {
+        "width": 1080,
+        "height": 1920,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "new_in_v3_registration_position_only",
+      "edit_delta": {
+        "target": "Design Market / 08—10 AUG / BROOKLYN registration group",
+        "vertical_shift_pixels": -260,
+        "horizontal_shift_pixels": 0
+      },
+      "artifact_path": "outputs/v3/summer-form-story-registration-up-1080x1920.png"
+    },
+    {
+      "id": "website",
+      "channel": "官网",
+      "requested_dimensions": {
+        "width": 1440,
+        "height": 560,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "frozen_unchanged",
+      "artifact_path": "outputs/v1/summer-form-website-1440x560.png"
+    },
+    {
+      "id": "email",
+      "channel": "邮件",
+      "requested_dimensions": {
+        "width": 600,
+        "height": 240,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "frozen_unchanged",
+      "artifact_path": "outputs/v2/summer-form-email-600x240.png"
+    },
+    {
+      "id": "led",
+      "channel": "LED",
+      "requested_dimensions": {
+        "width": 4096,
+        "height": 1024,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "frozen_unchanged",
+      "artifact_path": "outputs/v0/summer-form-led-4096x1024.png"
+    }
+  ]
+}

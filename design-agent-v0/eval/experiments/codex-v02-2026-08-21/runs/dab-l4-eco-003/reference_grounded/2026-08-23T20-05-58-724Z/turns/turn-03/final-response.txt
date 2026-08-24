@@ -1,0 +1,14 @@
+已完成 v3：
+
+- 以 v2 为底，仅在现有陶土红底边中央加入小标签“陶土触感”。
+- “低噪运行”保持主卖点；“定时关闭”仍留在下一屏。
+- 未恢复 v0 三栏结构。
+- 标签之外与 v2 的像素差异为 0；v0–v2 均未改动。
+
+新建或更新路径：
+
+- [v3 首屏成稿](/private<WORKDIR>/outputs/v3/taobao-first-screen-bottom-tag-v3.png)
+- [v3 验证记录](/private<WORKDIR>/outputs/v3/verification.json)
+- [生成提示词](/private<WORKDIR>/outputs/v3/generation-prompt.md)
+- [像素锁定合成记录](/private<WORKDIR>/outputs/v3/bottom-tag-pixel-lock-composite.c)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)

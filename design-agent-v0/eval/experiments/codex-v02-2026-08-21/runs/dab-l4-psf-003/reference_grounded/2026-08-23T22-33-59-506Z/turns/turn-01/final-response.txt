@@ -1,0 +1,11 @@
+v1 已保存，但仍处于 **HOLD**：尺寸已锁定为 `125×205 mm` 画板、`119×199 mm` Trim；由于正面现有 `250 g` 与背面要求 `200 g` 冲突，未改动原稿或生成生产 PDF。
+
+新建/更新路径：
+
+- 非生产 delta 审核报告：:codex-file-citation{path="/private<WORKDIR>/outputs/v1/orbit-coffee_v1-delta-gate_NOT-FOR-PRODUCTION.pdf" purpose="output"}
+- [冲突标注图](/private<WORKDIR>/outputs/v1/approved-artwork_v1-net-content-conflict-annotated.png)
+- [v1 检查清单](/private<WORKDIR>/outputs/v1/orbit-coffee_v1-delta-checklist.md)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+`outputs/v0` 已核验保持不变。下一步需明确：正面 `250 g` 是否也同步改为 `200 g`？

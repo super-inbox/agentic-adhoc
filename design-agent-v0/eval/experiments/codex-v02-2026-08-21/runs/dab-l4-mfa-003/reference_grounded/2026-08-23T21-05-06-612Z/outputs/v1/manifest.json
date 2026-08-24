@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "project": "summer-form-channel-exports",
+  "version": "v1",
+  "version_scope": "website_dimension_correction_only",
+  "source": "inputs/01-approved_master.png",
+  "created_at": "2026-08-24T05:22:23+08:00",
+  "overall_status": "all_five_channels_delivered",
+  "items": [
+    {
+      "id": "xhs",
+      "channel": "小红书",
+      "requested_dimensions": {
+        "width": 1080,
+        "height": 1440,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "unchanged_from_v0",
+      "artifact_path": "outputs/v0/summer-form-xhs-1080x1440.png"
+    },
+    {
+      "id": "story",
+      "channel": "Story",
+      "requested_dimensions": {
+        "width": 1080,
+        "height": 1920,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "unchanged_from_v0",
+      "artifact_path": "outputs/v0/summer-form-story-1080x1920.png"
+    },
+    {
+      "id": "website",
+      "channel": "官网",
+      "requested_dimensions": {
+        "width": 1440,
+        "height": 560,
+        "unit": "px"
+      },
+      "parameter_validation": "valid",
+      "production_status": "delivered",
+      "change_status": "new_in_v1_corrected_dimension",
+      "artifact_path": "outputs/v1/summer-form-website-1440x560.png"
+    },
+    {
+      "id": "email",
+      "channel": "邮件",
+      "requested_dimensions": {
+        "width": 600,
+        "height": 200,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "unchanged_from_v0",
+      "artifact_path": "outputs/v0/summer-form-email-600x200.png"
+    },
+    {
+      "id": "led",
+      "channel": "LED",
+      "requested_dimensions": {
+        "width": 4096,
+        "height": 1024,
+        "unit": "px"
+      },
+      "production_status": "delivered",
+      "change_status": "unchanged_from_v0",
+      "artifact_path": "outputs/v0/summer-form-led-4096x1024.png"
+    }
+  ]
+}

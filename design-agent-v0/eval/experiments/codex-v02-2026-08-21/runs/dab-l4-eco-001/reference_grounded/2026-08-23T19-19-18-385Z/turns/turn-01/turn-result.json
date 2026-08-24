@@ -1,0 +1,99 @@
+{
+  "turn_index": 1,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T19:28:46.852Z",
+  "finished_at": "2026-08-23T19:40:40.168Z",
+  "latency_ms": 713340,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 48,
+    "command_count": 13,
+    "tool_count": 7,
+    "image_activity_count": 6,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a03010-20a5-7390-8336-ff1f2f211ad7",
+    "usage": {
+      "input_tokens": 3206814,
+      "cached_input_tokens": 3076992,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 49685,
+      "reasoning_output_tokens": 18590
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 5487,
+      "sha256": "411166e1ff0b3c48b84fe78b7909faa47cfaf35355e7216230ee77c364bc5b22"
+    },
+    {
+      "filename": "v0/creative-territories-board.png",
+      "byte_size": 591436,
+      "sha256": "80ce20b584fcd8557b345400398cb58ee0bd27c48a59b85d74dd3218d58912b3"
+    },
+    {
+      "filename": "v0/creative-territories-board.svg",
+      "byte_size": 12407,
+      "sha256": "b62c3d7703946875fb86d275b46715242c72252456226c7efe064e40b7f32ca4"
+    },
+    {
+      "filename": "v0/creative-territories.md",
+      "byte_size": 6941,
+      "sha256": "1826b6527eb58651007d42bd31c179e24e99175a64272133341610309d347754"
+    },
+    {
+      "filename": "v0/render_creative_board.py",
+      "byte_size": 9568,
+      "sha256": "3668e5a6ada644f768a9ed587d34a88ea32bba0ff2ea6dfdcb3e2bb1f8e9475b"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4415,
+      "sha256": "5f1ea940234ce1cddd15d67e7b32b90f67b4884c9e4675d3554885fd72a44669"
+    },
+    {
+      "filename": "v1/assets/city-commute-minimal-background.png",
+      "byte_size": 2084662,
+      "sha256": "50faa4685eb3b17ca5d32e7c37b1587c5b06b8708ab90d730b3505d5a2ac07d5"
+    },
+    {
+      "filename": "v1/assets/product-cutout-exact.png",
+      "byte_size": 864907,
+      "sha256": "b45e2eabbd231f4e89d75c25eef4a0147dc8d2b5bab5ffc7abc8e3153206fb50"
+    },
+    {
+      "filename": "v1/city-loop-premium-keyframe.png",
+      "byte_size": 2106509,
+      "sha256": "0989e4d9704f2033f9063dbcc8286c281075a4881371abb1da46e95cd07b609f"
+    },
+    {
+      "filename": "v1/city-loop-refinement.md",
+      "byte_size": 2288,
+      "sha256": "035b25a9ff98eba218c00db0f3e3a5889d9746f5b509915970a34e52f975ba1a"
+    },
+    {
+      "filename": "v1/city-loop-visual-direction-v1.png",
+      "byte_size": 1915848,
+      "sha256": "119358981e8989dcce8aafc904620496ad9b1031df01b690bcdf7f59b2c187b2"
+    },
+    {
+      "filename": "v1/imagegen-prompt.txt",
+      "byte_size": 2282,
+      "sha256": "6ea65fb1f07737ce5c6ccf49b1ff15a33276a2f5e3fabcfb30dcf2c442a1a774"
+    },
+    {
+      "filename": "v1/render_v1.py",
+      "byte_size": 7656,
+      "sha256": "86ea6d9040dcefa6cce16bd3d26fb0df4fa5e676f7377f7e35ef4fea3cf46c08"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 9053,
+      "sha256": "3ec7e02d74fa0f880072587c244d420369199f3e43d071d56a87e59f4b75828e"
+    }
+  ]
+}
