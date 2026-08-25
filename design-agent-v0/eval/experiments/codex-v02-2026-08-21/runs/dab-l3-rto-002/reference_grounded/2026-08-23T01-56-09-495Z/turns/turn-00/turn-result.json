@@ -1,0 +1,21 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T01:56:09.497Z",
+  "finished_at": "2026-08-23T01:56:38.229Z",
+  "latency_ms": 28733,
+  "exit_code": 1,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 9,
+    "command_count": 0,
+    "tool_count": 0,
+    "image_activity_count": 0,
+    "runtime_error_count": 7,
+    "thread_id": "01a02c55-2421-75d3-9c0f-5dd8c46334c6",
+    "usage": null
+  },
+  "artifact_manifest_after_turn": []
+}

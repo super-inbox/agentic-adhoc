@@ -1,0 +1,107 @@
+{
+  "current_version": "v1",
+  "stage": "complete_five_sku_extension",
+  "status": "complete",
+  "client_decisions": {
+    "approved_base_packaging": "inputs/02-approved_base_packaging.png",
+    "brand_system": "inputs/01-brand_system.png",
+    "sku_names": [
+      "茉莉",
+      "乌龙",
+      "白桃",
+      "桂花",
+      "青柠"
+    ],
+    "strategy_must_be_selected_before_full_series": true,
+    "strategy_selection_completed": true,
+    "selected_strategy": "B",
+    "selected_strategy_name": "叶印章",
+    "selected_strategy_mechanism": "large leaf watermark plus small leaf badge",
+    "v1_color_feedback": {
+      "sku": "青柠",
+      "instruction": "Do not use fluorescent green; use a muted yellow-green within the same lightness range.",
+      "previous_color": "#7FB5AD",
+      "implemented_v1_color": "#A1B36B"
+    }
+  },
+  "locked_items": [
+    "approved container structure",
+    "container proportions",
+    "black lid",
+    "MORI logo content and hierarchy",
+    "front information order: logo, flavor name, net content, shared selling point",
+    "consistent net-content position across all SKUs",
+    "consistent shared-selling-point position across all SKUs",
+    "final SKU count equals five",
+    "Strategy B large-leaf-watermark plus small-leaf-badge system",
+    "v0 colors for jasmine, oolong, white peach, and osmanthus"
+  ],
+  "changed_items": {
+    "final_changes": [
+      "Strategy B selected and applied to the complete five-SKU series.",
+      "Lime changed only from #7FB5AD to muted yellow-green #A1B36B."
+    ],
+    "preserved_from_v0": [
+      "茉莉 #E3DFC6 with botanical-green outline",
+      "乌龙 #6F7D50",
+      "白桃 #D98F79",
+      "桂花 #C79543",
+      "approved structure, lid, logo, information hierarchy, net-content position, and selling-point position"
+    ]
+  },
+  "strategy_options": {
+    "A": {
+      "name": "色域舱",
+      "status": "not_selected",
+      "source_hypotheses": ["01", "02", "03", "04"]
+    },
+    "B": {
+      "name": "叶印章",
+      "status": "selected",
+      "source_hypotheses": ["05", "06", "07"]
+    },
+    "C": {
+      "name": "微型色码",
+      "status": "not_selected",
+      "source_hypotheses": ["08", "09", "10"]
+    }
+  },
+  "shared_sku_palette": {
+    "茉莉": "#E3DFC6 with botanical-green outline",
+    "乌龙": "#6F7D50",
+    "白桃": "#D98F79",
+    "桂花": "#C79543",
+    "青柠": "#A1B36B"
+  },
+  "version_artifact_paths": {
+    "v0": [
+      "outputs/v0/03_locked_color_encoding_hypotheses.png",
+      "outputs/v0/04_locked_three_strategy_choice_board.png",
+      "outputs/v0/05_strategy_decision_notes.md",
+      "outputs/v0/render_locked_boards.m",
+      "outputs/v0/verification.json"
+    ],
+    "v1": [
+      "outputs/v1/01_strategy_b_full_five_sku_series.png",
+      "outputs/v1/02_strategy_b_shelf_thumbnail_check.png",
+      "outputs/v1/03_strategy_b_generated_shelf_context.png",
+      "outputs/v1/04_client_delta_and_prompt.md",
+      "outputs/v1/render_strategy_b_series.m",
+      "outputs/v1/verification.json"
+    ]
+  },
+  "artifact_paths": [
+    "outputs/v1/01_strategy_b_full_five_sku_series.png",
+    "outputs/v1/02_strategy_b_shelf_thumbnail_check.png",
+    "outputs/v1/03_strategy_b_generated_shelf_context.png",
+    "outputs/v1/04_client_delta_and_prompt.md",
+    "outputs/v1/render_strategy_b_series.m",
+    "outputs/v1/verification.json"
+  ],
+  "unresolved_blockers": [],
+  "open_non_blocking_production_checks": [
+    "Confirm the #A1B36B spot-color drawdown, substrate interaction, and press gamut with the packaging supplier.",
+    "Replace placeholder net-content and shared-selling-point copy with the already approved production copy before prepress."
+  ],
+  "next_authorized_action": "None. Await further client feedback."
+}

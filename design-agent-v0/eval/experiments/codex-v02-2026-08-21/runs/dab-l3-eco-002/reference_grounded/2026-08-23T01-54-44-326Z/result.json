@@ -1,0 +1,85 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-ECO-002@reference_grounded",
+  "base_brief_id": "DAB-L3-ECO-002",
+  "context_condition": "reference_grounded",
+  "category": "ecommerce_launch_suite",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T01:54:44.328Z",
+  "finished_at": "2026-08-23T01:55:13.273Z",
+  "latency_ms": 28945,
+  "intended_turns": 1,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02c53-d87b-7e50-908c-a958f0810364",
+  "input_assets": [
+    {
+      "input_id": "product-source",
+      "asset_id": "product-retouch-perfume-bottle-source",
+      "role": "edit_target",
+      "reference_role": "product_identity",
+      "identity_policy": "preserve_exact",
+      "filename": "01-edit_target.png",
+      "source_path": "eval/assets/reference-pack-v0.2/product-retouch/perfume-bottle-source.png",
+      "byte_size": 1208397,
+      "sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286"
+    }
+  ],
+  "input_context_ids": [
+    "product-source",
+    "retouch-notes"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T01:54:44.328Z",
+      "finished_at": "2026-08-23T01:55:13.270Z",
+      "latency_ms": 28944,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c53-d87b-7e50-908c-a958f0810364",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

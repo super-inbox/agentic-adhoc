@@ -1,0 +1,69 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T21:49:42.847Z",
+  "finished_at": "2026-08-23T22:15:41.782Z",
+  "latency_ms": 1558957,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 107,
+    "command_count": 32,
+    "tool_count": 16,
+    "image_activity_count": 8,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a03099-d473-78f1-81cb-06c666784d6a",
+    "usage": {
+      "input_tokens": 4043529,
+      "cached_input_tokens": 3897216,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 47276,
+      "reasoning_output_tokens": 18977
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2510,
+      "sha256": "e5d57fe5aaa081eb5059ac78f070a3b8474b995b96f8cac3bc830f1b7f864393"
+    },
+    {
+      "filename": "v0/03_locked_color_encoding_hypotheses.png",
+      "byte_size": 943694,
+      "sha256": "b90fe8af59bd906c9417c854f041d2b093d54f7bdeb35b69c9ce09075147411d"
+    },
+    {
+      "filename": "v0/04_locked_three_strategy_choice_board.png",
+      "byte_size": 800162,
+      "sha256": "3daef6b04ee5c5d81942f9f7503db4b15ebecdb0edb812687a527e03faed0711"
+    },
+    {
+      "filename": "v0/05_strategy_decision_notes.md",
+      "byte_size": 3354,
+      "sha256": "5409d9821becea2bcc00a59212b7d51b2af8507ffc58b810ed956507f69fa4ff"
+    },
+    {
+      "filename": "v0/evidence/03_hypotheses_thumbnail_480.png",
+      "byte_size": 68099,
+      "sha256": "f9f425c684d0f7b36fd0ee1da47e3ec1248f808f80793205e95e0d6b71aa12d7"
+    },
+    {
+      "filename": "v0/evidence/04_strategies_thumbnail_480.png",
+      "byte_size": 59363,
+      "sha256": "e6746b9b3867643872b70affa9ceb53b4612050834e404456d9e5d3e8afd4830"
+    },
+    {
+      "filename": "v0/render_locked_boards.m",
+      "byte_size": 20919,
+      "sha256": "6af9622d88b12f89ddaaee11fd0b262e7ace495d5264f2cb456b802377d1d265"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 6236,
+      "sha256": "fcb9cb8c9c84d4682196c4f704b271421fce8d0a83501b10ebad944f9026c0d1"
+    }
+  ]
+}

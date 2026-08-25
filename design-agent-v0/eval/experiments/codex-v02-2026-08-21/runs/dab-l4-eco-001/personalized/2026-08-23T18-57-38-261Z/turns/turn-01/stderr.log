@@ -1,0 +1,6 @@
+2026-08-23T19:10:34.715847Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T19:10:34.743595Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T19:10:34.743607Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T19:10:36.079691Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T19:10:36.079715Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T19:16:43.816776Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit

@@ -1,0 +1,159 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T08:49:07.089Z",
+  "finished_at": "2026-08-23T09:07:59.749Z",
+  "latency_ms": 1132679,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 76,
+    "command_count": 23,
+    "tool_count": 9,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02dcf-320f-7912-a512-555aab4e120c",
+    "usage": {
+      "input_tokens": 1704181,
+      "cached_input_tokens": 1544704,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 42639,
+      "reasoning_output_tokens": 17156
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2895,
+      "sha256": "0ece9ee222809112f59f386d3078cf1986d75b1775102099decd6c5337964522"
+    },
+    {
+      "filename": "v0/adaptations/01_square_1x1_1080x1080.png",
+      "byte_size": 284483,
+      "sha256": "6d73f50c7724408330c7e651eb52a76bfc9d803264cd16370138e6a90c0fc89f"
+    },
+    {
+      "filename": "v0/adaptations/01_square_1x1_1080x1080.svg",
+      "byte_size": 4358,
+      "sha256": "791d79645bcdca3cf29746b3aecb5bed3c9c161349cf78d735ad26cda3d2f88e"
+    },
+    {
+      "filename": "v0/adaptations/02_portrait_4x5_1080x1350.png",
+      "byte_size": 300771,
+      "sha256": "3f9183d2c09943b846f2a488e58970a04eb20b438c7be47f2aea8eff1dc14cf2"
+    },
+    {
+      "filename": "v0/adaptations/02_portrait_4x5_1080x1350.svg",
+      "byte_size": 4545,
+      "sha256": "9fcc66736f30668628939712988f20ec3b645f4e5a7e0941ab1fc7b9e37c55df"
+    },
+    {
+      "filename": "v0/adaptations/03_portrait_9x16_1080x1920.png",
+      "byte_size": 386241,
+      "sha256": "c1ebbb2bbbd336a1f8fc97cfdab5305da0f0745b133ca7039ac3380be8d4cfb0"
+    },
+    {
+      "filename": "v0/adaptations/03_portrait_9x16_1080x1920.svg",
+      "byte_size": 4355,
+      "sha256": "d8cd998e401989d55d0b7306a089efaf24f87ff034ab55cb2992e2ae93c0fe39"
+    },
+    {
+      "filename": "v0/adaptations/04_landscape_16x9_1920x1080.png",
+      "byte_size": 336641,
+      "sha256": "09945b35d72c29b47da94f3bbcfb8ac0d832daae48d3900f21585a327709492c"
+    },
+    {
+      "filename": "v0/adaptations/04_landscape_16x9_1920x1080.svg",
+      "byte_size": 4208,
+      "sha256": "289305ec5e7e4a0c6c340888f6f78314960c35a354aaa42c09f7bcdf2768ebfb"
+    },
+    {
+      "filename": "v0/adaptations/05_landscape_3x2_1500x1000.png",
+      "byte_size": 239124,
+      "sha256": "d57bc0fbd4b76a7f78b3c7a1eef724003a6123de30265ab7cacb47b728bf669e"
+    },
+    {
+      "filename": "v0/adaptations/05_landscape_3x2_1500x1000.svg",
+      "byte_size": 4192,
+      "sha256": "4d5b50cc9998362d964564d207e96c45f825bce56b2c30714bd3fe779dc5d3aa"
+    },
+    {
+      "filename": "v0/adaptations/06_portrait_2x3_1000x1500.png",
+      "byte_size": 271284,
+      "sha256": "25b469039ba8d8b8a00720b83ef33a0ead50eb772b689b4c1d1403c3d9b4d78c"
+    },
+    {
+      "filename": "v0/adaptations/06_portrait_2x3_1000x1500.svg",
+      "byte_size": 4485,
+      "sha256": "c12aa3fd6147ee1e4733f969f68e83ac8446bb8e4259480153f2dfdfad349b1d"
+    },
+    {
+      "filename": "v0/adaptations/07_a4_portrait_2480x3508.png",
+      "byte_size": 911914,
+      "sha256": "1e380f864fc563f29a1d8f63910dece1ed094d4e79edf721f50470cce70a2720"
+    },
+    {
+      "filename": "v0/adaptations/07_a4_portrait_2480x3508.svg",
+      "byte_size": 4641,
+      "sha256": "83c348c4d0eb4d210535d0f1b5946761f410026586e391380463df265c50012f"
+    },
+    {
+      "filename": "v0/adaptations/08_a3_portrait_3508x4961.png",
+      "byte_size": 1453600,
+      "sha256": "8a1106006b7883d7b78d92e699275ca31d19a08cad29a1157ab8df232eeabe4c"
+    },
+    {
+      "filename": "v0/adaptations/08_a3_portrait_3508x4961.svg",
+      "byte_size": 4662,
+      "sha256": "7723846370ce223ea290da8126067e6228888c4165b1795617ea88d70cf2b38d"
+    },
+    {
+      "filename": "v0/adaptations/09_social_1200x628.png",
+      "byte_size": 167535,
+      "sha256": "f42d61c09ce260d9cfc0fe8f173bbbbb6ee035cdbfcb3beef925f3b3d2f36962"
+    },
+    {
+      "filename": "v0/adaptations/09_social_1200x628.svg",
+      "byte_size": 4249,
+      "sha256": "eb0ba490ce39d0e8d97db2656810f7e5f8a616ceb7bea1652c5c95356b97bf6c"
+    },
+    {
+      "filename": "v0/adaptations/10_banner_1920x480.png",
+      "byte_size": 196030,
+      "sha256": "b62896ec9b1e4d7cea320f7cd947ef52d56b5d483d55f3d40bde70aae634ef3f"
+    },
+    {
+      "filename": "v0/adaptations/10_banner_1920x480.svg",
+      "byte_size": 3556,
+      "sha256": "9f517c9c691e18b7b27ec599788ebf0d8ccf009cd0303f49fa93fb2807bd46c2"
+    },
+    {
+      "filename": "v0/assets/main_visual_source_crop.png",
+      "byte_size": 93718,
+      "sha256": "f65233bf49227df486f5f3255a1f80f417d404b13eb9249a6b6a64ca1d939f9a"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 39709,
+      "sha256": "11fda7ca222b9abac39856ce80707da8c228d9ea89048a321566615336aaf087"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 144540,
+      "sha256": "27769abddcc541b7ac0f4170b398fe92e90bcbea9b15a5962222d863e1b6e458"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 644809,
+      "sha256": "1c400758b25486649362067355e0b97ab3acbe32ef5be52091a45749ab9d9e50"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 17799,
+      "sha256": "2e2112908fc42e4f451a3fd59fc1dac2e97a536c4720bd91a92aca79b0bce8ee"
+    }
+  ]
+}

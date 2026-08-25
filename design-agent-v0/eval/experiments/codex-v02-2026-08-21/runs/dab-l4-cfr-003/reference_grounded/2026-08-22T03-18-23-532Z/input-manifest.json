@@ -1,0 +1,35 @@
+[
+  {
+    "input_id": "layout-a",
+    "asset_id": "detail-page-quiet-ritual-reference-page",
+    "role": "composition_reference_a",
+    "reference_role": "layout_reference",
+    "identity_policy": "abstract_only",
+    "filename": "01-composition_reference_a.png",
+    "source_path": "eval/assets/reference-pack-v0.2/detail-page/quiet-ritual-reference-page.png",
+    "byte_size": 815623,
+    "sha256": "f941e16e01835e825f6b0a2b4d65e5d021329ae6e223b451c307998ec5a97af2"
+  },
+  {
+    "input_id": "palette-b",
+    "asset_id": "sku-system-mori-brand-board",
+    "role": "palette_reference_b",
+    "reference_role": "brand_system",
+    "identity_policy": "preserve_rules",
+    "filename": "02-palette_reference_b.png",
+    "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+    "byte_size": 592086,
+    "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+  },
+  {
+    "input_id": "product",
+    "asset_id": "detail-page-terra-diffuser-product",
+    "role": "product_reference",
+    "reference_role": "product_identity",
+    "identity_policy": "preserve_exact",
+    "filename": "03-product_reference.png",
+    "source_path": "eval/assets/reference-pack-v0.2/detail-page/terra-diffuser-product.png",
+    "byte_size": 521294,
+    "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+  }
+]

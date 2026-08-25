@@ -1,0 +1,10 @@
+已完成 v0：3 个方向、共 9 个低成本 KV 假设，尚未制作任何渠道延展。
+
+- [KV 选择板](<<WORKDIR>/outputs/v0/kv-hypotheses-selection-board.png>)
+- [方向与候选说明](<<WORKDIR>/outputs/v0/hypotheses.md>)
+- [项目状态](<<WORKDIR>/outputs/project-state.json>)
+- [核验记录](<<WORKDIR>/outputs/v0/verification.json>)
+
+ImageGen 仅用于生成三组背景母版；产品区域逐像素核验为原图的等比缩放，没有修改瓶型、标签或色彩。所有 KV 只使用批准文案，也未加入医疗或助眠功效暗示。
+
+下一步请内部选择一个编号 A1–C3，并补充原始 Logo（SVG、PDF 或透明 PNG）。收到两项后再进入官网 hero、Instagram 竖版和邮件头图。

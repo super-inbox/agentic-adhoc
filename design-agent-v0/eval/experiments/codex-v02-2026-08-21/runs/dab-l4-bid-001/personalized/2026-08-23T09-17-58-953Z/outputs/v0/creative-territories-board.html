@@ -1,0 +1,544 @@
+<style>
+  #gg-territories {
+    --gg-fg: var(--foreground, light-dark(#26241f, #f4f0e7));
+    --gg-muted: var(--muted-foreground, light-dark(#6e6a60, #bdb7aa));
+    --gg-rule: var(--border, light-dark(#d9d3c6, #4c4941));
+    color-scheme: light dark;
+    color: var(--gg-fg);
+    font-family: Inter, "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif;
+    display: grid;
+    gap: 28px;
+    width: 100%;
+  }
+
+  #gg-territories * { box-sizing: border-box; }
+  #gg-territories h1,
+  #gg-territories h2,
+  #gg-territories h3,
+  #gg-territories p { margin: 0; }
+  #gg-territories h1 { font-size: clamp(24px, 4vw, 42px); font-weight: 500; letter-spacing: -0.035em; }
+  #gg-territories h2 { font-size: 18px; font-weight: 500; }
+  #gg-territories h3 { font-size: 19px; font-weight: 500; }
+  #gg-territories p { font-size: 13px; line-height: 1.55; }
+
+  #gg-territories .gg-topline {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gg-rule);
+  }
+  #gg-territories .gg-kicker {
+    color: var(--gg-muted);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  #gg-territories .gg-stage {
+    color: var(--gg-muted);
+    font-size: 12px;
+    text-align: right;
+  }
+
+  #gg-territories .gg-locks {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--gg-rule);
+    border-top: 1px solid var(--gg-rule);
+    border-bottom: 1px solid var(--gg-rule);
+  }
+  #gg-territories .gg-lock {
+    background: var(--background, light-dark(#faf8f2, #25241f));
+    padding: 12px;
+  }
+  #gg-territories .gg-lock b {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gg-muted);
+    letter-spacing: .08em;
+    margin-bottom: 3px;
+  }
+  #gg-territories .gg-lock span { font-size: 13px; }
+
+  #gg-territories .gg-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  #gg-territories .gg-section-head span { color: var(--gg-muted); font-size: 12px; }
+
+  #gg-territories .gg-conflicts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+  #gg-territories .gg-conflict {
+    border-left: 2px solid var(--gg-rule);
+    padding-left: 10px;
+  }
+  #gg-territories .gg-conflict strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  #gg-territories .gg-conflict span { color: var(--gg-muted); font-size: 12px; line-height: 1.45; display: block; }
+
+  #gg-territories .gg-hypotheses {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+  }
+  #gg-territories .gg-hypothesis {
+    min-height: 92px;
+    padding-top: 9px;
+    border-top: 3px solid var(--cluster);
+  }
+  #gg-territories .gg-hypothesis .gg-code {
+    color: var(--gg-muted);
+    font-size: 11px;
+    letter-spacing: .08em;
+  }
+  #gg-territories .gg-hypothesis strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4px 0;
+  }
+  #gg-territories .gg-hypothesis span { color: var(--gg-muted); font-size: 11px; line-height: 1.4; display: block; }
+  #gg-territories .gg-hypothesis.t1 { --cluster: #C7922E; }
+  #gg-territories .gg-hypothesis.t2 { --cluster: #929B82; }
+  #gg-territories .gg-hypothesis.t3 { --cluster: #26364C; }
+
+  #gg-territories .gg-territories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+  #gg-territories .gg-territory {
+    --t-accent: #777;
+    --t-dark: #333;
+    --t-paper: #eee;
+    --t-mid: #aaa;
+    border-top: 6px solid var(--t-accent);
+    padding-top: 14px;
+    min-width: 0;
+  }
+  #gg-territories .gg-territory.t1 {
+    --t-accent: #C7922E;
+    --t-dark: #30241E;
+    --t-paper: #F1E4CB;
+    --t-mid: #C96635;
+  }
+  #gg-territories .gg-territory.t2 {
+    --t-accent: #929B82;
+    --t-dark: #252724;
+    --t-paper: #EFECE2;
+    --t-mid: #9D7748;
+  }
+  #gg-territories .gg-territory.t3 {
+    --t-accent: #B35F48;
+    --t-dark: #26364C;
+    --t-paper: #ECE4D8;
+    --t-mid: #B7CED0;
+  }
+  #gg-territories .gg-territory .gg-number {
+    color: var(--t-accent);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .12em;
+  }
+  #gg-territories .gg-territory .gg-name-en {
+    color: var(--gg-muted);
+    font-size: 11px;
+    letter-spacing: .08em;
+    margin: 2px 0 8px;
+  }
+  #gg-territories .gg-promise { min-height: 42px; }
+
+  #gg-territories .gg-palette {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 13px 0 5px;
+  }
+  #gg-territories .gg-swatch {
+    width: 24px;
+    height: 14px;
+    background: var(--swatch);
+    border: 1px solid color-mix(in srgb, var(--gg-fg) 18%, transparent);
+  }
+  #gg-territories .gg-palette-label { color: var(--gg-muted); font-size: 10px; }
+
+  #gg-territories .gg-scenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 14px 0;
+  }
+  #gg-territories .gg-scene {
+    position: relative;
+    aspect-ratio: 1 / 1.05;
+    overflow: hidden;
+    background: var(--t-paper);
+    color: var(--t-dark);
+    border: 1px solid color-mix(in srgb, var(--t-dark) 18%, transparent);
+  }
+  #gg-territories .gg-scene-label {
+    position: absolute;
+    left: 7px;
+    bottom: 6px;
+    z-index: 5;
+    font-size: 9px;
+    letter-spacing: .06em;
+  }
+  #gg-territories .gg-logo-placeholder {
+    position: absolute;
+    z-index: 4;
+    top: 8px;
+    left: 8px;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: .06em;
+  }
+  #gg-territories .gg-box {
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: .06em;
+  }
+
+  #gg-territories .t1 .gg-ecom::before {
+    content: "";
+    position: absolute;
+    width: 105%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #C96635;
+    right: -58%;
+    top: -22%;
+  }
+  #gg-territories .t1 .gg-ecom::after {
+    content: "";
+    position: absolute;
+    width: 74%;
+    height: 8%;
+    background: #C7922E;
+    transform: rotate(-18deg);
+    left: -8%;
+    top: 44%;
+  }
+  #gg-territories .t1 .gg-ecom .gg-box {
+    width: 58%;
+    height: 34%;
+    right: 10%;
+    top: 36%;
+    background: #30241E;
+    color: #F1E4CB;
+  }
+  #gg-territories .t1 .gg-store::before {
+    content: "";
+    position: absolute;
+    width: 58%;
+    height: 78%;
+    left: 21%;
+    top: 8%;
+    border-radius: 48% 48% 0 0;
+    background: #C7922E;
+  }
+  #gg-territories .t1 .gg-store::after {
+    content: "";
+    position: absolute;
+    width: 74%;
+    height: 15%;
+    left: 13%;
+    bottom: 12%;
+    background: #30241E;
+    box-shadow: 0 -10px 0 #C96635;
+  }
+
+  #gg-territories .t2 .gg-ecom {
+    background-image:
+      linear-gradient(to right, transparent 0 68%, #929B82 68% 69%, transparent 69%),
+      linear-gradient(to bottom, transparent 0 72%, #9D7748 72% 73%, transparent 73%);
+  }
+  #gg-territories .t2 .gg-ecom .gg-box {
+    width: 66%;
+    height: 38%;
+    left: 10%;
+    top: 31%;
+    background: #252724;
+    color: #EFECE2;
+  }
+  #gg-territories .t2 .gg-store { background: #929B82; }
+  #gg-territories .t2 .gg-store::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 42%;
+    left: 20%;
+    top: 13%;
+    background: #EFECE2;
+    border: 1px solid #252724;
+  }
+  #gg-territories .t2 .gg-store::after {
+    content: "";
+    position: absolute;
+    width: 42%;
+    height: 33%;
+    left: 29%;
+    bottom: 12%;
+    background: #252724;
+    box-shadow: 0 -7px 0 #9D7748;
+  }
+
+  #gg-territories .t3 .gg-ecom {
+    background:
+      linear-gradient(90deg, #26364C 0 34%, transparent 34%),
+      linear-gradient(0deg, #B7CED0 0 29%, #ECE4D8 29% 100%);
+  }
+  #gg-territories .t3 .gg-ecom::before {
+    content: "03";
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    font-size: 22px;
+    color: #B35F48;
+    font-weight: 500;
+  }
+  #gg-territories .t3 .gg-ecom .gg-logo-placeholder { color: #ECE4D8; writing-mode: vertical-rl; }
+  #gg-territories .t3 .gg-ecom .gg-box {
+    width: 52%;
+    height: 40%;
+    right: 8%;
+    top: 33%;
+    background: #B35F48;
+    color: #ECE4D8;
+  }
+  #gg-territories .t3 .gg-store { background: #26364C; }
+  #gg-territories .t3 .gg-store::before {
+    content: "";
+    position: absolute;
+    inset: 10% 8% 22%;
+    background:
+      linear-gradient(90deg, #B35F48 0 48%, transparent 48% 52%, #B7CED0 52% 100%);
+  }
+  #gg-territories .t3 .gg-store::after {
+    content: "01  02  03";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: 10%;
+    padding-top: 4px;
+    border-top: 1px solid #ECE4D8;
+    color: #ECE4D8;
+    font-size: 8px;
+    letter-spacing: .16em;
+  }
+  #gg-territories .t3 .gg-store .gg-scene-label { color: #ECE4D8; }
+
+  #gg-territories .gg-response {
+    display: grid;
+    gap: 7px;
+    margin-top: 12px;
+  }
+  #gg-territories .gg-response div {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 7px;
+    padding-top: 7px;
+    border-top: 1px solid var(--gg-rule);
+  }
+  #gg-territories .gg-response b { font-size: 11px; font-weight: 500; color: var(--t-accent); }
+  #gg-territories .gg-response span { font-size: 11px; line-height: 1.45; }
+
+  #gg-territories .gg-guardrail {
+    margin-top: 11px;
+    padding-left: 9px;
+    border-left: 3px solid var(--t-accent);
+    color: var(--gg-muted);
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  #gg-territories .gg-decision {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-top: 1px solid var(--gg-rule);
+    border-bottom: 1px solid var(--gg-rule);
+  }
+  #gg-territories .gg-decision strong { font-size: 14px; font-weight: 500; }
+  #gg-territories .gg-decision span { color: var(--gg-muted); font-size: 12px; text-align: right; }
+
+  @media (max-width: 880px) {
+    #gg-territories .gg-locks,
+    #gg-territories .gg-conflicts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #gg-territories .gg-hypotheses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #gg-territories .gg-territories-grid { grid-template-columns: 1fr; }
+    #gg-territories .gg-promise { min-height: 0; }
+    #gg-territories .gg-scenes { max-width: 520px; }
+  }
+  @media (max-width: 420px) {
+    #gg-territories { gap: 22px; }
+    #gg-territories .gg-topline,
+    #gg-territories .gg-decision { align-items: flex-start; flex-direction: column; }
+    #gg-territories .gg-stage,
+    #gg-territories .gg-decision span { text-align: left; }
+    #gg-territories .gg-locks,
+    #gg-territories .gg-conflicts,
+    #gg-territories .gg-hypotheses { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div id="gg-territories" aria-label="GRAIN &amp; GLOW 三个 Creative Territories 比较板">
+  <header class="gg-topline">
+    <div>
+      <div class="gg-kicker">GRAIN &amp; GLOW · CREATIVE TERRITORIES · V0</div>
+      <h1>先发散，再选择</h1>
+    </div>
+    <div class="gg-stage">1998 中式酥点 · 方向选择前<br>不改 Logo · 不做精修 · 不替客户选择</div>
+  </header>
+
+  <section class="gg-locks" aria-label="已锁定条件">
+    <div class="gg-lock"><b>LOCK 01</b><span>现有 Logo 结构与中文名</span></div>
+    <div class="gg-lock"><b>LOCK 02</b><span>礼赠可信度</span></div>
+    <div class="gg-lock"><b>LOCK 03</b><span>克制留白，不做促销感</span></div>
+    <div class="gg-lock"><b>GATE</b><span>三选一后再精修</span></div>
+  </section>
+
+  <section aria-labelledby="gg-conflict-title">
+    <div class="gg-section-head">
+      <h2 id="gg-conflict-title">需要同时解决的冲突</h2>
+      <span>参考只提取原则，不复制形状、版式或 Logo</span>
+    </div>
+    <div class="gg-conflicts">
+      <div class="gg-conflict"><strong>年轻 ↔ 体面</strong><span>新鲜感交给裁切与节奏；礼赠感交给秩序、材料和深色锚点。</span></div>
+      <div class="gg-conflict"><strong>极简 ↔ 电商效率</strong><span>借清晰层级，不照搬空白比例；促销信息进入独立信息带。</span></div>
+      <div class="gg-conflict"><strong>亲和 ↔ Logo 锁定</strong><span>圆润语言只用于二级图标与导视，不进入现有 Logo。</span></div>
+      <div class="gg-conflict"><strong>中式 ↔ 不老气</strong><span>文化感来自礼序、比例与纸材，不使用仿古、伪书法与满版纹样。</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="gg-hypothesis-title">
+    <div class="gg-section-head">
+      <h2 id="gg-hypothesis-title">10 个探索假设</h2>
+      <span>顶部颜色表示进入的 Territory</span>
+    </div>
+    <div class="gg-hypotheses">
+      <article class="gg-hypothesis t1"><span class="gg-code">H01 → T1</span><strong>日光粮香</strong><span>斜切光面；风险：节庆促销化</span></article>
+      <article class="gg-hypothesis t2"><span class="gg-code">H02 → T2</span><strong>静奢礼序</strong><span>编辑留白；风险：太冷、无食欲</span></article>
+      <article class="gg-hypothesis t1"><span class="gg-code">H03 → T1</span><strong>谷物构成</strong><span>酥层几何；风险：旧式麦穗化</span></article>
+      <article class="gg-hypothesis t2"><span class="gg-code">H04 → T2</span><strong>茶席新礼</strong><span>东方待客；风险：像茶或护肤</span></article>
+      <article class="gg-hypothesis t3"><span class="gg-code">H05 → T3</span><strong>城市酥房</strong><span>大字编号；风险：潮牌化</span></article>
+      <article class="gg-hypothesis t3"><span class="gg-code">H06 → T3</span><strong>四时礼谱</strong><span>节令色码；风险：复古标签化</span></article>
+      <article class="gg-hypothesis t1"><span class="gg-code">H07 → T1</span><strong>酥层显微</strong><span>工艺微距；风险：画面过碎</span></article>
+      <article class="gg-hypothesis t3"><span class="gg-code">H08 → T3</span><strong>手作温度</strong><span>线性图标；风险：可爱贴纸化</span></article>
+      <article class="gg-hypothesis t2"><span class="gg-code">H09 → T2</span><strong>夜宴金盒</strong><span>深色礼赠；风险：年龄偏成熟</span></article>
+      <article class="gg-hypothesis t3"><span class="gg-code">H10 → T3</span><strong>当代卷轴</strong><span>垂直叙事；风险：仿古书卷化</span></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="gg-territory-title">
+    <div class="gg-section-head">
+      <h2 id="gg-territory-title">3 个真正不同的 Creative Territories</h2>
+      <span>摄影主导 / 材质主导 / 图形主导</span>
+    </div>
+    <div class="gg-territories-grid">
+      <article class="gg-territory t1">
+        <div class="gg-number">TERRITORY 01 · H01 + H03 + H07</div>
+        <h3>日光酥层</h3>
+        <div class="gg-name-en">SUNLIT LAYERS</div>
+        <p class="gg-promise">把中式酥点的“层”与“烘焙光”变成当代食欲资产。</p>
+        <div class="gg-palette" aria-label="麦芽金、杏仁纸、烘焙橙、深可可">
+          <span class="gg-swatch" style="--swatch:#C7922E"></span>
+          <span class="gg-swatch" style="--swatch:#F1E4CB"></span>
+          <span class="gg-swatch" style="--swatch:#C96635"></span>
+          <span class="gg-swatch" style="--swatch:#30241E"></span>
+        </div>
+        <div class="gg-palette-label">麦芽金 · 杏仁纸 · 烘焙橙 · 深可可</div>
+        <div class="gg-scenes">
+          <div class="gg-scene gg-ecom" role="img" aria-label="日光酥层淘宝首图缩略图：暖色弧形光面、深色稳定礼盒和现有 Logo 占位">
+            <span class="gg-logo-placeholder">现有 LOGO</span><span class="gg-box">礼盒 / 酥层</span><span class="gg-scene-label">淘宝首图</span>
+          </div>
+          <div class="gg-scene gg-store" role="img" aria-label="日光酥层门店缩略图：背光弧面和层叠台座"><span class="gg-scene-label">门店主墙</span></div>
+        </div>
+        <div class="gg-response">
+          <div><b>年轻</b><span>微距、非对称裁切与自然光感；不靠贴纸拼贴。</span></div>
+          <div><b>礼赠</b><span>稳定盒型、深咖锚点、压纹与少量金属工艺。</span></div>
+          <div><b>淘宝</b><span>产品占 65%+；卖点 ≤ 2；促销集中在独立深色信息带。</span></div>
+          <div><b>门店</b><span>暖白背光弧面、层叠台座、杏仁纸与深咖木。</span></div>
+        </div>
+        <div class="gg-guardrail">失败信号：像节庆促销、奶茶新品或统一暖色滤镜。</div>
+      </article>
+
+      <article class="gg-territory t2">
+        <div class="gg-number">TERRITORY 02 · H02 + H04 + H09</div>
+        <h3>素笺礼序</h3>
+        <div class="gg-name-en">QUIET GIFTING</div>
+        <p class="gg-promise">像打开一封当代中式礼笺，安静、克制，但不疏离。</p>
+        <div class="gg-palette" aria-label="墨黑、素纸、灰青、旧铜">
+          <span class="gg-swatch" style="--swatch:#252724"></span>
+          <span class="gg-swatch" style="--swatch:#EFECE2"></span>
+          <span class="gg-swatch" style="--swatch:#929B82"></span>
+          <span class="gg-swatch" style="--swatch:#9D7748"></span>
+        </div>
+        <div class="gg-palette-label">墨黑 · 素纸 · 灰青 · 旧铜</div>
+        <div class="gg-scenes">
+          <div class="gg-scene gg-ecom" role="img" aria-label="素笺礼序淘宝首图缩略图：素纸网格、深色礼盒与留白">
+            <span class="gg-logo-placeholder">现有 LOGO</span><span class="gg-box">礼盒 / 礼笺</span><span class="gg-scene-label">淘宝首图</span>
+          </div>
+          <div class="gg-scene gg-store" role="img" aria-label="素笺礼序门店缩略图：灰青墙面、素纸灯箱和深色展台"><span class="gg-scene-label">门店主墙</span></div>
+        </div>
+        <div class="gg-response">
+          <div><b>年轻</b><span>编辑式非对称网格、精确信息和材料近景。</span></div>
+          <div><b>礼赠</b><span>开盒次序、纸材、留白与可核验规格建立价值感。</span></div>
+          <div><b>淘宝</b><span>单一礼盒 + 两级信息；材料细节与规格进入细线网格。</span></div>
+          <div><b>门店</b><span>灰青墙、素纸灯箱、深木展台与窄幅礼赠选购卡。</span></div>
+        </div>
+        <div class="gg-guardrail">失败信号：像香氛、护肤或没有食欲的空白美术馆。</div>
+      </article>
+
+      <article class="gg-territory t3">
+        <div class="gg-number">TERRITORY 03 · H05 + H06 + H08 + H10</div>
+        <h3>城市酥谱</h3>
+        <div class="gg-name-en">URBAN PASTRY CODE</div>
+        <p class="gg-promise">把口味、节令与门店动线编成一套清晰的城市酥点代码。</p>
+        <div class="gg-palette" aria-label="深靛蓝、陶土、雾蓝、贝壳白">
+          <span class="gg-swatch" style="--swatch:#26364C"></span>
+          <span class="gg-swatch" style="--swatch:#B35F48"></span>
+          <span class="gg-swatch" style="--swatch:#B7CED0"></span>
+          <span class="gg-swatch" style="--swatch:#ECE4D8"></span>
+        </div>
+        <div class="gg-palette-label">深靛蓝 · 陶土 · 雾蓝 · 贝壳白</div>
+        <div class="gg-scenes">
+          <div class="gg-scene gg-ecom" role="img" aria-label="城市酥谱淘宝首图缩略图：深靛蓝品牌锚点、编号与模块化色块">
+            <span class="gg-logo-placeholder">现有 LOGO</span><span class="gg-box">礼盒 / SKU</span><span class="gg-scene-label">淘宝首图</span>
+          </div>
+          <div class="gg-scene gg-store" role="img" aria-label="城市酥谱门店缩略图：深靛蓝框架与陶土、雾蓝模块"><span class="gg-scene-label">门店主墙</span></div>
+        </div>
+        <div class="gg-response">
+          <div><b>年轻</b><span>强网格、编号、色块切换和有尺度感的裁切。</span></div>
+          <div><b>礼赠</b><span>深靛蓝稳定锚点，信息层级像精装书目录。</span></div>
+          <div><b>淘宝</b><span>品牌/品类/口味一秒可读；SKU 色签位置固定。</span></div>
+          <div><b>门店</b><span>可替换模块、统一编号与同线宽导视图标。</span></div>
+        </div>
+        <div class="gg-guardrail">失败信号：像潮牌、咖啡馆贴纸系统或彩色社媒拼贴。</div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="gg-decision">
+    <strong>选择检查点：T1 / T2 / T3</strong>
+    <span>可指定一项跨方向特征；本轮不混主配色、不默认选案，选择后再做周五精修稿。</span>
+  </footer>
+</div>

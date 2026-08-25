@@ -1,0 +1,59 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T19:19:18.391Z",
+  "finished_at": "2026-08-23T19:28:46.843Z",
+  "latency_ms": 568461,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 52,
+    "command_count": 14,
+    "tool_count": 7,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a03010-20a5-7390-8336-ff1f2f211ad7",
+    "usage": {
+      "input_tokens": 905724,
+      "cached_input_tokens": 846848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 24973,
+      "reasoning_output_tokens": 8117
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2410,
+      "sha256": "f8a9df57f96ba6941a728d57e66f3febcf793bbbe9bf0bc355d622dfa8b45717"
+    },
+    {
+      "filename": "v0/creative-territories-board.png",
+      "byte_size": 591436,
+      "sha256": "80ce20b584fcd8557b345400398cb58ee0bd27c48a59b85d74dd3218d58912b3"
+    },
+    {
+      "filename": "v0/creative-territories-board.svg",
+      "byte_size": 12407,
+      "sha256": "b62c3d7703946875fb86d275b46715242c72252456226c7efe064e40b7f32ca4"
+    },
+    {
+      "filename": "v0/creative-territories.md",
+      "byte_size": 6941,
+      "sha256": "1826b6527eb58651007d42bd31c179e24e99175a64272133341610309d347754"
+    },
+    {
+      "filename": "v0/render_creative_board.py",
+      "byte_size": 9568,
+      "sha256": "3668e5a6ada644f768a9ed587d34a88ea32bba0ff2ea6dfdcb3e2bb1f8e9475b"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4415,
+      "sha256": "5f1ea940234ce1cddd15d67e7b32b90f67b4884c9e4675d3554885fd72a44669"
+    }
+  ]
+}

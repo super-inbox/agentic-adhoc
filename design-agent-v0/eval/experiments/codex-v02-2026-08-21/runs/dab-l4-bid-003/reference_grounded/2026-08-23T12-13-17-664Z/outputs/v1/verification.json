@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "version": "v1",
+  "status": "selected_territory_refined_awaiting_production_inputs",
+  "checks": [
+    {
+      "id": "territory_selection_recorded",
+      "result": "pass",
+      "observed": "T2 稳态信号已记录为客户选择；H4–H6 未被擅自排序。",
+      "evidence": [
+        "outputs/v1/selected-territory-t2-v1.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "requested_softening_only",
+      "result": "pass",
+      "observed": "网格保留为隐形对齐秩序；只对场景框、信息模块和按钮加入克制的分级圆角，未引入胶囊或自由软形。",
+      "evidence": [
+        "outputs/v1/selected-territory-t2-v1.md",
+        "outputs/v1/t2-application-wireframe-v1.svg"
+      ]
+    },
+    {
+      "id": "human_usage_scenes_added",
+      "result": "pass",
+      "observed": "已加入现场调试、制造商与集成商协同查看、维护检查三类使用场景；线框展示前两类构图。",
+      "evidence": [
+        "outputs/v1/selected-territory-t2-v1.md",
+        "outputs/v1/t2-application-wireframe-v1.svg"
+      ]
+    },
+    {
+      "id": "deep_blue_unchanged",
+      "result": "pass",
+      "observed": "v1 线框沿用 v0 T2 方向色 #0B2744；没有提出替代深蓝。该值仍标注为方向色而非正式品牌色号。",
+      "evidence": [
+        "outputs/v0/creative-territories-v0.md",
+        "outputs/v1/t2-application-wireframe-v1.svg"
+      ]
+    },
+    {
+      "id": "logo_unchanged",
+      "result": "pass_with_source_blocker",
+      "observed": "v1 未创建、重绘或替换 Logo；线框只使用文字占位符“现有 Logo（锁定）”。真实工业传感器 Logo 尚未提供。",
+      "evidence": [
+        "outputs/v1/selected-territory-t2-v1.md",
+        "outputs/v1/t2-application-wireframe-v1.svg"
+      ]
+    },
+    {
+      "id": "unrelated_territories_preserved",
+      "result": "pass",
+      "observed": "T1、T3 与 v0 原始文件未修改；v1 只新增所选 T2 的反馈增量。",
+      "evidence": "outputs/v0/creative-territories-v0.md"
+    },
+    {
+      "id": "v0_folder_immutable",
+      "result": "pass",
+      "observed": {
+        "outputs/v0/creative-territories-v0.md": "00396fbdc92f04f277cd080210c538111b4fea95d2125726eccede4ae5da4767",
+        "outputs/v0/verification.json": "79c11f30ab9d84aed66ec43193d0d838e6ad136ef9b1478b9e6471227426f5fd"
+      },
+      "evidence": "SHA-256 checked before and after v1 creation"
+    },
+    {
+      "id": "avoid_cyberpunk_and_badges",
+      "result": "pass",
+      "observed": "v1 明确排除霓虹、HUD、发光边缘和未经提供的认证/安全徽标。",
+      "evidence": "outputs/v1/selected-territory-t2-v1.md"
+    },
+    {
+      "id": "future_deliverables_checkpoint",
+      "result": "pass",
+      "observed": "未在缺少真实 Logo、正式中英文名、尺寸和场景素材许可时生成字标规范或最终 Hero/背板；当前 SVG 明确标记为低保真线框。",
+      "evidence": [
+        "outputs/v1/selected-territory-t2-v1.md",
+        "outputs/v1/t2-application-wireframe-v1.svg",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "svg_structural_integrity",
+      "result": "pass",
+      "observed": "SVG 已通过 xmllint 语法检查；画布、圆角场景框、人物线框、锁定 Logo 占位及深蓝色定义均存在。",
+      "evidence": "outputs/v1/t2-application-wireframe-v1.svg"
+    },
+    {
+      "id": "visual_render_inspection",
+      "result": "not_run",
+      "observed": "当前执行环境没有可用的 SVG 栅格化预览器或浏览器实例，因此未声称完成逐像素视觉渲染检查。",
+      "evidence": "outputs/v1/t2-application-wireframe-v1.svg"
+    }
+  ],
+  "evidence_paths": [
+    "inputs/01-current_identity.png",
+    "inputs/02-monogram_reference.png",
+    "outputs/v0/creative-territories-v0.md",
+    "outputs/v0/verification.json",
+    "outputs/v1/selected-territory-t2-v1.md",
+    "outputs/v1/t2-application-wireframe-v1.svg",
+    "outputs/project-state.json"
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "current_identity_mismatch",
+      "description": "输入图 01 显示 Grain & Glow，真实工业传感器 Logo 未提供；v1 因客户要求 Logo 不改而只保留位置占位。"
+    },
+    {
+      "id": "official_brand_names_missing",
+      "description": "缺少正式中文与英文品牌名，不能完成分别验证的字标规范。"
+    },
+    {
+      "id": "production_inputs_missing",
+      "description": "最终 Hero/背板尺寸，以及可用产品与人物现场照片或生成许可尚未提供。"
+    },
+    {
+      "id": "visual_render_qa_unavailable",
+      "description": "当前环境无法渲染 SVG 预览；已完成 XML 与内容结构检查，但尚未完成逐像素视觉 QA。"
+    }
+  ]
+}

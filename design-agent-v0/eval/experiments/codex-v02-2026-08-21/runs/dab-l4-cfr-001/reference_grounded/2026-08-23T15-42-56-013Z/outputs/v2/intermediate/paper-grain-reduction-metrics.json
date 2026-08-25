@@ -1,0 +1,99 @@
+{
+  "source": {
+    "path": "outputs/v1/summer-form-poster-local-revision-v1.png",
+    "sha256": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401",
+    "dimensions": {
+      "width": 928,
+      "height": 1152
+    }
+  },
+  "output": {
+    "path": "outputs/v2/summer-form-poster-local-revision-v2.png",
+    "dimensions": {
+      "width": 928,
+      "height": 1152
+    }
+  },
+  "requested_grain_scale": 0.7,
+  "changed_pixel_count": 176149,
+  "changed_pixel_fraction": 0.164771,
+  "outside_allowed_changed_pixel_count": 0,
+  "allowed_paper_pixel_count": 365096,
+  "paper_texture_sample_box": [
+    390,
+    165,
+    540,
+    205
+  ],
+  "paper_texture": {
+    "v1": {
+      "mean_luminance": 237.7728,
+      "fine_grain_std": 0.521,
+      "mid_grain_std": 0.5778,
+      "high_pass_std": 0.9328
+    },
+    "v2": {
+      "mean_luminance": 237.7722,
+      "fine_grain_std": 0.3724,
+      "mid_grain_std": 0.4523,
+      "high_pass_std": 0.6776
+    },
+    "measured_fine_grain_reduction_fraction": 0.2852,
+    "measured_high_pass_reduction_fraction": 0.2736,
+    "mean_luminance_delta": -0.0006
+  },
+  "title_ink": {
+    "v1_hash": "22dfaaa7a991ee8ea0d2b58c6b02690c0270ff1b1d998929b0720dcf30695c68",
+    "v2_hash": "22dfaaa7a991ee8ea0d2b58c6b02690c0270ff1b1d998929b0720dcf30695c68",
+    "pixel_identical": true
+  },
+  "event_information_ink": {
+    "v1_hash": "e982aac48beb67b8153c8c9d9e1bf2c0319961026ee29548087c89493d840241",
+    "v2_hash": "e982aac48beb67b8153c8c9d9e1bf2c0319961026ee29548087c89493d840241",
+    "pixel_identical": true
+  },
+  "logo": {
+    "v1_bbox": [
+      613,
+      854,
+      740,
+      980
+    ],
+    "v2_bbox": [
+      613,
+      854,
+      740,
+      980
+    ],
+    "ink_pixel_identical": true,
+    "ink_changed_pixel_count": 0
+  },
+  "protected_art": {
+    "max_channel_difference": 0
+  },
+  "outer_scene": {
+    "changed_pixel_count": 0
+  },
+  "central_folded_object_exclusion": {
+    "changed_pixel_count": 0
+  },
+  "paths": {
+    "final": "outputs/v2/summer-form-poster-local-revision-v2.png",
+    "comparison": "outputs/v2/summer-form-poster-v1-v2-comparison.png",
+    "diff_mask": "outputs/v2/summer-form-poster-v2-diff-mask.png",
+    "edit_mask": "outputs/v2/intermediate/v2-paper-edit-mask.png"
+  },
+  "prior_version_hashes": {
+    "outputs/v0/revision-interpretation.md": "146f3337a102a3ade215cbb23b47ab14706049cdfce013781e3b78d7da5431e4",
+    "outputs/v0/verification.json": "1e4c3fe82f6c7a718eb1d6f19425a6f7d2940a1821daf50e2a2b721227722c36",
+    "outputs/v1/apply-local-revision.py": "7aa2defee9e5e8dae9de56107976dfcacd46ddea4c5a30f078aadcc7740a20fe",
+    "outputs/v1/intermediate/imagegen-edit-source.png": "178f4b32fcdd82d4ca405da288b63c777fc0be8dc9d4a211bae0946b7f867def",
+    "outputs/v1/intermediate/local-edit-metrics.json": "b1ff9309d6c2fe6625eaac610add6721cff63fb6493fa769867c2cadb8dc041a",
+    "outputs/v1/intermediate/logo-alpha-mask.png": "f66547b61aaeeac6424b06d28511904da513f20dbeb30286fe3b9fb7b81ab2df",
+    "outputs/v1/intermediate/paper-edit-mask.png": "db6cf14422acddabfca437db8ea30539ab56edb3ff02bdae144c2937810dae4f",
+    "outputs/v1/summer-form-poster-local-revision-v1.png": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401",
+    "outputs/v1/summer-form-poster-v1-comparison.png": "59ffcd41998146adc18c527baced1d861eff56fe74f8149dbb885fd51a6eb113",
+    "outputs/v1/summer-form-poster-v1-diff-mask.png": "182fc8379cb75306e09aab247c9295564f17f88359ced4c981d8f1220ea4045b",
+    "outputs/v1/verification.json": "1296ec4a60b4947d858b24e48685da0cc07d9b8f0878e62140f503603b43373f"
+  }
+}

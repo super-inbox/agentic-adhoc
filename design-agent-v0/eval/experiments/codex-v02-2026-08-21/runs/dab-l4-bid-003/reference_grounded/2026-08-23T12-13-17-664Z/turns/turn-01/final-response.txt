@@ -1,0 +1,13 @@
+已完成 v1，仅应用指定增量：选定 T2、柔化圆角并加入人物工作场景；深蓝与 Logo 保持不变。v0 文件未改动且哈希一致。
+
+新增：
+
+- [T2 增量说明](/private<WORKDIR>/outputs/v1/selected-territory-t2-v1.md)
+- [应用低保真线框](/private<WORKDIR>/outputs/v1/t2-application-wireframe-v1.svg)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+
+已更新：
+
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+SVG 已通过结构校验；当前环境无法渲染预览，因此逐像素视觉 QA 限制已如实记录。真实 Logo、正式中英文名和成品尺寸仍待补充。

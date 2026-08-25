@@ -1,0 +1,89 @@
+{
+  "turn_index": 3,
+  "logical_session_id": "session-02",
+  "started_at": "2026-08-23T09:48:32.081Z",
+  "finished_at": "2026-08-23T09:53:38.554Z",
+  "latency_ms": 306487,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 30,
+    "command_count": 9,
+    "tool_count": 3,
+    "image_activity_count": 4,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02de9-9e88-75d0-8a06-39086c6b02a1",
+    "usage": {
+      "input_tokens": 6806630,
+      "cached_input_tokens": 6599296,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 69121,
+      "reasoning_output_tokens": 22836
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 5670,
+      "sha256": "9264b4e34516125adda16f6d4c851bbc13cffc379ce56eabb4d1a1f53fe9da35"
+    },
+    {
+      "filename": "v0/creative-territories-board.html",
+      "byte_size": 20770,
+      "sha256": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d"
+    },
+    {
+      "filename": "v0/creative-territories-overview.png",
+      "byte_size": 382745,
+      "sha256": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc"
+    },
+    {
+      "filename": "v0/creative-territories.md",
+      "byte_size": 12244,
+      "sha256": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5392,
+      "sha256": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd"
+    },
+    {
+      "filename": "v1/quiet-gifting-premium-box-mockup.png",
+      "byte_size": 1712332,
+      "sha256": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa"
+    },
+    {
+      "filename": "v1/quiet-gifting-refinement.md",
+      "byte_size": 7190,
+      "sha256": "4223cd355bd5df631a38752bd77e0ae78d744db1583c2d26b13a5845003310cd"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 6199,
+      "sha256": "6c307324b06d190374b643e1e137ab274b72deb3805d625c23fad0ce5ba0144c"
+    },
+    {
+      "filename": "v2/taobao-hero-delta-blocker.md",
+      "byte_size": 2049,
+      "sha256": "ddd47cc5ebbbda076fe883a12fbb93115a28498362ef81ca9df0a917bbacdd06"
+    },
+    {
+      "filename": "v2/verification.json",
+      "byte_size": 4596,
+      "sha256": "0adde4d2f11a1a3ce1eb128b07300d09a89ab69930faacc4a4fdf1b907e01b33"
+    },
+    {
+      "filename": "v3/store-sign-whitespace-delta-blocker.md",
+      "byte_size": 2604,
+      "sha256": "cc973c35de4034781b9428a2932572a4742dffa70b2f9e1fbdda68caca104e0c"
+    },
+    {
+      "filename": "v3/verification.json",
+      "byte_size": 5734,
+      "sha256": "a3992789856a015122122f6025d6f7c5b1f884695692246a0f2650b54787e3d3"
+    }
+  ]
+}

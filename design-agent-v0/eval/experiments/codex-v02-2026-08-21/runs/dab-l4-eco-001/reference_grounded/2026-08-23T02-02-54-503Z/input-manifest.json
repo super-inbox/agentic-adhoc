@@ -1,0 +1,24 @@
+[
+  {
+    "input_id": "product-source",
+    "asset_id": "product-retouch-teal-speaker-white-bg",
+    "role": "product_master",
+    "reference_role": "product_identity",
+    "identity_policy": "preserve_exact",
+    "filename": "01-product_master.png",
+    "source_path": "eval/assets/reference-pack-v0.2/product-retouch/teal-speaker-white-bg.png",
+    "byte_size": 792747,
+    "sha256": "f1c9a2c5895dfef128d4a52de1025bf8afad7cf59ca4bff0c04d5a653b392406"
+  },
+  {
+    "input_id": "brand-board",
+    "asset_id": "sku-system-mori-brand-board",
+    "role": "brand_guideline",
+    "reference_role": "brand_system",
+    "identity_policy": "preserve_rules",
+    "filename": "02-brand_guideline.png",
+    "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+    "byte_size": 592086,
+    "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+  }
+]

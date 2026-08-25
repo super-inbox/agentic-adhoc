@@ -1,0 +1,15 @@
+v3 已完成：
+
+- 卖点顺序恢复为“低噪运行｜定时关闭｜陶土触感”。
+- “低噪运行”错字修正继续保留。
+- 第三个卖点仍保持上移 12 px。
+- 未重新生成整图；v3 预览与 v1 逐像素一致。
+- v0、v1、v2 均未修改。
+
+新增或更新路径：
+
+- [v3 预览](/private<WORKDIR>/outputs/v3/preview.png)
+- [可编辑对象图](/private<WORKDIR>/outputs/v3/design_document.json)
+- [对象级变更集](/private<WORKDIR>/outputs/v3/change_set.json)
+- [机器验证结果](/private<WORKDIR>/outputs/v3/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)

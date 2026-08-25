@@ -1,0 +1,24 @@
+Reading additional input from stdin...
+2026-08-23T11:28:17.021108Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T11:28:17.025482Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T11:28:17.026521Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 94 column 5
+2026-08-23T11:28:22.018408Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to parse remote plugin catalog response from https://chatgpt.com/backend-api/ps/plugins/suggested?scope=GLOBAL: EOF while parsing a value at line 1 column 0
+2026-08-23T11:28:22.018430Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T11:28:22.029495Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T11:28:22.106935Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T11:28:22.106958Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T11:28:35.318314Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested?scope=GLOBAL)
+2026-08-23T11:28:44.364968Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to parse remote plugin catalog response from https://chatgpt.com/backend-api/ps/plugins/suggested?scope=GLOBAL: EOF while parsing a value at line 1 column 0
+2026-08-23T11:30:21.527911Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T11:45:34.807154Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T11:45:52.346672Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T11:46:16.393309Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T11:46:35.783760Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T11:46:35.957376Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+2026-08-23T11:46:57.836207Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T11:58:36.306716Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:01:37.436633Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:04:35.248746Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:07:40.653556Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:10:33.655918Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T12:12:58.040619Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

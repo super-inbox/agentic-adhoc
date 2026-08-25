@@ -1,0 +1,200 @@
+{
+  "schema": "design-verification/v1",
+  "verificationId": "summer-form-adaptation-map-v0-verification",
+  "verifiedAt": "2026-08-24T04:54:28+08:00",
+  "overallStatus": "checkpoint_passed_batch_output_blocked",
+  "scope": "adaptation_map_only",
+  "checksPerformed": [
+    {
+      "id": "source-readable",
+      "status": "pass",
+      "method": "image_metadata_and_visual_inspection",
+      "finding": "Approved master is readable at 928×1152.",
+      "evidence": [
+        "inputs/01-approved_master.png"
+      ]
+    },
+    {
+      "id": "source-content-audit",
+      "status": "partial_blocked",
+      "method": "visual_inspection",
+      "finding": {
+        "title": "SUMMER FORM",
+        "date": "08—10 AUG",
+        "location": "BROOKLYN",
+        "registrationUrl": null,
+        "registrationUrlFinding": "No registration URL is visible in the supplied approved master."
+      },
+      "evidence": [
+        "inputs/01-approved_master.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "preview-render",
+      "status": "pass",
+      "method": "pixel_dimensions_color_variance_and_visual_inspection",
+      "finding": {
+        "dimensions": [
+          2560,
+          1800
+        ],
+        "mode": "RGB",
+        "nonBlank": true,
+        "sampledUniqueColors": 3612,
+        "visualQa": [
+          "header_and_status_bars_do_not_overlap",
+          "all_seven_channel_panels_are_visible",
+          "source_master_thumbnail_is_contained_without_crop",
+          "URL_pending_state_is_visible_in_every_schematic",
+          "event_wall_distance_readability_strategy_is_visible"
+        ]
+      },
+      "evidence": [
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "channel-coverage",
+      "status": "pass",
+      "method": "object_graph_validation",
+      "finding": {
+        "expectedCount": 7,
+        "actualCount": 7,
+        "channels": [
+          "xhs",
+          "instagram",
+          "story",
+          "wechat",
+          "meta",
+          "web",
+          "event-wall"
+        ]
+      },
+      "evidence": [
+        "outputs/v0/design_document.json"
+      ]
+    },
+    {
+      "id": "critical-information-roles",
+      "status": "partial_blocked",
+      "method": "object_graph_validation",
+      "finding": {
+        "titleAvailable": true,
+        "dateAvailable": true,
+        "locationAvailable": true,
+        "registrationUrlAvailable": false,
+        "registrationUrlSlotsReserved": 7,
+        "allChannelsContainFourRoleObjects": true,
+        "finalContentCompleteness": false
+      },
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/change_set.json"
+      ]
+    },
+    {
+      "id": "no-mechanical-center-crop",
+      "status": "pass_for_plan",
+      "method": "change_set_review",
+      "finding": "Landscape and ultrawide formats use object-level modular reconstruction; no final output or destructive crop operation exists.",
+      "evidence": [
+        "outputs/v0/change_set.json"
+      ]
+    },
+    {
+      "id": "approved-concept-preservation",
+      "status": "pass_for_plan",
+      "method": "source_hash_and_identity_lock_review",
+      "finding": {
+        "approvedMasterMutation": false,
+        "sourceSha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a",
+        "lockedVisualLanguage": [
+          "navy_coral_offwhite_palette",
+          "thin_blue_modular_grid",
+          "circle_arc_geometry",
+          "folded_paper_sculpture_focal_object",
+          "bold_geometric_title_hierarchy"
+        ]
+      },
+      "evidence": [
+        "inputs/01-approved_master.png",
+        "outputs/v0/design_document.json",
+        "outputs/v0/change_set.json"
+      ]
+    },
+    {
+      "id": "event-wall-distance-readability",
+      "status": "pass_for_plan_not_final_art",
+      "method": "constraint_review",
+      "finding": {
+        "titleMinCanvasHeightPercent": 35,
+        "dateLocationMinCanvasHeightPercent": 12,
+        "urlMinCanvasHeightPercent": 5,
+        "sideSafeAreaPercent": 5
+      },
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/change_set.json"
+      ]
+    },
+    {
+      "id": "editable-object-graph",
+      "status": "pass",
+      "method": "json_parse_and_renderer_execution",
+      "finding": "design_document.json parsed successfully and render_adaptation_map.py generated preview.png.",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/render_adaptation_map.py",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "object-level-change-set",
+      "status": "pass",
+      "method": "json_parse_and_channel_operation_review",
+      "finding": "All seven channels contain planned object-level operations and are marked planned_not_applied.",
+      "evidence": [
+        "outputs/v0/change_set.json"
+      ]
+    },
+    {
+      "id": "workflow-gate",
+      "status": "pass",
+      "method": "artifact_inventory",
+      "finding": "Only the adaptation-map checkpoint artifacts exist; no final channel artwork was generated before approval.",
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/project-state.json"
+      ]
+    }
+  ],
+  "hashes": {
+    "inputs/01-approved_master.png": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a",
+    "outputs/v0/preview.png": "9dc8ac8ab76d4576388554655a5d8f427c221497c6ea49ac461d852d92c4d434",
+    "outputs/v0/design_document.json": "9221b52252e31d89917b09781b03b0f61b67c01a16024d36bfdd7fe4514a397e",
+    "outputs/v0/change_set.json": "05a411cdc7cebf2acbf37e320bbca3b9f0558b4ab1e905903cd14e961291f628"
+  },
+  "evidencePaths": [
+    "inputs/01-approved_master.png",
+    "outputs/v0/preview.png",
+    "outputs/v0/design_document.json",
+    "outputs/v0/render_adaptation_map.py",
+    "outputs/v0/change_set.json",
+    "outputs/project-state.json"
+  ],
+  "unresolvedBlockers": [
+    {
+      "id": "missing-registration-url",
+      "severity": "blocking",
+      "owner": "client",
+      "requiredResolution": "Provide the exact registration URL so the fourth critical information item can be populated in all seven final outputs."
+    },
+    {
+      "id": "adaptation-map-approval",
+      "severity": "blocking_checkpoint",
+      "owner": "client",
+      "requiredResolution": "Approve the proposed channel tradeoffs or request revisions before batch output."
+    }
+  ]
+}

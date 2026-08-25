@@ -1,0 +1,12 @@
+已完成 v1，仅第三个卖点整卡上移 12 px；“低噪运行”已确认锁定。产品、主标题、背景及 v0 文件均未改动。
+
+新增或更新：
+
+- [v1 预览](/private<WORKDIR>/outputs/v1/preview.png)
+- [v1 可编辑 SVG](/private<WORKDIR>/outputs/v1/hero_detail_v1.svg)
+- [对象图](/private<WORKDIR>/outputs/v1/design_document.json)
+- [变更记录](/private<WORKDIR>/outputs/v1/change_set.json)
+- [验证结果](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+验证通过，预览差异仅位于第三个卖点的移动范围。

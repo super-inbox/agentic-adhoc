@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "current_version": "v1",
+  "status": "selected_territory_refined_awaiting_production_inputs",
+  "updated_date": "2026-08-23",
+  "client_decisions": {
+    "selected_territory": "T2_resilient_signal",
+    "selected_primary_hypothesis": null,
+    "selected_secondary_hypothesis": null,
+    "technical_warmth_balance": "softened_with_moderate_rounding_and_human_usage_scenes",
+    "official_brand_name_zh": null,
+    "official_brand_name_en": null,
+    "logo_change": "none_locked_by_client",
+    "deep_blue_change": "none_locked_by_client",
+    "include_human_usage_scenes": true
+  },
+  "locked_items": [
+    {
+      "id": "legacy_core_contour",
+      "status": "locked_unchanged_by_client",
+      "description": "客户明确要求 Logo 不改；v1 不重绘、不整理、不替换。当前提供的身份图仍与工业传感器品牌不匹配。"
+    },
+    {
+      "id": "primary_color",
+      "status": "locked",
+      "description": "客户明确要求深蓝不改；v1 沿用 v0 T2 的方向色感，不将暂定色值升级为正式品牌色号。"
+    },
+    {
+      "id": "bilingual_validation",
+      "status": "locked",
+      "description": "中文与英文字标在下一阶段分别验证。"
+    },
+    {
+      "id": "tone",
+      "status": "locked",
+      "description": "技术可信但不冷冰冰。"
+    },
+    {
+      "id": "avoid_cyberpunk",
+      "status": "locked",
+      "description": "不采用霓虹赛博朋克视觉。"
+    },
+    {
+      "id": "avoid_unprovided_certification_marks",
+      "status": "locked",
+      "description": "不使用未经提供的认证徽标。"
+    }
+  ],
+  "changed_items": [
+    {
+      "id": "creative_territory_expansion",
+      "status": "added_in_v0",
+      "description": "已形成 9 个文字假设，并聚类为 3 个 Creative Territories。"
+    },
+    {
+      "id": "reference_usage_boundary",
+      "status": "documented_in_v0",
+      "description": "当前身份图仅用于局部整理/系统提炼；NOMA 参考仅用于抽象设计语言，不复制具体图形。"
+    },
+    {
+      "id": "territory_selection",
+      "status": "approved_in_v1",
+      "description": "客户选择 T2 稳态信号；H4–H6 未指定主次，保持未排序。"
+    },
+    {
+      "id": "softer_rounding",
+      "status": "added_in_v1",
+      "description": "网格退回隐形秩序，人物场景框与信息模块使用克制的分级圆角。"
+    },
+    {
+      "id": "human_usage_scenes",
+      "status": "added_in_v1",
+      "description": "加入现场调试、协同查看与维护检查三类人物使用场景。"
+    }
+  ],
+  "deferred_items": [
+    "中文文字标规范",
+    "英文文字标规范",
+    "官网 Hero",
+    "展会背板"
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "actual_legacy_logo",
+      "type": "source_asset",
+      "description": "标为当前身份的图片显示 Grain & Glow，需提供工业传感器品牌真实旧 Logo，优先 SVG/PDF/AI，或高分辨率 PNG；收到后将原样使用。"
+    },
+    {
+      "id": "official_bilingual_names",
+      "type": "copy",
+      "description": "正式中文与英文品牌名尚未提供，无法进入双语字标设计与验证。"
+    },
+    {
+      "id": "production_formats_and_imagery",
+      "type": "production_input",
+      "description": "最终官网 Hero 断点/画幅、展会背板尺寸，以及可用产品与人物现场照片或生成许可尚未提供。"
+    }
+  ],
+  "artifact_paths": [
+    "outputs/v0/creative-territories-v0.md",
+    "outputs/v0/verification.json",
+    "outputs/v1/selected-territory-t2-v1.md",
+    "outputs/v1/t2-application-wireframe-v1.svg",
+    "outputs/v1/verification.json",
+    "outputs/project-state.json"
+  ],
+  "next_checkpoint": "补充真实现有 Logo、正式中英文品牌名、成品尺寸与可用场景素材或生成许可后，进入中英文字标验证、官网 Hero 与展会背板制作。"
+}

@@ -1,0 +1,119 @@
+{
+  "source_dimensions": {
+    "width": 928,
+    "height": 1152
+  },
+  "output_dimensions": {
+    "width": 928,
+    "height": 1152
+  },
+  "changed_pixel_count": 351701,
+  "changed_pixel_fraction": 0.328983,
+  "outside_allowed_changed_pixel_count": 0,
+  "paper_edit_pixel_count": 336202,
+  "logo_region_changed_pixel_count": 34077,
+  "logo": {
+    "requested_scale": 0.8,
+    "original_bbox": [
+      597,
+      837,
+      757,
+      997
+    ],
+    "final_bbox": [
+      613,
+      854,
+      740,
+      980
+    ],
+    "original": {
+      "center_x": 677.0,
+      "center_y": 917.0,
+      "width": 161.0,
+      "height": 161.0
+    },
+    "final": {
+      "center_x": 676.5,
+      "center_y": 917.0,
+      "width": 128.0,
+      "height": 127.0
+    },
+    "width_ratio": 0.795,
+    "height_ratio": 0.7888,
+    "center_delta": {
+      "x": -0.5,
+      "y": 0.0
+    },
+    "palette": {
+      "original": {
+        "blue_median_rgb": [
+          53.0,
+          82.0,
+          150.0
+        ],
+        "coral_median_rgb": [
+          232.0,
+          119.0,
+          98.0
+        ]
+      },
+      "final": {
+        "blue_median_rgb": [
+          54.0,
+          82.0,
+          151.0
+        ],
+        "coral_median_rgb": [
+          232.0,
+          119.0,
+          98.0
+        ]
+      }
+    }
+  },
+  "paper_texture_sample_box": [
+    390,
+    165,
+    540,
+    205
+  ],
+  "paper_texture": {
+    "imagegen_reference_high_pass_std": 0.9782,
+    "original": {
+      "mean_luminance": 237.7805,
+      "fine_grain_std": 0.7267,
+      "mid_grain_std": 0.8982
+    },
+    "final": {
+      "mean_luminance": 237.7728,
+      "fine_grain_std": 0.521,
+      "mid_grain_std": 0.5778
+    }
+  },
+  "title_ink": {
+    "original_hash": "22dfaaa7a991ee8ea0d2b58c6b02690c0270ff1b1d998929b0720dcf30695c68",
+    "final_hash": "22dfaaa7a991ee8ea0d2b58c6b02690c0270ff1b1d998929b0720dcf30695c68",
+    "pixel_identical": true
+  },
+  "event_information_ink": {
+    "original_hash": "e982aac48beb67b8153c8c9d9e1bf2c0319961026ee29548087c89493d840241",
+    "final_hash": "e982aac48beb67b8153c8c9d9e1bf2c0319961026ee29548087c89493d840241",
+    "pixel_identical": true
+  },
+  "approved_colored_art_outside_logo": {
+    "max_channel_difference": 0
+  },
+  "outer_scene": {
+    "changed_pixel_count": 0
+  },
+  "central_folded_object_exclusion": {
+    "changed_pixel_count": 0
+  },
+  "paths": {
+    "source": "inputs/01-revision_target.png",
+    "generated_texture_source": "outputs/v1/intermediate/imagegen-edit-source.png",
+    "final": "outputs/v1/summer-form-poster-local-revision-v1.png",
+    "comparison": "outputs/v1/summer-form-poster-v1-comparison.png",
+    "diff_mask": "outputs/v1/summer-form-poster-v1-diff-mask.png"
+  }
+}

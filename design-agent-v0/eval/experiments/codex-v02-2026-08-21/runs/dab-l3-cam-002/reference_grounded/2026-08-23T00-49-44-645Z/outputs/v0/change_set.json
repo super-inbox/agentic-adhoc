@@ -1,0 +1,305 @@
+{
+  "schema": "summer-form.object-change-set/v1",
+  "version": "v0",
+  "base": {
+    "input_id": "approved-poster",
+    "path": "../../inputs/01-campaign_master.png"
+  },
+  "summary": "Responsive reflow only; approved hero, wording, palette, and brand mark remain unchanged.",
+  "operations": [
+    {
+      "variant": "website",
+      "operation": "resize_canvas",
+      "target": "website-canvas",
+      "to": [
+        1200,
+        628
+      ],
+      "reason": "channel_dimensions"
+    },
+    {
+      "variant": "website",
+      "operation": "reflow",
+      "target": "geometry-frame",
+      "changed_properties": [
+        "position",
+        "dimensions",
+        "arc_radii",
+        "grid_divisions"
+      ],
+      "content_preserved": true,
+      "reason": "responsive geometric adaptation"
+    },
+    {
+      "variant": "website",
+      "operation": "place_crop",
+      "target": "approved-art-window",
+      "source_crop_xyxy": [
+        200,
+        580,
+        465,
+        825
+      ],
+      "transform": "uniform_scale_and_translate",
+      "content_edit": "none",
+      "reason": "retain approved hero without inventing a new visual"
+    },
+    {
+      "variant": "website",
+      "operation": "retypeset",
+      "target": "title-summer",
+      "text_before": "SUMMER",
+      "text_after": "SUMMER",
+      "changed_properties": [
+        "position",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "website",
+      "operation": "retypeset",
+      "target": "title-form",
+      "text_before": "FORM",
+      "text_after": "FORM",
+      "changed_properties": [
+        "position",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "website",
+      "operation": "retypeset_group",
+      "target": "event-details",
+      "text_before": [
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "text_after": [
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "changed_properties": [
+        "position",
+        "line_spacing",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "website",
+      "operation": "place_crop",
+      "target": "approved-brand-mark",
+      "source_crop_xyxy": [
+        590,
+        830,
+        762,
+        1002
+      ],
+      "transform": "uniform_scale_and_translate",
+      "content_edit": "none",
+      "reason": "preserve mark proportions"
+    },
+    {
+      "variant": "instagram",
+      "operation": "resize_canvas",
+      "target": "instagram-canvas",
+      "to": [
+        1080,
+        1350
+      ],
+      "reason": "channel_dimensions"
+    },
+    {
+      "variant": "instagram",
+      "operation": "reflow",
+      "target": "geometry-frame",
+      "changed_properties": [
+        "position",
+        "dimensions",
+        "arc_radii",
+        "grid_divisions"
+      ],
+      "content_preserved": true,
+      "reason": "responsive geometric adaptation"
+    },
+    {
+      "variant": "instagram",
+      "operation": "place_crop",
+      "target": "approved-art-window",
+      "source_crop_xyxy": [
+        200,
+        580,
+        465,
+        825
+      ],
+      "transform": "uniform_scale_and_translate",
+      "content_edit": "none",
+      "reason": "retain approved hero without inventing a new visual"
+    },
+    {
+      "variant": "instagram",
+      "operation": "retypeset",
+      "target": "title-summer",
+      "text_before": "SUMMER",
+      "text_after": "SUMMER",
+      "changed_properties": [
+        "position",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "instagram",
+      "operation": "retypeset",
+      "target": "title-form",
+      "text_before": "FORM",
+      "text_after": "FORM",
+      "changed_properties": [
+        "position",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "instagram",
+      "operation": "retypeset_group",
+      "target": "event-details",
+      "text_before": [
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "text_after": [
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "changed_properties": [
+        "position",
+        "line_spacing",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "instagram",
+      "operation": "place_crop",
+      "target": "approved-brand-mark",
+      "source_crop_xyxy": [
+        590,
+        830,
+        762,
+        1002
+      ],
+      "transform": "uniform_scale_and_translate",
+      "content_edit": "none",
+      "reason": "preserve mark proportions"
+    },
+    {
+      "variant": "story",
+      "operation": "resize_canvas",
+      "target": "story-canvas",
+      "to": [
+        1080,
+        1920
+      ],
+      "reason": "channel_dimensions"
+    },
+    {
+      "variant": "story",
+      "operation": "reflow",
+      "target": "geometry-frame",
+      "changed_properties": [
+        "position",
+        "dimensions",
+        "arc_radii",
+        "grid_divisions"
+      ],
+      "content_preserved": true,
+      "reason": "responsive geometric adaptation"
+    },
+    {
+      "variant": "story",
+      "operation": "place_crop",
+      "target": "approved-art-window",
+      "source_crop_xyxy": [
+        200,
+        580,
+        465,
+        825
+      ],
+      "transform": "uniform_scale_and_translate",
+      "content_edit": "none",
+      "reason": "retain approved hero without inventing a new visual"
+    },
+    {
+      "variant": "story",
+      "operation": "retypeset",
+      "target": "title-summer",
+      "text_before": "SUMMER",
+      "text_after": "SUMMER",
+      "changed_properties": [
+        "position",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "story",
+      "operation": "retypeset",
+      "target": "title-form",
+      "text_before": "FORM",
+      "text_after": "FORM",
+      "changed_properties": [
+        "position",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "story",
+      "operation": "retypeset_group",
+      "target": "event-details",
+      "text_before": [
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "text_after": [
+        "Design Market",
+        "08—10 AUG",
+        "BROOKLYN"
+      ],
+      "changed_properties": [
+        "position",
+        "line_spacing",
+        "font_size"
+      ],
+      "content_preserved": true
+    },
+    {
+      "variant": "story",
+      "operation": "place_crop",
+      "target": "approved-brand-mark",
+      "source_crop_xyxy": [
+        590,
+        830,
+        762,
+        1002
+      ],
+      "transform": "uniform_scale_and_translate",
+      "content_edit": "none",
+      "reason": "preserve mark proportions"
+    }
+  ],
+  "explicit_non_changes": [
+    "No new hero visual generated",
+    "No copy rewritten",
+    "No non-uniform scaling applied to the brand mark or raster hero",
+    "No palette substitution"
+  ]
+}

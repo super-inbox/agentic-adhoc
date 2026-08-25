@@ -1,0 +1,52 @@
+{
+  "version": "v0",
+  "status": "blocked_pending_client_confirmation",
+  "checks_performed": [
+    {
+      "check": "revision_target_present",
+      "result": "pass",
+      "evidence_paths": [
+        "inputs/01-revision_target.png"
+      ],
+      "details": "PNG, 928 x 1152, RGB; SHA-256 4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+    },
+    {
+      "check": "approved_invariants_recorded",
+      "result": "pass",
+      "evidence_paths": [
+        "outputs/v0/revision-interpretation.md",
+        "outputs/project-state.json"
+      ],
+      "details": "Composition, blue/coral palette, approved activity information, and unedited regions are locked."
+    },
+    {
+      "check": "feedback_translated_to_confirmable_local_edits",
+      "result": "pass",
+      "evidence_paths": [
+        "outputs/v0/revision-interpretation.md"
+      ],
+      "details": "Proposed changes are limited to typography density, folded-paper material/shadow, and bottom-right logo scale/stroke."
+    },
+    {
+      "check": "visual_edit_not_executed_before_confirmation",
+      "result": "pass",
+      "evidence_paths": [
+        "outputs/project-state.json"
+      ],
+      "details": "No edited poster or comparison artifact has been created in this confirmation phase."
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "blocker": "client_confirmation_required",
+      "details": "The client must confirm the proposed local modification items before any image editing is performed."
+    }
+  ],
+  "planned_post_edit_checks": [
+    "Compare the original and revision side by side.",
+    "Verify that pixel changes are confined to the approved local edit regions.",
+    "Verify exact preservation of SUMMER FORM, Design Market, 08—10 AUG, and BROOKLYN.",
+    "Verify preservation of the approved deep-blue/coral-orange hue relationship.",
+    "Verify that no new copy, selling points, or graphics appear."
+  ]
+}

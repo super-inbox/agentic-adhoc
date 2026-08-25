@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "verification_id": "aroma-detail-hero-v0-verification",
+  "version": "v0",
+  "verified_at": "2026-08-21",
+  "overall_status": "pass_with_pending_client_confirmation",
+  "checks": [
+    {
+      "check_id": "required_artifacts.present",
+      "status": "pass",
+      "method": "filesystem existence and nonzero-size check",
+      "result": {
+        "preview.png": true,
+        "design_document.json": true,
+        "change_set.json": true,
+        "verification.json": true
+      },
+      "evidence_paths": [
+        "preview.png",
+        "design_document.json",
+        "change_set.json",
+        "verification.json"
+      ]
+    },
+    {
+      "check_id": "preview.raster_properties",
+      "status": "pass",
+      "method": "Pillow image inspection",
+      "result": {
+        "width": 1080,
+        "height": 1440,
+        "mode": "RGB",
+        "sha256": "9d8fb3597d8bad1f1184b8dc9b3724bfae771e4affd4d9fd0b6123f47ebacc86"
+      },
+      "evidence_paths": [
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "visual.layout_and_legibility",
+      "status": "pass",
+      "method": "original-resolution visual inspection",
+      "result": {
+        "product_complete_and_unclipped": true,
+        "headline_legible": true,
+        "feature_labels_legible": true,
+        "no_element_crosses_canvas_edge": true,
+        "quiet_breathing_space_present": true
+      },
+      "evidence_paths": [
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "copy.verbatim",
+      "status": "pass",
+      "method": "extract all rendered text objects from the editable object graph and compare in order to approved copy",
+      "expected": [
+        "让香气慢下来。",
+        "低噪运行",
+        "定时关闭",
+        "陶土触感"
+      ],
+      "actual": [
+        "让香气慢下来。",
+        "低噪运行",
+        "定时关闭",
+        "陶土触感"
+      ],
+      "evidence_paths": [
+        "design_document.json",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "forbidden_brand_content.excluded",
+      "status": "pass",
+      "method": "inspect the complete rendered-text object list and visually inspect the final preview",
+      "result": {
+        "A_brand_words_present": false,
+        "B_wordmark_present": false,
+        "B_leaf_logo_or_pattern_present": false,
+        "unapproved_copy_present": false
+      },
+      "evidence_paths": [
+        "design_document.json",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "product.identity_source",
+      "status": "pass",
+      "method": "SHA-256 equality check between supplied product input and candidate source copy",
+      "result": {
+        "input_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "candidate_source_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "match": true
+      },
+      "evidence_paths": [
+        "../../inputs/03-product_reference.png",
+        "product_source_exact.png"
+      ]
+    },
+    {
+      "check_id": "product.allowed_operations_only",
+      "status": "pass",
+      "method": "inspect product object transform and rendering definition",
+      "result": {
+        "source_crop_contains_detected_product_and_shadow_bbox": true,
+        "detected_bbox_threshold_lt245": [
+          228,
+          315,
+          919,
+          742
+        ],
+        "declared_source_crop": [
+          32,
+          215,
+          992,
+          835
+        ],
+        "filters": [],
+        "color_adjustments": [],
+        "operations": [
+          "crop_surrounding_whitespace",
+          "uniform_scale",
+          "placement"
+        ]
+      },
+      "evidence_paths": [
+        "design_document.json",
+        "render_design.py",
+        "product_source_exact.png"
+      ]
+    },
+    {
+      "check_id": "reference_a.abstract_layout_only",
+      "status": "pass",
+      "method": "object-coordinate and provenance inspection",
+      "result": {
+        "product_bottom_y": 671,
+        "headline_top_y": 817,
+        "features_top_y": 1010,
+        "order_matches_product_then_headline_then_features": true,
+        "literal_A_identity_copied": false
+      },
+      "evidence_paths": [
+        "design_document.json",
+        "change_set.json",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "reference_b.palette_rules",
+      "status": "pass",
+      "method": "mean RGB extraction from B's four relevant swatches and exact comparison to candidate color tokens",
+      "result": {
+        "reference_samples_rgb": {
+          "charcoal": [
+            58,
+            58,
+            56
+          ],
+          "warm_cream": [
+            238,
+            232,
+            212
+          ],
+          "muted_olive": [
+            135,
+            148,
+            102
+          ],
+          "terracotta": [
+            175,
+            84,
+            63
+          ]
+        },
+        "candidate_tokens_match": true,
+        "headline_contrast_ratio_on_warm_cream": 9.3
+      },
+      "evidence_paths": [
+        "../../inputs/02-palette_reference_b.png",
+        "design_document.json",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "editable_graph.integrity",
+      "status": "pass",
+      "method": "JSON parse, stable-ID uniqueness, and change-set target resolution",
+      "result": {
+        "json_parses": true,
+        "object_ids_unique": true,
+        "all_change_set_object_ids_resolve": true,
+        "renderer_reproduces_preview": true
+      },
+      "evidence_paths": [
+        "design_document.json",
+        "change_set.json",
+        "render_design.py"
+      ]
+    },
+    {
+      "check_id": "version_state.recorded",
+      "status": "pass",
+      "method": "project-state schema inspection",
+      "result": {
+        "current_version": "v0",
+        "status": "candidate_ready_for_client_confirmation",
+        "locked_items_recorded": true,
+        "changed_items_recorded": true,
+        "artifact_paths_recorded": true,
+        "next_checkpoint": "client_confirmation"
+      },
+      "evidence_paths": [
+        "../project-state.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "blocker_id": "client_confirmation.pending",
+      "severity": "workflow_checkpoint",
+      "status": "open",
+      "description": "The v0 candidate has not yet been approved by the client. Do not lock composition, palette balance, headline treatment, or icon treatment until the next-round confirmation.",
+      "decision_options_to_confirm": [
+        "overall composition and whitespace",
+        "warm palette balance",
+        "headline serif treatment",
+        "three icon styles"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-CFR-002@reference_grounded",
+  "base_brief_id": "DAB-L3-CFR-002",
+  "context_condition": "reference_grounded",
+  "category": "client_feedback_revision",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution",
+    "structured_editing"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T07:50:00.210Z",
+  "finished_at": "2026-08-23T08:22:49.939Z",
+  "latency_ms": 1969729,
+  "intended_turns": 1,
+  "completed_turns": 1,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02d99-14af-7d22-909d-be551922ef77",
+  "input_assets": [
+    {
+      "input_id": "poster",
+      "asset_id": "image-edit-poster-summer-form",
+      "role": "revision_target",
+      "reference_role": "edit_target",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-revision_target.png",
+      "source_path": "eval/assets/reference-pack-v0.2/image-edit/poster-summer-form.png",
+      "byte_size": 1388454,
+      "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+    }
+  ],
+  "input_context_ids": [
+    "poster",
+    "change-request"
+  ],
+  "required_candidate_artifacts": [
+    "preview.png",
+    "design_document.json",
+    "change_set.json",
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "preview.png": true,
+    "design_document.json": true,
+    "change_set.json": true,
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1721,
+      "sha256": "01f986f0a1104f6c8d0faf19644e7e4584010bdb0224bbeb7fea8af7b99f25d4"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 2305,
+      "sha256": "f65301f979503dd14cfb3d8e151c096b31bf6958c33823af1d93627e8cbd5eab"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 5218,
+      "sha256": "85fadd8f218463b7606a0c803c89434380dfb2d674b7a1d07e839f6ea61bbcc0"
+    },
+    {
+      "filename": "v0/layers/base-cleaned.png",
+      "byte_size": 1560849,
+      "sha256": "ef3f4a51559b9518c86ff149e5b4cfc7beee95d4f4be0bb413d5c0dcd9e15958"
+    },
+    {
+      "filename": "v0/layers/event-mark-source.png",
+      "byte_size": 40151,
+      "sha256": "dfa321fa05019716a9944e3f99d2860fe6830f3084720cd740798ab85e4a81a1"
+    },
+    {
+      "filename": "v0/layers/title-scaled-115.png",
+      "byte_size": 114542,
+      "sha256": "0dcc567d7d5efd5eaeef90d14141dd57ac1c677c6636ca4b301a32fb7905ab66"
+    },
+    {
+      "filename": "v0/layers/title-source.png",
+      "byte_size": 82321,
+      "sha256": "4225b72c3d2aab64fb800ee5bee2bfdf579cbc1b1c4324360e0f3eec6292867d"
+    },
+    {
+      "filename": "v0/masks/authorized-change-region.png",
+      "byte_size": 23116,
+      "sha256": "227556ee195a92e096de1c671d4905d9a43e4407e7194aa3344f3d6c329b247a"
+    },
+    {
+      "filename": "v0/masks/event-mark-source-mask.png",
+      "byte_size": 46782,
+      "sha256": "46c85c91b6bdb3d43535190b3974a9fbbbafed6032ffd6b3c2f27eb9b62c3f8d"
+    },
+    {
+      "filename": "v0/masks/source-vs-preview-diff.png",
+      "byte_size": 38936,
+      "sha256": "c137346d4dc806f9f3aa0eb49f3b89bd3c6d115b3ff8bf2cdf2d9cbb12734541"
+    },
+    {
+      "filename": "v0/masks/title-source-mask.png",
+      "byte_size": 68574,
+      "sha256": "4519c7166a83f9d8dc8d4a75c06c86ad42b28b4f15c7cac0a2bc434fa7eb7bca"
+    },
+    {
+      "filename": "v0/metrics.json",
+      "byte_size": 1302,
+      "sha256": "9832148bd5eb4bbd8cea06ca3ae1346b16052ea6630c3816b9955ddab5b78da7"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 1605834,
+      "sha256": "1c242adacbb13bb6a79963d11f209991ce2c96520099ddb2b994f7519dd4288f"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3975,
+      "sha256": "26175b4e730057aa10c210747d1474f1dfd65ed2aad66c774404598a8901a5ec"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T07:50:00.210Z",
+      "finished_at": "2026-08-23T08:22:49.907Z",
+      "latency_ms": 1969717,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 99,
+        "command_count": 29,
+        "tool_count": 16,
+        "image_activity_count": 2,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02d99-14af-7d22-909d-be551922ef77",
+        "usage": {
+          "input_tokens": 4672249,
+          "cached_input_tokens": 4496512,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 53697,
+          "reasoning_output_tokens": 24223
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 1721,
+          "sha256": "01f986f0a1104f6c8d0faf19644e7e4584010bdb0224bbeb7fea8af7b99f25d4"
+        },
+        {
+          "filename": "v0/change_set.json",
+          "byte_size": 2305,
+          "sha256": "f65301f979503dd14cfb3d8e151c096b31bf6958c33823af1d93627e8cbd5eab"
+        },
+        {
+          "filename": "v0/design_document.json",
+          "byte_size": 5218,
+          "sha256": "85fadd8f218463b7606a0c803c89434380dfb2d674b7a1d07e839f6ea61bbcc0"
+        },
+        {
+          "filename": "v0/layers/base-cleaned.png",
+          "byte_size": 1560849,
+          "sha256": "ef3f4a51559b9518c86ff149e5b4cfc7beee95d4f4be0bb413d5c0dcd9e15958"
+        },
+        {
+          "filename": "v0/layers/event-mark-source.png",
+          "byte_size": 40151,
+          "sha256": "dfa321fa05019716a9944e3f99d2860fe6830f3084720cd740798ab85e4a81a1"
+        },
+        {
+          "filename": "v0/layers/title-scaled-115.png",
+          "byte_size": 114542,
+          "sha256": "0dcc567d7d5efd5eaeef90d14141dd57ac1c677c6636ca4b301a32fb7905ab66"
+        },
+        {
+          "filename": "v0/layers/title-source.png",
+          "byte_size": 82321,
+          "sha256": "4225b72c3d2aab64fb800ee5bee2bfdf579cbc1b1c4324360e0f3eec6292867d"
+        },
+        {
+          "filename": "v0/masks/authorized-change-region.png",
+          "byte_size": 23116,
+          "sha256": "227556ee195a92e096de1c671d4905d9a43e4407e7194aa3344f3d6c329b247a"
+        },
+        {
+          "filename": "v0/masks/event-mark-source-mask.png",
+          "byte_size": 46782,
+          "sha256": "46c85c91b6bdb3d43535190b3974a9fbbbafed6032ffd6b3c2f27eb9b62c3f8d"
+        },
+        {
+          "filename": "v0/masks/source-vs-preview-diff.png",
+          "byte_size": 38936,
+          "sha256": "c137346d4dc806f9f3aa0eb49f3b89bd3c6d115b3ff8bf2cdf2d9cbb12734541"
+        },
+        {
+          "filename": "v0/masks/title-source-mask.png",
+          "byte_size": 68574,
+          "sha256": "4519c7166a83f9d8dc8d4a75c06c86ad42b28b4f15c7cac0a2bc434fa7eb7bca"
+        },
+        {
+          "filename": "v0/metrics.json",
+          "byte_size": 1302,
+          "sha256": "9832148bd5eb4bbd8cea06ca3ae1346b16052ea6630c3816b9955ddab5b78da7"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 1605834,
+          "sha256": "1c242adacbb13bb6a79963d11f209991ce2c96520099ddb2b994f7519dd4288f"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3975,
+          "sha256": "26175b4e730057aa10c210747d1474f1dfd65ed2aad66c774404598a8901a5ec"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 4672249,
+    "cached_input_tokens": 4496512,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 53697,
+    "reasoning_output_tokens": 24223
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

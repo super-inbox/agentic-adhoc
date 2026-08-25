@@ -1,0 +1,12 @@
+v3 已完成：仅将背面法定文案 `200 g` 更新为 `180 g`，保留 `6.00 pt`、版式、尺寸和 CMYK 配色。差异核验确认限定区域外像素变化为 0。
+
+新建/更新路径：
+
+- v3 审核 PDF：:codex-file-citation{path="/private<WORKDIR>/outputs/v3/orbit-coffee_v3-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf" purpose="output"}
+- [180 g / 6 pt 样张](/private<WORKDIR>/outputs/v3/back-legal-copy_180g_6pt_300dpi-specimen.png)
+- [v3 preflight 清单](/private<WORKDIR>/outputs/v3/orbit-coffee_v3-back-legal-copy-checklist.md)
+- [v2-v3 局部差异掩码](/private<WORKDIR>/outputs/v3/evidence/v3-v2-localized-diff-mask.png)
+- [v3 验证记录](/private<WORKDIR>/outputs/v3/verification.json)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+`outputs/v0` 至 `outputs/v2` 均保持不变。既有生产落版阻塞仍保留，因此 PDF 继续明确标记为非生产文件。

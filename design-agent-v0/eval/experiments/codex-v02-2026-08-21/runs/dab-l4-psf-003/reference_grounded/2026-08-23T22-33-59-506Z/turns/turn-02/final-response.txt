@@ -1,0 +1,14 @@
+v2 已完成。背面文案规格锁定为 `200 g / 6.00 pt`，对应 300 dpi 下 `25 px`；刀模、正面、条码区及原稿均未移动或编辑。
+
+由于源图没有可编辑法定文案对象或可识别条码区边界，未猜测落版坐标，也未生成生产 PDF。
+
+新建/更新路径：
+
+- 审核报告：:codex-file-citation{path="/private<WORKDIR>/outputs/v2/orbit-coffee_v2-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf" purpose="output"}
+- [6 pt 文案样张](/private<WORKDIR>/outputs/v2/back-legal-copy_200g_6pt_300dpi-specimen.png)
+- [目标区域审核图](/private<WORKDIR>/outputs/v2/approved-artwork_v2-back-legal-target-audit.png)
+- [v2 检查清单](/private<WORKDIR>/outputs/v2/orbit-coffee_v2-back-legal-copy-checklist.md)
+- [v2 验证记录](/private<WORKDIR>/outputs/v2/verification.json)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+`outputs/v0` 与 `outputs/v1` 已核验保持不变。继续落版需要背面生产源稿或法定文案框的明确坐标与尺寸。

@@ -1,0 +1,520 @@
+{
+  "schema": "summer-form.design-document/v1",
+  "document_version": "v0",
+  "source": {
+    "input_id": "approved-poster",
+    "path": "../../inputs/01-campaign_master.png",
+    "role": "approved_master",
+    "identity_policy": "preserve_unedited_regions",
+    "pixel_dimensions": [
+      928,
+      1152
+    ]
+  },
+  "units": "px",
+  "palette": {
+    "navy": "#273D70",
+    "blue": "#3A5CA3",
+    "coral": "#EF7D66",
+    "paper": "#F3EFE6"
+  },
+  "typography": {
+    "family": "Arial, Helvetica, sans-serif",
+    "title": {
+      "weight": 700,
+      "case": "uppercase",
+      "content_locked": true
+    },
+    "details": {
+      "weight": 400,
+      "content_locked": true
+    }
+  },
+  "linked_assets": [
+    {
+      "id": "approved-origami",
+      "path": "assets/approved_origami_crop.png",
+      "source_crop_xyxy": [
+        200,
+        580,
+        465,
+        825
+      ],
+      "pixel_dimensions": [
+        265,
+        245
+      ],
+      "content_edit": "none"
+    },
+    {
+      "id": "approved-brand-mark",
+      "path": "assets/approved_brand_mark_crop.png",
+      "source_crop_xyxy": [
+        590,
+        830,
+        762,
+        1002
+      ],
+      "pixel_dimensions": [
+        172,
+        172
+      ],
+      "content_edit": "none"
+    }
+  ],
+  "variants": {
+    "website": {
+      "canvas": {
+        "width": 1200,
+        "height": 628
+      },
+      "safe_margin": 64,
+      "safe_area_xyxy": [
+        64,
+        64,
+        1136,
+        564
+      ],
+      "editable_master": "website_card_1200x628.svg",
+      "render": "website_card_1200x628.png",
+      "object_graph": {
+        "root": "website-canvas",
+        "children": [
+          "background",
+          "geometry-frame",
+          "approved-art-window",
+          "title-summer",
+          "title-form",
+          "event-label",
+          "event-date",
+          "event-location",
+          "approved-brand-mark"
+        ],
+        "objects": [
+          {
+            "id": "background",
+            "type": "group",
+            "bounds": [
+              0,
+              0,
+              1200,
+              628
+            ],
+            "locked": true
+          },
+          {
+            "id": "geometry-frame",
+            "type": "vector_group",
+            "bounds": [
+              64,
+              64,
+              1072,
+              500
+            ],
+            "editable": true
+          },
+          {
+            "id": "approved-art-window",
+            "type": "image_group",
+            "bounds": [
+              64,
+              128,
+              432,
+              399.4
+            ],
+            "source": "assets/approved_origami_crop.png",
+            "source_crop": [
+              200,
+              580,
+              465,
+              825
+            ],
+            "preserve_aspect_ratio": "xMidYMid meet",
+            "locked_content": true
+          },
+          {
+            "id": "title-summer",
+            "type": "text",
+            "bounds": [
+              520,
+              146,
+              510,
+              116
+            ],
+            "text": "SUMMER",
+            "editable": true
+          },
+          {
+            "id": "title-form",
+            "type": "text",
+            "bounds": [
+              786,
+              238,
+              330,
+              122
+            ],
+            "text": "FORM",
+            "editable": true
+          },
+          {
+            "id": "event-label",
+            "type": "text",
+            "bounds": [
+              624,
+              400,
+              230,
+              38
+            ],
+            "text": "Design Market",
+            "editable": true
+          },
+          {
+            "id": "event-date",
+            "type": "text",
+            "bounds": [
+              624,
+              443,
+              268,
+              50
+            ],
+            "text": "08—10 AUG",
+            "editable": true
+          },
+          {
+            "id": "event-location",
+            "type": "text",
+            "bounds": [
+              624,
+              495,
+              238,
+              45
+            ],
+            "text": "BROOKLYN",
+            "editable": true
+          },
+          {
+            "id": "approved-brand-mark",
+            "type": "image_group",
+            "bounds": [
+              966,
+              390,
+              168,
+              168
+            ],
+            "source": "assets/approved_brand_mark_crop.png",
+            "source_crop": [
+              590,
+              830,
+              762,
+              1002
+            ],
+            "preserve_aspect_ratio": "xMidYMid meet",
+            "locked_content": true
+          }
+        ]
+      }
+    },
+    "instagram": {
+      "canvas": {
+        "width": 1080,
+        "height": 1350
+      },
+      "safe_margin": 64,
+      "safe_area_xyxy": [
+        64,
+        64,
+        1016,
+        1286
+      ],
+      "editable_master": "instagram_post_1080x1350.svg",
+      "render": "instagram_post_1080x1350.png",
+      "object_graph": {
+        "root": "instagram-canvas",
+        "children": [
+          "background",
+          "geometry-frame",
+          "title-summer",
+          "title-form",
+          "approved-art-window",
+          "event-label",
+          "event-date",
+          "event-location",
+          "approved-brand-mark"
+        ],
+        "objects": [
+          {
+            "id": "background",
+            "type": "group",
+            "bounds": [
+              0,
+              0,
+              1080,
+              1350
+            ],
+            "locked": true
+          },
+          {
+            "id": "geometry-frame",
+            "type": "vector_group",
+            "bounds": [
+              64,
+              64,
+              952,
+              1222
+            ],
+            "editable": true
+          },
+          {
+            "id": "title-summer",
+            "type": "text",
+            "bounds": [
+              92,
+              276,
+              700,
+              150
+            ],
+            "text": "SUMMER",
+            "editable": true
+          },
+          {
+            "id": "title-form",
+            "type": "text",
+            "bounds": [
+              486,
+              391,
+              490,
+              180
+            ],
+            "text": "FORM",
+            "editable": true
+          },
+          {
+            "id": "approved-art-window",
+            "type": "image_group",
+            "bounds": [
+              92,
+              636,
+              560,
+              517.7
+            ],
+            "source": "assets/approved_origami_crop.png",
+            "source_crop": [
+              200,
+              580,
+              465,
+              825
+            ],
+            "preserve_aspect_ratio": "xMidYMid meet",
+            "locked_content": true
+          },
+          {
+            "id": "event-label",
+            "type": "text",
+            "bounds": [
+              710,
+              714,
+              250,
+              42
+            ],
+            "text": "Design Market",
+            "editable": true
+          },
+          {
+            "id": "event-date",
+            "type": "text",
+            "bounds": [
+              710,
+              772,
+              270,
+              52
+            ],
+            "text": "08—10 AUG",
+            "editable": true
+          },
+          {
+            "id": "event-location",
+            "type": "text",
+            "bounds": [
+              710,
+              835,
+              245,
+              48
+            ],
+            "text": "BROOKLYN",
+            "editable": true
+          },
+          {
+            "id": "approved-brand-mark",
+            "type": "image_group",
+            "bounds": [
+              806,
+              1082,
+              174,
+              174
+            ],
+            "source": "assets/approved_brand_mark_crop.png",
+            "source_crop": [
+              590,
+              830,
+              762,
+              1002
+            ],
+            "preserve_aspect_ratio": "xMidYMid meet",
+            "locked_content": true
+          }
+        ]
+      }
+    },
+    "story": {
+      "canvas": {
+        "width": 1080,
+        "height": 1920
+      },
+      "safe_margin": 64,
+      "safe_area_xyxy": [
+        64,
+        64,
+        1016,
+        1856
+      ],
+      "editable_master": "story_1080x1920.svg",
+      "render": "story_1080x1920.png",
+      "object_graph": {
+        "root": "story-canvas",
+        "children": [
+          "background",
+          "geometry-frame",
+          "title-summer",
+          "title-form",
+          "approved-art-window",
+          "event-label",
+          "event-date",
+          "event-location",
+          "approved-brand-mark"
+        ],
+        "objects": [
+          {
+            "id": "background",
+            "type": "group",
+            "bounds": [
+              0,
+              0,
+              1080,
+              1920
+            ],
+            "locked": true
+          },
+          {
+            "id": "geometry-frame",
+            "type": "vector_group",
+            "bounds": [
+              64,
+              64,
+              952,
+              1792
+            ],
+            "editable": true
+          },
+          {
+            "id": "title-summer",
+            "type": "text",
+            "bounds": [
+              92,
+              292,
+              710,
+              154
+            ],
+            "text": "SUMMER",
+            "editable": true
+          },
+          {
+            "id": "title-form",
+            "type": "text",
+            "bounds": [
+              470,
+              422,
+              510,
+              194
+            ],
+            "text": "FORM",
+            "editable": true
+          },
+          {
+            "id": "approved-art-window",
+            "type": "image_group",
+            "bounds": [
+              92,
+              680,
+              620,
+              573.2
+            ],
+            "source": "assets/approved_origami_crop.png",
+            "source_crop": [
+              200,
+              580,
+              465,
+              825
+            ],
+            "preserve_aspect_ratio": "xMidYMid meet",
+            "locked_content": true
+          },
+          {
+            "id": "event-label",
+            "type": "text",
+            "bounds": [
+              126,
+              1348,
+              290,
+              48
+            ],
+            "text": "Design Market",
+            "editable": true
+          },
+          {
+            "id": "event-date",
+            "type": "text",
+            "bounds": [
+              126,
+              1410,
+              360,
+              64
+            ],
+            "text": "08—10 AUG",
+            "editable": true
+          },
+          {
+            "id": "event-location",
+            "type": "text",
+            "bounds": [
+              126,
+              1478,
+              340,
+              58
+            ],
+            "text": "BROOKLYN",
+            "editable": true
+          },
+          {
+            "id": "approved-brand-mark",
+            "type": "image_group",
+            "bounds": [
+              786,
+              1640,
+              190,
+              190
+            ],
+            "source": "assets/approved_brand_mark_crop.png",
+            "source_crop": [
+              590,
+              830,
+              762,
+              1002
+            ],
+            "preserve_aspect_ratio": "xMidYMid meet",
+            "locked_content": true
+          }
+        ]
+      }
+    }
+  }
+}

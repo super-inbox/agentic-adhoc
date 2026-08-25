@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "project": "Orbit Coffee packaging artwork",
+  "version": "v1",
+  "generated_at": "2026-08-24T00:00:00+08:00",
+  "overall_status": "PASS",
+  "factory_feedback": "Add White underbase beneath back text only; all other items passed.",
+  "applied_delta": {
+    "page": 2,
+    "scope": [
+      "ORIGIN",
+      "ROAST",
+      "NOTES"
+    ],
+    "spot_colorant": "White",
+    "layer_name": "White - BACK TEXT",
+    "tint_percent": 100,
+    "choke_or_spread_px": 0,
+    "coverage": {
+      "ORIGIN": {
+        "roi_px_top_origin": [
+          225,
+          1035,
+          435,
+          1095
+        ],
+        "ink_pixel_count": 5081,
+        "detected_bounds_px_top_origin": [
+          233,
+          1043,
+          421,
+          1083
+        ]
+      },
+      "ROAST": {
+        "roi_px_top_origin": [
+          225,
+          1280,
+          435,
+          1345
+        ],
+        "ink_pixel_count": 4476,
+        "detected_bounds_px_top_origin": [
+          235,
+          1291,
+          414,
+          1331
+        ]
+      },
+      "NOTES": {
+        "roi_px_top_origin": [
+          225,
+          1485,
+          435,
+          1545
+        ],
+        "ink_pixel_count": 4647,
+        "detected_bounds_px_top_origin": [
+          235,
+          1493,
+          413,
+          1533
+        ]
+      }
+    }
+  },
+  "unchanged_from_v0": {
+    "front_process_art": true,
+    "back_process_cmyk_art": true,
+    "trim_mm": [
+      120,
+      200
+    ],
+    "bleed_mm_each_side": 3,
+    "page_mm": [
+      126,
+      206
+    ],
+    "page_count": 2,
+    "output_intent": "Generic CMYK Profile",
+    "dieline_or_trim_geometry": true
+  },
+  "spot_structure": {
+    "page_count": 2,
+    "front_has_white_colorant": false,
+    "back_color_space": [
+      "/Separation",
+      "/White",
+      "/DeviceCMYK"
+    ],
+    "back_layer_name": "White - BACK TEXT",
+    "white_mask": {
+      "width_px": 1488,
+      "height_px": 2433,
+      "bits_per_component": 1,
+      "image_mask": true,
+      "ink_pixel_count": 14204,
+      "choke_or_spread_px": 0
+    }
+  },
+  "comparisons": {
+    "front_production_render_vs_v0": {
+      "identical": true,
+      "size_px": [
+        893,
+        1460
+      ],
+      "different_channel_values": 0,
+      "max_channel_delta": 0
+    },
+    "back_composite_render_vs_v0": {
+      "identical": true,
+      "size_px": [
+        893,
+        1460
+      ],
+      "different_channel_values": 0,
+      "max_channel_delta": 0
+    },
+    "front_proof_art_region_vs_v0": {
+      "identical": true,
+      "crop_px": [
+        199,
+        217,
+        794,
+        1191
+      ],
+      "different_channel_values": 0,
+      "max_channel_delta": 0
+    },
+    "white_separation_render_scope": {
+      "render_size_px": [
+        893,
+        1460
+      ],
+      "expected_glyph_pixels_at_render_size": 5119,
+      "rendered_black_pixels": 4835,
+      "intersection_over_union": 0.894557,
+      "unexpected_background_black_pixels": 135,
+      "actual_black_bounds_px": [
+        140,
+        626,
+        252,
+        920
+      ],
+      "expected_black_bounds_px": [
+        140,
+        626,
+        252,
+        920
+      ],
+      "bounds_max_delta_px": 0,
+      "polarity_and_scope_pass": true
+    }
+  },
+  "unresolved_blockers": []
+}

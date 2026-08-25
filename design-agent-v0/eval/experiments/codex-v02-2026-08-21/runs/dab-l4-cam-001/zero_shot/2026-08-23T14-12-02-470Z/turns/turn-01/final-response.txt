@@ -1,0 +1,11 @@
+已完成 v1：保留偏暗 B 方向，移除悬浮相框，增加真实桌面接触与更柔和的左侧光。未擅自锁定 B1/B2/B3，v1 为深色方向合并修正版。
+
+新增或更新：
+
+- [v1 KV](</private<WORKDIR>/outputs/v1/candidates/kv-dark-direction-refinement-v1.png>)
+- [v0/v1 对比图](</private<WORKDIR>/outputs/v1/dark-direction-v0-v1-comparison.png>)
+- [变更说明](</private<WORKDIR>/outputs/v1/change-notes.md>)
+- [v1 核验记录](</private<WORKDIR>/outputs/v1/verification.json>)
+- [更新后的项目状态](</private<WORKDIR>/outputs/project-state.json>)
+
+ImageGen 仅编辑背景桌面和侧光；产品核心区域已逐像素核验，瓶型与标签未变。v0 保持不变，渠道延展仍暂停等待 v1 KV 批准及 Logo 文件。

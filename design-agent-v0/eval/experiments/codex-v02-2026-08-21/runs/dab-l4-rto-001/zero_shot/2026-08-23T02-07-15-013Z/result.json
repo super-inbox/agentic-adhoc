@@ -1,0 +1,88 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-RTO-001@zero_shot",
+  "base_brief_id": "DAB-L4-RTO-001",
+  "context_condition": "zero_shot",
+  "category": "reference_to_original",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "creative_exploration",
+    "context_ablation"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T02:07:15.014Z",
+  "finished_at": "2026-08-23T02:07:43.412Z",
+  "latency_ms": 28398,
+  "intended_turns": 2,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02c5f-4c58-7f41-9497-b968abd87501",
+  "input_assets": [
+    {
+      "input_id": "product",
+      "asset_id": "detail-page-terra-diffuser-product",
+      "role": "product_reference",
+      "reference_role": "product_identity",
+      "identity_policy": "preserve_exact",
+      "filename": "01-product_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/terra-diffuser-product.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    }
+  ],
+  "input_context_ids": [
+    "product",
+    "copy"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T02:07:15.014Z",
+      "finished_at": "2026-08-23T02:07:43.409Z",
+      "latency_ms": 28397,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c5f-4c58-7f41-9497-b968abd87501",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

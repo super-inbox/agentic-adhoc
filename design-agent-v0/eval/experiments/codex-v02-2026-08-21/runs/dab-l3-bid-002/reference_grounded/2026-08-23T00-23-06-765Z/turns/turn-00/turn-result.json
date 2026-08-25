@@ -1,0 +1,68 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T00:23:06.769Z",
+  "finished_at": "2026-08-23T00:31:00.588Z",
+  "latency_ms": 473827,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 90,
+    "command_count": 39,
+    "tool_count": 2,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "thread_id": "01a02bff-f2d1-7d90-82fc-70b6d4bc7f2d",
+    "usage": {
+      "input_tokens": 697970,
+      "cached_input_tokens": 644992,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 17040,
+      "reasoning_output_tokens": 7424
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1655,
+      "sha256": "48ca6506322f538dfd42cfc6f6f0599c73372ae30e587e80a6759f534cfd9347"
+    },
+    {
+      "filename": "v0/noma-logo-evaluation-v0.md",
+      "byte_size": 4500,
+      "sha256": "99f1d7bf879d0911496d19d3b8824885a8a5a48c3f63187e11faac7fbd41461f"
+    },
+    {
+      "filename": "v0/noma-logo-scorecard-v0.json",
+      "byte_size": 5071,
+      "sha256": "d70f8f67a14e8ab8da2828ac269c55ce426b85a1f6bbab637b3fcd7cfa2c23fd"
+    },
+    {
+      "filename": "v0/small-size-A-32px-check.png",
+      "byte_size": 3005,
+      "sha256": "7ab37a75edda867c36d832d2dd0b230b41eaab460bdfda2d6c515d1419a9bc08"
+    },
+    {
+      "filename": "v0/small-size-B-32px-check.png",
+      "byte_size": 3096,
+      "sha256": "3714f0b9c035810addffd90dd497627a1e5163831f7b093e1d4e43ef1d7fb9dc"
+    },
+    {
+      "filename": "v0/small-size-C-32px-check.png",
+      "byte_size": 2997,
+      "sha256": "8c41fa6a1e3869f2025f2f1139ab9ff79d54629c4c1dfe2c9e709585cc5788e9"
+    },
+    {
+      "filename": "v0/small-size-D-32px-check.png",
+      "byte_size": 2688,
+      "sha256": "f58ef14ad6d4f8286683196d849e15c52fabb698bbe85b022171c4c8ddaae338"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3754,
+      "sha256": "dce9150f42dac29ef359e6278ef5712f77da9b577063a824385e9d496ca88203"
+    }
+  ]
+}

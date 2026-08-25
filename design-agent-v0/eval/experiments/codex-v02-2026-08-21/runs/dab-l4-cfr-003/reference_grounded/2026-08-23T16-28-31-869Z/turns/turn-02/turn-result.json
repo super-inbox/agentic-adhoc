@@ -1,0 +1,154 @@
+{
+  "turn_index": 2,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T16:54:50.602Z",
+  "finished_at": "2026-08-23T17:03:37.772Z",
+  "latency_ms": 527226,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 46,
+    "command_count": 13,
+    "tool_count": 6,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02f73-d0bb-7a82-99b1-a47dd29bf799",
+    "usage": {
+      "input_tokens": 7567128,
+      "cached_input_tokens": 7362048,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 68954,
+      "reasoning_output_tokens": 20456
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 7307,
+      "sha256": "d98e62945991fdba0be668296fab2ec30f314b823a6cc1308a2b2efce4f534fc"
+    },
+    {
+      "filename": "v0/ambient_background_v0.png",
+      "byte_size": 1886265,
+      "sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 7473,
+      "sha256": "b1e426a50597ddd3e77a049ee0555835e0bba9407df3426a668d2e34cd2c5246"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 10273,
+      "sha256": "c521f6cd286136b07b50f176f1611e67ff4547b64d60d3c9c41c31ceac48bd47"
+    },
+    {
+      "filename": "v0/hero_detail_v0.svg",
+      "byte_size": 6056,
+      "sha256": "fc25139e79cf4aca0cc5177bad08596fa8490db5525b03d3251565f84754c0b0"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 1606561,
+      "sha256": "1e394bc9433f55a20f79dfe26d325b4cd0289e4352202aa1ade06de63822fea0"
+    },
+    {
+      "filename": "v0/product_reference_locked.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v0/render_preview.m",
+      "byte_size": 4256,
+      "sha256": "0b6ba5747c5d559973ad5d793827dfe366e17e49e0ee2301581374c8ff22e341"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 7215,
+      "sha256": "d53ec297566b0d4d62e2b4b890f3c811e2256d3c585e9311dd6b5d88aa244253"
+    },
+    {
+      "filename": "v1/ambient_background_v0.png",
+      "byte_size": 1886265,
+      "sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3"
+    },
+    {
+      "filename": "v1/change_set.json",
+      "byte_size": 2993,
+      "sha256": "d5872f908904d320076ed12c05ab6401ec179514b4b713209c5faca7b01ef097"
+    },
+    {
+      "filename": "v1/design_document.json",
+      "byte_size": 11319,
+      "sha256": "05ec3448d053bad477c7f03926bc39727c556fbf0c6f8d88c6131d26877eb335"
+    },
+    {
+      "filename": "v1/hero_detail_v1.svg",
+      "byte_size": 6267,
+      "sha256": "a98c762e8a4f98da79c42e83df308b92baea53a48efcf9e6a044f9cdb0d48c2a"
+    },
+    {
+      "filename": "v1/preview.png",
+      "byte_size": 1608079,
+      "sha256": "b9a08420b9e1276fd892f6602854b1cb59dd33fcfc3826635148236eb43683cb"
+    },
+    {
+      "filename": "v1/product_reference_locked.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v1/render_preview.m",
+      "byte_size": 4256,
+      "sha256": "0b6ba5747c5d559973ad5d793827dfe366e17e49e0ee2301581374c8ff22e341"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 8867,
+      "sha256": "9f3baf6d2bc8bdf19f85307051fd1caea0696ce0a19cca2e55ce93e017cc5e39"
+    },
+    {
+      "filename": "v2/ambient_background_v0.png",
+      "byte_size": 1886265,
+      "sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3"
+    },
+    {
+      "filename": "v2/change_set.json",
+      "byte_size": 4079,
+      "sha256": "032a302a2a7dc8cec590e3b39478e463bb086efd40bec02c6269e681ae10f3be"
+    },
+    {
+      "filename": "v2/design_document.json",
+      "byte_size": 11586,
+      "sha256": "0bc58caa1a9b9bd0e3452b64e4d7fd859108d4ca980dcd47ed3d9160d59dfa77"
+    },
+    {
+      "filename": "v2/hero_detail_v2.svg",
+      "byte_size": 6460,
+      "sha256": "900ca51894c6f17ad5062a59a112f47908d0c4955f685b5c74e3ee0c809ed22c"
+    },
+    {
+      "filename": "v2/preview.png",
+      "byte_size": 1608394,
+      "sha256": "15d82d0c70da5ea0b56a8424cc97f4fa95c7b2da7b24bed7967f40a0e18be10a"
+    },
+    {
+      "filename": "v2/product_reference_locked.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v2/render_preview.m",
+      "byte_size": 4256,
+      "sha256": "0b6ba5747c5d559973ad5d793827dfe366e17e49e0ee2301581374c8ff22e341"
+    },
+    {
+      "filename": "v2/verification.json",
+      "byte_size": 10678,
+      "sha256": "450c4e26e39c3e1a7024e057b981452af8cbedcb53b3311404e01a9838ded00f"
+    }
+  ]
+}

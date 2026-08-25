@@ -1,0 +1,115 @@
+{
+  "project": "night-fragrance-launch",
+  "current_version": "v1",
+  "status": "awaiting_v1_kv_approval_and_logo_asset",
+  "updated_date": "2026-08-23",
+  "client_decisions": {
+    "selected_direction": {
+      "value": "B / 偏暗夜间方向",
+      "source": "Client feedback: 选偏暗的方向",
+      "selected_v0_candidate": null,
+      "note": "The feedback selects the dark direction but does not explicitly lock B1, B2, or B3. v1 is a consolidated dark-direction refinement."
+    },
+    "requested_delta": [
+      "增加真实桌面接触",
+      "保留夜间氛围",
+      "增加一束更柔的侧光",
+      "修正产品漂浮感"
+    ],
+    "approved_copy": {
+      "en": "Quiet hours, made tangible.",
+      "zh": "让夜晚慢下来。"
+    },
+    "positioning": [
+      "安静",
+      "低刺激",
+      "睡前仪式感"
+    ],
+    "palette": [
+      "米白",
+      "陶土红",
+      "现有 Logo"
+    ],
+    "workflow_gate": "v1 KV 修正版获批后，才制作官网 hero、Instagram 竖版和邮件头图。",
+    "avoid": [
+      "医疗或治疗暗示",
+      "失眠改善等功效词",
+      "修改产品瓶型或标签"
+    ]
+  },
+  "locked_items": [
+    {
+      "item": "product_identity",
+      "value": "inputs/01-launch_product.png",
+      "policy": "preserve_exact"
+    },
+    {
+      "item": "copy",
+      "value": "Quiet hours, made tangible. / 让夜晚慢下来。",
+      "policy": "approved_only"
+    },
+    {
+      "item": "direction",
+      "value": "B / dark nocturnal direction"
+    },
+    {
+      "item": "palette",
+      "value": "warm off-white, muted terracotta red, charcoal"
+    },
+    {
+      "item": "logo",
+      "value": "existing client logo",
+      "policy": "reuse_exact; no substitute or invented wordmark"
+    },
+    {
+      "item": "channel_extension_gate",
+      "value": "blocked until v1 KV approval"
+    }
+  ],
+  "changed_items": [
+    "Replaced the floating framed product-photo treatment with an unframed, feathered composite retaining the source photo's natural tabletop contact.",
+    "Added a full-width matte tabletop with a visible back edge.",
+    "Changed the hard spotlight into a broad, soft left-side light with gentle falloff.",
+    "Created one consolidated dark-direction v1 KV for review; no channel extensions were created."
+  ],
+  "pending_decisions": [
+    {
+      "id": "v1_kv_approval",
+      "question": "Approve the grounded dark-direction v1 KV before channel adaptations?",
+      "artifact": "outputs/v1/candidates/kv-dark-direction-refinement-v1.png",
+      "selected": null
+    }
+  ],
+  "unresolved_inputs": [
+    {
+      "id": "logo_asset",
+      "status": "missing",
+      "detail": "No independent Logo asset was supplied. v1 reserves clear space and intentionally does not invent a placeholder."
+    }
+  ],
+  "artifact_paths": {
+    "current_kv": "outputs/v1/candidates/kv-dark-direction-refinement-v1.png",
+    "current_kv_preview": "outputs/v1/previews/kv-dark-direction-refinement-v1-preview.jpg",
+    "comparison_board": "outputs/v1/dark-direction-v0-v1-comparison.png",
+    "comparison_preview": "outputs/v1/previews/dark-direction-v0-v1-comparison-preview.jpg",
+    "background_source": "outputs/v1/sources/direction-b-dark-tabletop-soft-side-light.png",
+    "candidate_metadata": "outputs/v1/candidate-metadata.json",
+    "change_notes": "outputs/v1/change-notes.md",
+    "imagegen_prompt": "outputs/v1/imagegen-prompt.md",
+    "verification": "outputs/v1/verification.json",
+    "qa_evidence": "outputs/v1/qa-evidence.json"
+  },
+  "version_history": {
+    "v0": {
+      "status": "superseded_for_direction_selection_but_preserved",
+      "selection_board": "outputs/v0/kv-hypotheses-selection-board.png",
+      "verification": "outputs/v0/verification.json"
+    },
+    "v1": {
+      "status": "current_awaiting_approval",
+      "artifact": "outputs/v1/candidates/kv-dark-direction-refinement-v1.png"
+    }
+  },
+  "channel_extension_artifacts": []
+}
+

@@ -1,0 +1,64 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T17:11:27.960Z",
+  "finished_at": "2026-08-23T17:20:25.243Z",
+  "latency_ms": 537303,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 48,
+    "command_count": 18,
+    "tool_count": 1,
+    "image_activity_count": 10,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02f9b-1623-7912-b568-bc05452ca1cb",
+    "usage": {
+      "input_tokens": 774322,
+      "cached_input_tokens": 665600,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 18020,
+      "reasoning_output_tokens": 7375
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2279,
+      "sha256": "2aabde56731e93f1e6aad2dc3b3b1808c2aac5052d5354c32c089b7670182e68"
+    },
+    {
+      "filename": "v0/luna-club-acrylic-mockup-study-01.png",
+      "byte_size": 1991826,
+      "sha256": "c644d24a6b7d4c159195f2ccd8e0436acf69706e3fdfbc6977835861357b4d73"
+    },
+    {
+      "filename": "v0/luna-club-acrylic-mockup-study-02.png",
+      "byte_size": 1984151,
+      "sha256": "4d7770a02a763655349289543db364f076fcb0c4f129b7916373ea88b2df1c2c"
+    },
+    {
+      "filename": "v0/luna-club-direction-and-quote-gaps-v0.md",
+      "byte_size": 2898,
+      "sha256": "7c3c22e28427464c75b530d6c71d383d4dc5cfebe5dd020a80c5bf9848876bd4"
+    },
+    {
+      "filename": "v0/luna-club-direction-board-v0.svg",
+      "byte_size": 4205,
+      "sha256": "6d2cd76ca7777eb0fab07923c934c913e994b3d1904891730f22661c81bac019"
+    },
+    {
+      "filename": "v0/luna-club-imagegen-prompts-v0.md",
+      "byte_size": 3994,
+      "sha256": "c20f1fee1ec101f45d012d53bef646cdde2518ecc9b0d6f32fcecc59b8953af5"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3254,
+      "sha256": "f386407241e90bfb286686f00c2a94c64609db4f2932d838acd8202bf64867f5"
+    }
+  ]
+}

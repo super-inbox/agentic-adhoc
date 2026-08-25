@@ -1,0 +1,83 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T11:28:16.948Z",
+  "finished_at": "2026-08-23T12:13:16.965Z",
+  "latency_ms": 2700066,
+  "exit_code": null,
+  "signal": "SIGTERM",
+  "timed_out": true,
+  "error": null,
+  "trace_summary": {
+    "event_count": 88,
+    "command_count": 33,
+    "tool_count": 7,
+    "image_activity_count": 7,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02e60-f80d-7c72-9b13-f00d46bf6bf0",
+    "usage": null
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "v0/assets/current-identity-source.png",
+      "byte_size": 588006,
+      "sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253"
+    },
+    {
+      "filename": "v0/assets/territory-01-vermilion-craft.png",
+      "byte_size": 1642012,
+      "sha256": "6f80a201c1685055e8fccb7edc8fa90d9cc23f3775ccade628ca9416114ff86d"
+    },
+    {
+      "filename": "v0/assets/territory-02-cobalt-layers.png",
+      "byte_size": 1989332,
+      "sha256": "c8637717f2a572f50acd9075ba9adbc321b589e670e93ae441cba9a7560438b8"
+    },
+    {
+      "filename": "v0/assets/territory-03-plum-gifting.png",
+      "byte_size": 1622931,
+      "sha256": "17a964693b81581fbe6e6d77dfc4499cb073e245d568f48b7bf2913aa6e7ebf5"
+    },
+    {
+      "filename": "v0/creative-territories-v0.pdf",
+      "byte_size": 2257466,
+      "sha256": "5d69eaa213201ff5207a08135de3800650298438fefa491d22e4667b0d72cbaf"
+    },
+    {
+      "filename": "v0/rendered/page-01.png",
+      "byte_size": 1163869,
+      "sha256": "b293f1200be78e6759befd96923b7cc065e969b5a0d4e05bfc3af246968c1726"
+    },
+    {
+      "filename": "v0/rendered/page-02.png",
+      "byte_size": 430325,
+      "sha256": "5ac46754ca39fd4a973523a529f5bd7ad351227b7ab9231aa5b8d433a58e197b"
+    },
+    {
+      "filename": "v0/rendered/page-03.png",
+      "byte_size": 263076,
+      "sha256": "b75c3b0240154df46f60ead93f15d0eeeb3d93c420a0972da1334f13e2d43bd4"
+    },
+    {
+      "filename": "v0/rendered/page-04.png",
+      "byte_size": 1286125,
+      "sha256": "71d5309bf7476a60c59e8fd5d41d3dce37f195a745f349458adaa1094bc30fa5"
+    },
+    {
+      "filename": "v0/rendered/page-05.png",
+      "byte_size": 1506307,
+      "sha256": "f269aacf54d43c09024b41d8017a85e2618866e155bde3ed512fe85c2425dd78"
+    },
+    {
+      "filename": "v0/rendered/page-06.png",
+      "byte_size": 1059670,
+      "sha256": "adbbec5b8d645c15ab65d18fccfd426ebf1bcdabbf9fd4bd9c72c231a49ed300"
+    },
+    {
+      "filename": "v0/rendered/page-07.png",
+      "byte_size": 190372,
+      "sha256": "d7ab8b91f2b32de8f984be5d2f364af41d0d9130b7b619b0b6af873002ee0f04"
+    }
+  ]
+}

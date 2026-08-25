@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "project": "Orbit Coffee packaging artwork",
+  "version": "v0",
+  "generated_at": "2026-08-24T00:00:00+08:00",
+  "overall_status": "HOLD",
+  "release_scope": "controlled factory proof only; final plate release not recommended",
+  "specification": {
+    "trim_mm": [
+      120.0,
+      200.0
+    ],
+    "bleed_mm_each_side": 3.0,
+    "page_mm": [
+      126.0,
+      206.0
+    ],
+    "target_dpi": 300,
+    "page_pixels": [
+      1488,
+      2433
+    ],
+    "color_space": "CMYK",
+    "output_intent": "Generic CMYK Profile"
+  },
+  "checks": [
+    {
+      "id": "page_count",
+      "status": "PASS",
+      "requirement": "Front and back supplied",
+      "result": "2 pages: page 1 front, page 2 back."
+    },
+    {
+      "id": "trim_size",
+      "status": "PASS",
+      "requirement": "Finished size 120 x 200 mm",
+      "result": "TrimBox is exactly 120 x 200 mm on both pages."
+    },
+    {
+      "id": "bleed",
+      "status": "PASS",
+      "requirement": "3 mm bleed",
+      "result": "BleedBox/MediaBox is 126 x 206 mm; TrimBox inset is 3 mm per edge."
+    },
+    {
+      "id": "color_space",
+      "status": "PASS",
+      "requirement": "CMYK",
+      "result": "Page raster is DeviceCMYK; Generic CMYK ICC output intent is embedded."
+    },
+    {
+      "id": "nominal_raster_resolution",
+      "status": "PASS",
+      "requirement": "300 dpi output",
+      "result": "Each page raster is 1488 x 2433 px, approximately 300 ppi at 126 x 206 mm."
+    },
+    {
+      "id": "source_effective_resolution",
+      "status": "FAIL",
+      "requirement": "300 ppi source detail at final size",
+      "result": "Approved flattened panel provides approximately 104 ppi effective detail at 120 mm width; resampling does not create original detail."
+    },
+    {
+      "id": "front_lock",
+      "status": "PASS",
+      "requirement": "Preserve front composition and brand wordmark",
+      "result": "Central approved front pixels were uniformly scaled only; no wordmark redraw, stretch, or element repositioning."
+    },
+    {
+      "id": "aspect_adaptation",
+      "status": "PASS",
+      "requirement": "Adapt approved square panel to 120 x 200 mm",
+      "result": "Only perimeter background was extended above/below; approved central panel remains centered and undistorted."
+    },
+    {
+      "id": "technical_guides",
+      "status": "PASS",
+      "requirement": "No presentation guides in production art",
+      "result": "Crop marks, FRONT/BACK labels, sheet background, and dotted layout-guide strokes are excluded from production pages."
+    },
+    {
+      "id": "back_editability",
+      "status": "WARN",
+      "requirement": "Back information area clear and editable",
+      "result": "Area is visually clear, but remains flattened raster; layered/vector source is required for true text editability."
+    },
+    {
+      "id": "press_profile",
+      "status": "WARN",
+      "requirement": "Press-specific CMYK conversion",
+      "result": "No printer ICC profile was supplied; Generic CMYK is used and must be confirmed or replaced by the factory."
+    },
+    {
+      "id": "fonts_transparency",
+      "status": "PASS",
+      "requirement": "No missing fonts or live transparency",
+      "result": "Production pages contain flattened opaque CMYK raster only; no font dependency or transparency objects."
+    }
+  ],
+  "pdf_inspection": {
+    "page_count": 2,
+    "pages": [
+      {
+        "page": 1,
+        "role": "front",
+        "media_box_pt": [
+          0.0,
+          0.0,
+          357.1654,
+          583.937
+        ],
+        "trim_box_pt": [
+          8.5039,
+          8.5039,
+          348.6614,
+          575.4331
+        ],
+        "images": [
+          {
+            "width_px": 1488,
+            "height_px": 2433,
+            "color_space": "/DeviceCMYK"
+          }
+        ]
+      },
+      {
+        "page": 2,
+        "role": "back",
+        "media_box_pt": [
+          0.0,
+          0.0,
+          357.1654,
+          583.937
+        ],
+        "trim_box_pt": [
+          8.5039,
+          8.5039,
+          348.6614,
+          575.4331
+        ],
+        "images": [
+          {
+            "width_px": 1488,
+            "height_px": 2433,
+            "color_space": "/DeviceCMYK"
+          }
+        ]
+      }
+    ],
+    "all_page_images_device_cmyk": true,
+    "all_page_images_expected_pixels": true,
+    "output_intent_count": 1,
+    "font_resource_count": 0,
+    "transparency_resource_present": false
+  },
+  "source_assessment": {
+    "source_path": "inputs/01-approved_print_artwork.png",
+    "source_pixel_dimensions": [
+      1376,
+      768
+    ],
+    "source_color_mode": "RGB",
+    "extracted_panel_pixels": [
+      491,
+      499
+    ],
+    "effective_source_ppi_at_120mm_width": 103.93
+  },
+  "unresolved_blockers": [
+    {
+      "id": "native_resolution",
+      "severity": "blocking_final_release",
+      "detail": "The supplied flattened preview has about 104 ppi effective source detail at final width, below 300 ppi.",
+      "resolution": "Supply layered/vector or native 300 ppi final-size artwork, or explicitly approve the quality waiver after factory proof."
+    },
+    {
+      "id": "press_profile",
+      "severity": "factory_confirmation_required",
+      "detail": "No press-specific ICC/output condition was supplied.",
+      "resolution": "Factory to confirm Generic CMYK acceptance or provide the required ICC profile."
+    },
+    {
+      "id": "back_editability",
+      "severity": "soft_preference_unmet",
+      "detail": "The back information area is legible but flattened and not text-editable.",
+      "resolution": "Supply layered/vector back artwork for editable copy fields."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "project": "summer-form-channel-exports",
+  "version": "v0",
+  "source": "inputs/01-approved_master.png",
+  "created_at": "2026-08-24T05:13:03+08:00",
+  "overall_status": "four_delivered_one_blocked_invalid_height",
+  "items": [
+    {
+      "id": "xhs",
+      "channel": "小红书",
+      "requested_dimensions": {
+        "width": 1080,
+        "height": 1440,
+        "unit": "px"
+      },
+      "parameter_validation": "valid",
+      "production_status": "delivered",
+      "artifact_path": "outputs/v0/summer-form-xhs-1080x1440.png"
+    },
+    {
+      "id": "story",
+      "channel": "Story",
+      "requested_dimensions": {
+        "width": 1080,
+        "height": 1920,
+        "unit": "px"
+      },
+      "parameter_validation": "valid",
+      "production_status": "delivered",
+      "artifact_path": "outputs/v0/summer-form-story-1080x1920.png"
+    },
+    {
+      "id": "website",
+      "channel": "官网",
+      "requested_dimensions": {
+        "width": 1440,
+        "height": 0,
+        "unit": "px"
+      },
+      "parameter_validation": "invalid_zero_height",
+      "production_status": "blocked",
+      "artifact_path": null,
+      "blocker": "A raster image cannot be exported with a zero-pixel height.",
+      "required_client_input": "Provide a positive website height in pixels; width remains locked at 1440 px."
+    },
+    {
+      "id": "email",
+      "channel": "邮件",
+      "requested_dimensions": {
+        "width": 600,
+        "height": 200,
+        "unit": "px"
+      },
+      "parameter_validation": "valid",
+      "production_status": "delivered",
+      "artifact_path": "outputs/v0/summer-form-email-600x200.png"
+    },
+    {
+      "id": "led",
+      "channel": "LED",
+      "requested_dimensions": {
+        "width": 4096,
+        "height": 1024,
+        "unit": "px"
+      },
+      "parameter_validation": "valid",
+      "production_status": "delivered",
+      "artifact_path": "outputs/v0/summer-form-led-4096x1024.png"
+    }
+  ]
+}

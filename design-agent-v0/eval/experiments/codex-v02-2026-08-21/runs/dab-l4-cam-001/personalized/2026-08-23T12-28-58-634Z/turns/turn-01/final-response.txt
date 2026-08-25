@@ -1,0 +1,14 @@
+已完成 V1：仅调整 Territory C 的 C1–C3，产品照片均贴合真实桌面并延伸至画面边缘，侧光更柔。A/B、`outputs/v0` 和渠道延展均未改动。
+
+![MORI Night Landing V1](/private<WORKDIR>/outputs/v1/mori-night-landing-refinement-v1.png)
+
+新建或更新路径：
+
+- [V1 审阅板 PNG](/private<WORKDIR>/outputs/v1/mori-night-landing-refinement-v1.png)
+- [可编辑 SVG](/private<WORKDIR>/outputs/v1/mori-night-landing-refinement-v1.svg)
+- [柔侧光背景](/private<WORKDIR>/outputs/v1/assets/territory-c-soft-side-light-bg-v1.png)
+- [ImageGen 提示词](/private<WORKDIR>/outputs/v1/generation-prompt-v1.md)
+- [验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+下一检查点仍是选择 `C1`、`C2` 或 `C3`。

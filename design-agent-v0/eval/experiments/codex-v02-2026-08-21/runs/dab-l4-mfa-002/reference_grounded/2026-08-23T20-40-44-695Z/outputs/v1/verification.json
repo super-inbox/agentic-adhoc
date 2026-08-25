@@ -1,0 +1,237 @@
+{
+  "schema": "design-verification/v1",
+  "verificationId": "summer-form-story-safe-zone-delta-v1-verification",
+  "verifiedAt": "2026-08-24T05:01:12+08:00",
+  "overallStatus": "requested_delta_applied_batch_output_blocked",
+  "scope": "v0_to_v1_story_date_and_registration_url_only",
+  "checksPerformed": [
+    {
+      "id": "v0-preserved",
+      "status": "pass",
+      "method": "sha256_inventory",
+      "finding": "All files under outputs/v0 retain their pre-v1 hashes.",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/change_set.json",
+        "outputs/v0/preview.png",
+        "outputs/v0/render_adaptation_map.py",
+        "outputs/v0/verification.json"
+      ]
+    },
+    {
+      "id": "requested-channel-scope",
+      "status": "pass",
+      "method": "v0_v1_object_graph_comparison",
+      "finding": {
+        "changedChannelIds": [
+          "story"
+        ],
+        "unchangedChannelIds": [
+          "xhs",
+          "instagram",
+          "wechat",
+          "meta",
+          "web",
+          "event-wall"
+        ],
+        "allSixUnchangedChannelObjectsEqual": true
+      },
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v1/design_document.json"
+      ]
+    },
+    {
+      "id": "six-channel-pixel-preservation",
+      "status": "pass",
+      "method": "card_bbox_pixel_comparison",
+      "finding": {
+        "xhs": "pixel_identical",
+        "instagram": "pixel_identical",
+        "wechat": "pixel_identical",
+        "meta": "pixel_identical",
+        "web": "pixel_identical",
+        "event-wall": "pixel_identical"
+      },
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/v1/preview.png"
+      ]
+    },
+    {
+      "id": "story-date-delta",
+      "status": "pass",
+      "method": "normalized_bbox_and_rendered_pixel_comparison",
+      "finding": {
+        "content": "08—10 AUG",
+        "beforeNormalizedY": 0.39,
+        "afterNormalizedY": 0.34,
+        "beforeMapPixelY": 524,
+        "afterMapPixelY": 506,
+        "deltaMapPixelsY": -18,
+        "onlyYChanged": true
+      },
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v1/design_document.json",
+        "outputs/v1/change_set.json",
+        "outputs/v0/preview.png",
+        "outputs/v1/preview.png"
+      ]
+    },
+    {
+      "id": "story-registration-url-delta",
+      "status": "pass",
+      "method": "normalized_bbox_and_rendered_pixel_comparison",
+      "finding": {
+        "actualValue": null,
+        "placeholder": "URL · 待提供",
+        "beforeNormalizedY": 0.82,
+        "afterNormalizedY": 0.53,
+        "beforeMapPixelY": 679,
+        "afterMapPixelY": 574,
+        "deltaMapPixelsY": -105,
+        "onlyYChanged": true,
+        "urlBottomMapPixelY": 595,
+        "platformBottomSafeZoneStartsMapPixelY": 700,
+        "clearanceMapPixels": 105,
+        "clearanceNormalized": 0.29
+      },
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v1/design_document.json",
+        "outputs/v1/change_set.json",
+        "outputs/v0/preview.png",
+        "outputs/v1/preview.png"
+      ]
+    },
+    {
+      "id": "story-unrelated-object-preservation",
+      "status": "pass",
+      "method": "object_bbox_review_and_targeted_pixel_comparison",
+      "finding": {
+        "title": "pixel_identical",
+        "location": {
+          "content": "BROOKLYN",
+          "renderedMapBaselineYBefore": 548,
+          "renderedMapBaselineYAfter": 548,
+          "pixels": "identical"
+        },
+        "foldedPaperSculpture": "pixel_identical",
+        "safeArea": "unchanged",
+        "decorativeGrid": "unchanged"
+      },
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v1/design_document.json",
+        "outputs/v0/preview.png",
+        "outputs/v1/preview.png"
+      ]
+    },
+    {
+      "id": "no-hidden-url-assumption",
+      "status": "pass",
+      "method": "content_lock_review",
+      "finding": "The missing registration URL was not invented. Its existing placeholder moved with the requested Story URL object.",
+      "evidence": [
+        "outputs/v1/design_document.json",
+        "outputs/v1/change_set.json",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "preview-render-and-visual-qa",
+      "status": "pass",
+      "method": "renderer_execution_image_metadata_and_visual_inspection",
+      "finding": {
+        "dimensions": [
+          2560,
+          1800
+        ],
+        "mode": "RGB",
+        "headerVersion": "v1",
+        "storyDateAndUrlDoNotOverlap": true,
+        "storyUrlAndSculptureDoNotOverlap": true,
+        "allSevenChannelPanelsVisible": true
+      },
+      "evidence": [
+        "outputs/v1/preview.png",
+        "outputs/v1/render_adaptation_map.py"
+      ]
+    },
+    {
+      "id": "approved-master-and-concept-preservation",
+      "status": "pass",
+      "method": "source_hash_and_change_set_review",
+      "finding": {
+        "approvedMasterMutation": false,
+        "sourceSha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a",
+        "approvedVisualConceptChanged": false
+      },
+      "evidence": [
+        "inputs/01-approved_master.png",
+        "outputs/v1/change_set.json"
+      ]
+    },
+    {
+      "id": "structured-artifacts",
+      "status": "pass",
+      "method": "json_parse_and_renderer_execution",
+      "finding": "v1 design document, object-level change set, project state and verification parse successfully; renderer generated preview.png.",
+      "evidence": [
+        "outputs/v1/design_document.json",
+        "outputs/v1/change_set.json",
+        "outputs/v1/render_adaptation_map.py",
+        "outputs/v1/preview.png",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "workflow-gate",
+      "status": "pass",
+      "method": "artifact_inventory",
+      "finding": "No final seven-channel artwork was generated; this turn contains only the requested v1 adaptation-map delta.",
+      "evidence": [
+        "outputs/v1/preview.png",
+        "outputs/project-state.json"
+      ]
+    }
+  ],
+  "hashes": {
+    "inputs/01-approved_master.png": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a",
+    "outputs/v0/design_document.json": "9221b52252e31d89917b09781b03b0f61b67c01a16024d36bfdd7fe4514a397e",
+    "outputs/v0/change_set.json": "05a411cdc7cebf2acbf37e320bbca3b9f0558b4ab1e905903cd14e961291f628",
+    "outputs/v0/preview.png": "9dc8ac8ab76d4576388554655a5d8f427c221497c6ea49ac461d852d92c4d434",
+    "outputs/v0/render_adaptation_map.py": "a12187fba5385d59e8fac5d80c521a53e2642c3637c76bdc63c1cb843ffc4862",
+    "outputs/v0/verification.json": "b4b54cca3196d753c41500433e5c85fdd2b6bd4781e2bff87bde25118326d940",
+    "outputs/v1/design_document.json": "8ce06079eda3bba4b887cbeb3791bfcbdf5942b08242008418e3e5a2d06b939b",
+    "outputs/v1/change_set.json": "d6fbc0a0ef24b837eac7d1cf83c8a17a65e61893f1c94b20a601b47f46c2700d",
+    "outputs/v1/preview.png": "7ea73de6e61f53bae0855ed94a46b50ed55bb35bedbcd224d257dda1856be4a0",
+    "outputs/v1/render_adaptation_map.py": "0979df7c690528ada98fbb19c730c4f566e97c2e2d3adbc025bf5c308c0bf9ca",
+    "outputs/project-state.json": "7633b6b9d5881b134952e98f03d3a5fe20d89f27ba16e64b8cb287d520dfd459"
+  },
+  "evidencePaths": [
+    "inputs/01-approved_master.png",
+    "outputs/v0/preview.png",
+    "outputs/v0/design_document.json",
+    "outputs/v1/preview.png",
+    "outputs/v1/design_document.json",
+    "outputs/v1/render_adaptation_map.py",
+    "outputs/v1/change_set.json",
+    "outputs/project-state.json"
+  ],
+  "unresolvedBlockers": [
+    {
+      "id": "missing-registration-url",
+      "severity": "blocking",
+      "owner": "client",
+      "requiredResolution": "Provide the exact registration URL before final channel artwork is generated."
+    },
+    {
+      "id": "v1-story-revision-approval",
+      "severity": "blocking_checkpoint",
+      "owner": "client",
+      "requiredResolution": "Approve the revised Story date and URL placement before batch output."
+    }
+  ]
+}

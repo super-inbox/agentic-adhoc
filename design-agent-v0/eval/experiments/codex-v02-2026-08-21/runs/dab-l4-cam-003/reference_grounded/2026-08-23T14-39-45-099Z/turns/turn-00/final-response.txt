@@ -1,0 +1,23 @@
+已选择 A 方向：它在品牌一致性、首屏层级和移动端可读性上明显优于 B，也更容易形成“品牌主张 → 产品 → 核心信息 → 行动引导”的转化路径。
+
+成品：
+
+- [天猫首图｜1200×1200](<WORKDIR>/outputs/v0/tmall-hero-direction-a-v0.png)
+- [详情页首屏｜750×1000](<WORKDIR>/outputs/v0/pdp-first-screen-direction-a-v0.png)
+
+已确认：
+
+- 使用品牌板实测五色 palette。
+- 产品源图未重绘或改色，仅抠图、等比缩放和放置。
+- 375px 移动端预览通过可读性检查。
+- 未复制候选稿文字，未生成第三套方向。
+- 未添加缺少依据的功能、价格或促销声称。
+
+相关记录：
+
+- [A/B 选择说明](<WORKDIR>/outputs/v0/direction-selection-v0.md)
+- [验证报告](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+- [最终生成提示词](<WORKDIR>/outputs/v0/generation-prompts-v0.md)
+
+底图使用内置图像生成模式制作，最终产品和文字采用保真、确定性合成。无未解决阻塞项。

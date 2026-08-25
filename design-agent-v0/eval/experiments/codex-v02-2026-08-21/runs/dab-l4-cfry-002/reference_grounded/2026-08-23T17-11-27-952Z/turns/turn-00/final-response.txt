@@ -1,0 +1,15 @@
+已完成 v0 方向 checkpoint，当前明确为非生产稿、非 factory-ready。
+
+推荐方向：保留原插画异形轮廓，约 90 mm 成品总高，搭配透明、低矮且不抢视觉的底座。
+
+主要文件：
+
+- [推荐 Mockup｜Study 02](<WORKDIR>/outputs/v0/luna-club-acrylic-mockup-study-02.png)
+- [方向展示板](<WORKDIR>/outputs/v0/luna-club-direction-board-v0.svg)
+- [方向说明及报价缺口](<WORKDIR>/outputs/v0/luna-club-direction-and-quote-gaps-v0.md)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+- [核验记录](<WORKDIR>/outputs/v0/verification.json)
+
+报价前主要还缺：主体与底座板厚、底座尺寸、插槽宽/深/长及公差、装配方式、印刷与白墨要求、数量、边缘工艺和包装交付信息。
+
+三视图、完整尺寸、CMF、白墨层和刀线均按要求暂未生成。Mockup 使用内置 imagegen 制作，完整提示词记录在[这里](<WORKDIR>/outputs/v0/luna-club-imagegen-prompts-v0.md)。

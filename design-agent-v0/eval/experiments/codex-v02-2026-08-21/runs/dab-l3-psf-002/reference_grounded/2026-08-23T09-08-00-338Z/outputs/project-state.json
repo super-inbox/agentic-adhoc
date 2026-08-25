@@ -1,0 +1,54 @@
+{
+  "current_version": "v0",
+  "status": "evaluation_complete",
+  "client_decisions": [
+    "Only evaluate packaging candidates A through D.",
+    "Score all five requested criteria.",
+    "Provide a complete rank from 1 through 4.",
+    "Identify exactly two priority pre-production changes for the selected option.",
+    "Do not generate or redraw packaging.",
+    "Prioritize real shelf and ecommerce thumbnail performance.",
+    "Launch channels are Tmall and boutique buyer stores; the system must support at least three SKUs for customers aged 25 to 40."
+  ],
+  "locked_items": [
+    {
+      "item": "packaging_candidates",
+      "value": ["A", "B", "C", "D"],
+      "source": "inputs/01-packaging_candidates.png"
+    },
+    {
+      "item": "reference_identity_policy",
+      "value": "analysis_only"
+    },
+    {
+      "item": "no_consumer_polling_claims",
+      "value": true
+    }
+  ],
+  "changed_items": [
+    {
+      "item": "candidate_selection",
+      "value": "B",
+      "reason": "Best weighted balance of shelf recognition, thumbnail legibility, premium feel, and acceptable multi-SKU extensibility."
+    },
+    {
+      "item": "ranking",
+      "value": ["B", "C", "A", "D"]
+    },
+    {
+      "item": "visual_assets",
+      "value": "No visual assets generated or modified."
+    }
+  ],
+  "artifact_paths": [
+    "outputs/v0/packaging-evaluation.md",
+    "outputs/v0/verification.json"
+  ],
+  "source_paths": [
+    "inputs/01-packaging_candidates.png"
+  ],
+  "notes": [
+    "No standalone brand logo is visible in the supplied board; logo readability was evaluated using the primary front wordmark.",
+    "Scores are expert visual assessment, not consumer research."
+  ]
+}

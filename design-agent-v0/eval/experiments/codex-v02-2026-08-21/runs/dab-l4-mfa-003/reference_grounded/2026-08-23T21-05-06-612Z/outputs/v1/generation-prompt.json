@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "tool_mode": "built-in image generation/editing",
+  "input_role": "approved master and edit target",
+  "input_path": "inputs/01-approved_master.png",
+  "selected_prompt": {
+    "use_case": "ads-marketing",
+    "asset_type": "Website campaign banner prepared for an exact 18:7 center crop (1440×560)",
+    "primary_request": "Adapt only the approved SUMMER FORM campaign into a horizontal website banner. Place the entire finished 18:7 composition inside the central 78% of the generated landscape canvas, leaving sacrificial cream-paper crop zones above and below.",
+    "composition": "Headline on the left, compact origami focal point in the center, event details grouped on the right; all critical content inside the central safe band.",
+    "text_verbatim": [
+      "SUMMER FORM",
+      "Design Market",
+      "08—10 AUG",
+      "BROOKLYN"
+    ],
+    "constraints": [
+      "Preserve exact spelling and punctuation; each text string appears once.",
+      "Preserve cream paper texture, navy/coral palette, thin navy geometry, origami focal element, and campaign hierarchy.",
+      "Change only canvas and layout for the website banner.",
+      "No new copy, CTA, watermark, mockup, or replacement imagery.",
+      "Top and bottom crop zones contain no critical content."
+    ]
+  }
+}

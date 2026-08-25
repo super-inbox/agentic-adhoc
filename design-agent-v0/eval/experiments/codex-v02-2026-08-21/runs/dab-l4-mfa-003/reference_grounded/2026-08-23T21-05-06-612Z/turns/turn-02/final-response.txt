@@ -1,0 +1,12 @@
+已仅重新排版并导出邮件 `600×240`。v0、v1 文件均未改动，既有渠道及官网哈希保持一致。
+
+新增：
+
+- [邮件 600×240](/private<WORKDIR>/outputs/v2/summer-form-email-600x240.png)
+- [v2 manifest](/private<WORKDIR>/outputs/v2/manifest.json)
+- [v2 verification](/private<WORKDIR>/outputs/v2/verification.json)
+- [生成提示记录](/private<WORKDIR>/outputs/v2/generation-prompt.json)
+
+已更新：
+
+- [project-state.json](/private<WORKDIR>/outputs/project-state.json)

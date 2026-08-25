@@ -1,0 +1,76 @@
+{
+  "project_id": "summer-form-format-adaptations",
+  "current_version": "v0",
+  "status": "candidate_ready_for_client_review",
+  "client_decisions": [
+    {
+      "decision": "Use 01-approved_master.png as the approved master",
+      "source": "current user turn"
+    },
+    {
+      "decision": "Produce exactly ten specified formats with 5% safe margin",
+      "source": "current user turn"
+    },
+    {
+      "decision": "Allow ratio-specific re-layout; prohibit simple stretching",
+      "source": "current user turn"
+    }
+  ],
+  "locked_items": [
+    "SUMMER FORM title text",
+    "Design Market / 08 — 10 AUG / BROOKLYN event text",
+    "approved origami main-visual pixels",
+    "blue/orange palette",
+    "geometric grid/arc/block language",
+    "ten requested target formats"
+  ],
+  "changed_items": [
+    "canvas dimensions and aspect ratios",
+    "title line break/position/size per ratio",
+    "event information position/size per ratio",
+    "approved main-visual crop position and uniform scale",
+    "grid, arc, block, and ring-mark composition per ratio"
+  ],
+  "approval_state": {
+    "client_approval_pending": true,
+    "future_feedback_invented": false
+  },
+  "artifact_paths": {
+    "preview": "outputs/v0/preview.png",
+    "design_document": "outputs/v0/design_document.json",
+    "change_set": "outputs/v0/change_set.json",
+    "verification": "outputs/v0/verification.json",
+    "editable_svgs": [
+      "outputs/v0/adaptations/01_square_1x1_1080x1080.svg",
+      "outputs/v0/adaptations/02_portrait_4x5_1080x1350.svg",
+      "outputs/v0/adaptations/03_portrait_9x16_1080x1920.svg",
+      "outputs/v0/adaptations/04_landscape_16x9_1920x1080.svg",
+      "outputs/v0/adaptations/05_landscape_3x2_1500x1000.svg",
+      "outputs/v0/adaptations/06_portrait_2x3_1000x1500.svg",
+      "outputs/v0/adaptations/07_a4_portrait_2480x3508.svg",
+      "outputs/v0/adaptations/08_a3_portrait_3508x4961.svg",
+      "outputs/v0/adaptations/09_social_1200x628.svg",
+      "outputs/v0/adaptations/10_banner_1920x480.svg"
+    ],
+    "rendered_pngs": [
+      "outputs/v0/adaptations/01_square_1x1_1080x1080.png",
+      "outputs/v0/adaptations/02_portrait_4x5_1080x1350.png",
+      "outputs/v0/adaptations/03_portrait_9x16_1080x1920.png",
+      "outputs/v0/adaptations/04_landscape_16x9_1920x1080.png",
+      "outputs/v0/adaptations/05_landscape_3x2_1500x1000.png",
+      "outputs/v0/adaptations/06_portrait_2x3_1000x1500.png",
+      "outputs/v0/adaptations/07_a4_portrait_2480x3508.png",
+      "outputs/v0/adaptations/08_a3_portrait_3508x4961.png",
+      "outputs/v0/adaptations/09_social_1200x628.png",
+      "outputs/v0/adaptations/10_banner_1920x480.png"
+    ],
+    "approved_visual_asset": "outputs/v0/assets/main_visual_source_crop.png"
+  },
+  "version_history": [
+    {
+      "version": "v0",
+      "state": "candidate_ready_for_client_review",
+      "supersedes": null
+    }
+  ]
+}

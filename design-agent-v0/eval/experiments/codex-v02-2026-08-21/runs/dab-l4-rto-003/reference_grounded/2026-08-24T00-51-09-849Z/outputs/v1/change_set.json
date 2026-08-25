@@ -1,0 +1,80 @@
+{
+  "schema": "candidate-object-change-set/1.0",
+  "version": "v1",
+  "parent_version": "v0",
+  "scope": "client_requested_delta_only",
+  "client_feedback": "信息结构没问题，但背景纹理太像参考页。改成细颗粒陶土纸感，其他布局、产品和文字都不要动。",
+  "summary": "仅替换背景纹理资产；全部对象坐标、尺寸、层级、产品像素、颜色令牌和文字保持 v0 不变。",
+  "changes": [
+    {
+      "change_id": "v1-chg-001",
+      "operation": "replace_asset",
+      "source_object": "asset/clay-texture",
+      "affected_objects": ["background/grain", "hero/texture"],
+      "before": {
+        "path": "../v0/assets/mori_clay_texture.png",
+        "material_expression": "暖陶土与灰泥式扩散纹理"
+      },
+      "after": {
+        "path": "assets/mori_fine_grain_clay_paper.png",
+        "material_expression": "均匀、低对比、细颗粒陶土纸纤维"
+      },
+      "preserved_properties": [
+        "background/grain x/y/width/height/fit/opacity",
+        "hero/texture x/y/width/height/fit/opacity",
+        "all non-background objects",
+        "all copy",
+        "product cutout pixels",
+        "palette tokens",
+        "reading order"
+      ]
+    }
+  ],
+  "unchanged_object_ids": [
+    "background/base",
+    "background/grain",
+    "hero/texture",
+    "hero/veil",
+    "hero/halo",
+    "brand/mori",
+    "brand/tagline",
+    "brand/accent",
+    "product/cutout",
+    "title/line-1",
+    "title/line-2",
+    "subtitle/accent",
+    "subtitle/copy",
+    "feature/card-1",
+    "feature/card-1-accent",
+    "feature/card-1-number",
+    "feature/card-1-copy",
+    "feature/card-2",
+    "feature/card-2-accent",
+    "feature/card-2-number",
+    "feature/card-2-copy",
+    "feature/card-3",
+    "feature/card-3-accent",
+    "feature/card-3-number",
+    "feature/card-3-copy",
+    "spec/background",
+    "spec/top-accent",
+    "spec/label",
+    "spec/value-usbc",
+    "spec/value-6h",
+    "spec/value-280ml",
+    "spec/divider-1",
+    "spec/divider-2"
+  ],
+  "locked_objects": [
+    "product/cutout",
+    "title/line-1",
+    "title/line-2",
+    "subtitle/copy",
+    "feature/card-1-copy",
+    "feature/card-2-copy",
+    "feature/card-3-copy",
+    "spec/value-usbc",
+    "spec/value-6h",
+    "spec/value-280ml"
+  ]
+}

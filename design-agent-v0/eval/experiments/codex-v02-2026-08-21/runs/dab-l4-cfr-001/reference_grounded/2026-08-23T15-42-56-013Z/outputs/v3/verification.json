@@ -1,0 +1,165 @@
+{
+  "version": "v3",
+  "status": "passed",
+  "sources": {
+    "v2_edit_base": {
+      "path": "outputs/v2/summer-form-poster-local-revision-v2.png",
+      "sha256": "4e62be78154fa5ff9bf3e4e680aae8c2795eb0edddb513b221cb67f499f99e8c",
+      "dimensions": "928 x 1152 RGB PNG"
+    },
+    "v0_logo_source": {
+      "path": "inputs/01-revision_target.png",
+      "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+    }
+  },
+  "requested_delta": [
+    "Restore the bottom-right logo to its v0 size.",
+    "Render the restored logo at low contrast.",
+    "Retain the v2 fine-grain paper background.",
+    "Keep every other approved or unrelated area unchanged."
+  ],
+  "documented_interpretation": {
+    "item": "low contrast",
+    "implementation": "64 percent local RMS contrast against the surrounding v2 paper",
+    "rationale": "The previously approved 80 percent linear logo size corresponds to 64 percent area. Applying a 0.64 contrast factor after restoring the v0 size keeps comparable visual weight without changing the requested geometry."
+  },
+  "locked_invariants": [
+    "v2 fine-grain paper treatment",
+    "title font, letterforms, weight, size, tracking, line breaks, color, and position",
+    "all approved activity copy, date, and location",
+    "all grid lines, arcs, color blocks, and non-logo blue/coral values",
+    "central folded-paper object and its shadow",
+    "outer scene, poster edges, framing, and cast shadow",
+    "no new text, marks, graphics, materials, or effects"
+  ],
+  "checks_performed": [
+    {
+      "check": "output_dimensions_match_v2",
+      "result": "pass",
+      "details": "v2 and v3 are both 928 x 1152 RGB PNG files.",
+      "evidence_paths": [
+        "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "v0_logo_source_geometry_restored",
+      "result": "pass",
+      "details": "The original and applied antialiased source masks both occupy [595,835,759,999], measure 165 x 165 px, and are centered at (677,917). The visible-color envelope is 160 x 160 px versus v0's 161 x 161 px (99.38%), within a 1 px low-contrast antialias tolerance; center delta is 0.5/-0.5 px.",
+      "evidence_paths": [
+        "inputs/01-revision_target.png",
+        "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "outputs/v3/intermediate/v0-logo-source-mask.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "logo_contrast_reduced",
+      "result": "pass",
+      "details": "Measured logo RMS contrast is 73.7863 versus 115.2900 at full contrast, for an exact ratio of 0.6400.",
+      "evidence_paths": [
+        "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "outputs/v3/summer-form-poster-v2-v3-comparison.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "changes_confined_to_logo_edit_mask",
+      "result": "pass",
+      "details": "17,461 pixels changed and 0 changed pixels were found outside the approved bottom-right logo edit mask.",
+      "evidence_paths": [
+        "outputs/v3/summer-form-poster-v3-diff-mask.png",
+        "outputs/v3/intermediate/v3-logo-edit-mask.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "v2_paper_background_retained",
+      "result": "pass",
+      "details": "The v2 clean-paper sample hash remains 81db83ee108d1110df6c5396ee3544877a353b28d3059f0cb6aa7cadb9aca277 in v3, and every pixel outside the logo ROI is identical to v2.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "title_preserved",
+      "result": "pass",
+      "details": "The full title-region hash is identical in v2 and v3: 01db6363e6217ebc8a24c858980b66a3ce59d3fadd59ea9c370010bbf5a18faa.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "all_activity_information_preserved",
+      "result": "pass",
+      "details": "The full event-information-region hash is identical in v2 and v3: ad22ab9c1d32c29fdaae5c5c670946baae8e42ee3ca3c7502513d2fccdcf0047.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "geometry_and_unrelated_art_preserved",
+      "result": "pass",
+      "details": "Every pixel outside the logo ROI is identical to v2; this locks the grid, arcs, color blocks, title, information, folded object, poster framing, and outer scene.",
+      "evidence_paths": [
+        "outputs/v3/summer-form-poster-v3-diff-mask.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "central_folded_object_preserved",
+      "result": "pass",
+      "details": "The central folded-object region hash is identical in v2 and v3: 21de309b6edbceb2fb582922746baa1c5c314474e8cad0a11bb3c3ff5374af8c.",
+      "evidence_paths": [
+        "outputs/v2/summer-form-poster-local-revision-v2.png",
+        "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json"
+      ]
+    },
+    {
+      "check": "prior_version_folders_unchanged",
+      "result": "pass",
+      "details": "All 19 files under outputs/v0, outputs/v1, and outputs/v2 match their pre-v3 SHA-256 snapshot.",
+      "evidence_paths": [
+        "outputs/v3/intermediate/prior-version-hashes.json"
+      ]
+    },
+    {
+      "check": "visual_comparison_reviewed",
+      "result": "pass",
+      "details": "v3 and the v2/v3 comparison were inspected at original resolution; the logo returns to v0 scale with visibly lower contrast and no observed drift elsewhere.",
+      "evidence_paths": [
+        "outputs/v3/summer-form-poster-local-revision-v3.png",
+        "outputs/v3/summer-form-poster-v2-v3-comparison.png"
+      ]
+    }
+  ],
+  "execution_provenance": {
+    "mode": "deterministic local raster compositing under the imagegen precise-object-edit invariant workflow",
+    "fresh_generation": false,
+    "reason": "The requested change requires exact reuse of the v0 logo geometry and v2 paper pixels; a new generative pass would introduce unrequested drift.",
+    "edit_spec": "Use v2 as the sole poster base. Remove only the current smaller logo, restore the v0 logo source mask at its original center and size, render that logo at 64 percent local contrast against the retained v2 paper, and keep every other pixel unchanged."
+  },
+  "artifact_paths": {
+    "final_poster": "outputs/v3/summer-form-poster-local-revision-v3.png",
+    "comparison": "outputs/v3/summer-form-poster-v2-v3-comparison.png",
+    "difference_mask": "outputs/v3/summer-form-poster-v3-diff-mask.png",
+    "metrics": "outputs/v3/intermediate/logo-restore-low-contrast-metrics.json",
+    "source_mask": "outputs/v3/intermediate/v0-logo-source-mask.png",
+    "edit_mask": "outputs/v3/intermediate/v3-logo-edit-mask.png",
+    "process_script": "outputs/v3/apply-logo-restore-low-contrast.py",
+    "prior_version_hashes": "outputs/v3/intermediate/prior-version-hashes.json"
+  },
+  "artifact_sha256": {
+    "final_poster": "08795753deaad845f37d1e12a8a73b25d9334db4d2f44725ded7cd16d9cba9f0",
+    "comparison": "06376bf516706087edcda27269a95c79c8a66701820da4627f95f03a8681f78c",
+    "difference_mask": "9639767941d32fb5311f4b024aa2b66605005c24f7500825847207939fbbda19"
+  },
+  "unresolved_blockers": []
+}

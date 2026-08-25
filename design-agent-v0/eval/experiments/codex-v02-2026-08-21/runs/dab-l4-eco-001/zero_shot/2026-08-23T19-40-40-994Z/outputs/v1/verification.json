@@ -1,0 +1,147 @@
+{
+  "version": "v1",
+  "stage": "six_asset_delivery_complete_client_review_pending",
+  "verification_date": "2026-08-24",
+  "overall_status": "pass",
+  "generation_method": {
+    "scene_backgrounds": "Built-in imagegen tool, three independent no-product generations.",
+    "product_identity": "Deterministic source cutout and local compositing; no generative repainting.",
+    "prompt_evidence": "outputs/v1/imagegen-prompts.md"
+  },
+  "checks_performed": [
+    {
+      "id": "previous_version_preserved",
+      "status": "pass",
+      "check": "Confirmed all v0 artifact SHA-256 hashes remain unchanged after v1 production.",
+      "result": {
+        "outputs/v0/scene-hypotheses.md": "6051fc63bc02fbdc6aa2a58e1677a92d2ef09e0eb73ec5cbfd1fdfdcbe675db9",
+        "outputs/v0/scene-direction-board.svg": "67f013d1d63d73b6ba67a924c8dd9014a6802efa76004f0de8315c319b9eeb44",
+        "outputs/v0/verification.json": "ac0edaa9e4284a55161106e6396a221eb15f3502b803e8a75fafd63bd7a63de4"
+      },
+      "evidence_paths": [
+        "outputs/v0/scene-hypotheses.md",
+        "outputs/v0/scene-direction-board.svg",
+        "outputs/v0/verification.json"
+      ]
+    },
+    {
+      "id": "six_asset_completeness",
+      "status": "pass",
+      "check": "Confirmed six final RGB PNG assets exist: three ecommerce squares and three social portraits. Lossless PNG delivery avoids a final lossy color-encoding step on the product layer.",
+      "result": {
+        "total": 6,
+        "ecommerce_1200x1200": 3,
+        "social_1080x1350": 3
+      },
+      "evidence_paths": [
+        "outputs/v1/ecommerce/ecom-01-urban-entry-hero.png",
+        "outputs/v1/ecommerce/ecom-02-cafe-12h.png",
+        "outputs/v1/ecommerce/ecom-03-riverside-ipx4.png",
+        "outputs/v1/social/social-01-entry-loop.png",
+        "outputs/v1/social/social-02-cafe-12h.png",
+        "outputs/v1/social/social-03-riverside-ipx4.png"
+      ]
+    },
+    {
+      "id": "product_source_rgb_preservation",
+      "status": "pass",
+      "check": "Compared the entire 600 x 770 cutout RGB plane with the corresponding source crop; alpha was added, but RGB values were unchanged.",
+      "result": {
+        "max_absolute_rgb_difference": 0,
+        "source_sha256": "f1c9a2c5895dfef128d4a52de1025bf8afad7cf59ca4bff0c04d5a653b392406"
+      },
+      "evidence_paths": [
+        "inputs/01-product_master.png",
+        "outputs/v1/product-cutout-exact.png",
+        "outputs/v1/build_v1_assets.py"
+      ]
+    },
+    {
+      "id": "product_color_unchanged",
+      "status": "pass",
+      "check": "Confirmed background grading is applied before product compositing and no color, saturation, contrast, or lighting transform is applied to the product layer; only allowed scaling, placement, alpha extraction, and a separate neutral ground shadow are used.",
+      "evidence_paths": [
+        "outputs/v1/build_v1_assets.py",
+        "outputs/v1/contact-sheet.jpg"
+      ]
+    },
+    {
+      "id": "no_gold_delta",
+      "status": "pass",
+      "check": "Scanned all six final assets for saturated yellow/gold pixels using HSV hue 30–70 degrees and saturation >= 0.35; measured fraction is 0.0 for every asset.",
+      "result": {
+        "maximum_saturated_gold_pixel_fraction": 0.0
+      },
+      "evidence_paths": [
+        "outputs/v1/contact-sheet.jpg",
+        "outputs/v1/creative-spec.md"
+      ]
+    },
+    {
+      "id": "approved_copy_only",
+      "status": "pass",
+      "check": "Confirmed final marketing copy is limited to the approved claims. The hero has no text; each remaining asset has exactly one claim line and no decorative slogan, badge, or extra parameter.",
+      "result": {
+        "ecom-01-urban-entry-hero.png": null,
+        "ecom-02-cafe-12h.png": "12 小时续航",
+        "ecom-03-riverside-ipx4.png": "IPX4 防泼水",
+        "social-01-entry-loop.png": "一体式挂环",
+        "social-02-cafe-12h.png": "12 小时续航",
+        "social-03-riverside-ipx4.png": "IPX4 防泼水"
+      },
+      "evidence_paths": [
+        "outputs/v1/build_v1_assets.py",
+        "outputs/v1/contact-sheet.jpg"
+      ]
+    },
+    {
+      "id": "restrained_light_whitespace_and_text",
+      "status": "pass",
+      "check": "Visually reviewed the contact sheet and all six originals: lighting is cool-neutral and directional or overcast; props are limited; negative space is prominent; social layouts reserve a 270 px matte header; typography is a single plain sans-serif line without decoration.",
+      "evidence_paths": [
+        "outputs/v1/contact-sheet.jpg",
+        "outputs/v1/ecommerce/ecom-01-urban-entry-hero.png",
+        "outputs/v1/ecommerce/ecom-02-cafe-12h.png",
+        "outputs/v1/ecommerce/ecom-03-riverside-ipx4.png",
+        "outputs/v1/social/social-01-entry-loop.png",
+        "outputs/v1/social/social-02-cafe-12h.png",
+        "outputs/v1/social/social-03-riverside-ipx4.png"
+      ]
+    },
+    {
+      "id": "thumbnail_product_clarity",
+      "status": "pass",
+      "check": "Product remains complete and unoccluded in every asset. Composited product height ranges from 590 to 720 px, at least 43.7% of the final canvas height and a larger share of each social photo panel.",
+      "evidence_paths": [
+        "outputs/v1/contact-sheet.jpg",
+        "outputs/v1/build_v1_assets.py"
+      ]
+    },
+    {
+      "id": "ipx4_semantic_boundary",
+      "status": "pass",
+      "check": "The IPX4 scene shows only distant post-drizzle sheen while the product stands on a dry sheltered ledge. No submersion, washing, heavy splash, or pool context appears.",
+      "evidence_paths": [
+        "outputs/v1/ecommerce/ecom-03-riverside-ipx4.png",
+        "outputs/v1/social/social-03-riverside-ipx4.png"
+      ]
+    },
+    {
+      "id": "no_fictional_product_features",
+      "status": "pass",
+      "check": "Visual inspection confirms no added button, port, logo, light, clip, cable, or accessory. The loop claim is expressed through approved text and bag adjacency, not an invented attachment mechanism.",
+      "evidence_paths": [
+        "outputs/v1/contact-sheet.jpg",
+        "outputs/v1/social/social-01-entry-loop.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": [],
+  "conditional_limitations": [
+    {
+      "id": "visible_loop_source_angle",
+      "applies_only_if": "A future asset must visibly prove the speaker physically attached to a bag.",
+      "needed_from_client": "Provide a source angle that clearly shows the integrated loop and its connection method."
+    }
+  ]
+}

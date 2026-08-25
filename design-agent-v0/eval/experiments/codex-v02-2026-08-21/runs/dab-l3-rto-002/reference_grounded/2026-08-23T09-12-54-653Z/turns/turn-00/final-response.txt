@@ -1,0 +1,21 @@
+D is the clear candidate to advance. A, B, and C should be rejected for category cliché.
+
+| Dimension | Best → worst |
+|---|---|
+| Brief fit | D, C, A, B |
+| 24 px recognition | D, B, A, C |
+| Ownability | D, A, C, B |
+| Lowest generic-icon risk | D, C, A, B |
+
+- **A:** Reject—generic house construction; crowded at 24 px.
+- **B:** Reject—recognizable, but primarily as a generic smile-app/bowl icon.
+- **C:** Reject—literal noodle/food imagery; additional detail does not improve originality or ownability.
+- **D:** Advance—strongest NOMA-specific silhouette, warm and contemporary. Refine the N/arch junctions and reduce possible doorway/property-brand associations.
+
+No fifth design was created. Final client selection remains pending.
+
+Artifacts:
+
+- [Full review](<WORKDIR>/outputs/v0/noma-logo-candidate-review.md)
+- [Verification](<WORKDIR>/outputs/v0/verification.json)
+- [Project state](<WORKDIR>/outputs/project-state.json)

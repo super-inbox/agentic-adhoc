@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0",
+  "verification_id": "aroma-detail-hero-v1-verification",
+  "version": "v1",
+  "verified_at": "2026-08-21",
+  "overall_status": "pass_with_pending_delta_confirmation",
+  "implementation_choice": {
+    "client_phrase": "第三个卖点往上移一点",
+    "applied_delta_y": -12,
+    "unit": "px",
+    "scope": "third selling-point icon and label only"
+  },
+  "checks": [
+    {
+      "check_id": "required_artifacts.present",
+      "status": "pass",
+      "method": "filesystem existence and nonzero-size check",
+      "result": {
+        "preview.png": true,
+        "design_document.json": true,
+        "change_set.json": true,
+        "verification.json": true
+      },
+      "evidence_paths": [
+        "preview.png",
+        "design_document.json",
+        "change_set.json",
+        "verification.json"
+      ]
+    },
+    {
+      "check_id": "preview.raster_properties",
+      "status": "pass",
+      "method": "Pillow image inspection and SHA-256",
+      "result": {
+        "width": 1080,
+        "height": 1440,
+        "mode": "RGB",
+        "sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44"
+      },
+      "evidence_paths": [
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "delta.low_noise_spelling",
+      "status": "pass",
+      "method": "compare feature.low_noise label in v0 and v1 object graphs against the client-approved spelling",
+      "result": {
+        "client_reported_v0_rendering": "低躁运行",
+        "observed_v0_object_value": "低噪运行",
+        "v1_object_value": "低噪运行",
+        "approved_value": "低噪运行",
+        "v1_matches_approved_value": true,
+        "typography_unchanged": true,
+        "position_unchanged": true,
+        "icon_and_color_unchanged": true
+      },
+      "evidence_paths": [
+        "../v0/design_document.json",
+        "design_document.json",
+        "change_set.json",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "delta.third_feature_position",
+      "status": "pass",
+      "method": "compare feature.clay_touch bbox between v0 and v1",
+      "result": {
+        "v0_bbox": [
+          697,
+          1010,
+          313,
+          286
+        ],
+        "v1_bbox": [
+          697,
+          998,
+          313,
+          286
+        ],
+        "delta": [
+          0,
+          -12
+        ],
+        "label_unchanged": true,
+        "icon_unchanged": true,
+        "color_unchanged": true,
+        "width_and_height_unchanged": true
+      },
+      "evidence_paths": [
+        "../v0/design_document.json",
+        "design_document.json",
+        "change_set.json",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "delta.pixel_isolation",
+      "status": "pass",
+      "method": "RGB pixel difference between v0/preview.png and v1/preview.png, then clear the permitted third-feature rectangle and assert no remaining difference",
+      "result": {
+        "changed_pixel_count": 5128,
+        "difference_bbox": [
+          794,
+          1045,
+          915,
+          1222
+        ],
+        "permitted_change_rect": [
+          697,
+          998,
+          1010,
+          1296
+        ],
+        "difference_outside_permitted_rect": null,
+        "only_requested_visual_region_changed": true
+      },
+      "evidence_paths": [
+        "../v0/preview.png",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "preserve.background",
+      "status": "pass",
+      "method": "binary hash equality plus background-object equality between v0 and v1",
+      "result": {
+        "v0_sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99",
+        "v1_sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99",
+        "binary_equal": true,
+        "background.paper_object_equal": true,
+        "background.veil_object_equal": true,
+        "generation_prompt_equal": true
+      },
+      "evidence_paths": [
+        "../v0/generated_warm_paper.png",
+        "generated_warm_paper.png",
+        "../v0/design_document.json",
+        "design_document.json"
+      ]
+    },
+    {
+      "check_id": "preserve.product",
+      "status": "pass",
+      "method": "binary hash equality, product-object equality, and pixel-difference isolation",
+      "result": {
+        "v0_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "v1_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "binary_equal": true,
+        "product.photo_object_equal": true,
+        "preview_product_region_equal": true
+      },
+      "evidence_paths": [
+        "../v0/product_source_exact.png",
+        "product_source_exact.png",
+        "../v0/design_document.json",
+        "design_document.json",
+        "../v0/preview.png",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "preserve.headline",
+      "status": "pass",
+      "method": "headline object equality and pixel-difference isolation",
+      "result": {
+        "text": "让香气慢下来。",
+        "headline_object_equal": true,
+        "headline_accent_object_equal": true,
+        "preview_headline_region_equal": true
+      },
+      "evidence_paths": [
+        "../v0/design_document.json",
+        "design_document.json",
+        "../v0/preview.png",
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "preserve.approved_composition_and_color",
+      "status": "pass",
+      "method": "compare color tokens, media frame, strip geometry, first two feature positions, and unchanged object IDs",
+      "result": {
+        "color_tokens_equal": true,
+        "media_frame_equal": true,
+        "feature_strip_bbox_equal": true,
+        "feature_strip_rules_equal": true,
+        "feature_low_noise_bbox_equal": true,
+        "feature_timer_object_equal": true,
+        "footer_rule_equal": true
+      },
+      "evidence_paths": [
+        "../v0/design_document.json",
+        "design_document.json",
+        "../project-state.json"
+      ]
+    },
+    {
+      "check_id": "v0.immutable",
+      "status": "pass",
+      "method": "compare every v0 artifact SHA-256 to the recorded pre-v1 baseline",
+      "result": {
+        "all_v0_hashes_unchanged": true,
+        "hashes": {
+          "change_set.json": "d303586d39f0333835cd109a455402b18b9f9ba44636077cdaedc294d6800978",
+          "design_document.json": "a6c19467c214d555024cfb6512df09afa63309ad8ce4f1df3087eec1569854c4",
+          "generated_warm_paper.png": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99",
+          "generation_prompt.txt": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c",
+          "preview.png": "9d8fb3597d8bad1f1184b8dc9b3724bfae771e4affd4d9fd0b6123f47ebacc86",
+          "product_source_exact.png": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+          "render_design.py": "7f7e088fa88fc3104c7deb53c8d372f2ed3daa4633ad428efe45112d5a8f6e69",
+          "verification.json": "444eade9d1e39c50bcc7b17684e08b6c44c1ecf4925cb5500f55b44befa18cba"
+        }
+      },
+      "evidence_paths": [
+        "../v0"
+      ]
+    },
+    {
+      "check_id": "editable_graph.integrity",
+      "status": "pass",
+      "method": "JSON parse, stable object-ID uniqueness, change-set target resolution, and deterministic rerender",
+      "result": {
+        "json_parses": true,
+        "object_ids_unique": true,
+        "all_change_set_object_ids_resolve": true,
+        "renderer_reproduces_preview": true
+      },
+      "evidence_paths": [
+        "design_document.json",
+        "change_set.json",
+        "render_design.py"
+      ]
+    },
+    {
+      "check_id": "visual.review",
+      "status": "pass",
+      "method": "original-resolution visual inspection",
+      "result": {
+        "correct_low_noise_label_visible": true,
+        "third_feature_visibly_higher": true,
+        "no_clipping": true,
+        "product_unchanged": true,
+        "headline_unchanged": true,
+        "background_unchanged": true
+      },
+      "evidence_paths": [
+        "preview.png"
+      ]
+    },
+    {
+      "check_id": "version_state.recorded",
+      "status": "pass",
+      "method": "project-state inspection",
+      "result": {
+        "current_version": "v1",
+        "v0_retained": true,
+        "v1_added": true,
+        "composition_locked": true,
+        "color_locked": true,
+        "next_checkpoint": "client_review_v1_delta"
+      },
+      "evidence_paths": [
+        "../project-state.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "blocker_id": "client_confirmation.v1_delta",
+      "severity": "workflow_checkpoint",
+      "status": "open",
+      "description": "The client has not yet visually confirmed that the explicit 12 px interpretation of 'move up a little' is the desired amount.",
+      "scope": "feature.clay_touch vertical position only"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Reading additional input from stdin...
+2026-08-23T23:56:24.316819Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T23:56:24.319291Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T23:56:24.346829Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T23:56:24.346843Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T23:56:25.682562Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T23:56:25.682576Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T23:56:29.314089Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to parse remote plugin catalog response from https://chatgpt.com/backend-api/ps/plugins/suggested?scope=GLOBAL: EOF while parsing a value at line 1 column 0
+2026-08-24T00:07:25.406575Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-24T00:08:57.951979Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-24T00:09:27.021653Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-24T00:09:38.300023Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5

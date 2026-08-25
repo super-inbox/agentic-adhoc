@@ -1,0 +1,11 @@
+已完成 v1 局部修改：Logo 实测缩至约 79–80%，纸张纹理更细；标题、活动信息及非 Logo 蓝橙图形保持像素一致，允许范围外变化像素为 0。`outputs/v0` 未改动。
+
+新增/更新路径：
+
+- [v1 修改版海报](/private<WORKDIR>/outputs/v1/summer-form-poster-local-revision-v1.png)
+- [原图／v1 对照图](/private<WORKDIR>/outputs/v1/summer-form-poster-v1-comparison.png)
+- [差异范围图](/private<WORKDIR>/outputs/v1/summer-form-poster-v1-diff-mask.png)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+采用内置图像编辑模式生成细纸纹参考，再局部合成回原图；最终提示约束为：仅缩小右下 Logo 约 20%并细化海报纸纹，其余内容全部保持不变。

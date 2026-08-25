@@ -1,0 +1,15 @@
+v3 已完成：
+
+- v2 礼盒与淘宝主图保持不变。
+- 门店立牌直接恢复为 v1 的原像素疏朗版本。
+- 未重新生成画面，也未添加价格、折扣或促销标签。
+- v0、v1、v2 校验值均保持一致。
+
+新增／更新路径：
+
+- [门店立牌 v3](/private<WORKDIR>/outputs/v3/01-store-signage-v3.png)
+- [v1 原像素裁切](/private<WORKDIR>/outputs/v3/assets/store-signage-v1-source-crop.png)
+- [变更说明](/private<WORKDIR>/outputs/v3/delta-notes.md)
+- [验证记录](/private<WORKDIR>/outputs/v3/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+- [裁切脚本](/private<WORKDIR>/outputs/v3/render_store_signage.py)

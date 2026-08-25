@@ -1,0 +1,124 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-CAM-003@reference_grounded",
+  "base_brief_id": "DAB-L4-CAM-003",
+  "context_condition": "reference_grounded",
+  "category": "existing_brand_campaign",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "multi_turn_revision",
+    "state_recovery"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T01:59:59.907Z",
+  "finished_at": "2026-08-23T02:00:28.593Z",
+  "latency_ms": 28686,
+  "intended_turns": 4,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01",
+    "session-02"
+  ],
+  "codex_thread_id": "01a02c58-a813-7d53-8048-23c754a0d213",
+  "input_assets": [
+    {
+      "input_id": "brand-reference",
+      "asset_id": "sku-system-mori-brand-board",
+      "role": "brand_guideline",
+      "reference_role": "brand_system",
+      "identity_policy": "preserve_rules",
+      "filename": "01-brand_guideline.png",
+      "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+      "byte_size": 592086,
+      "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+    },
+    {
+      "input_id": "candidate-brand-led",
+      "asset_id": "detail-page-quiet-ritual-reference-page",
+      "role": "campaign_candidate_a",
+      "reference_role": "candidate_option",
+      "identity_policy": "analysis_only",
+      "filename": "02-campaign_candidate_a.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/quiet-ritual-reference-page.png",
+      "byte_size": 815623,
+      "sha256": "f941e16e01835e825f6b0a2b4d65e5d021329ae6e223b451c307998ec5a97af2"
+    },
+    {
+      "input_id": "candidate-sales-led",
+      "asset_id": "image-edit-poster-summer-form",
+      "role": "campaign_candidate_b",
+      "reference_role": "candidate_option",
+      "identity_policy": "analysis_only",
+      "filename": "03-campaign_candidate_b.png",
+      "source_path": "eval/assets/reference-pack-v0.2/image-edit/poster-summer-form.png",
+      "byte_size": 1388454,
+      "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+    },
+    {
+      "input_id": "product",
+      "asset_id": "detail-page-terra-diffuser-product",
+      "role": "campaign_product",
+      "reference_role": "product_identity",
+      "identity_policy": "preserve_exact",
+      "filename": "04-campaign_product.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/terra-diffuser-product.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    }
+  ],
+  "input_context_ids": [
+    "brand-reference",
+    "candidate-brand-led",
+    "candidate-sales-led",
+    "product"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T01:59:59.907Z",
+      "finished_at": "2026-08-23T02:00:28.591Z",
+      "latency_ms": 28685,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c58-a813-7d53-8048-23c754a0d213",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

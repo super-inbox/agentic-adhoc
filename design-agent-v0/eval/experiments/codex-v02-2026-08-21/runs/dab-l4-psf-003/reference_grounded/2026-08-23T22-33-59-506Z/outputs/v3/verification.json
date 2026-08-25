@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "version": "v3",
+  "verified_at": "2026-08-24T07:03:43+08:00",
+  "overall_status": "blocked",
+  "production_pdf_generated": false,
+  "production_pdf_reason": "The requested content delta was completed in v3 derivatives of the v2 review artifacts, but the source still lacks an editable back legal-copy object and identifiable barcode-zone boundary. The output remains a non-production review package.",
+  "applied_delta": [
+    {
+      "id": "back_legal_copy_text",
+      "before": "200 g",
+      "after": "180 g",
+      "status": "updated"
+    },
+    {
+      "id": "layout",
+      "status": "preserved",
+      "value": "v2 page layout reused without reflow"
+    },
+    {
+      "id": "color",
+      "status": "preserved",
+      "value": "v2 CMYK page used as the pixel base; existing colors were not recomputed"
+    },
+    {
+      "id": "minimum_type_size",
+      "status": "preserved",
+      "value": "6.00 pt nominal, equal to 25 px at 300 dpi"
+    }
+  ],
+  "checks": [
+    {
+      "id": "exact_text_update",
+      "status": "pass",
+      "method": "Localized specimen and report-field replacement",
+      "result": "All current legal-copy specimen fields read exactly '180 g'; no new wording was introduced."
+    },
+    {
+      "id": "specimen_raster_metadata",
+      "status": "pass",
+      "method": "sips metadata inspection and generation-parameter review",
+      "result": "354×118 px RGB PNG with 300×300 dpi metadata; text is exactly '180 g' at nominal 25 px Arial Bold as the same v2 measurement proxy.",
+      "evidence": "outputs/v3/back-legal-copy_180g_6pt_300dpi-specimen.png",
+      "sha256": "b7719b522ccf285bfe83e3f847da961dc789a28d778ef4bdfa3422d35839c0e3"
+    },
+    {
+      "id": "localized_delta",
+      "status": "pass",
+      "method": "Pixel-level CMYK comparison between the embedded v2 report page and the v3 page before PDF encoding",
+      "result": "67,782 pixels changed inside seven allowed text/specimen/version rectangles; zero pixels changed outside those rectangles.",
+      "allowed_rectangles_px": [
+        [140, 88, 930, 150],
+        [2555, 510, 3270, 574],
+        [2348, 1056, 2712, 1184],
+        [2348, 1258, 3070, 1504],
+        [140, 1710, 780, 1788],
+        [1178, 1814, 3330, 1878],
+        [3040, 2398, 3365, 2470]
+      ],
+      "evidence": "outputs/v3/evidence/v3-v2-localized-diff-mask.png",
+      "sha256": "c185614e4c5478dfc67306069dd01cee1bf0e18edc7dd503202f7e3ae6f5a4d0"
+    },
+    {
+      "id": "layout_and_color_preservation",
+      "status": "pass",
+      "method": "Reuse of the v2 embedded CMYK page plus lossless CMYK PDF encoding",
+      "result": "The v2 3508×2480 CMYK page was reused as the base. No reflow or global color conversion occurred; all non-delta pixels are identical before PDF encoding."
+    },
+    {
+      "id": "v3_report_pdf_structure",
+      "status": "pass",
+      "method": "pdfinfo and direct PDF object inspection",
+      "result": "One A4 landscape page, 841.92×595.2 pt, containing one lossless 3508×2480 DeviceCMYK image with no DeviceRGB image, equivalent to 300 dpi.",
+      "evidence": "outputs/v3/orbit-coffee_v3-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf",
+      "sha256": "5d4eb0171bfa742eda8c5c8628fe6dfc6a3f851bc142f2f5fe01952c3f2341da"
+    },
+    {
+      "id": "v3_report_visual_render",
+      "status": "pass",
+      "method": "Poppler render at 150 dpi followed by visual inspection",
+      "result": "The final page renders legibly with no clipping, overlap, missing glyphs, or broken layout; all displayed legal-copy specimens read 180 g.",
+      "evidence": "outputs/v3/evidence/v3-back-legal-check-page-1.png",
+      "sha256": "4d477d52f138bd2a38731b77b62ab9793348031f9d5b65fa47692e9df8e6419f"
+    },
+    {
+      "id": "approved_source_identity",
+      "status": "pass",
+      "method": "SHA-256 digest",
+      "result": "The approved source remains unchanged.",
+      "evidence": "inputs/01-print_artwork.png",
+      "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f"
+    },
+    {
+      "id": "earlier_version_integrity",
+      "status": "pass",
+      "method": "SHA-256 manifest comparison after v3 creation",
+      "result": "All files under outputs/v0, outputs/v1, and outputs/v2 retain their prior hashes.",
+      "hashes": {
+        "outputs/v0/approved-artwork_preflight-annotated_v0.png": "fa6c46e08c2e486ea0919861ebf978b3915336c1d6dcd7e3647ee9781a6c706d",
+        "outputs/v0/evidence/preflight-report-page-1.png": "37297489290431d60830e61792bf25a40e880c46f82c163673c1eb8361748e9a",
+        "outputs/v0/evidence/preflight-report-page-2.png": "91c08b8ec1a5b1b6e9ce94d9c3811c788e01b698651abbe0336a27169dfbc871",
+        "outputs/v0/orbit-coffee_preflight-checklist_v0.md": "e8a93f0f86245780cc7af6866074a54b0147585acb8f066e8e6aea540b9e55f4",
+        "outputs/v0/orbit-coffee_preflight-report_v0_NOT-FOR-PRODUCTION.pdf": "ca675f2329601400d2785fd775d0b9cbc20924ba49fb74d432a1947ea5930f32",
+        "outputs/v0/verification.json": "c7144cdc2d996714c49a6d37a335b1eba6210b8ff59f4714aa6636f13b650834",
+        "outputs/v1/approved-artwork_v1-net-content-conflict-annotated.png": "13c6123db3622f18d59030a3ecff6dfb2af43fca968fb1795b1cfeeba9256086",
+        "outputs/v1/evidence/v1-delta-gate-page-1.png": "ced2c7337e89e2367a0896b518069818c161b5c7d499559ec0053e5425ffb891",
+        "outputs/v1/orbit-coffee_v1-delta-checklist.md": "101df388815e52d8fbb18d483a83fc972589e3ebe94cb2a7d921414b7cbcc1b1",
+        "outputs/v1/orbit-coffee_v1-delta-gate_NOT-FOR-PRODUCTION.pdf": "fdb90634cdf040068896d2bc1d1c776264c2ee13fe96ebbeda1cfb77cb0d1b7c",
+        "outputs/v1/verification.json": "41dd9c47083d2eac2f9a5c924e6f2e9f42a8406f3e4611e52f415445c6bbc363",
+        "outputs/v2/approved-artwork_v2-back-legal-target-audit.png": "dbaee53a7ef61e8b80a9c3620c6c9569a7af993b40806ccc65c5d792a2c75230",
+        "outputs/v2/back-legal-copy_200g_6pt_300dpi-specimen.png": "cc083860bae2ab71ae929e1d97546049938f7b6a2473329b802029b42f2ba0bc",
+        "outputs/v2/evidence/v2-back-legal-check-page-1.png": "772b2e522e127a6b5939d1b8d4050fce2ea8aa61ec4ece394d5c0c9e189e767a",
+        "outputs/v2/orbit-coffee_v2-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf": "b885c4bf97deb0fd1734a2c18984b313889d0c611ea21c2e48368e4c390daa1d",
+        "outputs/v2/orbit-coffee_v2-back-legal-copy-checklist.md": "061a1772d5d06142017fe904f0e75127ef079852c00fc801cd5907bb9b6356d1",
+        "outputs/v2/verification.json": "36ac6b79de3948edf3306f155401743d5cce71edd2e264584a496899f6fe2b76"
+      }
+    }
+  ],
+  "unresolved_blockers": [
+    "Provide the editable back production master containing the existing legal-copy object and barcode-zone boundary, or provide explicit legal-copy frame coordinates and dimensions.",
+    "The front remains 250 g while the requested back value is now 180 g; this known cross-panel inconsistency remains unresolved under the front lock.",
+    "Provide separated vector or high-resolution production artwork, the formal structural dieline, and the factory CMYK ICC/total-ink requirements."
+  ],
+  "evidence_paths": [
+    "inputs/01-print_artwork.png",
+    "outputs/v2/approved-artwork_v2-back-legal-target-audit.png",
+    "outputs/v3/back-legal-copy_180g_6pt_300dpi-specimen.png",
+    "outputs/v3/orbit-coffee_v3-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf",
+    "outputs/v3/evidence/v3-back-legal-check-page-1.png",
+    "outputs/v3/evidence/v3-v2-localized-diff-mask.png"
+  ]
+}

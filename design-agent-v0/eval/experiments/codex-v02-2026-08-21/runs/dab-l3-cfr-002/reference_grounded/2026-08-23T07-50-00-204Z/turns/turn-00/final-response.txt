@@ -1,0 +1,11 @@
+Completed the controlled v0 revision.
+
+- [Final preview](<WORKDIR>/outputs/v0/preview.png)
+- [Editable design document](<WORKDIR>/outputs/v0/design_document.json)
+- [Object-level change set](<WORKDIR>/outputs/v0/change_set.json)
+- [Machine-readable verification](<WORKDIR>/outputs/v0/verification.json)
+- [Project state](<WORKDIR>/outputs/project-state.json)
+
+Verified: 928×1152 canvas preserved, title enlarged 15.06% × 15.12%, event mark retained at 1:1 scale, and zero decoded pixels changed outside authorized edit regions.
+
+Built-in image-edit mode was used with the two-delta preservation prompt as a placement study; its drifting result was rejected. The delivered candidate uses deterministic source-derived layers to preserve the approved poster.

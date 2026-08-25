@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "version": "v2",
+  "status": "blocked_missing_required_inputs",
+  "checked_at": "2026-08-23T17:44:57+08:00",
+  "checks": [
+    {
+      "id": "taobao_edit_target_inventory",
+      "result": "blocked",
+      "check": "All files under inputs and outputs were inventoried. No Taobao hero raster containing a price label and selling-point copy is present.",
+      "evidence_paths": [
+        "inputs",
+        "outputs/v0",
+        "outputs/v1",
+        "outputs/v2/taobao-hero-delta-blocker.md"
+      ]
+    },
+    {
+      "id": "v1_mockup_visual_inspection",
+      "result": "pass",
+      "check": "The only v1 raster was inspected at original detail. It is the approved premium gift-box material mockup and contains neither a price label nor selling-point text, so it is not the requested edit target.",
+      "evidence_paths": ["outputs/v1/quiet-gifting-premium-box-mockup.png"]
+    },
+    {
+      "id": "selling_point_copy_search",
+      "result": "blocked",
+      "check": "Text search found channel guidance but no original hero-image selling-point copy and no client-confirmed one-sentence replacement.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v1/quiet-gifting-refinement.md",
+        "outputs/v2/taobao-hero-delta-blocker.md"
+      ]
+    },
+    {
+      "id": "approved_gift_box_preserved",
+      "result": "pass",
+      "check": "The approved v1 gift-box raster remains unchanged and is locked in project state.",
+      "evidence_paths": [
+        "outputs/v1/quiet-gifting-premium-box-mockup.png",
+        "outputs/project-state.json"
+      ],
+      "sha256": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa"
+    },
+    {
+      "id": "prior_versions_unchanged",
+      "result": "pass",
+      "check": "v0 and v1 files retain their pre-v2 SHA-256 values.",
+      "evidence_paths": [
+        "outputs/v0",
+        "outputs/v1"
+      ],
+      "sha256_snapshot": {
+        "outputs/v0/creative-territories.md": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7",
+        "outputs/v0/creative-territories-board.html": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d",
+        "outputs/v0/creative-territories-overview.png": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc",
+        "outputs/v0/verification.json": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd",
+        "outputs/v1/quiet-gifting-premium-box-mockup.png": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa",
+        "outputs/v1/quiet-gifting-refinement.md": "4223cd355bd5df631a38752bd77e0ae78d744db1583c2d26b13a5845003310cd",
+        "outputs/v1/verification.json": "6c307324b06d190374b643e1e137ab274b72deb3805d625c23fad0ce5ba0144c"
+      }
+    },
+    {
+      "id": "scope_protection",
+      "result": "pass",
+      "check": "No replacement Taobao hero was generated and no existing raster was altered, because doing so without the exact source and copy would require hidden assumptions and could redesign approved or unrelated areas.",
+      "evidence_paths": [
+        "outputs/v2/taobao-hero-delta-blocker.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "future_edit_invariants_recorded",
+      "result": "pass",
+      "check": "The v2 note records the exact future edit scope: remove only the price label, replace only the current selling points with one confirmed sentence, and preserve all other pixels and system attributes.",
+      "evidence_paths": ["outputs/v2/taobao-hero-delta-blocker.md"]
+    },
+    {
+      "id": "state_file_validity",
+      "result": "pass",
+      "check": "outputs/project-state.json and outputs/v2/verification.json both parsed successfully as JSON after writing.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v2/verification.json"
+      ]
+    }
+  ],
+  "image_generation": {
+    "mode": "not_run",
+    "reason": "The image-edit target and exact replacement copy are missing. The image-generation skill requires an inspected edit target and verbatim text for a constrained local edit."
+  },
+  "unresolved_blockers": [
+    {
+      "id": "taobao_hero_edit_target_missing",
+      "severity": "blocking",
+      "detail": "Provide the exact Taobao hero PNG or JPG at original resolution."
+    },
+    {
+      "id": "one_sentence_copy_missing",
+      "severity": "blocking",
+      "detail": "Provide the exact one-sentence selling-point copy, or provide the original selling-point text and explicitly authorize condensation for confirmation."
+    }
+  ]
+}

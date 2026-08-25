@@ -1,0 +1,41 @@
+{
+  "canvas": {"width": 1080, "height": 1440},
+  "method": "Measured the alpha bounding box of the preserved product cutout and the first strong horizontal background transition. Alpha >= 64 is treated as product plus visible shadow; alpha >= 200 is treated as the opaque product core.",
+  "background_first_horizontal_boundary_y": 1017,
+  "v1": {
+    "product_layer_size": 1200,
+    "product_layer_top": 180,
+    "scale_factor_from_1024_source": 1.171875,
+    "opaque_core_bottom_y": 1031,
+    "visible_shadow_bottom_y": 1048,
+    "shadow_clearance_to_boundary_px": -31
+  },
+  "v2": {
+    "product_layer_size": 1120,
+    "product_layer_top": 150,
+    "scale_factor_from_1024_source": 1.09375,
+    "opaque_core_bottom_y": 944,
+    "visible_shadow_bottom_y": 960,
+    "shadow_clearance_to_boundary_px": 57
+  },
+  "delta": {
+    "scale_reduction_percent": 6.67,
+    "layer_top_shift_px": -30,
+    "opaque_core_bottom_shift_px": -87,
+    "shadow_clearance_improvement_px": 88
+  },
+  "unchanged_regions_pixel_check": [
+    {
+      "region": "x=0..1079,y=0..429",
+      "pixels_checked": 464400,
+      "changed_pixels": 0,
+      "maximum_channel_difference": 0
+    },
+    {
+      "region": "x=0..1079,y=1110..1439",
+      "pixels_checked": 356400,
+      "changed_pixels": 0,
+      "maximum_channel_difference": 0
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "change_set_id": "aroma-detail-hero-v0-initial",
+  "version": "v0",
+  "base_state": "empty_candidate_canvas",
+  "target_document": "design_document.json",
+  "operations": [
+    {
+      "op": "add",
+      "object_id": "background.paper",
+      "summary": "Add an original warm paper field generated from abstract layout calm and B-derived palette mood.",
+      "source_basis": [
+        "palette-b:palette",
+        "layout-a:negative-space-principle"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "background.veil",
+      "summary": "Temper the generated texture with a translucent warm-ivory veil.",
+      "source_basis": [
+        "palette-b:warm-ivory-rule"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "hero.media_frame",
+      "summary": "Create a centered, large upper product stage with generous margins.",
+      "source_basis": [
+        "layout-a:composition-and-information-rhythm"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "product.photo",
+      "summary": "Place the supplied product photo using only whitespace crop, uniform scaling, and positioning.",
+      "source_basis": [
+        "product:preserve-exact"
+      ],
+      "locks_applied": [
+        "source_pixels",
+        "shape",
+        "color",
+        "orientation"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "headline",
+      "summary": "Set the approved headline verbatim beneath the product image.",
+      "source_basis": [
+        "approved_copy",
+        "layout-a:image-then-title-rhythm",
+        "palette-b:editorial-typography-rule"
+      ],
+      "locks_applied": [
+        "text"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "headline.accent",
+      "summary": "Add a restrained terracotta accent beneath the headline.",
+      "source_basis": [
+        "palette-b:terracotta-token"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "features.strip",
+      "summary": "Create three equal feature cells below the headline, following A's information rhythm without copying its content or icons.",
+      "source_basis": [
+        "layout-a:three-feature-row",
+        "palette-b:color-and-type-rules"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "feature.low_noise",
+      "summary": "Add original low-noise icon and approved label '低噪运行'.",
+      "source_basis": [
+        "approved_copy",
+        "palette-b:muted-olive-token"
+      ],
+      "locks_applied": [
+        "label"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "feature.timer",
+      "summary": "Add original timer icon and approved label '定时关闭'.",
+      "source_basis": [
+        "approved_copy",
+        "palette-b:terracotta-token"
+      ],
+      "locks_applied": [
+        "label"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "feature.clay_touch",
+      "summary": "Add original texture icon and approved label '陶土触感'.",
+      "source_basis": [
+        "approved_copy",
+        "palette-b:charcoal-token"
+      ],
+      "locks_applied": [
+        "label"
+      ]
+    },
+    {
+      "op": "add",
+      "object_id": "footer.rule",
+      "summary": "Add a faint olive lower rule to preserve breathing room without introducing extra copy.",
+      "source_basis": [
+        "palette-b:muted-olive-token"
+      ]
+    }
+  ],
+  "forbidden_content_excluded": [
+    "A brand words",
+    "B wordmark",
+    "B leaf logo and pattern",
+    "unapproved marketing copy"
+  ],
+  "client_confirmation_required": [
+    "overall composition and whitespace",
+    "warm palette balance",
+    "headline serif treatment",
+    "three icon styles"
+  ]
+}

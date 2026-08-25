@@ -1,0 +1,10 @@
+已完成 10 个指定尺寸，每个均包含 PNG 成图与可编辑 SVG，共 20 个适配文件。机器验证全部通过：文字完整、5% 安全区、蓝橙配色、无非等比拉伸，主视觉裁切与定稿源像素一致。
+
+- [总预览图](<WORKDIR>/outputs/v0/preview.png)
+- [十套适配文件](<WORKDIR>/outputs/v0/adaptations/)
+- [可编辑对象文档](<WORKDIR>/outputs/v0/design_document.json)
+- [对象级变更集](<WORKDIR>/outputs/v0/change_set.json)
+- [机器验证结果](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+注意：A4/A3 按 300 dpi 画布尺寸输出，但主视觉清晰度仍受 928×1152 定稿源图限制；为遵守“不重新生成主视觉”，未进行 AI 重绘或补细节。

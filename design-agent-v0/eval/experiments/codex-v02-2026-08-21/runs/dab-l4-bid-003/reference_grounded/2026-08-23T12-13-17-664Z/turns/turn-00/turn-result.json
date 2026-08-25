@@ -1,0 +1,44 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T12:13:17.676Z",
+  "finished_at": "2026-08-23T12:18:41.045Z",
+  "latency_ms": 323376,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 19,
+    "command_count": 4,
+    "tool_count": 2,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02e8a-25d4-7180-9590-95c211025c0a",
+    "usage": {
+      "input_tokens": 192479,
+      "cached_input_tokens": 159104,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9938,
+      "reasoning_output_tokens": 3819
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2769,
+      "sha256": "6d1ab0f77acd2df77bbe9df6a509f3a696b45873aff86c8a2bc4d09e075499d3"
+    },
+    {
+      "filename": "v0/creative-territories-v0.md",
+      "byte_size": 7142,
+      "sha256": "00396fbdc92f04f277cd080210c538111b4fea95d2125726eccede4ae5da4767"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3261,
+      "sha256": "79c11f30ab9d84aed66ec43193d0d838e6ad136ef9b1478b9e6471227426f5fd"
+    }
+  ]
+}

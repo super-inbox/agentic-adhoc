@@ -1,0 +1,8 @@
+2026-08-24T00:11:34.529211Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-24T00:11:34.557140Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:11:34.557154Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:11:35.789648Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:11:35.789665Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-24T00:16:30.760261Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-24T00:19:31.220463Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-24T00:23:49.603702Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit

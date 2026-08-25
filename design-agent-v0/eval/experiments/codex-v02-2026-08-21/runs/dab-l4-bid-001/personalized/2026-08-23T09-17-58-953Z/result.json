@@ -1,0 +1,467 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-BID-001@personalized",
+  "base_brief_id": "DAB-L4-BID-001",
+  "context_condition": "personalized",
+  "category": "brand_identity_directions",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "multi_turn_revision",
+    "state_recovery",
+    "creative_exploration",
+    "context_ablation"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T09:17:58.966Z",
+  "finished_at": "2026-08-23T09:53:38.576Z",
+  "latency_ms": 2139610,
+  "intended_turns": 4,
+  "completed_turns": 4,
+  "logical_sessions": [
+    "session-01",
+    "session-02"
+  ],
+  "codex_thread_id": "01a02de9-9e88-75d0-8a06-39086c6b02a1",
+  "input_assets": [
+    {
+      "input_id": "current-identity",
+      "asset_id": "logo-upgrade-grain-glow-before-after",
+      "role": "current_logo_and_identity",
+      "reference_role": "edit_target",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-current_logo_and_identity.png",
+      "source_path": "eval/assets/reference-pack-v0.2/logo-upgrade/grain-glow-before-after.png",
+      "byte_size": 588006,
+      "sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253"
+    },
+    {
+      "input_id": "reference-a",
+      "asset_id": "detail-page-quiet-ritual-reference-page",
+      "role": "premium_minimal_reference",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "02-premium_minimal_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/quiet-ritual-reference-page.png",
+      "byte_size": 815623,
+      "sha256": "f941e16e01835e825f6b0a2b4d65e5d021329ae6e223b451c307998ec5a97af2"
+    },
+    {
+      "input_id": "reference-b",
+      "asset_id": "sku-system-mori-brand-board",
+      "role": "color_system_reference",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "03-color_system_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+      "byte_size": 592086,
+      "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+    },
+    {
+      "input_id": "reference-c",
+      "asset_id": "design-vote-noma-logo-options",
+      "role": "friendly_logo_reference",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "04-friendly_logo_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/design-vote/noma-logo-options.png",
+      "byte_size": 630253,
+      "sha256": "0985be34801ead57e9aaea756b26b06d4e44bc4c909175139c4672a3fa9fc334"
+    }
+  ],
+  "input_context_ids": [
+    "current-identity",
+    "reference-a",
+    "reference-b",
+    "reference-c",
+    "brand-facts"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 5670,
+      "sha256": "9264b4e34516125adda16f6d4c851bbc13cffc379ce56eabb4d1a1f53fe9da35"
+    },
+    {
+      "filename": "v0/creative-territories-board.html",
+      "byte_size": 20770,
+      "sha256": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d"
+    },
+    {
+      "filename": "v0/creative-territories-overview.png",
+      "byte_size": 382745,
+      "sha256": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc"
+    },
+    {
+      "filename": "v0/creative-territories.md",
+      "byte_size": 12244,
+      "sha256": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5392,
+      "sha256": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd"
+    },
+    {
+      "filename": "v1/quiet-gifting-premium-box-mockup.png",
+      "byte_size": 1712332,
+      "sha256": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa"
+    },
+    {
+      "filename": "v1/quiet-gifting-refinement.md",
+      "byte_size": 7190,
+      "sha256": "4223cd355bd5df631a38752bd77e0ae78d744db1583c2d26b13a5845003310cd"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 6199,
+      "sha256": "6c307324b06d190374b643e1e137ab274b72deb3805d625c23fad0ce5ba0144c"
+    },
+    {
+      "filename": "v2/taobao-hero-delta-blocker.md",
+      "byte_size": 2049,
+      "sha256": "ddd47cc5ebbbda076fe883a12fbb93115a28498362ef81ca9df0a917bbacdd06"
+    },
+    {
+      "filename": "v2/verification.json",
+      "byte_size": 4596,
+      "sha256": "0adde4d2f11a1a3ce1eb128b07300d09a89ab69930faacc4a4fdf1b907e01b33"
+    },
+    {
+      "filename": "v3/store-sign-whitespace-delta-blocker.md",
+      "byte_size": 2604,
+      "sha256": "cc973c35de4034781b9428a2932572a4742dffa70b2f9e1fbdda68caca104e0c"
+    },
+    {
+      "filename": "v3/verification.json",
+      "byte_size": 5734,
+      "sha256": "a3992789856a015122122f6025d6f7c5b1f884695692246a0f2650b54787e3d3"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T09:17:58.966Z",
+      "finished_at": "2026-08-23T09:33:14.845Z",
+      "latency_ms": 915887,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 60,
+        "command_count": 18,
+        "tool_count": 8,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02de9-9e88-75d0-8a06-39086c6b02a1",
+        "usage": {
+          "input_tokens": 1537722,
+          "cached_input_tokens": 1444480,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 36418,
+          "reasoning_output_tokens": 12547
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 3212,
+          "sha256": "3afba0e5c562e949b3a589d1e69e7c634774285660f3314dd850535440b63e92"
+        },
+        {
+          "filename": "v0/creative-territories-board.html",
+          "byte_size": 20770,
+          "sha256": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d"
+        },
+        {
+          "filename": "v0/creative-territories-overview.png",
+          "byte_size": 382745,
+          "sha256": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc"
+        },
+        {
+          "filename": "v0/creative-territories.md",
+          "byte_size": 12244,
+          "sha256": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 5392,
+          "sha256": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T09:33:14.853Z",
+      "finished_at": "2026-08-23T09:42:59.407Z",
+      "latency_ms": 584564,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 45,
+        "command_count": 14,
+        "tool_count": 4,
+        "image_activity_count": 7,
+        "runtime_error_count": 1,
+        "runtime_error_messages": [
+          "Reconnecting... 1/5 (stream disconnected before completion: Transport error: network error: error decoding response body)"
+        ],
+        "thread_id": "01a02de9-9e88-75d0-8a06-39086c6b02a1",
+        "usage": {
+          "input_tokens": 3535084,
+          "cached_input_tokens": 3391872,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 51002,
+          "reasoning_output_tokens": 17502
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 5117,
+          "sha256": "2aaeabf6d668bc7be195cbdbbdb1458ea71e0cb3ec227af015607a1fe0ec774e"
+        },
+        {
+          "filename": "v0/creative-territories-board.html",
+          "byte_size": 20770,
+          "sha256": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d"
+        },
+        {
+          "filename": "v0/creative-territories-overview.png",
+          "byte_size": 382745,
+          "sha256": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc"
+        },
+        {
+          "filename": "v0/creative-territories.md",
+          "byte_size": 12244,
+          "sha256": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 5392,
+          "sha256": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd"
+        },
+        {
+          "filename": "v1/quiet-gifting-premium-box-mockup.png",
+          "byte_size": 1712332,
+          "sha256": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa"
+        },
+        {
+          "filename": "v1/quiet-gifting-refinement.md",
+          "byte_size": 7190,
+          "sha256": "4223cd355bd5df631a38752bd77e0ae78d744db1583c2d26b13a5845003310cd"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6199,
+          "sha256": "6c307324b06d190374b643e1e137ab274b72deb3805d625c23fad0ce5ba0144c"
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T09:42:59.418Z",
+      "finished_at": "2026-08-23T09:48:32.065Z",
+      "latency_ms": 332662,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 30,
+        "command_count": 9,
+        "tool_count": 3,
+        "image_activity_count": 4,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02de9-9e88-75d0-8a06-39086c6b02a1",
+        "usage": {
+          "input_tokens": 5104575,
+          "cached_input_tokens": 4929408,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 60251,
+          "reasoning_output_tokens": 20659
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 4929,
+          "sha256": "44a1e40c6e4b966cc002cebde73e6894a4c5a9612ae1217945f7430f12c3e620"
+        },
+        {
+          "filename": "v0/creative-territories-board.html",
+          "byte_size": 20770,
+          "sha256": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d"
+        },
+        {
+          "filename": "v0/creative-territories-overview.png",
+          "byte_size": 382745,
+          "sha256": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc"
+        },
+        {
+          "filename": "v0/creative-territories.md",
+          "byte_size": 12244,
+          "sha256": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 5392,
+          "sha256": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd"
+        },
+        {
+          "filename": "v1/quiet-gifting-premium-box-mockup.png",
+          "byte_size": 1712332,
+          "sha256": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa"
+        },
+        {
+          "filename": "v1/quiet-gifting-refinement.md",
+          "byte_size": 7190,
+          "sha256": "4223cd355bd5df631a38752bd77e0ae78d744db1583c2d26b13a5845003310cd"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6199,
+          "sha256": "6c307324b06d190374b643e1e137ab274b72deb3805d625c23fad0ce5ba0144c"
+        },
+        {
+          "filename": "v2/taobao-hero-delta-blocker.md",
+          "byte_size": 2049,
+          "sha256": "ddd47cc5ebbbda076fe883a12fbb93115a28498362ef81ca9df0a917bbacdd06"
+        },
+        {
+          "filename": "v2/verification.json",
+          "byte_size": 4596,
+          "sha256": "0adde4d2f11a1a3ce1eb128b07300d09a89ab69930faacc4a4fdf1b907e01b33"
+        }
+      ]
+    },
+    {
+      "turn_index": 3,
+      "logical_session_id": "session-02",
+      "started_at": "2026-08-23T09:48:32.081Z",
+      "finished_at": "2026-08-23T09:53:38.554Z",
+      "latency_ms": 306487,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 30,
+        "command_count": 9,
+        "tool_count": 3,
+        "image_activity_count": 4,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02de9-9e88-75d0-8a06-39086c6b02a1",
+        "usage": {
+          "input_tokens": 6806630,
+          "cached_input_tokens": 6599296,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 69121,
+          "reasoning_output_tokens": 22836
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 5670,
+          "sha256": "9264b4e34516125adda16f6d4c851bbc13cffc379ce56eabb4d1a1f53fe9da35"
+        },
+        {
+          "filename": "v0/creative-territories-board.html",
+          "byte_size": 20770,
+          "sha256": "de50d06475bd2de8099ef63024ffdb2febc3458f3f64b0217a60bac48f26d96d"
+        },
+        {
+          "filename": "v0/creative-territories-overview.png",
+          "byte_size": 382745,
+          "sha256": "79bb03309ee017467f429a87d6904814d0e8d68efb12ae7f1a56414e9cf259dc"
+        },
+        {
+          "filename": "v0/creative-territories.md",
+          "byte_size": 12244,
+          "sha256": "8809250da839db05a3179cd61a2b2b4e90515264664baf8839d625c1fd994ab7"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 5392,
+          "sha256": "bfceb5d176c9aedf6e815739f6cbc548c8224e711fe099300d6ede85493eb2cd"
+        },
+        {
+          "filename": "v1/quiet-gifting-premium-box-mockup.png",
+          "byte_size": 1712332,
+          "sha256": "7c710d89e67c9f2cbe19930c408a0fa4d0be8d593431227a1d050685f1b7e2fa"
+        },
+        {
+          "filename": "v1/quiet-gifting-refinement.md",
+          "byte_size": 7190,
+          "sha256": "4223cd355bd5df631a38752bd77e0ae78d744db1583c2d26b13a5845003310cd"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6199,
+          "sha256": "6c307324b06d190374b643e1e137ab274b72deb3805d625c23fad0ce5ba0144c"
+        },
+        {
+          "filename": "v2/taobao-hero-delta-blocker.md",
+          "byte_size": 2049,
+          "sha256": "ddd47cc5ebbbda076fe883a12fbb93115a28498362ef81ca9df0a917bbacdd06"
+        },
+        {
+          "filename": "v2/verification.json",
+          "byte_size": 4596,
+          "sha256": "0adde4d2f11a1a3ce1eb128b07300d09a89ab69930faacc4a4fdf1b907e01b33"
+        },
+        {
+          "filename": "v3/store-sign-whitespace-delta-blocker.md",
+          "byte_size": 2604,
+          "sha256": "cc973c35de4034781b9428a2932572a4742dffa70b2f9e1fbdda68caca104e0c"
+        },
+        {
+          "filename": "v3/verification.json",
+          "byte_size": 5734,
+          "sha256": "a3992789856a015122122f6025d6f7c5b1f884695692246a0f2650b54787e3d3"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 16984011,
+    "cached_input_tokens": 16365056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 216792,
+    "reasoning_output_tokens": 73544
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

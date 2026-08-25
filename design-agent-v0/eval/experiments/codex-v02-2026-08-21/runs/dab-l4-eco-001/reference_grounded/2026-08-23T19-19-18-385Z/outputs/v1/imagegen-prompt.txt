@@ -1,0 +1,30 @@
+Mode: OpenAI built-in image generation tool
+Use case: ads-marketing
+Asset type: premium Creative Territory mood background for an urban-commute portable-speaker campaign
+
+Input images:
+- Image 1: `inputs/02-brand_guideline.png`, style reference only.
+
+Prompt:
+Use Image 1's restrained cream, charcoal, pale sky-blue, and muted olive palette, but do not reproduce its logo, typography, pattern, or any text.
+
+Create a photorealistic, premium, minimal urban commute environment with no product in the scene. A quiet contemporary city threshold near a refined cafe or metro entrance: matte pale mineral wall, one slim charcoal architectural plane, a low light-gray stone ledge suitable for later product compositing, and a very subtle out-of-focus olive-green plant or tree reflection. One plain off-white canvas tote may sit far to the side as a commuting cue, with no visible metal attachment hardware.
+
+Composition/framing: wide landscape editorial advertising image; eye-level; generous clean negative space over at least 55% of the frame; keep the stone ledge in the lower-right/center-right area with a clear unobstructed placement zone for a product to be composited later; sparse geometry, no decorative clutter.
+
+Lighting/mood: soft directional morning light through architecture, restrained long shadow, low saturation, quiet confident mood, premium contemporary product-photography realism; subtle filmic texture, not glossy.
+
+Color palette: warm off-white, cool light gray, charcoal, pale sky-blue reflected light, tiny muted olive accent only.
+
+Materials/textures: mineral plaster, honed stone, matte canvas; real subtle texture.
+
+Constraints: background only; no speaker, no electronics, no product placeholder, no logos, no text, no signs, no watermark; no gold, metallic gold, yellow-gold, bronze, brass, or gilded details; no extra decorative objects; no people; no invented product accessories.
+
+Avoid: luxury-cliche gold, shiny marble, busy city street, neon, dramatic adventure mood, excessive props, heavy contrast, centered symmetry, floating objects.
+
+Generated source:
+`/Users/pan/.codex/generated_images/01a03010-20a5-7390-8336-ff1f2f211ad7/exec-4bc959e5-acd3-4818-937c-b5f5d47935fe.png`
+
+Project copy:
+`outputs/v1/assets/city-commute-minimal-background.png`
+

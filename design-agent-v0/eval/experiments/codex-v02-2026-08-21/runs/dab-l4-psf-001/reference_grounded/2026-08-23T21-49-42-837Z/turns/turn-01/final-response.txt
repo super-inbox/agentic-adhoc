@@ -1,0 +1,11 @@
+已应用反馈：锁定第二套「叶印章」，青柠改为低饱和偏黄绿 `#A1B36B`；其 L*≈70.09，原色为 69.88。其余四款及结构、Logo、信息层级均未改，v0 保持不变。
+
+新增：
+
+- [五 SKU 完整系列](/private<WORKDIR>/outputs/v1/01_strategy_b_full_five_sku_series.png)
+- [货架与缩略图检查](/private<WORKDIR>/outputs/v1/02_strategy_b_shelf_thumbnail_check.png)
+- [生成式同架场景图](/private<WORKDIR>/outputs/v1/03_strategy_b_generated_shelf_context.png)
+- [变更记录与内置图像工具提示](/private<WORKDIR>/outputs/v1/04_client_delta_and_prompt.md)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+
+已更新：[project-state.json](/private<WORKDIR>/outputs/project-state.json)。

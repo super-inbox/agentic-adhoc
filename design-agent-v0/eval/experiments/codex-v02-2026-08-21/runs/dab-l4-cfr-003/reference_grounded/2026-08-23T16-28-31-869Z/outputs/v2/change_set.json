@@ -1,0 +1,105 @@
+{
+  "schema_version": "object-change-set/1.0",
+  "change_set_id": "aroma-detail-hero-v2-swap-features",
+  "version": "v2",
+  "base_version": "v1",
+  "created_at": "2026-08-24T00:56:44+08:00",
+  "scope_policy": "requested_delta_only",
+  "summary": "Exchange the complete second and third selling-point objects while preserving the three existing slot geometries and all unrelated areas.",
+  "operations": [
+    {
+      "operation": "reorder_children",
+      "object_id": "feature-row",
+      "property": "children",
+      "before": ["feature-low-noise", "feature-timer", "feature-clay-touch"],
+      "after": ["feature-low-noise", "feature-clay-touch", "feature-timer"],
+      "reason": "Apply the client-requested second/third selling-point order swap."
+    },
+    {
+      "operation": "update",
+      "object_id": "feature-clay-touch",
+      "object_type": "feature_card",
+      "properties": {
+        "slot": {"before": 3, "after": 2},
+        "effective_bounds": {
+          "before": {"x": 779, "y": 1160, "width": 309, "height": 246},
+          "after": {"x": 445.5, "y": 1172, "width": 309, "height": 246}
+        },
+        "transform": {
+          "before": {"translate_x": 0, "translate_y": -12},
+          "after": {"translate_x": -333.5, "translate_y": 0}
+        }
+      },
+      "preserved": ["label", "icon", "card style", "font family", "font size", "font weight", "internal spacing"],
+      "reason": "Move the complete 陶土触感 object into the unchanged second slot."
+    },
+    {
+      "operation": "update",
+      "object_id": "feature-timer",
+      "object_type": "feature_card",
+      "properties": {
+        "slot": {"before": 2, "after": 3},
+        "effective_bounds": {
+          "before": {"x": 445.5, "y": 1172, "width": 309, "height": 246},
+          "after": {"x": 779, "y": 1160, "width": 309, "height": 246}
+        },
+        "transform": {
+          "before": {"translate_x": 0, "translate_y": 0},
+          "after": {"translate_x": 333.5, "translate_y": -12}
+        }
+      },
+      "preserved": ["label", "icon", "card style", "font family", "font size", "font weight", "internal spacing"],
+      "reason": "Move the complete 定时关闭 object into the unchanged third slot, including the slot's carried-forward -12 px vertical offset."
+    }
+  ],
+  "slot_geometry": {
+    "slot_1": {"x": 112, "y": 1172, "width": 309, "height": 246},
+    "slot_2": {"x": 445.5, "y": 1172, "width": 309, "height": 246},
+    "slot_3": {"x": 779, "y": 1160, "width": 309, "height": 246},
+    "comparison_to_v1": "identical"
+  },
+  "explicitly_unchanged": [
+    {
+      "object_id": "ambient-background",
+      "v1_sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+      "v2_sha256": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3"
+    },
+    {
+      "object_id": "product-image-locked",
+      "v1_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "v2_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "object_id": "headline",
+      "content_before": "让香气慢下来。",
+      "content_after": "让香气慢下来。",
+      "position_before": {"x": 600, "baseline_y": 1072},
+      "position_after": {"x": 600, "baseline_y": 1072},
+      "font_size_before": 72,
+      "font_size_after": 72
+    },
+    {
+      "object_id": "feature-low-noise",
+      "slot_before": 1,
+      "slot_after": 1,
+      "label_before": "低噪运行",
+      "label_after": "低噪运行",
+      "font_size_before": 32,
+      "font_size_after": 32
+    },
+    {
+      "object_id": "typography.feature_label",
+      "font_size_before": 32,
+      "font_size_after": 32
+    },
+    {
+      "object_id": "bottom-rhythm",
+      "result": "unchanged"
+    }
+  ],
+  "visual_diff_expectation": {
+    "allowed_bbox": {"left": 538, "top": 1199, "right": 1002, "bottom": 1367},
+    "allowed_reason": "Only the second and third icons and labels exchange positions; their identical card backgrounds remain fixed.",
+    "all_pixels_outside_bbox": "must_match_v1"
+  }
+}

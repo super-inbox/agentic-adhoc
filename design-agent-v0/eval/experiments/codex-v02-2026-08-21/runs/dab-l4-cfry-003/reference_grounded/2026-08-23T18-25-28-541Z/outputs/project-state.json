@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "project": "Orbit Coffee packaging artwork",
+  "current_version": "v1",
+  "updated_at": "2026-08-24T00:00:00+08:00",
+  "workflow_status": "factory_white_underbase_delta_applied; ready_for_factory_confirmation",
+  "client_decisions": [
+    "v0 front, dimensions, process colors, and trim/dieline geometry remain approved and locked.",
+    "Factory passed all items except the need for White underbase beneath back text.",
+    "v1 may add only a White layer beneath the back words ORIGIN, ROAST, and NOTES.",
+    "No front, size, process-color, or dieline changes are authorized."
+  ],
+  "locked_items": [
+    "Entire front production page and front composition",
+    "ORBIT COFFEE brand wordmark",
+    "Back CMYK/process artwork",
+    "120 x 200 mm finished size",
+    "3 mm bleed and all page/trim/dieline boxes",
+    "Generic CMYK output intent and process color data"
+  ],
+  "changed_items": [
+    "Added /Separation /White at 100 percent beneath ORIGIN, ROAST, and NOTES on production page 2 only.",
+    "Added named optional-content layer White - BACK TEXT.",
+    "Added v1 proof overlay and dedicated back White separation preview."
+  ],
+  "artifacts": {
+    "print_proof_pdf": "outputs/v1/orbit-coffee_print-proof_WHITE_v1.pdf",
+    "production_pdf": "outputs/v1/orbit-coffee_production_120x200mm_CMYK-WHITE_v1.pdf",
+    "white_separation_pdf": "outputs/v1/orbit-coffee_WHITE-separation_BACK_v1.pdf",
+    "preflight_report_pdf": "outputs/v1/orbit-coffee_preflight-report_v1.pdf",
+    "preflight_json": "outputs/v1/orbit-coffee_preflight_v1.json",
+    "verification_json": "outputs/v1/verification.json",
+    "visual_evidence": [
+      "outputs/v1/evidence/preflight-report-1.png",
+      "outputs/v1/evidence/production-1.png",
+      "outputs/v1/evidence/production-2.png",
+      "outputs/v1/evidence/proof-1.png",
+      "outputs/v1/evidence/proof-2.png",
+      "outputs/v1/evidence/white-mask-full.png",
+      "outputs/v1/evidence/white-separation-1.png"
+    ]
+  },
+  "previous_versions": {
+    "v0": {
+      "path": "outputs/v0",
+      "preserved": true,
+      "file_hashes_sha256": {
+        "outputs/v0/evidence/preflight-report-1.png": "eb0b4b46d04ab88a401b10c9e86d6220fbe2a232b4bd8742865aff71055be18f",
+        "outputs/v0/evidence/production-1.png": "1105ae0f9be610750920ae553b003c772d4f40eaf272ecd79833a004fae13823",
+        "outputs/v0/evidence/production-2.png": "d6aff07f35e30f27f8d88aafe64c599961f3b066c06ea3c52a30607ff36bde35",
+        "outputs/v0/evidence/proof-1.png": "cc83fac6f2b56319dc5d3b070125bd5436d850acc5f1582380d7fde6bc26eead",
+        "outputs/v0/evidence/proof-2.png": "00eae5f945ed0d5b6fcb11c811d48634f37538ca753f821560552357c9cae8da",
+        "outputs/v0/orbit-coffee_preflight-report_v0.pdf": "418db18c0708a18d0d84e89b0f7593f2dc7ae2ec571fb16770f08d5ad6eb2cf9",
+        "outputs/v0/orbit-coffee_preflight_v0.json": "0934f876c2c9c5f47f661fda22d4e9e620058c6e735ce2d1aa49bffe03fdb708",
+        "outputs/v0/orbit-coffee_print-proof_v0.pdf": "ec223b094d500baa13e56bc467dad3be9188dcd5744fb75c48586099e625927d",
+        "outputs/v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf": "d813430ee3e1c43f6471e7dcde42009aa493fa3d353c638661760225f03c1498",
+        "outputs/v0/verification.json": "dc8092a3bb2fc0152992e2cfe4eb25251fdd5f49a52be5a2d699286753d8548f"
+      }
+    }
+  },
+  "resolved_items": [
+    "Factory accepted v0 front, size, process color, and trim/dieline geometry.",
+    "Factory-requested back text White underbase is implemented in v1."
+  ],
+  "unresolved_blockers": [],
+  "next_checkpoint": "Factory to confirm the White - BACK TEXT separation; do not alter locked artwork unless new feedback is supplied."
+}

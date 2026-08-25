@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">SUMMER FORM Story</title>
+  <desc id="svg-desc">Approved SUMMER FORM campaign adapted to a 1080 by 1920 Story without changing the hero visual.</desc>
+  <defs>
+    <filter id="paper-grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="18" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="soft-noise">
+        <feFuncA type="table" tableValues="0 0.11"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="soft-noise" mode="multiply"/>
+    </filter>
+    <clipPath id="safe-frame-clip"><rect x="64" y="64" width="952" height="1792"/></clipPath>
+  </defs>
+  <style>
+    .line { fill: none; stroke: #273D70; stroke-width: 3; vector-effect: non-scaling-stroke; }
+    .hairline { fill: none; stroke: #273D70; stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+    .title { fill: #273D70; font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: -4px; }
+    .meta { fill: #273D70; font-family: Arial, Helvetica, sans-serif; font-weight: 400; letter-spacing: -1px; }
+  </style>
+  <g id="background">
+    <rect width="1080" height="1920" fill="#F3EFE6"/>
+    <rect width="1080" height="1920" fill="#F3EFE6" filter="url(#paper-grain)" opacity="0.42"/>
+  </g>
+
+  <g id="geometry-frame" clip-path="url(#safe-frame-clip)">
+    <rect id="outer-frame" x="64" y="64" width="952" height="1792" class="line"/>
+    <path id="grid-lines" d="M64 242H1016 M64 640H1016 M64 1300H1016 M64 1576H1016 M744 640V1300 M744 1576V1856" class="hairline"/>
+    <g id="geometry-top-band">
+      <rect x="648" y="64" width="236" height="178" fill="#3A5CA3"/>
+      <rect x="884" y="64" width="132" height="178" fill="#EF7D66"/>
+      <circle cx="242" cy="242" r="178" class="line"/>
+      <circle cx="242" cy="242" r="89" class="hairline"/>
+      <path d="M64 242H420 M242 64V420" class="hairline"/>
+    </g>
+    <g id="geometry-arcs">
+      <path d="M64 1070A230 230 0 0 0 294 1300A230 230 0 0 0 524 1070" class="line"/>
+      <path d="M1016 1070A272 272 0 0 0 744 1342" class="line"/>
+      <circle cx="744" cy="1576" r="184" class="line"/>
+      <path d="M560 1576H928 M744 1392V1760" class="hairline"/>
+    </g>
+    <g id="geometry-bottom-accents">
+      <rect x="64" y="1576" width="250" height="280" fill="#3A5CA3"/>
+      <rect x="314" y="1576" width="246" height="280" fill="#EF7D66"/>
+      <rect x="560" y="1576" width="96" height="280" fill="#3A5CA3"/>
+      <path d="M656 1576H1016" class="hairline"/>
+    </g>
+  </g>
+  <g id="campaign-copy">
+    <text id="title-summer" x="92" y="430" class="title" font-size="150">SUMMER</text>
+    <text id="title-form" x="470" y="598" class="title" font-size="190">FORM</text>
+  </g>
+  <g id="approved-art-window">
+    <rect x="92" y="680" width="620" height="573.2" fill="#F3EFE6"/>
+    <image id="approved-origami" href="assets/approved_origami_crop.png" x="92" y="680" width="620" height="573.2" preserveAspectRatio="xMidYMid meet"/>
+    <rect x="92" y="680" width="620" height="573.2" class="line"/>
+  </g>
+  <g id="event-details">
+    <rect x="92" y="1328" width="652" height="216" fill="#F3EFE6" class="line"/>
+    <text id="event-label" x="126" y="1388" class="meta" font-size="42">Design Market</text>
+    <text id="event-date" x="126" y="1462" class="meta" font-size="59">08—10 AUG</text>
+    <text id="event-location" x="126" y="1526" class="meta" font-size="54">BROOKLYN</text>
+  </g>
+  <g id="approved-brand-mark">
+    <rect x="786" y="1640" width="190" height="190" fill="#F3EFE6"/>
+    <image id="brand-mark-image" href="assets/approved_brand_mark_crop.png" x="786" y="1640" width="190" height="190" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+</svg>

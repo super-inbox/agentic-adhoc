@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "artifact_version": "v1",
+  "verified_at": "2026-08-23T21:18:00+08:00",
+  "status": "pass_with_expected_kv_selection_blocker",
+  "requested_delta": [
+    "Select the darker direction",
+    "Preserve the nighttime atmosphere",
+    "Add real tabletop contact",
+    "Use a softer side light",
+    "Remove the floating-product impression"
+  ],
+  "checks": [
+    {
+      "id": "selected_territory_recorded",
+      "status": "pass",
+      "result": "Territory C — Night Landing is recorded as the approved direction; C1, C2, and C3 remain pending.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/mori-night-landing-refinement-v1.png"
+      ]
+    },
+    {
+      "id": "delta_scope_only",
+      "status": "pass",
+      "result": "V1 revises only the three Territory C KV candidates. No Territory A or B candidate was recreated or changed.",
+      "method": "Inspected V1 artifact contents and output names.",
+      "evidence_paths": [
+        "outputs/v1/mori-night-landing-refinement-v1.svg",
+        "outputs/v1/mori-night-landing-refinement-v1.png"
+      ]
+    },
+    {
+      "id": "v0_preserved",
+      "status": "pass",
+      "result": "The earlier V0 folder remains in place; the V0 review-board hash matches its prior verification record.",
+      "v0_review_board_sha256": "0b58c456042436c21b4d34621d507d686f31db87caefe18f4be5828e82eda58b",
+      "evidence_paths": [
+        "outputs/v0/mori-kv-territories-v0.png",
+        "outputs/v0/verification.json"
+      ]
+    },
+    {
+      "id": "product_identity_preservation",
+      "status": "pass",
+      "result": "All three V1 KVs reference the supplied product image directly; the product was not sent to ImageGen and no filter is applied to the bottle-photo elements.",
+      "method": "Confirmed three data-role=product-exact references to inputs/02-launch_product.png in the editable SVG.",
+      "product_source_sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286",
+      "evidence_paths": [
+        "inputs/02-launch_product.png",
+        "outputs/v1/mori-night-landing-refinement-v1.svg",
+        "outputs/v1/mori-night-landing-refinement-v1-self-contained.svg"
+      ]
+    },
+    {
+      "id": "real_tabletop_contact",
+      "status": "pass",
+      "result": "C1 and C2 product-photo planes terminate at the bottom canvas edge; C3 preserves the full original tabletop. Contact shadows and table surfaces remain visible in all three.",
+      "method": "Checked SVG placement geometry and visually inspected the 1600 × 960 rendered board.",
+      "evidence_paths": [
+        "outputs/v1/mori-night-landing-refinement-v1.svg",
+        "outputs/v1/mori-night-landing-refinement-v1.png"
+      ]
+    },
+    {
+      "id": "softer_side_light",
+      "status": "pass",
+      "result": "The V1 background uses a broader, feathered, lower-contrast lateral wash without a hard bright band or hotspot.",
+      "method": "Visual comparison of the V0 and V1 Territory C backdrop plates.",
+      "v1_background_sha256": "97f526e80215718a57b01c143948a07632232125de947105c32ae8b7a7b48e1d",
+      "evidence_paths": [
+        "outputs/v0/assets/territory-c-night-landing-bg.png",
+        "outputs/v1/assets/territory-c-soft-side-light-bg-v1.png",
+        "outputs/v1/generation-prompt-v1.md"
+      ]
+    },
+    {
+      "id": "brand_and_copy_locks",
+      "status": "pass",
+      "result": "Each V1 KV retains the MORI wordmark, warm off-white, terracotta red, and only the approved English and Chinese consumer copy.",
+      "method": "Confirmed three card-logo uses plus the board header, 20 off-white tokens, 7 terracotta tokens, and extracted all consumer-copy nodes.",
+      "approved_copy": [
+        "Quiet hours, made tangible.",
+        "让夜晚慢下来。"
+      ],
+      "evidence_paths": [
+        "inputs/01-brand_guideline.png",
+        "outputs/v1/mori-night-landing-refinement-v1.svg",
+        "outputs/v1/mori-night-landing-refinement-v1.png"
+      ]
+    },
+    {
+      "id": "avoid_medical_and_floating_cues",
+      "status": "pass",
+      "result": "No treatment, insomnia, dosage, pill, sleep-device, neon, or floating-product cue appears in the V1 KV artwork.",
+      "method": "Zero forbidden-term matches in the editable SVG plus full-board visual inspection.",
+      "evidence_paths": [
+        "outputs/v1/mori-night-landing-refinement-v1.svg",
+        "outputs/v1/mori-night-landing-refinement-v1.png"
+      ]
+    },
+    {
+      "id": "render_integrity",
+      "status": "pass",
+      "result": "Final V1 review board is a 1600 × 960 RGBA PNG with all source imagery, logos, and copy visible.",
+      "output_sha256": "f46bbf8567590a920ecfc0e96201de4a4059d1bbc6f23cc51605023d166b7fba",
+      "evidence_paths": [
+        "outputs/v1/mori-night-landing-refinement-v1.png"
+      ]
+    },
+    {
+      "id": "channel_extensions_deferred",
+      "status": "pass",
+      "result": "No website hero, Instagram portrait, or email header artifact was created in V1.",
+      "method": "Searched outputs/v1 for hero, Instagram, and email artifact names; found zero.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "kv_selection_required",
+      "type": "expected_workflow_checkpoint",
+      "description": "The client selected Territory C but has not selected C1, C2, or C3. Channel extensions remain blocked until one KV is chosen.",
+      "accepted_response_format": "C1, C2, or C3"
+    }
+  ],
+  "new_or_changed_output_paths": [
+    "outputs/v1/mori-night-landing-refinement-v1.png",
+    "outputs/v1/mori-night-landing-refinement-v1.svg",
+    "outputs/v1/mori-night-landing-refinement-v1-self-contained.svg",
+    "outputs/v1/assets/territory-c-soft-side-light-bg-v1.png",
+    "outputs/v1/generation-prompt-v1.md",
+    "outputs/v1/verification.json",
+    "outputs/project-state.json"
+  ]
+}

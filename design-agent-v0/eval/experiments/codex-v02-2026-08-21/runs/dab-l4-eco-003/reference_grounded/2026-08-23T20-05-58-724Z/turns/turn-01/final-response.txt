@@ -1,0 +1,14 @@
+已按反馈完成 v1：
+
+- 首屏仅保留“让香气慢下来”和“低噪运行”。
+- “定时关闭”“陶土触感”已转入下一屏内容交接。
+- 产品与主背景沿用 v0，锁定区域像素差异为 0；仅卖点面板发生变化。
+- v0 文件保持不变。
+
+新建或更新路径：
+
+- [v1 首屏成稿](/private<WORKDIR>/outputs/v1/taobao-first-screen-text-reduced-v1.png)
+- [下一屏内容交接](/private<WORKDIR>/outputs/v1/next-screen-content-handoff.md)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [生成提示词](/private<WORKDIR>/outputs/v1/generation-prompt.md)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)

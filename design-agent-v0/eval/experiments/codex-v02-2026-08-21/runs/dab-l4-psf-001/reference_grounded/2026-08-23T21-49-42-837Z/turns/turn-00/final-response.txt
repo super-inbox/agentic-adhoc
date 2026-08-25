@@ -1,0 +1,17 @@
+v0 决策阶段已完成，尚未提前展开最终五款。
+
+- [10 个色彩编码假设板](<WORKDIR>/outputs/v0/03_locked_color_encoding_hypotheses.png)
+- [A/B/C 系列策略选择板](<WORKDIR>/outputs/v0/04_locked_three_strategy_choice_board.png)
+- [策略说明与五味色谱](<WORKDIR>/outputs/v0/05_strategy_decision_notes.md)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+三个选择：
+
+- A「色域舱」：缩略图和远距货架识别最强。
+- B「叶印章」：品牌资产参与度最高，区分与系列感较平衡。
+- C「微型色码」：墨量最低、最克制，但远距识别较弱。
+
+主板直接复用批准包装照片，容器比例、黑色杯盖、Logo 与信息位置均锁定；10 个假设、3 个策略及5个指定 SKU 均已核验。内置图像生成工具仅用于前期探索，提示集保存在 [prompt_set.md](<WORKDIR>/scratch/imagegen/prompt_set.md)。本地浏览器预览器不可用，但已完成全尺寸及 480px 缩略图检查。
+
+请回复 **A、B 或 C**，我再展开完整五款。

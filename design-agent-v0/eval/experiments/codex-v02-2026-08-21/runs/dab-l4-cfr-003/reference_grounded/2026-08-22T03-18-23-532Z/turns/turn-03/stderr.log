@@ -1,0 +1,17 @@
+operational_attempt=1; completed=true
+2026-08-22T23:53:43.474244Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-22T23:53:43.478621Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 94 column 5
+2026-08-22T23:53:45.933020Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-22T23:53:45.933043Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-22T23:54:17.396495Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 181ms)... turn_id=01a02be5-0b7f-7810-9edb-ba9b1724f55b retries=1 max_retries=5 sampling_error=request timed out
+2026-08-22T23:54:32.589733Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (2/5 in 422ms)... turn_id=01a02be5-0b7f-7810-9edb-ba9b1724f55b retries=2 max_retries=5 sampling_error=request timed out
+2026-08-22T23:54:48.028283Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (3/5 in 860ms)... turn_id=01a02be5-0b7f-7810-9edb-ba9b1724f55b retries=3 max_retries=5 sampling_error=request timed out
+2026-08-22T23:55:03.897067Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (4/5 in 1.486s)... turn_id=01a02be5-0b7f-7810-9edb-ba9b1724f55b retries=4 max_retries=5 sampling_error=request timed out
+2026-08-22T23:55:20.398476Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (5/5 in 2.979s)... turn_id=01a02be5-0b7f-7810-9edb-ba9b1724f55b retries=5 max_retries=5 sampling_error=request timed out
+2026-08-22T23:55:38.398914Z  WARN codex_core::client: falling back to HTTP
+2026-08-22T23:56:11.303132Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-22T23:56:28.268988Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-22T23:56:45.765117Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-22T23:59:28.183249Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+2026-08-23T00:02:11.172528Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 94 column 5
+

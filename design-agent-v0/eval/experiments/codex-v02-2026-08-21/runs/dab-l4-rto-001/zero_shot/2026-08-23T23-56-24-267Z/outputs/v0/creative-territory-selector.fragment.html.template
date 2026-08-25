@@ -1,0 +1,137 @@
+<section id="creative-territories-v0" aria-labelledby="ct-v0-title">
+  <style>
+    #creative-territories-v0 {
+      --ct-product: url("__PRODUCT_DATA__");
+      --ct-terracotta: #b85e49;
+      --ct-ink: #29211e;
+      color: var(--ct-ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    #creative-territories-v0 .ct-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 18px; }
+    #creative-territories-v0 .ct-head p { margin: 0; color: #746861; }
+    #creative-territories-v0 .ct-kicker { color: var(--ct-terracotta); letter-spacing: .08em; }
+    #creative-territories-v0 .ct-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    #creative-territories-v0 article { min-width: 0; padding: 18px; border-radius: 24px; }
+    #creative-territories-v0 article h3 { margin: 0 0 4px; font-weight: 500; }
+    #creative-territories-v0 article p { margin: 0 0 12px; }
+    #creative-territories-v0 .ct-a { background: #efe3d2; color: #2b211c; }
+    #creative-territories-v0 .ct-b { background: #221d1b; color: #f4ece2; }
+    #creative-territories-v0 .ct-c { background: #d7a08f; color: #2a2321; }
+    #creative-territories-v0 .ct-stage { position: relative; min-height: 248px; overflow: hidden; border-radius: 18px; margin: 14px 0; }
+    #creative-territories-v0 .ct-stage-a { background: #f6eee3; }
+    #creative-territories-v0 .ct-stage-b { background: #171312; }
+    #creative-territories-v0 .ct-stage-c { background: #f2d1c5; }
+    #creative-territories-v0 .ct-product { position: absolute; inset: 20% 2% 0 22%; background-image: var(--ct-product); background-repeat: no-repeat; background-size: contain; background-position: center bottom; }
+    #creative-territories-v0 .ct-stage-b .ct-product { inset: 25% 5% 0; z-index: 2; }
+    #creative-territories-v0 .ct-stage-c .ct-product { inset: 24% -2% 0 26%; }
+    #creative-territories-v0 .ct-copy { position: absolute; top: 18px; left: 18px; z-index: 3; margin: 0; font-weight: 500; }
+    #creative-territories-v0 .ct-stage-b .ct-copy { left: 0; right: 0; text-align: center; }
+    #creative-territories-v0 .ct-stage-b::before,
+    #creative-territories-v0 .ct-stage-b::after { content: ""; position: absolute; left: 10%; right: 10%; top: 34%; bottom: 10%; border: 1px solid #6c3e35; border-radius: 50%; }
+    #creative-territories-v0 .ct-stage-b::after { left: 20%; right: 20%; top: 42%; bottom: 18%; border-color: #8b4c40; }
+    #creative-territories-v0 .ct-intervals { position: absolute; left: 18px; bottom: 22px; z-index: 3; display: grid; gap: 7px; }
+    #creative-territories-v0 .ct-intervals i { display: block; height: 6px; border-radius: 6px; background: #2a2321; }
+    #creative-territories-v0 .ct-intervals i:nth-child(1) { width: 48px; }
+    #creative-territories-v0 .ct-intervals i:nth-child(2) { width: 82px; }
+    #creative-territories-v0 .ct-intervals i:nth-child(3) { width: 126px; }
+    #creative-territories-v0 dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 12px; margin: 12px 0 16px; }
+    #creative-territories-v0 dt { opacity: .64; }
+    #creative-territories-v0 dd { margin: 0; }
+    #creative-territories-v0 .ct-swatches { display: flex; gap: 8px; align-items: center; }
+    #creative-territories-v0 .ct-swatch { width: 22px; height: 22px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgb(0 0 0 / .08); }
+    #creative-territories-v0 .ct-status { margin-top: 16px; color: #746861; }
+    @media (max-width: 760px) {
+      #creative-territories-v0 .ct-head { display: block; }
+      #creative-territories-v0 .ct-grid { grid-template-columns: 1fr; }
+      #creative-territories-v0 .ct-stage { min-height: 260px; }
+    }
+  </style>
+
+  <header class="ct-head">
+    <div>
+      <div class="ct-kicker">V0 · 方向选择</div>
+      <h2 id="ct-v0-title">三条原创路径</h2>
+    </div>
+    <p>产品身份与批准文案锁定；当前不生成最终模块。</p>
+  </header>
+
+  <div class="ct-grid">
+    <article class="ct-a">
+      <h3>A｜陶土留白</h3>
+      <p>材质先行 · 编辑式留白</p>
+      <div class="ct-stage ct-stage-a">
+        <p class="ct-copy">让香气<br>慢下来</p>
+        <div class="ct-product" role="img" aria-label="保持原始颜色与结构的陶土红香薰机"></div>
+      </div>
+      <dl>
+        <dt>假设簇</dt><dd>H01 · H02 · H03 · H04</dd>
+        <dt>节奏</dt><dd>大留白 / 低位重心 / 长停顿</dd>
+        <dt>风险</dt><dd>避免泛米色模板感</dd>
+        <dt>色板</dt><dd class="ct-swatches"><i class="ct-swatch" style="background:#f3e9da"></i><i class="ct-swatch" style="background:#b85e49"></i><i class="ct-swatch" style="background:#2b211c"></i></dd>
+      </dl>
+      <button class="btn btn-block" type="button" data-choice="A｜陶土留白" aria-pressed="false">选择 A</button>
+    </article>
+
+    <article class="ct-b">
+      <h3>B｜静域圆场</h3>
+      <p>安静技术感 · 稳定中轴</p>
+      <div class="ct-stage ct-stage-b">
+        <p class="ct-copy">低噪运行</p>
+        <div class="ct-product" role="img" aria-label="保持原始颜色与结构的陶土红香薰机"></div>
+      </div>
+      <dl>
+        <dt>假设簇</dt><dd>H05 · H06 · H07</dd>
+        <dt>节奏</dt><dd>严格中轴 / 低对比 / 少量椭圆</dd>
+        <dt>风险</dt><dd>不用声波、水波或发光暗示</dd>
+        <dt>色板</dt><dd class="ct-swatches"><i class="ct-swatch" style="background:#201b19"></i><i class="ct-swatch" style="background:#b85e49"></i><i class="ct-swatch" style="background:#f1e7db"></i></dd>
+      </dl>
+      <button class="btn btn-block" type="button" data-choice="B｜静域圆场" aria-pressed="false">选择 B</button>
+    </article>
+
+    <article class="ct-c">
+      <h3>C｜慢刻序列</h3>
+      <p>时间节奏 · 三拍阅读</p>
+      <div class="ct-stage ct-stage-c">
+        <p class="ct-copy">让香气<br>慢下来</p>
+        <div class="ct-product" role="img" aria-label="保持原始颜色与结构的陶土红香薰机"></div>
+        <div class="ct-intervals" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+      <dl>
+        <dt>假设簇</dt><dd>H08 · H09 · H10</dd>
+        <dt>节奏</dt><dd>分段栅格 / 递增间隔 / 一句一拍</dd>
+        <dt>风险</dt><dd>不出现钟面、时长或进度状态</dd>
+        <dt>色板</dt><dd class="ct-swatches"><i class="ct-swatch" style="background:#d7a08f"></i><i class="ct-swatch" style="background:#2a2321"></i><i class="ct-swatch" style="background:#f7f1ea"></i></dd>
+      </dl>
+      <button class="btn btn-block" type="button" data-choice="C｜慢刻序列" aria-pressed="false">选择 C</button>
+    </article>
+  </div>
+  <p class="ct-status" aria-live="polite">请选择 A、B 或 C；获选后再制作首屏与两张卖点模块。</p>
+
+  <script>
+    (() => {
+      const root = document.getElementById("creative-territories-v0");
+      const buttons = [...root.querySelectorAll("button[data-choice]")];
+      const status = root.querySelector(".ct-status");
+      buttons.forEach((button) => {
+        button.addEventListener("click", async () => {
+          buttons.forEach((item) => item.setAttribute("aria-pressed", "false"));
+          button.setAttribute("aria-pressed", "true");
+          const choice = button.dataset.choice;
+          status.textContent = `已选 ${choice}；正在请求在聊天中确认。`;
+          if (window.openai && typeof window.openai.sendFollowUpMessage === "function") {
+            try {
+              await window.openai.sendFollowUpMessage({
+                title: "确认 Creative Territory",
+                prompt: `我选择 ${choice}。请据此进入下一版，完成首屏和两张卖点模块；继续锁定产品身份与批准文案。`
+              });
+            } catch (error) {
+              status.textContent = `已选 ${choice}；请在聊天中回复该选项。`;
+            }
+          } else {
+            status.textContent = `已选 ${choice}；请在聊天中回复该选项。`;
+          }
+        });
+      });
+    })();
+  </script>
+</section>

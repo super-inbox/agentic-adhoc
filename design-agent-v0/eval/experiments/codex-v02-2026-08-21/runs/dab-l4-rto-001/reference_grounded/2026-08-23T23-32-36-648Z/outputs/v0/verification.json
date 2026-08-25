@@ -1,0 +1,93 @@
+{
+  "version": "v0",
+  "stage": "creative_territory_selection",
+  "checks": [
+    {
+      "id": "input_inventory",
+      "status": "passed",
+      "method": "Checked the four bound PNG inputs and their image dimensions.",
+      "evidence_paths": [
+        "inputs/01-layout_reference.png",
+        "inputs/02-palette_reference.png",
+        "inputs/03-composition_reference.png",
+        "inputs/04-product_reference.png"
+      ]
+    },
+    {
+      "id": "reference_deconstruction_before_generation",
+      "status": "passed",
+      "method": "Documented allowed principles and explicit discard lists for every reference before rendering the territory board.",
+      "evidence_paths": [
+        "outputs/v0/reference-deconstruction-and-territories.md",
+        "outputs/v0/creative-territories-board.png"
+      ]
+    },
+    {
+      "id": "hypothesis_count_and_clustering",
+      "status": "passed",
+      "result": {
+        "hypothesis_count": 10,
+        "clusters": {
+          "A_余温留白": ["H01", "H02", "H03", "H04"],
+          "B_陶土切面": ["H05", "H06", "H07"],
+          "C_静音时序": ["H08", "H09", "H10"]
+        }
+      },
+      "evidence_path": "outputs/v0/reference-deconstruction-and-territories.md"
+    },
+    {
+      "id": "reference_identity_avoidance",
+      "status": "passed",
+      "method": "Authored visuals use only original rectangles, one diagonal plane, sequence bars, rules, approved copy, and the exact product source. No reference image is embedded in the candidate board.",
+      "checked_for_known_reference_identifiers": [
+        "MORI",
+        "QUIET RITUAL",
+        "SUMMER FORM",
+        "BROOKLYN",
+        "reference leaf mark",
+        "reference circular grid"
+      ],
+      "evidence_paths": [
+        "outputs/v0/creative-territories-board.svg",
+        "outputs/v0/creative-territories-board.png"
+      ]
+    },
+    {
+      "id": "product_identity_integrity",
+      "status": "passed",
+      "method": "Compared SHA-256 of the bound product input and the copied product asset used by the board.",
+      "source_path": "inputs/04-product_reference.png",
+      "candidate_asset_path": "outputs/v0/product-reference-exact.png",
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "result": "Hashes are identical. Board derivatives use only crop and scale operations."
+    },
+    {
+      "id": "visual_render",
+      "status": "passed",
+      "method": "Rendered and visually inspected the direction board at full resolution.",
+      "evidence_path": "outputs/v0/creative-territories-board.png",
+      "dimensions": "2400x1800",
+      "inspection_result": "Reference principles, all three territories, H01-H10, route differences, and the selection checkpoint are legible; product-defining features remain visible in every route preview."
+    },
+    {
+      "id": "scope_checkpoint",
+      "status": "passed",
+      "result": "No final hero or two selling-point modules were created before client territory selection."
+    }
+  ],
+  "evidence_paths": [
+    "outputs/v0/creative-territories-board.png",
+    "outputs/v0/creative-territories-board.svg",
+    "outputs/v0/reference-deconstruction-and-territories.md",
+    "outputs/project-state.json"
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "territory_selection",
+      "blocking": true,
+      "owner": "client",
+      "needed": "Choose A, B, or C as the primary Creative Territory.",
+      "blocked_work": "Final hero and two selling-point modules."
+    }
+  ]
+}

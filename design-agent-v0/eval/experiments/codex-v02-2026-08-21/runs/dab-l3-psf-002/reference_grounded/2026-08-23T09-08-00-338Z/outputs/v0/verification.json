@@ -1,0 +1,65 @@
+{
+  "version": "v0",
+  "status": "passed_with_noted_limitation",
+  "checks_performed": [
+    {
+      "check": "source_image_available",
+      "result": "pass",
+      "evidence": "inputs/01-packaging_candidates.png",
+      "details": "PNG inspected at 1024 x 1024; SHA-256 b4bbb640cc1941d34e156e50d74214b2d7828b4d077c0be5070cd408dea0023c."
+    },
+    {
+      "check": "candidate_scope_A_to_D_only",
+      "result": "pass",
+      "evidence": "outputs/v0/packaging-evaluation.md"
+    },
+    {
+      "check": "all_five_criteria_scored_for_every_candidate",
+      "result": "pass",
+      "evidence": "outputs/v0/packaging-evaluation.md",
+      "details": "Shelf recognition, masculine without stereotyping, quality, logo/wordmark legibility, and multi-SKU extensibility are each scored out of 10 for A, B, C, and D."
+    },
+    {
+      "check": "complete_ranking_1_to_4",
+      "result": "pass",
+      "evidence": "outputs/v0/packaging-evaluation.md",
+      "details": "Ranking recorded as B, C, A, D."
+    },
+    {
+      "check": "exactly_two_preproduction_priorities_for_selected_option",
+      "result": "pass",
+      "evidence": "outputs/v0/packaging-evaluation.md",
+      "details": "Two priorities are recorded for B: brand/SKU hierarchy and production robustness of metallic fine-line graphics."
+    },
+    {
+      "check": "shelf_and_thumbnail_preference_applied",
+      "result": "pass",
+      "evidence": "outputs/v0/packaging-evaluation.md",
+      "details": "Shelf recognition is weighted 30% and logo/wordmark legibility 25%; the remaining criteria are weighted 15% each."
+    },
+    {
+      "check": "no_new_packaging_generated_or_existing_packaging_modified",
+      "result": "pass",
+      "evidence": "outputs/project-state.json"
+    },
+    {
+      "check": "no_fabricated_consumer_polling_data",
+      "result": "pass",
+      "evidence": "outputs/v0/packaging-evaluation.md"
+    },
+    {
+      "check": "json_syntax_validation",
+      "result": "pass",
+      "evidence": [
+        "outputs/project-state.json",
+        "outputs/v0/verification.json"
+      ],
+      "details": "Both JSON files parsed successfully with jq."
+    }
+  ],
+  "limitations": [
+    "The board does not show a separate brand logo, so the requested logo-legibility criterion was assessed using the primary front-facing wordmark.",
+    "Only a front-view rendered board was supplied; substrate, finish, side/back panels, regulatory copy, physical size, and actual retail lighting were not available for verification."
+  ],
+  "unresolved_blockers": []
+}

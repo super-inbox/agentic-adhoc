@@ -1,0 +1,277 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-MFA-002@reference_grounded",
+  "base_brief_id": "DAB-L4-MFA-002",
+  "context_condition": "reference_grounded",
+  "category": "multi_format_adaptation",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "structured_editing"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T20:40:44.704Z",
+  "finished_at": "2026-08-23T21:05:05.498Z",
+  "latency_ms": 1460794,
+  "intended_turns": 2,
+  "completed_turns": 2,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a0305a-afcf-7d41-a935-31a361cf3b1d",
+  "input_assets": [
+    {
+      "input_id": "campaign-master",
+      "asset_id": "image-edit-poster-summer-form",
+      "role": "approved_master",
+      "reference_role": "approved_master",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-approved_master.png",
+      "source_path": "eval/assets/reference-pack-v0.2/image-edit/poster-summer-form.png",
+      "byte_size": 1388454,
+      "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+    }
+  ],
+  "input_context_ids": [
+    "campaign-master",
+    "channel-spec"
+  ],
+  "required_candidate_artifacts": [
+    "preview.png",
+    "design_document.json",
+    "change_set.json",
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "preview.png": true,
+    "design_document.json": true,
+    "change_set.json": true,
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 4589,
+      "sha256": "7633b6b9d5881b134952e98f03d3a5fe20d89f27ba16e64b8cb287d520dfd459"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 11597,
+      "sha256": "05a411cdc7cebf2acbf37e320bbca3b9f0558b4ab1e905903cd14e961291f628"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 9163,
+      "sha256": "9221b52252e31d89917b09781b03b0f61b67c01a16024d36bfdd7fe4514a397e"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 646794,
+      "sha256": "9dc8ac8ab76d4576388554655a5d8f427c221497c6ea49ac461d852d92c4d434"
+    },
+    {
+      "filename": "v0/render_adaptation_map.py",
+      "byte_size": 12254,
+      "sha256": "a12187fba5385d59e8fac5d80c521a53e2642c3637c76bdc63c1cb843ffc4862"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 6399,
+      "sha256": "b4b54cca3196d753c41500433e5c85fdd2b6bd4781e2bff87bde25118326d940"
+    },
+    {
+      "filename": "v1/change_set.json",
+      "byte_size": 3746,
+      "sha256": "d6fbc0a0ef24b837eac7d1cf83c8a17a65e61893f1c94b20a601b47f46c2700d"
+    },
+    {
+      "filename": "v1/design_document.json",
+      "byte_size": 9773,
+      "sha256": "8ce06079eda3bba4b887cbeb3791bfcbdf5942b08242008418e3e5a2d06b939b"
+    },
+    {
+      "filename": "v1/preview.png",
+      "byte_size": 656057,
+      "sha256": "7ea73de6e61f53bae0855ed94a46b50ed55bb35bedbcd224d257dda1856be4a0"
+    },
+    {
+      "filename": "v1/render_adaptation_map.py",
+      "byte_size": 12949,
+      "sha256": "0979df7c690528ada98fbb19c730c4f566e97c2e2d3adbc025bf5c308c0bf9ca"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 8051,
+      "sha256": "1b2eb58388db27803b07409f9c3f927a6e94b7ca32530e54cc62e90b6f705e1e"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T20:40:44.704Z",
+      "finished_at": "2026-08-23T20:55:40.233Z",
+      "latency_ms": 895537,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 59,
+        "command_count": 18,
+        "tool_count": 8,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a0305a-afcf-7d41-a935-31a361cf3b1d",
+        "usage": {
+          "input_tokens": 1428250,
+          "cached_input_tokens": 1296128,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 39821,
+          "reasoning_output_tokens": 11278
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 2858,
+          "sha256": "850fb059968bda7ed39c62b6b97e6d5b04d6366ccae8c7997e76c614ed2977a4"
+        },
+        {
+          "filename": "v0/change_set.json",
+          "byte_size": 11597,
+          "sha256": "05a411cdc7cebf2acbf37e320bbca3b9f0558b4ab1e905903cd14e961291f628"
+        },
+        {
+          "filename": "v0/design_document.json",
+          "byte_size": 9163,
+          "sha256": "9221b52252e31d89917b09781b03b0f61b67c01a16024d36bfdd7fe4514a397e"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 646794,
+          "sha256": "9dc8ac8ab76d4576388554655a5d8f427c221497c6ea49ac461d852d92c4d434"
+        },
+        {
+          "filename": "v0/render_adaptation_map.py",
+          "byte_size": 12254,
+          "sha256": "a12187fba5385d59e8fac5d80c521a53e2642c3637c76bdc63c1cb843ffc4862"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 6399,
+          "sha256": "b4b54cca3196d753c41500433e5c85fdd2b6bd4781e2bff87bde25118326d940"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T20:55:40.241Z",
+      "finished_at": "2026-08-23T21:05:05.477Z",
+      "latency_ms": 565252,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 50,
+        "command_count": 14,
+        "tool_count": 7,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a0305a-afcf-7d41-a935-31a361cf3b1d",
+        "usage": {
+          "input_tokens": 3769154,
+          "cached_input_tokens": 3582208,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 61345,
+          "reasoning_output_tokens": 18602
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 4589,
+          "sha256": "7633b6b9d5881b134952e98f03d3a5fe20d89f27ba16e64b8cb287d520dfd459"
+        },
+        {
+          "filename": "v0/change_set.json",
+          "byte_size": 11597,
+          "sha256": "05a411cdc7cebf2acbf37e320bbca3b9f0558b4ab1e905903cd14e961291f628"
+        },
+        {
+          "filename": "v0/design_document.json",
+          "byte_size": 9163,
+          "sha256": "9221b52252e31d89917b09781b03b0f61b67c01a16024d36bfdd7fe4514a397e"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 646794,
+          "sha256": "9dc8ac8ab76d4576388554655a5d8f427c221497c6ea49ac461d852d92c4d434"
+        },
+        {
+          "filename": "v0/render_adaptation_map.py",
+          "byte_size": 12254,
+          "sha256": "a12187fba5385d59e8fac5d80c521a53e2642c3637c76bdc63c1cb843ffc4862"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 6399,
+          "sha256": "b4b54cca3196d753c41500433e5c85fdd2b6bd4781e2bff87bde25118326d940"
+        },
+        {
+          "filename": "v1/change_set.json",
+          "byte_size": 3746,
+          "sha256": "d6fbc0a0ef24b837eac7d1cf83c8a17a65e61893f1c94b20a601b47f46c2700d"
+        },
+        {
+          "filename": "v1/design_document.json",
+          "byte_size": 9773,
+          "sha256": "8ce06079eda3bba4b887cbeb3791bfcbdf5942b08242008418e3e5a2d06b939b"
+        },
+        {
+          "filename": "v1/preview.png",
+          "byte_size": 656057,
+          "sha256": "7ea73de6e61f53bae0855ed94a46b50ed55bb35bedbcd224d257dda1856be4a0"
+        },
+        {
+          "filename": "v1/render_adaptation_map.py",
+          "byte_size": 12949,
+          "sha256": "0979df7c690528ada98fbb19c730c4f566e97c2e2d3adbc025bf5c308c0bf9ca"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 8051,
+          "sha256": "1b2eb58388db27803b07409f9c3f927a6e94b7ca32530e54cc62e90b6f705e1e"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 5197404,
+    "cached_input_tokens": 4878336,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 101166,
+    "reasoning_output_tokens": 29880
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

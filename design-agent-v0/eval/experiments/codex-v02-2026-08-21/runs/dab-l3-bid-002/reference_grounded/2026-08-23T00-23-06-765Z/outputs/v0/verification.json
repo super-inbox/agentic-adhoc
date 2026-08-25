@@ -1,0 +1,100 @@
+{
+  "version": "v0",
+  "status": "pass_with_documented_next_round_blocker",
+  "checks": [
+    {
+      "check": "Source candidate board inspected at original resolution",
+      "result": "pass",
+      "evidence_paths": [
+        "./inputs/01-logo_candidates.png"
+      ]
+    },
+    {
+      "check": "Evaluation limited to A-D and no fifth concept generated",
+      "result": "pass",
+      "evidence_paths": [
+        "./outputs/v0/noma-logo-evaluation-v0.md",
+        "./outputs/v0/noma-logo-scorecard-v0.json"
+      ]
+    },
+    {
+      "check": "All four criteria scored with equal weight",
+      "result": "pass",
+      "details": "Each criterion is scored out of 10 and weighted at 0.25; total is out of 40.",
+      "evidence_paths": [
+        "./outputs/v0/noma-logo-scorecard-v0.json"
+      ]
+    },
+    {
+      "check": "Complete unambiguous ranking from 1 through 4",
+      "result": "pass",
+      "details": "C (32), B (30), D (26), A (22).",
+      "evidence_paths": [
+        "./outputs/v0/noma-logo-evaluation-v0.md",
+        "./outputs/v0/noma-logo-scorecard-v0.json"
+      ]
+    },
+    {
+      "check": "Per-candidate, per-criterion visual evidence recorded",
+      "result": "pass",
+      "evidence_paths": [
+        "./outputs/v0/noma-logo-evaluation-v0.md",
+        "./outputs/v0/noma-logo-scorecard-v0.json"
+      ]
+    },
+    {
+      "check": "Small-size recognition checked with normalized symbol-only crops",
+      "result": "pass",
+      "details": "Each supplied symbol was cropped from the same source board and normalized to 32 x 32 px for analysis only.",
+      "evidence_paths": [
+        "./outputs/v0/small-size-A-32px-check.png",
+        "./outputs/v0/small-size-B-32px-check.png",
+        "./outputs/v0/small-size-C-32px-check.png",
+        "./outputs/v0/small-size-D-32px-check.png"
+      ]
+    },
+    {
+      "check": "Structured artifact integrity and score arithmetic validated",
+      "result": "pass",
+      "details": "All JSON artifacts parse as objects; every image evidence file is 32 x 32 px; all criterion weights equal 0.25; each total equals the sum of its four scores; ranks are exactly 1, 2, 3, and 4.",
+      "evidence_paths": [
+        "./outputs/project-state.json",
+        "./outputs/v0/noma-logo-scorecard-v0.json",
+        "./outputs/v0/verification.json",
+        "./outputs/v0/small-size-A-32px-check.png",
+        "./outputs/v0/small-size-B-32px-check.png",
+        "./outputs/v0/small-size-C-32px-check.png",
+        "./outputs/v0/small-size-D-32px-check.png"
+      ]
+    },
+    {
+      "check": "Primary recommendation includes a tightly bounded next-round adjustment",
+      "result": "pass",
+      "details": "C is recommended; only small-size optical correction is proposed, with concept, silhouette, palette, wordmark, and composition preserved.",
+      "evidence_paths": [
+        "./outputs/v0/noma-logo-evaluation-v0.md"
+      ]
+    },
+    {
+      "check": "Claims are framed as visual assessment rather than user research",
+      "result": "pass",
+      "evidence_paths": [
+        "./outputs/v0/noma-logo-evaluation-v0.md",
+        "./outputs/v0/noma-logo-scorecard-v0.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "specific-category-and-competitor-context-not-supplied",
+      "impact": "Category distinctiveness can only be judged against the stated real-estate and generic-app avoidance cues; competitor or trademark distinctiveness is not established.",
+      "blocks_current_evaluation": false
+    },
+    {
+      "id": "client-selection-not-locked",
+      "impact": "No next-round logo edit should begin until the client confirms or rejects the recommendation of C.",
+      "blocks_current_evaluation": false,
+      "blocks_next_round_edit": true
+    }
+  ]
+}

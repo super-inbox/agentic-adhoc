@@ -1,0 +1,16 @@
+已锁定 `A 城市轻行 / 城市通勤` 并完成 v1 视觉语气修订：克制晨光、大面积留白、仅两层主视觉文字、无金色处理。产品由原图精确合成，RGB 逐像素零差异。v0 保持不变。
+
+新增或更新路径：
+
+- [城市通勤主视觉样张](/private<WORKDIR>/outputs/v1/city-loop-premium-keyframe.png)
+- [v1 视觉方向板](/private<WORKDIR>/outputs/v1/city-loop-visual-direction-v1.png)
+- [修订说明](/private<WORKDIR>/outputs/v1/city-loop-refinement.md)
+- [环境底图](/private<WORKDIR>/outputs/v1/assets/city-commute-minimal-background.png)
+- [原色产品透明素材](/private<WORKDIR>/outputs/v1/assets/product-cutout-exact.png)
+- [图像生成提示](/private<WORKDIR>/outputs/v1/imagegen-prompt.txt)
+- [验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+环境底图使用内置图像生成工具制作；产品没有交给模型重画。
+
+最终六张资产仍受挂环素材阻塞：请提供能看到一体式挂环连接方式的官方侧/背面图或 CAD，或明确批准不展示连接细节的文案型方案。

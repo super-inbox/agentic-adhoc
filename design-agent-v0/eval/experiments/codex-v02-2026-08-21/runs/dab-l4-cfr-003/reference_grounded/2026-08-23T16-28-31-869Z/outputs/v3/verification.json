@@ -1,0 +1,241 @@
+{
+  "schema_version": "candidate-verification/1.0",
+  "version": "v3",
+  "base_version": "v2",
+  "verified_at": "2026-08-24T01:05:24+08:00",
+  "overall_status": "pass_with_pending_client_confirmation",
+  "checks_performed": [
+    {
+      "check_id": "earlier-version-folders-preserved",
+      "category": "versioning",
+      "status": "pass",
+      "method": "SHA-256 comparison against recorded v0, v1, and v2 states",
+      "v0_hashes": {
+        "../v0/preview.png": "1e394bc9433f55a20f79dfe26d325b4cd0289e4352202aa1ade06de63822fea0",
+        "../v0/hero_detail_v0.svg": "fc25139e79cf4aca0cc5177bad08596fa8490db5525b03d3251565f84754c0b0",
+        "../v0/design_document.json": "c521f6cd286136b07b50f176f1611e67ff4547b64d60d3c9c41c31ceac48bd47",
+        "../v0/change_set.json": "b1e426a50597ddd3e77a049ee0555835e0bba9407df3426a668d2e34cd2c5246",
+        "../v0/verification.json": "d53ec297566b0d4d62e2b4b890f3c811e2256d3c585e9311dd6b5d88aa244253"
+      },
+      "v1_hashes": {
+        "../v1/preview.png": "b9a08420b9e1276fd892f6602854b1cb59dd33fcfc3826635148236eb43683cb",
+        "../v1/hero_detail_v1.svg": "a98c762e8a4f98da79c42e83df308b92baea53a48efcf9e6a044f9cdb0d48c2a",
+        "../v1/design_document.json": "05ec3448d053bad477c7f03926bc39727c556fbf0c6f8d88c6131d26877eb335",
+        "../v1/change_set.json": "d5872f908904d320076ed12c05ab6401ec179514b4b713209c5faca7b01ef097",
+        "../v1/verification.json": "9f3baf6d2bc8bdf19f85307051fd1caea0696ce0a19cca2e55ce93e017cc5e39"
+      },
+      "v2_hashes": {
+        "../v2/preview.png": "15d82d0c70da5ea0b56a8424cc97f4fa95c7b2da7b24bed7967f40a0e18be10a",
+        "../v2/hero_detail_v2.svg": "900ca51894c6f17ad5062a59a112f47908d0c4955f685b5c74e3ee0c809ed22c",
+        "../v2/design_document.json": "0bc58caa1a9b9bd0e3452b64e4d7fd859108d4ca980dcd47ed3d9160d59dfa77",
+        "../v2/change_set.json": "032a302a2a7dc8cec590e3b39478e463bb086efd40bec02c6269e681ae10f3be",
+        "../v2/verification.json": "450c4e26e39c3e1a7024e057b981452af8cbedcb53b3311404e01a9838ded00f"
+      },
+      "evidence_paths": ["../v0", "../v1", "../v2"]
+    },
+    {
+      "check_id": "required-v3-artifacts-present",
+      "category": "artifact_completeness",
+      "status": "pass",
+      "method": "filesystem presence check",
+      "expected": ["preview.png", "hero_detail_v3.svg", "design_document.json", "change_set.json", "verification.json"],
+      "found": ["preview.png", "hero_detail_v3.svg", "design_document.json", "change_set.json", "verification.json"],
+      "evidence_paths": ["preview.png", "hero_detail_v3.svg", "design_document.json", "change_set.json", "verification.json"]
+    },
+    {
+      "check_id": "structured-files-parse",
+      "category": "machine_readability",
+      "status": "pass",
+      "method": "jq JSON parse and xmllint SVG parse",
+      "evidence_paths": ["design_document.json", "change_set.json", "verification.json", "hero_detail_v3.svg", "../project-state.json"]
+    },
+    {
+      "check_id": "preview-dimensions",
+      "category": "render",
+      "status": "pass",
+      "method": "PNG metadata inspection",
+      "expected": {"width": 1200, "height": 1600},
+      "actual": {"width": 1200, "height": 1600},
+      "evidence_paths": ["preview.png"]
+    },
+    {
+      "check_id": "v1-order-restored",
+      "category": "requested_delta",
+      "status": "pass",
+      "method": "SVG DOM-order and object-graph child-order inspection",
+      "v2_before": ["低噪运行", "陶土触感", "定时关闭"],
+      "expected_after_from_v1": ["低噪运行", "定时关闭", "陶土触感"],
+      "actual_after": ["低噪运行", "定时关闭", "陶土触感"],
+      "object_order_after": ["feature-low-noise", "feature-timer", "feature-clay-touch"],
+      "evidence_paths": ["../v1/hero_detail_v1.svg", "hero_detail_v3.svg", "design_document.json", "change_set.json"]
+    },
+    {
+      "check_id": "corrected-copy-preserved",
+      "category": "copy",
+      "status": "pass",
+      "method": "visible text-node inventory",
+      "required": "低噪运行",
+      "actual": "低噪运行",
+      "contains_incorrect_low_noise_spelling": false,
+      "evidence_paths": ["hero_detail_v3.svg", "design_document.json"]
+    },
+    {
+      "check_id": "raised-third-position-preserved",
+      "category": "requested_invariant",
+      "status": "pass",
+      "method": "SVG transform and effective-bounds inspection",
+      "third_object": "feature-clay-touch",
+      "expected_transform": "translate(0,-12)",
+      "actual_transform": "translate(0,-12)",
+      "expected_bounds": {"x": 779, "y": 1160, "width": 309, "height": 246},
+      "actual_bounds": {"x": 779, "y": 1160, "width": 309, "height": 246},
+      "evidence_paths": ["hero_detail_v3.svg", "design_document.json", "change_set.json"]
+    },
+    {
+      "check_id": "complete-object-return",
+      "category": "requested_delta",
+      "status": "pass",
+      "method": "normalized SVG subtree comparison excluding slot transforms",
+      "feature_timer": {"slot_before": 3, "slot_after": 2, "content_and_style_equal": true},
+      "feature_clay_touch": {"slot_before": 2, "slot_after": 3, "content_and_style_equal": true},
+      "evidence_paths": ["../v2/hero_detail_v2.svg", "hero_detail_v3.svg", "change_set.json"]
+    },
+    {
+      "check_id": "slot-geometry-preserved",
+      "category": "delta_isolation",
+      "status": "pass",
+      "method": "effective-bounds comparison",
+      "v2_slots": {
+        "slot_1": {"x": 112, "y": 1172, "width": 309, "height": 246},
+        "slot_2": {"x": 445.5, "y": 1172, "width": 309, "height": 246},
+        "slot_3": {"x": 779, "y": 1160, "width": 309, "height": 246}
+      },
+      "v3_slots": {
+        "slot_1": {"x": 112, "y": 1172, "width": 309, "height": 246},
+        "slot_2": {"x": 445.5, "y": 1172, "width": 309, "height": 246},
+        "slot_3": {"x": 779, "y": 1160, "width": 309, "height": 246}
+      },
+      "evidence_paths": ["design_document.json", "change_set.json"]
+    },
+    {
+      "check_id": "visual-diff-localized",
+      "category": "delta_isolation",
+      "status": "pass",
+      "method": "RGB pixel comparison of v2 and v3 previews",
+      "actual_diff_bbox": {"left": 538, "top": 1199, "right": 1002, "bottom": 1367},
+      "changed_pixel_count": 15060,
+      "pixels_changed_outside_bbox": 0,
+      "interpretation": "Only the second and third icons and labels return to their v1 positions; the fixed card slots do not change.",
+      "evidence_paths": ["../v2/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "v1-preview-equivalence",
+      "category": "reference_state",
+      "status": "pass",
+      "method": "pixel equality and SHA-256 equality",
+      "v1_preview_sha256": "b9a08420b9e1276fd892f6602854b1cb59dd33fcfc3826635148236eb43683cb",
+      "v3_preview_sha256": "b9a08420b9e1276fd892f6602854b1cb59dd33fcfc3826635148236eb43683cb",
+      "pixel_equal": true,
+      "evidence_paths": ["../v1/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "no-full-image-regeneration",
+      "category": "workflow_constraint",
+      "status": "pass",
+      "method": "asset and renderer hash comparison plus source-change inspection",
+      "render_method": "existing SVG object edits plus unchanged native raster inserts",
+      "generated_asset_calls": 0,
+      "background_hash_equal": true,
+      "product_hash_equal": true,
+      "renderer_hash_equal": true,
+      "evidence_paths": ["hero_detail_v3.svg", "change_set.json", "ambient_background_v0.png", "product_reference_locked.png", "render_preview.m"]
+    },
+    {
+      "check_id": "product-unchanged",
+      "category": "locked_invariant",
+      "status": "pass",
+      "method": "asset hash equality, SVG object equality, and preview-region pixel equality",
+      "v2_asset_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "v3_asset_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "svg_object_equal": true,
+      "preview_product_region_equal": true,
+      "evidence_paths": ["../v2/product_reference_locked.png", "product_reference_locked.png", "../v2/hero_detail_v2.svg", "hero_detail_v3.svg", "../v2/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "headline-background-and-font-sizes-unchanged",
+      "category": "locked_invariant",
+      "status": "pass",
+      "method": "SVG object equality, asset hash equality, text-attribute comparison, and preview-region pixel equality",
+      "headline": {"content": "让香气慢下来。", "font_size_before": 72, "font_size_after": 72, "object_equal": true},
+      "feature_font_sizes": {"before": 32, "after": 32},
+      "background_sha256_before": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+      "background_sha256_after": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+      "preview_regions_equal": true,
+      "evidence_paths": ["../v2/hero_detail_v2.svg", "hero_detail_v3.svg", "../v2/ambient_background_v0.png", "ambient_background_v0.png", "../v2/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "unrelated-objects-unchanged",
+      "category": "delta_isolation",
+      "status": "pass",
+      "method": "SVG object equality and preview-region pixel equality",
+      "objects": {
+        "ambient-background": "identical",
+        "product-stage": "identical",
+        "product-image-locked": "identical",
+        "headline-block": "identical",
+        "feature-low-noise": "identical",
+        "bottom-rhythm": "identical"
+      },
+      "evidence_paths": ["../v2/hero_detail_v2.svg", "hero_detail_v3.svg", "../v2/preview.png", "preview.png"]
+    },
+    {
+      "check_id": "preview-visual-qa",
+      "category": "visual_quality",
+      "status": "pass",
+      "method": "full-resolution visual inspection",
+      "observations": [
+        "Visible selling-point order is 低噪运行, 定时关闭, 陶土触感.",
+        "The corrected 噪 character remains visible.",
+        "The third selling-point card retains its slight upward offset.",
+        "No clipping, missing-image markers, or unrelated visual changes are visible."
+      ],
+      "evidence_paths": ["preview.png"]
+    },
+    {
+      "check_id": "project-state-updated",
+      "category": "versioning",
+      "status": "pass",
+      "method": "project-state inspection",
+      "current_version": "v3",
+      "version_history": ["v0", "v1", "v2", "v3"],
+      "next_checkpoint": "client-confirm-v3",
+      "evidence_paths": ["../project-state.json"]
+    },
+    {
+      "check_id": "v3-artifact-hashes",
+      "category": "integrity",
+      "status": "pass",
+      "method": "SHA-256 digest",
+      "hashes": {
+        "preview.png": "b9a08420b9e1276fd892f6602854b1cb59dd33fcfc3826635148236eb43683cb",
+        "hero_detail_v3.svg": "28d60a3543b76ba91523fc083a965f8d1d9dac509da7c513199933c3632955c4",
+        "design_document.json": "526b7d1740caf1b56ea94b3cb1a73b07a574f10d4dd180a588c373a2d42f4e91",
+        "change_set.json": "7b9f6950c3e8df732f8a6af7de3712cfc288df44012f968fb64987dbfc06a149",
+        "ambient_background_v0.png": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+        "product_reference_locked.png": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "render_preview.m": "0b6ba5747c5d559973ad5d793827dfe366e17e49e0ee2301581374c8ff22e341"
+      },
+      "evidence_paths": ["preview.png", "hero_detail_v3.svg", "design_document.json", "change_set.json", "ambient_background_v0.png", "product_reference_locked.png", "render_preview.m"]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "blocker_id": "client-confirm-v3",
+      "severity": "workflow_checkpoint",
+      "status": "open",
+      "description": "v3 is ready for confirmation of the restored v1 order with preserved corrected copy and raised third slot.",
+      "blocks": ["v4", "final approval"],
+      "does_not_block": ["v3 delivery"]
+    }
+  ]
+}

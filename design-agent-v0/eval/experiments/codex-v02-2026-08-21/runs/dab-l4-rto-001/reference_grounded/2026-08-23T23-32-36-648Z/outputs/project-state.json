@@ -1,0 +1,76 @@
+{
+  "project": "陶土红香薰机新品详情页",
+  "current_version": "v1",
+  "stage": "hero_and_selling_modules",
+  "status": "ready_for_client_review",
+  "client_decisions": {
+    "approved_copy": [
+      "让香气慢下来",
+      "低噪运行",
+      "定时关闭",
+      "陶土触感"
+    ],
+    "selected_territory": "C｜静音时序",
+    "selected_territory_alias": "方向 3",
+    "v1_feedback": {
+      "retain": [
+        "大胆构图",
+        "产品位置"
+      ],
+      "replace": "与参考海报相似的几何语言",
+      "new_geometry_language": [
+        "原创开放缓弧",
+        "不规则陶土颗粒"
+      ]
+    },
+    "reference_usage": {
+      "layout-ref": "仅取大留白与信息节奏",
+      "palette-ref": "仅取暖色系统与品牌色彩规则",
+      "geometry-ref": "仅保留大胆尺度、裁切与跨层原则；不沿用圆弧网格或具体几何关系",
+      "product": "保持产品身份精确不变"
+    }
+  },
+  "locked_items": [
+    "产品身份：陶土红机身、低矮圆柱比例、悬浮圆盘顶盖、黑色间隙、正面圆形按键与正视角",
+    "产品位置：三张 1500×2000 模块均使用固定锚点 (675, 1045, 1460, 1625)",
+    "方向 C 的 01/02/03 信息节奏",
+    "大留白与暖奶油、陶土红、炭黑、橄榄色关系",
+    "不得复制参考品牌、文字、标志、图标或具体几何图形",
+    "仅使用已批准文案",
+    "outputs/v0 保持不变"
+  ],
+  "changed_items": [
+    "确认选择 C｜静音时序",
+    "移除方向 C 的直线网格、矩形轨道与机械式几何关系",
+    "新增非同心、非正圆、宽度渐变的开放缓弧",
+    "新增随机尺寸与疏密的不规则陶土颗粒",
+    "在不移动产品锚点的前提下完成首屏和两张卖点模块",
+    "卖点 02 的陶土材质窗仅使用产品原图局部裁切"
+  ],
+  "pending_decisions": [],
+  "version_history": {
+    "v0": {
+      "status": "superseded_but_preserved",
+      "summary": "参考拆解、10 个假设与三个 Creative Territories；等待方向选择。",
+      "path": "outputs/v0"
+    },
+    "v1": {
+      "status": "current",
+      "summary": "方向 C 定稿候选；以原创缓弧和陶土颗粒替换相似几何，产品位置不变。",
+      "path": "outputs/v1"
+    }
+  },
+  "artifact_paths": [
+    "outputs/v1/detail-page-scroll-preview.png",
+    "outputs/v1/hero-quiet-sequence-clay-drift.png",
+    "outputs/v1/selling-point-01-low-noise.png",
+    "outputs/v1/selling-point-02-timer-tactility.png",
+    "outputs/v1/design-delta.md",
+    "outputs/v1/product-reference-exact.png",
+    "outputs/v1/verification.json",
+    "outputs/v0/creative-territories-board.png",
+    "outputs/v0/creative-territories-board.svg",
+    "outputs/v0/reference-deconstruction-and-territories.md",
+    "outputs/v0/verification.json"
+  ]
+}

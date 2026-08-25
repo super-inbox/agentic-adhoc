@@ -1,0 +1,124 @@
+{
+  "project": "GRAIN & GLOW brand refresh",
+  "current_version": "v3",
+  "workflow_stage": "store_signage_whitespace_reversion",
+  "status": "v3_delta_applied_awaiting_client_review",
+  "context_condition": "reference_grounded",
+  "client_decisions": {
+    "selected_territory": "02",
+    "selected_territory_name": "日光麦场 / Daylight Grain",
+    "approved_items": [
+      "current premium gift-box direction carried through v2",
+      "outputs/v2/01-taobao-main-v2.png",
+      "Territory 02 visual system"
+    ],
+    "latest_feedback": [
+      "保留 v2 的礼盒和淘宝主图",
+      "只把门店立牌的留白调回 v1 那个更疏的版本",
+      "别把已删的价格标签带回来"
+    ],
+    "hard_constraints": [
+      "礼盒方向锁定不重做",
+      "v2 淘宝主图锁定不重做",
+      "门店立牌留白恢复 v1 版本",
+      "价格／促销标签保持删除状态",
+      "B 视觉系统不重做",
+      "保留现有 Logo 结构与中文品牌名",
+      "保留 v0、v1、v2 与所有未涉及区域"
+    ],
+    "v3_store_signage_source": {
+      "path": "outputs/v1/assets/territory-02-daylight-grain-refined.png",
+      "crop_box": [1024, 256, 1536, 896],
+      "method": "exact source-pixel crop plus review-size resampling"
+    },
+    "price_label_policy": "removed_do_not_restore",
+    "deadline_as_stated": "周五",
+    "deadline_provisional_iso": "2026-08-28",
+    "deadline_confirmed": false
+  },
+  "locked_items": [
+    {
+      "item": "premium_gift_box_direction",
+      "status": "client_approved_locked_unchanged"
+    },
+    {
+      "item": "v2_taobao_main_image",
+      "status": "client_approved_locked_unchanged",
+      "path": "outputs/v2/01-taobao-main-v2.png"
+    },
+    {
+      "item": "price_and_promotion_labels",
+      "status": "locked_absent"
+    },
+    {
+      "item": "store_signage_whitespace",
+      "status": "reverted_and_locked_to_v1_sparse_version"
+    },
+    {
+      "item": "territory_02_visual_system",
+      "status": "locked_unchanged",
+      "details": [
+        "daylight mood",
+        "warm-white / sky-blue / grain-yellow color family",
+        "spacious composition",
+        "pale maple and blue-metal retail materials"
+      ]
+    },
+    {
+      "item": "existing_logo_structure",
+      "status": "locked_unchanged"
+    },
+    {
+      "item": "chinese_brand_name",
+      "status": "locked_but_source_artwork_missing"
+    },
+    {
+      "item": "v0_v1_v2_artifacts",
+      "status": "preserved_unchanged"
+    }
+  ],
+  "changed_items": [
+    "Reverted store-signage whitespace to the exact sparse v1 retail-panel version",
+    "Created a standalone 4:5 review crop of the v1 store-signage area without adding content"
+  ],
+  "preserved_items": [
+    "All v0 artifacts",
+    "All v1 artifacts",
+    "All v2 artifacts",
+    "Approved premium gift-box direction",
+    "Approved v2 Taobao main image and single selling sentence",
+    "Absence of all price and promotion labels",
+    "Territory 02 color, lighting, crop, whitespace, packaging, and retail material system",
+    "Existing Logo structure and Chinese brand name"
+  ],
+  "artifact_paths": [
+    "outputs/v3/01-store-signage-v3.png",
+    "outputs/v3/assets/store-signage-v1-source-crop.png",
+    "outputs/v3/delta-notes.md",
+    "outputs/v3/render_store_signage.py",
+    "outputs/v3/verification.json"
+  ],
+  "previous_versions": [
+    {
+      "version": "v0",
+      "path": "outputs/v0",
+      "status": "preserved"
+    },
+    {
+      "version": "v1",
+      "path": "outputs/v1",
+      "status": "preserved_and_used_as_store_signage_source"
+    },
+    {
+      "version": "v2",
+      "path": "outputs/v2",
+      "status": "preserved_and_approved_gift_box_taobao_main"
+    }
+  ],
+  "unresolved_blockers": [
+    "Approved Chinese wordmark and vector/transparent Logo source are absent; the locked identity cannot be literally placed and verified.",
+    "Final store-sign dimensions, physical material constraints, copy hierarchy, and fabrication specifications are not present.",
+    "Actual product photography and final Taobao/store delivery specifications are not present.",
+    "The stated Friday deadline remains provisionally interpreted as 2026-08-28 Asia/Shanghai and is unconfirmed."
+  ]
+}

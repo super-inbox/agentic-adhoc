@@ -1,0 +1,33 @@
+{
+  "source_size": [
+    1024,
+    1024
+  ],
+  "crop_box_source": [
+    206,
+    289,
+    926,
+    765
+  ],
+  "cutout_size": [
+    720,
+    476
+  ],
+  "opaque_core_pixel_count": 219623,
+  "opaque_core_rgb_exact": true,
+  "sample_source_xy": [
+    512,
+    545
+  ],
+  "sample_source_rgb": [
+    139,
+    51,
+    39
+  ],
+  "sample_cutout_rgb": [
+    139,
+    51,
+    39
+  ],
+  "sample_exact": true
+}

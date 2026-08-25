@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#EEE9D5"/>
+  <image x="0" y="0" width="1200" height="1200" preserveAspectRatio="xMidYMid slice" xlink:href="tmall-hero-background-direction-a-v0.png"/>
+
+  <g fill="#393937">
+    <text x="78" y="116" font-family="Avenir Next, Avenir, Helvetica, sans-serif" font-size="56" font-weight="600" letter-spacing="10">MORI</text>
+    <text x="82" y="162" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="26" font-weight="400" letter-spacing="3" opacity="0.76">日常新作</text>
+
+    <text x="76" y="269" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="64" font-weight="600" letter-spacing="1">把日常，</text>
+    <text x="76" y="353" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="68" font-weight="600" letter-spacing="1">调成舒缓模式</text>
+    <text x="82" y="420" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="30" font-weight="400" letter-spacing="1.2" opacity="0.70">让安静的设计进入生活留白</text>
+  </g>
+
+  <rect x="906" y="64" width="212" height="64" rx="32" fill="#AF543F"/>
+  <text x="1012" y="106" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="28" font-weight="500" letter-spacing="1" fill="#EEE9D5">自在入室</text>
+
+  <rect x="78" y="1071" width="1044" height="70" rx="35" fill="#EEE9D5" fill-opacity="0.88" stroke="#393937" stroke-opacity="0.14"/>
+  <g font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="30" font-weight="500" letter-spacing="1" fill="#393937">
+    <circle cx="103" cy="1106" r="11" fill="#879466"/>
+    <text x="128" y="1117">自然配色</text>
+    <circle cx="445" cy="1106" r="11" fill="#AF543F"/>
+    <text x="470" y="1117">安静设计</text>
+    <circle cx="787" cy="1106" r="11" fill="#B7D2D9"/>
+    <text x="812" y="1117">融入日常</text>
+  </g>
+</svg>

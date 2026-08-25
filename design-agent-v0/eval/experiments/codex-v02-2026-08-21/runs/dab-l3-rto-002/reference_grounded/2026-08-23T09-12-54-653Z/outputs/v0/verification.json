@@ -1,0 +1,81 @@
+{
+  "version": "v0",
+  "status": "passed_with_pending_decision",
+  "checks": [
+    {
+      "id": "source-reviewed",
+      "status": "pass",
+      "check": "Reviewed the supplied A-D candidate board and no outside identity references.",
+      "evidence_paths": [
+        "inputs/01-logo_candidates.png",
+        "outputs/v0/noma-logo-candidate-review.md"
+      ]
+    },
+    {
+      "id": "four-dimensions-ranked",
+      "status": "pass",
+      "check": "Ranked A-D on brief fit, 24 px recognition, ownability, and generic-icon risk with rank direction defined.",
+      "evidence_paths": [
+        "outputs/v0/noma-logo-candidate-review.md"
+      ]
+    },
+    {
+      "id": "small-size-check",
+      "status": "pass",
+      "check": "Inspected normalized 24 x 24 px symbol crops for all four candidates.",
+      "evidence_paths": [
+        "outputs/v0/evidence/candidate-a-symbol-24px.png",
+        "outputs/v0/evidence/candidate-b-symbol-24px.png",
+        "outputs/v0/evidence/candidate-c-symbol-24px.png",
+        "outputs/v0/evidence/candidate-d-symbol-24px.png"
+      ],
+      "limitation": "Directional raster test from the supplied presentation board; production vector masters were not provided."
+    },
+    {
+      "id": "cliche-rejections",
+      "status": "pass",
+      "check": "Explicitly flagged A for generic house, B for smile-app/bowl, and C for literal noodle/food cliché.",
+      "evidence_paths": [
+        "outputs/v0/noma-logo-candidate-review.md"
+      ]
+    },
+    {
+      "id": "complexity-not-originality",
+      "status": "pass",
+      "check": "Did not treat C's additional line detail as evidence of originality or ownability.",
+      "evidence_paths": [
+        "outputs/v0/noma-logo-candidate-review.md"
+      ]
+    },
+    {
+      "id": "no-new-logo",
+      "status": "pass",
+      "check": "Created no fifth candidate and made no changes to candidate artwork; evidence images are normalized reductions of the supplied symbols only.",
+      "evidence_paths": [
+        "inputs/01-logo_candidates.png",
+        "outputs/v0/evidence/candidate-a-symbol-24px.png",
+        "outputs/v0/evidence/candidate-b-symbol-24px.png",
+        "outputs/v0/evidence/candidate-c-symbol-24px.png",
+        "outputs/v0/evidence/candidate-d-symbol-24px.png"
+      ]
+    },
+    {
+      "id": "actionable-refinement",
+      "status": "pass",
+      "check": "Provided a single-round, route-preserving refinement brief for D.",
+      "evidence_paths": [
+        "outputs/v0/noma-logo-candidate-review.md"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "client-selection",
+      "description": "D is recommended, but the client has not yet approved a candidate for refinement."
+    },
+    {
+      "id": "clearance-not-performed",
+      "description": "No trademark or competitive-landscape search was performed; copy-risk comments are limited to visible use of generic category tropes."
+    }
+  ]
+}

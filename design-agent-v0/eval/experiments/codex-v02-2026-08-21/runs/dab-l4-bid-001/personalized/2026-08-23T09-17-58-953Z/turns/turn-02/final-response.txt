@@ -1,0 +1,12 @@
+v2 已建立，但图像修改被阻塞：当前工作区没有包含价格标签与卖点文字的淘宝主图；v1 礼盒样机没有这些元素。为避免重做已通过的礼盒与视觉系统，未生成替代主图，`v0/v1` 均保持不变。
+
+请补充：
+
+1. 淘宝主图原文件（原分辨率 PNG/JPG）
+2. 最终一句卖点文案，或原始卖点文字并授权压缩
+
+新增或更新路径：
+
+- [v2 阻塞与编辑规范](/private<WORKDIR>/outputs/v2/taobao-hero-delta-blocker.md)
+- [v2 验证记录](/private<WORKDIR>/outputs/v2/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)

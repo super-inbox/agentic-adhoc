@@ -1,0 +1,17 @@
+v0 首版已完成，并停在“待客户确认”节点。
+
+- A：上方居中产品图、标题承接、三栏卖点的信息节奏与留白。
+- B：暖米白、橄榄绿、陶土红、炭黑配色，以及衬线标题搭配无衬线功能文字。
+- 产品：仅裁切外围留白并等比缩放；源文件哈希一致，未修改形状或颜色。
+- 文案：严格使用“让香气慢下来。”、“低噪运行”、“定时关闭”、“陶土触感”。
+
+交付文件：
+
+- [首屏预览 preview.png](<WORKDIR>/outputs/v0/preview.png)
+- [可编辑对象图 design_document.json](<WORKDIR>/outputs/v0/design_document.json)
+- [对象级变更集 change_set.json](<WORKDIR>/outputs/v0/change_set.json)
+- [机器验证 verification.json](<WORKDIR>/outputs/v0/verification.json)
+- [项目版本状态 project-state.json](<WORKDIR>/outputs/project-state.json)
+- [底图生成提示词](<WORKDIR>/outputs/v0/generation_prompt.txt)
+
+底图使用内置图像生成模式制作；11 项校验通过。当前唯一开放项是下一轮请客户确认构图留白、暖色比例、标题字体及三枚图标风格。

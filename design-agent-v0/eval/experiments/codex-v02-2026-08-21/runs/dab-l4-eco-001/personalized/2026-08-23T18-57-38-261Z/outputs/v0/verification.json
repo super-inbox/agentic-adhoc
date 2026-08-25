@@ -1,0 +1,140 @@
+{
+  "schema_version": "0.2",
+  "version": "v0",
+  "verified_at": "2026-08-24T03:08:03+08:00",
+  "overall_status": "pass_at_client_selection_checkpoint_with_documented_blockers",
+  "checks_performed": [
+    {
+      "id": "scenario_count",
+      "status": "pass",
+      "expected": "8–12 low-cost scene hypotheses",
+      "actual": 10,
+      "evidence_paths": [
+        "outputs/v0/creative-territories-v0.md",
+        "outputs/v0/creative-territories-overview-v0.png"
+      ]
+    },
+    {
+      "id": "territory_count_and_differentiation",
+      "status": "pass",
+      "expected": "3 clearly differentiated Creative Territories",
+      "actual": 3,
+      "evidence": {
+        "A": "time-axis urban day / 12-hour endurance",
+        "B": "after-rain weather texture / IPX4 splash resistance",
+        "C": "close-up carry interaction / integrated loop"
+      },
+      "evidence_paths": [
+        "outputs/v0/creative-territories-v0.md",
+        "outputs/v0/creative-territories-overview-v0.png"
+      ]
+    },
+    {
+      "id": "product_identity_preservation",
+      "status": "pass_for_v0",
+      "method": "Moodboards intentionally contain no speaker. The decision board loads the supplied product master directly and only scales it proportionally inside a white product-lock tile; no generated or redrawn product is used.",
+      "source_sha256": "f1c9a2c5895dfef128d4a52de1025bf8afad7cf59ca4bff0c04d5a653b392406",
+      "evidence_paths": [
+        "inputs/01-product_master.png",
+        "scripts/render_creative_territories.py",
+        "outputs/v0/creative-territories-overview-v0.png"
+      ]
+    },
+    {
+      "id": "brand_rule_preservation",
+      "status": "pass",
+      "method": "Decision-board colors were sampled directly from the five supplied MORI swatches; moodboards used the brand board only as palette and tone reference.",
+      "sampled_palette_rgb": {
+        "charcoal": [59, 59, 57],
+        "warm_ivory": [237, 232, 212],
+        "muted_olive": [135, 148, 102],
+        "terracotta": [175, 84, 63],
+        "pale_blue": [183, 210, 217]
+      },
+      "evidence_paths": [
+        "inputs/02-brand_guideline.png",
+        "scripts/render_creative_territories.py",
+        "outputs/v0/creative-territories-overview-v0.png"
+      ]
+    },
+    {
+      "id": "approved_claims_only",
+      "status": "pass",
+      "observed_product_claims": [
+        "12 小时续航",
+        "IPX4 防泼水",
+        "一体式挂环"
+      ],
+      "unapproved_parameters_found": [],
+      "evidence_paths": [
+        "outputs/v0/creative-territories-v0.md",
+        "scripts/render_creative_territories.py",
+        "outputs/v0/creative-territories-overview-v0.png"
+      ]
+    },
+    {
+      "id": "ipx4_semantic_guardrail",
+      "status": "pass",
+      "evidence": "B scenes use light rain/after-rain context with dry product-placement zones. Immersion, water jets, pools, waterfalls and extreme weather were explicitly excluded. Any occurrence of the standalone word 防水 appears only inside a prohibition or warning, never as a product claim.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories-v0.md",
+        "outputs/v0/generation-prompts-v0.md",
+        "outputs/v0/moodboards/territory-b-after-rain-v0.png"
+      ]
+    },
+    {
+      "id": "no_fictional_product_controls_or_accessories",
+      "status": "pass_for_v0",
+      "evidence": "Generated moodboards contain no speaker. Territory C explicitly excludes hooks, carabiners, clips and attachment hardware; its visual board shows only ordinary bags and a parked bicycle.",
+      "evidence_paths": [
+        "outputs/v0/generation-prompts-v0.md",
+        "outputs/v0/moodboards/territory-c-carry-ritual-v0.png"
+      ]
+    },
+    {
+      "id": "visual_layout_review",
+      "status": "pass",
+      "method": "Rendered at 3400 × 2600 and visually inspected at original/high detail.",
+      "evidence": [
+        "No clipped territory cards",
+        "No overlapping labels",
+        "All 10 scenarios and three claim labels are readable",
+        "Product tile is clear at overview scale",
+        "Three territories remain visually distinct at thumbnail size"
+      ],
+      "evidence_paths": [
+        "outputs/v0/creative-territories-overview-v0.png"
+      ]
+    },
+    {
+      "id": "final_six_assets",
+      "status": "deferred_by_user_checkpoint",
+      "expected_final_count": 6,
+      "actual_final_count": 0,
+      "reason": "The user explicitly requested territory exploration first and instructed the agent to wait for selection before producing final assets."
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v0/creative-territories-overview-v0.png": "bae54a9b17fb8e22bb0944bfdd6a833aae87691b9b2f4de10ae2e2520b29c4ea",
+    "outputs/v0/moodboards/territory-a-urban-pause-v0.png": "c0564ef8328fe5c3a41734825515399e22eaf7ec651dedaba1e8e5b849834c3c",
+    "outputs/v0/moodboards/territory-b-after-rain-v0.png": "196b6429874929fd2a54d999c674fcdbe6b844c34bf20a1473593aad97193dd9",
+    "outputs/v0/moodboards/territory-c-carry-ritual-v0.png": "6f3341062ba559d69a3720fe5b80a00c6300e48da3f091ed969a0b32844758c7"
+  },
+  "unresolved_blockers": [
+    {
+      "id": "creative-territory-selection",
+      "description": "Client must choose A, B or C before final production begins.",
+      "evidence_path": "outputs/project-state.json"
+    },
+    {
+      "id": "integrated-loop-view-missing",
+      "description": "The supplied front product master does not reveal the integrated loop. A real side/rear loop view is required for the final loop selling-point image and any truthful attached-to-bag scene.",
+      "evidence_paths": [
+        "inputs/01-product_master.png",
+        "outputs/v0/creative-territories-overview-v0.png",
+        "outputs/project-state.json"
+      ]
+    }
+  ]
+}
+

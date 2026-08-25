@@ -1,0 +1,11 @@
+已完成 v0：10 个低成本假设已聚类为 3 个原创方向，产品身份与批准文案均已锁定；尚未生成首屏或卖点模块。
+
+visualize{"path":"/private<WORKDIR>/outputs/v0/creative-territory-selector.html","mode":"wide"}
+
+- A｜陶土留白：材质先行、暖骨白、大留白。
+- B｜静域圆场：安静技术感、深色语境、稳定中轴。
+- C｜慢刻序列：三拍阅读、分段间隔、时间节奏。
+
+请回复选择 A、B 或 C；确认后我再完成首屏和两张卖点模块。
+
+文件：[参考拆解图](/private<WORKDIR>/outputs/v0/reference-deconstruction.png) · [三方向对比板](/private<WORKDIR>/outputs/v0/creative-territories-board.png) · [完整假设说明](/private<WORKDIR>/outputs/v0/creative-territories.md) · [核验记录](/private<WORKDIR>/outputs/v0/verification.json)

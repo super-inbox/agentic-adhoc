@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">陶土红香薰机三个 Creative Territories 方向板</title>
+  <desc id="desc">三个低成本原创方向横向比较：慢弧场、陶层编辑、静时轨。产品图保持输入原图不变。</desc>
+  <defs>
+    <clipPath id="previewA"><rect x="72" y="250" width="512" height="490" rx="2"/></clipPath>
+    <clipPath id="previewB"><rect x="644" y="250" width="512" height="490" rx="2"/></clipPath>
+    <clipPath id="previewC"><rect x="1216" y="250" width="512" height="490" rx="2"/></clipPath>
+    <clipPath id="productA"><rect x="308" y="438" width="250" height="250" rx="1"/></clipPath>
+    <clipPath id="productB"><rect x="804" y="364" width="280" height="280" rx="1"/></clipPath>
+    <clipPath id="productC"><rect x="1246" y="405" width="265" height="265" rx="1"/></clipPath>
+    <pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="7" r="1.6" fill="#2E2F2C" opacity="0.22"/>
+      <circle cx="18" cy="13" r="1.1" fill="#2E2F2C" opacity="0.18"/>
+      <circle cx="11" cy="24" r="1.3" fill="#2E2F2C" opacity="0.16"/>
+    </pattern>
+    <style>
+      .board-title { font: 600 34px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; letter-spacing: .08em; fill: #2E2F2C; }
+      .board-sub { font: 400 17px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #62645E; }
+      .index { font: 500 16px "Helvetica Neue", Arial, sans-serif; letter-spacing: .18em; fill: #74766F; }
+      .territory { font: 600 30px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #2E2F2C; }
+      .en { font: 400 15px "Helvetica Neue", Arial, sans-serif; letter-spacing: .08em; fill: #74766F; }
+      .hero { font: 600 38px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #2E2F2C; }
+      .hero-small { font: 500 24px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #2E2F2C; }
+      .micro { font: 500 13px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; letter-spacing: .08em; fill: #2E2F2C; }
+      .meta { font: 400 16px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #52544F; }
+      .hyp { font: 400 16px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #2E2F2C; }
+      .risk { font: 400 14px "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #74766F; }
+      .rule { stroke: #C8C2B6; stroke-width: 1; }
+      .ink-rule { stroke: #2E2F2C; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1200" fill="#E8E1D4"/>
+  <rect x="24" y="24" width="1752" height="1152" fill="#F7F3E9"/>
+
+  <text x="64" y="80" class="board-title">陶土红香薰机 · CREATIVE TERRITORIES</text>
+  <text x="64" y="116" class="board-sub">原则提炼 / 10 个低成本假设 / 等待方向选择</text>
+  <text x="1736" y="80" text-anchor="end" class="index">V0 · 2026</text>
+  <line x1="64" y1="145" x2="1736" y2="145" class="rule"/>
+
+  <!-- Territory A -->
+  <g aria-label="A 慢弧场">
+    <text x="72" y="190" class="index">A / 01</text>
+    <text x="72" y="224" class="territory">慢弧场</text>
+    <text x="222" y="224" class="en">SLOW ARC FIELD</text>
+
+    <rect x="72" y="250" width="512" height="490" fill="#F3EEDF" stroke="#D3CCBF"/>
+    <g clip-path="url(#previewA)">
+      <path d="M 12 720 C 34 394, 238 251, 514 300 C 650 325, 710 445, 698 655" fill="none" stroke="#B85B49" stroke-width="38" opacity="0.94"/>
+      <path d="M 42 716 C 65 423, 252 294, 503 335 C 605 352, 657 445, 652 641" fill="none" stroke="#F7F3E9" stroke-width="31"/>
+      <path d="M 74 715 C 91 455, 268 334, 494 371 C 574 384, 614 455, 607 630" fill="none" stroke="#8B9872" stroke-width="3"/>
+      <text x="105" y="340" class="micro">AROMA / 01</text>
+      <text x="105" y="389" class="hero">让香气</text>
+      <text x="105" y="437" class="hero">慢下来</text>
+      <circle cx="178" cy="490" r="4" fill="#B85B49" opacity="0.86"/>
+      <circle cx="204" cy="478" r="3" fill="#B85B49" opacity="0.66"/>
+      <circle cx="226" cy="459" r="2.4" fill="#B85B49" opacity="0.48"/>
+      <circle cx="242" cy="436" r="1.9" fill="#B85B49" opacity="0.36"/>
+      <circle cx="254" cy="409" r="1.5" fill="#B85B49" opacity="0.28"/>
+      <image x="308" y="438" width="250" height="250" xlink:href="product-reference-exact.png" clip-path="url(#productA)" preserveAspectRatio="xMidYMid meet"/>
+      <line x1="105" y1="693" x2="271" y2="693" class="ink-rule"/>
+      <text x="105" y="718" class="micro">弧线接续下一模块</text>
+    </g>
+    <text x="72" y="782" class="meta">情绪最强 · 产品落在偏心弧线切点</text>
+    <line x1="72" y1="808" x2="584" y2="808" class="rule"/>
+    <text x="72" y="845" class="hyp">H01  切边慢弧</text>
+    <text x="72" y="878" class="hyp">H02  55–65% 安静空场</text>
+    <text x="72" y="911" class="hyp">H03  弧线跨模块接力</text>
+    <text x="72" y="944" class="hyp">H04  稀疏陶土颗粒</text>
+    <text x="72" y="1002" class="risk">风险：弧线过整会趋近常见 wellness 视觉</text>
+    <rect x="72" y="1044" width="56" height="18" fill="#F3EEDF" stroke="#C8C2B6"/>
+    <rect x="136" y="1044" width="56" height="18" fill="#B85B49"/>
+    <rect x="200" y="1044" width="56" height="18" fill="#8B9872"/>
+    <rect x="264" y="1044" width="56" height="18" fill="#2E2F2C"/>
+    <text x="72" y="1100" class="micro">低成本：原图 + 1 条主路径 + 静态颗粒</text>
+  </g>
+
+  <!-- Territory B -->
+  <g aria-label="B 陶层编辑">
+    <text x="644" y="190" class="index">B / 02</text>
+    <text x="644" y="224" class="territory">陶层编辑</text>
+    <text x="824" y="224" class="en">CLAY STRATA EDITORIAL</text>
+
+    <rect x="644" y="250" width="512" height="490" fill="#F7F3E9" stroke="#D3CCBF"/>
+    <g clip-path="url(#previewB)">
+      <rect x="610" y="312" width="412" height="104" fill="#B85B49"/>
+      <rect x="718" y="436" width="470" height="86" fill="#DED2BC"/>
+      <rect x="616" y="552" width="424" height="112" fill="#8B9872"/>
+      <rect x="616" y="552" width="424" height="112" fill="url(#grain)" opacity="0.9"/>
+      <text x="668" y="289" class="micro">MATERIAL / 02</text>
+      <text x="668" y="380" class="hero-small" fill="#F7F3E9">陶土触感</text>
+      <text x="670" y="483" class="micro">01  低噪运行</text>
+      <text x="1016" y="602" text-anchor="end" class="micro" fill="#F7F3E9">02  定时关闭</text>
+      <image x="804" y="364" width="280" height="280" xlink:href="product-reference-exact.png" clip-path="url(#productB)" preserveAspectRatio="xMidYMid meet"/>
+      <line x1="666" y1="692" x2="1131" y2="692" class="ink-rule"/>
+      <text x="666" y="720" class="micro">原图局部可直接承担材质证据</text>
+    </g>
+    <text x="644" y="782" class="meta">材料最强 · 错位横带组织商品信息</text>
+    <line x1="644" y1="808" x2="1156" y2="808" class="rule"/>
+    <text x="644" y="845" class="hyp">H05  三条错位陶层</text>
+    <text x="644" y="878" class="hyp">H06  原图微距裁片</text>
+    <text x="644" y="911" class="hyp">H07  大字、编号、细线替代图标</text>
+    <text x="644" y="1002" class="risk">风险：层数过多会变成目录式信息页</text>
+    <rect x="644" y="1044" width="56" height="18" fill="#F3EEDF" stroke="#C8C2B6"/>
+    <rect x="708" y="1044" width="56" height="18" fill="#B85B49"/>
+    <rect x="772" y="1044" width="56" height="18" fill="#DED2BC"/>
+    <rect x="836" y="1044" width="56" height="18" fill="#8B9872"/>
+    <text x="644" y="1100" class="micro">低成本：色块 + 排版 + 原图等比裁切</text>
+  </g>
+
+  <!-- Territory C -->
+  <g aria-label="C 静时轨">
+    <text x="1216" y="190" class="index">C / 03</text>
+    <text x="1216" y="224" class="territory">静时轨</text>
+    <text x="1366" y="224" class="en">QUIET TIME TRACK</text>
+
+    <rect x="1216" y="250" width="512" height="490" fill="#F3EEDF" stroke="#D3CCBF"/>
+    <g clip-path="url(#previewC)">
+      <rect x="1216" y="250" width="512" height="82" fill="#B8D1D6" opacity="0.58"/>
+      <text x="1246" y="294" class="micro">QUIET / TIMER / 03</text>
+      <path d="M 1195 542 C 1270 510, 1292 486, 1346 498 C 1392 508, 1410 545, 1456 541 C 1510 536, 1531 468, 1587 455 C 1647 441, 1700 475, 1748 445" fill="none" stroke="#2E2F2C" stroke-width="3"/>
+      <path d="M 1244 377 C 1272 354, 1300 400, 1328 377 C 1356 354, 1384 400, 1412 377 C 1433 360, 1452 385, 1470 381 C 1485 378, 1495 377, 1511 377" fill="none" stroke="#B85B49" stroke-width="4"/>
+      <line x1="1511" y1="377" x2="1584" y2="377" stroke="#B85B49" stroke-width="4"/>
+      <circle cx="1614" cy="444" r="18" fill="#B85B49"/>
+      <circle cx="1614" cy="444" r="8" fill="#F3EEDF"/>
+      <path d="M 1614 337 A 107 107 0 1 1 1531 376" fill="none" stroke="#8B9872" stroke-width="22"/>
+      <image x="1246" y="405" width="265" height="265" xlink:href="product-reference-exact.png" clip-path="url(#productC)" preserveAspectRatio="xMidYMid meet"/>
+      <text x="1538" y="586" class="hero-small">低噪运行</text>
+      <text x="1538" y="625" class="hero-small">定时关闭</text>
+      <text x="1538" y="662" class="micro">波动 → 归零 → 停止点</text>
+      <line x1="1538" y1="684" x2="1700" y2="684" class="ink-rule"/>
+    </g>
+    <text x="1216" y="782" class="meta">功能最强 · 从波动走向停止的轨迹</text>
+    <line x1="1216" y1="808" x2="1728" y2="808" class="rule"/>
+    <text x="1216" y="845" class="hyp">H08  静音波形归零</text>
+    <text x="1216" y="878" class="hyp">H09  未闭合计时轨迹 + 停止点</text>
+    <text x="1216" y="911" class="hyp">H10  暖场为主，冷色只落边缘</text>
+    <text x="1216" y="1002" class="risk">风险：轨迹过强会让“定时”压过材质卖点</text>
+    <rect x="1216" y="1044" width="56" height="18" fill="#F3EEDF" stroke="#C8C2B6"/>
+    <rect x="1280" y="1044" width="56" height="18" fill="#B85B49"/>
+    <rect x="1344" y="1044" width="56" height="18" fill="#8B9872"/>
+    <rect x="1408" y="1044" width="56" height="18" fill="#B8D1D6"/>
+    <text x="1216" y="1100" class="micro">低成本：2 条线 + 1 个端点 + 固定色票</text>
+  </g>
+
+  <line x1="616" y1="174" x2="616" y2="1122" class="rule"/>
+  <line x1="1188" y1="174" x2="1188" y2="1122" class="rule"/>
+  <text x="1736" y="1140" text-anchor="end" class="index">SELECT A / B / C</text>
+</svg>

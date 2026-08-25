@@ -1,0 +1,5 @@
+2026-08-23T20:13:23.246672Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T20:13:23.274000Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T20:13:23.274013Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T20:13:24.428264Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T20:13:24.428277Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/

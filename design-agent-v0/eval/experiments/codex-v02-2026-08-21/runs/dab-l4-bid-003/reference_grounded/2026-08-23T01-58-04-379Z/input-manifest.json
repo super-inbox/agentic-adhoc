@@ -1,0 +1,24 @@
+[
+  {
+    "input_id": "current-brand",
+    "asset_id": "logo-upgrade-grain-glow-before-after",
+    "role": "current_identity",
+    "reference_role": "edit_target",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "01-current_identity.png",
+    "source_path": "eval/assets/reference-pack-v0.2/logo-upgrade/grain-glow-before-after.png",
+    "byte_size": 588006,
+    "sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253"
+  },
+  {
+    "input_id": "logo-options-reference",
+    "asset_id": "design-vote-noma-logo-options",
+    "role": "monogram_reference",
+    "reference_role": "style_reference",
+    "identity_policy": "abstract_only",
+    "filename": "02-monogram_reference.png",
+    "source_path": "eval/assets/reference-pack-v0.2/design-vote/noma-logo-options.png",
+    "byte_size": 630253,
+    "sha256": "0985be34801ead57e9aaea756b26b06d4e44bc4c909175139c4672a3fa9fc334"
+  }
+]

@@ -1,0 +1,226 @@
+{
+  "schema_version": "candidate-verification/1.0",
+  "version": "v0",
+  "verified_at": "2026-08-24T00:39:36+08:00",
+  "overall_status": "pass_with_pending_client_confirmation",
+  "checks_performed": [
+    {
+      "check_id": "required-artifacts-present",
+      "category": "artifact_completeness",
+      "status": "pass",
+      "method": "filesystem presence check",
+      "expected": [
+        "preview.png",
+        "design_document.json",
+        "change_set.json",
+        "verification.json"
+      ],
+      "found": [
+        "preview.png",
+        "design_document.json",
+        "change_set.json",
+        "verification.json"
+      ],
+      "evidence_paths": [
+        "preview.png",
+        "design_document.json",
+        "change_set.json",
+        "verification.json",
+        "hero_detail_v0.svg"
+      ]
+    },
+    {
+      "check_id": "preview-dimensions",
+      "category": "render",
+      "status": "pass",
+      "method": "PNG metadata inspection",
+      "expected": {"width": 1200, "height": 1600},
+      "actual": {"width": 1200, "height": 1600},
+      "evidence_paths": ["preview.png"]
+    },
+    {
+      "check_id": "preview-visual-qa",
+      "category": "visual_quality",
+      "status": "pass",
+      "method": "full-resolution visual inspection",
+      "observations": [
+        "Product is centered and unobstructed.",
+        "Headline is readable and visually separated from the product stage.",
+        "Three feature cards are evenly spaced and fully visible.",
+        "Warm ivory, terracotta, olive, and charcoal remain restrained.",
+        "No missing-image markers, clipping, or unintended overlays are visible."
+      ],
+      "evidence_paths": ["preview.png"]
+    },
+    {
+      "check_id": "approved-copy-exact",
+      "category": "copy",
+      "status": "pass",
+      "method": "object-graph and SVG text-node comparison",
+      "expected_visual_text": [
+        "让香气慢下来。",
+        "低噪运行",
+        "定时关闭",
+        "陶土触感"
+      ],
+      "actual_visual_text": [
+        "让香气慢下来。",
+        "低噪运行",
+        "定时关闭",
+        "陶土触感"
+      ],
+      "evidence_paths": ["hero_detail_v0.svg", "design_document.json"]
+    },
+    {
+      "check_id": "layout-a-brand-text-excluded",
+      "category": "identity_safety",
+      "status": "pass",
+      "method": "forbidden-token scan of visible copy inventory",
+      "forbidden_tokens": [
+        "QUIET RITUAL",
+        "AROMA DIFFUSER",
+        "MIST",
+        "LIGHT",
+        "TIMER",
+        "MATERIAL DETAIL",
+        "SPECIFICATIONS"
+      ],
+      "matches": [],
+      "evidence_paths": ["hero_detail_v0.svg", "design_document.json"]
+    },
+    {
+      "check_id": "product-source-byte-identity",
+      "category": "product_identity",
+      "status": "pass",
+      "method": "SHA-256 equality",
+      "source_path": "../../inputs/03-product_reference.png",
+      "locked_asset_path": "product_reference_locked.png",
+      "source_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "locked_asset_sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "evidence_paths": ["../../inputs/03-product_reference.png", "product_reference_locked.png"]
+    },
+    {
+      "check_id": "product-render-invariants",
+      "category": "product_identity",
+      "status": "pass",
+      "method": "editable-object and renderer configuration inspection",
+      "actual": {
+        "fit": "contain",
+        "crop": null,
+        "opacity": 1,
+        "blend_mode": "normal",
+        "filters": [],
+        "color_transform": null,
+        "scale_mode": "uniform"
+      },
+      "evidence_paths": ["design_document.json", "hero_detail_v0.svg", "render_preview.m"]
+    },
+    {
+      "check_id": "reference-attribution-recorded",
+      "category": "provenance",
+      "status": "pass",
+      "method": "source-binding inspection",
+      "actual": {
+        "from_a": [
+          "centered product placement",
+          "image-to-headline-to-features information rhythm",
+          "three equal feature cells",
+          "breathing room"
+        ],
+        "from_b": [
+          "warm ivory",
+          "charcoal",
+          "muted terracotta",
+          "muted olive",
+          "typography tokens"
+        ],
+        "from_product": [
+          "exact locked raster",
+          "placement",
+          "uniform scale"
+        ]
+      },
+      "evidence_paths": ["design_document.json", "change_set.json"]
+    },
+    {
+      "check_id": "generated-background-content-safety",
+      "category": "generated_asset",
+      "status": "pass",
+      "method": "visual inspection",
+      "actual": [
+        "no product depiction",
+        "no text",
+        "no logo",
+        "no brand mark",
+        "no copied pattern"
+      ],
+      "evidence_paths": ["ambient_background_v0.png"]
+    },
+    {
+      "check_id": "editable-object-graph",
+      "category": "editability",
+      "status": "pass",
+      "method": "object graph inspection",
+      "root_object": "canvas",
+      "object_count": 15,
+      "required_object_types_found": [
+        "artboard",
+        "raster_image",
+        "group",
+        "text",
+        "feature_card",
+        "line_group"
+      ],
+      "evidence_paths": ["design_document.json", "hero_detail_v0.svg"]
+    },
+    {
+      "check_id": "object-level-change-set",
+      "category": "change_tracking",
+      "status": "pass",
+      "method": "operation list inspection",
+      "operation_count": 14,
+      "operation_types": ["create"],
+      "protected_invariants_recorded": 3,
+      "evidence_paths": ["change_set.json"]
+    },
+    {
+      "check_id": "version-state-recorded",
+      "category": "versioning",
+      "status": "pass",
+      "method": "project state inspection",
+      "current_version": "v0",
+      "next_checkpoint": "client-confirm-v0",
+      "evidence_paths": ["../project-state.json"]
+    },
+    {
+      "check_id": "artifact-hashes-recorded",
+      "category": "integrity",
+      "status": "pass",
+      "method": "SHA-256 digest",
+      "hashes": {
+        "ambient_background_v0.png": "476fa708de31f5867daf4887c82266b765fe0574f993ccc0c3f42116550a38f3",
+        "product_reference_locked.png": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "hero_detail_v0.svg": "fc25139e79cf4aca0cc5177bad08596fa8490db5525b03d3251565f84754c0b0",
+        "render_preview.m": "0b6ba5747c5d559973ad5d793827dfe366e17e49e0ee2301581374c8ff22e341",
+        "preview.png": "1e394bc9433f55a20f79dfe26d325b4cd0289e4352202aa1ade06de63822fea0"
+      },
+      "evidence_paths": [
+        "ambient_background_v0.png",
+        "product_reference_locked.png",
+        "hero_detail_v0.svg",
+        "render_preview.m",
+        "preview.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "blocker_id": "client-confirm-v0",
+      "severity": "workflow_checkpoint",
+      "status": "open",
+      "description": "The v0 direction is intentionally not final until the client confirms composition, warmth, and information hierarchy in the next round.",
+      "blocks": ["v1 refinement", "final approval"],
+      "does_not_block": ["v0 candidate delivery"]
+    }
+  ]
+}

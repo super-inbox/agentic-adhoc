@@ -1,0 +1,15 @@
+v1 已完成：
+
+- “低噪运行”已明确锁定为正确文案。
+- 第三个卖点整体上移 12 px。
+- 产品、主标题、背景及其他区域未变；像素差异仅位于第三个卖点区域。
+- v0 全部文件保持原样。
+
+新或更新路径：
+
+- [v1 预览](/private<WORKDIR>/outputs/v1/preview.png)
+- [可编辑对象图](/private<WORKDIR>/outputs/v1/design_document.json)
+- [对象级变更集](/private<WORKDIR>/outputs/v1/change_set.json)
+- [机器验证结果](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+- [v1 渲染器](/private<WORKDIR>/outputs/v1/render_design.py)

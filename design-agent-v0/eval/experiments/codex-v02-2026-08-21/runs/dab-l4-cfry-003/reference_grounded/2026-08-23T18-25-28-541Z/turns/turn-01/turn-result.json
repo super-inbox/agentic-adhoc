@@ -1,0 +1,149 @@
+{
+  "turn_index": 1,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T18:41:16.385Z",
+  "finished_at": "2026-08-23T18:57:37.363Z",
+  "latency_ms": 981022,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 53,
+    "command_count": 20,
+    "tool_count": 3,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02fde-d884-72f3-bd39-a1826e617634",
+    "usage": {
+      "input_tokens": 5633635,
+      "cached_input_tokens": 5414272,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 74093,
+      "reasoning_output_tokens": 30892
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 3680,
+      "sha256": "418f517d8999c090cce3ac0514a2b64552ec1811758f9f9f0bb510d74f0bdde8"
+    },
+    {
+      "filename": "v0/evidence/preflight-report-1.png",
+      "byte_size": 211466,
+      "sha256": "eb0b4b46d04ab88a401b10c9e86d6220fbe2a232b4bd8742865aff71055be18f"
+    },
+    {
+      "filename": "v0/evidence/production-1.png",
+      "byte_size": 494462,
+      "sha256": "1105ae0f9be610750920ae553b003c772d4f40eaf272ecd79833a004fae13823"
+    },
+    {
+      "filename": "v0/evidence/production-2.png",
+      "byte_size": 458125,
+      "sha256": "d6aff07f35e30f27f8d88aafe64c599961f3b066c06ea3c52a30607ff36bde35"
+    },
+    {
+      "filename": "v0/evidence/proof-1.png",
+      "byte_size": 326488,
+      "sha256": "cc83fac6f2b56319dc5d3b070125bd5436d850acc5f1582380d7fde6bc26eead"
+    },
+    {
+      "filename": "v0/evidence/proof-2.png",
+      "byte_size": 303882,
+      "sha256": "00eae5f945ed0d5b6fcb11c811d48634f37538ca753f821560552357c9cae8da"
+    },
+    {
+      "filename": "v0/orbit-coffee_preflight_v0.json",
+      "byte_size": 5685,
+      "sha256": "0934f876c2c9c5f47f661fda22d4e9e620058c6e735ce2d1aa49bffe03fdb708"
+    },
+    {
+      "filename": "v0/orbit-coffee_preflight-report_v0.pdf",
+      "byte_size": 4642,
+      "sha256": "418db18c0708a18d0d84e89b0f7593f2dc7ae2ec571fb16770f08d5ad6eb2cf9"
+    },
+    {
+      "filename": "v0/orbit-coffee_print-proof_v0.pdf",
+      "byte_size": 2875328,
+      "sha256": "ec223b094d500baa13e56bc467dad3be9188dcd5744fb75c48586099e625927d"
+    },
+    {
+      "filename": "v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf",
+      "byte_size": 5555936,
+      "sha256": "d813430ee3e1c43f6471e7dcde42009aa493fa3d353c638661760225f03c1498"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4741,
+      "sha256": "dc8092a3bb2fc0152992e2cfe4eb25251fdd5f49a52be5a2d699286753d8548f"
+    },
+    {
+      "filename": "v1/evidence/preflight-report-1.png",
+      "byte_size": 153093,
+      "sha256": "8adb4e65d6e57d8d4f32e92b70abfe3d05fc0ce1a09abb0fbaef15b7422b2a73"
+    },
+    {
+      "filename": "v1/evidence/production-1.png",
+      "byte_size": 494462,
+      "sha256": "1105ae0f9be610750920ae553b003c772d4f40eaf272ecd79833a004fae13823"
+    },
+    {
+      "filename": "v1/evidence/production-2.png",
+      "byte_size": 458125,
+      "sha256": "d6aff07f35e30f27f8d88aafe64c599961f3b066c06ea3c52a30607ff36bde35"
+    },
+    {
+      "filename": "v1/evidence/proof-1.png",
+      "byte_size": 322663,
+      "sha256": "74c997b3d0b27f781f5820006946c06c64ec01302b8a6fda8113ab48aec153e0"
+    },
+    {
+      "filename": "v1/evidence/proof-2.png",
+      "byte_size": 304457,
+      "sha256": "ae40369ffd33e01e8f707b3e8673ad8e695c1a31fe020c7c9eafe4cf97fadcd0"
+    },
+    {
+      "filename": "v1/evidence/white-mask-full.png",
+      "byte_size": 5271,
+      "sha256": "c9dff0912ac6c4102a25fafeea33eaf89acbab80e00eecbc7f267de91e829fb8"
+    },
+    {
+      "filename": "v1/evidence/white-separation-1.png",
+      "byte_size": 8507,
+      "sha256": "be691ae1feb3c573eb22d5c1c96159c5f96b9c7deb5738f008bf705a319ba95a"
+    },
+    {
+      "filename": "v1/orbit-coffee_preflight_v1.json",
+      "byte_size": 3276,
+      "sha256": "de74615bd215da1c239691115eade6d30726984815d63f3fa9b0c0fcb53ea0a6"
+    },
+    {
+      "filename": "v1/orbit-coffee_preflight-report_v1.pdf",
+      "byte_size": 4040,
+      "sha256": "4753be426281309cf5b7493c3065a6cde54d182f1869b86c8111953a239b9d99"
+    },
+    {
+      "filename": "v1/orbit-coffee_print-proof_WHITE_v1.pdf",
+      "byte_size": 3329358,
+      "sha256": "ebb12c26152ab12fed7b48edc260ad6ff253fb5824153af412dd4353f3aeb442"
+    },
+    {
+      "filename": "v1/orbit-coffee_production_120x200mm_CMYK-WHITE_v1.pdf",
+      "byte_size": 6009147,
+      "sha256": "dc226f2ad8ff9b4e2b07274e67b763d9a23247c836f1061c21c1b048768ceafd"
+    },
+    {
+      "filename": "v1/orbit-coffee_WHITE-separation_BACK_v1.pdf",
+      "byte_size": 453837,
+      "sha256": "3e1bab6ba72510c4e83dd52ee8d34dc804e76fe9527a8d5ab13797e0f790273e"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 12250,
+      "sha256": "3dc89784de8caa442c79623fd96a10be7bfcebad1819267c7f59373224230bb2"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "version": "v2",
+  "status": "pass",
+  "verified_on": "2026-08-23",
+  "scope": "Requested delta only: repair the product lower safety area in the Xiaohongshu 3:4 asset. Tmall hero and detail-page first screen remain locked and were not re-exported.",
+  "checks": [
+    {
+      "id": "requested_delta_only",
+      "status": "pass",
+      "method": "Inspected outputs/v2 contents and compared locked artifact hashes.",
+      "observed": {
+        "changed_campaign_asset": "xiaohongshu_3x4_only",
+        "tmall_hero_reexported": false,
+        "detail_first_screen_reexported": false,
+        "new_direction_created": false
+      },
+      "evidence_paths": [
+        "outputs/v2/xiaohongshu-portrait-safe-area-v2.png",
+        "outputs/v2/xiaohongshu-portrait-safe-area-v2.svg"
+      ]
+    },
+    {
+      "id": "safe_area_repair",
+      "status": "pass",
+      "method": "Measured the preserved product cutout alpha bounds against the first strong horizontal background boundary.",
+      "observed": {
+        "background_boundary_y": 1017,
+        "v1_visible_shadow_bottom_y": 1048,
+        "v1_shadow_clearance_px": -31,
+        "v2_visible_shadow_bottom_y": 960,
+        "v2_shadow_clearance_px": 57,
+        "clearance_improvement_px": 88,
+        "opaque_core_bottom_shift_px": -87,
+        "product_scale_reduction_percent": 6.67,
+        "product_layer_top_shift_px": -30,
+        "bottom_clipped_or_crossing_boundary": false
+      },
+      "evidence_paths": [
+        "outputs/v2/verification/safe-area-metrics-v2.json",
+        "outputs/v2/xiaohongshu-portrait-safe-area-v2.png"
+      ]
+    },
+    {
+      "id": "unrelated_regions_preserved",
+      "status": "pass",
+      "method": "Used the v1 PNG as the base and compared pixels outside the repaired product region.",
+      "observed": [
+        {
+          "region": "x=0..1079,y=0..429",
+          "pixels_checked": 464400,
+          "changed_pixels": 0,
+          "maximum_channel_difference": 0
+        },
+        {
+          "region": "x=0..1079,y=1110..1439",
+          "pixels_checked": 356400,
+          "changed_pixels": 0,
+          "maximum_channel_difference": 0
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v1/xiaohongshu-portrait-direction-a-v1.png",
+        "outputs/v2/xiaohongshu-portrait-safe-area-v2.png",
+        "outputs/v2/verification/safe-area-metrics-v2.json"
+      ]
+    },
+    {
+      "id": "copy_background_and_product_invariants",
+      "status": "pass",
+      "method": "Compared text nodes and source hashes between v1 and v2.",
+      "observed": {
+        "selling_sentence": "安静设计，自然融入日常",
+        "v1_text_element_count": 2,
+        "v2_text_element_count": 2,
+        "background_sha256": "4fbd0a7292834ba6389625bc839045366428b1e2b680e158c8e4e57b25782d1c",
+        "product_cutout_sha256": "0cb121dd1bbe5b4b92045e838816efc2f2677ef80a3a6ba6e91f8bbcd785ac00",
+        "product_redrawn": false,
+        "product_recolored": false,
+        "copy_changed": false,
+        "background_changed": false
+      },
+      "evidence_paths": [
+        "outputs/v1/xiaohongshu-portrait-direction-a-v1.svg",
+        "outputs/v2/xiaohongshu-portrait-safe-area-v2.svg",
+        "outputs/v2/xiaohongshu-background-approved-v0-v2.png",
+        "outputs/v2/product-cutout-approved-v0-v2.png"
+      ]
+    },
+    {
+      "id": "final_dimensions_and_preview",
+      "status": "pass",
+      "method": "Read final dimensions and visually inspected full-resolution and 360-pixel-wide renders.",
+      "observed": {
+        "final_path": "outputs/v2/xiaohongshu-portrait-safe-area-v2.png",
+        "width": 1080,
+        "height": 1440,
+        "aspect_ratio": "3:4",
+        "final_sha256": "8af7526a3960baa0db94e7ff24070ce896623e2e68000d2cc9fb40eb9f75cee8",
+        "preview_path": "outputs/v2/verification/xiaohongshu-safe-area-preview-360-v2.png",
+        "preview_width": 360,
+        "preview_height": 480,
+        "preview_sha256": "aa22f4e43ee20607262bf7f349fd379fcbba3692e2b05663ebd38c4bbc1e00c7",
+        "product_bottom_visible": true,
+        "headline_readable": true
+      },
+      "evidence_paths": [
+        "outputs/v2/xiaohongshu-portrait-safe-area-v2.png",
+        "outputs/v2/verification/xiaohongshu-safe-area-preview-360-v2.png"
+      ]
+    },
+    {
+      "id": "earlier_versions_unchanged",
+      "status": "pass",
+      "method": "Recomputed hashes after writing v2 and compared them with their recorded values.",
+      "observed": [
+        {
+          "path": "outputs/v0/tmall-hero-direction-a-v0.png",
+          "sha256": "bc1288398f85de17f9a3b9996a1a4ce819cd5458b7d19ec70127a219a23fd9d0",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v0/pdp-first-screen-direction-a-v0.png",
+          "sha256": "f621455e6185fed53045d6e7ad4c232efa3b00593013c2e5cfcf5b31cc98fd4a",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v1/xiaohongshu-portrait-direction-a-v1.png",
+          "sha256": "d8a95195b60b19f3309ff568116a678aabcf4cbfd6a59406e37ccfa63fab7daa",
+          "unchanged": true
+        },
+        {
+          "path": "outputs/v1/xiaohongshu-portrait-direction-a-v1.svg",
+          "sha256": "d4b0692757b4861263bcdcc28d9421f2334f09627305a7064e06065d20740d47",
+          "unchanged": true
+        }
+      ],
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v1/verification.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

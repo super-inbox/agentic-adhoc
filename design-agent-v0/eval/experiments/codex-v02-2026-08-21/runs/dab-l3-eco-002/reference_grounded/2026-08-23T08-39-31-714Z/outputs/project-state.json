@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.2",
+  "current_version": "v0",
+  "status": "candidate_complete",
+  "client_decisions": [
+    {
+      "decision": "retouch_existing_product_only",
+      "value": true,
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "allowed_changes",
+      "value": [
+        "remove_dirty_glass_reflections",
+        "reduce_glass_haze",
+        "improve_glass_edge_transparency",
+        "keep_background_clean"
+      ],
+      "source": "current_user_turn"
+    }
+  ],
+  "locked_items": [
+    "bottle_geometry_and_proportions",
+    "cap_shape_position_color_and_shading",
+    "label_geometry_position_color_and_existing_content",
+    "liquid_color_and_fill_level",
+    "internal_tube",
+    "camera_view_crop_scale_and_composition",
+    "neutral_gray_background_and_product_shadow"
+  ],
+  "changed_items": [
+    "dirty_reflection_cleanup_on_existing_glass_perimeter",
+    "subtle_luminance_only_dehaze_on_existing_glass_edges_and_shoulders",
+    "restrained_edge_clarity_on_existing_clear_glass_base"
+  ],
+  "artifacts": {
+    "source": "inputs/01-edit_target.png",
+    "candidate": "outputs/v0/perfume-bottle-retouched-v0.png",
+    "retouch_mask_evidence": "outputs/v0/perfume-bottle-glass-retouch-mask-v0.png",
+    "difference_evidence": "outputs/v0/perfume-bottle-retouch-difference-v0.png",
+    "verification": "outputs/v0/verification.json"
+  },
+  "unresolved_blockers": []
+}

@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">蓝绿色便携音箱低成本场景方向板 v0</title>
+  <desc id="desc">十二个场景假设聚类为城市随身、阳台微度假、一日相伴三个方向，等待客户选择。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#243238" flood-opacity="0.10"/>
+    </filter>
+    <clipPath id="productA"><rect x="420" y="167" width="118" height="118" rx="26"/></clipPath>
+    <clipPath id="productB"><rect x="990" y="167" width="118" height="118" rx="26"/></clipPath>
+    <clipPath id="productC"><rect x="1560" y="167" width="118" height="118" rx="26"/></clipPath>
+    <style>
+      text { font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #263238; }
+      .eyebrow { font-size: 18px; font-weight: 600; letter-spacing: 2px; fill: #68767a; }
+      .title { font-size: 48px; font-weight: 700; letter-spacing: -1px; }
+      .subtitle { font-size: 20px; fill: #68767a; }
+      .dir { font-size: 31px; font-weight: 700; }
+      .claim { font-size: 18px; font-weight: 650; }
+      .scene-num { font-size: 15px; font-weight: 700; letter-spacing: 1px; }
+      .scene-title { font-size: 22px; font-weight: 650; }
+      .scene-note { font-size: 16px; fill: #657277; }
+      .guard { font-size: 15px; fill: #536267; }
+      .footer { font-size: 21px; font-weight: 650; }
+      .icon { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1200" fill="#F6F5F2"/>
+  <text class="eyebrow" x="70" y="62">DIRECTION EXPLORATION · V0</text>
+  <text class="title" x="70" y="118">便携音箱｜低成本场景方向板</text>
+  <text class="subtitle" x="70" y="154">12 个场景假设 · 3 个方向 · 仅使用批准卖点 · 本轮等待选择</text>
+
+  <!-- Direction A -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="190" width="540" height="900" rx="34" fill="#F1EAE2"/>
+  </g>
+  <rect x="92" y="222" width="54" height="32" rx="16" fill="#B86F4B"/>
+  <text x="119" y="244" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">A</text>
+  <text class="dir" x="92" y="300">城市随身</text>
+  <text class="subtitle" x="92" y="334">出门就带上 · 自然抓拍感</text>
+  <rect x="92" y="355" width="142" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.85"/>
+  <text class="claim" x="163" y="378" text-anchor="middle" fill="#9C5838">一体式挂环</text>
+  <rect x="410" y="157" width="138" height="138" rx="30" fill="#fff" stroke="#D9C9BC" stroke-width="2"/>
+  <image href="../../inputs/01-product_master.png" x="420" y="167" width="118" height="118" preserveAspectRatio="xMidYMid slice" clip-path="url(#productA)"/>
+
+  <g transform="translate(92 424)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#B86F4B">
+      <path class="icon" d="M13 73V12h50v61M13 45h50M49 30h2"/>
+      <path class="icon" d="M73 73V43h33v30M79 43c0-13 21-13 21 0"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#B86F4B">01 · ENTRY</text>
+    <text class="scene-title" x="142" y="65">玄关出门</text>
+    <text class="scene-note" x="142" y="92">开放背包作线索，产品完整居前</text>
+  </g>
+  <g transform="translate(92 565)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#B86F4B">
+      <rect class="icon" x="8" y="7" width="48" height="42" rx="3"/>
+      <path class="icon" d="M32 7v42M8 29h48M2 74h77M14 74V55h53v19"/>
+      <path class="icon" d="M83 48h20v22H83zM87 48c0-9 12-9 12 0"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#B86F4B">02 · CAFÉ</text>
+    <text class="scene-title" x="142" y="65">咖啡店靠窗</text>
+    <text class="scene-note" x="142" y="92">背包虚化在后，主体占画面约 1/3</text>
+  </g>
+  <g transform="translate(92 706)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#B86F4B">
+      <path class="icon" d="M17 17c7-14 31-14 38 0 17-6 25 15 12 25H9C-3 29 3 16 17 17Z"/>
+      <path class="icon" d="M38 42v31M6 57h74M12 57v16M74 57v16"/>
+      <path class="icon" d="M87 49h18v24H87z"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#B86F4B">03 · PARK</text>
+    <text class="scene-title" x="142" y="65">公园长椅停留</text>
+    <text class="scene-note" x="142" y="92">帆布包并置，少量树影与自然光</text>
+  </g>
+  <g transform="translate(92 847)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#B86F4B">
+      <circle class="icon" cx="76" cy="17" r="11"/>
+      <path class="icon" d="M4 45h93M0 56c17-9 32 9 49 0s32 9 49 0M9 73h80"/>
+      <path class="icon" d="M18 45l12-17 12 17M38 45l18-25 18 25"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#B86F4B">04 · RIVERSIDE</text>
+    <text class="scene-title" x="142" y="65">河畔台阶小憩</text>
+    <text class="scene-note" x="142" y="92">傍晚停留，不进入重装探险语境</text>
+  </g>
+  <text class="guard" x="92" y="1020">低成本：同一城市街区 + 1 只背包</text>
+  <text class="guard" x="92" y="1047">边界：未补角度图前，不正面虚构挂环连接</text>
+
+  <!-- Direction B -->
+  <g filter="url(#shadow)">
+    <rect x="630" y="190" width="540" height="900" rx="34" fill="#E4EFEB"/>
+  </g>
+  <rect x="662" y="222" width="54" height="32" rx="16" fill="#457C77"/>
+  <text x="689" y="244" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">B</text>
+  <text class="dir" x="662" y="300">阳台微度假</text>
+  <text class="subtitle" x="662" y="334">家门口轻户外 · 少量水珠</text>
+  <rect x="662" y="355" width="172" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.85"/>
+  <text class="claim" x="748" y="378" text-anchor="middle" fill="#326963">IPX4 防泼水</text>
+  <rect x="980" y="157" width="138" height="138" rx="30" fill="#fff" stroke="#BDD4CE" stroke-width="2"/>
+  <image href="../../inputs/01-product_master.png" x="990" y="167" width="118" height="118" preserveAspectRatio="xMidYMid slice" clip-path="url(#productB)"/>
+
+  <g transform="translate(662 424)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#457C77">
+      <path class="icon" d="M3 74h102M11 74V42h85v32M11 56h85"/>
+      <circle class="icon" cx="30" cy="30" r="15"/>
+      <path class="icon" d="M30 6v7M30 47v7M6 30h7M47 30h7"/>
+      <path class="icon" d="M73 53v-20h17v20"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#457C77">05 · BREAKFAST</text>
+    <text class="scene-title" x="142" y="65">阳台早餐</text>
+    <text class="scene-note" x="142" y="92">冷凝水珠在侧，晨光保持清爽</text>
+  </g>
+  <g transform="translate(662 565)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#457C77">
+      <path class="icon" d="M5 19h94L82 5H22L5 19Z"/>
+      <path class="icon" d="M13 27l-6 11M31 27l-6 11M49 27l-6 11M67 27l-6 11M85 27l-6 11"/>
+      <path class="icon" d="M17 60h74M24 60v15M84 60v15"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#457C77">06 · DRIZZLE</text>
+    <text class="scene-title" x="142" y="65">屋檐下的小雨</text>
+    <text class="scene-note" x="142" y="92">雨在背景，产品不置于积水中</text>
+  </g>
+  <g transform="translate(662 706)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#457C77">
+      <path class="icon" d="M19 73V44M19 52C3 47 2 30 3 22c12 2 25 9 16 30ZM20 56c17-2 24-17 23-28-14 0-28 7-23 28Z"/>
+      <path class="icon" d="M59 60h38l-7 14H66l-7-14ZM64 60V39h29v21"/>
+      <path class="icon" d="M59 42c-12-7-12-16-1-18"/>
+      <circle cx="47" cy="16" r="3" fill="#457C77"/><circle cx="39" cy="8" r="2.5" fill="#457C77"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#457C77">07 · GARDEN</text>
+    <text class="scene-title" x="142" y="65">小院浇花</text>
+    <text class="scene-note" x="142" y="92">细小飞溅，不呈现冲洗或浸泡</text>
+  </g>
+  <g transform="translate(662 847)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#457C77">
+      <path class="icon" d="M4 72h100M13 72l21-47 23 47M34 25l22 47M58 72l20-40 21 40"/>
+      <path class="icon" d="M75 24h20v26H75z"/>
+      <path class="icon" d="M99 27c9 4 7 12 0 14"/>
+      <path class="icon" d="M69 17c0 5-7 5-7 0 0-3 3-6 3-9 1 3 4 6 4 9Z"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#457C77">08 · PICNIC</text>
+    <text class="scene-title" x="142" y="65">野餐杯沿水滴</text>
+    <text class="scene-note" x="142" y="92">少量意外飞溅，主体仍占画面最大</text>
+  </g>
+  <text class="guard" x="662" y="1020">低成本：1 个阳台/小院 + 4 次道具重置</text>
+  <text class="guard" x="662" y="1047">边界：只说 IPX4 防泼水，仅表现少量飞溅</text>
+
+  <!-- Direction C -->
+  <g filter="url(#shadow)">
+    <rect x="1200" y="190" width="540" height="900" rx="34" fill="#ECE9F2"/>
+  </g>
+  <rect x="1232" y="222" width="54" height="32" rx="16" fill="#695C8B"/>
+  <text x="1259" y="244" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">C</text>
+  <text class="dir" x="1232" y="300">一日相伴</text>
+  <text class="subtitle" x="1232" y="334">晨到夜连续叙事 · 主体最清楚</text>
+  <rect x="1232" y="355" width="160" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.85"/>
+  <text class="claim" x="1312" y="378" text-anchor="middle" fill="#5A4C7B">12 小时续航</text>
+  <rect x="1550" y="157" width="138" height="138" rx="30" fill="#fff" stroke="#CEC7DE" stroke-width="2"/>
+  <image href="../../inputs/01-product_master.png" x="1560" y="167" width="118" height="118" preserveAspectRatio="xMidYMid slice" clip-path="url(#productC)"/>
+
+  <g transform="translate(1232 424)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#695C8B">
+      <circle class="icon" cx="30" cy="28" r="17"/>
+      <path class="icon" d="M30 28V17M30 28l10 6M5 73h98M18 73V50h72v23M63 50V34h20v16"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#695C8B">09 · 08:00</text>
+    <text class="scene-title" x="142" y="65">晨间工作台</text>
+    <text class="scene-note" x="142" y="92">首帧建立产品身份，画面最克制</text>
+  </g>
+  <g transform="translate(1232 565)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#695C8B">
+      <path class="icon" d="M2 72h104M11 72V46h86v26M20 46V16h68v30"/>
+      <path class="icon" d="M31 16v30M56 16v30M80 16v30"/>
+      <circle class="icon" cx="43" cy="59" r="7"/>
+      <path class="icon" d="M70 64h17V51H70z"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#695C8B">10 · 12:00</text>
+    <text class="scene-title" x="142" y="65">午间料理台</text>
+    <text class="scene-note" x="142" y="92">干燥台面，不增加任何功能暗示</text>
+  </g>
+  <g transform="translate(1232 706)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#695C8B">
+      <path class="icon" d="M3 73h103M11 73V46h86v27M11 59h86"/>
+      <path class="icon" d="M25 46V23l18 5v18M43 28l18-5v23"/>
+      <path class="icon" d="M75 48h17v20H75zM79 48c0-8 9-8 9 0"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#695C8B">11 · 16:00</text>
+    <text class="scene-title" x="142" y="65">阳台阅读</text>
+    <text class="scene-note" x="142" y="92">书本与饮品弱化，延续同一住处</text>
+  </g>
+  <g transform="translate(1232 847)">
+    <rect width="476" height="125" rx="22" fill="#fff" fill-opacity="0.78"/>
+    <g transform="translate(18 22)" color="#695C8B">
+      <path class="icon" d="M2 73h104M12 73V53h84v20"/>
+      <path class="icon" d="M25 53l-7-18M83 53l7-18"/>
+      <circle class="icon" cx="32" cy="25" r="9"/>
+      <path class="icon" d="M63 7c-8 4-11 14-6 22s15 10 23 5c-13 1-21-14-17-27Z"/>
+      <path class="icon" d="M13 40h18M77 40h18"/>
+    </g>
+    <text class="scene-num" x="142" y="34" fill="#695C8B">12 · 20:00</text>
+    <text class="scene-title" x="142" y="65">夜间阳台小聚</text>
+    <text class="scene-note" x="142" y="92">暖灯轻社交，产品仍是最亮主体</text>
+  </g>
+  <text class="guard" x="1232" y="1020">成本最低：同一住处 + 光线与小道具变化</text>
+  <text class="guard" x="1232" y="1047">边界：只写 12 小时续航，不延伸其他参数</text>
+
+  <rect x="60" y="1117" width="1680" height="60" rx="30" fill="#263238"/>
+  <text class="footer" x="900" y="1155" text-anchor="middle" fill="#fff">请选择 A / B / C　·　可附加“更商业”或“更生活”</text>
+</svg>

@@ -1,0 +1,131 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-PSF-002@reference_grounded",
+  "base_brief_id": "DAB-L3-PSF-002",
+  "context_condition": "reference_grounded",
+  "category": "packaging_sku_family",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T09:08:00.344Z",
+  "finished_at": "2026-08-23T09:12:54.262Z",
+  "latency_ms": 293918,
+  "intended_turns": 1,
+  "completed_turns": 1,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02de0-7717-7f31-b929-8bbfda56e3b9",
+  "input_assets": [
+    {
+      "input_id": "packaging-board",
+      "asset_id": "design-vote-mens-grooming-abcd",
+      "role": "packaging_candidates",
+      "reference_role": "candidate_option",
+      "identity_policy": "analysis_only",
+      "filename": "01-packaging_candidates.png",
+      "source_path": "eval/assets/reference-pack-v0.2/design-vote/mens-grooming-abcd.png",
+      "byte_size": 1216397,
+      "sha256": "b4bbb640cc1941d34e156e50d74214b2d7828b4d077c0be5070cd408dea0023c"
+    }
+  ],
+  "input_context_ids": [
+    "packaging-board",
+    "decision-context"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1689,
+      "sha256": "828b5e6ecc465b8f7cf20a1d3bf6674e62c266b5bd8c38afba976e0d916d8f1a"
+    },
+    {
+      "filename": "v0/packaging-evaluation.md",
+      "byte_size": 4439,
+      "sha256": "06d898b046916122348382c1f494bfa055300181082bc542638883396d618e2d"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 2537,
+      "sha256": "df09563452c6a49077d67e39e96ea919a76075854da44a6a0bfec362984ab386"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T09:08:00.344Z",
+      "finished_at": "2026-08-23T09:12:54.255Z",
+      "latency_ms": 293916,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 21,
+        "command_count": 5,
+        "tool_count": 2,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02de0-7717-7f31-b929-8bbfda56e3b9",
+        "usage": {
+          "input_tokens": 200422,
+          "cached_input_tokens": 150016,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 10454,
+          "reasoning_output_tokens": 5219
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 1689,
+          "sha256": "828b5e6ecc465b8f7cf20a1d3bf6674e62c266b5bd8c38afba976e0d916d8f1a"
+        },
+        {
+          "filename": "v0/packaging-evaluation.md",
+          "byte_size": 4439,
+          "sha256": "06d898b046916122348382c1f494bfa055300181082bc542638883396d618e2d"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 2537,
+          "sha256": "df09563452c6a49077d67e39e96ea919a76075854da44a6a0bfec362984ab386"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 200422,
+    "cached_input_tokens": 150016,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 10454,
+    "reasoning_output_tokens": 5219
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

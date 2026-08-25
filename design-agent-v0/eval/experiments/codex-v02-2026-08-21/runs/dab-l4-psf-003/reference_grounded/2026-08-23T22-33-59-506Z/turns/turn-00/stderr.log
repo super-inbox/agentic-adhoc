@@ -1,0 +1,7 @@
+Reading additional input from stdin...
+2026-08-23T22:33:59.587778Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T22:33:59.592372Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-08-23T22:33:59.641670Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T22:33:59.641693Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-08-23T22:34:00.936138Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-08-23T22:34:00.936168Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/

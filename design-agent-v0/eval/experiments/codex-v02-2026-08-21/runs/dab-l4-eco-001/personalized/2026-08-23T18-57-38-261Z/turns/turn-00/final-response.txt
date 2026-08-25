@@ -1,0 +1,17 @@
+已完成 v0 方向探索，并停在客户选择节点；六张正式资产尚未制作。
+
+- **A 城市留白**：早—中—晚城市时间轴，最适合电商与「12 小时续航」。
+- **B 雨后松弛**：轻雨、檐下、湿润环境，强化「IPX4 防泼水」差异。
+- **C 一挂即走**：包带与移动近景，社媒传播最强，突出「一体式挂环」。
+
+请回复 **A、B 或 C**。
+
+无论选择哪条方向，制作挂环卖点图前都需要补充能看清真实挂环形状和位置的侧面/背面产品图，以免虚构结构或挂法。
+
+文件：
+
+- [方向选择总览板](<WORKDIR>/outputs/v0/creative-territories-overview-v0.png)
+- [10 个场景与完整方向说明](<WORKDIR>/outputs/v0/creative-territories-v0.md)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json)
+- [内置 imagegen 完整提示词](<WORKDIR>/outputs/v0/generation-prompts-v0.md)

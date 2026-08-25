@@ -1,0 +1,122 @@
+{
+  "version": "v1",
+  "final_artifact": "outputs/v1/candidates/kv-dark-direction-refinement-v1.png",
+  "final_sha256": "b51c9bce0a18cbcd75507787ea11fceeb5c8094b2d8a93a28beb7465888ae5e5",
+  "product_source": "inputs/01-launch_product.png",
+  "product_source_sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286",
+  "background_source": "outputs/v1/sources/direction-b-dark-tabletop-soft-side-light.png",
+  "background_source_sha256": "abfdaf12f44191a8bad0c45eed3ed3d5b01312d00811dbdd4808328641640fc6",
+  "checks": [
+    {
+      "check": "canvas_dimensions",
+      "passed": true,
+      "observed": [
+        1600,
+        2000
+      ]
+    },
+    {
+      "check": "approved_copy_source",
+      "passed": true,
+      "observed": {
+        "en": "Quiet hours, made tangible.",
+        "zh": "让夜晚慢下来。"
+      }
+    },
+    {
+      "check": "product_core_pixel_identity",
+      "passed": true,
+      "observed": {
+        "final_core_box": [
+          530,
+          724,
+          1066,
+          1659
+        ],
+        "pixel_difference_bbox": null,
+        "mask_core_extrema": [
+          255,
+          255
+        ],
+        "meaning": "Bottle/cap/liquid/label core is an exact pixel match to the uniformly resized source; feathering occurs outside this verified core only."
+      }
+    },
+    {
+      "check": "physical_tabletop_grounding_geometry",
+      "passed": true,
+      "observed": {
+        "tabletop_horizon_y_approx": 1430,
+        "verified_product_core_base_y": 1659,
+        "source_contact_shadow_retained": true,
+        "floating_matte_removed": true
+      }
+    },
+    {
+      "check": "v0_candidate_integrity",
+      "passed": true,
+      "observed": "All 9 v0 candidate hashes match their recorded v0 QA hashes."
+    },
+    {
+      "check": "channel_extension_gate",
+      "passed": true,
+      "observed": []
+    }
+  ],
+  "v0_integrity": [
+    {
+      "code": "A1",
+      "expected_sha256": "4d53ecd6ebd72f8ca282407b0d711863be4587d224ce32c18975ff76dc8c4acb",
+      "observed_sha256": "4d53ecd6ebd72f8ca282407b0d711863be4587d224ce32c18975ff76dc8c4acb",
+      "unchanged": true
+    },
+    {
+      "code": "A2",
+      "expected_sha256": "26d2274de99d835d3a48d2928b085315c9bbaed6c8a59f96ef406beeefb52a47",
+      "observed_sha256": "26d2274de99d835d3a48d2928b085315c9bbaed6c8a59f96ef406beeefb52a47",
+      "unchanged": true
+    },
+    {
+      "code": "A3",
+      "expected_sha256": "2c489f826d5cfc2402479161c09ca9cc6c95e4afeeb924da59146560e00aaa11",
+      "observed_sha256": "2c489f826d5cfc2402479161c09ca9cc6c95e4afeeb924da59146560e00aaa11",
+      "unchanged": true
+    },
+    {
+      "code": "B1",
+      "expected_sha256": "7e539bf1c2cc79b995d7c742762c99869cb4b33d36743ebd6be20d030b0fde1a",
+      "observed_sha256": "7e539bf1c2cc79b995d7c742762c99869cb4b33d36743ebd6be20d030b0fde1a",
+      "unchanged": true
+    },
+    {
+      "code": "B2",
+      "expected_sha256": "7645db70c4816a03a3ef04359e4707ab820faf1d95460d25fd418a782d0ea5c1",
+      "observed_sha256": "7645db70c4816a03a3ef04359e4707ab820faf1d95460d25fd418a782d0ea5c1",
+      "unchanged": true
+    },
+    {
+      "code": "B3",
+      "expected_sha256": "4b47c190c95fe10d32a2d31c9c61c879bf84b3fdcc0a5583ca1592c6085db24c",
+      "observed_sha256": "4b47c190c95fe10d32a2d31c9c61c879bf84b3fdcc0a5583ca1592c6085db24c",
+      "unchanged": true
+    },
+    {
+      "code": "C1",
+      "expected_sha256": "ac77feaf9c601badab1a784315e6c697e08042ef04fbe368739e52c80460b5c9",
+      "observed_sha256": "ac77feaf9c601badab1a784315e6c697e08042ef04fbe368739e52c80460b5c9",
+      "unchanged": true
+    },
+    {
+      "code": "C2",
+      "expected_sha256": "69653add1249d1109e31c06e022af5beb9a84f911f41267d4b6aa46aa6d3d183",
+      "observed_sha256": "69653add1249d1109e31c06e022af5beb9a84f911f41267d4b6aa46aa6d3d183",
+      "unchanged": true
+    },
+    {
+      "code": "C3",
+      "expected_sha256": "ca41d387b3d86dd369b1e8081a21aa5ddb953db0fbbb223fdf32498a56792e02",
+      "observed_sha256": "ca41d387b3d86dd369b1e8081a21aa5ddb953db0fbbb223fdf32498a56792e02",
+      "unchanged": true
+    }
+  ],
+  "all_automated_checks_passed": true
+}

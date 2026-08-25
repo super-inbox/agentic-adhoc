@@ -1,0 +1,13 @@
+已完成并停在选择检查点：10 个假设聚类为 3 个差异明确的方向；现有 Logo 未改，三套主配色未混合，每套均包含淘宝与门店延展。
+
+visualize{"path":"<WORKDIR>/outputs/v0/creative-territories-board.html","mode":"wide","title":"GRAIN & GLOW Creative Territories v0"}
+
+请回复选择：
+
+- T1 日光酥层：食欲摄影与光感
+- T2 素笺礼序：材质与礼赠仪式
+- T3 城市酥谱：图形与信息系统
+
+也可附带一项希望跨方向保留的特征。精修前还需现有 Logo及中文标准字的矢量源文件。
+
+详细文件：[方向说明](<WORKDIR>/outputs/v0/creative-territories.md) · [静态方向板](<WORKDIR>/outputs/v0/creative-territories-overview.png) · [验证记录](<WORKDIR>/outputs/v0/verification.json) · [项目状态](<WORKDIR>/outputs/project-state.json)

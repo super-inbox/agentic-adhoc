@@ -1,0 +1,84 @@
+{
+  "current_version": "v0",
+  "status": "awaiting_internal_kv_selection",
+  "current_checkpoint": "select_one_lead_kv_before_channel_extensions",
+  "client_decisions": {
+    "approved_copy": [
+      "Quiet hours, made tangible.",
+      "让夜晚慢下来。"
+    ],
+    "selected_territory": null,
+    "selected_kv": null,
+    "channel_extensions_authorized": false
+  },
+  "locked_items": [
+    {
+      "item": "MORI logo",
+      "source": "inputs/01-brand_guideline.png",
+      "rule": "use exact source crop; do not redraw or recolor"
+    },
+    {
+      "item": "brand palette",
+      "rule": "retain rice-white and terracotta red in every KV; charcoal, muted olive, and pale blue may support"
+    },
+    {
+      "item": "product identity",
+      "source": "inputs/02-launch_product.png",
+      "rule": "place original packshot only; bottle shape and blank label remain unchanged"
+    },
+    {
+      "item": "claims boundary",
+      "rule": "no treatment, insomnia-improvement, medical, or clinical efficacy language or symbolism"
+    }
+  ],
+  "changed_items": [
+    {
+      "item": "KV hypotheses",
+      "count": 9,
+      "range": "A1-C3"
+    },
+    {
+      "item": "Creative Territories",
+      "count": 3,
+      "values": [
+        "A - Quiet Geometry",
+        "B - Tactile Ritual",
+        "C - Afterglow"
+      ]
+    },
+    {
+      "item": "background atmosphere plates",
+      "count": 3,
+      "method": "built-in image_gen; background-only prompts"
+    }
+  ],
+  "deferred_items": [
+    "website hero",
+    "Instagram vertical",
+    "email header"
+  ],
+  "artifacts": {
+    "review_pdf": "outputs/v0/mori-night-fragrance-kv-hypotheses-v0.pdf",
+    "overview_board": "outputs/v0/boards/mori-kv-territories-overview.png",
+    "territory_boards": [
+      "outputs/v0/boards/territory-a-quiet-geometry.png",
+      "outputs/v0/boards/territory-b-tactile-ritual.png",
+      "outputs/v0/boards/territory-c-afterglow.png"
+    ],
+    "candidate_kvs": [
+      "outputs/v0/candidates/a1-horizon-field.png",
+      "outputs/v0/candidates/a2-breathing-frame.png",
+      "outputs/v0/candidates/a3-cadence-blocks.png",
+      "outputs/v0/candidates/b1-linen-fold.png",
+      "outputs/v0/candidates/b2-paper-window.png",
+      "outputs/v0/candidates/b3-ceramic-marker.png",
+      "outputs/v0/candidates/c1-dusk-split.png",
+      "outputs/v0/candidates/c2-ember-halo.png",
+      "outputs/v0/candidates/c3-quiet-threshold.png"
+    ],
+    "hypothesis_brief": "outputs/v0/kv-hypotheses.md",
+    "imagegen_prompt_manifest": "outputs/v0/imagegen-prompts.md",
+    "verification": "outputs/v0/verification.json"
+  }
+}
+

@@ -1,0 +1,596 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-MFA-003@reference_grounded",
+  "base_brief_id": "DAB-L4-MFA-003",
+  "context_condition": "reference_grounded",
+  "category": "multi_format_adaptation",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_turn_revision",
+    "state_recovery"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T21:05:06.617Z",
+  "finished_at": "2026-08-23T21:49:42.098Z",
+  "latency_ms": 2675481,
+  "intended_turns": 4,
+  "completed_turns": 4,
+  "logical_sessions": [
+    "session-01",
+    "session-02"
+  ],
+  "codex_thread_id": "01a03070-fe69-7f32-a889-fcbce39725e6",
+  "input_assets": [
+    {
+      "input_id": "poster-master",
+      "asset_id": "image-edit-poster-summer-form",
+      "role": "approved_master",
+      "reference_role": "approved_master",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-approved_master.png",
+      "source_path": "eval/assets/reference-pack-v0.2/image-edit/poster-summer-form.png",
+      "byte_size": 1388454,
+      "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+    }
+  ],
+  "input_context_ids": [
+    "poster-master",
+    "bad-size-sheet"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 4370,
+      "sha256": "5d3d67d93160808f65aec16d45707416b693fbda965b2a07f66865dbfe4463c9"
+    },
+    {
+      "filename": "v0/generation-prompts.json",
+      "byte_size": 1296,
+      "sha256": "bfd87de3aaf8c2f1d4c49dc3bcb67d6c6c7f9df769e2d609af6abda4a431a8a0"
+    },
+    {
+      "filename": "v0/manifest.json",
+      "byte_size": 2000,
+      "sha256": "5aac8df4c26f2a6604a8d238a35f69ddd72606f3d917c517d5708733d43a2f41"
+    },
+    {
+      "filename": "v0/summer-form-channel-exports-v0.zip",
+      "byte_size": 9017787,
+      "sha256": "b89bf988e15c85207485e0e28e87c465c79d1ed2fd76c2b63d7558ef13b636cb"
+    },
+    {
+      "filename": "v0/summer-form-email-600x200.png",
+      "byte_size": 161743,
+      "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada"
+    },
+    {
+      "filename": "v0/summer-form-led-4096x1024.png",
+      "byte_size": 4015508,
+      "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0"
+    },
+    {
+      "filename": "v0/summer-form-story-1080x1920.png",
+      "byte_size": 2632932,
+      "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6"
+    },
+    {
+      "filename": "v0/summer-form-xhs-1080x1440.png",
+      "byte_size": 2201381,
+      "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3614,
+      "sha256": "d336125cb0ea1f1d6e12a8d06164095a2def8aaae700834659f11a06b084d092"
+    },
+    {
+      "filename": "v1/generation-prompt.json",
+      "byte_size": 1321,
+      "sha256": "080711fb759270c68810c28fa7257e404f7ead0bed306c3f448fc743b89d00f6"
+    },
+    {
+      "filename": "v1/manifest.json",
+      "byte_size": 1957,
+      "sha256": "b60f30e9ad32457dba3c73d37426bfb39aeeef0bdaa9f28cbb970f193a91c0b8"
+    },
+    {
+      "filename": "v1/summer-form-website-1440x560.png",
+      "byte_size": 1078510,
+      "sha256": "57e902355f1f863ae3ed93913e31c4ba9df5b2cddc01eda1a5840d248c81676a"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 3136,
+      "sha256": "02382b44374d8288e95520d41c946ba745bddc2df6d0c043e11c93ed6dd42969"
+    },
+    {
+      "filename": "v2/generation-prompt.json",
+      "byte_size": 1305,
+      "sha256": "c02cbe9b548f9d8bcfe50c9edc3c768b88c4ed078a922ea17360f75ab5973e9d"
+    },
+    {
+      "filename": "v2/manifest.json",
+      "byte_size": 2042,
+      "sha256": "9e553c4c981165d1fe248a5116c9651c0d59872458ca17fdb93bc137f0635dcf"
+    },
+    {
+      "filename": "v2/summer-form-email-600x240.png",
+      "byte_size": 184795,
+      "sha256": "954176842186f6f3e39d113909e1dae4823514ec8e340459b460dc8c8b70f50b"
+    },
+    {
+      "filename": "v2/verification.json",
+      "byte_size": 3509,
+      "sha256": "52805fd866c44a91757eb03df243da217d24f4256d415787c688513712b3462a"
+    },
+    {
+      "filename": "v3/generation-prompt.json",
+      "byte_size": 1425,
+      "sha256": "b984439b5df7d4896a75a38dc45ed571b2e21a2285da8597282efbdee6ce3e7e"
+    },
+    {
+      "filename": "v3/manifest.json",
+      "byte_size": 2147,
+      "sha256": "926c0f22c43939473f0f4a9b8179e4fdfdedf91ac4f18842b1adf7f5caa14ae3"
+    },
+    {
+      "filename": "v3/summer-form-story-registration-up-1080x1920.png",
+      "byte_size": 2304076,
+      "sha256": "2f8354812dd2d1947e5e935b7c9ed7e4a3ae4e1e2043f4477c1dc8a7d2758f0d"
+    },
+    {
+      "filename": "v3/verification.json",
+      "byte_size": 4792,
+      "sha256": "9cba9225206c64317ff6716cdc3020331db34c2ff7143cfbed08d7e56d0ca523"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T21:05:06.618Z",
+      "finished_at": "2026-08-23T21:16:34.147Z",
+      "latency_ms": 687557,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 37,
+        "command_count": 12,
+        "tool_count": 2,
+        "image_activity_count": 3,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a03070-fe69-7f32-a889-fcbce39725e6",
+        "usage": {
+          "input_tokens": 814461,
+          "cached_input_tokens": 748928,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 14072,
+          "reasoning_output_tokens": 4942
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 2861,
+          "sha256": "068a1e84c685908add53acfddba4eea0bbca907a9e26f4c33c746d9f49b66ac8"
+        },
+        {
+          "filename": "v0/generation-prompts.json",
+          "byte_size": 1296,
+          "sha256": "bfd87de3aaf8c2f1d4c49dc3bcb67d6c6c7f9df769e2d609af6abda4a431a8a0"
+        },
+        {
+          "filename": "v0/manifest.json",
+          "byte_size": 2000,
+          "sha256": "5aac8df4c26f2a6604a8d238a35f69ddd72606f3d917c517d5708733d43a2f41"
+        },
+        {
+          "filename": "v0/summer-form-channel-exports-v0.zip",
+          "byte_size": 9017787,
+          "sha256": "b89bf988e15c85207485e0e28e87c465c79d1ed2fd76c2b63d7558ef13b636cb"
+        },
+        {
+          "filename": "v0/summer-form-email-600x200.png",
+          "byte_size": 161743,
+          "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada"
+        },
+        {
+          "filename": "v0/summer-form-led-4096x1024.png",
+          "byte_size": 4015508,
+          "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0"
+        },
+        {
+          "filename": "v0/summer-form-story-1080x1920.png",
+          "byte_size": 2632932,
+          "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6"
+        },
+        {
+          "filename": "v0/summer-form-xhs-1080x1440.png",
+          "byte_size": 2201381,
+          "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3614,
+          "sha256": "d336125cb0ea1f1d6e12a8d06164095a2def8aaae700834659f11a06b084d092"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T21:16:34.175Z",
+      "finished_at": "2026-08-23T21:24:46.325Z",
+      "latency_ms": 492184,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 31,
+        "command_count": 10,
+        "tool_count": 1,
+        "image_activity_count": 5,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a03070-fe69-7f32-a889-fcbce39725e6",
+        "usage": {
+          "input_tokens": 1933341,
+          "cached_input_tokens": 1829376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 23828,
+          "reasoning_output_tokens": 8116
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 3194,
+          "sha256": "0b3bba4852ec2c18a4918e7ec62bff7b73180a4ad2677131165740a3d94b8ae8"
+        },
+        {
+          "filename": "v0/generation-prompts.json",
+          "byte_size": 1296,
+          "sha256": "bfd87de3aaf8c2f1d4c49dc3bcb67d6c6c7f9df769e2d609af6abda4a431a8a0"
+        },
+        {
+          "filename": "v0/manifest.json",
+          "byte_size": 2000,
+          "sha256": "5aac8df4c26f2a6604a8d238a35f69ddd72606f3d917c517d5708733d43a2f41"
+        },
+        {
+          "filename": "v0/summer-form-channel-exports-v0.zip",
+          "byte_size": 9017787,
+          "sha256": "b89bf988e15c85207485e0e28e87c465c79d1ed2fd76c2b63d7558ef13b636cb"
+        },
+        {
+          "filename": "v0/summer-form-email-600x200.png",
+          "byte_size": 161743,
+          "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada"
+        },
+        {
+          "filename": "v0/summer-form-led-4096x1024.png",
+          "byte_size": 4015508,
+          "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0"
+        },
+        {
+          "filename": "v0/summer-form-story-1080x1920.png",
+          "byte_size": 2632932,
+          "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6"
+        },
+        {
+          "filename": "v0/summer-form-xhs-1080x1440.png",
+          "byte_size": 2201381,
+          "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3614,
+          "sha256": "d336125cb0ea1f1d6e12a8d06164095a2def8aaae700834659f11a06b084d092"
+        },
+        {
+          "filename": "v1/generation-prompt.json",
+          "byte_size": 1321,
+          "sha256": "080711fb759270c68810c28fa7257e404f7ead0bed306c3f448fc743b89d00f6"
+        },
+        {
+          "filename": "v1/manifest.json",
+          "byte_size": 1957,
+          "sha256": "b60f30e9ad32457dba3c73d37426bfb39aeeef0bdaa9f28cbb970f193a91c0b8"
+        },
+        {
+          "filename": "v1/summer-form-website-1440x560.png",
+          "byte_size": 1078510,
+          "sha256": "57e902355f1f863ae3ed93913e31c4ba9df5b2cddc01eda1a5840d248c81676a"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 3136,
+          "sha256": "02382b44374d8288e95520d41c946ba745bddc2df6d0c043e11c93ed6dd42969"
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T21:24:46.360Z",
+      "finished_at": "2026-08-23T21:30:41.197Z",
+      "latency_ms": 354879,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 22,
+        "command_count": 6,
+        "tool_count": 1,
+        "image_activity_count": 3,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a03070-fe69-7f32-a889-fcbce39725e6",
+        "usage": {
+          "input_tokens": 2961780,
+          "cached_input_tokens": 2829952,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 31453,
+          "reasoning_output_tokens": 9903
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 3715,
+          "sha256": "3ddd4805befc285908b7c7ebf36ff8a388dd459c1b7e51ec55586c054c716db1"
+        },
+        {
+          "filename": "v0/generation-prompts.json",
+          "byte_size": 1296,
+          "sha256": "bfd87de3aaf8c2f1d4c49dc3bcb67d6c6c7f9df769e2d609af6abda4a431a8a0"
+        },
+        {
+          "filename": "v0/manifest.json",
+          "byte_size": 2000,
+          "sha256": "5aac8df4c26f2a6604a8d238a35f69ddd72606f3d917c517d5708733d43a2f41"
+        },
+        {
+          "filename": "v0/summer-form-channel-exports-v0.zip",
+          "byte_size": 9017787,
+          "sha256": "b89bf988e15c85207485e0e28e87c465c79d1ed2fd76c2b63d7558ef13b636cb"
+        },
+        {
+          "filename": "v0/summer-form-email-600x200.png",
+          "byte_size": 161743,
+          "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada"
+        },
+        {
+          "filename": "v0/summer-form-led-4096x1024.png",
+          "byte_size": 4015508,
+          "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0"
+        },
+        {
+          "filename": "v0/summer-form-story-1080x1920.png",
+          "byte_size": 2632932,
+          "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6"
+        },
+        {
+          "filename": "v0/summer-form-xhs-1080x1440.png",
+          "byte_size": 2201381,
+          "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3614,
+          "sha256": "d336125cb0ea1f1d6e12a8d06164095a2def8aaae700834659f11a06b084d092"
+        },
+        {
+          "filename": "v1/generation-prompt.json",
+          "byte_size": 1321,
+          "sha256": "080711fb759270c68810c28fa7257e404f7ead0bed306c3f448fc743b89d00f6"
+        },
+        {
+          "filename": "v1/manifest.json",
+          "byte_size": 1957,
+          "sha256": "b60f30e9ad32457dba3c73d37426bfb39aeeef0bdaa9f28cbb970f193a91c0b8"
+        },
+        {
+          "filename": "v1/summer-form-website-1440x560.png",
+          "byte_size": 1078510,
+          "sha256": "57e902355f1f863ae3ed93913e31c4ba9df5b2cddc01eda1a5840d248c81676a"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 3136,
+          "sha256": "02382b44374d8288e95520d41c946ba745bddc2df6d0c043e11c93ed6dd42969"
+        },
+        {
+          "filename": "v2/generation-prompt.json",
+          "byte_size": 1305,
+          "sha256": "c02cbe9b548f9d8bcfe50c9edc3c768b88c4ed078a922ea17360f75ab5973e9d"
+        },
+        {
+          "filename": "v2/manifest.json",
+          "byte_size": 2042,
+          "sha256": "9e553c4c981165d1fe248a5116c9651c0d59872458ca17fdb93bc137f0635dcf"
+        },
+        {
+          "filename": "v2/summer-form-email-600x240.png",
+          "byte_size": 184795,
+          "sha256": "954176842186f6f3e39d113909e1dae4823514ec8e340459b460dc8c8b70f50b"
+        },
+        {
+          "filename": "v2/verification.json",
+          "byte_size": 3509,
+          "sha256": "52805fd866c44a91757eb03df243da217d24f4256d415787c688513712b3462a"
+        }
+      ]
+    },
+    {
+      "turn_index": 3,
+      "logical_session_id": "session-02",
+      "started_at": "2026-08-23T21:30:41.239Z",
+      "finished_at": "2026-08-23T21:49:42.013Z",
+      "latency_ms": 1140825,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 51,
+        "command_count": 15,
+        "tool_count": 5,
+        "image_activity_count": 1,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a03070-fe69-7f32-a889-fcbce39725e6",
+        "usage": {
+          "input_tokens": 6415958,
+          "cached_input_tokens": 6221440,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 57280,
+          "reasoning_output_tokens": 24284
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 4370,
+          "sha256": "5d3d67d93160808f65aec16d45707416b693fbda965b2a07f66865dbfe4463c9"
+        },
+        {
+          "filename": "v0/generation-prompts.json",
+          "byte_size": 1296,
+          "sha256": "bfd87de3aaf8c2f1d4c49dc3bcb67d6c6c7f9df769e2d609af6abda4a431a8a0"
+        },
+        {
+          "filename": "v0/manifest.json",
+          "byte_size": 2000,
+          "sha256": "5aac8df4c26f2a6604a8d238a35f69ddd72606f3d917c517d5708733d43a2f41"
+        },
+        {
+          "filename": "v0/summer-form-channel-exports-v0.zip",
+          "byte_size": 9017787,
+          "sha256": "b89bf988e15c85207485e0e28e87c465c79d1ed2fd76c2b63d7558ef13b636cb"
+        },
+        {
+          "filename": "v0/summer-form-email-600x200.png",
+          "byte_size": 161743,
+          "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada"
+        },
+        {
+          "filename": "v0/summer-form-led-4096x1024.png",
+          "byte_size": 4015508,
+          "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0"
+        },
+        {
+          "filename": "v0/summer-form-story-1080x1920.png",
+          "byte_size": 2632932,
+          "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6"
+        },
+        {
+          "filename": "v0/summer-form-xhs-1080x1440.png",
+          "byte_size": 2201381,
+          "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3614,
+          "sha256": "d336125cb0ea1f1d6e12a8d06164095a2def8aaae700834659f11a06b084d092"
+        },
+        {
+          "filename": "v1/generation-prompt.json",
+          "byte_size": 1321,
+          "sha256": "080711fb759270c68810c28fa7257e404f7ead0bed306c3f448fc743b89d00f6"
+        },
+        {
+          "filename": "v1/manifest.json",
+          "byte_size": 1957,
+          "sha256": "b60f30e9ad32457dba3c73d37426bfb39aeeef0bdaa9f28cbb970f193a91c0b8"
+        },
+        {
+          "filename": "v1/summer-form-website-1440x560.png",
+          "byte_size": 1078510,
+          "sha256": "57e902355f1f863ae3ed93913e31c4ba9df5b2cddc01eda1a5840d248c81676a"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 3136,
+          "sha256": "02382b44374d8288e95520d41c946ba745bddc2df6d0c043e11c93ed6dd42969"
+        },
+        {
+          "filename": "v2/generation-prompt.json",
+          "byte_size": 1305,
+          "sha256": "c02cbe9b548f9d8bcfe50c9edc3c768b88c4ed078a922ea17360f75ab5973e9d"
+        },
+        {
+          "filename": "v2/manifest.json",
+          "byte_size": 2042,
+          "sha256": "9e553c4c981165d1fe248a5116c9651c0d59872458ca17fdb93bc137f0635dcf"
+        },
+        {
+          "filename": "v2/summer-form-email-600x240.png",
+          "byte_size": 184795,
+          "sha256": "954176842186f6f3e39d113909e1dae4823514ec8e340459b460dc8c8b70f50b"
+        },
+        {
+          "filename": "v2/verification.json",
+          "byte_size": 3509,
+          "sha256": "52805fd866c44a91757eb03df243da217d24f4256d415787c688513712b3462a"
+        },
+        {
+          "filename": "v3/generation-prompt.json",
+          "byte_size": 1425,
+          "sha256": "b984439b5df7d4896a75a38dc45ed571b2e21a2285da8597282efbdee6ce3e7e"
+        },
+        {
+          "filename": "v3/manifest.json",
+          "byte_size": 2147,
+          "sha256": "926c0f22c43939473f0f4a9b8179e4fdfdedf91ac4f18842b1adf7f5caa14ae3"
+        },
+        {
+          "filename": "v3/summer-form-story-registration-up-1080x1920.png",
+          "byte_size": 2304076,
+          "sha256": "2f8354812dd2d1947e5e935b7c9ed7e4a3ae4e1e2043f4477c1dc8a7d2758f0d"
+        },
+        {
+          "filename": "v3/verification.json",
+          "byte_size": 4792,
+          "sha256": "9cba9225206c64317ff6716cdc3020331db34c2ff7143cfbed08d7e56d0ca523"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 12125540,
+    "cached_input_tokens": 11629696,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 126633,
+    "reasoning_output_tokens": 47245
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

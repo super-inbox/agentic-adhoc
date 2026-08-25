@@ -1,0 +1,64 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T09:12:54.658Z",
+  "finished_at": "2026-08-23T09:17:58.648Z",
+  "latency_ms": 303998,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 28,
+    "command_count": 9,
+    "tool_count": 1,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02de4-f85f-7340-9f69-6e1a05eaa16e",
+    "usage": {
+      "input_tokens": 319741,
+      "cached_input_tokens": 288256,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9229,
+      "reasoning_output_tokens": 4470
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1285,
+      "sha256": "6efd15aa0771521af38c9a9ff44111dc0819d25a79dfb456f2b4ace695fbd83b"
+    },
+    {
+      "filename": "v0/evidence/candidate-a-symbol-24px.png",
+      "byte_size": 2277,
+      "sha256": "cd42b1c71e4842eb24a02984c110151e38f9621b6fd1da8e09414ec5cd036838"
+    },
+    {
+      "filename": "v0/evidence/candidate-b-symbol-24px.png",
+      "byte_size": 2285,
+      "sha256": "9b903177ef2418eb678adb83aed92f0e2d5e8d126e5cd5a5c15a688d8d722733"
+    },
+    {
+      "filename": "v0/evidence/candidate-c-symbol-24px.png",
+      "byte_size": 2218,
+      "sha256": "ee78588de7bbc8b9fde914fee2f4f399e5e65cdffa5c505e2e6220d072c3fbde"
+    },
+    {
+      "filename": "v0/evidence/candidate-d-symbol-24px.png",
+      "byte_size": 2039,
+      "sha256": "2530e745a7527c3e3372baf2bf01bf9d5a123655dd85faef1350640ec12d434b"
+    },
+    {
+      "filename": "v0/noma-logo-candidate-review.md",
+      "byte_size": 4074,
+      "sha256": "3a959802c282912b8fde38d99c3c7e937f745c03a3a14f30d36b9b05793309e0"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 2920,
+      "sha256": "3407d1ebb1d7292ac56fa2a9fa4fc53511737f16bc85f5603cbefc1c51ebcb3c"
+    }
+  ]
+}

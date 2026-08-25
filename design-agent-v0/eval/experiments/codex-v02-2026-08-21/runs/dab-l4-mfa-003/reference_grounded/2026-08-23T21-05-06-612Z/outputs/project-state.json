@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "project": "summer-form-channel-exports",
+  "current_version": "v3",
+  "updated_at": "2026-08-24T05:46:55+08:00",
+  "status": "all_five_exports_delivered",
+  "client_decisions": [
+    {
+      "decision": "Use the attached poster as the approved master.",
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "Export all five listed channels, but identify impossible parameters before continuing.",
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "Requested dimensions are 小红书 1080x1440, Story 1080x1920, 官网 1440x0, 邮件 600x200, LED 4096x1024.",
+      "source": "v0_user_turn",
+      "status": "website_dimension_superseded_in_v1"
+    },
+    {
+      "decision": "Correct the website dimensions to 1440x560 and produce only the website delta; do not re-export the other four channels.",
+      "source": "v1_client_feedback"
+    },
+    {
+      "decision": "Temporarily change the email dimensions to 600x240 and produce only the email delta; do not rerun the other channels or website.",
+      "source": "v2_client_feedback"
+    },
+    {
+      "decision": "Move only the Story registration information upward to clear platform buttons; freeze the 600x240 email and every other current channel artifact.",
+      "source": "v3_client_feedback"
+    }
+  ],
+  "locked_items": [
+    "Approved master identity and all unedited visual regions.",
+    "Exact event copy: SUMMER FORM; Design Market; 08—10 AUG; BROOKLYN.",
+    "Cream, navy, and coral palette; geometric grid; folded-paper focal element.",
+    "Corrected website dimensions of 1440x560 px and its v1 artifact.",
+    "Current email dimensions of 600x240 px and its v2 artifact.",
+    "Website v1, email v2, 小红书 v0, and LED v0 are frozen.",
+    "Story remains 1080x1920; only its Design Market / 08—10 AUG / BROOKLYN group may move vertically."
+  ],
+  "changed_items": [
+    "Canvas ratios and channel-specific layout reflow for four valid channels.",
+    "LED artwork was composed in a crop-safe center band, then center-cropped and resized to exact 4096x1024 pixels.",
+    "Output dimensions were normalized to the exact requested positive pixel sizes.",
+    "v1 adds only the corrected website banner at 1440x560; no v0 image was regenerated or modified.",
+    "v2 adds only the re-laid-out email banner at 600x240; all v0 and v1 artifacts remain unchanged.",
+    "v3 moves only the Story registration group upward by 260 px; pixels outside the declared local edit region and all earlier version artifacts remain unchanged."
+  ],
+  "channels": [
+    {
+      "channel": "小红书",
+      "requested": "1080x1440",
+      "status": "delivered",
+      "artifact_path": "outputs/v0/summer-form-xhs-1080x1440.png"
+    },
+    {
+      "channel": "Story",
+      "requested": "1080x1920",
+      "status": "delivered_in_v3",
+      "artifact_path": "outputs/v3/summer-form-story-registration-up-1080x1920.png"
+    },
+    {
+      "channel": "官网",
+      "requested": "1440x560",
+      "status": "delivered_in_v1",
+      "artifact_path": "outputs/v1/summer-form-website-1440x560.png"
+    },
+    {
+      "channel": "邮件",
+      "requested": "600x240",
+      "status": "delivered_in_v2",
+      "artifact_path": "outputs/v2/summer-form-email-600x240.png"
+    },
+    {
+      "channel": "LED",
+      "requested": "4096x1024",
+      "status": "delivered",
+      "artifact_path": "outputs/v0/summer-form-led-4096x1024.png"
+    }
+  ],
+  "artifact_paths": [
+    "outputs/v0/summer-form-xhs-1080x1440.png",
+    "outputs/v0/summer-form-story-1080x1920.png",
+    "outputs/v0/summer-form-email-600x200.png",
+    "outputs/v0/summer-form-led-4096x1024.png",
+    "outputs/v0/summer-form-channel-exports-v0.zip",
+    "outputs/v0/manifest.json",
+    "outputs/v0/verification.json",
+    "outputs/v0/generation-prompts.json"
+    ,
+    "outputs/v1/summer-form-website-1440x560.png",
+    "outputs/v1/manifest.json",
+    "outputs/v1/verification.json",
+    "outputs/v1/generation-prompt.json",
+    "outputs/v2/summer-form-email-600x240.png",
+    "outputs/v2/manifest.json",
+    "outputs/v2/verification.json",
+    "outputs/v2/generation-prompt.json",
+    "outputs/v3/summer-form-story-registration-up-1080x1920.png",
+    "outputs/v3/manifest.json",
+    "outputs/v3/verification.json",
+    "outputs/v3/generation-prompt.json"
+  ],
+  "unresolved_blockers": []
+}

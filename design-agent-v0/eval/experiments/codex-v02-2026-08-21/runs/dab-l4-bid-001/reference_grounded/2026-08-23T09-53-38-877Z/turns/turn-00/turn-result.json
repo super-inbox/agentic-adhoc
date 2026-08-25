@@ -1,0 +1,79 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T09:53:38.885Z",
+  "finished_at": "2026-08-23T10:16:43.959Z",
+  "latency_ms": 1385099,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 42,
+    "command_count": 13,
+    "tool_count": 4,
+    "image_activity_count": 5,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02e0a-46c7-7fd1-896d-c2455c0aee76",
+    "usage": {
+      "input_tokens": 1576714,
+      "cached_input_tokens": 1417984,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 31537,
+      "reasoning_output_tokens": 10765
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2807,
+      "sha256": "e61976157d88109cc3e39b32d09a8d947fee69a86997d9bf1d70ac0db02407eb"
+    },
+    {
+      "filename": "v0/01-conflicts-and-10-hypotheses.png",
+      "byte_size": 489264,
+      "sha256": "d7fc43c2af5942b76f488266bffac45a401161ab7a0d157b9ed555b82f03c4db"
+    },
+    {
+      "filename": "v0/02-three-creative-territories.png",
+      "byte_size": 3380508,
+      "sha256": "64a86b0183020df9d0ff881b985f55d9fcc8aaf143a5f25effab8cd99514e966"
+    },
+    {
+      "filename": "v0/assets/territory-01-quiet-craft-concept.png",
+      "byte_size": 2070785,
+      "sha256": "06097ddacfe8894ee0589547d668dc6b381985bdcdc885539abcc86387e180a8"
+    },
+    {
+      "filename": "v0/assets/territory-02-daylight-grain-concept.png",
+      "byte_size": 2200709,
+      "sha256": "0e37ab2a5488eaa06133070da8859f75f684f504b7d6a97e8ce952bb665436f2"
+    },
+    {
+      "filename": "v0/assets/territory-03-fire-feast-concept.png",
+      "byte_size": 2114936,
+      "sha256": "15ba7015db103399fa46903b6e01e9a0889b5b713eda32b80915d86205958342"
+    },
+    {
+      "filename": "v0/creative-territories.md",
+      "byte_size": 6907,
+      "sha256": "47e32acdf1e93c5237f9703827cce50e6bb8165d5a89444cd2ba6a37c42ea531"
+    },
+    {
+      "filename": "v0/imagegen-prompts.md",
+      "byte_size": 8927,
+      "sha256": "19610eedd897ad205f662b73d5fea69b786e958bff3ca6e1727cc298f6a74d5a"
+    },
+    {
+      "filename": "v0/render_direction_boards.py",
+      "byte_size": 15005,
+      "sha256": "1a145578a6ffe1b18c5eaa24fa931e3dae24e79c26368b7dcf34756ccbd9100f"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 7017,
+      "sha256": "6453fb23ef6ef33c505b5f2888b959cd640d9e8cb5df3c17d7965f8e431986d7"
+    }
+  ]
+}

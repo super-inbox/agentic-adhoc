@@ -1,0 +1,188 @@
+{
+  "schema": "controlled-design-project-state/v1",
+  "projectId": "summer-form-channel-adaptations",
+  "currentVersion": "v1",
+  "currentCheckpoint": "adaptation_map_revision_submitted",
+  "status": "awaiting_client_url_and_v1_story_approval",
+  "updatedAt": "2026-08-24T05:00:26+08:00",
+  "versionHistory": [
+    {
+      "version": "v0",
+      "path": "outputs/v0",
+      "status": "superseded_by_targeted_story_revision",
+      "preservedUnchanged": true
+    },
+    {
+      "version": "v1",
+      "path": "outputs/v1",
+      "status": "current"
+    }
+  ],
+  "clientDecisions": {
+    "approvedMaster": {
+      "inputId": "campaign-master",
+      "path": "inputs/01-approved_master.png",
+      "status": "approved_before_v0"
+    },
+    "requestedChannels": [
+      "xhs_3x4",
+      "instagram_4x5",
+      "story_9x16",
+      "wechat_2.35x1",
+      "meta_1200x628",
+      "web_16x9",
+      "event_wall_3840x1080"
+    ],
+    "workflowDecision": "adaptation_map_before_batch_output",
+    "latestFeedback": {
+      "targetVersion": "v1",
+      "request": "Move only the Story registration URL and date upward; do not change the other six versions.",
+      "applied": true
+    },
+    "lockedChannelLayoutsPerLatestFeedback": [
+      "xhs",
+      "instagram",
+      "wechat",
+      "meta",
+      "web",
+      "event-wall"
+    ],
+    "storyDelta": {
+      "date": {
+        "beforeNormalizedY": 0.39,
+        "afterNormalizedY": 0.34
+      },
+      "registrationUrl": {
+        "beforeNormalizedY": 0.82,
+        "afterNormalizedY": 0.53,
+        "actualValue": null
+      }
+    },
+    "adaptationMapApproval": "pending_for_story_v1",
+    "registrationUrl": "not_provided"
+  },
+  "lockedItems": [
+    {
+      "id": "title",
+      "value": "SUMMER FORM",
+      "policy": "preserve_content"
+    },
+    {
+      "id": "date",
+      "value": "08—10 AUG",
+      "policy": "preserve_content_move_story_only"
+    },
+    {
+      "id": "location",
+      "value": "BROOKLYN",
+      "policy": "preserve_content_and_position"
+    },
+    {
+      "id": "registration-url",
+      "value": null,
+      "policy": "required_in_all_final_outputs_story_slot_moved_only",
+      "status": "blocked_missing_input"
+    },
+    {
+      "id": "approved-master-pixels",
+      "value": "entire_source",
+      "policy": "preserve_unedited_regions"
+    },
+    {
+      "id": "approved-visual-concept",
+      "value": [
+        "navy_coral_offwhite_palette",
+        "thin_blue_modular_grid",
+        "circle_arc_geometry",
+        "folded_paper_sculpture",
+        "bold_title_hierarchy"
+      ],
+      "policy": "do_not_change"
+    },
+    {
+      "id": "non-story-channel-layouts",
+      "value": [
+        "xhs",
+        "instagram",
+        "wechat",
+        "meta",
+        "web",
+        "event-wall"
+      ],
+      "policy": "preserve_v0_exactly_per_client_feedback"
+    }
+  ],
+  "changedItems": [
+    {
+      "id": "story.date",
+      "change": "translate_y",
+      "beforeNormalizedBbox": [
+        0.1,
+        0.39,
+        0.8,
+        0.05
+      ],
+      "afterNormalizedBbox": [
+        0.1,
+        0.34,
+        0.8,
+        0.05
+      ]
+    },
+    {
+      "id": "story.registrationUrl",
+      "change": "translate_y",
+      "beforeNormalizedBbox": [
+        0.1,
+        0.82,
+        0.8,
+        0.06
+      ],
+      "afterNormalizedBbox": [
+        0.1,
+        0.53,
+        0.8,
+        0.06
+      ],
+      "actualValue": null
+    }
+  ],
+  "unchangedItems": [
+    "outputs/v0/**",
+    "inputs/01-approved_master.png",
+    "xhs_all_objects",
+    "instagram_all_objects",
+    "wechat_all_objects",
+    "meta_all_objects",
+    "web_all_objects",
+    "event-wall_all_objects",
+    "story.title",
+    "story.location",
+    "story.folded-paper-sculpture",
+    "story.safe-area",
+    "story.decorative-grid",
+    "all_final_channel_artwork_not_created"
+  ],
+  "artifactPaths": {
+    "preview": "outputs/v1/preview.png",
+    "editableObjectGraph": "outputs/v1/design_document.json",
+    "renderer": "outputs/v1/render_adaptation_map.py",
+    "objectChangeSet": "outputs/v1/change_set.json",
+    "verification": "outputs/v1/verification.json"
+  },
+  "unresolvedBlockers": [
+    {
+      "id": "missing-registration-url",
+      "blocking": true,
+      "owner": "client",
+      "request": "Provide the exact registration URL."
+    },
+    {
+      "id": "v1-story-revision-approval",
+      "blocking": true,
+      "owner": "client",
+      "request": "Approve the revised Story date and URL placement."
+    }
+  ],
+  "nextAuthorizedAction": "wait_for_registration_url_and_v1_story_revision_approval_before_batch_output"
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "product",
+    "asset_id": "detail-page-terra-diffuser-product",
+    "role": "product_reference",
+    "reference_role": "product_identity",
+    "identity_policy": "preserve_exact",
+    "filename": "01-product_reference.png",
+    "source_path": "eval/assets/reference-pack-v0.2/detail-page/terra-diffuser-product.png",
+    "byte_size": 521294,
+    "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+  }
+]

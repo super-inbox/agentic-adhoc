@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "version": "v0",
+  "verified_at": "2026-08-24T06:39:52+08:00",
+  "overall_status": "blocked",
+  "production_pdf_generated": false,
+  "production_pdf_reason": "No press-ready PDF was generated because the finished-size/artboard conflict is unresolved, the back legal net-content copy is unapproved, and the supplied flattened RGB preview is insufficient for 300 dpi production at the stated size.",
+  "checks": [
+    {
+      "id": "source_identity",
+      "status": "pass",
+      "method": "SHA-256 digest and read-only source handling",
+      "result": "Source preserved without edits.",
+      "evidence": "inputs/01-print_artwork.png",
+      "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f"
+    },
+    {
+      "id": "source_raster_metadata",
+      "status": "fail",
+      "method": "file, sips and Pillow metadata inspection",
+      "result": "1376×768 px, 8-bit RGB PNG, 300 dpi metadata, no embedded ICC profile; flattened front/back presentation board."
+    },
+    {
+      "id": "panel_geometry",
+      "status": "fail",
+      "method": "Visual bounding-box measurement on the flattened preview",
+      "result": "Front approximately 492×501 px and back approximately 493×501 px; near-square geometry is incompatible with 120×200 mm trim.",
+      "evidence": "outputs/v0/approved-artwork_preflight-annotated_v0.png"
+    },
+    {
+      "id": "effective_resolution",
+      "status": "fail",
+      "method": "Pixel-to-physical-size calculation",
+      "result": "A 120×200 mm trim with 3 mm bleed requires approximately 1488×2433 px per side at 300 dpi. Scaling the approximate front region to 120×200 mm would yield about 104×64 ppi and distort its aspect ratio."
+    },
+    {
+      "id": "size_conflict",
+      "status": "blocked",
+      "method": "Trim/bleed arithmetic across both supplied notes",
+      "result": "120×200 mm trim plus 3 mm bleed on every edge yields 126×206 mm. If 125×205 mm is trim, its bleed page is 131×211 mm; if it includes bleed, its trim is 119×199 mm. No interpretation matches the client note."
+    },
+    {
+      "id": "legal_copy",
+      "status": "blocked",
+      "method": "Content presence and approval review",
+      "result": "Back legal net-content wording is not confirmed. Existing front text '250 g' was not treated as approval or copied to the back."
+    },
+    {
+      "id": "cmyk_production_condition",
+      "status": "blocked",
+      "method": "Color-profile review",
+      "result": "Input is untagged RGB and no factory CMYK ICC profile or total ink limit was supplied."
+    },
+    {
+      "id": "report_pdf_structure",
+      "status": "pass",
+      "method": "pdfinfo and direct PDF object inspection",
+      "result": "Two A4 landscape pages, 841.92×595.2 pt; each page contains one 3508×2480 DeviceCMYK image and no DeviceRGB image, equivalent to 300 dpi.",
+      "evidence": "outputs/v0/orbit-coffee_preflight-report_v0_NOT-FOR-PRODUCTION.pdf",
+      "sha256": "ca675f2329601400d2785fd775d0b9cbc20924ba49fb74d432a1947ea5930f32"
+    },
+    {
+      "id": "report_visual_render",
+      "status": "pass",
+      "method": "Poppler render at 150 dpi followed by visual inspection",
+      "result": "Both pages render legibly with no clipping, overlap, missing glyphs or broken layout; non-production warning is prominent.",
+      "evidence": [
+        "outputs/v0/evidence/preflight-report-page-1.png",
+        "outputs/v0/evidence/preflight-report-page-2.png"
+      ]
+    },
+    {
+      "id": "production_boxes_and_bleed",
+      "status": "not_run",
+      "method": "PDF box and bleed inspection",
+      "result": "Not applicable because the production PDF was intentionally withheld. The report PDF is an A4 document and is not claimed to contain packaging TrimBox/BleedBox."
+    }
+  ],
+  "unresolved_blockers": [
+    "Factory confirmation of whether 125×205 mm is trim or total artboard, plus the official dieline/template.",
+    "Client approval of the exact back legal net-content copy and compliance requirements.",
+    "Separated vector artwork or high-resolution per-side production masters matching the confirmed dieline.",
+    "Factory CMYK ICC profile and total ink coverage requirement, or explicit approval of a named standard profile."
+  ],
+  "evidence_paths": [
+    "inputs/01-print_artwork.png",
+    "outputs/v0/approved-artwork_preflight-annotated_v0.png",
+    "outputs/v0/orbit-coffee_preflight-report_v0_NOT-FOR-PRODUCTION.pdf",
+    "outputs/v0/evidence/preflight-report-page-1.png",
+    "outputs/v0/evidence/preflight-report-page-2.png"
+  ]
+}

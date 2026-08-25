@@ -1,0 +1,76 @@
+{
+  "current_version": "v1",
+  "workflow_stage": "six_asset_delivery_complete_client_review_pending",
+  "context_condition": "zero_shot",
+  "client_decisions": {
+    "selected_direction": "A｜城市通勤 / 城市随身",
+    "style_delta": [
+      "Remove the inexpensive visual feel.",
+      "Do not use gold.",
+      "Use more restrained lighting and shadow.",
+      "Increase negative space.",
+      "Use less decorative text.",
+      "Keep the product color unchanged."
+    ]
+  },
+  "execution_assumptions": [
+    "Because no platform dimensions were provided, the six required assets are delivered as three 1200 x 1200 ecommerce squares and three 1080 x 1350 social portraits.",
+    "Three scene masters are reused across square and portrait layouts to preserve the previously approved low-cost production strategy."
+  ],
+  "locked_items": [
+    "Product appearance, interfaces, logo, material texture, and teal color remain unchanged.",
+    "Product identity source is inputs/01-product_master.png and is preserved by deterministic compositing rather than generative repainting.",
+    "Approved claims only: 12 小时续航；IPX4 防泼水；一体式挂环。",
+    "IPX4 is depicted only as a post-drizzle city environment with a dry product surface; no immersion or waterproof extension.",
+    "No fictional buttons, ports, lights, clips, or accessories.",
+    "Selected direction remains city commute with entryway, café-window, and urban riverside cues.",
+    "The current front source does not reveal the integrated loop, so no physical bag-attachment mechanism is invented."
+  ],
+  "changed_items": [
+    "Locked client-selected direction A: city commute / city carry.",
+    "Replaced the warmer, more decorative direction-board treatment with cool-neutral off-white, concrete gray, and graphite scenes.",
+    "Removed decorative labels and slogans; each final asset contains at most one approved claim line.",
+    "Increased negative space through clear walls, pale skies, and a 270 px matte header on social portraits.",
+    "Generated three no-product background masters with the built-in imagegen tool.",
+    "Created a source-RGB-preserving product cutout and composited it into six final assets.",
+    "Delivered three ecommerce square assets and three social portrait assets."
+  ],
+  "unchanged_items": [
+    "Approved claim whitelist.",
+    "Exact product identity and teal color.",
+    "Low-cost three-master-scene production strategy.",
+    "Light urban outdoor tone; no expedition or extreme-adventure imagery.",
+    "No physical hanging proof without a visible loop source angle."
+  ],
+  "pending_client_inputs": [],
+  "conditional_inputs": [
+    "If a future asset must visibly prove the speaker physically attached to a bag, provide a product angle that clearly shows the integrated loop and its connection method."
+  ],
+  "artifact_paths": [
+    "outputs/v1/ecommerce/ecom-01-urban-entry-hero.png",
+    "outputs/v1/ecommerce/ecom-02-cafe-12h.png",
+    "outputs/v1/ecommerce/ecom-03-riverside-ipx4.png",
+    "outputs/v1/social/social-01-entry-loop.png",
+    "outputs/v1/social/social-02-cafe-12h.png",
+    "outputs/v1/social/social-03-riverside-ipx4.png",
+    "outputs/v1/contact-sheet.jpg",
+    "outputs/v1/creative-spec.md",
+    "outputs/v1/imagegen-prompts.md",
+    "outputs/v1/product-cutout-exact.png",
+    "outputs/v1/verification.json"
+  ],
+  "supporting_paths": [
+    "outputs/v1/backgrounds/urban-entry-master.png",
+    "outputs/v1/backgrounds/cafe-window-master.png",
+    "outputs/v1/backgrounds/rainy-riverside-master.png",
+    "outputs/v1/build_v1_assets.py"
+  ],
+  "source_paths": [
+    "inputs/01-product_master.png"
+  ],
+  "previous_version_paths": [
+    "outputs/v0/scene-direction-board.svg",
+    "outputs/v0/scene-hypotheses.md",
+    "outputs/v0/verification.json"
+  ]
+}

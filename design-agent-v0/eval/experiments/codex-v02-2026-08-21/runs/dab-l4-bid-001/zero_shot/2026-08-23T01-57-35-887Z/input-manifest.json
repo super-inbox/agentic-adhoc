@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "current-identity",
+    "asset_id": "logo-upgrade-grain-glow-before-after",
+    "role": "current_logo_and_identity",
+    "reference_role": "edit_target",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "01-current_logo_and_identity.png",
+    "source_path": "eval/assets/reference-pack-v0.2/logo-upgrade/grain-glow-before-after.png",
+    "byte_size": 588006,
+    "sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253"
+  }
+]

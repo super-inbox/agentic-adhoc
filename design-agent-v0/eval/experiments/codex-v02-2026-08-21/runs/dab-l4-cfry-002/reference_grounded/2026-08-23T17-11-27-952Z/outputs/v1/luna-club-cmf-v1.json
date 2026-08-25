@@ -1,0 +1,32 @@
+{
+  "version": "v1",
+  "status": "factory_review_draft",
+  "material": {
+    "body": "clear acrylic",
+    "base": "clear acrylic",
+    "nominal_thickness_mm": 3.0,
+    "source": "factory-confirmed"
+  },
+  "color": {
+    "artwork": "preserve approved master colors; no redraw or recolor",
+    "master_path": "outputs/v1/luna-club-print-art-master-v1.png",
+    "effective_resolution_ppi_at_87mm_art_height": 148.9
+  },
+  "print_layers": {
+    "color_art": "outputs/v1/luna-club-print-art-crop-v1.png",
+    "white_ink": "full silhouette underprint beneath printed artwork",
+    "white_ink_excludes": "clear 7.0 x 3.0 mm insertion tab",
+    "white_ink_vector": "outputs/v1/luna-club-white-ink-layer-v1.svg",
+    "white_ink_raster": "outputs/v1/luna-club-white-ink-mask-v1.png"
+  },
+  "finish": {
+    "base_visual": "clear and visually restrained",
+    "edge_finish": "not specified by client or factory",
+    "print_side_and_layer_order": "not specified by client or factory"
+  },
+  "open_items": [
+    "Factory to confirm edge finish.",
+    "Factory to confirm print side and layer order for its equipment.",
+    "Factory to review the design-defined 7.2 mm slot length and 7.0 mm tab width."
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "0.2",
+  "current_version": "v1",
+  "phase": "detail_page_candidate",
+  "status": "requested_delta_complete",
+  "updated_on": "2026-08-24",
+  "client_decisions": {
+    "selected_territory": "C 慢刻序列（方向 3）",
+    "selected_territory_feedback": {
+      "preserve": [
+        "大胆构图",
+        "产品位置"
+      ],
+      "remove": [
+        "与外部参考过于相似的几何语言",
+        "直线间隔刻度",
+        "封闭几何感"
+      ],
+      "add": [
+        "原创开放弧线",
+        "不规则陶土颗粒"
+      ]
+    },
+    "approved_copy": [
+      "让香气慢下来",
+      "低噪运行",
+      "定时关闭",
+      "陶土触感"
+    ],
+    "product_reference": "inputs/01-product_reference.png",
+    "product_identity_policy": "preserve_exact",
+    "requested_next_deliverables_after_selection": [
+      "首屏",
+      "卖点模块 1",
+      "卖点模块 2"
+    ],
+    "deliverable_status": "completed_in_v1"
+  },
+  "locked_items": [
+    {
+      "id": "product_identity",
+      "items": [
+        "低矮圆柱轮廓",
+        "悬浮薄盖",
+        "黑色环缝",
+        "正面单圆键",
+        "陶土红哑光表面",
+        "正面直立识别角度"
+      ],
+      "rule": "不得重绘、变色、变形、镜像、增删结构或增加未批准功能表现"
+    },
+    {
+      "id": "reference_use_contract",
+      "allowed_influence": [
+        "placement",
+        "scale",
+        "lighting_context"
+      ],
+      "forbidden": [
+        "其他品牌",
+        "其他文字",
+        "外部具体图形"
+      ]
+    },
+    {
+      "id": "approved_copy_only",
+      "items": [
+        "让香气慢下来",
+        "低噪运行",
+        "定时关闭",
+        "陶土触感"
+      ]
+    },
+    {
+      "id": "selection_checkpoint",
+      "rule": "客户选择 Creative Territory 前不生成首屏和两张卖点模块",
+      "status": "satisfied_in_v1"
+    },
+    {
+      "id": "selected_direction_composition",
+      "items": [
+        "大胆的左文右物构图",
+        "产品位置与尺度在三张画面中完全一致",
+        "产品图像坐标 [340, 214]",
+        "产品插槽 [340, 190, 1070, 850]"
+      ],
+      "rule": "后续修改不得移动或缩放产品，除非客户明确要求"
+    },
+    {
+      "id": "v1_original_visual_language",
+      "items": [
+        "小于 180 度的非闭合开放弧线",
+        "非网格、大小不一、密度不均的陶土颗粒"
+      ],
+      "rule": "不得恢复直线刻度、封闭几何或同心环"
+    }
+  ],
+  "creative_territories": {
+    "A": {
+      "name": "陶土留白",
+      "hypotheses": ["H01", "H02", "H03", "H04"]
+    },
+    "B": {
+      "name": "静域圆场",
+      "hypotheses": ["H05", "H06", "H07"]
+    },
+    "C": {
+      "name": "慢刻序列",
+      "hypotheses": ["H08", "H09", "H10"],
+      "selected": true,
+      "visual_language_revision": "开放弧线与陶土颗粒"
+    }
+  },
+  "changed_items": [
+    {
+      "version": "v0",
+      "change": "完成产品参考拆解并锁定六项身份特征"
+    },
+    {
+      "version": "v0",
+      "change": "建立 10 个低成本假设并聚类为 3 个原创 Creative Territories"
+    },
+    {
+      "version": "v0",
+      "change": "生成参考拆解图、三方向比较板与方向选择界面"
+    },
+    {
+      "version": "v0",
+      "change": "视觉核验后移除会在深色背景上被误读为发光的原图白底软阴影"
+    },
+    {
+      "version": "v1",
+      "change": "客户选择 C 慢刻序列（方向 3）"
+    },
+    {
+      "version": "v1",
+      "change": "保留大胆左文右物构图与产品固定位置，移除直线刻度、封闭几何和同心环"
+    },
+    {
+      "version": "v1",
+      "change": "新增从产品薄盖提炼的非闭合开放弧线与不规则陶土颗粒语言"
+    },
+    {
+      "version": "v1",
+      "change": "完成首屏、低噪与定时卖点模块、陶土触感卖点模块及组合详情页"
+    },
+    {
+      "version": "v1",
+      "change": "仅修正透明边缘的白底缩放溢色，产品颜色、结构、位置和尺度未改"
+    }
+  ],
+  "artifact_paths": [
+    "outputs/v0/reference-deconstruction.md",
+    "outputs/v0/reference-deconstruction.png",
+    "outputs/v0/creative-territories.md",
+    "outputs/v0/creative-territories-board.png",
+    "outputs/v0/creative-territory-selector.html",
+    "outputs/v0/product-cutout-preserve-identity.png",
+    "outputs/v0/render_direction_boards.py",
+    "outputs/v0/verification.json",
+    "outputs/v1/design-delta.md",
+    "outputs/v1/hero-slow-arcs.png",
+    "outputs/v1/selling-module-low-noise-timer.png",
+    "outputs/v1/selling-module-clay-touch.png",
+    "outputs/v1/detail-page-v1.png",
+    "outputs/v1/render_detail_page_v1.py",
+    "outputs/v1/render-metadata.json",
+    "outputs/v1/verification.json"
+  ],
+  "open_decisions": []
+}

@@ -1,0 +1,60 @@
+{
+  "version": "v1",
+  "scope": "single dark-direction KV refinement for approval; no channel extensions",
+  "selected_direction": "B / dark nocturnal direction",
+  "selected_v0_candidate": null,
+  "baseline_visual_reference": "outputs/v0/candidates/kv-b3.png",
+  "canvas": {
+    "width": 1600,
+    "height": 2000,
+    "aspect_ratio": "4:5"
+  },
+  "approved_copy": {
+    "en": "Quiet hours, made tangible.",
+    "zh": "让夜晚慢下来。"
+  },
+  "product_source": "inputs/01-launch_product.png",
+  "product_placement": {
+    "x": 240,
+    "y": 620,
+    "size": 1120,
+    "policy": "uniform resize plus feathered surrounding-photo blend; product core remains pixel-identical to the resized source",
+    "verified_core_bbox_in_source_coordinates": [
+      265,
+      95,
+      755,
+      950
+    ]
+  },
+  "requested_delta": [
+    "retain dark nocturnal direction",
+    "remove floating white matte and drop shadow",
+    "add a real full-width tabletop plane",
+    "retain the source photo's natural surface contact and contact shadow",
+    "replace hard spotlight with a broader softer left side light"
+  ],
+  "preserved": [
+    "approved bilingual copy",
+    "off-white, terracotta, charcoal palette",
+    "dark architectural B-direction language",
+    "product bottle shape, cap, liquid, and blank label",
+    "medical-claim avoidance",
+    "reserved logo clearspace; no invented logo"
+  ],
+  "artifact": "outputs/v1/candidates/kv-dark-direction-refinement-v1.png",
+  "preview": "outputs/v1/previews/kv-dark-direction-refinement-v1-preview.jpg",
+  "background_source": "outputs/v1/sources/direction-b-dark-tabletop-soft-side-light.png",
+  "feather_mask": "outputs/v1/sources/product-feather-mask-v1.png",
+  "copy_box": [
+    640,
+    72,
+    878,
+    512
+  ],
+  "logo_safe_zone": [
+    82,
+    82,
+    220,
+    72
+  ]
+}

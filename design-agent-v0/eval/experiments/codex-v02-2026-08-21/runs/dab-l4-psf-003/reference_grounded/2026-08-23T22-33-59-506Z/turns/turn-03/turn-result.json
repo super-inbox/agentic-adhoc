@@ -1,0 +1,149 @@
+{
+  "turn_index": 3,
+  "logical_session_id": "session-02",
+  "started_at": "2026-08-23T22:58:16.493Z",
+  "finished_at": "2026-08-23T23:07:33.076Z",
+  "latency_ms": 556667,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 35,
+    "command_count": 9,
+    "tool_count": 5,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a030c2-5e29-7ba3-9c51-6b9a7c07a6ff",
+    "usage": {
+      "input_tokens": 4949453,
+      "cached_input_tokens": 4752000,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 75326,
+      "reasoning_output_tokens": 28895
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 6577,
+      "sha256": "fdff17d56a7d335a4d6ce3d306026feae269c1da1c4fb6ad3b7b56b1195c016d"
+    },
+    {
+      "filename": "v0/approved-artwork_preflight-annotated_v0.png",
+      "byte_size": 857610,
+      "sha256": "fa6c46e08c2e486ea0919861ebf978b3915336c1d6dcd7e3647ee9781a6c706d"
+    },
+    {
+      "filename": "v0/evidence/preflight-report-page-1.png",
+      "byte_size": 869443,
+      "sha256": "37297489290431d60830e61792bf25a40e880c46f82c163673c1eb8361748e9a"
+    },
+    {
+      "filename": "v0/evidence/preflight-report-page-2.png",
+      "byte_size": 301700,
+      "sha256": "91c08b8ec1a5b1b6e9ce94d9c3811c788e01b698651abbe0336a27169dfbc871"
+    },
+    {
+      "filename": "v0/orbit-coffee_preflight-checklist_v0.md",
+      "byte_size": 3502,
+      "sha256": "e8a93f0f86245780cc7af6866074a54b0147585acb8f066e8e6aea540b9e55f4"
+    },
+    {
+      "filename": "v0/orbit-coffee_preflight-report_v0_NOT-FOR-PRODUCTION.pdf",
+      "byte_size": 4696583,
+      "sha256": "ca675f2329601400d2785fd775d0b9cbc20924ba49fb74d432a1947ea5930f32"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4587,
+      "sha256": "c7144cdc2d996714c49a6d37a335b1eba6210b8ff59f4714aa6636f13b650834"
+    },
+    {
+      "filename": "v1/approved-artwork_v1-net-content-conflict-annotated.png",
+      "byte_size": 850069,
+      "sha256": "13c6123db3622f18d59030a3ecff6dfb2af43fca968fb1795b1cfeeba9256086"
+    },
+    {
+      "filename": "v1/evidence/v1-delta-gate-page-1.png",
+      "byte_size": 868097,
+      "sha256": "ced2c7337e89e2367a0896b518069818c161b5c7d499559ec0053e5425ffb891"
+    },
+    {
+      "filename": "v1/orbit-coffee_v1-delta-checklist.md",
+      "byte_size": 1949,
+      "sha256": "101df388815e52d8fbb18d483a83fc972589e3ebe94cb2a7d921414b7cbcc1b1"
+    },
+    {
+      "filename": "v1/orbit-coffee_v1-delta-gate_NOT-FOR-PRODUCTION.pdf",
+      "byte_size": 2848186,
+      "sha256": "fdb90634cdf040068896d2bc1d1c776264c2ee13fe96ebbeda1cfb77cb0d1b7c"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 5444,
+      "sha256": "41dd9c47083d2eac2f9a5c924e6f2e9f42a8406f3e4611e52f415445c6bbc363"
+    },
+    {
+      "filename": "v2/approved-artwork_v2-back-legal-target-audit.png",
+      "byte_size": 797507,
+      "sha256": "dbaee53a7ef61e8b80a9c3620c6c9569a7af993b40806ccc65c5d792a2c75230"
+    },
+    {
+      "filename": "v2/back-legal-copy_200g_6pt_300dpi-specimen.png",
+      "byte_size": 1969,
+      "sha256": "cc083860bae2ab71ae929e1d97546049938f7b6a2473329b802029b42f2ba0bc"
+    },
+    {
+      "filename": "v2/evidence/v2-back-legal-check-page-1.png",
+      "byte_size": 826432,
+      "sha256": "772b2e522e127a6b5939d1b8d4050fce2ea8aa61ec4ece394d5c0c9e189e767a"
+    },
+    {
+      "filename": "v2/orbit-coffee_v2-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf",
+      "byte_size": 2747742,
+      "sha256": "b885c4bf97deb0fd1734a2c18984b313889d0c611ea21c2e48368e4c390daa1d"
+    },
+    {
+      "filename": "v2/orbit-coffee_v2-back-legal-copy-checklist.md",
+      "byte_size": 2364,
+      "sha256": "061a1772d5d06142017fe904f0e75127ef079852c00fc801cd5907bb9b6356d1"
+    },
+    {
+      "filename": "v2/verification.json",
+      "byte_size": 6685,
+      "sha256": "36ac6b79de3948edf3306f155401743d5cce71edd2e264584a496899f6fe2b76"
+    },
+    {
+      "filename": "v3/back-legal-copy_180g_6pt_300dpi-specimen.png",
+      "byte_size": 2161,
+      "sha256": "b7719b522ccf285bfe83e3f847da961dc789a28d778ef4bdfa3422d35839c0e3"
+    },
+    {
+      "filename": "v3/evidence/v3-back-legal-check-page-1.png",
+      "byte_size": 814274,
+      "sha256": "4d477d52f138bd2a38731b77b62ab9793348031f9d5b65fa47692e9df8e6419f"
+    },
+    {
+      "filename": "v3/evidence/v3-v2-localized-diff-mask.png",
+      "byte_size": 16846,
+      "sha256": "c185614e4c5478dfc67306069dd01cee1bf0e18edc7dd503202f7e3ae6f5a4d0"
+    },
+    {
+      "filename": "v3/orbit-coffee_v3-back-legal-copy-check_NOT-FOR-PRODUCTION.pdf",
+      "byte_size": 3642669,
+      "sha256": "5d4eb0171bfa742eda8c5c8628fe6dfc6a3f851bc142f2f5fe01952c3f2341da"
+    },
+    {
+      "filename": "v3/orbit-coffee_v3-back-legal-copy-checklist.md",
+      "byte_size": 2116,
+      "sha256": "a5e9104f0e2468fe71c0a7cc8a0d549b15430469624545315683fc6342f9bcb7"
+    },
+    {
+      "filename": "v3/verification.json",
+      "byte_size": 7436,
+      "sha256": "a55c3dd9771fbac6daf9145a090d0fd3d2db759a0c93e804bf4acca53ff32668"
+    }
+  ]
+}

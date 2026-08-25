@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1231"/>
+      <stop offset="1" stop-color="#172253"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffef86"/>
+      <stop offset="1" stop-color="#ffd95c"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+    <clipPath id="mockupClip">
+      <rect x="660" y="176" width="880" height="586" rx="26"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1455" cy="80" r="210" fill="#2a3978" opacity="0.28"/>
+  <circle cx="40" cy="980" r="260" fill="#23316d" opacity="0.30"/>
+
+  <g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial, sans-serif">
+    <text x="64" y="72" fill="#ffeb7b" font-size="18" font-weight="700" letter-spacing="3">DIRECTION 01 · V0</text>
+    <text x="64" y="122" fill="#ffffff" font-size="40" font-weight="700">LUNA CLUB 桌面亚克力立牌</text>
+    <rect x="1257" y="64" width="279" height="48" rx="24" fill="#ffed7a"/>
+    <text x="1396" y="95" fill="#10183b" font-size="18" font-weight="700" text-anchor="middle">方向稿 / 非生产文件</text>
+
+    <g filter="url(#shadow)">
+      <rect x="60" y="176" width="560" height="586" rx="26" fill="#ffffff" fill-opacity="0.075" stroke="#ffffff" stroke-opacity="0.15"/>
+    </g>
+    <text x="92" y="220" fill="#aab6e7" font-size="16" font-weight="600" letter-spacing="1">APPROVED MASTER</text>
+    <text x="92" y="254" fill="#ffffff" font-size="25" font-weight="700">原插画主体锁定</text>
+    <rect x="92" y="282" width="496" height="300" rx="22" fill="#080d24" fill-opacity="0.68"/>
+    <image x="112" y="300" width="456" height="264" preserveAspectRatio="xMidYMid meet" xlink:href="../../inputs/01-ip_artwork.png"/>
+    <circle cx="104" cy="623" r="5" fill="#ffea74"/>
+    <text x="120" y="630" fill="#f5f7ff" font-size="18">异形轮廓跟随原画外形</text>
+    <circle cx="104" cy="666" r="5" fill="#ffea74"/>
+    <text x="120" y="673" fill="#f5f7ff" font-size="18">成品总高目标约 90 mm</text>
+    <circle cx="104" cy="709" r="5" fill="#ffea74"/>
+    <text x="120" y="716" fill="#f5f7ff" font-size="18">透明、低存在感底座</text>
+
+    <g filter="url(#shadow)">
+      <rect x="660" y="176" width="880" height="586" rx="26" fill="#ffffff"/>
+    </g>
+    <image x="660" y="176" width="880" height="586" preserveAspectRatio="xMidYMid slice" clip-path="url(#mockupClip)" xlink:href="luna-club-acrylic-mockup-study-02.png"/>
+    <rect x="692" y="208" width="237" height="40" rx="20" fill="#10183b" fill-opacity="0.88"/>
+    <text x="810" y="234" fill="#ffeb7b" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="1">MOCKUP / 非生产图</text>
+    <rect x="660" y="689" width="880" height="73" fill="#0c1434" fill-opacity="0.88" clip-path="url(#mockupClip)"/>
+    <text x="690" y="720" fill="#ffffff" font-size="19" font-weight="700">视觉意图：主体优先、底座后退、透明材质只提供轻微光泽</text>
+    <text x="690" y="747" fill="#b9c3ed" font-size="15">底座结构与连接仅作形态示意；板厚、槽宽、槽深及公差均未定义。</text>
+
+    <rect x="60" y="800" width="1480" height="142" rx="24" fill="#ffffff" fill-opacity="0.075" stroke="#ffffff" stroke-opacity="0.14"/>
+    <text x="92" y="838" fill="#ffeb7b" font-size="17" font-weight="700" letter-spacing="1">报价前需补齐</text>
+    <text x="92" y="875" fill="#ffffff" font-size="18">主体与底座板厚 · 底座外形尺寸 · 插槽宽/深/长与配合公差 · 数量与包装 · 印刷面/白墨策略 · 边缘工艺</text>
+    <text x="92" y="912" fill="#b9c3ed" font-size="16">确认后进入下一版：三视图、完整尺寸、CMF、白墨层与刀线；当前文件不可直接生产。</text>
+  </g>
+</svg>

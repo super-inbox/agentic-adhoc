@@ -1,0 +1,12 @@
+v1 已完成：仅沿 B 增加留白并提升礼盒材质与结构溢价；Logo 区保持空白，未重绘或修改。`outputs/v0` 未改动。
+
+新增或更新：
+
+- [礼盒精修样机](/private<WORKDIR>/outputs/v1/quiet-gifting-premium-box-mockup.png)
+- [v1 变更说明及完整生成提示](/private<WORKDIR>/outputs/v1/quiet-gifting-refinement.md)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [更新后的项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+图像使用内置生成模式。最终单点编辑提示是：仅移除盒盖放射纹，改为纯净纸面与极细矩形盲压框，其余构图、材质、留白及空白 Logo 区保持不变。
+
+精确 Logo 落位仍需现有 Logo 和中文标准字矢量源文件。

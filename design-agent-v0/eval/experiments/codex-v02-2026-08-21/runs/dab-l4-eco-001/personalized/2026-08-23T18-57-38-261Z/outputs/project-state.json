@@ -1,0 +1,179 @@
+{
+  "schema_version": "0.2",
+  "current_version": "v1",
+  "status": "selected_territory_refined_final_six_blocked_on_loop_source",
+  "updated_at": "2026-08-24T03:16:37+08:00",
+  "client_decisions": {
+    "creative_territory": {
+      "status": "selected_and_locked",
+      "selected": "A / 城市留白 / URBAN PAUSE",
+      "client_wording": "选城市通勤那套"
+    },
+    "requested_delta": {
+      "status": "applied_in_v1",
+      "changes": [
+        "降低廉价感",
+        "使用更克制的光影",
+        "增加留白",
+        "减少装饰字"
+      ],
+      "explicit_invariants": [
+        "不使用金色",
+        "产品颜色不变"
+      ]
+    },
+    "final_asset_production": "blocked_before_complete_set_due_to_missing_integrated_loop_view",
+    "approved_claims": [
+      "12 小时续航",
+      "IPX4 防泼水",
+      "一体式挂环"
+    ],
+    "remembered_preferences": {
+      "accepted": [
+        "城市通勤场景",
+        "克制光影",
+        "更多留白",
+        "更少装饰字"
+      ],
+      "rejected": [
+        "显得廉价的通用场景处理",
+        "金色高级感套路",
+        "装饰字过多",
+        "改变产品蓝绿色"
+      ]
+    }
+  },
+  "locked_items": [
+    {
+      "item": "product_identity",
+      "source": "inputs/01-product_master.png",
+      "source_sha256": "f1c9a2c5895dfef128d4a52de1025bf8afad7cf59ca4bff0c04d5a653b392406",
+      "policy": "preserve_exact",
+      "details": [
+        "产品外观不变",
+        "接口不变",
+        "Logo 不变",
+        "蓝绿色不变",
+        "不得增加虚构按钮或配件"
+      ]
+    },
+    {
+      "item": "brand_system",
+      "source": "inputs/02-brand_guideline.png",
+      "source_sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53",
+      "policy": "preserve_rules",
+      "sampled_palette_rgb": {
+        "charcoal": [59, 59, 57],
+        "warm_ivory": [237, 232, 212],
+        "muted_olive": [135, 148, 102],
+        "terracotta": [175, 84, 63],
+        "pale_blue": [183, 210, 217]
+      },
+      "additional_v1_guardrail": "不使用金色、黄铜或金属金反光"
+    },
+    {
+      "item": "selected_scenario_structure",
+      "value": "A / 城市留白",
+      "scenes": [
+        "清晨玄关",
+        "城市通勤落点",
+        "午间口袋公园",
+        "傍晚河岸"
+      ],
+      "status": "preserved_from_v0"
+    },
+    {
+      "item": "claim_whitelist",
+      "policy": "approved_copy_only",
+      "claims": [
+        "12 小时续航",
+        "IPX4 防泼水",
+        "一体式挂环"
+      ],
+      "guardrail": "不得把防泼水表达为可浸泡的防水"
+    },
+    {
+      "item": "final_deliverable_count",
+      "value": 6,
+      "breakdown": {
+        "天猫主图": 1,
+        "卖点图": 3,
+        "详情页首屏": 1,
+        "社媒场景海报": 1
+      },
+      "status": "locked_and_pending_required_loop_source"
+    }
+  ],
+  "changed_items": [
+    {
+      "version": "v0",
+      "scope": "creative_territory_exploration",
+      "details": [
+        "展开 10 个低成本场景假设",
+        "聚类为 3 个差异化 Creative Territories",
+        "生成 3 组不含产品的场景情绪板",
+        "生成 1 张方向选择总览板",
+        "六张正式资产未启动"
+      ]
+    },
+    {
+      "version": "v1",
+      "scope": "selected_territory_visual_refinement",
+      "details": [
+        "锁定 A / 城市留白",
+        "保留四个城市通勤场景与所有批准卖点",
+        "减少场景道具和装饰文字",
+        "改为更克制的冷中性柔光和低反差阴影",
+        "增加干净墙面、地面和天空留白",
+        "明确禁用金色、黄铜和金属金反光",
+        "产品仍直接引用原图且颜色未改",
+        "因缺少真实挂环视图，六张正式资产未启动"
+      ]
+    }
+  ],
+  "artifact_paths_by_version": {
+    "v0": {
+      "decision_board": "outputs/v0/creative-territories-overview-v0.png",
+      "territory_brief": "outputs/v0/creative-territories-v0.md",
+      "generation_prompts": "outputs/v0/generation-prompts-v0.md",
+      "moodboards": [
+        "outputs/v0/moodboards/territory-a-urban-pause-v0.png",
+        "outputs/v0/moodboards/territory-b-after-rain-v0.png",
+        "outputs/v0/moodboards/territory-c-carry-ritual-v0.png"
+      ],
+      "verification": "outputs/v0/verification.json"
+    },
+    "v1": {
+      "selected_territory_board": "outputs/v1/selected-territory-urban-commute-v1.png",
+      "selected_territory_brief": "outputs/v1/selected-territory-urban-commute-v1.md",
+      "generation_prompt": "outputs/v1/generation-prompt-v1.md",
+      "refined_moodboard": "outputs/v1/moodboards/territory-a-urban-commute-refined-v1.png",
+      "verification": "outputs/v1/verification.json"
+    }
+  },
+  "unresolved_blockers": [
+    {
+      "id": "integrated-loop-view-missing",
+      "type": "source_asset_gap",
+      "description": "当前正面产品图未显示一体式挂环，无法在不虚构产品结构或挂法的前提下制作挂包画面。",
+      "required_input": "显示真实挂环形状、位置和实际挂法的侧面或背面产品实拍/抠图",
+      "blocks": [
+        "final_integrated_loop_selling_point_image",
+        "any_attached_to_bag_product_scene",
+        "complete_six_asset_delivery"
+      ]
+    }
+  ],
+  "resolved_checkpoints": [
+    {
+      "id": "creative-territory-selection",
+      "resolution": "A / 城市留白",
+      "resolved_in": "v1"
+    }
+  ],
+  "next_checkpoint": {
+    "required_client_input": "提供能清楚显示真实一体式挂环的侧面或背面产品实拍/抠图",
+    "then": "在已锁定的 A / 城市留白 v1 视觉规则下制作完整六张资产"
+  }
+}
+

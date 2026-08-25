@@ -1,0 +1,87 @@
+{
+  "schema": "codex.object_change_set/1.0",
+  "document_id": "summer-form-poster-revision-v0",
+  "base_version": "approved-source",
+  "target_version": "v0",
+  "requested_change_count": 2,
+  "changes": [
+    {
+      "change_id": "change-001-title-scale",
+      "object_id": "main_title",
+      "operation": "scale_and_balance_position",
+      "approval_basis": "approved_delta",
+      "before": {
+        "bounds": {
+          "x": 260,
+          "y": 306,
+          "width": 478,
+          "height": 172
+        },
+        "scale_x": 1,
+        "scale_y": 1
+      },
+      "after": {
+        "bounds": {
+          "x": 190,
+          "y": 293,
+          "width": 550,
+          "height": 198
+        },
+        "scale_x": 1.1506276150627615,
+        "scale_y": 1.1511627906976745
+      },
+      "measured_delta_percent": {
+        "width": 15.06276150627615,
+        "height": 15.11627906976745
+      },
+      "semantic_content_changed": false,
+      "implementation_support": [
+        "remove original title pixels using title-source-mask",
+        "restore exposed paper locally",
+        "composite source-derived title layer at approved scale"
+      ]
+    },
+    {
+      "change_id": "change-002-event-mark-move",
+      "object_id": "event_mark",
+      "operation": "translate",
+      "approval_basis": "approved_delta",
+      "before": {
+        "bounds": {
+          "x": 597,
+          "y": 837,
+          "width": 161,
+          "height": 161
+        }
+      },
+      "after": {
+        "bounds": {
+          "x": 596,
+          "y": 126,
+          "width": 161,
+          "height": 161
+        }
+      },
+      "translation": {
+        "x": -1,
+        "y": -711
+      },
+      "scale_changed": false,
+      "colors_changed": false,
+      "geometry_changed": false,
+      "implementation_support": [
+        "restore vacated lower-right paper using neighboring source texture",
+        "composite the source-derived mark layer at 1:1 scale"
+      ]
+    }
+  ],
+  "unrequested_object_changes": [],
+  "copy_changes": [],
+  "canvas_change": null,
+  "global_style_change": null,
+  "authorized_pixel_regions": {
+    "mask_path": "outputs/v0/masks/authorized-change-region.png",
+    "diff_path": "outputs/v0/masks/source-vs-preview-diff.png",
+    "outside_authorized_regions_changed_pixels": 0
+  }
+}

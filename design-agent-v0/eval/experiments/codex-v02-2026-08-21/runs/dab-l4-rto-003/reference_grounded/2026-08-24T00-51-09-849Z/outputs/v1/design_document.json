@@ -1,0 +1,560 @@
+{
+  "schema": "candidate-design-document/1.0",
+  "version": "v1",
+  "title": "MORI 陶土红香薰机纵向产品信息页",
+  "canvas": {
+    "width": 1200,
+    "height": 1800,
+    "unit": "px",
+    "color_space": "sRGB"
+  },
+  "reference_contract": {
+    "reference-page": {
+      "allowed": ["layout_principles", "information_rhythm"],
+      "identity_policy": "abstract_only",
+      "not_reused": ["花瓶", "参考品牌名", "参考图标", "材料细节照片", "边框与表格装饰"]
+    },
+    "product": {
+      "allowed": ["placement", "scale", "lighting_context"],
+      "identity_policy": "preserve_exact",
+      "implementation": "直接从原图提取像素并建立透明蒙版；不重绘、不调色、不改变轮廓"
+    },
+    "brand-board": {
+      "allowed": ["palette", "typography", "brand_tokens"],
+      "identity_policy": "preserve_rules"
+    }
+  },
+  "tokens": {
+    "colors": {
+      "charcoal": "#30302D",
+      "warm_ivory": "#F3EFE4",
+      "paper": "#FBF8F0",
+      "terracotta": "#B8543E",
+      "terracotta_dark": "#8F3F32",
+      "olive": "#8C9A69",
+      "pale_blue": "#AECDD5",
+      "hairline": "#D8D0BF"
+    },
+    "typography": {
+      "display": {
+        "family": "Songti SC",
+        "fallback": "STSong",
+        "weight": 700
+      },
+      "sans": {
+        "family": "PingFang SC",
+        "fallback": "Hiragino Sans GB, Arial Unicode MS",
+        "weight": 400
+      },
+      "latin": {
+        "family": "Arial",
+        "fallback": "sans-serif",
+        "weight": 600
+      }
+    },
+    "spacing": {
+      "outer_margin": 84,
+      "section_gap": 70,
+      "card_gap": 24,
+      "card_radius": 26
+    }
+  },
+  "assets": [
+    {
+      "id": "asset/product-source",
+      "path": "../../inputs/02-product_reference.png",
+      "role": "product_identity_source",
+      "identity_policy": "preserve_exact"
+    },
+    {
+      "id": "asset/product-cutout",
+      "path": "assets/product_cutout.png",
+      "role": "direct_pixel_cutout",
+      "derived_from": "asset/product-source",
+      "identity_operations": ["white-background alpha extraction", "tight crop"],
+      "forbidden_operations": ["redraw", "recolor", "shape edit"]
+    },
+    {
+      "id": "asset/clay-texture",
+      "path": "assets/mori_fine_grain_clay_paper.png",
+      "role": "generated_fine_grain_clay_paper_only",
+      "generation_mode": "built-in image_gen",
+      "contains": "uniform warm-ivory fine-grain clay paper with micro mineral particles and paper fibers",
+      "excludes": ["watercolor wash", "cloudy mottling", "broad color blooms", "large gradients", "plaster wall", "text", "logo", "icon", "product", "vase", "leaf", "decorative motif"]
+    }
+  ],
+  "groups": [
+    {
+      "id": "group/background",
+      "label": "背景与细颗粒陶土纸感",
+      "editable": true,
+      "children": ["background/base", "background/grain", "hero/texture", "hero/veil", "hero/halo"]
+    },
+    {
+      "id": "group/brand",
+      "label": "MORI 品牌签名",
+      "editable": true,
+      "children": ["brand/mori", "brand/tagline", "brand/accent"]
+    },
+    {
+      "id": "group/product",
+      "label": "原产品主视觉",
+      "editable": true,
+      "identity_locked": true,
+      "children": ["product/cutout"]
+    },
+    {
+      "id": "group/title",
+      "label": "主标题与一句话卖点",
+      "editable": true,
+      "children": ["title/line-1", "title/line-2", "subtitle/accent", "subtitle/copy"]
+    },
+    {
+      "id": "group/features",
+      "label": "三个功能",
+      "editable": true,
+      "children": ["feature/card-1", "feature/card-1-accent", "feature/card-1-number", "feature/card-1-copy", "feature/card-2", "feature/card-2-accent", "feature/card-2-number", "feature/card-2-copy", "feature/card-3", "feature/card-3-accent", "feature/card-3-number", "feature/card-3-copy"]
+    },
+    {
+      "id": "group/specs",
+      "label": "底部规格",
+      "editable": true,
+      "children": ["spec/background", "spec/top-accent", "spec/label", "spec/value-usbc", "spec/value-6h", "spec/value-280ml", "spec/divider-1", "spec/divider-2"]
+    }
+  ],
+  "objects": [
+    {
+      "id": "background/base",
+      "type": "rounded_rect",
+      "x": 0,
+      "y": 0,
+      "width": 1200,
+      "height": 1800,
+      "radius": 0,
+      "fill": "#F3EFE4",
+      "editable": true
+    },
+    {
+      "id": "background/grain",
+      "type": "image",
+      "asset": "asset/clay-texture",
+      "x": 0,
+      "y": 0,
+      "width": 1200,
+      "height": 1800,
+      "fit": "cover",
+      "opacity": 0.10,
+      "editable": true
+    },
+    {
+      "id": "hero/texture",
+      "type": "image",
+      "asset": "asset/clay-texture",
+      "x": 0,
+      "y": 0,
+      "width": 1200,
+      "height": 880,
+      "fit": "cover",
+      "opacity": 0.76,
+      "editable": true
+    },
+    {
+      "id": "hero/veil",
+      "type": "rounded_rect",
+      "x": 0,
+      "y": 0,
+      "width": 1200,
+      "height": 880,
+      "radius": 0,
+      "fill": "#F3EFE4",
+      "opacity": 0.18,
+      "editable": true
+    },
+    {
+      "id": "hero/halo",
+      "type": "ellipse",
+      "x": 202,
+      "y": 204,
+      "width": 796,
+      "height": 544,
+      "fill": "#F8E7D7",
+      "opacity": 0.48,
+      "stroke": "#AECDD5",
+      "stroke_width": 3,
+      "stroke_opacity": 0.40,
+      "editable": true
+    },
+    {
+      "id": "brand/mori",
+      "type": "text",
+      "x": 84,
+      "y": 70,
+      "content": "MORI",
+      "font_token": "sans",
+      "font_size": 50,
+      "font_weight": 600,
+      "tracking": 12,
+      "fill": "#30302D",
+      "editable": true
+    },
+    {
+      "id": "brand/tagline",
+      "type": "text",
+      "x": 86,
+      "y": 132,
+      "content": "CALM DAILY CARE",
+      "font_token": "latin",
+      "font_size": 17,
+      "font_weight": 500,
+      "tracking": 5,
+      "fill": "#30302D",
+      "opacity": 0.82,
+      "editable": true
+    },
+    {
+      "id": "brand/accent",
+      "type": "rounded_rect",
+      "x": 84,
+      "y": 171,
+      "width": 64,
+      "height": 7,
+      "radius": 4,
+      "fill": "#B8543E",
+      "editable": true
+    },
+    {
+      "id": "product/cutout",
+      "type": "image",
+      "asset": "asset/product-cutout",
+      "x": 170,
+      "y": 230,
+      "width": 860,
+      "height": 570,
+      "fit": "contain",
+      "opacity": 1,
+      "identity_locked": true,
+      "editable": true
+    },
+    {
+      "id": "title/line-1",
+      "type": "text",
+      "x": 84,
+      "y": 930,
+      "content": "让香气",
+      "font_token": "display",
+      "font_size": 104,
+      "font_weight": 700,
+      "tracking": 1,
+      "fill": "#30302D",
+      "editable": true
+    },
+    {
+      "id": "title/line-2",
+      "type": "text",
+      "x": 84,
+      "y": 1048,
+      "content": "慢下来",
+      "font_token": "display",
+      "font_size": 104,
+      "font_weight": 700,
+      "tracking": 1,
+      "fill": "#B8543E",
+      "editable": true
+    },
+    {
+      "id": "subtitle/accent",
+      "type": "rounded_rect",
+      "x": 680,
+      "y": 1055,
+      "width": 52,
+      "height": 5,
+      "radius": 3,
+      "fill": "#8C9A69",
+      "editable": true
+    },
+    {
+      "id": "subtitle/copy",
+      "type": "text",
+      "x": 680,
+      "y": 1087,
+      "content": "安静融入每个夜晚",
+      "font_token": "sans",
+      "font_size": 33,
+      "font_weight": 400,
+      "tracking": 1,
+      "fill": "#30302D",
+      "opacity": 0.88,
+      "editable": true
+    },
+    {
+      "id": "feature/card-1",
+      "type": "rounded_rect",
+      "x": 84,
+      "y": 1225,
+      "width": 328,
+      "height": 246,
+      "radius": 26,
+      "fill": "#FBF8F0",
+      "stroke": "#D8D0BF",
+      "stroke_width": 2,
+      "editable": true
+    },
+    {
+      "id": "feature/card-1-accent",
+      "type": "rounded_rect",
+      "x": 84,
+      "y": 1225,
+      "width": 328,
+      "height": 12,
+      "radius": 6,
+      "fill": "#B8543E",
+      "editable": true
+    },
+    {
+      "id": "feature/card-1-number",
+      "type": "text",
+      "x": 118,
+      "y": 1272,
+      "content": "01",
+      "font_token": "latin",
+      "font_size": 20,
+      "font_weight": 600,
+      "tracking": 2,
+      "fill": "#B8543E",
+      "editable": true
+    },
+    {
+      "id": "feature/card-1-copy",
+      "type": "text",
+      "x": 118,
+      "y": 1352,
+      "content": "低噪运行",
+      "font_token": "sans",
+      "font_size": 40,
+      "font_weight": 500,
+      "tracking": 1,
+      "fill": "#30302D",
+      "editable": true
+    },
+    {
+      "id": "feature/card-2",
+      "type": "rounded_rect",
+      "x": 436,
+      "y": 1225,
+      "width": 328,
+      "height": 246,
+      "radius": 26,
+      "fill": "#FBF8F0",
+      "stroke": "#D8D0BF",
+      "stroke_width": 2,
+      "editable": true
+    },
+    {
+      "id": "feature/card-2-accent",
+      "type": "rounded_rect",
+      "x": 436,
+      "y": 1225,
+      "width": 328,
+      "height": 12,
+      "radius": 6,
+      "fill": "#8C9A69",
+      "editable": true
+    },
+    {
+      "id": "feature/card-2-number",
+      "type": "text",
+      "x": 470,
+      "y": 1272,
+      "content": "02",
+      "font_token": "latin",
+      "font_size": 20,
+      "font_weight": 600,
+      "tracking": 2,
+      "fill": "#8C9A69",
+      "editable": true
+    },
+    {
+      "id": "feature/card-2-copy",
+      "type": "text",
+      "x": 470,
+      "y": 1352,
+      "content": "定时关闭",
+      "font_token": "sans",
+      "font_size": 40,
+      "font_weight": 500,
+      "tracking": 1,
+      "fill": "#30302D",
+      "editable": true
+    },
+    {
+      "id": "feature/card-3",
+      "type": "rounded_rect",
+      "x": 788,
+      "y": 1225,
+      "width": 328,
+      "height": 246,
+      "radius": 26,
+      "fill": "#FBF8F0",
+      "stroke": "#D8D0BF",
+      "stroke_width": 2,
+      "editable": true
+    },
+    {
+      "id": "feature/card-3-accent",
+      "type": "rounded_rect",
+      "x": 788,
+      "y": 1225,
+      "width": 328,
+      "height": 12,
+      "radius": 6,
+      "fill": "#AECDD5",
+      "editable": true
+    },
+    {
+      "id": "feature/card-3-number",
+      "type": "text",
+      "x": 822,
+      "y": 1272,
+      "content": "03",
+      "font_token": "latin",
+      "font_size": 20,
+      "font_weight": 600,
+      "tracking": 2,
+      "fill": "#71929A",
+      "editable": true
+    },
+    {
+      "id": "feature/card-3-copy",
+      "type": "text",
+      "x": 822,
+      "y": 1352,
+      "content": "陶土触感",
+      "font_token": "sans",
+      "font_size": 40,
+      "font_weight": 500,
+      "tracking": 1,
+      "fill": "#30302D",
+      "editable": true
+    },
+    {
+      "id": "spec/background",
+      "type": "rounded_rect",
+      "x": 0,
+      "y": 1560,
+      "width": 1200,
+      "height": 240,
+      "radius": 0,
+      "fill": "#30302D",
+      "editable": true
+    },
+    {
+      "id": "spec/top-accent",
+      "type": "rounded_rect",
+      "x": 0,
+      "y": 1560,
+      "width": 1200,
+      "height": 10,
+      "radius": 0,
+      "fill": "#B8543E",
+      "editable": true
+    },
+    {
+      "id": "spec/label",
+      "type": "text",
+      "x": 84,
+      "y": 1620,
+      "content": "规格",
+      "font_token": "sans",
+      "font_size": 24,
+      "font_weight": 500,
+      "tracking": 3,
+      "fill": "#F3EFE4",
+      "opacity": 0.76,
+      "editable": true
+    },
+    {
+      "id": "spec/value-usbc",
+      "type": "text",
+      "x": 252,
+      "y": 1674,
+      "content": "USB-C",
+      "font_token": "latin",
+      "font_size": 50,
+      "font_weight": 600,
+      "tracking": 1,
+      "fill": "#F3EFE4",
+      "editable": true
+    },
+    {
+      "id": "spec/value-6h",
+      "type": "text",
+      "x": 616,
+      "y": 1674,
+      "content": "6 h",
+      "font_token": "latin",
+      "font_size": 50,
+      "font_weight": 600,
+      "tracking": 1,
+      "fill": "#F3EFE4",
+      "editable": true
+    },
+    {
+      "id": "spec/value-280ml",
+      "type": "text",
+      "x": 856,
+      "y": 1674,
+      "content": "280 ml",
+      "font_token": "latin",
+      "font_size": 50,
+      "font_weight": 600,
+      "tracking": 1,
+      "fill": "#F3EFE4",
+      "editable": true
+    },
+    {
+      "id": "spec/divider-1",
+      "type": "line",
+      "x1": 535,
+      "y1": 1632,
+      "x2": 535,
+      "y2": 1748,
+      "stroke": "#F3EFE4",
+      "stroke_width": 1,
+      "opacity": 0.25,
+      "editable": true
+    },
+    {
+      "id": "spec/divider-2",
+      "type": "line",
+      "x1": 790,
+      "y1": 1632,
+      "x2": 790,
+      "y2": 1748,
+      "stroke": "#F3EFE4",
+      "stroke_width": 1,
+      "opacity": 0.25,
+      "editable": true
+    }
+  ],
+  "copy_assertions": {
+    "required_exact": [
+      "让香气慢下来",
+      "安静融入每个夜晚",
+      "低噪运行",
+      "定时关闭",
+      "陶土触感",
+      "USB-C",
+      "6 h",
+      "280 ml"
+    ],
+    "title_rendering": ["让香气", "慢下来"],
+    "brand_text_from_guideline": ["MORI", "CALM DAILY CARE"]
+  },
+  "reading_order": [
+    "group/brand",
+    "group/product",
+    "group/title",
+    "group/features",
+    "group/specs"
+  ]
+}

@@ -1,0 +1,12 @@
+已完成 v1，仅为背面 `ORIGIN / ROAST / NOTES` 增加 100% 专色 `/White` 底版，层名为 `White - BACK TEXT`；未添加扩边或缩边。
+
+新输出：
+
+- 生产 PDF：:codex-file-citation{path="/private<WORKDIR>/outputs/v1/orbit-coffee_production_120x200mm_CMYK-WHITE_v1.pdf" purpose="output"}
+- White 覆盖 proof（青色仅用于标示）：:codex-file-citation{path="/private<WORKDIR>/outputs/v1/orbit-coffee_print-proof_WHITE_v1.pdf" purpose="output"}
+- 背面 White 独立分色：:codex-file-citation{path="/private<WORKDIR>/outputs/v1/orbit-coffee_WHITE-separation_BACK_v1.pdf" purpose="output"}
+- Preflight：:codex-file-citation{path="/private<WORKDIR>/outputs/v1/orbit-coffee_preflight-report_v1.pdf" purpose="output"}
+- [verification.json](/private<WORKDIR>/outputs/v1/verification.json)
+- [project-state.json](/private<WORKDIR>/outputs/project-state.json)
+
+校验为 `PASS`：正面无 White 资源；正反面 CMYK 数据、复合渲染、尺寸、bleed、TrimBox 和刀版几何均与 v0 一致，且 `outputs/v0` 全部哈希未变。

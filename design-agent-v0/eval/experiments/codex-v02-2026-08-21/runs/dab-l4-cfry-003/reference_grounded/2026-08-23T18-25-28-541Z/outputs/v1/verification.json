@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0",
+  "project": "Orbit Coffee packaging artwork",
+  "version": "v1",
+  "verified_at": "2026-08-24T00:00:00+08:00",
+  "status": "verified_pass",
+  "requested_delta": "Back text White underbase only",
+  "checks_performed": [
+    {
+      "check": "v0_immutability",
+      "result": "PASS",
+      "details": "Every file under outputs/v0 retained its pre-v1 SHA-256 hash.",
+      "evidence": {
+        "outputs/v0/evidence/preflight-report-1.png": "eb0b4b46d04ab88a401b10c9e86d6220fbe2a232b4bd8742865aff71055be18f",
+        "outputs/v0/evidence/production-1.png": "1105ae0f9be610750920ae553b003c772d4f40eaf272ecd79833a004fae13823",
+        "outputs/v0/evidence/production-2.png": "d6aff07f35e30f27f8d88aafe64c599961f3b066c06ea3c52a30607ff36bde35",
+        "outputs/v0/evidence/proof-1.png": "cc83fac6f2b56319dc5d3b070125bd5436d850acc5f1582380d7fde6bc26eead",
+        "outputs/v0/evidence/proof-2.png": "00eae5f945ed0d5b6fcb11c811d48634f37538ca753f821560552357c9cae8da",
+        "outputs/v0/orbit-coffee_preflight-report_v0.pdf": "418db18c0708a18d0d84e89b0f7593f2dc7ae2ec571fb16770f08d5ad6eb2cf9",
+        "outputs/v0/orbit-coffee_preflight_v0.json": "0934f876c2c9c5f47f661fda22d4e9e620058c6e735ce2d1aa49bffe03fdb708",
+        "outputs/v0/orbit-coffee_print-proof_v0.pdf": "ec223b094d500baa13e56bc467dad3be9188dcd5744fb75c48586099e625927d",
+        "outputs/v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf": "d813430ee3e1c43f6471e7dcde42009aa493fa3d353c638661760225f03c1498",
+        "outputs/v0/verification.json": "dc8092a3bb2fc0152992e2cfe4eb25251fdd5f49a52be5a2d699286753d8548f"
+      }
+    },
+    {
+      "check": "spot_white_structure",
+      "result": "PASS",
+      "details": {
+        "page_count": 2,
+        "front_has_white_colorant": false,
+        "back_color_space": [
+          "/Separation",
+          "/White",
+          "/DeviceCMYK"
+        ],
+        "back_layer_name": "White - BACK TEXT",
+        "white_mask": {
+          "width_px": 1488,
+          "height_px": 2433,
+          "bits_per_component": 1,
+          "image_mask": true,
+          "ink_pixel_count": 14204,
+          "choke_or_spread_px": 0
+        }
+      },
+      "evidence": [
+        "outputs/v1/orbit-coffee_production_120x200mm_CMYK-WHITE_v1.pdf"
+      ]
+    },
+    {
+      "check": "process_art_identity",
+      "result": "PASS",
+      "details": {
+        "v0": {
+          "front_process_image": {
+            "resource_name": "/FormXob.fea488d3da6a1324f4bab69247cfb54f",
+            "width_px": 1488,
+            "height_px": 2433,
+            "bits_per_component": 8,
+            "color_space": "/DeviceCMYK",
+            "filters": [
+              "/ASCII85Decode",
+              "/DCTDecode"
+            ],
+            "raw_stream_sha256": "4b793a265eacaec47521b58103f8ff9dec93ef5a27e03d6e89d01e04c075d99f"
+          },
+          "back_process_image": {
+            "resource_name": "/FormXob.2a02d388fb3e2e757af244df142d63c1",
+            "width_px": 1488,
+            "height_px": 2433,
+            "bits_per_component": 8,
+            "color_space": "/DeviceCMYK",
+            "filters": [
+              "/ASCII85Decode",
+              "/DCTDecode"
+            ],
+            "raw_stream_sha256": "ef012dcf4248add79847a93e11e08955c05c04cb95d61c3f73a4d82e526e73dc"
+          },
+          "page_boxes": [
+            {
+              "media_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "crop_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "bleed_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "trim_box_pt": [
+                8.50394,
+                8.50394,
+                348.66142,
+                575.43307
+              ],
+              "art_box_pt": [
+                8.50394,
+                8.50394,
+                348.66142,
+                575.43307
+              ]
+            },
+            {
+              "media_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "crop_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "bleed_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "trim_box_pt": [
+                8.50394,
+                8.50394,
+                348.66142,
+                575.43307
+              ],
+              "art_box_pt": [
+                8.50394,
+                8.50394,
+                348.66142,
+                575.43307
+              ]
+            }
+          ],
+          "output_intent": {
+            "identifier": "Generic CMYK Profile",
+            "profile_n": 4,
+            "profile_stream_sha256": "0c8a584b288a306eac9e1d3f1e68bc1b64331c717ceb051420e6257f17b3509a"
+          }
+        },
+        "v1": {
+          "front_process_image": {
+            "resource_name": "/FormXob.fea488d3da6a1324f4bab69247cfb54f",
+            "width_px": 1488,
+            "height_px": 2433,
+            "bits_per_component": 8,
+            "color_space": "/DeviceCMYK",
+            "filters": [
+              "/ASCII85Decode",
+              "/DCTDecode"
+            ],
+            "raw_stream_sha256": "4b793a265eacaec47521b58103f8ff9dec93ef5a27e03d6e89d01e04c075d99f"
+          },
+          "back_process_image": {
+            "resource_name": "/FormXob.2a02d388fb3e2e757af244df142d63c1",
+            "width_px": 1488,
+            "height_px": 2433,
+            "bits_per_component": 8,
+            "color_space": "/DeviceCMYK",
+            "filters": [
+              "/ASCII85Decode",
+              "/DCTDecode"
+            ],
+            "raw_stream_sha256": "ef012dcf4248add79847a93e11e08955c05c04cb95d61c3f73a4d82e526e73dc"
+          },
+          "page_boxes": [
+            {
+              "media_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "crop_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "bleed_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "trim_box_pt": [
+                8.50394,
+                8.50394,
+                348.66142,
+                575.43307
+              ],
+              "art_box_pt": [
+                8.50394,
+                8.50394,
+                348.66142,
+                575.43307
+              ]
+            },
+            {
+              "media_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "crop_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "bleed_box_pt": [
+                0.0,
+                0.0,
+                357.16535,
+                583.93701
+              ],
+              "trim_box_pt": [
+                8.50394,
+                8.50394,
+                348.66142,
+                575.43307
+              ],
+              "art_box_pt": [
+                8.50394,
+                8.50394,
+                348.66142,
+                575.43307
+              ]
+            }
+          ],
+          "output_intent": {
+            "identifier": "Generic CMYK Profile",
+            "profile_n": 4,
+            "profile_stream_sha256": "0c8a584b288a306eac9e1d3f1e68bc1b64331c717ceb051420e6257f17b3509a"
+          }
+        },
+        "comparison": {
+          "front_production_render_vs_v0": {
+            "identical": true,
+            "size_px": [
+              893,
+              1460
+            ],
+            "different_channel_values": 0,
+            "max_channel_delta": 0
+          },
+          "back_composite_render_vs_v0": {
+            "identical": true,
+            "size_px": [
+              893,
+              1460
+            ],
+            "different_channel_values": 0,
+            "max_channel_delta": 0
+          },
+          "front_proof_art_region_vs_v0": {
+            "identical": true,
+            "crop_px": [
+              199,
+              217,
+              794,
+              1191
+            ],
+            "different_channel_values": 0,
+            "max_channel_delta": 0
+          },
+          "white_separation_render_scope": {
+            "render_size_px": [
+              893,
+              1460
+            ],
+            "expected_glyph_pixels_at_render_size": 5119,
+            "rendered_black_pixels": 4835,
+            "intersection_over_union": 0.894557,
+            "unexpected_background_black_pixels": 135,
+            "actual_black_bounds_px": [
+              140,
+              626,
+              252,
+              920
+            ],
+            "expected_black_bounds_px": [
+              140,
+              626,
+              252,
+              920
+            ],
+            "bounds_max_delta_px": 0,
+            "polarity_and_scope_pass": true
+          }
+        }
+      },
+      "evidence": [
+        "outputs/v0/orbit-coffee_production_120x200mm_CMYK_v0.pdf",
+        "outputs/v1/orbit-coffee_production_120x200mm_CMYK-WHITE_v1.pdf"
+      ]
+    },
+    {
+      "check": "visual_render",
+      "result": "PASS",
+      "details": "All PDFs rendered through Poppler. Production composite pages are pixel-identical to v0; proof back shows the requested White mask in cyan.",
+      "evidence": [
+        "outputs/v1/evidence/preflight-report-1.png",
+        "outputs/v1/evidence/production-1.png",
+        "outputs/v1/evidence/production-2.png",
+        "outputs/v1/evidence/proof-1.png",
+        "outputs/v1/evidence/proof-2.png",
+        "outputs/v1/evidence/white-mask-full.png",
+        "outputs/v1/evidence/white-separation-1.png"
+      ]
+    },
+    {
+      "check": "white_plate_scope",
+      "result": "PASS",
+      "details": {
+        "covered_text": [
+          "ORIGIN",
+          "ROAST",
+          "NOTES"
+        ],
+        "coverage": {
+          "ORIGIN": {
+            "roi_px_top_origin": [
+              225,
+              1035,
+              435,
+              1095
+            ],
+            "ink_pixel_count": 5081,
+            "detected_bounds_px_top_origin": [
+              233,
+              1043,
+              421,
+              1083
+            ]
+          },
+          "ROAST": {
+            "roi_px_top_origin": [
+              225,
+              1280,
+              435,
+              1345
+            ],
+            "ink_pixel_count": 4476,
+            "detected_bounds_px_top_origin": [
+              235,
+              1291,
+              414,
+              1331
+            ]
+          },
+          "NOTES": {
+            "roi_px_top_origin": [
+              225,
+              1485,
+              435,
+              1545
+            ],
+            "ink_pixel_count": 4647,
+            "detected_bounds_px_top_origin": [
+              235,
+              1493,
+              413,
+              1533
+            ]
+          }
+        },
+        "unrelated_white_coverage": false,
+        "choke_or_spread_px": 0
+      },
+      "evidence": [
+        "outputs/v1/evidence/white-mask-full.png",
+        "outputs/v1/orbit-coffee_WHITE-separation_BACK_v1.pdf"
+      ]
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v1/orbit-coffee_print-proof_WHITE_v1.pdf": "ebb12c26152ab12fed7b48edc260ad6ff253fb5824153af412dd4353f3aeb442",
+    "outputs/v1/orbit-coffee_production_120x200mm_CMYK-WHITE_v1.pdf": "dc226f2ad8ff9b4e2b07274e67b763d9a23247c836f1061c21c1b048768ceafd",
+    "outputs/v1/orbit-coffee_WHITE-separation_BACK_v1.pdf": "3e1bab6ba72510c4e83dd52ee8d34dc804e76fe9527a8d5ab13797e0f790273e",
+    "outputs/v1/orbit-coffee_preflight-report_v1.pdf": "4753be426281309cf5b7493c3065a6cde54d182f1869b86c8111953a239b9d99",
+    "outputs/v1/orbit-coffee_preflight_v1.json": "de74615bd215da1c239691115eade6d30726984815d63f3fa9b0c0fcb53ea0a6"
+  },
+  "unresolved_blockers": []
+}

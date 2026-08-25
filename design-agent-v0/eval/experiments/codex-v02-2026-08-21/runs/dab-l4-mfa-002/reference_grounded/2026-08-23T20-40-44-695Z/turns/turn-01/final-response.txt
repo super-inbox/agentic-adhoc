@@ -1,0 +1,14 @@
+已完成 v1：仅将 Story 日期上移 5% 画高、URL 保留位上移 29%，与底部按钮安全区留出 105 px。Story 其他对象及另外六个版本像素一致；`outputs/v0` 未改。
+
+visualize{"path":"/private/tmp/codex-v02-kANtHB/summer-form-adaptation-map-v1.html"}
+
+新建或更新：
+
+- [preview.png](/private<WORKDIR>/outputs/v1/preview.png)
+- [design_document.json](/private<WORKDIR>/outputs/v1/design_document.json)
+- [change_set.json](/private<WORKDIR>/outputs/v1/change_set.json)
+- [verification.json](/private<WORKDIR>/outputs/v1/verification.json)
+- [render_adaptation_map.py](/private<WORKDIR>/outputs/v1/render_adaptation_map.py)
+- [project-state.json](/private<WORKDIR>/outputs/project-state.json)
+
+实际报名 URL 仍未提供，因此保留位内容未作假设。

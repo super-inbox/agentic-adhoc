@@ -1,0 +1,86 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-CFRY-003@reference_grounded",
+  "base_brief_id": "DAB-L4-CFRY-003",
+  "context_condition": "reference_grounded",
+  "category": "concept_to_factory_ready",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "production_execution"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T02:01:56.184Z",
+  "finished_at": "2026-08-23T02:02:25.781Z",
+  "latency_ms": 29597,
+  "intended_turns": 2,
+  "completed_turns": 0,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a02c5a-6f5c-7a72-9df8-013aa85a74ea",
+  "input_assets": [
+    {
+      "input_id": "coffee-artwork",
+      "asset_id": "factory-orbit-coffee-artwork",
+      "role": "approved_print_artwork",
+      "reference_role": "approved_master",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-approved_print_artwork.png",
+      "source_path": "eval/assets/reference-pack-v0.2/factory/orbit-coffee-artwork.png",
+      "byte_size": 865492,
+      "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f"
+    }
+  ],
+  "input_context_ids": [
+    "coffee-artwork",
+    "print-spec"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": false,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T02:01:56.184Z",
+      "finished_at": "2026-08-23T02:02:25.779Z",
+      "latency_ms": 29597,
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 9,
+        "command_count": 0,
+        "tool_count": 0,
+        "image_activity_count": 0,
+        "runtime_error_count": 7,
+        "thread_id": "01a02c5a-6f5c-7a72-9df8-013aa85a74ea",
+        "usage": null
+      },
+      "artifact_manifest_after_turn": []
+    }
+  ],
+  "usage": null,
+  "outcome": "error"
+}

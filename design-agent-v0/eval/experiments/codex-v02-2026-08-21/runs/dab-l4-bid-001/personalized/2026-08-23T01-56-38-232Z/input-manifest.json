@@ -1,0 +1,46 @@
+[
+  {
+    "input_id": "current-identity",
+    "asset_id": "logo-upgrade-grain-glow-before-after",
+    "role": "current_logo_and_identity",
+    "reference_role": "edit_target",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "01-current_logo_and_identity.png",
+    "source_path": "eval/assets/reference-pack-v0.2/logo-upgrade/grain-glow-before-after.png",
+    "byte_size": 588006,
+    "sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253"
+  },
+  {
+    "input_id": "reference-a",
+    "asset_id": "detail-page-quiet-ritual-reference-page",
+    "role": "premium_minimal_reference",
+    "reference_role": "style_reference",
+    "identity_policy": "abstract_only",
+    "filename": "02-premium_minimal_reference.png",
+    "source_path": "eval/assets/reference-pack-v0.2/detail-page/quiet-ritual-reference-page.png",
+    "byte_size": 815623,
+    "sha256": "f941e16e01835e825f6b0a2b4d65e5d021329ae6e223b451c307998ec5a97af2"
+  },
+  {
+    "input_id": "reference-b",
+    "asset_id": "sku-system-mori-brand-board",
+    "role": "color_system_reference",
+    "reference_role": "style_reference",
+    "identity_policy": "abstract_only",
+    "filename": "03-color_system_reference.png",
+    "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+    "byte_size": 592086,
+    "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+  },
+  {
+    "input_id": "reference-c",
+    "asset_id": "design-vote-noma-logo-options",
+    "role": "friendly_logo_reference",
+    "reference_role": "style_reference",
+    "identity_policy": "abstract_only",
+    "filename": "04-friendly_logo_reference.png",
+    "source_path": "eval/assets/reference-pack-v0.2/design-vote/noma-logo-options.png",
+    "byte_size": 630253,
+    "sha256": "0985be34801ead57e9aaea756b26b06d4e44bc4c909175139c4672a3fa9fc334"
+  }
+]

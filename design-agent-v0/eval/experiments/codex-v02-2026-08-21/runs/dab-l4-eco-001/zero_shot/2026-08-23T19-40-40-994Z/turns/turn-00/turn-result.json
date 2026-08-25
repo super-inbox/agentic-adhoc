@@ -1,0 +1,49 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T19:40:41.004Z",
+  "finished_at": "2026-08-23T19:49:26.520Z",
+  "latency_ms": 525525,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 63,
+    "command_count": 19,
+    "tool_count": 7,
+    "image_activity_count": 2,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a03023-b2d8-7b51-bbeb-cce4c03ed674",
+    "usage": {
+      "input_tokens": 920241,
+      "cached_input_tokens": 862208,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 22626,
+      "reasoning_output_tokens": 9422
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1627,
+      "sha256": "c2d7712bd4518c41a8d4a63c10abbeb81ac18d67013e18749cf0ce5380608142"
+    },
+    {
+      "filename": "v0/scene-direction-board.svg",
+      "byte_size": 13288,
+      "sha256": "67f013d1d63d73b6ba67a924c8dd9014a6802efa76004f0de8315c319b9eeb44"
+    },
+    {
+      "filename": "v0/scene-hypotheses.md",
+      "byte_size": 4605,
+      "sha256": "6051fc63bc02fbdc6aa2a58e1677a92d2ef09e0eb73ec5cbfd1fdfdcbe675db9"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3886,
+      "sha256": "ac0edaa9e4284a55161106e6396a221eb15f3502b803e8a75fafd63bd7a63de4"
+    }
+  ]
+}

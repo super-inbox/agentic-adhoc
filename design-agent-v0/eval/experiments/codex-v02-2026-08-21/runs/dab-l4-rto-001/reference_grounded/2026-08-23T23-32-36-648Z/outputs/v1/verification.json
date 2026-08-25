@@ -1,0 +1,137 @@
+{
+  "version": "v1",
+  "stage": "hero_and_selling_modules",
+  "checks": [
+    {
+      "id": "requested_delta_only",
+      "status": "passed",
+      "result": {
+        "preserved": [
+          "C｜静音时序",
+          "大胆构图",
+          "01/02/03 信息节奏",
+          "暖色系统",
+          "产品固定锚点"
+        ],
+        "changed": [
+          "直线网格与矩形轨道改为开放渐变缓弧",
+          "新增不规则陶土颗粒聚散语言"
+        ]
+      },
+      "evidence_paths": [
+        "outputs/v1/design-delta.md",
+        "outputs/v1/detail-page-scroll-preview.png"
+      ]
+    },
+    {
+      "id": "deliverable_count_and_dimensions",
+      "status": "passed",
+      "result": {
+        "hero": {
+          "path": "outputs/v1/hero-quiet-sequence-clay-drift.png",
+          "dimensions": "1500x2000"
+        },
+        "selling_point_01": {
+          "path": "outputs/v1/selling-point-01-low-noise.png",
+          "dimensions": "1500x2000"
+        },
+        "selling_point_02": {
+          "path": "outputs/v1/selling-point-02-timer-tactility.png",
+          "dimensions": "1500x2000"
+        },
+        "scroll_preview": {
+          "path": "outputs/v1/detail-page-scroll-preview.png",
+          "dimensions": "1500x6000"
+        }
+      }
+    },
+    {
+      "id": "product_position_lock",
+      "status": "passed",
+      "method": "All three module render functions call the same place_product function and the single PRODUCT_ANCHOR constant.",
+      "product_anchor": [675, 1045, 1460, 1625],
+      "canvas_dimensions": [1500, 2000],
+      "source_evidence": {
+        "path": "outputs/v1/render_v1.py",
+        "anchor_line": 13,
+        "placement_calls": [235, 286, 341]
+      }
+    },
+    {
+      "id": "product_identity_integrity",
+      "status": "passed",
+      "method": "Compared SHA-256 of the bound product source and the exact copied v1 asset.",
+      "source_path": "inputs/04-product_reference.png",
+      "candidate_asset_path": "outputs/v1/product-reference-exact.png",
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+      "result": "Hashes are identical. Rendered product treatments use only background transparency, crop, scale, placement, and a new contextual shadow; no product geometry or color is repainted."
+    },
+    {
+      "id": "geometry_originality_delta",
+      "status": "passed",
+      "method": "Inspected render source and full-resolution outputs. Visual geometry is generated from asymmetric open cubic Bezier ribbons with tapered widths plus seeded irregular polygon granules. No layout/composition reference image is embedded.",
+      "removed_characteristics": [
+        "orthogonal grid",
+        "closed circular construction",
+        "reference event-poster geometry",
+        "blue/coral reference pairing"
+      ],
+      "evidence_paths": [
+        "outputs/v1/render_v1.py",
+        "outputs/v1/hero-quiet-sequence-clay-drift.png",
+        "outputs/v1/selling-point-01-low-noise.png",
+        "outputs/v1/selling-point-02-timer-tactility.png"
+      ]
+    },
+    {
+      "id": "approved_copy_only",
+      "status": "passed",
+      "visible_copy": [
+        "陶土红香薰机",
+        "让香气慢下来",
+        "低噪运行",
+        "定时关闭",
+        "陶土触感",
+        "01",
+        "02",
+        "03"
+      ],
+      "result": "No reference brand, event name, slogan, or borrowed label appears in the rendered deliverables."
+    },
+    {
+      "id": "visual_inspection",
+      "status": "passed",
+      "method": "Viewed the 1500x6000 composite and each 1500x2000 module at original detail.",
+      "result": "Titles and sequence labels are legible; product-defining lid, black gap, body proportion, and button remain visible; arcs are open/asymmetric; granules are irregular and non-repeating; the material window reads as a true crop rather than a second product."
+    },
+    {
+      "id": "previous_version_immutability",
+      "status": "passed",
+      "method": "Compared v0 SHA-256 values recorded before v1 work with values after v1 render.",
+      "v0_hashes": {
+        "creative-territories-board.png": "a4f34318428cd84f6582bd84ee387158ddac0a3b67e8e8e5de30b63061fed645",
+        "creative-territories-board.svg": "03b6b0a1c975870408800780cb056bbe118ef036d0c95d2b54af4d69f13ae332",
+        "product-reference-exact.png": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0",
+        "reference-deconstruction-and-territories.md": "87f18efc7e5f2240dfdca866be71e0be108f481146e41e520be706c71ff89c47",
+        "render_territories_board.py": "ba824bfa5ad3da47f9d0b5e87c675bc57480a4194fcabc83145b9add90433ddd",
+        "verification.json": "9189acfd77b5ca13954adb7a7b3d33af92c21e50c633dbc90195b0cb990566ad"
+      },
+      "result": "All v0 hashes are unchanged."
+    }
+  ],
+  "artifact_hashes": {
+    "hero-quiet-sequence-clay-drift.png": "ac952966b9e1e4c22ae43490a98eaf0056166a1f6184dd48d4d396e2bfec714c",
+    "selling-point-01-low-noise.png": "ba295b83b49d19812d51c4f8d3223fb41f0ea3f2c778fe6adee7e86dd442ad7d",
+    "selling-point-02-timer-tactility.png": "4e44d5f6564222d1fb21bdda0d404f1472718ea54be82c7266ae73145ef88626",
+    "detail-page-scroll-preview.png": "ac5599771d5cd5438fff136f3bec9ee7b3fddf664807ae8af4254373e5709443"
+  },
+  "evidence_paths": [
+    "outputs/v1/detail-page-scroll-preview.png",
+    "outputs/v1/hero-quiet-sequence-clay-drift.png",
+    "outputs/v1/selling-point-01-low-noise.png",
+    "outputs/v1/selling-point-02-timer-tactility.png",
+    "outputs/v1/design-delta.md",
+    "outputs/project-state.json"
+  ],
+  "unresolved_blockers": []
+}

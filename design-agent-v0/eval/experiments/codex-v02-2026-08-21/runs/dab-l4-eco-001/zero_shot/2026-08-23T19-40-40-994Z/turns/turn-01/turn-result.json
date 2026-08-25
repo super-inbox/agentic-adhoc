@@ -1,0 +1,124 @@
+{
+  "turn_index": 1,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T19:49:26.529Z",
+  "finished_at": "2026-08-23T20:05:57.929Z",
+  "latency_ms": 991436,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 78,
+    "command_count": 25,
+    "tool_count": 9,
+    "image_activity_count": 4,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a03023-b2d8-7b51-bbeb-cce4c03ed674",
+    "usage": {
+      "input_tokens": 4380552,
+      "cached_input_tokens": 4231808,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 55250,
+      "reasoning_output_tokens": 23298
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 3820,
+      "sha256": "be179dae7603bbfb6873a7f79c43f194b221b8d0ce35ebd6ca6d1db9d52191db"
+    },
+    {
+      "filename": "v0/scene-direction-board.svg",
+      "byte_size": 13288,
+      "sha256": "67f013d1d63d73b6ba67a924c8dd9014a6802efa76004f0de8315c319b9eeb44"
+    },
+    {
+      "filename": "v0/scene-hypotheses.md",
+      "byte_size": 4605,
+      "sha256": "6051fc63bc02fbdc6aa2a58e1677a92d2ef09e0eb73ec5cbfd1fdfdcbe675db9"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3886,
+      "sha256": "ac0edaa9e4284a55161106e6396a221eb15f3502b803e8a75fafd63bd7a63de4"
+    },
+    {
+      "filename": "v1/backgrounds/cafe-window-master.png",
+      "byte_size": 1737351,
+      "sha256": "2bacb67e31124c634c43ab05f00b28ac67824135237245b822ddb1eec7addf8a"
+    },
+    {
+      "filename": "v1/backgrounds/rainy-riverside-master.png",
+      "byte_size": 1965674,
+      "sha256": "89f1928ce44b34b55e264d28349de216d5995a587c1ccd795cac011ed36bce54"
+    },
+    {
+      "filename": "v1/backgrounds/urban-entry-master.png",
+      "byte_size": 2000818,
+      "sha256": "967f7b19e8d2f295835439d8ccaa63e657c6807e5f427c0269da0476bf6568d6"
+    },
+    {
+      "filename": "v1/build_v1_assets.py",
+      "byte_size": 8658,
+      "sha256": "a481625c17c240a77d0f8fcd872aa7c3f0038a2771aac0adf94a4f58a705e3ec"
+    },
+    {
+      "filename": "v1/contact-sheet.jpg",
+      "byte_size": 777342,
+      "sha256": "2290b1a5f420e7a1e14aeeae99e89af6de3c4d2e3328a9b12307d19a9922c7cd"
+    },
+    {
+      "filename": "v1/creative-spec.md",
+      "byte_size": 1906,
+      "sha256": "efcf7c6148d3d3e35899ca00600e8cdcdb3ef78637f8ee9d0cef56b00498582a"
+    },
+    {
+      "filename": "v1/ecommerce/ecom-01-urban-entry-hero.png",
+      "byte_size": 2112379,
+      "sha256": "31532afdaadde1f9c10fcbca43c557f7208c1a2da3e387743c4fd6b37aa4d47c"
+    },
+    {
+      "filename": "v1/ecommerce/ecom-02-cafe-12h.png",
+      "byte_size": 1827429,
+      "sha256": "91f4a7c62f2c6ef877c6f35cdcf886d4e50fd8835e3a840a1783d1eac7abcbf2"
+    },
+    {
+      "filename": "v1/ecommerce/ecom-03-riverside-ipx4.png",
+      "byte_size": 1990402,
+      "sha256": "188bc031aede60deaf677bbc420892d7052c29fe861899b33fd9b105510fbabc"
+    },
+    {
+      "filename": "v1/imagegen-prompts.md",
+      "byte_size": 4800,
+      "sha256": "a372bf53c3e81ecda55abeaa1fef4f38b586427fe54bd9b1bd777dead30010c9"
+    },
+    {
+      "filename": "v1/product-cutout-exact.png",
+      "byte_size": 706632,
+      "sha256": "ed10a847c54a48f3ef63ee0ad3c9c82124d8bb45f8786638b155144b6cda2222"
+    },
+    {
+      "filename": "v1/social/social-01-entry-loop.png",
+      "byte_size": 1734365,
+      "sha256": "08d2d598d24ff87405aa49f3084f90c4ec36af00f67e7b9b37f1e23a58fe9f46"
+    },
+    {
+      "filename": "v1/social/social-02-cafe-12h.png",
+      "byte_size": 1505834,
+      "sha256": "16850a6b638f627c3aabb259abfbc1bb8de8aed9dfdb9a37625b2072267fa3f8"
+    },
+    {
+      "filename": "v1/social/social-03-riverside-ipx4.png",
+      "byte_size": 1661074,
+      "sha256": "c538e4c86222ded7ba92ae53468e958b31728281f71263f332a0dac68a389ee1"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 6477,
+      "sha256": "161d95f9ed5755df6efa88bd30fcef9d5cb505f8591ff1e4d6b7a4819ff68fb9"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "input_id": "brand-board",
+    "asset_id": "sku-system-mori-brand-board",
+    "role": "brand_system",
+    "reference_role": "brand_system",
+    "identity_policy": "preserve_rules",
+    "filename": "01-brand_system.png",
+    "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+    "byte_size": 592086,
+    "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+  },
+  {
+    "input_id": "base-pack",
+    "asset_id": "sku-system-tumbler-base",
+    "role": "approved_base_packaging",
+    "reference_role": "approved_master",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "02-approved_base_packaging.png",
+    "source_path": "eval/assets/reference-pack-v0.2/sku-system/tumbler-base.png",
+    "byte_size": 807776,
+    "sha256": "40189e62be7b51c54e7752de041b554708feadf554c2c0d925c369310c9089e5"
+  }
+]

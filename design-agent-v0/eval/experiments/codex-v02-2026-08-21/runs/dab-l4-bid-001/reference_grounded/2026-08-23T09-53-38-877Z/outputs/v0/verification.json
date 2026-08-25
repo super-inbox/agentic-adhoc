@@ -1,0 +1,153 @@
+{
+  "version": "v0",
+  "stage": "creative_territory_selection",
+  "overall_status": "pass_with_expected_blockers",
+  "checks": [
+    {
+      "id": "artifact_presence",
+      "status": "pass",
+      "method": "Filesystem existence and non-zero byte-size check",
+      "result": "All declared v0 boards, strategy notes, prompt record, and three concept assets exist.",
+      "evidence_paths": [
+        "outputs/v0/01-conflicts-and-10-hypotheses.png",
+        "outputs/v0/02-three-creative-territories.png",
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/imagegen-prompts.md",
+        "outputs/v0/assets/territory-01-quiet-craft-concept.png",
+        "outputs/v0/assets/territory-02-daylight-grain-concept.png",
+        "outputs/v0/assets/territory-03-fire-feast-concept.png"
+      ]
+    },
+    {
+      "id": "image_integrity_and_dimensions",
+      "status": "pass",
+      "method": "Pillow decode plus width/height/mode inspection",
+      "result": {
+        "outputs/v0/01-conflicts-and-10-hypotheses.png": "2400x2000 RGB",
+        "outputs/v0/02-three-creative-territories.png": "2400x3000 RGB",
+        "outputs/v0/assets/territory-01-quiet-craft-concept.png": "1672x941 RGB",
+        "outputs/v0/assets/territory-02-daylight-grain-concept.png": "1536x1024 RGB",
+        "outputs/v0/assets/territory-03-fire-feast-concept.png": "1672x941 RGB"
+      },
+      "evidence_paths": [
+        "outputs/v0/01-conflicts-and-10-hypotheses.png",
+        "outputs/v0/02-three-creative-territories.png"
+      ]
+    },
+    {
+      "id": "visual_render_qa",
+      "status": "pass",
+      "method": "Manual visual inspection at rendered resolution",
+      "result": "Chinese and English headings are readable, no clipped cards or sections were observed, and an unsupported arrow glyph was replaced with 'VS.' before final export.",
+      "evidence_paths": [
+        "outputs/v0/01-conflicts-and-10-hypotheses.png",
+        "outputs/v0/02-three-creative-territories.png"
+      ]
+    },
+    {
+      "id": "hypothesis_count",
+      "status": "pass",
+      "method": "Unique Hxx identifier scan in strategy document",
+      "result": "10 unique hypotheses found: H01 through H10; required range is 8–12.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/01-conflicts-and-10-hypotheses.png"
+      ]
+    },
+    {
+      "id": "territory_count_and_differentiation",
+      "status": "pass",
+      "method": "Heading count plus manual mechanism comparison",
+      "result": "Three territories found. Their primary mechanisms differ: editorial/tactile order, bright modular recognition, and cinematic gifting ritual.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/02-three-creative-territories.png"
+      ]
+    },
+    {
+      "id": "palette_non_convergence",
+      "status": "pass",
+      "method": "Exact hex-set comparison",
+      "result": {
+        "01": ["#F3EBDD", "#25231F", "#8C9B78", "#A64A35"],
+        "02": ["#A9D6E5", "#F3B33D", "#657846", "#202521"],
+        "03": ["#7E2F2A", "#211916", "#D8862E", "#EFE2CD"],
+        "exact_shared_hex_values": 0
+      },
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/02-three-creative-territories.png"
+      ]
+    },
+    {
+      "id": "ecommerce_and_store_extensions",
+      "status": "pass",
+      "method": "Section count in strategy document and visual triptych inspection",
+      "result": "All three territories include one Taobao hero-image extension and one retail-material extension, and each concept asset contains packaging/ecommerce/store panels.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/02-three-creative-territories.png"
+      ]
+    },
+    {
+      "id": "logo_and_name_lock",
+      "status": "pass_for_exploration_blocked_for_final_placement",
+      "method": "Input preservation hash plus visual inspection of final concept assets",
+      "result": "The supplied identity file was not edited (SHA-256 6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253). Concept mockups use blank lockup zones instead of redrawing the mark. Early pseudo-marks in generated drafts were removed from the final Territory 01 and 02 assets. Exact Chinese-name placement remains blocked by missing source artwork.",
+      "evidence_paths": [
+        "inputs/01-current_logo_and_identity.png",
+        "outputs/v0/assets/territory-01-quiet-craft-concept.png",
+        "outputs/v0/assets/territory-02-daylight-grain-concept.png",
+        "outputs/v0/assets/territory-03-fire-feast-concept.png",
+        "outputs/v0/imagegen-prompts.md"
+      ]
+    },
+    {
+      "id": "reference_use_contract",
+      "status": "pass",
+      "method": "Prompt-role review plus manual visual comparison",
+      "result": "Current identity was treated as a locked anchor. References A/B/C were described and used only as abstract principles. No reference Logo, named product, literal layout, or exact pattern was intentionally reproduced.",
+      "evidence_paths": [
+        "outputs/v0/imagegen-prompts.md",
+        "outputs/v0/creative-territories.md"
+      ]
+    },
+    {
+      "id": "decision_gate",
+      "status": "pass",
+      "method": "Project-state inspection",
+      "result": "selected_territory is null and status is awaiting_client_selection; no client choice or convergence was fabricated.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v0/02-three-creative-territories.png"
+      ]
+    }
+  ],
+  "checksums": {
+    "inputs/01-current_logo_and_identity.png": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253",
+    "outputs/v0/01-conflicts-and-10-hypotheses.png": "d7fc43c2af5942b76f488266bffac45a401161ab7a0d157b9ed555b82f03c4db",
+    "outputs/v0/02-three-creative-territories.png": "64a86b0183020df9d0ff881b985f55d9fcc8aaf143a5f25effab8cd99514e966"
+  },
+  "unresolved_blockers": [
+    {
+      "blocker": "No territory has been selected.",
+      "impact": "Do not proceed to refinement, final palette locking, Logo placement, or production mockups.",
+      "required_input": "Choose 01, 02, or 03."
+    },
+    {
+      "blocker": "Exact Chinese brand-name artwork and vector/transparent Logo source are absent.",
+      "impact": "Cannot literally place and verify the locked identity in refined layouts.",
+      "required_input": "Provide the approved Chinese wordmark and Logo source file."
+    },
+    {
+      "blocker": "Production content and dimensional specs are absent.",
+      "impact": "Cannot validate final Taobao safe areas, pack feasibility, or store fabrication.",
+      "required_input": "Provide SKU/product photography, pack sizes, Taobao specs, store dimensions, materials, and budget limits."
+    },
+    {
+      "blocker": "The Friday deadline is ambiguous.",
+      "impact": "Schedule is not locked.",
+      "required_input": "Confirm whether the intended proposal date is 2026-08-28 Asia/Shanghai."
+    }
+  ]
+}

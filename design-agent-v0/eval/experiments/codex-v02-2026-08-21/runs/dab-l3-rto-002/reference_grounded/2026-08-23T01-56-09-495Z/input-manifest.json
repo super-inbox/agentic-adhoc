@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "candidate-board",
+    "asset_id": "design-vote-noma-logo-options",
+    "role": "logo_candidates",
+    "reference_role": "candidate_option",
+    "identity_policy": "analysis_only",
+    "filename": "01-logo_candidates.png",
+    "source_path": "eval/assets/reference-pack-v0.2/design-vote/noma-logo-options.png",
+    "byte_size": 630253,
+    "sha256": "0985be34801ead57e9aaea756b26b06d4e44bc4c909175139c4672a3fa9fc334"
+  }
+]

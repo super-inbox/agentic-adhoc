@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.2",
+  "current_version": "v1",
+  "status": "awaiting_client_review",
+  "client_decisions": {
+    "selected_territory": {
+      "id": "C",
+      "name_zh": "静时轨",
+      "name_en": "Quiet Time Track",
+      "decision": "selected"
+    },
+    "latest_feedback": [
+      "几何图形和 SUMMER FORM 太像",
+      "保留大胆构图",
+      "换成我们自己的弧形和陶土颗粒语言",
+      "产品位置别动"
+    ],
+    "approved_copy": [
+      "让香气慢下来",
+      "低噪运行",
+      "定时关闭",
+      "陶土触感"
+    ],
+    "reference_use": {
+      "layout-ref": "layout_principles_and_information_rhythm_only",
+      "palette-ref": "warm_palette_typography_and_brand_tokens_only",
+      "geometry-ref": "abstract_bold_composition_only; no copied circles, grid or specific forms",
+      "product": "exact_product_identity; placement_scale_lighting_context_only"
+    }
+  },
+  "locked_items": [
+    "方向 3 的大胆、非对称构图",
+    "首屏产品位于左侧、文案位于右侧的信息结构",
+    "首屏产品相对锚点 x=0.3203125, y=0.5846938776",
+    "产品身份、颜色、悬浮上盖、黑色缝隙与正面圆形按钮",
+    "暖纸白、陶土红、鼠尾草绿、少量雾蓝与炭黑的配色关系",
+    "最终范围为一张首屏和两张卖点模块",
+    "仅使用已批准文案"
+  ],
+  "preserved_items": [
+    "产品位置未移动，按 v0 方向 3 预览的归一化锚点映射到 v1 首屏",
+    "方向 3 的左产品/右文案布局未改变",
+    "暖色系统与少量冷色边缘未改变",
+    "大留白与信息节奏未改变",
+    "产品源文件未改变"
+  ],
+  "changed_items": [
+    "移除 v0 方向 3 的近完整圆环、折线波形与轨道式组合",
+    "替换为边界不等、不同心、不闭合的原创贝塞尔呼吸弧",
+    "加入大小、形状与密度不规则的陶土颗粒语言",
+    "完成 v1 首屏、低噪运行模块、定时关闭/陶土触感模块与整页合成图"
+  ],
+  "product_position_lock": {
+    "source_version": "v0",
+    "source_preview_bounds_px": [1216, 250, 512, 490],
+    "source_product_placement_box_px": [1230, 394, 300, 285],
+    "normalized_anchor": [0.3203125, 0.5846938776],
+    "v1_hero_size_px": [1440, 1800],
+    "v1_hero_anchor_px": [461.25, 1052.44897968],
+    "status": "locked_and_preserved"
+  },
+  "artifact_paths": {
+    "hero": "./outputs/v1/hero-direction-03-clay-arc.png",
+    "selling_point_01": "./outputs/v1/module-01-low-noise.png",
+    "selling_point_02": "./outputs/v1/module-02-timer-clay-touch.png",
+    "detail_page_composite": "./outputs/v1/detail-page-composite.png",
+    "design_delta": "./outputs/v1/design-delta.md",
+    "render_source": "./outputs/v1/render_direction_03.py",
+    "exact_product_copy": "./outputs/v1/product-reference-exact.png",
+    "verification": "./outputs/v1/verification.json",
+    "previous_version": "./outputs/v0"
+  },
+  "version_history": [
+    {
+      "version": "v0",
+      "status": "territory_selection_complete",
+      "path": "./outputs/v0"
+    },
+    {
+      "version": "v1",
+      "status": "current_candidate_awaiting_review",
+      "path": "./outputs/v1"
+    }
+  ],
+  "unresolved_blockers": [],
+  "next_checkpoint": "client_reviews_v1_outputs"
+}

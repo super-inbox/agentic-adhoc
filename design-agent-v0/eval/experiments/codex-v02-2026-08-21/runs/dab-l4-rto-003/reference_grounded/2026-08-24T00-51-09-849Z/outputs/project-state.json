@@ -1,0 +1,54 @@
+{
+  "schema": "candidate-project-state/1.0",
+  "current_version": "v1",
+  "status": "candidate_complete_pending_client_review",
+  "client_decisions": [
+    "保留主标题—一句话卖点—三个功能—底部规格的信息结构",
+    "使用提供的陶土红香薰机、准确文案与 MORI 暖色体系",
+    "参考页花瓶、品牌名、图标和具体装饰全部删除",
+    "产品形状与颜色不得重画",
+    "v1 客户确认信息结构无问题，仅将背景纹理改为细颗粒陶土纸感",
+    "v1 的布局、产品与全部文字必须保持 v0 不变"
+  ],
+  "locked_items": [
+    {
+      "item": "product_identity",
+      "value": "inputs/02-product_reference.png direct-pixel cutout",
+      "lock": "shape_and_color"
+    },
+    {
+      "item": "approved_copy",
+      "value": ["让香气慢下来", "安静融入每个夜晚", "低噪运行", "定时关闭", "陶土触感", "USB-C", "6 h", "280 ml"],
+      "lock": "verbatim"
+    },
+    {
+      "item": "brand_system",
+      "value": "MORI warm ivory / terracotta / charcoal with restrained olive and pale-blue accents",
+      "lock": "palette_and_typography_rules"
+    },
+    {
+      "item": "v0_layout_geometry",
+      "value": "outputs/v0/design_document.json objects array",
+      "lock": "all_object_coordinates_dimensions_order_and_style"
+    }
+  ],
+  "changed_items": [
+    "参考相框式图像改为全幅暖陶土氛围主视觉",
+    "参考居中英文标题改为中文宋体不对称排版",
+    "参考圆形功能图标改为 01/02/03 纯文字卡",
+    "参考材料细节照片完全移除",
+    "参考表格式规格改为底部炭黑规格带",
+    "v1：仅将暖陶土扩散背景资产替换为均匀细颗粒陶土纸感；其他对象不变"
+  ],
+  "previous_versions": ["v0"],
+  "artifact_paths": {
+    "preview": "v1/preview.png",
+    "editable_object_graph": "v1/design_document.json",
+    "editable_vector": "v1/mori_aroma_poster_editable.svg",
+    "change_set": "v1/change_set.json",
+    "verification": "v1/verification.json",
+    "product_cutout": "v1/assets/product_cutout.png",
+    "generated_texture": "v1/assets/mori_fine_grain_clay_paper.png"
+  },
+  "unresolved_blockers": []
+}

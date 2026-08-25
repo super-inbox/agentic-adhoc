@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "project": "summer-form-channel-exports",
+  "version": "v0",
+  "verified_at": "2026-08-24T05:13:03+08:00",
+  "overall_status": "pass_for_four_valid_channels_with_one_recorded_blocker",
+  "reference_evidence": "inputs/01-approved_master.png",
+  "checks_performed": [
+    {
+      "check": "manifest_completeness",
+      "result": "pass",
+      "detail": "All five requested channels are present in outputs/v0/manifest.json, including the blocked website item.",
+      "evidence_paths": [
+        "outputs/v0/manifest.json"
+      ]
+    },
+    {
+      "check": "zero_height_guard",
+      "result": "pass",
+      "detail": "No 1440x0 file was created; website is explicitly blocked pending a positive height.",
+      "evidence_paths": [
+        "outputs/v0/manifest.json",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "check": "visual_identity_and_copy_review",
+      "result": "pass",
+      "detail": "Manual visual review confirmed the SUMMER FORM identity, navy/coral/cream palette, geometric grid, origami focal element, and the event copy SUMMER FORM / Design Market / 08—10 AUG / BROOKLYN in all four delivered files.",
+      "evidence_paths": [
+        "inputs/01-approved_master.png",
+        "outputs/v0/summer-form-xhs-1080x1440.png",
+        "outputs/v0/summer-form-story-1080x1920.png",
+        "outputs/v0/summer-form-email-600x200.png",
+        "outputs/v0/summer-form-led-4096x1024.png"
+      ]
+    },
+    {
+      "check": "delivery_archive_integrity",
+      "result": "pass",
+      "detail": "Archive test completed with no compressed-data errors and includes the four delivered PNGs plus manifest, verification, and prompt record.",
+      "evidence_paths": [
+        "outputs/v0/summer-form-channel-exports-v0.zip"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "channel": "小红书",
+      "path": "outputs/v0/summer-form-xhs-1080x1440.png",
+      "format": "png",
+      "pixel_width": 1080,
+      "pixel_height": 1440,
+      "bytes": 2201381,
+      "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0",
+      "dimension_check": "pass",
+      "nonzero_file_check": "pass",
+      "decode_check": "pass"
+    },
+    {
+      "channel": "Story",
+      "path": "outputs/v0/summer-form-story-1080x1920.png",
+      "format": "png",
+      "pixel_width": 1080,
+      "pixel_height": 1920,
+      "bytes": 2632932,
+      "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6",
+      "dimension_check": "pass",
+      "nonzero_file_check": "pass",
+      "decode_check": "pass"
+    },
+    {
+      "channel": "邮件",
+      "path": "outputs/v0/summer-form-email-600x200.png",
+      "format": "png",
+      "pixel_width": 600,
+      "pixel_height": 200,
+      "bytes": 161743,
+      "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada",
+      "dimension_check": "pass",
+      "nonzero_file_check": "pass",
+      "decode_check": "pass"
+    },
+    {
+      "channel": "LED",
+      "path": "outputs/v0/summer-form-led-4096x1024.png",
+      "format": "png",
+      "pixel_width": 4096,
+      "pixel_height": 1024,
+      "bytes": 4015508,
+      "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0",
+      "dimension_check": "pass",
+      "nonzero_file_check": "pass",
+      "decode_check": "pass"
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "channel": "官网",
+      "requested": "1440x0",
+      "reason": "Height must be greater than zero.",
+      "required_resolution": "Client must supply the intended positive pixel height. No height has been inferred."
+    }
+  ]
+}

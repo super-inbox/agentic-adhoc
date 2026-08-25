@@ -1,0 +1,30 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-24T00:24:06.341Z",
+  "finished_at": "2026-08-24T00:34:20.049Z",
+  "latency_ms": 613715,
+  "exit_code": 1,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 37,
+    "command_count": 12,
+    "tool_count": 1,
+    "image_activity_count": 0,
+    "runtime_error_count": 7,
+    "runtime_error_messages": [
+      "Reconnecting... 1/5 (stream disconnected before completion: Transport error: network error: error decoding response body)",
+      "Reconnecting... 2/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))",
+      "Reconnecting... 3/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))",
+      "Reconnecting... 4/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))",
+      "Reconnecting... 5/5 (stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses))",
+      "stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)",
+      "stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)"
+    ],
+    "thread_id": "01a03127-2df7-78f2-897f-fcfa6b655f0d",
+    "usage": null
+  },
+  "artifact_manifest_after_turn": []
+}

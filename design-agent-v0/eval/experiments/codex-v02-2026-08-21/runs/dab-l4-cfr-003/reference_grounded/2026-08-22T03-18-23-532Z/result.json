@@ -1,0 +1,884 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-CFR-003@reference_grounded",
+  "base_brief_id": "DAB-L4-CFR-003",
+  "context_condition": "reference_grounded",
+  "category": "client_feedback_revision",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_reference_binding",
+    "multi_turn_revision",
+    "state_recovery",
+    "structured_editing"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": false,
+  "run_role": "smoke_recovery_audit",
+  "started_at": "2026-08-22T03:18:23.544Z",
+  "finished_at": "2026-08-23T00:02:21.416Z",
+  "latency_ms": 1864284.2680664062,
+  "intended_turns": 4,
+  "completed_turns": 4,
+  "logical_sessions": [
+    "session-01",
+    "session-02"
+  ],
+  "codex_thread_id": "01a0277a-07e2-7af1-8e40-69c5c5091efa",
+  "input_assets": [
+    {
+      "input_id": "layout-a",
+      "asset_id": "detail-page-quiet-ritual-reference-page",
+      "role": "composition_reference_a",
+      "reference_role": "layout_reference",
+      "identity_policy": "abstract_only",
+      "filename": "01-composition_reference_a.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/quiet-ritual-reference-page.png",
+      "byte_size": 815623,
+      "sha256": "f941e16e01835e825f6b0a2b4d65e5d021329ae6e223b451c307998ec5a97af2"
+    },
+    {
+      "input_id": "palette-b",
+      "asset_id": "sku-system-mori-brand-board",
+      "role": "palette_reference_b",
+      "reference_role": "brand_system",
+      "identity_policy": "preserve_rules",
+      "filename": "02-palette_reference_b.png",
+      "source_path": "eval/assets/reference-pack-v0.2/sku-system/mori-brand-board.png",
+      "byte_size": 592086,
+      "sha256": "3d1f9c3a73456539053c79ed6f6d5322db6acbce60bc416ae42c1b8a6a3e7a53"
+    },
+    {
+      "input_id": "product",
+      "asset_id": "detail-page-terra-diffuser-product",
+      "role": "product_reference",
+      "reference_role": "product_identity",
+      "identity_policy": "preserve_exact",
+      "filename": "03-product_reference.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/terra-diffuser-product.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    }
+  ],
+  "input_context_ids": [
+    "layout-a",
+    "palette-b",
+    "product",
+    "copy"
+  ],
+  "required_candidate_artifacts": [
+    "preview.png",
+    "design_document.json",
+    "change_set.json",
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "preview.png": true,
+    "design_document.json": true,
+    "change_set.json": true,
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 4823,
+      "sha256": "e40f07b13f81708ba1b284f3685ac4d0ed0339f0e4b1546433fb73d4f0957bdd"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 3653,
+      "sha256": "d303586d39f0333835cd109a455402b18b9f9ba44636077cdaedc294d6800978"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 9499,
+      "sha256": "a6c19467c214d555024cfb6512df09afa63309ad8ce4f1df3087eec1569854c4"
+    },
+    {
+      "filename": "v0/generated_warm_paper.png",
+      "byte_size": 2083558,
+      "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+    },
+    {
+      "filename": "v0/generation_prompt.txt",
+      "byte_size": 1838,
+      "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 1571977,
+      "sha256": "9d8fb3597d8bad1f1184b8dc9b3724bfae771e4affd4d9fd0b6123f47ebacc86"
+    },
+    {
+      "filename": "v0/product_source_exact.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v0/render_design.py",
+      "byte_size": 7520,
+      "sha256": "7f7e088fa88fc3104c7deb53c8d372f2ed3daa4633ad428efe45112d5a8f6e69"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 6702,
+      "sha256": "444eade9d1e39c50bcc7b17684e08b6c44c1ecf4925cb5500f55b44befa18cba"
+    },
+    {
+      "filename": "v1/change_set.json",
+      "byte_size": 1805,
+      "sha256": "3fec1de254dbfa20aaf2caec53b8baa56c409fed8a66d2d0bbb8998b7a2959d2"
+    },
+    {
+      "filename": "v1/design_document.json",
+      "byte_size": 10036,
+      "sha256": "dc5958ed69500033f7d444db84e84e242f2fbfdf8e4d871b06c6d68996b8479a"
+    },
+    {
+      "filename": "v1/generated_warm_paper.png",
+      "byte_size": 2083558,
+      "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+    },
+    {
+      "filename": "v1/generation_prompt.txt",
+      "byte_size": 1838,
+      "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+    },
+    {
+      "filename": "v1/preview.png",
+      "byte_size": 1573042,
+      "sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44"
+    },
+    {
+      "filename": "v1/product_source_exact.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v1/render_design.py",
+      "byte_size": 7522,
+      "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 8857,
+      "sha256": "1f2bc5f823ec82d669f9f607479a886f7943d57cfb56379b3ef3847ee9d27786"
+    },
+    {
+      "filename": "v2/change_set.json",
+      "byte_size": 2356,
+      "sha256": "5c1af99b569f27ee618239ec3f911ded7c42d0c0fba2f5c76025fdd945008b9e"
+    },
+    {
+      "filename": "v2/design_document.json",
+      "byte_size": 10478,
+      "sha256": "08bd061661cacacef86357f6cb9e4e1b43e86faf25665b6b1ded51b22ea10e7f"
+    },
+    {
+      "filename": "v2/generated_warm_paper.png",
+      "byte_size": 2083558,
+      "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+    },
+    {
+      "filename": "v2/generation_prompt.txt",
+      "byte_size": 1838,
+      "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+    },
+    {
+      "filename": "v2/preview.png",
+      "byte_size": 1573262,
+      "sha256": "7916b9d726421043d95206df5d797d41eb11e59e8e2f6ac29fe772e785527d3d"
+    },
+    {
+      "filename": "v2/product_source_exact.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v2/render_design.py",
+      "byte_size": 7522,
+      "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+    },
+    {
+      "filename": "v2/verification.json",
+      "byte_size": 9810,
+      "sha256": "093418a9548f37bdefd3de264251277f1875b70f2100fd4a0ebd9afe62acaa3a"
+    },
+    {
+      "filename": "v3/change_set.json",
+      "byte_size": 2621,
+      "sha256": "e25e1aa1624b46bad755c670689c4605e9bd46ab86d0098ca88f89583d21ba1b"
+    },
+    {
+      "filename": "v3/design_document.json",
+      "byte_size": 10806,
+      "sha256": "f7aa3056f7d87aa3253a65497bf35ce50776aeed50d98f44edb4394789036d47"
+    },
+    {
+      "filename": "v3/generated_warm_paper.png",
+      "byte_size": 2083558,
+      "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+    },
+    {
+      "filename": "v3/generation_prompt.txt",
+      "byte_size": 1838,
+      "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+    },
+    {
+      "filename": "v3/preview.png",
+      "byte_size": 1573042,
+      "sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44"
+    },
+    {
+      "filename": "v3/product_source_exact.png",
+      "byte_size": 521294,
+      "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+    },
+    {
+      "filename": "v3/render_design.py",
+      "byte_size": 7522,
+      "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+    },
+    {
+      "filename": "v3/verification.json",
+      "byte_size": 10015,
+      "sha256": "b98105aac7cea1533bd343fc38b0efd98ab794eee703056504106596b7432b8d"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-22T03:18:23.544Z",
+      "finished_at": "2026-08-22T03:27:32.512Z",
+      "latency_ms": 549016,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 48,
+        "command_count": 17,
+        "tool_count": 3,
+        "image_activity_count": 3,
+        "thread_id": "01a0277a-07e2-7af1-8e40-69c5c5091efa",
+        "usage": {
+          "input_tokens": 1110082,
+          "cached_input_tokens": 1042432,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 25821,
+          "reasoning_output_tokens": 9215
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 2250,
+          "sha256": "d76bdafdfe71ccc9720006d4057b4292033c580c9fab78d32bed833a83a4dec8"
+        },
+        {
+          "filename": "v0/change_set.json",
+          "byte_size": 3653,
+          "sha256": "d303586d39f0333835cd109a455402b18b9f9ba44636077cdaedc294d6800978"
+        },
+        {
+          "filename": "v0/design_document.json",
+          "byte_size": 9499,
+          "sha256": "a6c19467c214d555024cfb6512df09afa63309ad8ce4f1df3087eec1569854c4"
+        },
+        {
+          "filename": "v0/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v0/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 1571977,
+          "sha256": "9d8fb3597d8bad1f1184b8dc9b3724bfae771e4affd4d9fd0b6123f47ebacc86"
+        },
+        {
+          "filename": "v0/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v0/render_design.py",
+          "byte_size": 7520,
+          "sha256": "7f7e088fa88fc3104c7deb53c8d372f2ed3daa4633ad428efe45112d5a8f6e69"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 6702,
+          "sha256": "444eade9d1e39c50bcc7b17684e08b6c44c1ecf4925cb5500f55b44befa18cba"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-22T03:27:32.561Z",
+      "finished_at": "2026-08-22T03:32:11.552Z",
+      "latency_ms": 279020,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 22,
+        "command_count": 6,
+        "tool_count": 2,
+        "image_activity_count": 0,
+        "thread_id": "01a0277a-07e2-7af1-8e40-69c5c5091efa",
+        "usage": {
+          "input_tokens": 1863716,
+          "cached_input_tokens": 1768192,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 39391,
+          "reasoning_output_tokens": 14006
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 3385,
+          "sha256": "5b2e12a2b641df298466172d4a7a07ea2b5f7b9b0ee80e4215f2837a2741589a"
+        },
+        {
+          "filename": "v0/change_set.json",
+          "byte_size": 3653,
+          "sha256": "d303586d39f0333835cd109a455402b18b9f9ba44636077cdaedc294d6800978"
+        },
+        {
+          "filename": "v0/design_document.json",
+          "byte_size": 9499,
+          "sha256": "a6c19467c214d555024cfb6512df09afa63309ad8ce4f1df3087eec1569854c4"
+        },
+        {
+          "filename": "v0/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v0/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 1571977,
+          "sha256": "9d8fb3597d8bad1f1184b8dc9b3724bfae771e4affd4d9fd0b6123f47ebacc86"
+        },
+        {
+          "filename": "v0/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v0/render_design.py",
+          "byte_size": 7520,
+          "sha256": "7f7e088fa88fc3104c7deb53c8d372f2ed3daa4633ad428efe45112d5a8f6e69"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 6702,
+          "sha256": "444eade9d1e39c50bcc7b17684e08b6c44c1ecf4925cb5500f55b44befa18cba"
+        },
+        {
+          "filename": "v1/change_set.json",
+          "byte_size": 1805,
+          "sha256": "3fec1de254dbfa20aaf2caec53b8baa56c409fed8a66d2d0bbb8998b7a2959d2"
+        },
+        {
+          "filename": "v1/design_document.json",
+          "byte_size": 10036,
+          "sha256": "dc5958ed69500033f7d444db84e84e242f2fbfdf8e4d871b06c6d68996b8479a"
+        },
+        {
+          "filename": "v1/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v1/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v1/preview.png",
+          "byte_size": 1573042,
+          "sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44"
+        },
+        {
+          "filename": "v1/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v1/render_design.py",
+          "byte_size": 7522,
+          "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 8857,
+          "sha256": "1f2bc5f823ec82d669f9f607479a886f7943d57cfb56379b3ef3847ee9d27786"
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-22T03:32:11.582Z",
+      "finished_at": "2026-08-22T23:52:10.305Z",
+      "latency_ms": 518025.2194824219,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 34,
+        "command_count": 8,
+        "tool_count": 3,
+        "image_activity_count": 0,
+        "runtime_error_count": 4,
+        "thread_id": "01a0277a-07e2-7af1-8e40-69c5c5091efa",
+        "usage": {
+          "input_tokens": 3046922,
+          "cached_input_tokens": 2838400,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 53979,
+          "reasoning_output_tokens": 17630
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 4823,
+          "sha256": "e40f07b13f81708ba1b284f3685ac4d0ed0339f0e4b1546433fb73d4f0957bdd"
+        },
+        {
+          "filename": "v0/change_set.json",
+          "byte_size": 3653,
+          "sha256": "d303586d39f0333835cd109a455402b18b9f9ba44636077cdaedc294d6800978"
+        },
+        {
+          "filename": "v0/design_document.json",
+          "byte_size": 9499,
+          "sha256": "a6c19467c214d555024cfb6512df09afa63309ad8ce4f1df3087eec1569854c4"
+        },
+        {
+          "filename": "v0/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v0/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 1571977,
+          "sha256": "9d8fb3597d8bad1f1184b8dc9b3724bfae771e4affd4d9fd0b6123f47ebacc86"
+        },
+        {
+          "filename": "v0/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v0/render_design.py",
+          "byte_size": 7520,
+          "sha256": "7f7e088fa88fc3104c7deb53c8d372f2ed3daa4633ad428efe45112d5a8f6e69"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 6702,
+          "sha256": "444eade9d1e39c50bcc7b17684e08b6c44c1ecf4925cb5500f55b44befa18cba"
+        },
+        {
+          "filename": "v1/change_set.json",
+          "byte_size": 1805,
+          "sha256": "3fec1de254dbfa20aaf2caec53b8baa56c409fed8a66d2d0bbb8998b7a2959d2"
+        },
+        {
+          "filename": "v1/design_document.json",
+          "byte_size": 10036,
+          "sha256": "dc5958ed69500033f7d444db84e84e242f2fbfdf8e4d871b06c6d68996b8479a"
+        },
+        {
+          "filename": "v1/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v1/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v1/preview.png",
+          "byte_size": 1573042,
+          "sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44"
+        },
+        {
+          "filename": "v1/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v1/render_design.py",
+          "byte_size": 7522,
+          "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 8857,
+          "sha256": "1f2bc5f823ec82d669f9f607479a886f7943d57cfb56379b3ef3847ee9d27786"
+        },
+        {
+          "filename": "v2/change_set.json",
+          "byte_size": 2356,
+          "sha256": "5c1af99b569f27ee618239ec3f911ded7c42d0c0fba2f5c76025fdd945008b9e"
+        },
+        {
+          "filename": "v2/design_document.json",
+          "byte_size": 10478,
+          "sha256": "08bd061661cacacef86357f6cb9e4e1b43e86faf25665b6b1ded51b22ea10e7f"
+        },
+        {
+          "filename": "v2/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v2/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v2/preview.png",
+          "byte_size": 1573262,
+          "sha256": "7916b9d726421043d95206df5d797d41eb11e59e8e2f6ac29fe772e785527d3d"
+        },
+        {
+          "filename": "v2/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v2/render_design.py",
+          "byte_size": 7522,
+          "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+        },
+        {
+          "filename": "v2/verification.json",
+          "byte_size": 9810,
+          "sha256": "093418a9548f37bdefd3de264251277f1875b70f2100fd4a0ebd9afe62acaa3a"
+        }
+      ],
+      "artifact_manifest_source": "reconstructed_after_operational_recovery",
+      "operational_attempts": [
+        {
+          "attempt": 1,
+          "raw_trace_file": "turn-02.raw.jsonl",
+          "completed": false,
+          "started_at": "2026-08-22T03:32:11.582Z",
+          "finished_at": "2026-08-22T03:33:10.125Z",
+          "latency_ms": 58542.87109375,
+          "trace_summary": {
+            "event_count": 9,
+            "command_count": 3,
+            "tool_count": 0,
+            "image_activity_count": 0,
+            "runtime_error_count": 0,
+            "thread_id": "01a0277a-07e2-7af1-8e40-69c5c5091efa",
+            "usage": null,
+            "completed": false
+          },
+          "final_response_file": "turn-02.final-response.txt",
+          "stderr_file": "turn-02.stderr.log"
+        },
+        {
+          "attempt": 2,
+          "raw_trace_file": "turn-02-retry-01.raw.jsonl",
+          "completed": true,
+          "started_at": "2026-08-22T23:44:30.823Z",
+          "finished_at": "2026-08-22T23:52:10.305Z",
+          "latency_ms": 459482.3483886719,
+          "trace_summary": {
+            "event_count": 25,
+            "command_count": 5,
+            "tool_count": 3,
+            "image_activity_count": 0,
+            "runtime_error_count": 4,
+            "thread_id": "01a0277a-07e2-7af1-8e40-69c5c5091efa",
+            "usage": {
+              "input_tokens": 3046922,
+              "cached_input_tokens": 2838400,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 53979,
+              "reasoning_output_tokens": 17630
+            },
+            "completed": true
+          },
+          "final_response_file": "turn-02-retry-01.final-response.txt",
+          "stderr_file": "turn-02-retry-01.stderr.log"
+        }
+      ]
+    },
+    {
+      "turn_index": 3,
+      "logical_session_id": "session-02",
+      "started_at": "2026-08-22T23:53:43.193Z",
+      "finished_at": "2026-08-23T00:02:21.416Z",
+      "latency_ms": 518223.0485839844,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 31,
+        "command_count": 7,
+        "tool_count": 4,
+        "image_activity_count": 0,
+        "runtime_error_count": 4,
+        "thread_id": "01a0277a-07e2-7af1-8e40-69c5c5091efa",
+        "usage": {
+          "input_tokens": 4525102,
+          "cached_input_tokens": 4285312,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 68077,
+          "reasoning_output_tokens": 19598
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 4823,
+          "sha256": "e40f07b13f81708ba1b284f3685ac4d0ed0339f0e4b1546433fb73d4f0957bdd"
+        },
+        {
+          "filename": "v0/change_set.json",
+          "byte_size": 3653,
+          "sha256": "d303586d39f0333835cd109a455402b18b9f9ba44636077cdaedc294d6800978"
+        },
+        {
+          "filename": "v0/design_document.json",
+          "byte_size": 9499,
+          "sha256": "a6c19467c214d555024cfb6512df09afa63309ad8ce4f1df3087eec1569854c4"
+        },
+        {
+          "filename": "v0/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v0/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 1571977,
+          "sha256": "9d8fb3597d8bad1f1184b8dc9b3724bfae771e4affd4d9fd0b6123f47ebacc86"
+        },
+        {
+          "filename": "v0/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v0/render_design.py",
+          "byte_size": 7520,
+          "sha256": "7f7e088fa88fc3104c7deb53c8d372f2ed3daa4633ad428efe45112d5a8f6e69"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 6702,
+          "sha256": "444eade9d1e39c50bcc7b17684e08b6c44c1ecf4925cb5500f55b44befa18cba"
+        },
+        {
+          "filename": "v1/change_set.json",
+          "byte_size": 1805,
+          "sha256": "3fec1de254dbfa20aaf2caec53b8baa56c409fed8a66d2d0bbb8998b7a2959d2"
+        },
+        {
+          "filename": "v1/design_document.json",
+          "byte_size": 10036,
+          "sha256": "dc5958ed69500033f7d444db84e84e242f2fbfdf8e4d871b06c6d68996b8479a"
+        },
+        {
+          "filename": "v1/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v1/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v1/preview.png",
+          "byte_size": 1573042,
+          "sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44"
+        },
+        {
+          "filename": "v1/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v1/render_design.py",
+          "byte_size": 7522,
+          "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 8857,
+          "sha256": "1f2bc5f823ec82d669f9f607479a886f7943d57cfb56379b3ef3847ee9d27786"
+        },
+        {
+          "filename": "v2/change_set.json",
+          "byte_size": 2356,
+          "sha256": "5c1af99b569f27ee618239ec3f911ded7c42d0c0fba2f5c76025fdd945008b9e"
+        },
+        {
+          "filename": "v2/design_document.json",
+          "byte_size": 10478,
+          "sha256": "08bd061661cacacef86357f6cb9e4e1b43e86faf25665b6b1ded51b22ea10e7f"
+        },
+        {
+          "filename": "v2/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v2/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v2/preview.png",
+          "byte_size": 1573262,
+          "sha256": "7916b9d726421043d95206df5d797d41eb11e59e8e2f6ac29fe772e785527d3d"
+        },
+        {
+          "filename": "v2/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v2/render_design.py",
+          "byte_size": 7522,
+          "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+        },
+        {
+          "filename": "v2/verification.json",
+          "byte_size": 9810,
+          "sha256": "093418a9548f37bdefd3de264251277f1875b70f2100fd4a0ebd9afe62acaa3a"
+        },
+        {
+          "filename": "v3/change_set.json",
+          "byte_size": 2621,
+          "sha256": "e25e1aa1624b46bad755c670689c4605e9bd46ab86d0098ca88f89583d21ba1b"
+        },
+        {
+          "filename": "v3/design_document.json",
+          "byte_size": 10806,
+          "sha256": "f7aa3056f7d87aa3253a65497bf35ce50776aeed50d98f44edb4394789036d47"
+        },
+        {
+          "filename": "v3/generated_warm_paper.png",
+          "byte_size": 2083558,
+          "sha256": "214c047eda3c524e4dcc76335b02dd87827ae1aafc5eaa956a7c2b47eda06b99"
+        },
+        {
+          "filename": "v3/generation_prompt.txt",
+          "byte_size": 1838,
+          "sha256": "faebb9a145610f9da33f7d8f39ac02b141452936a1402d6d4b51c5d2209bcd6c"
+        },
+        {
+          "filename": "v3/preview.png",
+          "byte_size": 1573042,
+          "sha256": "0e7f625690311be5bea6dcfc496257456ff7949ff0043b7e293e1aab61598f44"
+        },
+        {
+          "filename": "v3/product_source_exact.png",
+          "byte_size": 521294,
+          "sha256": "241716aa68e28a113150907d6a0c9b024f2febb7a948b3d01c55959fc032c9f0"
+        },
+        {
+          "filename": "v3/render_design.py",
+          "byte_size": 7522,
+          "sha256": "639642a61a5f6f1dd486f28634c60cd08a0f861a1999ccaf1aaddcf8a49e0876"
+        },
+        {
+          "filename": "v3/verification.json",
+          "byte_size": 10015,
+          "sha256": "b98105aac7cea1533bd343fc38b0efd98ab794eee703056504106596b7432b8d"
+        }
+      ],
+      "artifact_manifest_source": "reconstructed_after_operational_recovery",
+      "operational_attempts": [
+        {
+          "attempt": 1,
+          "raw_trace_file": "turn-03.raw.jsonl",
+          "completed": true,
+          "started_at": "2026-08-22T23:53:43.193Z",
+          "finished_at": "2026-08-23T00:02:21.416Z",
+          "latency_ms": 518223.0485839844,
+          "trace_summary": {
+            "event_count": 31,
+            "command_count": 7,
+            "tool_count": 4,
+            "image_activity_count": 0,
+            "runtime_error_count": 4,
+            "thread_id": "01a0277a-07e2-7af1-8e40-69c5c5091efa",
+            "usage": {
+              "input_tokens": 4525102,
+              "cached_input_tokens": 4285312,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 68077,
+              "reasoning_output_tokens": 19598
+            },
+            "completed": true
+          },
+          "final_response_file": "turn-03.final-response.txt",
+          "stderr_file": "turn-03.stderr.log"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 10545822,
+    "cached_input_tokens": 9934336,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 187268,
+    "reasoning_output_tokens": 60449
+  },
+  "operational_recovery": {
+    "from_turn": 2,
+    "counted_client_turns": 4,
+    "extra_client_feedback_turns": 0,
+    "retry_added_design_requirements": false,
+    "note": "Interrupted execution attempts are retained and labeled; only completed attempts satisfy a benchmark turn."
+  },
+  "outcome": "completed"
+}

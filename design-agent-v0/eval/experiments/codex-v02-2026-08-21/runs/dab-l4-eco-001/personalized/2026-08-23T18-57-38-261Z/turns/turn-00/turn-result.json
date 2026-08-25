@@ -1,0 +1,69 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T18:57:38.268Z",
+  "finished_at": "2026-08-23T19:10:34.620Z",
+  "latency_ms": 776369,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 48,
+    "command_count": 15,
+    "tool_count": 4,
+    "image_activity_count": 6,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02ffc-4a08-7832-9936-97e1c76a5dc3",
+    "usage": {
+      "input_tokens": 1185766,
+      "cached_input_tokens": 1108992,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 28498,
+      "reasoning_output_tokens": 11820
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 4103,
+      "sha256": "63f98827951b57483684ee1f46a5e01f4c4546fc57458c1cb07a606d173a2a3a"
+    },
+    {
+      "filename": "v0/creative-territories-overview-v0.png",
+      "byte_size": 3105840,
+      "sha256": "bae54a9b17fb8e22bb0944bfdd6a833aae87691b9b2f4de10ae2e2520b29c4ea"
+    },
+    {
+      "filename": "v0/creative-territories-v0.md",
+      "byte_size": 5611,
+      "sha256": "70f842e8e5209c5808263712bed74fbdf68117cf1c93d0c767ae9d70084c0547"
+    },
+    {
+      "filename": "v0/generation-prompts-v0.md",
+      "byte_size": 6173,
+      "sha256": "60382949ec9c752db7a405c7a0994dd75be29d0d84cc5719815386034326a04e"
+    },
+    {
+      "filename": "v0/moodboards/territory-a-urban-pause-v0.png",
+      "byte_size": 2190042,
+      "sha256": "c0564ef8328fe5c3a41734825515399e22eaf7ec651dedaba1e8e5b849834c3c"
+    },
+    {
+      "filename": "v0/moodboards/territory-b-after-rain-v0.png",
+      "byte_size": 2817036,
+      "sha256": "196b6429874929fd2a54d999c674fcdbe6b844c34bf20a1473593aad97193dd9"
+    },
+    {
+      "filename": "v0/moodboards/territory-c-carry-ritual-v0.png",
+      "byte_size": 2147772,
+      "sha256": "6f3341062ba559d69a3720fe5b80a00c6300e48da3f091ed969a0b32844758c7"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5784,
+      "sha256": "bf126c94e5a56ef41f1c033235e0f31e9a09dc1d8af5bcba2155fa07db23f9ae"
+    }
+  ]
+}

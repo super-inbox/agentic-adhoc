@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "project_id": "aroma-diffuser-detail-hero",
+  "current_version": "v3",
+  "status": "client_order_reversion_applied_pending_review",
+  "client_decisions": [
+    {
+      "decision_id": "direction.layout",
+      "value": "Use A's product-composition and information-rhythm principles only.",
+      "status": "approved_and_locked"
+    },
+    {
+      "decision_id": "direction.palette",
+      "value": "Use B's warmer palette system.",
+      "status": "approved_and_locked"
+    },
+    {
+      "decision_id": "copy.headline",
+      "value": "让香气慢下来。",
+      "status": "approved_and_locked"
+    },
+    {
+      "decision_id": "copy.features",
+      "value": [
+        "低噪运行",
+        "定时关闭",
+        "陶土触感"
+      ],
+      "status": "approved_copy_with_v3_display_order"
+    },
+    {
+      "decision_id": "product.identity",
+      "value": "Preserve the supplied product's shape and color exactly.",
+      "status": "approved_and_locked"
+    },
+    {
+      "decision_id": "v1.low_noise_spelling",
+      "value": "低噪运行",
+      "status": "client_confirmed_fixed_and_preserved_in_v3"
+    },
+    {
+      "decision_id": "v1.third_feature_position",
+      "value": {
+        "object_id": "feature.clay_touch",
+        "y": 998,
+        "delta_from_v0_y": -12,
+        "unit": "px"
+      },
+      "status": "client_requested_preserved_in_v3"
+    },
+    {
+      "decision_id": "v2.feature_order",
+      "value": [
+        "低噪运行",
+        "陶土触感",
+        "定时关闭"
+      ],
+      "status": "superseded_by_v3_request"
+    },
+    {
+      "decision_id": "v3.feature_order",
+      "value": [
+        "低噪运行",
+        "定时关闭",
+        "陶土触感"
+      ],
+      "implementation": "Restore the v1 order by horizontally translating the complete timer and clay-touch objects; retain their v2 content and vertical positions.",
+      "status": "implemented_pending_visual_confirmation"
+    },
+    {
+      "decision_id": "v3.no_full_regeneration",
+      "value": "Object-graph edit and deterministic rerender only.",
+      "status": "implemented_and_verified"
+    },
+    {
+      "decision_id": "v3.preserve_unrelated",
+      "value": [
+        "product",
+        "main headline",
+        "background",
+        "font sizes"
+      ],
+      "status": "implemented_and_verified"
+    }
+  ],
+  "locked_items": [
+    "design_document.approved_copy.text_values",
+    "feature.low_noise.label",
+    "feature.clay_touch.y",
+    "layout.overall_composition_except_v3_feature_order",
+    "tokens.colors",
+    "tokens.typography.headline.size",
+    "tokens.typography.feature_label.size",
+    "background.paper",
+    "background.veil",
+    "product.photo.source_pixels",
+    "product.photo.shape",
+    "product.photo.color",
+    "product.photo.orientation",
+    "headline.text",
+    "headline.typography",
+    "headline.bbox"
+  ],
+  "changed_items": [
+    {
+      "version": "v0",
+      "change_set": "v0/change_set.json",
+      "summary": "Created the first candidate from the approved direction and copy."
+    },
+    {
+      "version": "v1",
+      "change_set": "v1/change_set.json",
+      "summary": "Reasserted '低噪运行' and moved only the clay-touch selling point upward by 12 px."
+    },
+    {
+      "version": "v2",
+      "change_set": "v2/change_set.json",
+      "summary": "Swapped only the second and third selling-point objects."
+    },
+    {
+      "version": "v3",
+      "change_set": "v3/change_set.json",
+      "summary": "Restored the v1 selling-point order while preserving the corrected spelling, raised clay-touch position, and all unrelated v2 properties; no full-image regeneration."
+    }
+  ],
+  "pending_client_decisions": [
+    "Confirm the v3 restored selling-point order."
+  ],
+  "artifact_paths": {
+    "preview": "v3/preview.png",
+    "editable_object_graph": "v3/design_document.json",
+    "object_change_set": "v3/change_set.json",
+    "verification": "v3/verification.json",
+    "renderer": "v3/render_design.py",
+    "generation_prompt": "v3/generation_prompt.txt",
+    "generated_background": "v3/generated_warm_paper.png",
+    "exact_product_source_copy": "v3/product_source_exact.png"
+  },
+  "version_history": [
+    {
+      "version": "v0",
+      "state": "composition_and_color_approved_with_text_and_position_delta_requested",
+      "artifacts_directory": "v0"
+    },
+    {
+      "version": "v1",
+      "state": "reference_order_reused_by_v3",
+      "artifacts_directory": "v1"
+    },
+    {
+      "version": "v2",
+      "state": "feature_order_superseded_by_v3_request",
+      "artifacts_directory": "v2"
+    },
+    {
+      "version": "v3",
+      "state": "client_order_reversion_applied_pending_review",
+      "artifacts_directory": "v3"
+    }
+  ],
+  "next_checkpoint": "client_review_v3_order_reversion"
+}

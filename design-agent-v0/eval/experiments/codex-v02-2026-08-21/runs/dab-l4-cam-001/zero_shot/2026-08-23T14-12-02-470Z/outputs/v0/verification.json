@@ -1,0 +1,107 @@
+{
+  "version": "v0",
+  "artifact_scope": "Internal KV hypothesis exploration only",
+  "checks_performed": [
+    {
+      "id": "candidate_count_and_clustering",
+      "status": "pass",
+      "result": "9 candidates grouped evenly across 3 directions (A, B, C).",
+      "evidence_paths": [
+        "outputs/v0/kv-hypotheses-selection-board.png",
+        "outputs/v0/candidate-metadata.json",
+        "outputs/v0/qa-evidence.json"
+      ]
+    },
+    {
+      "id": "approved_copy_only",
+      "status": "pass",
+      "result": "Candidate artwork is deterministically typeset from only the approved English and Chinese lines. Internal selection-board labels are outside the consumer-facing KV frames.",
+      "evidence_paths": [
+        "outputs/v0/build_kv_hypotheses.py",
+        "outputs/v0/candidate-metadata.json",
+        "outputs/v0/candidates"
+      ]
+    },
+    {
+      "id": "product_identity_preservation",
+      "status": "pass",
+      "result": "For every candidate, the complete product-photo region pixel-matches a uniform resize of the supplied source. No retouching, recoloring, warping, label edit, or overlay was applied inside the photo region.",
+      "evidence_paths": [
+        "inputs/01-launch_product.png",
+        "outputs/v0/qa-evidence.json",
+        "outputs/v0/verify_kv.py"
+      ]
+    },
+    {
+      "id": "copy_product_overlap",
+      "status": "pass",
+      "result": "No copy box intersects a product-photo box in any of the 9 candidates.",
+      "evidence_paths": [
+        "outputs/v0/qa-evidence.json",
+        "outputs/v0/candidate-metadata.json"
+      ]
+    },
+    {
+      "id": "palette_and_tone",
+      "status": "pass",
+      "result": "Visual QA confirms warm off-white, muted terracotta, and charcoal dominate all directions; treatment is quiet, tactile, and nocturnal without blue/neon sleep-ad tropes.",
+      "evidence_paths": [
+        "outputs/v0/kv-hypotheses-selection-board.png",
+        "outputs/v0/sources",
+        "outputs/v0/build_kv_hypotheses.py"
+      ]
+    },
+    {
+      "id": "medical_claim_avoidance",
+      "status": "pass",
+      "result": "No treatment, insomnia-improvement, efficacy, pill, clinical, or therapeutic imagery/copy appears in the candidate KVs. Background prompts explicitly excluded medical and sleep-claim symbolism.",
+      "evidence_paths": [
+        "outputs/v0/imagegen-prompts.md",
+        "outputs/v0/kv-hypotheses-selection-board.png"
+      ]
+    },
+    {
+      "id": "logo_clearspace",
+      "status": "pass_with_blocker",
+      "result": "All candidates reserve a clear Logo zone that is free of product and copy; the exact Logo itself cannot be placed because no Logo asset was supplied.",
+      "evidence_paths": [
+        "outputs/v0/candidate-metadata.json",
+        "outputs/v0/qa-evidence.json"
+      ]
+    },
+    {
+      "id": "workflow_gate",
+      "status": "pass",
+      "result": "No website hero, Instagram vertical, or email-header extensions were produced before internal KV selection.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v0"
+      ]
+    },
+    {
+      "id": "visual_qa",
+      "status": "pass",
+      "result": "Selection board inspected at original resolution: all 9 frames are present, product is unobscured, typography is readable, and directions are visually distinct.",
+      "evidence_paths": [
+        "outputs/v0/kv-hypotheses-selection-board.png",
+        "outputs/v0/previews/kv-hypotheses-selection-board-preview.jpg"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "internal_kv_selection",
+      "blocking_next_stage": true,
+      "detail": "An internal selection of one code (A1–C3) is required before channel adaptations."
+    },
+    {
+      "id": "logo_asset_missing",
+      "blocking_next_stage": true,
+      "detail": "Provide the existing Logo in SVG, PDF, or transparent PNG so it can be reused exactly."
+    }
+  ],
+  "automated_qa": {
+    "status": "pass",
+    "evidence": "outputs/v0/qa-evidence.json"
+  }
+}

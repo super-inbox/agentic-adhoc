@@ -1,0 +1,119 @@
+{
+  "project": "MORI night fragrance launch",
+  "current_version": "v1",
+  "workflow_stage": "kv_variant_selection",
+  "status": "awaiting_c_variant_selection",
+  "client_decisions": {
+    "approved_copy": [
+      "Quiet hours, made tangible.",
+      "让夜晚慢下来。"
+    ],
+    "hard_constraints": [
+      "Use the MORI logo",
+      "Use warm off-white and terracotta red",
+      "Select the KV before channel extensions",
+      "Use only approved consumer-facing copy",
+      "Do not change the bottle shape or label"
+    ],
+    "must_avoid": [
+      "Medical or therapeutic efficacy implications",
+      "Insomnia-improvement claims",
+      "Floating product",
+      "Strong neon lighting"
+    ],
+    "soft_preferences": [
+      "Quiet",
+      "Tactile",
+      "Nighttime ritual",
+      "Real contact surface",
+      "Soft side lighting",
+      "Low-stimulation nighttime atmosphere"
+    ],
+    "selected_territory": {
+      "id": "C",
+      "name": "Night Landing",
+      "decision_source": "Client feedback: 选偏暗的方向",
+      "status": "approved"
+    },
+    "requested_delta_v1": [
+      "Preserve the nighttime atmosphere",
+      "Increase real tabletop contact",
+      "Use a softer side light",
+      "Remove the floating-product impression"
+    ]
+  },
+  "locked_items": [
+    {
+      "item": "brand_rules",
+      "source": "inputs/01-brand_guideline.png",
+      "policy": "preserve_rules",
+      "status": "locked"
+    },
+    {
+      "item": "product_identity",
+      "source": "inputs/02-launch_product.png",
+      "policy": "preserve_exact",
+      "status": "locked"
+    },
+    {
+      "item": "consumer_copy",
+      "value": [
+        "Quiet hours, made tangible.",
+        "让夜晚慢下来。"
+      ],
+      "status": "locked"
+    },
+    {
+      "item": "creative_territory",
+      "value": "Territory C — Night Landing",
+      "status": "locked"
+    }
+  ],
+  "changed_items": [
+    {
+      "item": "territory_selection",
+      "change": "Locked Territory C — Night Landing from client feedback."
+    },
+    {
+      "item": "product_grounding",
+      "change": "Removed floating photo frames from C1–C3 and extended the exact product-photo tabletop to a canvas edge."
+    },
+    {
+      "item": "side_light",
+      "change": "Softened the selected territory's side light into a broader, lower-contrast wash."
+    }
+  ],
+  "pending_decisions": [
+    {
+      "id": "kv_selection",
+      "prompt": "Choose one revised KV within Territory C.",
+      "options": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    }
+  ],
+  "deferred_work": [
+    "Website hero",
+    "Instagram portrait",
+    "Email header"
+  ],
+  "artifact_paths": {
+    "review_board_png": "outputs/v1/mori-night-landing-refinement-v1.png",
+    "editable_svg": "outputs/v1/mori-night-landing-refinement-v1.svg",
+    "self_contained_svg": "outputs/v1/mori-night-landing-refinement-v1-self-contained.svg",
+    "generation_prompt": "outputs/v1/generation-prompt-v1.md",
+    "verification": "outputs/v1/verification.json",
+    "background_assets": [
+      "outputs/v1/assets/territory-c-soft-side-light-bg-v1.png"
+    ]
+  },
+  "previous_versions": {
+    "v0": {
+      "review_board_png": "outputs/v0/mori-kv-territories-v0.png",
+      "verification": "outputs/v0/verification.json",
+      "status": "preserved_unchanged"
+    }
+  }
+}

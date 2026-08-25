@@ -1,0 +1,11 @@
+已完成 4 个有效渠道，官网 `1440×0` 因高度为 0 无法导出，已保留为阻塞项，未猜测高度。
+
+- [下载完整交付包 ZIP](<WORKDIR>/outputs/v0/summer-form-channel-exports-v0.zip)
+- [小红书 1080×1440](<WORKDIR>/outputs/v0/summer-form-xhs-1080x1440.png)
+- [Story 1080×1920](<WORKDIR>/outputs/v0/summer-form-story-1080x1920.png)
+- [邮件 600×200](<WORKDIR>/outputs/v0/summer-form-email-600x200.png)
+- [LED 4096×1024](<WORKDIR>/outputs/v0/summer-form-led-4096x1024.png)
+
+五项均已记录在 [manifest.json](<WORKDIR>/outputs/v0/manifest.json)，尺寸、文件完整性及视觉检查见 [verification.json](<WORKDIR>/outputs/v0/verification.json)。
+
+视觉适配使用内置图像生成/编辑模式；提示词摘要保存在 [generation-prompts.json](<WORKDIR>/outputs/v0/generation-prompts.json)。请补充官网的正数高度，我会另存新版本继续导出。

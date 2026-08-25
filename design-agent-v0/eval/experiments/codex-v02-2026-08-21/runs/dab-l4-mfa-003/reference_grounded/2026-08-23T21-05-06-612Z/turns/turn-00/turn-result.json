@@ -1,0 +1,74 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T21:05:06.618Z",
+  "finished_at": "2026-08-23T21:16:34.147Z",
+  "latency_ms": 687557,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 37,
+    "command_count": 12,
+    "tool_count": 2,
+    "image_activity_count": 3,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a03070-fe69-7f32-a889-fcbce39725e6",
+    "usage": {
+      "input_tokens": 814461,
+      "cached_input_tokens": 748928,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 14072,
+      "reasoning_output_tokens": 4942
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2861,
+      "sha256": "068a1e84c685908add53acfddba4eea0bbca907a9e26f4c33c746d9f49b66ac8"
+    },
+    {
+      "filename": "v0/generation-prompts.json",
+      "byte_size": 1296,
+      "sha256": "bfd87de3aaf8c2f1d4c49dc3bcb67d6c6c7f9df769e2d609af6abda4a431a8a0"
+    },
+    {
+      "filename": "v0/manifest.json",
+      "byte_size": 2000,
+      "sha256": "5aac8df4c26f2a6604a8d238a35f69ddd72606f3d917c517d5708733d43a2f41"
+    },
+    {
+      "filename": "v0/summer-form-channel-exports-v0.zip",
+      "byte_size": 9017787,
+      "sha256": "b89bf988e15c85207485e0e28e87c465c79d1ed2fd76c2b63d7558ef13b636cb"
+    },
+    {
+      "filename": "v0/summer-form-email-600x200.png",
+      "byte_size": 161743,
+      "sha256": "245b2887101b13cbb5af9b6ed53ba3fcf823ad4d854675c444ebd9a140c07ada"
+    },
+    {
+      "filename": "v0/summer-form-led-4096x1024.png",
+      "byte_size": 4015508,
+      "sha256": "9e845b738aed2c3c0e8831e144506e792a562a2083cca8cc970ed00083dbcbf0"
+    },
+    {
+      "filename": "v0/summer-form-story-1080x1920.png",
+      "byte_size": 2632932,
+      "sha256": "311974d4d361fc50c0c142392f4d2aaba96432493b6299f7709be82074c301d6"
+    },
+    {
+      "filename": "v0/summer-form-xhs-1080x1440.png",
+      "byte_size": 2201381,
+      "sha256": "e31caa7fe9cc8ddf1cb792ca7d15f7850d9cb474856afb9a1e7e49f6cc2be8d0"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3614,
+      "sha256": "d336125cb0ea1f1d6e12a8d06164095a2def8aaae700834659f11a06b084d092"
+    }
+  ]
+}

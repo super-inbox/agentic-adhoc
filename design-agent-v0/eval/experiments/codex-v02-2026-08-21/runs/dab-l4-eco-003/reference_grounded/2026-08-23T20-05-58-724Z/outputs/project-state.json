@@ -1,0 +1,71 @@
+{
+  "current_version": "v3",
+  "status": "candidate_complete",
+  "context_condition": "reference_grounded",
+  "client_decisions": [
+    "Use the provided terracotta-red diffuser and approved Chinese copy.",
+    "Prioritize the brand language while retaining only the reference page's abstract information rhythm.",
+    "The simplified v1 structure and the source-matched v2 product color remain approved.",
+    "For v3, return the third original benefit, 陶土触感, to the first screen only as a small bottom tag.",
+    "Do not restore the crowded v0 three-column layout."
+  ],
+  "design_decisions": [
+    {
+      "decision": "Use the existing terracotta footer band as the only placement area for the returned benefit.",
+      "reason": "A compact footer tag adds the third benefit without expanding or crowding the approved main benefits panel."
+    },
+    {
+      "decision": "Render 陶土触感 as a small centered warm-cream capsule with charcoal text and no icon.",
+      "reason": "This keeps it subordinate to 低噪运行 and clearly avoids recreating the v0 feature columns."
+    }
+  ],
+  "locked_items": [
+    "All v2 pixels outside the small bottom-tag capsule.",
+    "Source-matched product terracotta color, product position, geometry, texture, lighting, black gap, button, and shadow.",
+    "Warm-cream background, paper texture, tonal shapes, top rule, platform, headline, and main benefits panel.",
+    "Headline 让香气慢下来 and centered low-noise icon-label group 低噪运行, including exact positions and typography.",
+    "Existing footer-band height and color outside the new capsule.",
+    "定时关闭 remains off the first screen."
+  ],
+  "changed_items": [
+    {
+      "version": "v3",
+      "items": [
+        "Added a single 149 x 39 px warm-cream capsule centered inside the existing terracotta footer band.",
+        "Added the exact text 陶土触感 once inside the capsule, without an icon or feature-column reconstruction."
+      ]
+    }
+  ],
+  "content_placement": {
+    "first_screen": {
+      "headline": "让香气慢下来",
+      "primary_benefit": "低噪运行",
+      "bottom_tag": "陶土触感"
+    },
+    "next_screen": [
+      "定时关闭"
+    ],
+    "next_screen_visual_status": "not_redesigned_in_this_delta"
+  },
+  "delta_metrics": {
+    "base_version": "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+    "tag_size_pixels": "149 x 39",
+    "changed_bounds": "x468..617,y1398..1438",
+    "changed_pixels": 5744,
+    "mismatched_pixels_above_footer": 0,
+    "mismatched_pixels_outside_tag_capsule": 0
+  },
+  "artifact_paths": {
+    "final_visual": "outputs/v3/taobao-first-screen-bottom-tag-v3.png",
+    "generation_prompt": "outputs/v3/generation-prompt.md",
+    "verification": "outputs/v3/verification.json",
+    "pixel_lock_composite_source": "outputs/v3/bottom-tag-pixel-lock-composite.c",
+    "supporting_imagegen_edit": "outputs/v3/taobao-first-screen-bottom-tag-imagegen-edit-v3.png",
+    "previous_version": {
+      "version": "v2",
+      "final_visual": "outputs/v2/taobao-first-screen-product-color-corrected-v2.png",
+      "verification": "outputs/v2/verification.json"
+    }
+  }
+}
+

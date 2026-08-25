@@ -1,0 +1,15 @@
+已修复小红书 3:4 产品安全区：产品缩小约 6.7% 并上移 30px，底部阴影与分界线现有 57px 净空。标题、背景和上下非修复区域保持不变。
+
+新增：
+
+- [小红书安全区修正版](/private<WORKDIR>/outputs/v2/xiaohongshu-portrait-safe-area-v2.png)
+- [可编辑 SVG](/private<WORKDIR>/outputs/v2/xiaohongshu-portrait-safe-area-v2.svg)
+- [移动端预览](/private<WORKDIR>/outputs/v2/verification/xiaohongshu-safe-area-preview-360-v2.png)
+- [安全区测量](/private<WORKDIR>/outputs/v2/verification/safe-area-metrics-v2.json)
+- [v2 验证报告](/private<WORKDIR>/outputs/v2/verification.json)
+
+已更新：
+
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+天猫首图、详情页首屏及 v1 文件均未重新导出或修改，哈希验证一致。

@@ -1,0 +1,17 @@
+Preflight 已完成，结论为 **HOLD，暂不可送印**。我没有擅自生成 3 mm bleed 的生产 PDF：
+
+- `120×200 mm` 加四边 3 mm bleed 应为 `126×206 mm`，与 `125×205 mm` 无法闭合。
+- 原稿是 `1376×768 px` RGB 合成预览、无 ICC；单面约 `492×501 px`，比例与像素均不满足生产要求。
+- 背面法定净含量文案未确认，未代填。
+- 工厂 CMYK ICC 配置及正式刀模尚缺失。
+
+已生成 DeviceCMYK、300 dpi 的两页非生产预检报告，并完成渲染核验：:codex-file-citation{path="<WORKDIR>/outputs/v0/orbit-coffee_preflight-report_v0_NOT-FOR-PRODUCTION.pdf" purpose="output"}
+
+其他文件：
+
+- [检查清单](<WORKDIR>/outputs/v0/orbit-coffee_preflight-checklist_v0.md)
+- [标注预览](<WORKDIR>/outputs/v0/approved-artwork_preflight-annotated_v0.png)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+下一步需工厂确认 `125×205 mm` 的含义并提供正式刀模，同时补齐法定文案、分版高分辨率/矢量源稿及 CMYK 配置。

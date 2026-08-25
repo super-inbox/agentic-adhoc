@@ -1,0 +1,656 @@
+{
+  "schema_version": "codex-design-agent-v02-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-CFR-001@reference_grounded",
+  "base_brief_id": "DAB-L4-CFR-001",
+  "context_condition": "reference_grounded",
+  "category": "client_feedback_revision",
+  "capability_level": "L4",
+  "capability_tags": [
+    "workflow_orchestration",
+    "multi_turn_revision",
+    "state_recovery"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 2700000,
+  "started_at": "2026-08-23T15:42:56.021Z",
+  "finished_at": "2026-08-23T16:28:30.327Z",
+  "latency_ms": 2734306,
+  "intended_turns": 4,
+  "completed_turns": 4,
+  "logical_sessions": [
+    "session-01",
+    "session-02"
+  ],
+  "codex_thread_id": "01a02f4a-0e11-75c0-833b-1d89bfbbdc3f",
+  "input_assets": [
+    {
+      "input_id": "approved-poster",
+      "asset_id": "image-edit-poster-summer-form",
+      "role": "revision_target",
+      "reference_role": "edit_target",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-revision_target.png",
+      "source_path": "eval/assets/reference-pack-v0.2/image-edit/poster-summer-form.png",
+      "byte_size": 1388454,
+      "sha256": "4376b110d18b7edaa767e835c7f5b03f12a2c43a2265f1b65fcfeabcbdae3a1a"
+    }
+  ],
+  "input_context_ids": [
+    "approved-poster",
+    "approved-invariants"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 5949,
+      "sha256": "eccefbe3319b6c0720b5e74c31a9525de063cf760d9d7bed4bc80bbab01a41b2"
+    },
+    {
+      "filename": "v0/revision-interpretation.md",
+      "byte_size": 2031,
+      "sha256": "146f3337a102a3ade215cbb23b47ab14706049cdfce013781e3b78d7da5431e4"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 1917,
+      "sha256": "1e4c3fe82f6c7a718eb1d6f19425a6f7d2940a1821daf50e2a2b721227722c36"
+    },
+    {
+      "filename": "v1/apply-local-revision.py",
+      "byte_size": 17615,
+      "sha256": "7aa2defee9e5e8dae9de56107976dfcacd46ddea4c5a30f078aadcc7740a20fe"
+    },
+    {
+      "filename": "v1/intermediate/imagegen-edit-source.png",
+      "byte_size": 1867392,
+      "sha256": "178f4b32fcdd82d4ca405da288b63c777fc0be8dc9d4a211bae0946b7f867def"
+    },
+    {
+      "filename": "v1/intermediate/local-edit-metrics.json",
+      "byte_size": 2702,
+      "sha256": "b1ff9309d6c2fe6625eaac610add6721cff63fb6493fa769867c2cadb8dc041a"
+    },
+    {
+      "filename": "v1/intermediate/logo-alpha-mask.png",
+      "byte_size": 10918,
+      "sha256": "f66547b61aaeeac6424b06d28511904da513f20dbeb30286fe3b9fb7b81ab2df"
+    },
+    {
+      "filename": "v1/intermediate/paper-edit-mask.png",
+      "byte_size": 9790,
+      "sha256": "db6cf14422acddabfca437db8ea30539ab56edb3ff02bdae144c2937810dae4f"
+    },
+    {
+      "filename": "v1/summer-form-poster-local-revision-v1.png",
+      "byte_size": 1121433,
+      "sha256": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401"
+    },
+    {
+      "filename": "v1/summer-form-poster-v1-comparison.png",
+      "byte_size": 1641615,
+      "sha256": "59ffcd41998146adc18c527baced1d861eff56fe74f8149dbb885fd51a6eb113"
+    },
+    {
+      "filename": "v1/summer-form-poster-v1-diff-mask.png",
+      "byte_size": 65974,
+      "sha256": "182fc8379cb75306e09aab247c9295564f17f88359ced4c981d8f1220ea4045b"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 6952,
+      "sha256": "1296ec4a60b4947d858b24e48685da0cc07d9b8f0878e62140f503603b43373f"
+    },
+    {
+      "filename": "v2/apply-paper-grain-reduction.py",
+      "byte_size": 13732,
+      "sha256": "dc5e6a07b1b4bf52347cfa31d566cbc1dadde5e213488dc404d34ab59e502c17"
+    },
+    {
+      "filename": "v2/intermediate/paper-grain-reduction-metrics.json",
+      "byte_size": 3565,
+      "sha256": "9d050491805434fe912393d6426efd5e0617072326bbc422731503cb6340cee8"
+    },
+    {
+      "filename": "v2/intermediate/prior-version-hashes.json",
+      "byte_size": 1269,
+      "sha256": "41bbba9895cc2c2ed72bd0b9873287bb1a3e52505c7dedb2e998f4f03c71fdff"
+    },
+    {
+      "filename": "v2/intermediate/v2-paper-edit-mask.png",
+      "byte_size": 9498,
+      "sha256": "be2a5f96f44d5882ac80f44156719812f7d6d9e05424b2b23b3682be9787bd5b"
+    },
+    {
+      "filename": "v2/summer-form-poster-local-revision-v2.png",
+      "byte_size": 1091678,
+      "sha256": "4e62be78154fa5ff9bf3e4e680aae8c2795eb0edddb513b221cb67f499f99e8c"
+    },
+    {
+      "filename": "v2/summer-form-poster-v1-v2-comparison.png",
+      "byte_size": 1530681,
+      "sha256": "482adcceb55fd4882fc09280ecee0cee01e7a33afcfea81dfc323670dd981d25"
+    },
+    {
+      "filename": "v2/summer-form-poster-v2-diff-mask.png",
+      "byte_size": 112323,
+      "sha256": "d162646e0930e0a52e68e21625b3899d5091c247b8d62a9621812cbaf1288e44"
+    },
+    {
+      "filename": "v2/verification.json",
+      "byte_size": 6835,
+      "sha256": "4381dbf8fd669f893906eff50d512868cd1d6fe3b9254c99c3a20313e980dce7"
+    },
+    {
+      "filename": "v3/apply-logo-restore-low-contrast.py",
+      "byte_size": 15543,
+      "sha256": "e356e18eb905301f581336bdf98037945ef41377c063ddd7c2870a08e41771e4"
+    },
+    {
+      "filename": "v3/intermediate/logo-restore-low-contrast-metrics.json",
+      "byte_size": 5574,
+      "sha256": "c2499ed687b0b533893ad0a7d96bb6d70aeb0dfecbc9f9b41769988806928b22"
+    },
+    {
+      "filename": "v3/intermediate/prior-version-hashes.json",
+      "byte_size": 2230,
+      "sha256": "f5d2267a929138fc8266224cdbe992bd403da698548d7ff2867bde0b410f04fb"
+    },
+    {
+      "filename": "v3/intermediate/v0-logo-source-mask.png",
+      "byte_size": 1896,
+      "sha256": "889c56fd76b7ffee24020f06dede8bac07109be6f9be51af2238e7b9e8a69ee5"
+    },
+    {
+      "filename": "v3/intermediate/v3-logo-edit-mask.png",
+      "byte_size": 2736,
+      "sha256": "e246ec79bf3fb1cdccf9491197d42b3a6294bfeb7d5b73f1bff8fca54a3d76ca"
+    },
+    {
+      "filename": "v3/summer-form-poster-local-revision-v3.png",
+      "byte_size": 1092911,
+      "sha256": "08795753deaad845f37d1e12a8a73b25d9334db4d2f44725ded7cd16d9cba9f0"
+    },
+    {
+      "filename": "v3/summer-form-poster-v2-v3-comparison.png",
+      "byte_size": 1213813,
+      "sha256": "06376bf516706087edcda27269a95c79c8a66701820da4627f95f03a8681f78c"
+    },
+    {
+      "filename": "v3/summer-form-poster-v3-diff-mask.png",
+      "byte_size": 5128,
+      "sha256": "9639767941d32fb5311f4b024aa2b66605005c24f7500825847207939fbbda19"
+    },
+    {
+      "filename": "v3/verification.json",
+      "byte_size": 7996,
+      "sha256": "bf580b2c218eac87d8ca449c7f91d96c38bbe9912f86c8238a70581c9af9017d"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T15:42:56.022Z",
+      "finished_at": "2026-08-23T15:46:34.820Z",
+      "latency_ms": 218805,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 16,
+        "command_count": 4,
+        "tool_count": 1,
+        "image_activity_count": 1,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02f4a-0e11-75c0-833b-1d89bfbbdc3f",
+        "usage": {
+          "input_tokens": 127473,
+          "cached_input_tokens": 78848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6003,
+          "reasoning_output_tokens": 3084
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 1703,
+          "sha256": "0cb8b7b0e6df0055de7c3733b68b54986cd79022ef002f910034a0ef4ba19313"
+        },
+        {
+          "filename": "v0/revision-interpretation.md",
+          "byte_size": 2031,
+          "sha256": "146f3337a102a3ade215cbb23b47ab14706049cdfce013781e3b78d7da5431e4"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 1917,
+          "sha256": "1e4c3fe82f6c7a718eb1d6f19425a6f7d2940a1821daf50e2a2b721227722c36"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T15:46:34.828Z",
+      "finished_at": "2026-08-23T16:05:35.584Z",
+      "latency_ms": 1140787,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 54,
+        "command_count": 17,
+        "tool_count": 4,
+        "image_activity_count": 8,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02f4a-0e11-75c0-833b-1d89bfbbdc3f",
+        "usage": {
+          "input_tokens": 2008365,
+          "cached_input_tokens": 1881088,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 39634,
+          "reasoning_output_tokens": 20777
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 2851,
+          "sha256": "0cbead03c3a9cebe61bd0a8488b5a5b67a862efd0cab876d48ec725993e7de82"
+        },
+        {
+          "filename": "v0/revision-interpretation.md",
+          "byte_size": 2031,
+          "sha256": "146f3337a102a3ade215cbb23b47ab14706049cdfce013781e3b78d7da5431e4"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 1917,
+          "sha256": "1e4c3fe82f6c7a718eb1d6f19425a6f7d2940a1821daf50e2a2b721227722c36"
+        },
+        {
+          "filename": "v1/apply-local-revision.py",
+          "byte_size": 17615,
+          "sha256": "7aa2defee9e5e8dae9de56107976dfcacd46ddea4c5a30f078aadcc7740a20fe"
+        },
+        {
+          "filename": "v1/intermediate/imagegen-edit-source.png",
+          "byte_size": 1867392,
+          "sha256": "178f4b32fcdd82d4ca405da288b63c777fc0be8dc9d4a211bae0946b7f867def"
+        },
+        {
+          "filename": "v1/intermediate/local-edit-metrics.json",
+          "byte_size": 2702,
+          "sha256": "b1ff9309d6c2fe6625eaac610add6721cff63fb6493fa769867c2cadb8dc041a"
+        },
+        {
+          "filename": "v1/intermediate/logo-alpha-mask.png",
+          "byte_size": 10918,
+          "sha256": "f66547b61aaeeac6424b06d28511904da513f20dbeb30286fe3b9fb7b81ab2df"
+        },
+        {
+          "filename": "v1/intermediate/paper-edit-mask.png",
+          "byte_size": 9790,
+          "sha256": "db6cf14422acddabfca437db8ea30539ab56edb3ff02bdae144c2937810dae4f"
+        },
+        {
+          "filename": "v1/summer-form-poster-local-revision-v1.png",
+          "byte_size": 1121433,
+          "sha256": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401"
+        },
+        {
+          "filename": "v1/summer-form-poster-v1-comparison.png",
+          "byte_size": 1641615,
+          "sha256": "59ffcd41998146adc18c527baced1d861eff56fe74f8149dbb885fd51a6eb113"
+        },
+        {
+          "filename": "v1/summer-form-poster-v1-diff-mask.png",
+          "byte_size": 65974,
+          "sha256": "182fc8379cb75306e09aab247c9295564f17f88359ced4c981d8f1220ea4045b"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6952,
+          "sha256": "1296ec4a60b4947d858b24e48685da0cc07d9b8f0878e62140f503603b43373f"
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "logical_session_id": "session-01",
+      "started_at": "2026-08-23T16:05:35.616Z",
+      "finished_at": "2026-08-23T16:16:55.998Z",
+      "latency_ms": 680421,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 36,
+        "command_count": 9,
+        "tool_count": 4,
+        "image_activity_count": 4,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02f4a-0e11-75c0-833b-1d89bfbbdc3f",
+        "usage": {
+          "input_tokens": 4275815,
+          "cached_input_tokens": 4095360,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 60428,
+          "reasoning_output_tokens": 27843
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 4186,
+          "sha256": "fedf3c35343c16a8834bcd7c8dd4645ccafb79b0d384739df73885e88febbf4e"
+        },
+        {
+          "filename": "v0/revision-interpretation.md",
+          "byte_size": 2031,
+          "sha256": "146f3337a102a3ade215cbb23b47ab14706049cdfce013781e3b78d7da5431e4"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 1917,
+          "sha256": "1e4c3fe82f6c7a718eb1d6f19425a6f7d2940a1821daf50e2a2b721227722c36"
+        },
+        {
+          "filename": "v1/apply-local-revision.py",
+          "byte_size": 17615,
+          "sha256": "7aa2defee9e5e8dae9de56107976dfcacd46ddea4c5a30f078aadcc7740a20fe"
+        },
+        {
+          "filename": "v1/intermediate/imagegen-edit-source.png",
+          "byte_size": 1867392,
+          "sha256": "178f4b32fcdd82d4ca405da288b63c777fc0be8dc9d4a211bae0946b7f867def"
+        },
+        {
+          "filename": "v1/intermediate/local-edit-metrics.json",
+          "byte_size": 2702,
+          "sha256": "b1ff9309d6c2fe6625eaac610add6721cff63fb6493fa769867c2cadb8dc041a"
+        },
+        {
+          "filename": "v1/intermediate/logo-alpha-mask.png",
+          "byte_size": 10918,
+          "sha256": "f66547b61aaeeac6424b06d28511904da513f20dbeb30286fe3b9fb7b81ab2df"
+        },
+        {
+          "filename": "v1/intermediate/paper-edit-mask.png",
+          "byte_size": 9790,
+          "sha256": "db6cf14422acddabfca437db8ea30539ab56edb3ff02bdae144c2937810dae4f"
+        },
+        {
+          "filename": "v1/summer-form-poster-local-revision-v1.png",
+          "byte_size": 1121433,
+          "sha256": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401"
+        },
+        {
+          "filename": "v1/summer-form-poster-v1-comparison.png",
+          "byte_size": 1641615,
+          "sha256": "59ffcd41998146adc18c527baced1d861eff56fe74f8149dbb885fd51a6eb113"
+        },
+        {
+          "filename": "v1/summer-form-poster-v1-diff-mask.png",
+          "byte_size": 65974,
+          "sha256": "182fc8379cb75306e09aab247c9295564f17f88359ced4c981d8f1220ea4045b"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6952,
+          "sha256": "1296ec4a60b4947d858b24e48685da0cc07d9b8f0878e62140f503603b43373f"
+        },
+        {
+          "filename": "v2/apply-paper-grain-reduction.py",
+          "byte_size": 13732,
+          "sha256": "dc5e6a07b1b4bf52347cfa31d566cbc1dadde5e213488dc404d34ab59e502c17"
+        },
+        {
+          "filename": "v2/intermediate/paper-grain-reduction-metrics.json",
+          "byte_size": 3565,
+          "sha256": "9d050491805434fe912393d6426efd5e0617072326bbc422731503cb6340cee8"
+        },
+        {
+          "filename": "v2/intermediate/prior-version-hashes.json",
+          "byte_size": 1269,
+          "sha256": "41bbba9895cc2c2ed72bd0b9873287bb1a3e52505c7dedb2e998f4f03c71fdff"
+        },
+        {
+          "filename": "v2/intermediate/v2-paper-edit-mask.png",
+          "byte_size": 9498,
+          "sha256": "be2a5f96f44d5882ac80f44156719812f7d6d9e05424b2b23b3682be9787bd5b"
+        },
+        {
+          "filename": "v2/summer-form-poster-local-revision-v2.png",
+          "byte_size": 1091678,
+          "sha256": "4e62be78154fa5ff9bf3e4e680aae8c2795eb0edddb513b221cb67f499f99e8c"
+        },
+        {
+          "filename": "v2/summer-form-poster-v1-v2-comparison.png",
+          "byte_size": 1530681,
+          "sha256": "482adcceb55fd4882fc09280ecee0cee01e7a33afcfea81dfc323670dd981d25"
+        },
+        {
+          "filename": "v2/summer-form-poster-v2-diff-mask.png",
+          "byte_size": 112323,
+          "sha256": "d162646e0930e0a52e68e21625b3899d5091c247b8d62a9621812cbaf1288e44"
+        },
+        {
+          "filename": "v2/verification.json",
+          "byte_size": 6835,
+          "sha256": "4381dbf8fd669f893906eff50d512868cd1d6fe3b9254c99c3a20313e980dce7"
+        }
+      ]
+    },
+    {
+      "turn_index": 3,
+      "logical_session_id": "session-02",
+      "started_at": "2026-08-23T16:16:56.037Z",
+      "finished_at": "2026-08-23T16:28:30.248Z",
+      "latency_ms": 694259,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 31,
+        "command_count": 7,
+        "tool_count": 4,
+        "image_activity_count": 2,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a02f4a-0e11-75c0-833b-1d89bfbbdc3f",
+        "usage": {
+          "input_tokens": 7253420,
+          "cached_input_tokens": 7019392,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 80897,
+          "reasoning_output_tokens": 35310
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 5949,
+          "sha256": "eccefbe3319b6c0720b5e74c31a9525de063cf760d9d7bed4bc80bbab01a41b2"
+        },
+        {
+          "filename": "v0/revision-interpretation.md",
+          "byte_size": 2031,
+          "sha256": "146f3337a102a3ade215cbb23b47ab14706049cdfce013781e3b78d7da5431e4"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 1917,
+          "sha256": "1e4c3fe82f6c7a718eb1d6f19425a6f7d2940a1821daf50e2a2b721227722c36"
+        },
+        {
+          "filename": "v1/apply-local-revision.py",
+          "byte_size": 17615,
+          "sha256": "7aa2defee9e5e8dae9de56107976dfcacd46ddea4c5a30f078aadcc7740a20fe"
+        },
+        {
+          "filename": "v1/intermediate/imagegen-edit-source.png",
+          "byte_size": 1867392,
+          "sha256": "178f4b32fcdd82d4ca405da288b63c777fc0be8dc9d4a211bae0946b7f867def"
+        },
+        {
+          "filename": "v1/intermediate/local-edit-metrics.json",
+          "byte_size": 2702,
+          "sha256": "b1ff9309d6c2fe6625eaac610add6721cff63fb6493fa769867c2cadb8dc041a"
+        },
+        {
+          "filename": "v1/intermediate/logo-alpha-mask.png",
+          "byte_size": 10918,
+          "sha256": "f66547b61aaeeac6424b06d28511904da513f20dbeb30286fe3b9fb7b81ab2df"
+        },
+        {
+          "filename": "v1/intermediate/paper-edit-mask.png",
+          "byte_size": 9790,
+          "sha256": "db6cf14422acddabfca437db8ea30539ab56edb3ff02bdae144c2937810dae4f"
+        },
+        {
+          "filename": "v1/summer-form-poster-local-revision-v1.png",
+          "byte_size": 1121433,
+          "sha256": "c752dad6412ce35bfef4963c82c0ca3e016ffbccd4967fd36e8a9ccc4127d401"
+        },
+        {
+          "filename": "v1/summer-form-poster-v1-comparison.png",
+          "byte_size": 1641615,
+          "sha256": "59ffcd41998146adc18c527baced1d861eff56fe74f8149dbb885fd51a6eb113"
+        },
+        {
+          "filename": "v1/summer-form-poster-v1-diff-mask.png",
+          "byte_size": 65974,
+          "sha256": "182fc8379cb75306e09aab247c9295564f17f88359ced4c981d8f1220ea4045b"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6952,
+          "sha256": "1296ec4a60b4947d858b24e48685da0cc07d9b8f0878e62140f503603b43373f"
+        },
+        {
+          "filename": "v2/apply-paper-grain-reduction.py",
+          "byte_size": 13732,
+          "sha256": "dc5e6a07b1b4bf52347cfa31d566cbc1dadde5e213488dc404d34ab59e502c17"
+        },
+        {
+          "filename": "v2/intermediate/paper-grain-reduction-metrics.json",
+          "byte_size": 3565,
+          "sha256": "9d050491805434fe912393d6426efd5e0617072326bbc422731503cb6340cee8"
+        },
+        {
+          "filename": "v2/intermediate/prior-version-hashes.json",
+          "byte_size": 1269,
+          "sha256": "41bbba9895cc2c2ed72bd0b9873287bb1a3e52505c7dedb2e998f4f03c71fdff"
+        },
+        {
+          "filename": "v2/intermediate/v2-paper-edit-mask.png",
+          "byte_size": 9498,
+          "sha256": "be2a5f96f44d5882ac80f44156719812f7d6d9e05424b2b23b3682be9787bd5b"
+        },
+        {
+          "filename": "v2/summer-form-poster-local-revision-v2.png",
+          "byte_size": 1091678,
+          "sha256": "4e62be78154fa5ff9bf3e4e680aae8c2795eb0edddb513b221cb67f499f99e8c"
+        },
+        {
+          "filename": "v2/summer-form-poster-v1-v2-comparison.png",
+          "byte_size": 1530681,
+          "sha256": "482adcceb55fd4882fc09280ecee0cee01e7a33afcfea81dfc323670dd981d25"
+        },
+        {
+          "filename": "v2/summer-form-poster-v2-diff-mask.png",
+          "byte_size": 112323,
+          "sha256": "d162646e0930e0a52e68e21625b3899d5091c247b8d62a9621812cbaf1288e44"
+        },
+        {
+          "filename": "v2/verification.json",
+          "byte_size": 6835,
+          "sha256": "4381dbf8fd669f893906eff50d512868cd1d6fe3b9254c99c3a20313e980dce7"
+        },
+        {
+          "filename": "v3/apply-logo-restore-low-contrast.py",
+          "byte_size": 15543,
+          "sha256": "e356e18eb905301f581336bdf98037945ef41377c063ddd7c2870a08e41771e4"
+        },
+        {
+          "filename": "v3/intermediate/logo-restore-low-contrast-metrics.json",
+          "byte_size": 5574,
+          "sha256": "c2499ed687b0b533893ad0a7d96bb6d70aeb0dfecbc9f9b41769988806928b22"
+        },
+        {
+          "filename": "v3/intermediate/prior-version-hashes.json",
+          "byte_size": 2230,
+          "sha256": "f5d2267a929138fc8266224cdbe992bd403da698548d7ff2867bde0b410f04fb"
+        },
+        {
+          "filename": "v3/intermediate/v0-logo-source-mask.png",
+          "byte_size": 1896,
+          "sha256": "889c56fd76b7ffee24020f06dede8bac07109be6f9be51af2238e7b9e8a69ee5"
+        },
+        {
+          "filename": "v3/intermediate/v3-logo-edit-mask.png",
+          "byte_size": 2736,
+          "sha256": "e246ec79bf3fb1cdccf9491197d42b3a6294bfeb7d5b73f1bff8fca54a3d76ca"
+        },
+        {
+          "filename": "v3/summer-form-poster-local-revision-v3.png",
+          "byte_size": 1092911,
+          "sha256": "08795753deaad845f37d1e12a8a73b25d9334db4d2f44725ded7cd16d9cba9f0"
+        },
+        {
+          "filename": "v3/summer-form-poster-v2-v3-comparison.png",
+          "byte_size": 1213813,
+          "sha256": "06376bf516706087edcda27269a95c79c8a66701820da4627f95f03a8681f78c"
+        },
+        {
+          "filename": "v3/summer-form-poster-v3-diff-mask.png",
+          "byte_size": 5128,
+          "sha256": "9639767941d32fb5311f4b024aa2b66605005c24f7500825847207939fbbda19"
+        },
+        {
+          "filename": "v3/verification.json",
+          "byte_size": 7996,
+          "sha256": "bf580b2c218eac87d8ca449c7f91d96c38bbe9912f86c8238a70581c9af9017d"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 13665073,
+    "cached_input_tokens": 13074688,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 186962,
+    "reasoning_output_tokens": 87014
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

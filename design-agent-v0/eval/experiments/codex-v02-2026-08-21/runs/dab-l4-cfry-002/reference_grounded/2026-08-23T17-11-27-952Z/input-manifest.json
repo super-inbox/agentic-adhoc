@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "ip-art",
+    "asset_id": "factory-luna-club-sticker",
+    "role": "ip_artwork",
+    "reference_role": "approved_master",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "01-ip_artwork.png",
+    "source_path": "eval/assets/reference-pack-v0.2/factory/luna-club-sticker.png",
+    "byte_size": 220853,
+    "sha256": "7956c4e5900e53317128d7733ecf0c7729be48edc9d76e5f7a13962aca5cc718"
+  }
+]

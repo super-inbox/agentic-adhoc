@@ -1,0 +1,64 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-08-23T08:22:50.295Z",
+  "finished_at": "2026-08-23T08:39:31.176Z",
+  "latency_ms": 1000893,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 68,
+    "command_count": 27,
+    "tool_count": 3,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a02db7-2069-7073-b648-56ce5dfa8121",
+    "usage": {
+      "input_tokens": 2231531,
+      "cached_input_tokens": 2117760,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 39898,
+      "reasoning_output_tokens": 19766
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2961,
+      "sha256": "a98e2f512891ca0657661e2427b970bb88b517cd6ef4c96a8c8f88e9fd436113"
+    },
+    {
+      "filename": "v0/LUNA_CLUB_60mm_factory.pdf",
+      "byte_size": 855780,
+      "sha256": "44704bbdfcb39f65a8d50965a89f151b9c3c17eb6648d216e5efdfd4d9db3fb0"
+    },
+    {
+      "filename": "v0/LUNA_CLUB_60mm_preview.png",
+      "byte_size": 401673,
+      "sha256": "d7218140474bb6a9105e2121b2a788974e13fc3226208262cc59074d3803ae18"
+    },
+    {
+      "filename": "v0/LUNA_CLUB_60mm_production.svg",
+      "byte_size": 1769236,
+      "sha256": "5ef9c56822e28976930bd665ca5c64bccb6a1cc035227ac6f66758f4aadb2101"
+    },
+    {
+      "filename": "v0/qa/LUNA_CLUB_60mm_factory_render.png",
+      "byte_size": 372943,
+      "sha256": "727820ecac9496a8dd739ccfc5db87e271c92e41f5e850653052881612a3845d"
+    },
+    {
+      "filename": "v0/qa/LUNA_CLUB_60mm_svg_render.png",
+      "byte_size": 92382,
+      "sha256": "a02fe8d76940974893d0549f65bc8718db25aa53b5599ce6fad174fd0ffb7233"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5367,
+      "sha256": "4893e4cb786500596b4d0059951821ed7719a64a1b21c18218571798e17ba97c"
+    }
+  ]
+}

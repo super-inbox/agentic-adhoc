@@ -1,0 +1,12 @@
+v0 已完成，保留指定信息节奏，但重新构建了 MORI 的暖陶土视觉语言。产品使用原图像素抠图合成，未重绘或调色。
+
+- [最终预览 PNG](<WORKDIR>/outputs/v0/preview.png)
+- [可编辑 SVG](<WORKDIR>/outputs/v0/mori_aroma_poster_editable.svg)
+- [对象化设计文档](<WORKDIR>/outputs/v0/design_document.json)
+- [对象级变更清单](<WORKDIR>/outputs/v0/change_set.json)
+- [机器验证结果](<WORKDIR>/outputs/v0/verification.json)
+- [项目状态](<WORKDIR>/outputs/project-state.json)
+
+验证 11/11 通过：准确文案、信息结构、禁用元素、可编辑对象和产品像素一致性均合格，无未解决阻塞。
+
+背景使用 built-in imagegen，最终提示词核心为：“Original abstract warm clay-and-plaster surface in MORI warm ivory, terracotta and charcoal; quiet evening light, subtle mineral grain and generous negative space; no text, logo, icon, product, diffuser, vase, leaves, frames, motifs or watermark.”

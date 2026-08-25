@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1800" viewBox="0 0 1200 1800">
+  <title>MORI 陶土红香薰机产品信息页 v1</title>
+  <desc>对象可编辑：背景、品牌签名、原产品图、标题、三张功能卡与底部规格带均为独立命名对象。</desc>
+  <defs>
+    <clipPath id="hero-clip"><rect x="0" y="0" width="1200" height="880"/></clipPath>
+  </defs>
+  <g id="group-background" data-label="背景与细颗粒陶土纸感">
+    <rect id="background-base" x="0" y="0" width="1200" height="1800" rx="0" fill="#F3EFE4" opacity="1"/>
+    <image id="background-grain" x="0" y="0" width="1200" height="1800" xlink:href="assets/mori_fine_grain_clay_paper.png" preserveAspectRatio="xMidYMid slice" opacity="0.1"/>
+    <image id="hero-texture" x="0" y="0" width="1200" height="880" xlink:href="assets/mori_fine_grain_clay_paper.png" preserveAspectRatio="xMidYMid slice" opacity="0.76" clip-path="url(#hero-clip)"/>
+    <rect id="hero-veil" x="0" y="0" width="1200" height="880" rx="0" fill="#F3EFE4" opacity="0.18"/>
+    <ellipse id="hero-halo" cx="600.0" cy="476.0" rx="398.0" ry="272.0" fill="#F8E7D7" opacity="0.48" stroke="#AECDD5" stroke-width="3" stroke-opacity="0.4"/>
+  </g>
+  <g id="group-brand" data-label="MORI 品牌签名">
+    <text id="brand-mori" x="84" y="120" fill="#30302D" opacity="1" font-family="PingFang SC" font-size="50" font-weight="600" letter-spacing="12">MORI</text>
+    <text id="brand-tagline" x="86" y="149" fill="#30302D" opacity="0.82" font-family="Arial" font-size="17" font-weight="500" letter-spacing="5">CALM DAILY CARE</text>
+    <rect id="brand-accent" x="84" y="171" width="64" height="7" rx="4" fill="#B8543E" opacity="1"/>
+  </g>
+  <g id="group-product" data-label="原产品主视觉">
+    <image id="product-cutout" x="170" y="230" width="860" height="570" xlink:href="assets/product_cutout.png" preserveAspectRatio="xMidYMid meet" opacity="1" data-identity-locked="true"/>
+  </g>
+  <g id="group-title" data-label="主标题与一句话卖点">
+    <text id="title-line-1" x="84" y="1034" fill="#30302D" opacity="1" font-family="Songti SC" font-size="104" font-weight="700" letter-spacing="1">让香气</text>
+    <text id="title-line-2" x="84" y="1152" fill="#B8543E" opacity="1" font-family="Songti SC" font-size="104" font-weight="700" letter-spacing="1">慢下来</text>
+    <rect id="subtitle-accent" x="680" y="1055" width="52" height="5" rx="3" fill="#8C9A69" opacity="1"/>
+    <text id="subtitle-copy" x="680" y="1120" fill="#30302D" opacity="0.88" font-family="PingFang SC" font-size="33" font-weight="400" letter-spacing="1">安静融入每个夜晚</text>
+  </g>
+  <g id="group-features" data-label="三个功能">
+    <rect id="feature-card-1" x="84" y="1225" width="328" height="246" rx="26" fill="#FBF8F0" opacity="1" stroke="#D8D0BF" stroke-width="2"/>
+    <rect id="feature-card-1-accent" x="84" y="1225" width="328" height="12" rx="6" fill="#B8543E" opacity="1"/>
+    <text id="feature-card-1-number" x="118" y="1292" fill="#B8543E" opacity="1" font-family="Arial" font-size="20" font-weight="600" letter-spacing="2">01</text>
+    <text id="feature-card-1-copy" x="118" y="1392" fill="#30302D" opacity="1" font-family="PingFang SC" font-size="40" font-weight="500" letter-spacing="1">低噪运行</text>
+    <rect id="feature-card-2" x="436" y="1225" width="328" height="246" rx="26" fill="#FBF8F0" opacity="1" stroke="#D8D0BF" stroke-width="2"/>
+    <rect id="feature-card-2-accent" x="436" y="1225" width="328" height="12" rx="6" fill="#8C9A69" opacity="1"/>
+    <text id="feature-card-2-number" x="470" y="1292" fill="#8C9A69" opacity="1" font-family="Arial" font-size="20" font-weight="600" letter-spacing="2">02</text>
+    <text id="feature-card-2-copy" x="470" y="1392" fill="#30302D" opacity="1" font-family="PingFang SC" font-size="40" font-weight="500" letter-spacing="1">定时关闭</text>
+    <rect id="feature-card-3" x="788" y="1225" width="328" height="246" rx="26" fill="#FBF8F0" opacity="1" stroke="#D8D0BF" stroke-width="2"/>
+    <rect id="feature-card-3-accent" x="788" y="1225" width="328" height="12" rx="6" fill="#AECDD5" opacity="1"/>
+    <text id="feature-card-3-number" x="822" y="1292" fill="#71929A" opacity="1" font-family="Arial" font-size="20" font-weight="600" letter-spacing="2">03</text>
+    <text id="feature-card-3-copy" x="822" y="1392" fill="#30302D" opacity="1" font-family="PingFang SC" font-size="40" font-weight="500" letter-spacing="1">陶土触感</text>
+  </g>
+  <g id="group-specs" data-label="底部规格">
+    <rect id="spec-background" x="0" y="1560" width="1200" height="240" rx="0" fill="#30302D" opacity="1"/>
+    <rect id="spec-top-accent" x="0" y="1560" width="1200" height="10" rx="0" fill="#B8543E" opacity="1"/>
+    <text id="spec-label" x="84" y="1644" fill="#F3EFE4" opacity="0.76" font-family="PingFang SC" font-size="24" font-weight="500" letter-spacing="3">规格</text>
+    <text id="spec-value-usbc" x="252" y="1724" fill="#F3EFE4" opacity="1" font-family="Arial" font-size="50" font-weight="600" letter-spacing="1">USB-C</text>
+    <text id="spec-value-6h" x="616" y="1724" fill="#F3EFE4" opacity="1" font-family="Arial" font-size="50" font-weight="600" letter-spacing="1">6 h</text>
+    <text id="spec-value-280ml" x="856" y="1724" fill="#F3EFE4" opacity="1" font-family="Arial" font-size="50" font-weight="600" letter-spacing="1">280 ml</text>
+    <line id="spec-divider-1" x1="535" y1="1632" x2="535" y2="1748" stroke="#F3EFE4" stroke-width="1" opacity="0.25"/>
+    <line id="spec-divider-2" x1="790" y1="1632" x2="790" y2="1748" stroke="#F3EFE4" stroke-width="1" opacity="0.25"/>
+  </g>
+</svg>
