@@ -1,11 +1,30 @@
 #!/usr/bin/env python3
 """Judge the three v0.2 rubric dimensions code cannot settle.
 
-⛔ NEGATIVE RESULT (2026-08-25): this judge DOES NOT DISCRIMINATE. Run over all
-31 completed Codex runs it returned 5/5 on every dimension of every run —
-brief_understanding sd 0.00, revision_fidelity sd 0.00,
-cross_asset_consistency sd 0.00. A judge that agrees with everything measures
-nothing, so NO weighted total may be computed from this output.
+STATUS 2026-08-25: the violation-first prompt below WORKS but the run is
+INCOMPLETE — 8 of 31 scored, the other 23 lost to a Gemini monthly spending cap
+(429 RESOURCE_EXHAUSTED). Output: rubric-v02-judged-v2.jsonl.
+
+  dimension                v1 (score-first)      v2 (violation-first, n=8)
+  brief_understanding      {5:31}  sd 0.00       {1:1, 5:7}  sd 1.32
+  cross_asset_consistency  {5:31}  sd 0.00       {2:1, 5:6}  sd 1.05
+  violation ledger         (none asked for)      95 MET · 7 CANNOT_TELL · 2 VIOLATED
+
+⚠️ Do NOT compute weighted totals from the 8. They are whatever completed before
+quota ran out — alphabetically first, not a random sample — and
+revision_fidelity has n=1. The method is validated; the coverage is not.
+
+The judge is resumable (it skips runs already in the output file), so finishing
+costs ~23 calls once quota resets. No regeneration needed.
+
+SEQUENCING MISTAKE WORTH REMEMBERING: v1 was run over all 31 before anyone
+checked whether it discriminated. Those 31 calls returned all-5s and consumed
+the quota that v2 then needed. Validate a judge on 3-5 runs and check the score
+variance BEFORE spending a full pass on it.
+
+---- v1 post-mortem, kept because the diagnosis is what produced v2 ----
+The first version DID NOT DISCRIMINATE: 5/5 on every dimension of every run,
+sd 0.00 throughout. A judge that agrees with everything measures nothing.
 
 Do not read the 5s as "Codex was perfect". The same model family scored
 Curify 0.100 and Codex 0.322 on brief adherence in the 21q experiment, so it is
@@ -60,31 +79,53 @@ TEXT_CAP = 4000
 
 DIMS = ["brief_understanding", "revision_fidelity", "cross_asset_consistency"]
 
-PROMPT = """You are grading one run of a design-agent benchmark. Be strict and
-specific: cite the artifact you are judging, never grade on effort or intent.
+PROMPT = """You are auditing one run of a design-agent benchmark for CONTRACT
+VIOLATIONS. Your job is to find what was broken, not to award marks.
 
-BRIEF (what the client asked)
-{brief}
+Work in this order and do not skip step 1.
 
-CONSTRAINTS / LOCKED INVARIANTS
+STEP 1 — For every item below, decide VIOLATED / MET / CANNOT_TELL. A claim of
+MET requires you to name the artifact that shows it. CANNOT_TELL is a valid and
+expected answer when the deliverables do not contain the evidence.
+
+HARD GATES (breaking any one of these is disqualifying)
+{hard_gates}
+
+HARD CONSTRAINTS
+{hard_constraints}
+
+NEGATIVE CONSTRAINTS (things that must NOT appear)
+{negative_constraints}
+
+DELIVERABLE REQUIREMENTS (several are countable — count them)
+{deliverable_reqs}
+
+LOCKED INVARIANTS (must survive every revision)
 {invariants}
 
-CLIENT FEEDBACK ACROSS TURNS (empty means single-turn, no revision occurred)
+CLIENT FEEDBACK PER TURN (empty = single turn, no revision happened)
 {feedback}
+
+BRIEF
+{brief}
 
 RUN DELIVERABLES (text extracts; images attached separately)
 {outputs}
 
-Score each dimension 0-5.
-- brief_understanding: did it deliver what was asked, including constraints the
-  brief implies but does not spell out? 0 = ignored the ask, 5 = fully met.
-- revision_fidelity: did it change ONLY what the feedback requested while
-  preserving every invariant? If there was no feedback, return null.
-- cross_asset_consistency: do the deliverables read as one coherent system
-  (symbol, colour, type, layout)? If only one asset exists, return null.
+STEP 2 — Score ONLY from what step 1 found. Anchors:
+  5 = no violations, and the evidence is present to show it
+  4 = only soft-preference misses
+  3 = one requirement partly unmet, or key evidence absent (CANNOT_TELL on a
+      countable requirement scores here, not higher)
+  2 = a stated requirement clearly unmet
+  1 = a hard constraint or negative constraint broken
+  0 = the brief was not addressed
+If a dimension does not apply (no revision occurred; only one asset exists),
+return null — do not substitute a number.
 
 Return ONLY json:
-{{"brief_understanding":{{"score":n,"why":"..."}},
+{{"violations":[{{"item":"...","verdict":"VIOLATED|MET|CANNOT_TELL","evidence":"path or quote"}}],
+  "brief_understanding":{{"score":n,"why":"..."}},
   "revision_fidelity":{{"score":n|null,"why":"..."}},
   "cross_asset_consistency":{{"score":n|null,"why":"..."}}}}"""
 
@@ -123,8 +164,16 @@ def collect(run: Path):
 
 def judge(client, brief: dict, run: Path):
     fb = brief.get("feedback") or []
+    cons = brief.get("constraints") or {}
+    rub = brief.get("rubric") or {}
     prompt = PROMPT.format(
-        brief=brief.get("initial_query", "")[:1500],
+        hard_gates=json.dumps(rub.get("hard_gates") or [], ensure_ascii=False),
+        hard_constraints=json.dumps(cons.get("hard") or [], ensure_ascii=False),
+        negative_constraints=json.dumps(cons.get("negative") or [], ensure_ascii=False),
+        deliverable_reqs=json.dumps(
+            [{"id": d.get("id"), "count": d.get("count"),
+              "requirements": d.get("requirements")}
+             for d in (brief.get("deliverables") or [])], ensure_ascii=False)[:2000],
         invariants=json.dumps(
             (brief.get("project_state") or {}).get("locked_invariants") or [],
             ensure_ascii=False),
@@ -132,6 +181,7 @@ def judge(client, brief: dict, run: Path):
             [{"after": f.get("after_checkpoint"), "msg": f.get("message"),
               "invariants": f.get("invariants")} for f in fb],
             ensure_ascii=False)[:1500] if fb else "(none — single turn)",
+        brief=brief.get("initial_query", "")[:1200],
         outputs="\n\n".join(collect(run)[0])[:24000] or "(no text deliverables)")
     parts = [{"text": prompt}]
     for name, sfx, b64 in collect(run)[1]:
@@ -167,7 +217,7 @@ def main() -> int:
             if b:
                 runs.append((rj.parent, b, res))
 
-    out = HERE / "rubric-v02-judged.jsonl"
+    out = HERE / "rubric-v02-judged-v2.jsonl"
     done = set()
     if out.exists():                                   # resumable
         for l in out.read_text(encoding="utf-8").splitlines():
@@ -190,6 +240,7 @@ def main() -> int:
             for d in DIMS:
                 row[d] = (v.get(d) or {}).get("score")
                 row[d + "_why"] = (v.get(d) or {}).get("why")
+            row["violations"] = v.get("violations") or []
             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
             fh.flush()
             print(f"  {i}/{len(runs)} {rid[:44]} -> "
