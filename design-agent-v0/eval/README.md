@@ -8,6 +8,15 @@ This directory contains three complementary evaluation layers:
 | `reference_asset_eval.py` | `queries.jsonl` + `assets/reference-pack-v0.1/` | real-pixel binding, integrity, provenance, privacy, and alpha validation |
 | `runtime_eval.py` | `runtime_cases.example.jsonl` | single-turn HTTP black-box route, trace, visual verdict, retry, and artifact scoring |
 
+## Runtime and structured-editing research
+
+- [`runtime-verification/2026-08-26-canva-magic-layers-agent-json.md`](runtime-verification/2026-08-26-canva-magic-layers-agent-json.md)
+  summarizes Canva Magic Layers, the public MCP/Apps SDK editing boundaries, transaction-based
+  JSON operations, and a platform-neutral Design IR proposal mapped to Curify's
+  `design_document.json`, `change_set.json`, `verification.json`, and `trajectory.jsonl` contract.
+- [`runtime-verification/2026-08-22-runtime-skills.md`](runtime-verification/2026-08-22-runtime-skills.md)
+  records the deployed `design-vote` and `tryon-poster` runtime verification.
+
 ## Published live experiment
 
 [`experiments/curify-web-live-2026-08-12/`](experiments/curify-web-live-2026-08-12/)
