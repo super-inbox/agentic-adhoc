@@ -1,0 +1,5 @@
+# Never commit the pseudonym -> real client mapping.
+.client-key.json
+# Raw exports (WeChat dumps, email threads, attachments) stay local; only the
+# structured capture is committed, and only after the redaction check.
+raw/

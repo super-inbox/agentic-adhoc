@@ -1,0 +1,88 @@
+{
+  "schema_version": "real-0.1",
+  "project_id": "REPLACE",
+  "client_id": "client-000",
+  "category": "packaging_sku_family",
+  "primary_intent": "generate",
+  "provenance": {
+    "kind": "real_client_project",
+    "customer_data": true,
+    "redacted": false,
+    "captured_by": "",
+    "notes": ""
+  },
+  "_1_brief": "capture when the brief arrives",
+  "initial_query": "",
+  "initial_query_channel": "wechat|email|call|meeting",
+  "initial_query_verbatim": true,
+  "inputs": [
+    {
+      "id": "",
+      "kind": "reference_image|existing_design|copy|spec",
+      "role": "",
+      "provided": true,
+      "note": ""
+    }
+  ],
+  "constraints": {
+    "hard": [],
+    "soft": [],
+    "negative": []
+  },
+  "_2_options": "capture when you show options — INCLUDE the ones that lost",
+  "alternatives": [
+    {
+      "id": "A",
+      "shown_to_client": true,
+      "description": "",
+      "made_but_not_shown": false
+    }
+  ],
+  "_3_selection": "capture at the moment they choose",
+  "selection": {
+    "chosen": "",
+    "chosen_rationale": "",
+    "rationale_given": true
+  },
+  "rejections": [
+    {
+      "option_id": "",
+      "reason_verbatim": "",
+      "rationale_given": true,
+      "reason_class": ""
+    }
+  ],
+  "_4_feedback": "capture EVERY revision round; message must be verbatim",
+  "feedback": [
+    {
+      "round": 1,
+      "message": "",
+      "verbatim": true,
+      "changed": [],
+      "invariants": [],
+      "input_version": "v0",
+      "output_version": "v1"
+    }
+  ],
+  "preference_memory": {
+    "scope": "client",
+    "accepted_signals": [],
+    "rejected_signals": []
+  },
+  "project_state": {
+    "locked_invariants": []
+  },
+  "deliverables": [
+    {
+      "type": "",
+      "count": 1,
+      "formats": []
+    }
+  ],
+  "_5_end": "at project end",
+  "outcome": {
+    "status": "shipped|killed|stalled",
+    "notes": "",
+    "client_satisfied": null
+  }
+}
