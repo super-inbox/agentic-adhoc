@@ -1,0 +1,4 @@
+output/
+*.permission.txt
+.venv/
+__pycache__/
