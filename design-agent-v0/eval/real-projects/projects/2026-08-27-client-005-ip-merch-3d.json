@@ -1,0 +1,150 @@
+{
+  "_schema_note": "Hand-authored to design-agent-v0-spec.md §7z because new_project.py / TEMPLATE.json live in the uncloned agentic-adhoc repo. Validate with to_brief.py before committing; check client-005 for an id collision.",
+  "_status_note": "Captured at proposal-delivered. The CLIENT has not yet selected or given feedback, so `alternatives[].shown_to_client` is false for the deck variants, `selection` is null and `feedback` is EMPTY BY DESIGN — an empty client-feedback array is the honest state, not a gap to fill. The designer-side revision rounds are recorded separately under `internal_review` so they can never be mistaken for the client's voice (§7z-B4: recording 'no reason given' is data; inventing one is contamination).",
+
+  "client_id": "client-005",
+  "category": "ip_merch_3d",
+  "date_started": "2026-08-27",
+  "date_updated": "2026-08-28",
+
+  "provenance": {
+    "customer_data": true,
+    "redacted": false,
+    "redaction_note": "Brand name, the four character names, and the contact are withheld — agentic-adhoc is a public repo. Pseudonym map is local-only in .client-key.json. The client's own wording is otherwise preserved verbatim."
+  },
+
+  "initial_query": "设计三款产品。项链：珠子不同颜色，现成的；吊坠：自己的 IP 形象，要设计，四小只是不是做成 4 个。四个形象 × 2 = 8 套。手链：吊坠可以一样。挂链：参考可能复杂，中间一个形象放里头。SKU：冰淇淋、糖果盒；吊坠是小星星。交付：1）出设计 —— 公司有些参考，珠子小的配饰可以采买，参考小红书，可以有新的想法；2）吊坠建模，4 款 IP 建模。作品案例、报价。中秋展会。",
+
+  "initial_query_supplement": "定制四小只专属树脂珠，打样费 600，可以多找几家供应商询价，成品根据数量 1-5 块不等。其他配珠可以直接采购。设计手串、项链、手机挂绳、手表挂绳、材料包等不同串珠产品。形式：项链、手串、挂链。尺寸：项链 56cm（总长不含吊坠）、手串 15.5~16cm、挂链 12~14（整高）。形象：4 小只。款式：项链 1~2 款外观、手串 1~2 款外观、挂链 1~2 款外观。",
+
+  "inputs": [
+    {"type": "meeting_notes", "form": "handwritten photo", "note": "the initial_query above is transcribed from it"},
+    {"type": "client_spec_doc", "form": "screenshot", "note": "the supplement above; also carries their own reference images, all screenshots of one published RedNote maker"},
+    {"type": "ip_art", "form": "flat front-facing character art, 4 characters, with brand palette", "note": "FLAT ONLY — no side view, no back view. This is failure point #1 below."},
+    {"type": "reference_product", "form": "competitor screenshots", "note": "a published RedNote maker's flat-backed Q版 crocodile charm, shown worn on a beaded necklace"}
+  ],
+
+  "constraints_stated_by_client": [
+    "necklace 56cm excluding pendant",
+    "bracelet 15.5-16cm",
+    "bag charm 12-14cm overall height",
+    "4 characters, 2 exterior variants each = 8 sets",
+    "non-hero beads are bought in, not designed",
+    "silicone soft-mould sample ~¥600/design, MOQ 1-5",
+    "existing character art and brand palette must not change",
+    "hard deadline: Mid-Autumn trade show"
+  ],
+
+  "constraints_we_added": [
+    "pendant body 25-35mm — below 20mm the four characters stop being distinguishable on one chain; above 40mm it drags the neckline",
+    "flat back as the default structure, not a style choice — single-sided mould, ~45% lighter, sits flat against clothing, one face to paint",
+    "hanging hole on the centre-of-gravity vertical, not the bbox centre",
+    "draft angle >=1.5 deg, wall >=2mm, hollow anything solid over 25mm",
+    "parting line hidden on the side silhouette, never across the face",
+    "R>=0.5mm on every sharp corner (also the children's-product safety requirement)",
+    "colour specified as Pantone solid numbers, never RGB",
+    "colour-separation boundaries land on geometric creases so hand-painters have an edge to stop at"
+  ],
+
+  "alternatives": [
+    {
+      "id": "alt-1",
+      "label": "single combined deck, 13pp",
+      "shown_to_client": false,
+      "description": "One portfolio: product understanding -> workflow -> 3 modelling cases (cartoon characters / props / industrial hard-surface) -> three-view -> character spec -> merch application -> factory files -> proposed approach -> craft checks -> engagement terms.",
+      "why_built": "the modelling screenshots are the hardest capability evidence we hold"
+    },
+    {
+      "id": "alt-2",
+      "label": "split: IP/jewelry deck + separate industrial deck",
+      "shown_to_client": false,
+      "description": "Modelling cases moved wholesale into an industrial deck; IP deck rebuilt around pendant concept sheet, technical design sheet, IP design boards, one-IP-x-eight-processes, three-view, e-commerce, merch line. Engagement-terms page dropped.",
+      "why_built": "alt-1 spent its first three case pages on power strips and rice cookers before reaching anything a jewelry buyer recognises"
+    },
+    {
+      "id": "alt-3",
+      "label": "pricing included in the PDF",
+      "shown_to_client": false,
+      "rejected_by": "operator",
+      "rejection_rationale": "完全不谈钱 — pricing goes on WeChat separately; numbers printed in a PDF read as a commitment",
+      "rationale_given": true
+    }
+  ],
+
+  "selection": null,
+  "selection_note": "No client selection yet — both decks were delivered as one package on 2026-08-28 and the client has not responded. Do not backfill this field with the operator's internal pick.",
+
+  "feedback": [],
+  "feedback_note": "Empty because no CLIENT revision round has happened. Expected reply channel is WeChat (per feedback_cn_vertical_reply_channel: for the CN 文创 vertical, email reply rate is misleading because WeChat activity is invisible to the send log).",
+
+  "internal_review": [
+    {
+      "round": 1,
+      "source": "internal_operator",
+      "message": "可以把前面的案例一、二、三的三个工业设计分出来放到一个单独的工业设计的文档，以及删除最后一页的合作方式。这个版本要精简一下，更聚焦到对方关心的吊坠、IP、手串等方向。而且对方也问我们是否有吊坠、手串的例子。",
+      "changed": "split into two decks; renumbered surviving cases and every cross-reference; folded the deliverables table into the A/B/C stage cards after the standalone table overflowed",
+      "invariants": "the craft-checks page, the three-view argument, and the no-pricing rule were left untouched"
+    },
+    {
+      "round": 2,
+      "source": "internal_operator",
+      "message": "do we have design board for 概念展示图？",
+      "changed": "switched corpus search from subject words to FORMAT words over template_id (board|moodboard|concept|design-sheet|specification); found three assets the subject search had missed; restructured the IP deck around them",
+      "invariants": "case ordering logic (what it looks like -> how it is made -> how it is quoted -> how it sells) was preserved through the renumber"
+    },
+    {
+      "round": 3,
+      "source": "internal_operator",
+      "message": "feel free to use the two from Rednote.",
+      "changed": "used both third-party images after cropping the platform watermark / account number off one and the phone chrome off the other; added attribution captions",
+      "invariants": "every third-party image carries 非本方作品 — a competitor product photo inside a 'what we will deliver' column would read as our own work"
+    }
+  ],
+
+  "preference_memory": {
+    "accepted": [
+      {"signal": "a dimensioned three-view as the first deliverable", "source": "operator", "note": "client-side confirmation still pending"},
+      {"signal": "showing failure cases (the incoherent-turnaround example) alongside successes", "source": "operator"},
+      {"signal": "code-authored numbers on drawings, with a 'not a tooling drawing' footer", "source": "operator"}
+    ],
+    "rejected": [
+      {"signal": "printed pricing", "reason": "完全不谈钱", "source": "operator"},
+      {"signal": "industrial hard-surface cases in an IP/jewelry deck", "reason": "focus — client asked specifically for pendant/bracelet examples", "source": "operator"},
+      {"signal": "naming the design team's art academy", "reason": "可以不提学校名字", "source": "operator"},
+      {"signal": "arguing the reader out of a misconception", "reason": "只讲我们做什么 — the paragraph explaining that generative models fabricate dimensions was rewritten to state only our own practice", "source": "operator"},
+      {"signal": "a work-in-progress project used as a case study", "reason": "as it's WIP", "source": "operator"}
+    ]
+  },
+
+  "project_state": {
+    "locked_invariants": [
+      "client's existing character art and brand palette are not redesigned — we translate them into manufacturing constraints only",
+      "no pricing in any PDF",
+      "third-party imagery always carries an attribution caption",
+      "numbers on drawings are written by code from client-confirmed inputs, never generated"
+    ],
+    "open_questions": [
+      "does the client accept flat-back as the default structure, or do they want full-round?",
+      "which two characters go first if we run one end-to-end before committing all four?"
+    ]
+  },
+
+  "outcome": {
+    "status": "proposal_delivered",
+    "date": "2026-08-28",
+    "delivered": [
+      "IP pendant & beaded-jewelry portfolio, A4 x 11pp",
+      "industrial design & product-3D portfolio, A4 x 8pp"
+    ],
+    "converted": null,
+    "note": "Proposed path if it converts: stage A character-spec alignment -> B design sheet / three-view / modelling -> C beading styles, with a stop-gate after A and one character run end-to-end before committing the other three."
+  },
+
+  "reusable_lessons": [
+    "三视图 is the quoting key, not the 3D mesh — a factory quotes, samples and tools from a dimensioned three-view and can do nothing with a render, so it ships EARLIER than the model and costs an order of magnitude less to revise",
+    "flat art contains no side thickness or back structure; never go art -> 3D without a turnaround in between",
+    "four characters modelled separately drift on head-body ratio, eye size and ring height, and read as 'not a set' on a shelf",
+    "search a template corpus by FORMAT name over template_id first, then by subject — format names hide more than subject words do",
+    "search Chinese client corpora in Chinese: 吊坠/项链/首饰/挂件 hit, English pendant/bracelet do not"
+  ]
+}
