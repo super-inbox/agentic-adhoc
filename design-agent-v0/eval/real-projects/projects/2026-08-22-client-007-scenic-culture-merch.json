@@ -1,0 +1,348 @@
+{
+  "_schema_note": "Hand-authored to design-agent-v0-spec.md §7z because new_project.py / TEMPLATE.json live in the uncloned agentic-adhoc repo. Field shape copied from 2026-08-27-client-005-ip-merch-3d.json. Validate with to_brief.py once the repo is cloned.",
+  "_status_note": "Captured mid-project at proposal-V5. Client has NOT yet selected a colorway/layout, so `selection` is null and every `alternatives[].shown_to_client` that is true means 'included in the delivered proposal deck', not 'chosen'. The four rounds of client feedback ARE real and are recorded verbatim in `feedback[]` — this is the value of this record.",
+  "client_id": "client-007",
+  "category": "scenic_culture_merch",
+  "date_started": "2026-08-22",
+  "date_updated": "2026-08-27",
+  "provenance": {
+    "customer_data": true,
+    "redacted": true,
+    "redaction_note": "State-owned scenic-area operator. WITHHELD per §7z: real site name, contact name, the WeChat thread, all monetary figures (budget, quote, deposit, unit prices we pay) and payment terms — kept local only. RETAINED deliberately: ethnic group, dialect branch, craft technique and the totem inventory — these are public cultural heritage, are not client-identifying on their own, and are load-bearing for the design reasoning. The dialect name also appears inside a verbatim client quote in feedback[1].message; §7z treats verbatim as the asset, so it was not altered. Retail price bands are kept because they are product positioning, not a quotation."
+  },
+  "initial_query": "嗯，我们想做一系做一个系列的，我们景区的那个文创产品。然后这个系列里面可以包含种类的话，可以稍多一些吧。然后就是包括但不限于冰箱贴呀，然后什么起那个香香囊呀，然后还有什么其他的就是能成一个系列，方便向领导什么的介绍介绍出来的。",
+  "initial_query_supplement": "我们是有我们是黎族文化，然后是依托这个黎族文化和这个非遗民俗之类的，嗯想那个做一些这些方面的一些文创品，但是这个产品的话要制成一个系列。 / 不是单独一个产品的设计。 / 可以，但要有些巧思和创意在里面，结合好黎族文化和黎族图腾。",
+  "inputs": [
+    {
+      "type": "cultural_reference",
+      "form": "docx with 15 embedded PNG totem images + official names and meanings",
+      "note": "客户自己前一款产品（掼蛋扑克牌）的纹样稿。⭐ 这是全项目最关键的一份输入 —— 它是唯一可追溯的考据源头，解决了'纹样不能有偏差'的前置条件。"
+    },
+    {
+      "type": "negative_reference",
+      "form": "1 rendered mockup sheet",
+      "note": "一个卡通形象 × 18 种商品的贴图式效果图。⚠️ 该图实为我方自有模板的输出，被客户当作反面教材退回。"
+    },
+    {
+      "type": "negative_reference",
+      "form": "4 store photos",
+      "note": "吴哥/高棉主题旅游纪念品，客户评价「老气」。"
+    },
+    {
+      "type": "negative_reference",
+      "form": "1 product image",
+      "note": "掐丝珐琅 Q 版卡通磁贴，客户评价「太现代」。"
+    },
+    {
+      "type": "positive_reference",
+      "form": "4 store photos",
+      "note": "⭐ 客户自己的畅销款：激光切木框 + 真实织锦织物嵌片 + 银饰（月牙流苏/项圈）+ 带纹样边的品牌背卡。"
+    },
+    {
+      "type": "competitor_reference",
+      "form": "10 store photos",
+      "note": "某省级壁画博物馆文创店在售形态：方形深底冰箱贴、波普九宫格帆布袋、镜片清洁布、集章本。"
+    },
+    {
+      "type": "supplier_quote",
+      "form": "3 factory quotation files (PDF ×2, XLSX ×1) + 1 stock-structure PDF",
+      "note": "含起订量、打样/开模费、单价、打样与大货工期。"
+    }
+  ],
+  "constraints_stated_by_client": [
+    "整包预算为小额区间（含设计 + 打样 + 首批生产），具体金额不入库",
+    "要成系列，不是单品；产品多点、量可以不大，试销一轮后畅销品加量",
+    "要有巧思和创意，结合好黎族文化和黎族图腾",
+    "不要太模式化",
+    "图腾与织锦不能有偏差",
+    "深/墨蓝主色调",
+    "零售价带 20–50 元，最多 50–60 元",
+    "先做简单系列，礼盒不要；服饰先不弄；新增杯垫",
+    "聚焦引流 + 主力款，要精致有档次",
+    "每个产品出 3 种选择",
+    "利用好图腾的形状",
+    "8 天内出设计思路",
+    "国企主体：只能与公司签约、需要发票；小金额无招采限制"
+  ],
+  "constraints_we_added": [
+    "首批只碰低起订品类，需 500 件起订与高开模的推到第二批",
+    "同一副刀模承载多个纹样 —— 让 SKU 数与起订量解耦",
+    "纹样只能来自可追溯源头；生成式产物一律不下厂",
+    "文化红线：纹面不做具象化商品；某类祭祀用织物不用于食器与母婴",
+    "红/金点缀总占比 ≤ 5%",
+    "覆膜工艺建议弃用（与'反塑料感'方向冲突）"
+  ],
+  "alternatives": [
+    {
+      "id": "alt-1",
+      "label": "方向 A · 织一句吉祥",
+      "shown_to_client": true,
+      "description": "以'该民族有语言无文字、以织锦记事'为核心叙事，每款产品认领一句吉祥寓意，吊牌写明纹样出处与所祈之福。絣染晕边 + 墨蓝为视觉基底。",
+      "why_built": "叙事最完整，纹样可持续扩充，且'送祝福'成立可支撑客单价。"
+    },
+    {
+      "id": "alt-2",
+      "label": "方向 B · 倒扣的船",
+      "shown_to_client": true,
+      "description": "以聚落特有的船型民居为唯一母题，围绕迁徙叙事，主打立体器形与建筑感。",
+      "why_built": "识别度最高，适合高单价摆件/灯具。"
+    },
+    {
+      "id": "alt-3",
+      "label": "方向 C · 十二时",
+      "shown_to_client": true,
+      "description": "以村落一日为线索的插画语言：晨炊、织锦、稻田、溪浴、归家、火塘。",
+      "why_built": "亲和力强，适合年轻客群与亲子。"
+    },
+    {
+      "id": "alt-4",
+      "label": "冰箱贴 · 图腾外形模切",
+      "shown_to_client": true,
+      "description": "刀线沿图腾轮廓走，产品本身即图腾；同模可出多个纹样。",
+      "why_built": "直接回应客户'利用好图腾的形状'。"
+    },
+    {
+      "id": "alt-5",
+      "label": "冰箱贴 · 四种机关（转转/对开门/滑轨/双层磁吸）",
+      "shown_to_client": true,
+      "description": "工厂现有工艺，把冰箱贴从贴片变成有动作的小物。",
+      "why_built": "回应'要有巧思'，并把客单价抬高约一倍。"
+    },
+    {
+      "id": "alt-6",
+      "label": "冰箱贴 · 复合款（木框 + 织锦 + 银饰 + 背卡）",
+      "shown_to_client": true,
+      "description": "对标客户自己畅销款的三层材质结构，图腾退为焦点而非全部内容。",
+      "why_built": "第四轮反馈后重做 —— 见 feedback round 4。"
+    },
+    {
+      "id": "alt-7",
+      "label": "帆布袋 · 覆膜工艺",
+      "shown_to_client": true,
+      "description": "覆膜帆布袋，印刷鲜艳、略防水、成本低。",
+      "why_built": "初版按工厂常规报价直接采用。⚠️ 我方在第四轮自行推翻 —— 见 rejection_rationale。"
+    },
+    {
+      "id": "alt-8",
+      "label": "礼盒 / 服饰 / 摆件 / 毛绒 / 真丝",
+      "shown_to_client": true,
+      "description": "首批配置里的礼盒组合、丝巾、树脂摆件、毛绒挂件等。",
+      "why_built": "第一版按四层价格带（引流/主力/形象/礼盒）配置。"
+    },
+    {
+      "id": "alt-9",
+      "label": "八福对照表（自拟纹样体系）",
+      "shown_to_client": true,
+      "description": "依公开资料整理的 8 个纹样 → 寓意对照表，含稻穗纹、水波纹、太阳纹。",
+      "why_built": "客户尚未提供图腾原稿前的填补方案。⚠️ 收到原稿后证实其中三个纹样不在客户体系内。"
+    }
+  ],
+  "selection": null,
+  "selection_note": "方向层面客户已选定 alt-1（A 深化为主线），alt-2 暂缓、alt-3 降级为仅用于纸品 —— 这是真实的客户选择，理由见 rejection_rationale。但配色（五选一）与版式（四选一）客户尚未圈选，故整体 selection 仍为 null。",
+  "rejected_alternatives": [
+    {
+      "ref": "alt-2",
+      "rejection_rationale": "客户选定 A 后未展开 B。我方判断：B 的摆件/灯具零售天然过百，超出客户设定的 20–60 元价格带。",
+      "rationale_given": false,
+      "note": "⚠️ 客户只表达了'方向 A 做深化'，并未说明否掉 B 的理由。此处理由是我方推断，已按 §7z 标注 rationale_given:false，不替客户编造。"
+    },
+    {
+      "ref": "alt-3",
+      "rejection_rationale": "方向C 可以做明信片",
+      "rationale_given": true,
+      "note": "客户原话。等于把 C 从'系列方向'降级为'单一品类的视觉语言'。"
+    },
+    {
+      "ref": "alt-7",
+      "rejection_rationale": "我方自行推翻：覆膜是亮面塑料膜，手感假、折痕开裂、不透气，与本项目'反塑料感'的反老气清单直接冲突；且客户畅销款成立恰恰靠真实材质（木/织物/银）。",
+      "rationale_given": false,
+      "note": "非客户否决，是客户提问'这个材质是否合适'后我方的自我否定。作为 preference 信号仍然有效。"
+    },
+    {
+      "ref": "alt-8",
+      "rejection_rationale": "先做简单系列，礼盒就不要了 / 服饰先不弄 / 20-50，最多50-60元的",
+      "rationale_given": true,
+      "note": "客户原话。价格带直接判定了摆件、毛绒、真丝的出局 —— 不是审美否决，是价格结构否决。"
+    },
+    {
+      "ref": "alt-9",
+      "rejection_rationale": "隐性否决：客户提供图腾原稿后，比对发现稻穗纹、水波纹、太阳纹不在其体系内，而其体系中的龙、蝴蝶、牛、人骑牛、狗牙花、摇篮、龟、狗我方全数遗漏。",
+      "rationale_given": false,
+      "note": "⭐ 最有价值的一条否决：客户从未口头否决，是新证据让方案自我作废。这类'被数据推翻'的否决在公开语料里不存在。"
+    }
+  ],
+  "feedback": [
+    {
+      "round": 1,
+      "source": "client",
+      "date": "2026-08-22",
+      "message": "不要太这样模式化了",
+      "changed": "放弃'一个形象 × N 种商品'的贴图式做法，改为'器形本身承载文化'—— 刀线沿图腾轮廓、船型屋做成可开合香薰、书签做成经纬交错镂空。",
+      "invariants": "保持成系列、可向领导汇报的整体性。"
+    },
+    {
+      "round": 2,
+      "source": "client",
+      "date": "2026-08-22",
+      "message": "深/墨蓝主色调 / 美孚 / 图文图样 图腾：不能有偏差 / 织锦 不能有偏差 / 图腾 + 祈福 吉祥的含义，一种祝福带回去 / 方向 A 做深化 / 方向C 可以做明信片 / 20-50，最多50-60元的 / add 杯垫 先做简单系列，礼盒就不要了 / focus 引流 + 主力，精致 有档次一些 / 丝巾可以，服饰先不弄 / 每个产品 出3种选择 / 利用好图腾的形状",
+      "changed": "主色改为墨蓝双主色、红金压至 5%；确认方言分支后据此定该分支特有的扎染晕边为统一处理；品类表按 20–60 元重建（移出摆件/灯具/毛绒/真丝）；新增杯垫；去礼盒去服饰；每款出三方案；冰箱贴刀线改为沿图腾轮廓。",
+      "invariants": "整包预算不变；成系列不变；'不模式化'不变。"
+    },
+    {
+      "round": 3,
+      "source": "client",
+      "date": "2026-08-24",
+      "message": "（提供负面案例组）这些看起来老气 + （提供图腾原稿）",
+      "changed": "把'老气'拆成五条反向清单（土色系/做旧质感/写实浮雕/满版无留白/深底大面积描金）；15 式图腾全部矢量化为纹样母版；作废自拟的八福表；新增五套配色与四种版式。",
+      "invariants": "墨蓝主调、20–60 元价格带、不能有偏差。"
+    },
+    {
+      "round": 4,
+      "source": "client",
+      "date": "2026-08-27",
+      "message": "加上 图腾代表祝福的含义，比如祝福的话，让人有带走的理由。冰箱贴还是不能只有图腾的图案，其他的元素也加上，平衡一下复杂度 跟 吸引力。加一点织锦的元素，在之前的畅销款里能看到。材质：附膜的帆布袋，这个材质是否合适，以及帆布袋是否可以用更实用的材质。（并提供畅销款照片与一款'太现代'的参考）",
+      "changed": "为 15 式各写一句祝福语上吊牌；由真实图腾按织锦的行列结构生成纹样带；冰箱贴重做为复合款（背卡 + 木框 + 织锦 + 图腾 + 银饰 + 祝福语）；覆膜改为本色帆布 + 丝网印 + 缝真实织带；方向 C 落为六件套纸品。",
+      "invariants": "纹样仍只取自客户原稿；墨蓝主调；20–60 元价格带；整包报价未变。"
+    }
+  ],
+  "feedback_note": "四轮全部为客户主动反馈，message 均为原话或原话拼接（跨微信语音转写与会议纪要）。round 4 同时给出正面与负面参考，是本项目信息密度最高的一轮。",
+  "internal_review": [
+    {
+      "round": 1,
+      "source": "internal_operator",
+      "message": "we need to use the actual client-supplied totems; sections not exactly following them can be moved to appendix",
+      "changed": "把自拟八福表、母题卡、工厂案例图、生成式草案、负面参考拆解共五块移入附录；正文只保留严格来自客户原稿的内容。",
+      "invariants": "只移不删；'越忠于原纹样越现代'的结论保留在正文。"
+    },
+    {
+      "round": 2,
+      "source": "internal_operator",
+      "message": "bring A5 · 追加候选 SKU to main content",
+      "changed": "附录 A5 提到正文；附录只剩 A1–A4 备查。",
+      "invariants": "追加 SKU 均未计入报价，待客户圈选。"
+    }
+  ],
+  "preference_memory": {
+    "accepted": [
+      {
+        "signal": "真实材质叠加（木框 + 织物 + 金属）",
+        "reason": "客户自己的畅销款即此结构",
+        "source": "client"
+      },
+      {
+        "signal": "密集织锦纹样带",
+        "reason": "畅销款上真正抓眼的部分",
+        "source": "client"
+      },
+      {
+        "signal": "墨蓝为主、暖色仅作点缀",
+        "reason": "深/墨蓝主色调",
+        "source": "client"
+      },
+      {
+        "signal": "器形承载文化",
+        "reason": "利用好图腾的形状",
+        "source": "client"
+      },
+      {
+        "signal": "祝福语上吊牌",
+        "reason": "一种祝福带回去",
+        "source": "client"
+      },
+      {
+        "signal": "成套/系列",
+        "reason": "方便向领导介绍",
+        "source": "client"
+      },
+      {
+        "signal": "每款给三个选择",
+        "reason": "每个产品 出3种选择",
+        "source": "client"
+      }
+    ],
+    "rejected": [
+      {
+        "signal": "一个卡通形象 × N 种商品的贴图",
+        "reason": "不要太这样模式化了",
+        "source": "client"
+      },
+      {
+        "signal": "土色系 + 做旧质感 + 写实浮雕 + 满版无留白",
+        "reason": "老气",
+        "source": "client"
+      },
+      {
+        "signal": "掐丝珐琅 Q 版卡通",
+        "reason": "太现代",
+        "source": "client"
+      },
+      {
+        "signal": "只有图腾、没有其它元素的极简平面",
+        "reason": "冰箱贴还是不能只有图腾的图案",
+        "source": "client"
+      },
+      {
+        "signal": "礼盒组合",
+        "reason": "先做简单系列，礼盒就不要了",
+        "source": "client"
+      },
+      {
+        "signal": "服饰品类",
+        "reason": "服饰先不弄",
+        "source": "client"
+      },
+      {
+        "signal": "零售超过 60 元的品类",
+        "reason": "20-50，最多50-60元的",
+        "source": "client"
+      },
+      {
+        "signal": "覆膜工艺",
+        "reason": "我方自否：与反塑料感方向冲突",
+        "source": "operator"
+      },
+      {
+        "signal": "非客户体系内的纹样（稻穗/水波/太阳）",
+        "reason": "图腾不能有偏差",
+        "source": "client"
+      }
+    ]
+  },
+  "project_state": {
+    "locked_invariants": [
+      "纹样只能取自客户提供的 15 式原稿，生成式产物不下厂",
+      "墨蓝为主色，红/金点缀 ≤ 5%",
+      "零售价带 20–60 元",
+      "整包小额预算，含设计 + 打样 + 首批生产",
+      "成系列，可向上级汇报",
+      "国企主体：对公签约 + 增值税发票"
+    ],
+    "open_questions": [
+      "配色五选一、版式四选一尚未圈选",
+      "某图腾中央含一对万字纹，与另一标志外形接近；已列三个处理选项待客户决定",
+      "客户尚未提供织锦实物高清图或原稿矢量文件",
+      "7 款清单尚未向工厂正式核价（现价为三家报价单的参考价）"
+    ]
+  },
+  "outcome": {
+    "status": "in_progress",
+    "date": "2026-08-27",
+    "delivered": [
+      "整体方案（网页版，15 节 + 附录，26 图）",
+      "15 式图腾矢量母版库（交付后归客户所有）",
+      "五套配色 / 四种版式 / 复合冰箱贴 4 款 / 六件套纸品 / 追加 SKU 两组",
+      "首批 7 款 SKU 配置与整包报价"
+    ],
+    "converted": null,
+    "note": "尚未签约。报价四轮未变，新增设计均未计入，待客户圈选后并入。付款结构不入库（§7z）。"
+  },
+  "reusable_lessons": [
+    "⭐ 客户的旧产品是最好的考据源头。要到那份图腾稿之前，我方自拟的纹样体系有 3/8 是错的、并遗漏了对方体系里的 8 个 —— 而客户从未口头否决，是新证据让方案自我作废。做民族/非遗题材，第一件事应是索取客户已有的纹样稿，而不是查公开资料。",
+    "⭐ 客户的畅销款比任何 brief 都准确地定义了'好'。它是三层材质叠加（木 + 织物 + 银），而我方一直在做极简平面。两个负面参考（老气/太现代）把口味区间从两头夹住，畅销款正落在中点 —— 三个参考合起来才定位得出靶心，单看任何一个都不够。",
+    "民族纹样是织机产物，因而天然是平面、几何、等宽笔画的。这意味着'忠于原纹样'与'不老气'指向同一方向，不冲突 —— 准确性在这类项目里不是对创意的约束，而是现代感的来源。",
+    "小批量文创的第一约束是起订量而非预算。工厂普遍 300–500 件起，金属/毛绒 500–1000。'多品类 + 每款一两百件'在工厂端不成立。破解是同刀模不同图案（SKU 数与起订量解耦）+ 现货结构定制。任何未核过起订量的小批量报价都会在打样后加价。",
+    "生成式产出在民族纹样上必然有偏差（比例、单元重复方式、组合规矩）。正确用法是只用于探索器形与版式，纹样另走'考据取样 → 矢量还原 → 受控应用'，并在方案里明确标注哪些图不能下厂。",
+    "价格带是品类的隐形筛子。客户说 20–60 元，等于同时否决了摆件、灯具、毛绒、真丝 —— 这是价格结构否决，不是审美否决，不必再出这些方案。",
+    "工厂的'订货免费设计'只是把客户给的图排成刀线文件，不含文化研究与系列策划。这恰是客户觉得参考稿模式化的原因，也是设计费的立足点。"
+  ]
+}
