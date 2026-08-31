@@ -1,0 +1,170 @@
+{
+  "_schema_note": "Hand-authored to design-agent-v0-spec.md §7z because new_project.py / TEMPLATE.json live in the uncloned agentic-adhoc repo. Validate with to_brief.py before committing; check client-006 for an id collision.",
+  "_status_note": "Captured at variants-generated, pre-delivery. Nothing has been shown to the client, so every `alternatives[].shown_to_client` is false, `selection` is null and `feedback` is EMPTY BY DESIGN. The rejections recorded here are the OPERATOR's, marked `rejected_by: operator` — they must not be read as client taste (§7z-B4).",
+  "_provenance_warning": "`initial_query` is NOT client verbatim. See initial_query_note — this is the one §7z-A field that was not captured at source, and the record says so rather than dressing up the relay as an original quote.",
+
+  "client_id": "client-006",
+  "category": "fashion_model_swap",
+  "date_started": "2026-08-28",
+  "date_updated": "2026-08-29",
+
+  "provenance": {
+    "customer_data": true,
+    "redacted": false,
+    "redaction_note": "No brand, contact or garment SKU was disclosed to the authoring session, so none is withheld — there is simply nothing to redact yet. The garment photograph and the 12 model reference photographs are client / third-party material and stay local under curify-gallery; only this structured layer is for commit. If the brand name surfaces later it goes in .client-key.json, never here."
+  },
+
+  "initial_query": "we have a 女装模特换装 request from supply chain, 主要把控服装细节 衣长 胸围等",
+  "initial_query_note": "OPERATOR RELAY, not the client's own words. The operator paraphrased the ask when handing it over; the client's original phrasing was never captured. Recorded verbatim as the operator said it and flagged, because §7z-A treats the client's own wording as the field that cannot be reconstructed later — and a relay silently promoted to a quote is exactly the contamination the protocol is guarding against. If the original WeChat message still exists, replace this field and drop the note.",
+
+  "initial_query_supplement": "一件衣服是需要5张图 from the same model, we generated 3 before, can use different pose for different variations. Among the 3 generations, model-swap-01 shows the underwear, 原模特的这样的内搭还是需要避免掉",
+  "initial_query_supplement_note": "Also operator wording, delivered 2026-08-29 after reviewing the first three takes. Carries the two constraints that shaped the second build: the set size (5) and the layering rule.",
+
+  "inputs": [
+    {"type": "garment_photo", "form": "single JPEG, 3024x4032, garment on a dress form in what looks like a showroom", "note": "the item under test; EVERY property of the clothing must come from here"},
+    {"type": "model_reference", "form": "1 JPEG at intake, extended to 12 photos of the SAME model on day 2", "note": "contributes pose, framing, lighting, background and body type ONLY — never its own garment. Two of the twelve are byte-identical duplicates."},
+    {"type": "spec_sheet", "form": "NOT PROVIDED", "note": "the client measures 衣长/胸围 against numbers in centimetres that we have never seen. This absence is the single blocker on building the measurement gate — see project_state.open_questions."}
+  ],
+
+  "constraints_stated_by_client": [
+    "主要把控服装细节 — garment detail fidelity is the point of the exercise, not photographic appeal",
+    "衣长 and 胸围 are the two measured acceptance criteria",
+    "5 images per garment, all on the same model",
+    "pose may vary between the 5"
+  ],
+
+  "constraints_we_added": [
+    "the cardigan is worn CLOSED with every placket button fastened — no camisole, bra, tank or contrast inner garment visible anywhere",
+    "whatever the reference model wears underneath does not carry over",
+    "pose references are chosen from among those whose own top is a single layer, so there is nothing underneath to bleed through in the first place",
+    "one distinct reference per take — passing the same reference five times yields five near-identical frames, which is not a set",
+    "衣长/胸围 verification must be ratio-against-pose-landmarks, never a pixel or proportion comparison with the garment photo: the source is a dress form and the output is a person, sharing no landmark, scale or pose",
+    "the pass/fail threshold has to come from the client's centimetre spec sheet; a threshold invented from the images measures nothing"
+  ],
+
+  "alternatives": [
+    {
+      "id": "swap-01",
+      "label": "take 01 — original single reference",
+      "shown_to_client": false,
+      "rejected_by": "operator",
+      "rejection_rationale": "原模特的这样的内搭还是需要避免掉 — the cardigan rendered hanging open over the reference model's camisole, hiding the placket and reading as underwear",
+      "rationale_given": true,
+      "description": "pose from model-ref.jpeg; garment worn open over a grey inner top"
+    },
+    {
+      "id": "swap-02",
+      "label": "take 02 — original single reference",
+      "shown_to_client": false,
+      "description": "mostly closed, a small sliver of the inner top still visible at the waist; plain straight ribbed hem",
+      "defect": "hem tab absent — built against the wrong hem spec, see reusable_lessons[0]"
+    },
+    {
+      "id": "swap-03",
+      "label": "take 03 — original single reference",
+      "shown_to_client": false,
+      "description": "closed, no inner layer visible; plain straight ribbed hem",
+      "defect": "hem tab absent — same wrong spec"
+    },
+    {
+      "id": "swap-04",
+      "label": "take 04 — front standing, wide-leg",
+      "shown_to_client": false,
+      "description": "pose ref e0542f50. Closed placket, 7 placket buttons + 2 hem-tab buttons, pointed hem tab with visible buttonholes, relaxed body. The most measurable frame of the six for 衣长/胸围.",
+      "why_built": "a full-length front view is the one a buyer can actually judge length and ease from"
+    },
+    {
+      "id": "swap-05",
+      "label": "take 05 — 3/4 turn",
+      "shown_to_client": false,
+      "description": "pose ref ed72c63e. Closed, correct button counts, hem tab correct, shows the side silhouette and the tab in profile.",
+      "why_built": "the hem tab is a side-visible structure; a front-only set cannot show it resolving around the body"
+    },
+    {
+      "id": "swap-06",
+      "label": "take 06 — walking, interior",
+      "shown_to_client": false,
+      "description": "pose ref 6cc7352a. Closed, correct button counts, hem tab correct. Lifestyle frame.",
+      "open_defect": "the model's hair is DOWN and loose here while takes 02-05 have the updo — inherited from the walking reference. Same face, but across one listing it reads as two separate shoots. Not yet rejected: awaiting the operator's call between accepting it as the lifestyle frame or re-running the slot against an updo reference.",
+      "why_built": "an e-commerce set of five is usually not five studio frames"
+    }
+  ],
+
+  "selection": null,
+  "selection_note": "No client selection — nothing has been delivered. The operator's working set is swap-02..06 (dropping swap-01), which is 5, but that is an internal pick and must not be backfilled here as a client choice.",
+
+  "feedback": [],
+  "feedback_note": "Empty because no CLIENT revision round has happened. Both revision rounds so far were the operator's own and are recorded under internal_review.",
+
+  "internal_review": [
+    {
+      "round": 1,
+      "source": "internal_operator",
+      "message": "please build the python workflow to generate output image for the first case, then check if we need to build verification for 服装细节 衣长 胸围 etc.",
+      "changed": "built tools/model-swap/ — model_swap.py, spec.example.json, README.md. Prompt separates the two inputs by role and names silhouette bleed explicitly, since the reference garment is fitted and the test garment is boxy.",
+      "invariants": "the garment/model role split is the tool's whole thesis and was fixed from the first commit: garment photo owns every clothing property, model photo owns pose/framing/light/background/body and nothing else"
+    },
+    {
+      "round": 2,
+      "source": "internal_operator",
+      "message": "一件衣服是需要5张图 from the same model, we generated 3 before, can use different pose for different variations. Among the 3 generations, model-swap-01 shows the underwear, 原模特的这样的内搭还是需要避免掉",
+      "changed": "--model now takes several references and take i draws its pose from reference i; --start-index extends an existing set instead of overwriting it; manifest.json records which pose fed which output. Added a LAYERING block to the prompt: worn closed, every button fastened, no camisole/bra/tank/lace visible, the reference's inner garment does not carry over. Generated takes 04-06 against three single-layer pose references.",
+      "invariants": "the measurable-requirements block and the silhouette-bleed warning were left untouched — the layering fix is additive, and the fit constraint is what protects 胸围"
+    },
+    {
+      "round": 3,
+      "source": "internal_authoring_session",
+      "message": "(not an operator instruction — a defect found while reading the garment photograph closely enough to write the spec)",
+      "changed": "corrected the spec: the hem is NOT a 'notched V-split'. It is a wide ribbed hem band angling into two pointed centre-front tabs, the right tab overlapping the left and fastened by TWO more pale-yellow buttons, left tab carrying the buttonholes. Nine yellow buttons in total, not seven. Takes 04-06 reproduce it; 01-03 do not.",
+      "invariants": "the seven-button placket count in the original spec was correct and was kept"
+    }
+  ],
+
+  "preference_memory": {
+    "accepted": [
+      {"signal": "one distinct pose reference per take rather than repeating a single reference", "source": "operator", "note": "client-side confirmation still pending"},
+      {"signal": "garment worn fully closed so the placket and its button count are legible", "source": "operator"},
+      {"signal": "the pointed buttoned hem tab rendered as the signature detail", "source": "internal_authoring_session", "note": "inferred from 主要把控服装细节, not stated — treat as weak"}
+    ],
+    "rejected": [
+      {"signal": "product garment worn open over the reference model's inner top", "reason": "原模特的这样的内搭还是需要避免掉", "source": "operator"}
+    ]
+  },
+
+  "project_state": {
+    "locked_invariants": [
+      "every property of the clothing comes from the garment photo; the model reference contributes pose, framing, lighting, background and body type only",
+      "the product is worn as one clean closed layer — no inner garment from the reference survives",
+      "衣长/胸围 are never measured against the dress-form photo",
+      "the set is 5 images of one garment on one model"
+    ],
+    "open_questions": [
+      "what are the actual centimetre tolerances for 衣长 and 胸围? Without them the ratio gate has no threshold and cannot be built.",
+      "is swap-06's hair-down inconsistency acceptable as a lifestyle frame, or does that slot get re-run against an updo reference?",
+      "does the client want a back view among the 5? None of the 12 references is a back view, so it is currently unbuildable.",
+      "is a fitting model's identity licensed for synthetic reuse? The 12 references look like third-party e-commerce imagery."
+    ]
+  },
+
+  "outcome": {
+    "status": "variants_generated",
+    "date": "2026-08-29",
+    "delivered": [
+      "tools/model-swap/ — model_swap.py, spec.example.json, README.md",
+      "6 takes, 5 keepers (swap-02..06), staged in curify-gallery/client_VC_portfolio/fashion-model-08-28/"
+    ],
+    "converted": null,
+    "note": "Nothing sent to the client yet. Verification for 衣长/胸围 is specified but deliberately unbuilt, blocked on the centimetre spec sheet."
+  },
+
+  "reusable_lessons": [
+    "the detail failure was a SPEC-FIDELITY failure, not a generator failure — all three early takes flattened the hem because the spec said 'notched V-split', and they were right to. Detail compliance went 0/3 to 3/3 from re-reading the garment photograph, with no checker involved. Read the product hard enough to describe it before deciding you need a gate to catch what you failed to describe.",
+    "a gate on a generator that fails half the time just automates rejection; fix the prompt first, measure second",
+    "do not compare a garment-on-person output against a garment-on-dress-form source: no shared landmark, no shared scale, no shared pose. Any proportion measured between them is measuring the dress form.",
+    "measure 衣长/胸围 as ratios against pose landmarks ((hem_y - shoulder_y)/(hip_y - shoulder_y); garment_width_at_bust / body_width_at_bust) — ratios survive crop and camera distance, absolute pixels do not",
+    "prevent inner-layer bleed structurally, not only by instruction: choose pose references whose own top is a single layer, so there is nothing underneath for the model to carry over",
+    "one reference photo cannot produce a 5-image set — pose variation has to come from distinct references, and the manifest has to record which one fed which output or the set is unauditable",
+    "reference photos of the same model still differ in hair styling, and a listing set inherits that inconsistency silently; check styling continuity across the set, not just garment fidelity",
+    "discrete detail (button count, cuff colour, hem structure) is checkable by a vision model reading the spec; deterministic blob-counting on knit texture is the recorded trap from threeview/consistency_gate.py — right maths, wrong input class"
+  ]
+}
