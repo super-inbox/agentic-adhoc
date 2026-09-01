@@ -1,0 +1,156 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359718",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359718",
+    "url": "https://99designs.com/brand-identity-pack/contests/greenwich-protocol-design-concept-1359718",
+    "page_title": "The greenwich protocol - design concept | Logo & brand identity pack contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "The Greenwich Protocol - Design Concept",
+    "status": "finished",
+    "category_label": "logo & brand identity pack",
+    "category": "logo_brand_identity_pack",
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "client_display_name": "mattheMUK",
+    "entry_count": 147,
+    "designer_count": 57,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "The Greenwich Protocol is an invitation-only experience built around the themes of discovery, navigation, trust, perspective and ... At this stage, we…",
+    "vision_public_excerpt": null,
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_165072316",
+    "winner_designer": "Designer Mehfuz",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Fantastic designer and a pleasure to work with. They took the time to understand a complex brief and translated it into a logo that captured the philosophy of the brand, not…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_165072316",
+      "role": "winner",
+      "selected": true,
+      "designer": "Designer Mehfuz",
+      "alt": "\"The Greenwich Protocol - Design Concept\" winning Logo & brand identity pack by Designer Mehfuz",
+      "local_file": "attachment_165072316.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 19596,
+      "sha256": "d854fe4c60b8c382af3726a7be774e933d59c2ffaeea265aef693399e3dd20b0",
+      "source_preview_url": "https://images-platform.99static.com/83YcJSlkYbv10J0okYTfeoSPjf4=/743x0:1306x563/500x500/top/smart/99designs-contests-attachments/165/165072/attachment_165072316"
+    },
+    {
+      "entry_id": "attachment_165044033",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "ChioP",
+      "alt": "Logo & brand identity pack contest entry by ChioP",
+      "local_file": "attachment_165044033.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 16002,
+      "sha256": "6ebbf94632a6dc6d66e87013692fb139cce6ba6a5db7779743f24f478f3b2d13",
+      "source_preview_url": "https://images-platform.99static.com/UVOJVx0U3grhdgtRwo6Mv-3lfH0=/134x181:1757x1804/500x500/top/smart/99designs-contests-attachments/165/165044/attachment_165044033"
+    },
+    {
+      "entry_id": "attachment_165044564",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Mieko®",
+      "alt": "Logo & brand identity pack contest entry by Mieko®",
+      "local_file": "attachment_165044564.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 43513,
+      "sha256": "7366b33a8e653c4b53b7bd6f9ac81d0445eb91b1fd888de04f021cd08618bad2",
+      "source_preview_url": "https://images-platform.99static.com/t2M_Jh_d-RsEyqpkxg3OKP4wKgk=/0x0:1769x1769/500x500/top/smart/99designs-contests-attachments/165/165044/attachment_165044564"
+    },
+    {
+      "entry_id": "attachment_165044797",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Jatinder005",
+      "alt": "Logo & brand identity pack contest entry by Jatinder005",
+      "local_file": "attachment_165044797.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 10110,
+      "sha256": "f1af9282c6907ea0a4dc1d2aa19f4a70eebb6a43213c96352d29c918b609fe53",
+      "source_preview_url": "https://images-platform.99static.com/Qk8LH8Ch575d1_Aw81DkkKpA9eo=/200x200:1800x1800/500x500/top/smart/99designs-contests-attachments/165/165044/attachment_165044797"
+    },
+    {
+      "entry_id": "attachment_165045424",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "ChioP",
+      "alt": "Logo & brand identity pack contest entry by ChioP",
+      "local_file": "attachment_165045424.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 15857,
+      "sha256": "10bd2161b321c7ca3d293f869cea1b0afe232ff32a4197ff99a3d5057b4851a7",
+      "source_preview_url": "https://images-platform.99static.com/LxucyE4HaLSYyrgvV-7hDbszAtQ=/187x187:1687x1687/500x500/top/smart/99designs-contests-attachments/165/165045/attachment_165045424"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359454",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359454",
+    "url": "https://99designs.com/logo-design/contests/wandering-wings-1359454",
+    "page_title": "Wandering wings | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Wandering Wings",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "hello26!",
+    "entry_count": 272,
+    "designer_count": 93,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "Adventure Sports Wellness (optional)",
+    "about_us": "Luxury group travel",
+    "vision_public_excerpt": null,
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164963571",
+    "winner_designer": "ChemcoRD",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Communicative and responsive. Provided several options and was helpful to make the right decision."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164963571",
+      "role": "winner",
+      "selected": true,
+      "designer": "ChemcoRD",
+      "alt": "\"Wandering Wings\" winning Logo design by ChemcoRD",
+      "local_file": "attachment_164963571.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 37040,
+      "sha256": "03b7d8676e22ddc601b1009120fc66f20f389ee809e71a27e329b9661ca91498",
+      "source_preview_url": "https://images-platform.99static.com/7O02XK8wKshiXo8_6HyBZdP8QFA=/200x200:1800x1800/500x500/top/smart/99designs-contests-attachments/164/164963/attachment_164963571"
+    },
+    {
+      "entry_id": "attachment_164966940",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "NuriCreative",
+      "alt": "Logo design contest entry by NuriCreative",
+      "local_file": "attachment_164966940.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 19586,
+      "sha256": "6c15424cb1817290dc42dde93a094395243b052878f51aa4891fb001589ab4c2",
+      "source_preview_url": "https://images-platform.99static.com/dd1xDHOuxD_lSSxmD4dFC0ou7Fs=/421x0:1578x1157/500x500/top/smart/99designs-contests-attachments/164/164966/attachment_164966940"
+    },
+    {
+      "entry_id": "attachment_165017530",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Brokoola",
+      "alt": "Logo design contest entry by Brokoola",
+      "local_file": "attachment_165017530.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 22213,
+      "sha256": "5615f30a310c76aed80c297fa5e4927eef7d01b1b69ff2ea06ef873620944bef",
+      "source_preview_url": "https://images-platform.99static.com/Hgn8go0CBF00qCtIy3kGdr9o7nY=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/165/165017/attachment_165017530"
+    },
+    {
+      "entry_id": "attachment_164962789",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Microlab™",
+      "alt": "Logo design contest entry by Microlab™",
+      "local_file": "attachment_164962789.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 14319,
+      "sha256": "17a6c58b20c3e81e2a887c02f024c7392af66dcd2c235bf874a0f1c2c21b1614",
+      "source_preview_url": "https://images-platform.99static.com/GsgKTaEjK8EQ_-d6okmOfmpLllI=/124x124:1117x1117/500x500/top/smart/99designs-contests-attachments/164/164962/attachment_164962789"
+    },
+    {
+      "entry_id": "attachment_165017386",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Brokoola",
+      "alt": "Logo design contest entry by Brokoola",
+      "local_file": "attachment_165017386.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 23403,
+      "sha256": "f45bb544cc16f790f2c0a130c34038f951d1fc801c6ff17d352eddd66c7e52c9",
+      "source_preview_url": "https://images-platform.99static.com/H1k7xJJDOPTM-Bj93awUTLASsYw=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/165/165017/attachment_165017386"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

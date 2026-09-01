@@ -1,0 +1,155 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1358961",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1358961",
+    "url": "https://99designs.com/banner-ad-design/contests/girl-dog-1358961",
+    "page_title": "Girl with dog | Banner ad contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Girl with dog",
+    "status": "finished",
+    "category": "banner_ad",
+    "industry": "Art & Design",
+    "package": "Bronze",
+    "client_display_name": "simbans",
+    "entry_count": 104,
+    "designer_count": 28,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "about_us": "standalone drawing tablets",
+    "vision_public_excerpt": "Similar to the sample images of boy, girl and dog, I want to create a drawing of a girl playing with dog (sample attached) with logo printed on ...",
+    "other_notes": "no",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete vision text where the public excerpt contains ellipses",
+      "exact dimensions where omitted",
+      "referenced input attachments"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF",
+      "XD"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_designer": "DESIGN-TRIX",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "excellent work, thanks!!",
+    "winner_entry_id": "attachment_164835807"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164835807",
+      "role": "winner",
+      "selected": true,
+      "designer": "DESIGN-TRIX",
+      "alt": "\"Girl with dog\" winning Banner ad by DESIGN-TRIX",
+      "local_file": "attachment_164835807.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 53843,
+      "sha256": "bda6cdcda2b1c9f35d2868af40249c3b97203c15f595a9c1e4242a3dd020411f",
+      "source_preview_url": "https://images-platform.99static.com/1ij6W7l3GkCCTlrg5Du_6APribE=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164835/attachment_164835807"
+    },
+    {
+      "entry_id": "attachment_164811543",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Gunadika",
+      "alt": null,
+      "local_file": "attachment_164811543.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 440017,
+      "sha256": "a58d8dd820de22f9d5f7b7aaaeaa26cd7f498fff3670dc63517e4631bd72017a",
+      "source_preview_url": "https://images-platform.99static.com/EIbYQFJ9Y5jcSxSGjWo-rECqu6w=/125x125:1128x1128/500x500/top/smart/99designs-contests-attachments/164/164811/attachment_164811543"
+    },
+    {
+      "entry_id": "attachment_164811639",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Dezione",
+      "alt": null,
+      "local_file": "attachment_164811639.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 450118,
+      "sha256": "9f0c654146aedfbbd830221a34f9907209f8dec2676aa29d54690b2317de39e7",
+      "source_preview_url": "https://images-platform.99static.com/j_4fxuwMGDTRHDBrgYO9KKOYpXU=/293x162:1161x1030/500x500/top/smart/99designs-contests-attachments/164/164811/attachment_164811639"
+    },
+    {
+      "entry_id": "attachment_164811689",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Gunadika",
+      "alt": null,
+      "local_file": "attachment_164811689.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 363830,
+      "sha256": "7633f5f94feb51df68eafa7a85a8e076f9e931b73256b55fd18a0223e077d2c1",
+      "source_preview_url": "https://images-platform.99static.com/SR3GEQu4W_HszoCKhY9N74MJXDw=/125x125:1128x1128/500x500/top/smart/99designs-contests-attachments/164/164811/attachment_164811689"
+    },
+    {
+      "entry_id": "attachment_164811777",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Gunadika",
+      "alt": null,
+      "local_file": "attachment_164811777.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 368307,
+      "sha256": "299a9bee8efca35769a7c08a29b726e989fee091a03eb07f135028835547ce21",
+      "source_preview_url": "https://images-platform.99static.com/jWD9gNaIPEDuPZhzlg5fQcYju5c=/125x125:1128x1128/500x500/top/smart/99designs-contests-attachments/164/164811/attachment_164811777"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "cross-contest consistency fixture for the same client and product"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}
