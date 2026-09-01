@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-881492",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "881492",
+    "url": "https://99designs.com/other-book-magazine-design/contests/creative-design-magazine-ad-private-jet-company-881492",
+    "page_title": "Creative design for magazine ad- private jet company | Other book or magazine contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "other_book_or_magazine",
+    "category_label": "other book or magazine",
+    "client_display_name": "contactAV",
+    "designer_count": 6,
+    "entry_count": 35,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Creative design for magazine ad- Private Jet Company",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us We are a private jet ... Our customers are regular business class ... We offer the most affordable private jet ... What's your vision? We need to design or rethink our mockup design for our next magazine ... We will attach what we have (we are not happy with). There is too much clutter at the… Other notes We have a deadline until next week ...",
+    "vision_public_excerpt": "We need to design or rethink our mockup design for our next magazine ... We will attach what we have (we are not happy with). There is too much clutter at the…",
+    "other_notes": "We have a deadline until next week ...",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_103196829",
+    "winner_designer": "Harrison Razzaq",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Harrison was wonderful to work with. Their designs were creative and unique and they were quick to respond, as well as patient with my adjustment requests. I would highly…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_103196829",
+      "role": "winner",
+      "selected": true,
+      "designer": "Harrison Razzaq",
+      "alt": "\"Creative design for magazine ad- Private Jet Company\" winning Other book or magazine by Harrison Razzaq",
+      "local_file": "attachment_103196829.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 56470,
+      "sha256": "11ecfe6b2f09a3792f1e86071795c7eea3678bcc27e0191e3c0ca6fb40808183",
+      "source_preview_url": "https://images-platform.99static.com/XgOLvbx_gz7yTDRL03sIQih0O14=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/103/103196/attachment_103196829"
+    },
+    {
+      "entry_id": "attachment_103193715",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Rav Astra",
+      "alt": "Other book or magazine contest entry by Rav Astra",
+      "local_file": "attachment_103193715.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 47685,
+      "sha256": "bddcf548ff05463e0d2b1edaea369cbb130ebdb67c84db7d4eee773410d2f97f",
+      "source_preview_url": "https://images-platform.99static.com/lW_1jiORPsp5bE2v-Xwb4EFFj9w=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/103/103193/attachment_103193715"
+    },
+    {
+      "entry_id": "attachment_103194512",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Rav Astra",
+      "alt": "Other book or magazine contest entry by Rav Astra",
+      "local_file": "attachment_103194512.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 52223,
+      "sha256": "99a0b7d64ec4a206a7c3f77beed07f74b26eaac2b4c719224b409841711800ba",
+      "source_preview_url": "https://images-platform.99static.com/sqZ2zCRMYglyxFYemQVlDHjkolg=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/103/103194/attachment_103194512"
+    },
+    {
+      "entry_id": "attachment_103158435",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "LayoutBG",
+      "alt": "Other book or magazine contest entry by LayoutBG",
+      "local_file": "attachment_103158435.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 63710,
+      "sha256": "10bed8e9ce7cd08046d2871266a2c3a274021b480ad078e12abaa226fad6148e",
+      "source_preview_url": "https://images-platform.99static.com/3H2CvwBcua657ErwercoTKiuL9Y=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/103/103158/attachment_103158435"
+    },
+    {
+      "entry_id": "attachment_103159412",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "LayoutBG",
+      "alt": "Other book or magazine contest entry by LayoutBG",
+      "local_file": "attachment_103159412.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 62603,
+      "sha256": "6da61567fe01ef625fe36948f7e61d18006b819ad2214ad1920fbbfb46c38724",
+      "source_preview_url": "https://images-platform.99static.com/iawdbeQcotaC992dh6tiqTC9X6U=/7x7:2000x2000/500x500/top/smart/99designs-contests-attachments/103/103159/attachment_103159412"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Book & Magazine",
+    "subcategory": "Other Book or Magazine"
+  }
+}

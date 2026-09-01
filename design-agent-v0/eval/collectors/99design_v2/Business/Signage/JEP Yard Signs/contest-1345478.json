@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1345478",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1345478",
+    "url": "https://99designs.com/signage-design/contests/jep-yard-signs-1345478",
+    "page_title": "Jep yard signs | Signage contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "signage",
+    "category_label": "signage",
+    "client_display_name": "andreI69",
+    "designer_count": 24,
+    "entry_count": 152,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "JEP Yard Signs",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us This is a short term rental management company in Northeast ... Our audience is home-owners we are looking to take over managing their ... Also, guests… What's your vision? Yard signs to put out in front of properties to let guests know Joseph Ellen manages ... We want to include a qr code to scan to book the property",
+    "vision_public_excerpt": "Yard signs to put out in front of properties to let guests know Joseph Ellen manages ... We want to include a qr code to scan to book the property",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_161797585",
+    "winner_designer": "HM Design Works",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "LOVED multiple designs that they came up with! looking forward to working with them again in the future!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_161797585",
+      "role": "winner",
+      "selected": true,
+      "designer": "HM Design Works",
+      "alt": "\"JEP Yard Signs\" winning Signage by HM Design Works",
+      "local_file": "attachment_161797585.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 22723,
+      "sha256": "4fe0c84050434198f7a9e1dc0a3225681134f336088b9744b245469d504cc15b",
+      "source_preview_url": "https://images-platform.99static.com/sfQ59CgNm2uzDSCEYZ006ybqLKI=/91x0:1791x1700/500x500/top/smart/99designs-contests-attachments/161/161797/attachment_161797585"
+    },
+    {
+      "entry_id": "attachment_161669500",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Sketch Media™",
+      "alt": "Signage contest entry by Sketch Media™",
+      "local_file": "attachment_161669500.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 69232,
+      "sha256": "39e47693ede9a5c2082b28b46a9f427768d8be314ed546a66045509201ebbe96",
+      "source_preview_url": "https://images-platform.99static.com/Dn5QR8ei3iq9dyLmb2umIuwtAnM=/209x419:1809x2019/500x500/top/smart/99designs-contests-attachments/161/161669/attachment_161669500"
+    },
+    {
+      "entry_id": "attachment_161676757",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "HM Design Works",
+      "alt": "Signage contest entry by HM Design Works",
+      "local_file": "attachment_161676757.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 22329,
+      "sha256": "844169c8027667115a96c47584a12d7708b79991657f1026abd78e35ff6428cf",
+      "source_preview_url": "https://images-platform.99static.com/plPA-4zaFX_Fj_iq9W_w1tAZmkc=/95x0:1795x1700/500x500/top/smart/99designs-contests-attachments/161/161676/attachment_161676757"
+    },
+    {
+      "entry_id": "attachment_161677233",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Dzine Solution",
+      "alt": "Signage contest entry by Dzine Solution",
+      "local_file": "attachment_161677233.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 57021,
+      "sha256": "982ddf51b0aaad09fa09371af0d4caa038aa72b59cfcb16f02830ff2853e7a76",
+      "source_preview_url": "https://images-platform.99static.com/jUAiVgKGARTFXzeLBeCkQsKqp3A=/209x425:1723x1939/500x500/top/smart/99designs-contests-attachments/161/161677/attachment_161677233"
+    },
+    {
+      "entry_id": "attachment_161691263",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "websmartusa",
+      "alt": "Signage contest entry by websmartusa",
+      "local_file": "attachment_161691263.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 84270,
+      "sha256": "562c9fe78e883665f30b3a0642e5ab3515943ae37d60baa23e88d623c84a756a",
+      "source_preview_url": "https://images-platform.99static.com/gami0NWD5ToP1n-B-1qIu65mRw4=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/161/161691/attachment_161691263"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Business & Advertising",
+    "subcategory": "Signage"
+  }
+}

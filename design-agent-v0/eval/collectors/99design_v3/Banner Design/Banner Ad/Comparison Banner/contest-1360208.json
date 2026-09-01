@@ -1,0 +1,163 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1360208",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1360208",
+    "url": "https://99designs.com/banner-ad-design/contests/comparison-banner-1360208",
+    "page_title": "Comparison banner | Banner ad contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Comparison Banner",
+    "status": "finished",
+    "category": "banner_ad",
+    "industry": "Art & Design",
+    "package": "Bronze",
+    "client_display_name": "simbans",
+    "entry_count": 49,
+    "designer_count": 12,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "about_us": "Standalone Drawing Tablet",
+    "vision_public_excerpt": "see attached mockup and wireframe ... I need this banner designed ... the background should be light orange ... the banner size should be... x...",
+    "other_notes": "no",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete vision text where the public excerpt contains ellipses",
+      "exact dimensions where omitted",
+      "referenced input attachments"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF",
+      "XD"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_designer": "Tushar K∎",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent work. Thank you",
+    "winner_entry_id": "attachment_165193598"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_165193598",
+      "role": "winner",
+      "selected": true,
+      "designer": "Tushar K∎",
+      "alt": "\"Comparison Banner\" winning Banner ad by Tushar K∎",
+      "local_file": "attachment_165193598.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 65895,
+      "sha256": "cd01cf75d8f51a8b3ae082a6fe0b1c65137be4f9d42427cfb74a4814643daad1",
+      "source_preview_url": "https://images-platform.99static.com/BRFdcD5NrqxETpJKZNJJ68JNbd8=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/165/165193/attachment_165193598"
+    },
+    {
+      "entry_id": "attachment_165183495",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Vishal Web Solution",
+      "alt": null,
+      "local_file": "attachment_165183495.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 52543,
+      "sha256": "e9f6fe0fc2b14923a5890a8d52a9ba7ae66196cd057af9324ff84e16d3e0209b",
+      "source_preview_url": "https://images-platform.99static.com/QOJznecw3Q7Iu8N49mkz8ApX5mI=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/165/165183/attachment_165183495"
+    },
+    {
+      "entry_id": "attachment_165190984",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "lukes™",
+      "alt": null,
+      "local_file": "attachment_165190984.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 332564,
+      "sha256": "debd1d268e0af485fc44b825d3a090f343661442582857df9ef02ad993ec34f1",
+      "source_preview_url": "https://images-platform.99static.com/C7Q2-AkNaddI8ObCv8tncy2XUWc=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/165/165190/attachment_165190984"
+    },
+    {
+      "entry_id": "attachment_165188588",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Umair Graphic's",
+      "alt": null,
+      "local_file": "attachment_165188588.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 128924,
+      "sha256": "24c44d55d379dc21b92bf44d08086c129e1e4903f67e7b1ad58c29494f46ff4a",
+      "source_preview_url": "https://images-platform.99static.com/1lQqZVGOlPp02gzR5RUoKC-dN84=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/165/165188/attachment_165188588"
+    },
+    {
+      "entry_id": "attachment_165188774",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Siddharth Kamble108",
+      "alt": null,
+      "local_file": "attachment_165188774.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 122301,
+      "sha256": "aa171cbcb2a07b4558b729d01126215335c21258e319b11e0111efc79db6f02f",
+      "source_preview_url": "https://images-platform.99static.com/apV6v7HFYFdhMXt-OhnBgyfaEn0=/0x0:1900x1900/500x500/top/smart/99designs-contests-attachments/165/165188/attachment_165188774"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "cross-contest consistency fixture for the same client and product"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Banner Design",
+    "subtype": "Banner Ad",
+    "original_category": "banner_ad",
+    "source_record": "Art Design/Comparison banner/contest-1360208.json",
+    "source_record_sha256": "92fc6c0140af6e864b5b0f15ebed33088348b139c0f9cc161f22975ffef95c9f"
+  }
+}

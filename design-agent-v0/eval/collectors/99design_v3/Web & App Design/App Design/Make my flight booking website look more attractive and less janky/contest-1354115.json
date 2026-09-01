@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1354115",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1354115",
+    "url": "https://99designs.com/mobile-app-design/contests/make-flight-booking-website-look-more-attractive-less-1354115",
+    "page_title": "Make my flight booking website look more attractive and less janky | App design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Make my flight booking website look more attractive and less janky",
+    "status": "finished",
+    "category_label": "app design",
+    "category": "app_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "nsa888",
+    "entry_count": 130,
+    "designer_count": 32,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "A simple flight booking app for direct flights between Hong Kong and Bangkok this weekend and next ... The site is designed for mobile first use through a web ... …",
+    "vision_public_excerpt": "Style/theme ideas: EDIT: The site needs * A welcome screen that allows the user to choose the weekend, number of passengers and bags, and a \"Search flights' ... Note… App name: HKGBKK Screen descriptions: The flow is self explanatory on the ... I am not looking for ideas on how the site is navigated, it's really only the visual ... Note that when the user loads the site,…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "PSD",
+      "PDF",
+      "XD",
+      "FIG"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_163513680",
+    "winner_designer": "AKDCreative",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Great work! Will use again."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_163513680",
+      "role": "winner",
+      "selected": true,
+      "designer": "AKDCreative",
+      "alt": "\"Make my flight booking website look more attractive and less janky\" winning App design by AKDCreative",
+      "local_file": "attachment_163513680.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 130842,
+      "sha256": "f3a5d6a96fc921436126b6ddcda59ec20847b3ca594d8d0e6d7585a5181a9c7b",
+      "source_preview_url": "https://images-platform.99static.com/i4TBFtD6TUul_Tn7_zaa6sndi-o=/0x188:1054x1242/500x500/top/smart/99designs-contests-attachments/163/163513/attachment_163513680"
+    },
+    {
+      "entry_id": "attachment_163461018",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Mathan✦design",
+      "alt": "App design contest entry by Mathan✦design",
+      "local_file": "attachment_163461018.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 59034,
+      "sha256": "f599daa8eda02178359fe454c7a2324826661587c770d6dc2630348cbeba7b8c",
+      "source_preview_url": "https://images-platform.99static.com/Ye3MIDAqSJEko0shCBqE17OkKas=/19x69:1368x1418/500x500/top/smart/99designs-contests-attachments/163/163461/attachment_163461018"
+    },
+    {
+      "entry_id": "attachment_163461086",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Mathan✦design",
+      "alt": "App design contest entry by Mathan✦design",
+      "local_file": "attachment_163461086.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 55971,
+      "sha256": "0610975bb646d2d2465c1e6ecd84cd47e9f23cdca3938f0d00f7f19378bff97a",
+      "source_preview_url": "https://images-platform.99static.com/MZgqHoJBE8ytLVPa-fqWNkg7AfA=/0x30:1440x1470/500x500/top/smart/99designs-contests-attachments/163/163461/attachment_163461086"
+    },
+    {
+      "entry_id": "attachment_163461117",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Mathan✦design",
+      "alt": "App design contest entry by Mathan✦design",
+      "local_file": "attachment_163461117.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 55877,
+      "sha256": "bdf44e9ab117577a40a8a4c93130994f8e00065fec1f76ac047a150d00442d9c",
+      "source_preview_url": "https://images-platform.99static.com/RayKiTith8yU6KY3dWO1Z687A5M=/0x35:1440x1475/500x500/top/smart/99designs-contests-attachments/163/163461/attachment_163461117"
+    },
+    {
+      "entry_id": "attachment_163509576",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "sandy#ogma",
+      "alt": "App design contest entry by sandy#ogma",
+      "local_file": "attachment_163509576.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 113408,
+      "sha256": "7adc4fb74d731482b7f5ca14da573ae7ddfaec96db1906f231ba7696a3d597aa",
+      "source_preview_url": "https://images-platform.99static.com/eqdwdWhgPjFXwqzSUN5-pQ3SPvE=/83x113:1157x1187/500x500/top/smart/99designs-contests-attachments/163/163509/attachment_163509576"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Web & App Design",
+    "subcategory": "App Design"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Web & App Design",
+    "subtype": "App Design",
+    "original_category": "app_design",
+    "source_record": "Web_app/App Design/Make my flight booking website look more attractive and less janky/contest-1354115.json",
+    "source_record_sha256": "4b5fb3e5cd1eb8b2d62e0e2f0d8959017d048e32458ef95a57b447a887ddb0dd"
+  }
+}

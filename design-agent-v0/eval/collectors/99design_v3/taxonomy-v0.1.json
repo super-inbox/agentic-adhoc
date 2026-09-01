@@ -1,0 +1,293 @@
+{
+  "schema_version": "design-type-taxonomy-v0.1",
+  "generated_at": "2026-09-01",
+  "source_root": "../99design_v2",
+  "record_count": 61,
+  "asset_count": 304,
+  "design_types": [
+    {
+      "name": "Brand Design",
+      "contest_count": 14,
+      "asset_count": 70,
+      "original_categories": [
+        "brand_launch_pack",
+        "logo_brand_guide",
+        "logo_brand_identity_pack",
+        "logo_design"
+      ],
+      "subtypes": [
+        {
+          "name": "Brand Launch Pack",
+          "contest_count": 1,
+          "asset_count": 5
+        },
+        {
+          "name": "Logo & Brand Guide",
+          "contest_count": 2,
+          "asset_count": 10
+        },
+        {
+          "name": "Logo & Brand Identity Pack",
+          "contest_count": 1,
+          "asset_count": 5
+        },
+        {
+          "name": "Logo Design",
+          "contest_count": 10,
+          "asset_count": 50
+        }
+      ]
+    },
+    {
+      "name": "Banner Design",
+      "contest_count": 9,
+      "asset_count": 44,
+      "original_categories": [
+        "banner_ad"
+      ],
+      "subtypes": [
+        {
+          "name": "Banner Ad",
+          "contest_count": 9,
+          "asset_count": 44
+        }
+      ]
+    },
+    {
+      "name": "Web & App Design",
+      "contest_count": 6,
+      "asset_count": 30,
+      "original_categories": [
+        "app_design",
+        "icon_button",
+        "web_page_design"
+      ],
+      "subtypes": [
+        {
+          "name": "App Design",
+          "contest_count": 2,
+          "asset_count": 10
+        },
+        {
+          "name": "Icon or Button",
+          "contest_count": 1,
+          "asset_count": 5
+        },
+        {
+          "name": "Web Page Design",
+          "contest_count": 3,
+          "asset_count": 15
+        }
+      ]
+    },
+    {
+      "name": "Packaging & Label Design",
+      "contest_count": 6,
+      "asset_count": 30,
+      "original_categories": [
+        "product_label",
+        "product_packaging"
+      ],
+      "subtypes": [
+        {
+          "name": "Product Label",
+          "contest_count": 1,
+          "asset_count": 5
+        },
+        {
+          "name": "Product Packaging",
+          "contest_count": 5,
+          "asset_count": 25
+        }
+      ]
+    },
+    {
+      "name": "Print & Editorial Design",
+      "contest_count": 12,
+      "asset_count": 60,
+      "original_categories": [
+        "card_or_invitation",
+        "magazine_cover",
+        "other_book_or_magazine",
+        "postcard_flyer_or_print"
+      ],
+      "subtypes": [
+        {
+          "name": "Card or Invitation",
+          "contest_count": 2,
+          "asset_count": 10
+        },
+        {
+          "name": "Magazine Cover",
+          "contest_count": 3,
+          "asset_count": 15
+        },
+        {
+          "name": "Other Book or Magazine",
+          "contest_count": 3,
+          "asset_count": 15
+        },
+        {
+          "name": "Postcard, Flyer or Print",
+          "contest_count": 4,
+          "asset_count": 20
+        }
+      ]
+    },
+    {
+      "name": "Art & Illustration Design",
+      "contest_count": 5,
+      "asset_count": 25,
+      "original_categories": [
+        "character_or_mascot",
+        "illustration_or_graphics",
+        "other_art_or_illustration"
+      ],
+      "subtypes": [
+        {
+          "name": "Character or Mascot",
+          "contest_count": 1,
+          "asset_count": 5
+        },
+        {
+          "name": "Illustration or Graphics",
+          "contest_count": 3,
+          "asset_count": 15
+        },
+        {
+          "name": "Other Art or Illustration",
+          "contest_count": 1,
+          "asset_count": 5
+        }
+      ]
+    },
+    {
+      "name": "Merchandise Design",
+      "contest_count": 6,
+      "asset_count": 30,
+      "original_categories": [
+        "merchandise",
+        "sticker"
+      ],
+      "subtypes": [
+        {
+          "name": "Merchandise",
+          "contest_count": 3,
+          "asset_count": 15
+        },
+        {
+          "name": "Sticker",
+          "contest_count": 3,
+          "asset_count": 15
+        }
+      ]
+    },
+    {
+      "name": "Environmental & Signage Design",
+      "contest_count": 3,
+      "asset_count": 15,
+      "original_categories": [
+        "car_truck_or_van_wrap",
+        "signage"
+      ],
+      "subtypes": [
+        {
+          "name": "Car, Truck or Van Wrap",
+          "contest_count": 1,
+          "asset_count": 5
+        },
+        {
+          "name": "Signage",
+          "contest_count": 2,
+          "asset_count": 10
+        }
+      ]
+    }
+  ],
+  "category_mapping": {
+    "app_design": {
+      "design_type": "Web & App Design",
+      "subtype": "App Design"
+    },
+    "banner_ad": {
+      "design_type": "Banner Design",
+      "subtype": "Banner Ad"
+    },
+    "brand_launch_pack": {
+      "design_type": "Brand Design",
+      "subtype": "Brand Launch Pack"
+    },
+    "car_truck_or_van_wrap": {
+      "design_type": "Environmental & Signage Design",
+      "subtype": "Car, Truck or Van Wrap"
+    },
+    "card_or_invitation": {
+      "design_type": "Print & Editorial Design",
+      "subtype": "Card or Invitation"
+    },
+    "character_or_mascot": {
+      "design_type": "Art & Illustration Design",
+      "subtype": "Character or Mascot"
+    },
+    "icon_button": {
+      "design_type": "Web & App Design",
+      "subtype": "Icon or Button"
+    },
+    "illustration_or_graphics": {
+      "design_type": "Art & Illustration Design",
+      "subtype": "Illustration or Graphics"
+    },
+    "logo_brand_guide": {
+      "design_type": "Brand Design",
+      "subtype": "Logo & Brand Guide"
+    },
+    "logo_brand_identity_pack": {
+      "design_type": "Brand Design",
+      "subtype": "Logo & Brand Identity Pack"
+    },
+    "logo_design": {
+      "design_type": "Brand Design",
+      "subtype": "Logo Design"
+    },
+    "magazine_cover": {
+      "design_type": "Print & Editorial Design",
+      "subtype": "Magazine Cover"
+    },
+    "merchandise": {
+      "design_type": "Merchandise Design",
+      "subtype": "Merchandise"
+    },
+    "other_art_or_illustration": {
+      "design_type": "Art & Illustration Design",
+      "subtype": "Other Art or Illustration"
+    },
+    "other_book_or_magazine": {
+      "design_type": "Print & Editorial Design",
+      "subtype": "Other Book or Magazine"
+    },
+    "postcard_flyer_or_print": {
+      "design_type": "Print & Editorial Design",
+      "subtype": "Postcard, Flyer or Print"
+    },
+    "product_label": {
+      "design_type": "Packaging & Label Design",
+      "subtype": "Product Label"
+    },
+    "product_packaging": {
+      "design_type": "Packaging & Label Design",
+      "subtype": "Product Packaging"
+    },
+    "signage": {
+      "design_type": "Environmental & Signage Design",
+      "subtype": "Signage"
+    },
+    "sticker": {
+      "design_type": "Merchandise Design",
+      "subtype": "Sticker"
+    },
+    "web_page_design": {
+      "design_type": "Web & App Design",
+      "subtype": "Web Page Design"
+    }
+  }
+}

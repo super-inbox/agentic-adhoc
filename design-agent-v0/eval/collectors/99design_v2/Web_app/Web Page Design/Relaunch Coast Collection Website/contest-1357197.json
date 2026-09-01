@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1357197",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1357197",
+    "url": "https://99designs.com/web-design/contests/relaunch-coast-collection-website-1357197",
+    "page_title": "Relaunch coast collection website | Web page design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Relaunch Coast Collection Website",
+    "status": "finished",
+    "category_label": "web page design",
+    "category": "web_page_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "marketind8",
+    "entry_count": 99,
+    "designer_count": 33,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Collection Die Coast Collection ist eine Markenkooperation mit Unternehmen aus unterschiedlichen Wirtschaftsbereichen und wird…",
+    "vision_public_excerpt": "Style/theme ideas: • modern & klar • natürlich & nordisch • emotional, aber nicht überinszeniert • authentische Bildsprache (keine „Stock-Luxuswelt“) Page descriptions Wir nehmen vorerst nur 3 Seiten und würden im Nachgang, wenn alles gefällt, die restlichen Seiten aufbauen lassen: Wir wünschen uns folgende…",
+    "other_notes": "Projektübersicht Wir planen den Relaunch unserer bestehenden WordPress-Website der Marke Coast ... Ziel ist eine moderne, frische und emotionale…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "PSD",
+      "PDF",
+      "XD",
+      "FIG"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164429509",
+    "winner_designer": "Viiral Kapadia",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Viiral Kapadia is an excellent designer. He works quickly, responds promptly to messages, and does a great job of turning ideas into designs. He provided us with…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164429509",
+      "role": "winner",
+      "selected": true,
+      "designer": "Viiral Kapadia",
+      "alt": "\"Relaunch Coast Collection Website\" winning Web page design by Viiral Kapadia",
+      "local_file": "attachment_164429509.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 70739,
+      "sha256": "d8ab478d80f05a3ed1e038db5dc5748ce7edf7407974e197878115d78fa1c151",
+      "source_preview_url": "https://images-platform.99static.com/QHtkKOQ6V4IVwdgbr21NtR9wWWc=/0x0:1919x1919/500x500/top/smart/99designs-contests-attachments/164/164429/attachment_164429509"
+    },
+    {
+      "entry_id": "attachment_164322777",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Syrweb",
+      "alt": "Web page design contest entry by Syrweb",
+      "local_file": "attachment_164322777.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 59209,
+      "sha256": "139ae2b8781b861b1bee4ea23da04e84a5847d7697ed588704cdb805b6aeea3b",
+      "source_preview_url": "https://images-platform.99static.com/StheYm2OhwRVFdmQKqRJLvlkcH8=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/164/164322/attachment_164322777"
+    },
+    {
+      "entry_id": "attachment_164328320",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "wowww agency",
+      "alt": "Web page design contest entry by wowww agency",
+      "local_file": "attachment_164328320.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 69621,
+      "sha256": "987279bb558427fc67d93ea121ee4742a2a22d04c4c6f7a057742a982fa7f3d0",
+      "source_preview_url": "https://images-platform.99static.com/uf-YigRFLRjv7dsUpTQiHZHzN48=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/164/164328/attachment_164328320"
+    },
+    {
+      "entry_id": "attachment_164332938",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Only Quality",
+      "alt": "Web page design contest entry by Only Quality",
+      "local_file": "attachment_164332938.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 59773,
+      "sha256": "47d03a986777a2122d3d5da7096545d2f765cb77cee1bfe5219e09a8decb3a62",
+      "source_preview_url": "https://images-platform.99static.com/cxm6I9LOvEfXXzpZbTf9hHj4CnY=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/164/164332/attachment_164332938"
+    },
+    {
+      "entry_id": "attachment_164340307",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Sameed Shaukat",
+      "alt": "Web page design contest entry by Sameed Shaukat",
+      "local_file": "attachment_164340307.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 56942,
+      "sha256": "95ef428f3850bf5b76a1ff86b607d357c81d5be5dc7d7d54fd9dc2019feccf66",
+      "source_preview_url": "https://images-platform.99static.com/u0VqyHUtKCuEMuPgzbNR5c0f3gc=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/164/164340/attachment_164340307"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Web & App Design",
+    "subcategory": "Web Page Design"
+  }
+}

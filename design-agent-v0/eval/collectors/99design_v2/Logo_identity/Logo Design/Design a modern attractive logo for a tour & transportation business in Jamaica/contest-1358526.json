@@ -1,0 +1,160 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1358526",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1358526",
+    "url": "https://99designs.com/logo-design/contests/design-modern-attractive-logo-tour-transportation-business-jamaica-1358526",
+    "page_title": "Design a modern attractive logo for a tour & transportation business in jamaica | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Design a modern attractive logo for a tour & transportation business in Jamaica",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "courtneyamtayloW",
+    "entry_count": 220,
+    "designer_count": 44,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "More than a ride, it's your Jamaican Story",
+    "about_us": "We do private airport transfers from Sangster International airport in Montego Bay Jamaica to all tourist resort areas as well as customized excursions…",
+    "vision_public_excerpt": null,
+    "other_notes": "No palm trees, no cruise ships, no airplane, no sunshine, no beaches",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164702126",
+    "winner_designer": "Young Creations",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "These guys are very responsive with brilliant design ideas. I would definitely use them again."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164702126",
+      "role": "winner",
+      "selected": true,
+      "designer": "Young Creations",
+      "alt": "\"Design a modern attractive logo for a tour & transportation business in Jamaica\" winning Logo design by Young Creations",
+      "local_file": "attachment_164702126.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 33146,
+      "sha256": "99bd889b5c6848b66cc01a5eadad79e075080ff234c360aa0f54693688560261",
+      "source_preview_url": "https://images-platform.99static.com/SikEpNX9i3C3HmHu0DDhiVEF68I=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164702/attachment_164702126"
+    },
+    {
+      "entry_id": "attachment_164720302",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Young Creations",
+      "alt": "Logo design contest entry by Young Creations",
+      "local_file": "attachment_164720302.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 34939,
+      "sha256": "d154e3fcea2c3c9647d4308f4c1385d4ac3b9425f84b3b51409c65760367eb7e",
+      "source_preview_url": "https://images-platform.99static.com/JTZehrDaI-zto0n3RmmDW_PMeQQ=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164720/attachment_164720302"
+    },
+    {
+      "entry_id": "attachment_164728970",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Young Creations",
+      "alt": "Logo design contest entry by Young Creations",
+      "local_file": "attachment_164728970.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 35669,
+      "sha256": "3d134e27fb3df458cf0f4edb8034e16a9da68050242f0bfc455dbb72e2da8e9d",
+      "source_preview_url": "https://images-platform.99static.com/n2qDPTHHZggB8BkocnrCUdyZjDE=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164728/attachment_164728970"
+    },
+    {
+      "entry_id": "attachment_164704823",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "OpheRocklab",
+      "alt": "Logo design contest entry by OpheRocklab",
+      "local_file": "attachment_164704823.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 43202,
+      "sha256": "28e68fb7896469d87f95e5bcce2fa9813936382c1d71f814ffcaa2eecda59e15",
+      "source_preview_url": "https://images-platform.99static.com/n7rT7uilldjHheSbSdpI9-ORUv8=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/164/164704/attachment_164704823"
+    },
+    {
+      "entry_id": "attachment_164704826",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "OpheRocklab",
+      "alt": "Logo design contest entry by OpheRocklab",
+      "local_file": "attachment_164704826.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 39343,
+      "sha256": "f01629678b2d051aa03eed61b80f141adcc959608e787b1ad18ea80bd2039967",
+      "source_preview_url": "https://images-platform.99static.com/-2EiJvB4yWbM9YpHDcJED1N2yrE=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/164/164704/attachment_164704826"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Logo & Identity",
+    "subcategory": "Logo Design"
+  }
+}

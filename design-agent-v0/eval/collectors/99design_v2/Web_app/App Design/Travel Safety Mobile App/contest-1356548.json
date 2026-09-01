@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1356548",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1356548",
+    "url": "https://99designs.com/mobile-app-design/contests/travel-safety-mobile-app-1356548",
+    "page_title": "Travel safety mobile app | App design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Travel Safety Mobile App",
+    "status": "finished",
+    "category_label": "app design",
+    "category": "app_design",
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "client_display_name": "sergelents9J",
+    "entry_count": 124,
+    "designer_count": 37,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "RoamWise is a calm travel-safety app for ... It turns thousands of scattered signals — trusted locals, travellers on the ground, and official feeds (police…",
+    "vision_public_excerpt": "Style/theme ideas: Quietly premium, with subtle, taste animations to become an emotionally charged mobile app, which leads to better ... App name: RoamWise Screen descriptions: ... Home dashboard — the ten-second answer to \"is where I am OK right now?\" Greeting, your-area GradeRing, a calm mini-map, current trip, and the…",
+    "other_notes": "Yes — these break the brand: Alarm-red as a decorative or \"engagement\" ... Red is rationed to D/F grades and high/critical severity only — never…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "PSD",
+      "PDF",
+      "XD",
+      "FIG"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164214417",
+    "winner_designer": "HaiNg",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Loved working with HaiNg"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164214417",
+      "role": "winner",
+      "selected": true,
+      "designer": "HaiNg",
+      "alt": "\"Travel Safety Mobile App\" winning App design by HaiNg",
+      "local_file": "attachment_164214417.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 149128,
+      "sha256": "931f0c978f814cd5804f36a18cffc41611dd6e4415911f89d5270b04990838fd",
+      "source_preview_url": "https://images-platform.99static.com/5UTOC5lbJ5Ge_Kyg-YBhVUpKLQo=/0x0:1987x1987/500x500/top/smart/99designs-contests-attachments/164/164214/attachment_164214417"
+    },
+    {
+      "entry_id": "attachment_164121787",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "FuturisticBug",
+      "alt": "App design contest entry by FuturisticBug",
+      "local_file": "attachment_164121787.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 55828,
+      "sha256": "bf419f1fbd0170eac47e8c91a31843ec873fc3072ae4c57c4fe82a2e5412252c",
+      "source_preview_url": "https://images-platform.99static.com/VVknSfT11flIS42NxNCPovnmKL0=/58x38:1133x1113/500x500/top/smart/99designs-contests-attachments/164/164121/attachment_164121787"
+    },
+    {
+      "entry_id": "attachment_164122382",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "MercClass",
+      "alt": "App design contest entry by MercClass",
+      "local_file": "attachment_164122382.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 25751,
+      "sha256": "7767afa9f618f675193d33dcab4dbb2b2fed937c7c0cc2c4d451a47e64f12f32",
+      "source_preview_url": "https://images-platform.99static.com/a82f54YsAcwz1n95DjgxXO6NbVA=/0x0:1439x1439/500x500/top/smart/99designs-contests-attachments/164/164122/attachment_164122382"
+    },
+    {
+      "entry_id": "attachment_164124126",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "doggolz studio",
+      "alt": "App design contest entry by doggolz studio",
+      "local_file": "attachment_164124126.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 21858,
+      "sha256": "3c3c1c9a40cc4578b01abb79566330b75f05529f1acd4b598e379d0525061d84",
+      "source_preview_url": "https://images-platform.99static.com/9mp7WTrYnwIJ-YbSNeeVjRteoWw=/1x0:1999x1998/500x500/top/smart/99designs-contests-attachments/164/164124/attachment_164124126"
+    },
+    {
+      "entry_id": "attachment_164125440",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "MercClass",
+      "alt": "App design contest entry by MercClass",
+      "local_file": "attachment_164125440.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 40011,
+      "sha256": "d8ba69f5b3f1ef7367bc94122b9b8817aa01267dab92678899e10252a2d8bc1e",
+      "source_preview_url": "https://images-platform.99static.com/PoyXAaDG3d4kaosKySXLIjI8WX0=/0x0:1440x1440/500x500/top/smart/99designs-contests-attachments/164/164125/attachment_164125440"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Web & App Design",
+    "subcategory": "App Design"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-890782",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "890782",
+    "url": "https://99designs.com/magazine-cover-design/contests/cover-f%C3%BCr-reisekatalog-der-o-hostels-890782",
+    "page_title": "Cover für reisekatalog der a&o hostels | Magazine cover contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "magazine_cover",
+    "category_label": "magazine cover",
+    "client_display_name": "aohostels",
+    "designer_count": 10,
+    "entry_count": 33,
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "status": "finished",
+    "title": "Cover für Reisekatalog der a&o Hostels",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Wer gern auf Reisen ist und deutsche sowie europäische Metropolen ... Amsterdam, Prag, Wien, Berlin, Hamburg, Leipzig, München oder Venedig… What's your vision? Vorder- und Rückseite unseres Hotelkatalogs Design aus dem letzten Jahr anbei: => Position Web-URL mit Claim bitte tauschen, ... URL sehr prominent =>… Other notes Website: ...",
+    "vision_public_excerpt": "Vorder- und Rückseite unseres Hotelkatalogs Design aus dem letzten Jahr anbei: => Position Web-URL mit Claim bitte tauschen, ... URL sehr prominent =>…",
+    "other_notes": "Website: ...",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_104286878",
+    "winner_designer": "ryanurz",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Working with Ryanurz was so easy. He quickly tweaked any and every change I asked him to make. He had plenty of ideas, and the actual winner was something I would not…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_104286878",
+      "role": "winner",
+      "selected": true,
+      "designer": "ryanurz",
+      "alt": "\"Cover für Reisekatalog der a&o Hostels\" winning Magazine cover by ryanurz",
+      "local_file": "attachment_104286878.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 79217,
+      "sha256": "b55e6e372e709fc31ffa200185e1239f065b77a349dd2ab926b69a00a8cb33f6",
+      "source_preview_url": "https://images-platform.99static.com/Hu6iKOZuJHMCCIRpeblTbcsdEiE=/196x127:1895x1826/500x500/top/smart/99designs-contests-attachments/104/104286/attachment_104286878"
+    },
+    {
+      "entry_id": "attachment_104439217",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "OSSDesign",
+      "alt": "Magazine cover contest entry by OSSDesign",
+      "local_file": "attachment_104439217.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 55369,
+      "sha256": "63ec48a389fc76118a1eaf58b51376e1428893788910c449ce78b13d74707190",
+      "source_preview_url": "https://images-platform.99static.com/HM8pXwF_uMExL18z9pHUaktOr7w=/252x0:1312x1060/500x500/top/smart/99designs-contests-attachments/104/104439/attachment_104439217"
+    },
+    {
+      "entry_id": "attachment_104289307",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "sala_ud_din",
+      "alt": "Magazine cover contest entry by sala_ud_din",
+      "local_file": "attachment_104289307.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 52422,
+      "sha256": "2e5038f3eef2444eda91e3f77dda674b57c2b698eb2e5b2231d2753181515e59",
+      "source_preview_url": "https://images-platform.99static.com/-jweQt5R_O19Ptx548FB3Oi33ic=/0x153:1069x1222/500x500/top/smart/99designs-contests-attachments/104/104289/attachment_104289307"
+    },
+    {
+      "entry_id": "attachment_104429960",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "mavite",
+      "alt": "Magazine cover contest entry by mavite",
+      "local_file": "attachment_104429960.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 36804,
+      "sha256": "75c04db86db351dcb3d890cf9ab7e4499e5ecdad9f35e0bbbc02dd2a43e99fc0",
+      "source_preview_url": "https://images-platform.99static.com/O9YZo-585PzdXA-WSVkyK7tzjQ8=/479x0:1728x1249/500x500/top/smart/99designs-contests-attachments/104/104429/attachment_104429960"
+    },
+    {
+      "entry_id": "attachment_104292122",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "PEDROVALERODSGN ✅",
+      "alt": "Magazine cover contest entry by PEDROVALERODSGN ✅",
+      "local_file": "attachment_104292122.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 90346,
+      "sha256": "bbd7a296166ab3602cc543037f80ae1c000277c3e5ae7ffe0c1ca41601e26f81",
+      "source_preview_url": "https://images-platform.99static.com/2YINzC801bl1I6RJsUHS0kQfbUo=/0x0:1080x1080/500x500/top/smart/99designs-contests-attachments/104/104292/attachment_104292122"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Book & Magazine",
+    "subcategory": "Magazine Cover"
+  }
+}

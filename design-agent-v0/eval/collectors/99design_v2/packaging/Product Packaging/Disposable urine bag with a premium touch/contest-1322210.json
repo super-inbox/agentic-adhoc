@@ -1,0 +1,154 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1322210",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1322210",
+    "url": "https://99designs.com/product-packaging-design/contests/disposable-urine-bag-premium-touch-1322210",
+    "page_title": "Disposable urine bag with a premium touch | Product packaging contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "product_packaging",
+    "category_label": "product packaging",
+    "client_display_name": "ahmednabeel.sala6",
+    "designer_count": 4,
+    "entry_count": 29,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Disposable urine bag with a premium touch",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel Color inspiration Company name drubag Product name drubag Description of the product It is a Disposable urine ... Instead of a rectangular shape, it will look like a trophy cup with 2 handles and one corner of the opening will be elongated than the… Description of the product target audience This is mainly focused for drivers (delivery drivers, truck drivers, long haul truck drivers, any professional drivers). Style attributes Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Luxury Casual Minimalistic Detailed Design needs It is a Disposable urine ... Instead of a rectangular shape, it will look like a trophy cup with 2 handles( small handles that are closer to the main body and… What to avoid wide handles should be ... Package dimensions does'nt ... Its... cc ... it should not be a rectangle ... Attachments It all began with a design brief. A quick, interactive guide helped them understand their design style and captured exactly what they needed in their product packaging. What is 99designs? What is a design contest? How much does it cost? Designers across the globe delivered design magic. by Packagingholic by Packagingholic by Andy William by Andy William by Andy William 29 design entries You’ll get loads of concepts from experienced designers around the globe. 4 designers Work with talented, professional Product packagin…",
+    "vision_public_excerpt": null,
+    "other_notes": "wide handles should be ... Package dimensions does'nt ... Its... cc ... it should not be a rectangle ... Attachments It all began with a design brief. A quick, interactive guide helped them understand their design style and captured exactly what they needed in their product packaging.",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_157368370",
+    "winner_designer": "David Flowers",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Merci David pour cette collaboration, c'était un véritable plaisir de collaborer avec toi sur ce projet, et j'espère que ce sera le premier d'une longue série."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_157368370",
+      "role": "winner",
+      "selected": true,
+      "designer": "David Flowers",
+      "alt": "\"Disposable urine bag with a premium touch\" winning Product packaging by David Flowers",
+      "local_file": "attachment_157368370.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 361190,
+      "sha256": "13084af4f77452dc14a6ad51f4fc6edf8403150a5ba6289c53200dca73528672",
+      "source_preview_url": "https://images-platform.99static.com/OBJn_3wZ0U5fXtYz9-RB6tKllm8=/151x0:1655x1504/500x500/top/smart/99designs-contests-attachments/157/157368/attachment_157368370"
+    },
+    {
+      "entry_id": "attachment_157290863",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Packagingholic",
+      "alt": "Product packaging contest entry by Packagingholic",
+      "local_file": "attachment_157290863.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 190376,
+      "sha256": "2e1a13848c669afd0263aff157a0859b58c8f13aab97fac9afdcbbd4183f8d0e",
+      "source_preview_url": "https://images-platform.99static.com/ugTinkGGwg7hrQlqocu7GWKfPYM=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/157/157290/attachment_157290863"
+    },
+    {
+      "entry_id": "attachment_157290916",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Packagingholic",
+      "alt": "Product packaging contest entry by Packagingholic",
+      "local_file": "attachment_157290916.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 217187,
+      "sha256": "f248c5ee5bc5710d9433d5fa68fe4d003e5f43e21f19e0a593edc52f64d3a767",
+      "source_preview_url": "https://images-platform.99static.com/Q5Re6d5DAkqLxCQT7FDv6xoZWkQ=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/157/157290/attachment_157290916"
+    },
+    {
+      "entry_id": "attachment_157304313",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Andy William",
+      "alt": "Product packaging contest entry by Andy William",
+      "local_file": "attachment_157304313.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 28217,
+      "sha256": "746f2662129c9a3c544a1306920173bcb20ba365a342f017f0476c9905c88efb",
+      "source_preview_url": "https://images-platform.99static.com/VUONAsoSw68uB5_p4INJ3QdNmdM=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/157/157304/attachment_157304313"
+    },
+    {
+      "entry_id": "attachment_157306451",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Andy William",
+      "alt": "Product packaging contest entry by Andy William",
+      "local_file": "attachment_157306451.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 116725,
+      "sha256": "40f8400801fec3a5325e2932cbc42e9640af2d6d87c48577ab105b0798a6f881",
+      "source_preview_url": "https://images-platform.99static.com/qCuiZoux4pdRtpTWWE5sxl8kWoo=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/157/157306/attachment_157306451"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Packaging & Label",
+    "subcategory": "Product Packaging"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1240294",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1240294",
+    "url": "https://99designs.com/product-packaging-design/contests/powerful-box-design-travel-bag-1240294",
+    "page_title": "We need a powerful box design for our new travel bag | Product packaging contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "product_packaging",
+    "category_label": "product packaging",
+    "client_display_name": "marketingskbagh",
+    "designer_count": 16,
+    "entry_count": 87,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "We need a powerful box design for our new travel bag",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel Color inspiration Company name Tamelot Bags Product name Travel-friendly RFID Money Belt ... Description of the product Its a travel-friendly Money Belt - it's very Slim and it has RFID Blocking ... it can hold a Passport, Credit Cards, Cash and Travel ... The product is extremally… Description of the product target audience People that travel or looking to go on a trip, and want to travel easy, and feel safe (we use RFID Blocking technology in the product) and like to travel with a… Style attributes Luxury Casual Minimalistic Detailed Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Design needs We are currently seeking a creative design for a new packagingfor our Compact Umbrella . We intend to use this packaging design as the MAIN image on our… Package dimensions ... - ... - ... horizontally displayed Attachments Attachments",
+    "vision_public_excerpt": null,
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_145393264",
+    "winner_designer": "CUPEDIUM",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellente job"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_145393264",
+      "role": "winner",
+      "selected": true,
+      "designer": "CUPEDIUM",
+      "alt": "\"We need a powerful box design for our new travel bag\" winning Product packaging by CUPEDIUM",
+      "local_file": "attachment_145393264.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45384,
+      "sha256": "94b99f29af56dbb5d8b648f9b75c8ce7255243769a21cde3b628753a042b9780",
+      "source_preview_url": "https://images-platform.99static.com/NargFBly6w2gSpuEtAHzlafafR8=/80x205:1698x1823/500x500/top/smart/99designs-contests-attachments/145/145393/attachment_145393264"
+    },
+    {
+      "entry_id": "attachment_145318360",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "CUPEDIUM",
+      "alt": "Product packaging contest entry by CUPEDIUM",
+      "local_file": "attachment_145318360.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 40313,
+      "sha256": "2f235c5fe15d9c44ec9d3b7f99db5582f1988ca106b0eec40540379e2fe90a03",
+      "source_preview_url": "https://images-platform.99static.com/lSja0DKPgzWB6cDTX6ChLvjMs_8=/168x218:1768x1818/500x500/top/smart/99designs-contests-attachments/145/145318/attachment_145318360"
+    },
+    {
+      "entry_id": "attachment_145318368",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "CUPEDIUM",
+      "alt": "Product packaging contest entry by CUPEDIUM",
+      "local_file": "attachment_145318368.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 39264,
+      "sha256": "b344e78dd10277c34c8bf8f577814fe0cd1dab5c155ed60fe7002131d09735a8",
+      "source_preview_url": "https://images-platform.99static.com/YIP8xO9UiPopfnbR43u7kkgMntQ=/136x230:1736x1830/500x500/top/smart/99designs-contests-attachments/145/145318/attachment_145318368"
+    },
+    {
+      "entry_id": "attachment_145326914",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Designre™",
+      "alt": "Product packaging contest entry by Designre™",
+      "local_file": "attachment_145326914.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 150100,
+      "sha256": "ae316a5908ffdc111a33ebf9b98d8e58256d1aa58aa4dc18f99afa31e0499e82",
+      "source_preview_url": "https://images-platform.99static.com/R5YRufUJrF1eqkADFjYCZrPeR10=/119x187:983x1051/500x500/top/smart/99designs-contests-attachments/145/145326/attachment_145326914"
+    },
+    {
+      "entry_id": "attachment_145386943",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "SONUPARMAR",
+      "alt": "Product packaging contest entry by SONUPARMAR",
+      "local_file": "attachment_145386943.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 118419,
+      "sha256": "4c22eba36d047d84433a8541b5c083b09035be5d61097d752e23fbcdf068e68e",
+      "source_preview_url": "https://images-platform.99static.com/nTHEtDbXZ9XpY_QEfA0NitWimas=/0x131:2000x2131/500x500/top/smart/99designs-contests-attachments/145/145386/attachment_145386943"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Packaging & Label",
+    "subcategory": "Product Packaging"
+  }
+}

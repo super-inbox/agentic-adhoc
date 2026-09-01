@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1353051",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1353051",
+    "url": "https://99designs.com/sticker-design/contests/bday-fiji-1353051",
+    "page_title": "60th bday in fiji | Sticker contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "sticker",
+    "category_label": "sticker",
+    "client_display_name": "societytelluridN",
+    "designer_count": 16,
+    "entry_count": 83,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "60th Bday in Fiji",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel What's your vision? I want a design that can be used for my...th birthday in ... The design or \"logo\" for lack of a better term will be used on invitations, menus, gift bags, tumblers ... I…",
+    "vision_public_excerpt": "I want a design that can be used for my...th birthday in ... The design or \"logo\" for lack of a better term will be used on invitations, menus, gift bags, tumblers ... I…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_163248652",
+    "winner_designer": "Ahmad Hussain21",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent designs, timely edits, thank you!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_163248652",
+      "role": "winner",
+      "selected": true,
+      "designer": "Ahmad Hussain21",
+      "alt": "\"60th Bday in Fiji\" winning Sticker by Ahmad Hussain21",
+      "local_file": "attachment_163248652.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 398450,
+      "sha256": "2e3c145ea6b60d3b36e3146a9a3d81f13973c1bdf20c407e8ba5cc5806083431",
+      "source_preview_url": "https://images-platform.99static.com/88mV_hURbIUZyXxtX5eu_yXTvWI=/195x0:1219x1024/500x500/top/smart/99designs-contests-attachments/163/163248/attachment_163248652"
+    },
+    {
+      "entry_id": "attachment_163241874",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ahmad Hussain21",
+      "alt": "Sticker contest entry by Ahmad Hussain21",
+      "local_file": "attachment_163241874.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 383461,
+      "sha256": "3bf631c1c115ec6c1de5de1ab12138b580083010c1c7e12f909efac2ef2348a2",
+      "source_preview_url": "https://images-platform.99static.com/gK3kFf5VaPYZIQal3z9qcjOES_s=/350x0:1374x1024/500x500/top/smart/99designs-contests-attachments/163/163241/attachment_163241874"
+    },
+    {
+      "entry_id": "attachment_163241887",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ahmad Hussain21",
+      "alt": "Sticker contest entry by Ahmad Hussain21",
+      "local_file": "attachment_163241887.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 431552,
+      "sha256": "efd804a09d65a65f4bd0cc103bd5d7c63e25cfc7dc97d17e04c18d47a9ea55bc",
+      "source_preview_url": "https://images-platform.99static.com/J6HhsZV8UejH-PkwAUkAC_8h4XY=/428x0:1408x980/500x500/top/smart/99designs-contests-attachments/163/163241/attachment_163241887"
+    },
+    {
+      "entry_id": "attachment_163241890",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ahmad Hussain21",
+      "alt": "Sticker contest entry by Ahmad Hussain21",
+      "local_file": "attachment_163241890.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 438216,
+      "sha256": "4db8832673ac3fc75981a2133bd71e8c4977b0e472e153cbbb1568f0f968e609",
+      "source_preview_url": "https://images-platform.99static.com/VXYBgjaUz3uEHuTVORpdkuIm5YY=/93x66:1924x1897/500x500/top/smart/99designs-contests-attachments/163/163241/attachment_163241890"
+    },
+    {
+      "entry_id": "attachment_163241893",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ahmad Hussain21",
+      "alt": "Sticker contest entry by Ahmad Hussain21",
+      "local_file": "attachment_163241893.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 368456,
+      "sha256": "4989608cdbdadd8a1bfebe6421afc011398455ec645d1adefd07afff3c8204bd",
+      "source_preview_url": "https://images-platform.99static.com/PgSaP3Q3wkB0lDeQjsh_m5oXXrg=/285x0:1305x1020/500x500/top/smart/99designs-contests-attachments/163/163241/attachment_163241893"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Clothing & Merchandise",
+    "subcategory": "Sticker"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Merchandise Design",
+    "subtype": "Sticker",
+    "original_category": "sticker",
+    "source_record": "clothing/Sticker/60th Bday in Fiji/contest-1353051.json",
+    "source_record_sha256": "203336f89dc291ad7b07336b89325a0b585fbef9ad95eaa1c11f23cd1512ebee"
+  }
+}

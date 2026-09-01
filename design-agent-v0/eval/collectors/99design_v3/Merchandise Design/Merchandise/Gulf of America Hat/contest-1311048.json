@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1311048",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1311048",
+    "url": "https://99designs.com/merchandise-design/contests/gulf-america-hat-1311048",
+    "page_title": "Gulf of america hat | Merchandise contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "merchandise",
+    "category_label": "merchandise",
+    "client_display_name": "josA7U",
+    "designer_count": 15,
+    "entry_count": 132,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Gulf of America Hat",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Hat & t-shirt ... Targeting men ... What's your vision? I need a simple logo for a hat that uses red, white & blue for colors that says Gulf of ... Was thinking either a sunset with a wavy flag backdrop or a sailfish or…",
+    "vision_public_excerpt": "I need a simple logo for a hat that uses red, white & blue for colors that says Gulf of ... Was thinking either a sunset with a wavy flag backdrop or a sailfish or…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_155671356",
+    "winner_designer": "nrdy.",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Brilliant icon design. NRDY nailed the brief and came up with something truly original. If an icon could summarise a brand without words, this would be it. Thank you!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_155671356",
+      "role": "winner",
+      "selected": true,
+      "designer": "nrdy.",
+      "alt": "\"Gulf of America Hat\" winning Merchandise by nrdy.",
+      "local_file": "attachment_155671356.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 111275,
+      "sha256": "3979eeffff42d236a8ced63c3cff911b31ef5ca6e226d24b68c6b3a45aced1c0",
+      "source_preview_url": "https://images-platform.99static.com/xw8-a9uiFZw9eg93Mz_ODkTk-00=/126x86:945x905/500x500/top/smart/99designs-contests-attachments/155/155671/attachment_155671356"
+    },
+    {
+      "entry_id": "attachment_155730298",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Suzette Sousa",
+      "alt": "Merchandise contest entry by Suzette Sousa",
+      "local_file": "attachment_155730298.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 123854,
+      "sha256": "5c0aa45df7fa853bf17d085cd1be4368b1f3f8f1da8838ed140c39552116918d",
+      "source_preview_url": "https://images-platform.99static.com/Ki7IsKkLAi1wGW3AVBkYaOIx1dI=/0x3:995x998/500x500/top/smart/99designs-contests-attachments/155/155730/attachment_155730298"
+    },
+    {
+      "entry_id": "attachment_155784495",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Suzette Sousa",
+      "alt": "Merchandise contest entry by Suzette Sousa",
+      "local_file": "attachment_155784495.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 38547,
+      "sha256": "da4ed98856eac4816021fb5f90f1539ad93db5e79b0d8eaf81eec2116f9f7b38",
+      "source_preview_url": "https://images-platform.99static.com/PZN-VmtfW_UtQbVDBbHjq8owVPE=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/155/155784/attachment_155784495"
+    },
+    {
+      "entry_id": "attachment_155676970",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Dope Hope",
+      "alt": "Merchandise contest entry by Dope Hope",
+      "local_file": "attachment_155676970.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 35754,
+      "sha256": "c8e77db51a61eb48a2ab2c7c1cdee8f39601424a768f3d2e495c8ff281c00c75",
+      "source_preview_url": "https://images-platform.99static.com/eU2EwjvA4aTYcTlBJn6d-H11h6k=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/155/155676/attachment_155676970"
+    },
+    {
+      "entry_id": "attachment_155671660",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "RJ1777",
+      "alt": "Merchandise contest entry by RJ1777",
+      "local_file": "attachment_155671660.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 24659,
+      "sha256": "4199e0c7abaa7b2faf182b8b4d0c5a8c441da4ae38000c79a963f445f88331a8",
+      "source_preview_url": "https://images-platform.99static.com/MzR4p_6hBZo9gVY5D6QxZ8CQ1oU=/131x134:1849x1852/500x500/top/smart/99designs-contests-attachments/155/155671/attachment_155671660"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Clothing & Merchandise",
+    "subcategory": "Merchandise"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Merchandise Design",
+    "subtype": "Merchandise",
+    "original_category": "merchandise",
+    "source_record": "clothing/Merchandise/Gulf of America Hat/contest-1311048.json",
+    "source_record_sha256": "b97f8c4bc52818ad078482659e71a67204daace7af066f73191b15275fd77fa4"
+  }
+}

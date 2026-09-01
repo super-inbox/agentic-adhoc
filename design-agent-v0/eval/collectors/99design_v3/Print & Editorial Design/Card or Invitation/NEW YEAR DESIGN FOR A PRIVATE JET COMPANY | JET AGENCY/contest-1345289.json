@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1345289",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1345289",
+    "url": "https://99designs.com/card-invitation-design/contests/year-design-private-jet-company-agency-1345289",
+    "page_title": "New year design for a private jet company | jet agency | Card or invitation contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "card_or_invitation",
+    "category_label": "card or invitation",
+    "client_display_name": "Jet Agency",
+    "designer_count": 36,
+    "entry_count": 230,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "NEW YEAR DESIGN FOR A PRIVATE JET COMPANY | JET AGENCY",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Agency specialized in business aviation / private ... Our clients are small and large companies, individuals, sports teams or ... Values : luxury, security, serenity,… What's your vision? I need a New Year... design to be sent by email and Whatsapp, in landscape format and with a small ... Design really classy, stylish, smart, very original and… Other notes Please don't hesitate to ask for anything",
+    "vision_public_excerpt": "I need a New Year... design to be sent by email and Whatsapp, in landscape format and with a small ... Design really classy, stylish, smart, very original and…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_161678746",
+    "winner_designer": "Ricky Asamanis",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Prompt and professional."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_161678746",
+      "role": "winner",
+      "selected": true,
+      "designer": "Ricky Asamanis",
+      "alt": "\"NEW YEAR DESIGN FOR A PRIVATE JET COMPANY | JET AGENCY\" winning Card or invitation by Ricky Asamanis",
+      "local_file": "attachment_161678746.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 81518,
+      "sha256": "8c7efb6d3e2cde4720e78797d3d640f744d62719c221f86ce6164a4cb6a53a6b",
+      "source_preview_url": "https://images-platform.99static.com/23SLyfAMAFMWVjjCjxt9DZXA74s=/0x0:1502x1502/500x500/top/smart/99designs-contests-attachments/161/161678/attachment_161678746"
+    },
+    {
+      "entry_id": "attachment_161612446",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "ForGta6",
+      "alt": "Card or invitation contest entry by ForGta6",
+      "local_file": "attachment_161612446.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 40014,
+      "sha256": "14045d05f591694f415c9b9e7035303d40fbdfcc393a635f1b145abbd0314511",
+      "source_preview_url": "https://images-platform.99static.com/LBuGF-oPugwjJVfqxRUoxUjAGeg=/133x0:1213x1080/500x500/top/smart/99designs-contests-attachments/161/161612/attachment_161612446"
+    },
+    {
+      "entry_id": "attachment_161614691",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Constantin George",
+      "alt": "Card or invitation contest entry by Constantin George",
+      "local_file": "attachment_161614691.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 137019,
+      "sha256": "0b8a86371ed7c24e5b7a970e67171f4c44516063cacc9ecf99cadc6150ab21c6",
+      "source_preview_url": "https://images-platform.99static.com/6ik4bIJr4QjfMXuMIu5J8cWhvdA=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/161/161614/attachment_161614691"
+    },
+    {
+      "entry_id": "attachment_161614790",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Constantin George",
+      "alt": "Card or invitation contest entry by Constantin George",
+      "local_file": "attachment_161614790.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 142053,
+      "sha256": "6023d571fd81879395d16fd322bdad3c52370ad61e3ccfe461325c9c832875e9",
+      "source_preview_url": "https://images-platform.99static.com/Nni2cp2TGZJfu6HLi62S9cWuB6c=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/161/161614/attachment_161614790"
+    },
+    {
+      "entry_id": "attachment_161614904",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Constantin George",
+      "alt": "Card or invitation contest entry by Constantin George",
+      "local_file": "attachment_161614904.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 148085,
+      "sha256": "a3d79f991c58984953e25498d6d3479c393c0f42064c218318f10b72590d38f3",
+      "source_preview_url": "https://images-platform.99static.com/QxGMPKnoykf159MW9bGvS0H5o0c=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/161/161614/attachment_161614904"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Art & Illustration",
+    "subcategory": "Card or Invitation"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Print & Editorial Design",
+    "subtype": "Card or Invitation",
+    "original_category": "card_or_invitation",
+    "source_record": "Art/Card or Invitation/NEW YEAR DESIGN FOR A PRIVATE JET COMPANY | JET AGENCY/contest-1345289.json",
+    "source_record_sha256": "42857e75d2ff32601fe04e6f55ebcac89063536d602514f21e2b5720b6ffabd9"
+  }
+}

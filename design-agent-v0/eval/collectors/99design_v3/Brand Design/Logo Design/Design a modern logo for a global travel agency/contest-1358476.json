@@ -1,0 +1,168 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1358476",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1358476",
+    "url": "https://99designs.com/logo-design/contests/design-modern-logo-global-travel-agency-1358476",
+    "page_title": "Design a modern logo for a global travel agency | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Design a modern logo for a global travel agency",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "vnoble7M",
+    "entry_count": 182,
+    "designer_count": 62,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "Where your next story begins",
+    "about_us": "A travel agency focusing on booking all inclusive hotels and cruises for luxury vacationers, multigenerational families and destination wedding /…",
+    "vision_public_excerpt": null,
+    "other_notes": "Logo design should portray a seamless, trusted and elegant ... It should not contain any airplanes, ships, sunset nor palm ... Colours should be royal blue,…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164719910",
+    "winner_designer": "berna",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Berna was awesome. Head and shoulders above the rest in my experience. Super patient, thoughtful, and incredibly attentive to detail. She took feedback really well, stayed…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164719910",
+      "role": "winner",
+      "selected": true,
+      "designer": "berna",
+      "alt": "\"Design a modern logo for a global travel agency\" winning Logo design by berna",
+      "local_file": "attachment_164719910.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 18796,
+      "sha256": "6cc3374b21734cdca3da823f3bb7f4b3c573f31453b54afc3f70553914acb6d7",
+      "source_preview_url": "https://images-platform.99static.com/kZCVxCDT1CNYkx65mKb4JSsYfKI=/0x0:1079x1079/500x500/top/smart/99designs-contests-attachments/164/164719/attachment_164719910"
+    },
+    {
+      "entry_id": "attachment_164688326",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "CliffKer",
+      "alt": "Logo design contest entry by CliffKer",
+      "local_file": "attachment_164688326.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 27698,
+      "sha256": "121f54e4f053632feec849aa61dda0816be46d85d5acb3c4d63f148158eedc0f",
+      "source_preview_url": "https://images-platform.99static.com/WWLW5YdtRZU4iyVhqEi_YnLSo5E=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164688/attachment_164688326"
+    },
+    {
+      "entry_id": "attachment_164688327",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "CliffKer",
+      "alt": "Logo design contest entry by CliffKer",
+      "local_file": "attachment_164688327.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 28235,
+      "sha256": "3a3aa639c290dc38556fa14cce12dd6346e49d0f46642745d84da49c86bdf774",
+      "source_preview_url": "https://images-platform.99static.com/F2hBlV2J31-TY8gkETavT6Mwu6s=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164688/attachment_164688327"
+    },
+    {
+      "entry_id": "attachment_164710223",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Grapehic",
+      "alt": "Logo design contest entry by Grapehic",
+      "local_file": "attachment_164710223.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 25150,
+      "sha256": "9a9df748995ae6097a1b088546f0503168fb488a05b7124e91867b41cf85fdc1",
+      "source_preview_url": "https://images-platform.99static.com/0L1ZnFmnstX6e2gp3PFsRg0XkaI=/0x0:1199x1199/500x500/top/smart/99designs-contests-attachments/164/164710/attachment_164710223"
+    },
+    {
+      "entry_id": "attachment_164710261",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Grapehic",
+      "alt": "Logo design contest entry by Grapehic",
+      "local_file": "attachment_164710261.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 24854,
+      "sha256": "fe5c193b928202aa44fc19e74482220e4dfc29e3c709205b6ab6d95b47c733fd",
+      "source_preview_url": "https://images-platform.99static.com/EXaGtwev7rn-kBo6ppscUbkSqZI=/0x0:1199x1199/500x500/top/smart/99designs-contests-attachments/164/164710/attachment_164710261"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Logo & Identity",
+    "subcategory": "Logo Design"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Brand Design",
+    "subtype": "Logo Design",
+    "original_category": "logo_design",
+    "source_record": "Logo_identity/Logo Design/Design a modern logo for a global travel agency/contest-1358476.json",
+    "source_record_sha256": "caf7ef7c965f710893962160b780df46c9e90df856d84db352fd6bd770024497"
+  }
+}

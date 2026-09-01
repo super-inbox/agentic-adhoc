@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1350507",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1350507",
+    "url": "https://99designs.com/postcard-flyer-design/contests/high-quality-promotional-flyer-be-created-guesthouse-oberambach-1350507",
+    "page_title": "A high-quality promotional flyer is to be created for our guesthouse in oberambach | Postcard, flyer or print contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "postcard_flyer_or_print",
+    "category_label": "postcard, flyer or print",
+    "client_display_name": "Wirmina",
+    "designer_count": 13,
+    "entry_count": 52,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "A high-quality promotional flyer is to be created for our guesthouse in Oberambach",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Hotel & Gastro What's your vision? Flyer for the Oberambach Guesthouse A high-quality promotional flyer is to be created for our guesthouse in ... The flyer will be prominently displayed and… Other notes Look & Feel Black-and-white photography Generous use of negative space Very light warm grey tone (#f5f3f0) instead of a pure white…",
+    "vision_public_excerpt": "Flyer for the Oberambach Guesthouse A high-quality promotional flyer is to be created for our guesthouse in ... The flyer will be prominently displayed and…",
+    "other_notes": "Look & Feel Black-and-white photography Generous use of negative space Very light warm grey tone (#f5f3f0) instead of a pure white…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_162870932",
+    "winner_designer": "graphixeu",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent work. Very happy."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_162870932",
+      "role": "winner",
+      "selected": true,
+      "designer": "graphixeu",
+      "alt": "\"A high-quality promotional flyer is to be created for our guesthouse in Oberambach\" winning Postcard, flyer or print by graphixeu",
+      "local_file": "attachment_162870932.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 44930,
+      "sha256": "969261e0fff30c1afd141b7b7c043be79bbdc63ce9a4fa0bab4b292f2d2df73c",
+      "source_preview_url": "https://images-platform.99static.com/rA5dmvwFAQIXbEK-BJmypnA36T8=/0x1713:2000x3713/500x500/top/smart/99designs-contests-attachments/162/162870/attachment_162870932"
+    },
+    {
+      "entry_id": "attachment_162718721",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Oreas",
+      "alt": "Postcard, flyer or print contest entry by Oreas",
+      "local_file": "attachment_162718721.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 35224,
+      "sha256": "2eead00d05c73a8c710134fa222f224cd851e3a5557a7eadfa07e093991b1cd8",
+      "source_preview_url": "https://images-platform.99static.com/KJBtj_78TpBShAaOnRWwRiOg7rk=/148x145:1850x1847/500x500/top/smart/99designs-contests-attachments/162/162718/attachment_162718721"
+    },
+    {
+      "entry_id": "attachment_162718752",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Oreas",
+      "alt": "Postcard, flyer or print contest entry by Oreas",
+      "local_file": "attachment_162718752.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 32345,
+      "sha256": "197efec109ec34e980331a5fd0fe8ed8c7b6dad3a4d8c1b73b39d205d80732ac",
+      "source_preview_url": "https://images-platform.99static.com/eQBBavYK8IZBcCdpJwnJoCSDuW0=/123x113:1875x1865/500x500/top/smart/99designs-contests-attachments/162/162718/attachment_162718752"
+    },
+    {
+      "entry_id": "attachment_162760450",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Oreas",
+      "alt": "Postcard, flyer or print contest entry by Oreas",
+      "local_file": "attachment_162760450.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 27634,
+      "sha256": "02e247162858909c89043edfd46da2ee15a1bca54e724b2bcc6d9f16fb52d69b",
+      "source_preview_url": "https://images-platform.99static.com/814EIOjgIzUvxydFBKs7RGSeQkU=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/162/162760/attachment_162760450"
+    },
+    {
+      "entry_id": "attachment_162710340",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": ".D.A.",
+      "alt": "Postcard, flyer or print contest entry by .D.A.",
+      "local_file": "attachment_162710340.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 30536,
+      "sha256": "9906c195721691b8de09066e533f08b409f4e196e16936379ae30e907f615444",
+      "source_preview_url": "https://images-platform.99static.com/amHicluYQjUR0nV6935ha0BgFzo=/36x0:1036x1000/500x500/top/smart/99designs-contests-attachments/162/162710/attachment_162710340"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Business & Advertising",
+    "subcategory": "Postcard, Flyer or Print"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Print & Editorial Design",
+    "subtype": "Postcard, Flyer or Print",
+    "original_category": "postcard_flyer_or_print",
+    "source_record": "Business/Postcard, Flyer or Print/A high-quality promotional flyer is to be created for our guesthouse in Oberambach/contest-1350507.json",
+    "source_record_sha256": "1ea21d97d625983c06259b263e1e98c69921357a465f753376666e00f6940942"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359475",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359475",
+    "url": "https://99designs.com/logo-design/contests/contemporary-atlantic-logo-ondara-ericeira-hotel-residences-world-1359475",
+    "page_title": "Contemporary atlantic logo for ondara ericeira hotel residences - world surf reserve in portugal | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Contemporary Atlantic Logo for Ondara Ericeira Hotel Residences - world surf reserve in Portugal",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "ritas2",
+    "entry_count": 838,
+    "designer_count": 211,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "ERICEIRA RESIDENCES",
+    "about_us": "Ondara is a premium four-star lifestyle boutique residential tourism project near Ribeira d’Ilhas beach, a World Surfing Reserve, in Ericeira, a laid-back…",
+    "vision_public_excerpt": null,
+    "other_notes": "You can find five logo versions ... They are almost on the right track, but not quite there ... We like the organic direction, but we do not want the style to…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164993345",
+    "winner_designer": "MagicalMysteryCat",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Great Work!!! We absolutely enjoy working with MagicalMysteryCat on our projects..."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164993345",
+      "role": "winner",
+      "selected": true,
+      "designer": "MagicalMysteryCat",
+      "alt": "\"Contemporary Atlantic Logo for Ondara Ericeira Hotel Residences - world surf reserve in Portugal\" winning Logo design by MagicalMysteryCat",
+      "local_file": "attachment_164993345.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 21153,
+      "sha256": "47aaf9ab4e347bf7b1398baad306fa57bb650c376390d9e51194d83b6eacf077",
+      "source_preview_url": "https://images-platform.99static.com/RbAz6prcffVFbszA8X1HvY8qSv0=/0x0:2001x2001/500x500/top/smart/99designs-contests-attachments/164/164993/attachment_164993345"
+    },
+    {
+      "entry_id": "attachment_164974055",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "TheLogo69",
+      "alt": "Logo design contest entry by TheLogo69",
+      "local_file": "attachment_164974055.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 10546,
+      "sha256": "fd92ae41fd4fa9dc0065f6c790891ecaaae269717dd882e6986d1696fc3119e5",
+      "source_preview_url": "https://images-platform.99static.com/BHDNgJqjTiraehyRURmHIVdddAs=/0x0:999x999/500x500/top/smart/99designs-contests-attachments/164/164974/attachment_164974055"
+    },
+    {
+      "entry_id": "attachment_164984699",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "justcantgetenough",
+      "alt": "Logo design contest entry by justcantgetenough",
+      "local_file": "attachment_164984699.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 12678,
+      "sha256": "fd00f8f3e84bb177fda0d070fa132b164a31e47535c75ce4f5c79cc4c6f1b955",
+      "source_preview_url": "https://images-platform.99static.com/xzUPcBdHRChledTUBlcf9MKDUdM=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/164/164984/attachment_164984699"
+    },
+    {
+      "entry_id": "attachment_164986625",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "justcantgetenough",
+      "alt": "Logo design contest entry by justcantgetenough",
+      "local_file": "attachment_164986625.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 12402,
+      "sha256": "5d6266645c0e79588d2adb46645ca75bd43644fc7bd9058a3d07a45b3dbb1cdd",
+      "source_preview_url": "https://images-platform.99static.com/HK0Bb5iRRzJ_YNssvyE4mQn-6MU=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/164/164986/attachment_164986625"
+    },
+    {
+      "entry_id": "attachment_164986788",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Tridvit Design",
+      "alt": "Logo design contest entry by Tridvit Design",
+      "local_file": "attachment_164986788.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 16814,
+      "sha256": "c937d2cd1ffbbf858dcbbcce5b7e68e87ac6ee137e2582fbbfd7506b46435700",
+      "source_preview_url": "https://images-platform.99static.com/_B33x07hcRHO1GyJrhn-U_TcEbw=/98x101:887x890/500x500/top/smart/99designs-contests-attachments/164/164986/attachment_164986788"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Logo & Identity",
+    "subcategory": "Logo Design"
+  }
+}

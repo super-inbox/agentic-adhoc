@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1167960",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1167960",
+    "url": "https://99designs.com/magazine-cover-design/contests/regional-travel-magazine-busy-moms-1167960",
+    "page_title": "Regional travel magazine for busy moms | Magazine cover contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "magazine_cover",
+    "category_label": "magazine cover",
+    "client_display_name": "dav7A",
+    "designer_count": 20,
+    "entry_count": 115,
+    "industry": "Travel & Hotel",
+    "package": "Gold",
+    "status": "finished",
+    "title": "Regional travel magazine for busy moms",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Carolina Traveler shares things-to-do and travel ideas in North Carolina and South ... The magazine is different from local competitors because we focus… What's your vision? Our magazine currently is titled \"Day Trips\". The title is misleading, since most of our content focuses on overnight ... The title also is causing confusion with… Other notes Here are two previous ... The cover art from these issues will be ... Summer...: ...; Spring... ... • You are welcome to use some or all of these images in your…",
+    "vision_public_excerpt": "Our magazine currently is titled \"Day Trips\". The title is misleading, since most of our content focuses on overnight ... The title also is causing confusion with…",
+    "other_notes": "Here are two previous ... The cover art from these issues will be ... Summer...: ...; Spring... ... • You are welcome to use some or all of these images in your…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_135989548",
+    "winner_designer": "Applefresh",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "I had an urgent project, and Rob went above and beyond to help us resolve the issue. I'm incredibly grateful for Rob's efforts, amazing talent and brilliant suggestions and ideas."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_135989548",
+      "role": "winner",
+      "selected": true,
+      "designer": "Applefresh",
+      "alt": "\"Regional travel magazine for busy moms\" winning Magazine cover by Applefresh",
+      "local_file": "attachment_135989548.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 52264,
+      "sha256": "5ede78c3addc2b9a514d387f5564a08347faf4b59fe1b61a55da8a870c495d05",
+      "source_preview_url": "https://images-platform.99static.com/XMS0KIdiugM-ZqPaatoqXHqcxl4=/0x185:2040x2225/500x500/top/smart/99designs-contests-attachments/135/135989/attachment_135989548"
+    },
+    {
+      "entry_id": "attachment_135901307",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Applefresh",
+      "alt": "Magazine cover contest entry by Applefresh",
+      "local_file": "attachment_135901307.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 93580,
+      "sha256": "0eeea6e0ca5401466588dbfa8225a646375f84c59184bd502c6e8988ff3617da",
+      "source_preview_url": "https://images-platform.99static.com/fmzfJV5K1vpYJY46gp4IumXWzL4=/0x166:2039x2205/500x500/top/smart/99designs-contests-attachments/135/135901/attachment_135901307"
+    },
+    {
+      "entry_id": "attachment_135920762",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Applefresh",
+      "alt": "Magazine cover contest entry by Applefresh",
+      "local_file": "attachment_135920762.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 51712,
+      "sha256": "3cc17ce7ffecb1aa6bde42db6d4fa4775ecb342cc1da435508c2c09c30ec069f",
+      "source_preview_url": "https://images-platform.99static.com/QP4QXJ3BfZtiyiapQ4J4oYHKW1U=/0x192:2039x2231/500x500/top/smart/99designs-contests-attachments/135/135920/attachment_135920762"
+    },
+    {
+      "entry_id": "attachment_135920850",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Applefresh",
+      "alt": "Magazine cover contest entry by Applefresh",
+      "local_file": "attachment_135920850.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 52111,
+      "sha256": "62322c1061d07c9f42d8eea5503910b562a172468eff8fb38a700e3a0e36b445",
+      "source_preview_url": "https://images-platform.99static.com/PtVwN72a1-RpqJF_Rd2UxHprLWk=/0x241:2039x2280/500x500/top/smart/99designs-contests-attachments/135/135920/attachment_135920850"
+    },
+    {
+      "entry_id": "attachment_135907096",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Lukin",
+      "alt": "Magazine cover contest entry by Lukin",
+      "local_file": "attachment_135907096.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 48795,
+      "sha256": "72b62ad9565ec35895dc84cb02178b500a1e8889e86046117b79491695028cb4",
+      "source_preview_url": "https://images-platform.99static.com/48kyMLbHYFZphpnGjo59eazVfNc=/0x10:1679x1689/500x500/top/smart/99designs-contests-attachments/135/135907/attachment_135907096"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Book & Magazine",
+    "subcategory": "Magazine Cover"
+  }
+}

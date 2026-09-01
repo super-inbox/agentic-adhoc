@@ -1,0 +1,163 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359084",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359084",
+    "url": "https://99designs.com/logo-design/contests/minimalist-luxury-hospitality-logo-monogram-ctc-stays-1359084",
+    "page_title": "Minimalist luxury hospitality logo & monogram for 'ctc stays' | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Minimalist Luxury Hospitality Logo & Monogram for 'CTC Stays'",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "cw7N",
+    "entry_count": 188,
+    "designer_count": 48,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "CTC Stays is an international hospitality marketplace built for high-end luxury group ... Do not include cartoon houses, palm trees, ocean waves, or cheesy…",
+    "vision_public_excerpt": null,
+    "other_notes": "CTC Stays is an elite, tech-enabled luxury vacation rental marketplace built exclusively for large-capacity properties (5+ bedroom beachfront estates and villa…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164895218",
+    "winner_designer": "Fauzan 'adhima!",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Fauzan really delivered for my logo design! Very good at bringing my vision to life with a logo that matches my mission. Also, very patient as this was my first time using this site.…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164895218",
+      "role": "winner",
+      "selected": true,
+      "designer": "Fauzan 'adhima!",
+      "alt": "\"Minimalist Luxury Hospitality Logo & Monogram for 'CTC Stays'\" winning Logo design by Fauzan 'adhima!",
+      "local_file": "attachment_164895218.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 68467,
+      "sha256": "1f058abf36421369970427fff531e5a4eedb6e4abec5b80e901713e61f819fdc",
+      "source_preview_url": "https://images-platform.99static.com/rA5JZ16CvnoQPfNwnQw4OA9-0ek=/0x0:1200x1200/500x500/top/smart/99designs-contests-attachments/164/164895/attachment_164895218"
+    },
+    {
+      "entry_id": "attachment_164891060",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "rzaltf",
+      "alt": "Logo design contest entry by rzaltf",
+      "local_file": "attachment_164891060.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 40150,
+      "sha256": "a8a198de15ecc4247cf90973d9d4a6d2f5fbaff7064b109d17d5397102c74c07",
+      "source_preview_url": "https://images-platform.99static.com/E3SvqdA2OF-j9xkqrbhNi_TovaI=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164891/attachment_164891060"
+    },
+    {
+      "entry_id": "attachment_164857677",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Helmidwip",
+      "alt": "Logo design contest entry by Helmidwip",
+      "local_file": "attachment_164857677.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 5714,
+      "sha256": "81d2c79e2681d956f2f038a9cbc475b302fcdff0c34a6d09c154a881ed679e32",
+      "source_preview_url": "https://images-platform.99static.com/_qdL7PGNliyryBwQgt0QY-z6Vd0=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/164/164857/attachment_164857677"
+    },
+    {
+      "entry_id": "attachment_164858031",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Vlad IV",
+      "alt": "Logo design contest entry by Vlad IV",
+      "local_file": "attachment_164858031.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 21356,
+      "sha256": "1dc3c1d0732b3407ff1ce2d8cceefb2d01eef2463bf2ffcecd440686cb8f68d2",
+      "source_preview_url": "https://images-platform.99static.com/wTNggVORdhqPm1AOnpDZfVxuUZU=/226x497:724x995/500x500/top/smart/99designs-contests-attachments/164/164858/attachment_164858031"
+    },
+    {
+      "entry_id": "attachment_164858042",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Vlad IV",
+      "alt": "Logo design contest entry by Vlad IV",
+      "local_file": "attachment_164858042.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 18339,
+      "sha256": "3c978a737e3ff1fda6d4ce0f512757418cca77d6177bac259a2bee90b30f0a85",
+      "source_preview_url": "https://images-platform.99static.com/A796wdShP2-tnJGBm_aoU7dE3G0=/221x494:729x1002/500x500/top/smart/99designs-contests-attachments/164/164858/attachment_164858042"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Brand Design",
+    "subtype": "Logo Design",
+    "original_category": "logo_design",
+    "source_record": "Travel Hotel/Minimalist Luxury Hospitality Logo & Monogram for 'CTC Stays'/contest-1359084.json",
+    "source_record_sha256": "9eba209e1bccdd78203c8ea3128fad78e40e8bd25d1179df5ba26eae1185d866"
+  }
+}

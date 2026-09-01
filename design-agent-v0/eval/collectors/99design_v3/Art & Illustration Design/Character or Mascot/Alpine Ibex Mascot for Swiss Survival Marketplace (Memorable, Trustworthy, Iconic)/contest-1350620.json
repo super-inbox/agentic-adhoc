@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1350620",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1350620",
+    "url": "https://99designs.com/character-mascot-design/contests/alpine-ibex-mascot-swiss-survival-marketplace-memorable-trustworthy-1350620",
+    "page_title": "Alpine ibex mascot for swiss survival marketplace (memorable, trustworthy, iconic) | Character or mascot contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "character_or_mascot",
+    "category_label": "character or mascot",
+    "client_display_name": "shikunov",
+    "designer_count": 48,
+    "entry_count": 227,
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "status": "finished",
+    "title": "Alpine Ibex Mascot for Swiss Survival Marketplace (Memorable, Trustworthy, Iconic)",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us We are a young startup building a digital platform (marketplace) for sellers of survival and preparedness products in Switzerland and the German-speaking… What's your vision? Alpine ibex (ibex), male with long curved horns, Alpine mountain ... The Alpine mountain goat is an example of survival in difficult natural conditions (in the Alps,… Other notes I recommend watching the...-minute documentary video to understand who the Alpine ibex is: ... Photo in attachments from Wikipedia: Giles Laurent, CC…",
+    "vision_public_excerpt": "Alpine ibex (ibex), male with long curved horns, Alpine mountain ... The Alpine mountain goat is an example of survival in difficult natural conditions (in the Alps,…",
+    "other_notes": "I recommend watching the...-minute documentary video to understand who the Alpine ibex is: ... Photo in attachments from Wikipedia: Giles Laurent, CC…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_162840330",
+    "winner_designer": "SPECULATOR",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent designs. Extremely responsive. Creative. Pleasure to work with. Captured our vision."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_162840330",
+      "role": "winner",
+      "selected": true,
+      "designer": "SPECULATOR",
+      "alt": "\"Alpine Ibex Mascot for Swiss Survival Marketplace (Memorable, Trustworthy, Iconic)\" winning Character or mascot by SPECULATOR",
+      "local_file": "attachment_162840330.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45637,
+      "sha256": "34f4c71bb35d480671987de39ac798ba1df5daf59267a44af50151ccb847645d",
+      "source_preview_url": "https://images-platform.99static.com/JrWADBAKQ3a8Erxy_jQ05b-wbHI=/0x0:1667x1667/500x500/top/smart/99designs-contests-attachments/162/162840/attachment_162840330"
+    },
+    {
+      "entry_id": "attachment_162831743",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "SPECULATOR",
+      "alt": "Character or mascot contest entry by SPECULATOR",
+      "local_file": "attachment_162831743.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45637,
+      "sha256": "34f4c71bb35d480671987de39ac798ba1df5daf59267a44af50151ccb847645d",
+      "source_preview_url": "https://images-platform.99static.com/d8hDGMYFfYVbbsNMZxrYKQrEjmQ=/0x0:1667x1667/500x500/top/smart/99designs-contests-attachments/162/162831/attachment_162831743"
+    },
+    {
+      "entry_id": "attachment_162769351",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "N A Z Z W A",
+      "alt": "Character or mascot contest entry by N A Z Z W A",
+      "local_file": "attachment_162769351.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 24482,
+      "sha256": "f02a96bf54db27c189065199c749df3e50406c9e0135181aed1ca95d328f7aad",
+      "source_preview_url": "https://images-platform.99static.com/sfLKl28ctw7BHC2OjY7UWxGlw5M=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/162/162769/attachment_162769351"
+    },
+    {
+      "entry_id": "attachment_162774320",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Margarita Yehorova",
+      "alt": "Character or mascot contest entry by Margarita Yehorova",
+      "local_file": "attachment_162774320.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 27347,
+      "sha256": "07e67bfc30f1da6b07aaf52e1b8e489d8cbbf631035d05aff505f6a81455a58d",
+      "source_preview_url": "https://images-platform.99static.com/SsYc9X3QkAZUKg3zqxDEmiYCeN8=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/162/162774/attachment_162774320"
+    },
+    {
+      "entry_id": "attachment_162776698",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "MahaNaya",
+      "alt": "Character or mascot contest entry by MahaNaya",
+      "local_file": "attachment_162776698.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 15986,
+      "sha256": "9380c3b715d5c6ec6e8480c128ce3a4644f2d1196a10084c4d7c861d5a2c90d4",
+      "source_preview_url": "https://images-platform.99static.com/svim6zKhTRj7ztod8BIhmdG-pFM=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/162/162776/attachment_162776698"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Art & Illustration",
+    "subcategory": "Character or Mascot"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Art & Illustration Design",
+    "subtype": "Character or Mascot",
+    "original_category": "character_or_mascot",
+    "source_record": "Art/Character or Mascot/Alpine Ibex Mascot for Swiss Survival Marketplace (Memorable, Trustworthy, Iconic)/contest-1350620.json",
+    "source_record_sha256": "1ce6869bc914b4da7ab07eac979e1db656bcfce952c0f7970cb081c18d208c49"
+  }
+}
