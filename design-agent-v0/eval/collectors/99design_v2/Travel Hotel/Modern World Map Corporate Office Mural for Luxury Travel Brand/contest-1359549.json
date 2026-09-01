@@ -1,0 +1,156 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359549",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359549",
+    "url": "https://99designs.com/other-art-illustration/contests/modern-world-map-corporate-office-mural-luxury-travel-1359549",
+    "page_title": "Modern world map corporate office mural for luxury travel brand | Other art or illustration contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Modern World Map Corporate Office Mural for Luxury Travel Brand",
+    "status": "finished",
+    "category_label": "other art or illustration",
+    "category": "other_art_or_illustration",
+    "industry": "Travel & Hotel",
+    "package": "Gold",
+    "client_display_name": "walt242",
+    "entry_count": 23,
+    "designer_count": 14,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "We sell tours and excursions to tourists in the Bahamas",
+    "vision_public_excerpt": "Corporate Office Wall Mural Design Brief Project Overview We are renovating the corporate headquarters of Mansa Bay ..., and we're looking for…",
+    "other_notes": "Important Wall Layout One important detail you'll notice is that the feature wall includes a ... Our current plan is to install the mural over the door so that the…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_165034915",
+    "winner_designer": "DeSaFeART",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Working with DeSaFeART was a great experience. The designer was creative, responsive, and really captured the personality and emotional direction I was…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_165034915",
+      "role": "winner",
+      "selected": true,
+      "designer": "DeSaFeART",
+      "alt": "\"Modern World Map Corporate Office Mural for Luxury Travel Brand\" winning Other art or illustration by DeSaFeART",
+      "local_file": "attachment_165034915.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 111902,
+      "sha256": "af44a4860ecde2955ef10e76ea2a49f4c86cffe5cba4646ac1f983ebc2e5d90d",
+      "source_preview_url": "https://images-platform.99static.com/mvuKM4z3xs9RcFbIqItkWmkjpY0=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/165/165034/attachment_165034915"
+    },
+    {
+      "entry_id": "attachment_165033586",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Mar.",
+      "alt": "Other art or illustration contest entry by Mar.",
+      "local_file": "attachment_165033586.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 33038,
+      "sha256": "0de75001cbb2756d78d7ca127479097e3c7b842b96ec32aaef196815408d56a5",
+      "source_preview_url": "https://images-platform.99static.com/OhDaHMT4CmJtvv3nFCNpTP9LJ5k=/0x0:1200x1200/500x500/top/smart/99designs-contests-attachments/165/165033/attachment_165033586"
+    },
+    {
+      "entry_id": "attachment_165035219",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "MaryRay",
+      "alt": "Other art or illustration contest entry by MaryRay",
+      "local_file": "attachment_165035219.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 50903,
+      "sha256": "246f08d217c1899d42d2ae2daf070cf7dae59dc21fd95f36fe6fe2fb5f70ea14",
+      "source_preview_url": "https://images-platform.99static.com/zWvQm3mGrd-LPw0f_PW5ElsERWc=/481x0:1690x1209/500x500/top/smart/99designs-contests-attachments/165/165035/attachment_165035219"
+    },
+    {
+      "entry_id": "attachment_165035234",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "MaryRay",
+      "alt": "Other art or illustration contest entry by MaryRay",
+      "local_file": "attachment_165035234.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 51870,
+      "sha256": "604a15a1f3f40a0e5762e31ffe839f877cbd49ac9afacd4b2976ba48459b87c6",
+      "source_preview_url": "https://images-platform.99static.com/PVVcN1JI8jWFojgDxwHbTrAMNtI=/567x0:1757x1190/500x500/top/smart/99designs-contests-attachments/165/165035/attachment_165035234"
+    },
+    {
+      "entry_id": "attachment_165035247",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "MaryRay",
+      "alt": "Other art or illustration contest entry by MaryRay",
+      "local_file": "attachment_165035247.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 51604,
+      "sha256": "9c09ae7351311851d87c38b1345ea4a6158524808692a8c1e04fd72bcace8527",
+      "source_preview_url": "https://images-platform.99static.com/ev5fgIbYtlCX0wFDhX3mbV3NDiM=/523x0:1737x1214/500x500/top/smart/99designs-contests-attachments/165/165035/attachment_165035247"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

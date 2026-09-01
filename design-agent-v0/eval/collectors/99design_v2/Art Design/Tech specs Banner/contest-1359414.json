@@ -1,0 +1,155 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359414",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359414",
+    "url": "https://99designs.com/banner-ad-design/contests/tech-specs-banner-1359414",
+    "page_title": "Tech specs banner | Banner ad contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Tech specs Banner",
+    "status": "finished",
+    "category": "banner_ad",
+    "industry": "Art & Design",
+    "package": "Bronze",
+    "client_display_name": "simbans",
+    "entry_count": 50,
+    "designer_count": 11,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "about_us": "Standalone Drawing tablets",
+    "vision_public_excerpt": "I have included a mockup of a banner I ... Please help me design ... the final picture should be... x... ... the emphasis is on making the information very clear…",
+    "other_notes": "no",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete vision text where the public excerpt contains ellipses",
+      "exact dimensions where omitted",
+      "referenced input attachments"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF",
+      "XD"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_designer": "lukes™",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent work. Thank you",
+    "winner_entry_id": "attachment_164966394"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164966394",
+      "role": "winner",
+      "selected": true,
+      "designer": "lukes™",
+      "alt": "\"Tech specs Banner\" winning Banner ad by lukes™",
+      "local_file": "attachment_164966394.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 252697,
+      "sha256": "1dc1bc210205d9bb0e7a17e278f4abe4ab18963220ce76c9572bae952c60f539",
+      "source_preview_url": "https://images-platform.99static.com/I5cLuQW9fIDyV-BhYbzF5C1vpmo=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164966/attachment_164966394"
+    },
+    {
+      "entry_id": "attachment_164954207",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Sunail Ahmed",
+      "alt": null,
+      "local_file": "attachment_164954207.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 353404,
+      "sha256": "2a6865e3a1702d27a6c7880955fc23b7a9c0f5c4b096d50286a290fb15f9f013",
+      "source_preview_url": "https://images-platform.99static.com/2aSg4t-Y7XDygEcx4LDJ9U1mHVY=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164954/attachment_164954207"
+    },
+    {
+      "entry_id": "attachment_164957205",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Alpha Spark Solution",
+      "alt": null,
+      "local_file": "attachment_164957205.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 35687,
+      "sha256": "16a1847dd0822f597f9d3a297b518b3d839eb8fa4d9bebb018450b12b2a15bfd",
+      "source_preview_url": "https://images-platform.99static.com/YfQ0U3d5Ggw0vHIi4AcjMeVLjTo=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164957/attachment_164957205"
+    },
+    {
+      "entry_id": "attachment_164959563",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Sarbani",
+      "alt": null,
+      "local_file": "attachment_164959563.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 95583,
+      "sha256": "d720b0000304549396c28b0e64a904291ab50f940a4d2459f8eeb54f6e0adba1",
+      "source_preview_url": "https://images-platform.99static.com/6nvFqSNaPeZOPHun9Smy9VElheo=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/164/164959/attachment_164959563"
+    },
+    {
+      "entry_id": "attachment_164959875",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Sarbani",
+      "alt": null,
+      "local_file": "attachment_164959875.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 107890,
+      "sha256": "069805594c52424559adfeed7b644f32552ecdc55bf0c2053c77ea661f6cbbdc",
+      "source_preview_url": "https://images-platform.99static.com/zNZXESc_3wC5qkJ43EBoiFH79x8=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/164/164959/attachment_164959875"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "cross-contest consistency fixture for the same client and product"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

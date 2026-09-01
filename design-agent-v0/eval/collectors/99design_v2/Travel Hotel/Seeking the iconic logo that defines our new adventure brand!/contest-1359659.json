@@ -1,0 +1,155 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359659",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359659",
+    "url": "https://99designs.com/logo-design/contests/seeking-iconic-logo-defines-adventure-brand-1359659",
+    "page_title": "Seeking the iconic logo that defines our new adventure brand! | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Seeking the iconic logo that defines our new adventure brand!",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "WanderWare",
+    "entry_count": 511,
+    "designer_count": 87,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "No",
+    "about_us": "We are producing a travel and adventure ... Our first product is a family safety ... We are focusing on the USA and European ...",
+    "vision_public_excerpt": null,
+    "other_notes": "We are looking for iconic, premium and ...",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_165100589",
+    "winner_designer": "Males Design",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Fantastic experience - talented and always responsive both in making requested feedback and in suggesting new ideas."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_165100589",
+      "role": "winner",
+      "selected": true,
+      "designer": "Males Design",
+      "alt": "\"Seeking the iconic logo that defines our new adventure brand!\" winning Logo design by Males Design",
+      "local_file": "attachment_165100589.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 35533,
+      "sha256": "3910d6c61330744cd3cab74d03bb4a8767da56bf568088d2ead3b670aa0cae66",
+      "source_preview_url": "https://images-platform.99static.com/alL03d6MOG5XjrrXjJKAVeRFReg=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/165/165100/attachment_165100589"
+    },
+    {
+      "entry_id": "attachment_165065936",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Nurseart13",
+      "alt": "Logo design contest entry by Nurseart13",
+      "local_file": "attachment_165065936.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 31087,
+      "sha256": "60006422262af0d199ea8781c7503ac270fe3dd41145a32461cfc63d74f3c03c",
+      "source_preview_url": "https://images-platform.99static.com/p7X-pPH68hemJq93e4HI5nGX2yY=/0x0:1800x1800/500x500/top/smart/99designs-contests-attachments/165/165065/attachment_165065936"
+    },
+    {
+      "entry_id": "attachment_165080513",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Nurseart13",
+      "alt": "Logo design contest entry by Nurseart13",
+      "local_file": "attachment_165080513.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45572,
+      "sha256": "0cef28a6e598a843286e4a3383fb91e08475173bc569635a7abf76d91b036708",
+      "source_preview_url": "https://images-platform.99static.com/nQm8H8Ug70OQUo9d-gXGlyA2Pzs=/0x0:1499x1499/500x500/top/smart/99designs-contests-attachments/165/165080/attachment_165080513"
+    },
+    {
+      "entry_id": "attachment_165080706",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "powerblue studio",
+      "alt": "Logo design contest entry by powerblue studio",
+      "local_file": "attachment_165080706.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 34796,
+      "sha256": "fea7db90a447510559a42f7787d4092252702086d1c99357bf9309e9ecf007b2",
+      "source_preview_url": "https://images-platform.99static.com/OHtzptaFaGf6kmh27b1SFJgoJk0=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/165/165080/attachment_165080706"
+    },
+    {
+      "entry_id": "attachment_165083038",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Nurseart13",
+      "alt": "Logo design contest entry by Nurseart13",
+      "local_file": "attachment_165083038.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 28790,
+      "sha256": "cf5c231ea20ed3894c0b82e037c01746aec7db6db9ee85c2abce50070698a1f3",
+      "source_preview_url": "https://images-platform.99static.com/gcjZbcGTisKB_dUt6BQbjbz62m0=/0x0:1600x1600/500x500/top/smart/99designs-contests-attachments/165/165083/attachment_165083038"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

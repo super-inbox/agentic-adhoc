@@ -1,0 +1,155 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359030",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359030",
+    "url": "https://99designs.com/logo-design/contests/luxury-off-grid-vacation-rental-cabins-east-tennessee-1359030",
+    "page_title": "Luxury off grid vacation rental cabins in east tennessee | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Luxury off grid vacation rental cabins in East Tennessee",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "client_display_name": "Teken Media",
+    "entry_count": 634,
+    "designer_count": 132,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "We will have off grid luxury small cabins on a lake in eastern Tennessee with mountain view'... There will be a farm one day as ... We want it to be an experience…",
+    "vision_public_excerpt": null,
+    "other_notes": "We've attached photos of the property and views from the property to help inspire some logo ... Simple and elegant logos seem to catch our eye the ... Pine trees…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164908076",
+    "winner_designer": "sumars",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Sumars was quick to respond to design requests and is a very talented designers. Thank you!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164908076",
+      "role": "winner",
+      "selected": true,
+      "designer": "sumars",
+      "alt": "\"Luxury off grid vacation rental cabins in East Tennessee\" winning Logo design by sumars",
+      "local_file": "attachment_164908076.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 47291,
+      "sha256": "0f7e1fa536ae0c25168e48b7a3091d1012c61f422df5c672f815e8f8427e01f5",
+      "source_preview_url": "https://images-platform.99static.com/r0ugRwwGdQLjVjCH_cG3HT6k5kg=/164x164:1484x1484/500x500/top/smart/99designs-contests-attachments/164/164908/attachment_164908076"
+    },
+    {
+      "entry_id": "attachment_164892780",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "GinaLó",
+      "alt": "Logo design contest entry by GinaLó",
+      "local_file": "attachment_164892780.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 10707,
+      "sha256": "8f1b56fdbc591d4882e0c460a0238e14925e9f48d31a8e08075487f538be5cfc",
+      "source_preview_url": "https://images-platform.99static.com/Rw8AoKlGqFdJnVDzoQfuEZ0Lxi8=/0x0:1535x1535/500x500/top/smart/99designs-contests-attachments/164/164892/attachment_164892780"
+    },
+    {
+      "entry_id": "attachment_164893256",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "GinaLó",
+      "alt": "Logo design contest entry by GinaLó",
+      "local_file": "attachment_164893256.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 11498,
+      "sha256": "501fd12871f13a62f8c305ef0c9ee08e04764ecc11e3fe5f5c1c2fd7eb596651",
+      "source_preview_url": "https://images-platform.99static.com/pE0azQqIIyF2EGyCVu0ECFEiZfs=/0x0:1535x1535/500x500/top/smart/99designs-contests-attachments/164/164893/attachment_164893256"
+    },
+    {
+      "entry_id": "attachment_164906973",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "sumars",
+      "alt": "Logo design contest entry by sumars",
+      "local_file": "attachment_164906973.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45023,
+      "sha256": "891c045d25a0cab6d68619bfbb70452a30bec77661988324e200fbf749a014a6",
+      "source_preview_url": "https://images-platform.99static.com/RGp2yAH9T9_zNoHFeu340F_RTzw=/164x164:1484x1484/500x500/top/smart/99designs-contests-attachments/164/164906/attachment_164906973"
+    },
+    {
+      "entry_id": "attachment_164908260",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "sumars",
+      "alt": "Logo design contest entry by sumars",
+      "local_file": "attachment_164908260.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 54155,
+      "sha256": "12e921e8ceeb5f081f45a5eaa2ad735910f81910b3c0a4023c4aad5651270bca",
+      "source_preview_url": "https://images-platform.99static.com/ErbjJBBgy25DL1GR9s3KOvLORx4=/164x164:1484x1484/500x500/top/smart/99designs-contests-attachments/164/164908/attachment_164908260"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

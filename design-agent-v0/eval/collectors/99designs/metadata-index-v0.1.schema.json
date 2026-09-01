@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://curify.ai/schemas/99designs-metadata-index-v0.1.schema.json",
+  "title": "99designs search-index reference record v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "source",
+    "source_url",
+    "contest_id",
+    "retrieved_at",
+    "discovery_method",
+    "evidence_status",
+    "title",
+    "design_category",
+    "industry",
+    "brief_summary",
+    "entry_count",
+    "designer_count",
+    "winner",
+    "rights"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "99designs-metadata-index-v0.1"
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^99d-hk-[0-9]+$"
+    },
+    "source": {
+      "const": "99designs.hk"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://99designs\\.hk/.+/contests/.+-[0-9]+$"
+    },
+    "contest_id": {
+      "type": "string",
+      "pattern": "^[0-9]+$"
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "discovery_method": {
+      "const": "search_engine_index"
+    },
+    "evidence_status": {
+      "enum": [
+        "contest_search_index",
+        "listing_search_index"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "design_category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "industry": {
+      "const": "Art & Design"
+    },
+    "brief_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "entry_count": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "designer_count": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "winner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "names", "count", "image_url"],
+      "properties": {
+        "status": {
+          "enum": ["verified_from_search_index", "partial", "unverified"]
+        },
+        "names": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        },
+        "count": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "image_url": {
+          "type": "null"
+        }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "full_brief_stored",
+        "winner_image_url_stored",
+        "winner_pixels_stored",
+        "training_allowed",
+        "redistribution_allowed",
+        "terms_url"
+      ],
+      "properties": {
+        "status": {"const": "metadata_only"},
+        "full_brief_stored": {"const": false},
+        "winner_image_url_stored": {"const": false},
+        "winner_pixels_stored": {"const": false},
+        "training_allowed": {"const": false},
+        "redistribution_allowed": {"const": false},
+        "terms_url": {
+          "const": "https://99designs.com/legal/terms-and-conditions"
+        }
+      }
+    }
+  }
+}

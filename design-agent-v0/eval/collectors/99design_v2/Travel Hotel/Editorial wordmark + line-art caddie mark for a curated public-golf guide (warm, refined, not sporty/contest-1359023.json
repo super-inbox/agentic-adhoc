@@ -1,0 +1,155 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359023",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359023",
+    "url": "https://99designs.com/logo-design/contests/editorial-wordmark-line-art-caddie-mark-curated-public-1359023",
+    "page_title": "Editorial wordmark + line-art caddie mark for a curated public-golf guide (warm, refined, not sporty | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Editorial wordmark + line-art caddie mark for a curated public-golf guide (warm, refined, not sporty",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "client_display_name": "caleNZ",
+    "entry_count": 544,
+    "designer_count": 69,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "Public golf worth the ...",
+    "about_us": "The Caddie Book is a curated editorial guide to public golf courses worth planning a trip around — the ones actually worth your time, written up like advice from…",
+    "vision_public_excerpt": null,
+    "other_notes": "The idea: the mark should feel like a single caddie — the friend who has played everywhere and knows where you should ... One figure, relaxed and ... Not a…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164933162",
+    "winner_designer": "Marsha PIA™",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Marsha was tireless in this project and always willing to go the extra mile to get something right. They were not only responsive but also creative and was able to…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164933162",
+      "role": "winner",
+      "selected": true,
+      "designer": "Marsha PIA™",
+      "alt": "\"Editorial wordmark + line-art caddie mark for a curated public-golf guide (warm, refined, not sporty\" winning Logo design by Marsha PIA™",
+      "local_file": "attachment_164933162.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 20816,
+      "sha256": "841fc8ebbc0233c2fdc382bbf02183b3654500d6560123ab2f404cd82a51a392",
+      "source_preview_url": "https://images-platform.99static.com/PXemuIGLIsQGn30nDH7Fc2Ec-Mw=/0x0:1771x1771/500x500/top/smart/99designs-contests-attachments/164/164933/attachment_164933162"
+    },
+    {
+      "entry_id": "attachment_164851184",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "NEXART©",
+      "alt": "Logo design contest entry by NEXART©",
+      "local_file": "attachment_164851184.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 11390,
+      "sha256": "89f4713202aa7caed6ca2247aaceda47a71913887d329d4c20206f76a794a831",
+      "source_preview_url": "https://images-platform.99static.com/Rujzwn5uCOlSDtvaXl6WUOxA1y4=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164851/attachment_164851184"
+    },
+    {
+      "entry_id": "attachment_164856711",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Filastin Studio",
+      "alt": "Logo design contest entry by Filastin Studio",
+      "local_file": "attachment_164856711.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 14812,
+      "sha256": "5a52c38c332510dd2863b38b3adac1259d492ed298b46e4a209ed8d51c8f9a86",
+      "source_preview_url": "https://images-platform.99static.com/F0l_sN2Y0ndsZpMaTxaMa5trbJo=/0x0:1300x1300/500x500/top/smart/99designs-contests-attachments/164/164856/attachment_164856711"
+    },
+    {
+      "entry_id": "attachment_164863624",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Filastin Studio",
+      "alt": "Logo design contest entry by Filastin Studio",
+      "local_file": "attachment_164863624.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 14957,
+      "sha256": "ab1a9c8e6ab891e71b61279aa686438937c0d028802dee81eaef5c7e5d508cea",
+      "source_preview_url": "https://images-platform.99static.com/Lqa7HnxfkXrrix7yIjoEaFB6EJU=/122x112:1202x1192/500x500/top/smart/99designs-contests-attachments/164/164863/attachment_164863624"
+    },
+    {
+      "entry_id": "attachment_164907080",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "gleam.com",
+      "alt": "Logo design contest entry by gleam.com",
+      "local_file": "attachment_164907080.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 11790,
+      "sha256": "aa82e311b5acd3d01a8e8e4f2f61a51087ef38a3f9a7753b23f4fba79b348645",
+      "source_preview_url": "https://images-platform.99static.com/iuBgx-XWtAjCodPkC3BUG0WMefA=/187x187:1690x1690/500x500/top/smart/99designs-contests-attachments/164/164907/attachment_164907080"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

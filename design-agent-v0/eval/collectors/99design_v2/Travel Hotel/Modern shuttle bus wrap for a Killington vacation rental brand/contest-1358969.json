@@ -1,0 +1,156 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1358969",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1358969",
+    "url": "https://99designs.com/car-truck-van-wrap-design/contests/modern-shuttle-bus-wrap-killington-vacation-rental-brand-1358969",
+    "page_title": "Modern shuttle bus wrap for a killington vacation rental brand | Car, truck or van wrap contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Modern shuttle bus wrap for a Killington vacation rental brand",
+    "status": "finished",
+    "category_label": "car, truck or van wrap",
+    "category": "car_truck_or_van_wrap",
+    "industry": "Travel & Hotel",
+    "package": "Gold",
+    "client_display_name": "Killington Services",
+    "entry_count": 25,
+    "designer_count": 5,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Simple Vacation Rentals is a vacation-rental management company in Killington, ... We provide professionally managed lodging and guest services…",
+    "vision_public_excerpt": "We need a complete exterior wrap concept for the white Ford cutaway shuttle bus shown in the reference ... It replaces an old Ski On Ski Off wrap and should…",
+    "other_notes": "BRAND HIERARCHY ... Simple Vacation Rentals / Simple logo ... Ski On Ski Off REQUIRED COPY Vacation Rentals and Property…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_165022502",
+    "winner_designer": "Gravisi Studio",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Very easy to work with and great design quality."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_165022502",
+      "role": "winner",
+      "selected": true,
+      "designer": "Gravisi Studio",
+      "alt": "\"Modern shuttle bus wrap for a Killington vacation rental brand\" winning Car, truck or van wrap by Gravisi Studio",
+      "local_file": "attachment_165022502.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 54286,
+      "sha256": "0e9c4dca4e64a3984d9b4ff09bdf4766486bbc94ea3d61e02cb3ba0d3a2b2d16",
+      "source_preview_url": "https://images-platform.99static.com/3zrXGc15ep-8DLcdZR0zHDpDL9s=/0x865:1999x2864/500x500/top/smart/99designs-contests-attachments/165/165022/attachment_165022502"
+    },
+    {
+      "entry_id": "attachment_164855097",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "★mmarif1982★",
+      "alt": "Car, truck or van wrap contest entry by ★mmarif1982★",
+      "local_file": "attachment_164855097.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 50554,
+      "sha256": "1c56e1597c8d23ad219c2b80db5397bee1be42116f8d48f455f8ef5e9023590f",
+      "source_preview_url": "https://images-platform.99static.com/lRzYOxnCBjKKQmMuiCWIVvRKpiM=/18x893:2020x2895/500x500/top/smart/99designs-contests-attachments/164/164855/attachment_164855097"
+    },
+    {
+      "entry_id": "attachment_164864718",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Gravisi Studio",
+      "alt": "Car, truck or van wrap contest entry by Gravisi Studio",
+      "local_file": "attachment_164864718.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 49916,
+      "sha256": "9381aa3a53a5ab8e67dd9b684f55cb7e85045d2496b1536c219f385857d755f7",
+      "source_preview_url": "https://images-platform.99static.com/GCLd3KYEnwo9IB592B4Gijyqn3o=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/164/164864/attachment_164864718"
+    },
+    {
+      "entry_id": "attachment_164997733",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Gravisi Studio",
+      "alt": "Car, truck or van wrap contest entry by Gravisi Studio",
+      "local_file": "attachment_164997733.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 51226,
+      "sha256": "b310a60f0d79cd55823e793b5725a7ad2edebfa3e130e03fe85dedaa17017f22",
+      "source_preview_url": "https://images-platform.99static.com/LaOf2GjIBFLHeZhWrksn4ONMBLA=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/164/164997/attachment_164997733"
+    },
+    {
+      "entry_id": "attachment_165017649",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Gravisi Studio",
+      "alt": "Car, truck or van wrap contest entry by Gravisi Studio",
+      "local_file": "attachment_165017649.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 54023,
+      "sha256": "6753d10affb0694930912b2a6333ddcab8d6b440a5cc49f4f4411d71b6b28050",
+      "source_preview_url": "https://images-platform.99static.com/dhnnoZpsQ-41ekCzzh9gvFNXK84=/0x869:1999x2868/500x500/top/smart/99designs-contests-attachments/165/165017/attachment_165017649"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

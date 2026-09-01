@@ -1,0 +1,155 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359467",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359467",
+    "url": "https://99designs.com/banner-ad-design/contests/box-content-banner-1359467",
+    "page_title": "Box content banner | Banner ad contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Box content banner",
+    "status": "finished",
+    "category": "banner_ad",
+    "industry": "Art & Design",
+    "package": "Bronze",
+    "client_display_name": "simbans",
+    "entry_count": 34,
+    "designer_count": 6,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "about_us": "Standalone drawing tablets",
+    "vision_public_excerpt": "using the colors and design of attached \"color scheme\", please design a banner for \"Box contents\" ... the final image should be... x... ... the bonus item…",
+    "other_notes": "no",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete vision text where the public excerpt contains ellipses",
+      "exact dimensions where omitted",
+      "referenced input attachments"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF",
+      "XD"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_designer": "Tushar K∎",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent work, Thank you!!",
+    "winner_entry_id": "attachment_164980845"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164980845",
+      "role": "winner",
+      "selected": true,
+      "designer": "Tushar K∎",
+      "alt": "\"Box content banner\" winning Banner ad by Tushar K∎",
+      "local_file": "attachment_164980845.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 65923,
+      "sha256": "777644469ddc06631c6cc75240ab6f7a2022af7e1e8bc8d729b78844efe54c9a",
+      "source_preview_url": "https://images-platform.99static.com/LSGIVwYE0HncmMAagTGHHWETLEU=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164980/attachment_164980845"
+    },
+    {
+      "entry_id": "attachment_164968344",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Rextive Art",
+      "alt": null,
+      "local_file": "attachment_164968344.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 335231,
+      "sha256": "3d59620f0e2881323f50bf4e67dfe0b707e7f8dccc17beb2e595321181df8715",
+      "source_preview_url": "https://images-platform.99static.com/NEm3jPHl2X0JMAC1hjEXjLZS78Q=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164968/attachment_164968344"
+    },
+    {
+      "entry_id": "attachment_164970925",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "New Look",
+      "alt": null,
+      "local_file": "attachment_164970925.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 291926,
+      "sha256": "31bdaedfda2024b9ae1b2ac099c4ebed0f7788bf78aa81807b52801139b5317e",
+      "source_preview_url": "https://images-platform.99static.com/4J4w1OmGFa6-TVZ_uPQ1wuYlDug=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164970/attachment_164970925"
+    },
+    {
+      "entry_id": "attachment_164973570",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "lukes™",
+      "alt": null,
+      "local_file": "attachment_164973570.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 280887,
+      "sha256": "2daf5d32eae5c20a8af2e6ddfca2f2b42f2012269c06f6e3141acc614ce69c4e",
+      "source_preview_url": "https://images-platform.99static.com/ueB4VBU50BE_codmTm3S01gxO9U=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164973/attachment_164973570"
+    },
+    {
+      "entry_id": "attachment_164969057",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Sabidesk",
+      "alt": null,
+      "local_file": "attachment_164969057.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 303160,
+      "sha256": "bf9c279616120f9ab139ef2a53523da33136f4d77411371c8a7c775b6ea406b1",
+      "source_preview_url": "https://images-platform.99static.com/yGdNCsgT2MWkIG4toc15shDwysI=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164969/attachment_164969057"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "cross-contest consistency fixture for the same client and product"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}

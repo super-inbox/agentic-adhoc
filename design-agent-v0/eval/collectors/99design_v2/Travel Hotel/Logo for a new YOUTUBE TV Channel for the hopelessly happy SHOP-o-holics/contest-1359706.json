@@ -1,0 +1,155 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359706",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359706",
+    "url": "https://99designs.com/logo-design/contests/logo-youtube-tv-channel-hopelessly-happy-shop-o-1359706",
+    "page_title": "Logo for a new youtube tv channel for the hopelessly happy shop-o-holics | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Logo for a new YOUTUBE TV Channel for the hopelessly happy SHOP-o-holics",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "shophappenstv",
+    "entry_count": 237,
+    "designer_count": 52,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "Shop Happens",
+    "about_us": "Influencer, launching a YOUTUBE TV ... For Shop Happens, I’d build the show primarily for women roughly...–..., while making it entertaining enough…",
+    "vision_public_excerpt": null,
+    "other_notes": "I would love for the designers to play with the ...“Shop Happens” is intentionally a little cheeky, so I’m open to subtle visual humor or a clever design element that…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_165064949",
+    "winner_designer": "MXS studio",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "I love that this designer nailed the theme and did what I couldn't even imagine."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_165064949",
+      "role": "winner",
+      "selected": true,
+      "designer": "MXS studio",
+      "alt": "\"Logo for a new YOUTUBE TV Channel for the hopelessly happy SHOP-o-holics\" winning Logo design by MXS studio",
+      "local_file": "attachment_165064949.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 56864,
+      "sha256": "07faa91a414313ad5b4bbd9be305a796516e1becb4a5d9be47c5795d1bf52ac6",
+      "source_preview_url": "https://images-platform.99static.com/4H0bcW4KZTdUYIFMhedkKKvUqPI=/0x0:999x999/500x500/top/smart/99designs-contests-attachments/165/165064/attachment_165064949"
+    },
+    {
+      "entry_id": "attachment_165112676",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Mehedi Copotrone",
+      "alt": "Logo design contest entry by Mehedi Copotrone",
+      "local_file": "attachment_165112676.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 238905,
+      "sha256": "0239a1211418413bc170438b282c21fe987b7840c890dbec45f8a020ce2a3a2e",
+      "source_preview_url": "https://images-platform.99static.com/30Y1yluuocgaLAFN0UorTOHi_y4=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/165/165112/attachment_165112676"
+    },
+    {
+      "entry_id": "attachment_165112637",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Mehedi Copotrone",
+      "alt": "Logo design contest entry by Mehedi Copotrone",
+      "local_file": "attachment_165112637.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 210097,
+      "sha256": "5d0d105493153d0ce0cebbbc44e30715867ff01dc1c30a2048aaa93929b4103f",
+      "source_preview_url": "https://images-platform.99static.com/EQOpW0YS9b2hhQw6hJTyzDerif4=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/165/165112/attachment_165112637"
+    },
+    {
+      "entry_id": "attachment_165112632",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Mehedi Copotrone",
+      "alt": "Logo design contest entry by Mehedi Copotrone",
+      "local_file": "attachment_165112632.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 216718,
+      "sha256": "dfac902f47b67d8752f56bbbd813230c6bf95996426876ebc5015f19b37779a9",
+      "source_preview_url": "https://images-platform.99static.com/BdU2lyJB1zVaIUzAi_gfv8N4Itw=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/165/165112/attachment_165112632"
+    },
+    {
+      "entry_id": "attachment_165071255",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "ChemcoRD",
+      "alt": "Logo design contest entry by ChemcoRD",
+      "local_file": "attachment_165071255.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 29755,
+      "sha256": "49f9fc0aa2dfb9a45ce58674e987f80018acdc2bb6e2a8760d95a8a9011fe9c0",
+      "source_preview_url": "https://images-platform.99static.com/YiVirrrWLhUxhd2XZZZdjSLdgg8=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/165/165071/attachment_165071255"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  }
+}
