@@ -1,0 +1,179 @@
+{
+  "_schema_note": "real-0.1 + two keys this record adds: acceptance_rubric and inherited_evidence. to_brief.py does not know either — see _provenance_warning.",
+  "_status_note": "§7z-B 第 1 个记录时刻，而且比 client-008 更早一档：client-008 是「brief 到手、未动工」，这条是「询价到手、尚未接洽」。alternatives / selection / feedback 全空是正确状态，不是遗漏。",
+  "client_id": "lead-001",
+  "category": "heritage_craft_brand_vi",
+  "primary_intent": "generate",
+  "date_started": "2026-09-02",
+  "date_updated": "2026-09-02",
+
+  "provenance": {
+    "kind": "inbound_rfq_not_engaged",
+    "customer_data": false,
+    "redacted": true,
+    "captured_by": "operator",
+    "redaction_note": "询价原话里出现了「报价」二字但没有任何金额，因此原话整段保留、未作改动（沿用 client-007 的处理：客户原话不动，我方自撰字段一律不写金额）。本记录任何字段都不含报价、预算、单价或合同条款。发帖方的身份、渠道、账号一律不记 —— 这条不是从私域对话来的，但「谁在收」同样是可识别信息。",
+    "why_customer_data_is_false": "对方是一个真实的第三方买家，但**不是我们的客户**：没有委托、没有报价往来、没有任何交付。§7z-C 用 customer_data 这一位区分真实客户数据与合成数据；把一条未成交的询价记成 true，污染的正是那一位 —— 与 internal-002「把供应商记成客户」是同一类错误。原话仍然是真实外部需求语言，价值在 initial_query，不在这个标志。",
+    "notes": "第二段（expert_commentary）不是客户说的话，是同行/专家对这条询价的公开点评。它被单独存放，绝不并入 initial_query。"
+  },
+
+  "_provenance_warning": "若这条询价后来成交，转换方式：client_id 改为下一个空闲的 client-NNN、provenance.kind 改 real_client_project、customer_data 改 true、把成交后拿到的正式 brief 追加进 initial_query_supplement（不要覆盖现在这段原话 —— 询价语言与 brief 语言是两种语料）。在成交之前不要预先分配 client id：§7z-C「编造一次就废一条」。new_project.py 会拒绝 lead-001 这个 id（与 internal-001 / internal-002 同理），**别去「修」它**。",
+
+  "_1_brief": "捕获于询价出现的当天",
+  "initial_query": "有人收 彝族 漆器品牌设计vi 手册，80页，这个报价多少？",
+  "initial_query_channel": "sourcing_channel_public_post",
+  "initial_query_verbatim": true,
+  "initial_query_note": "全文就这一句。这是询价语言，不是 brief —— 它只给出了民族（彝族）、工艺（漆器）、交付物（品牌设计 VI 手册）、体量（80 页）四个变量，品牌定位、目标渠道、既有资产、起订/落地场景全部缺失。缺的这几项正是 acceptance_rubric 里 R4 与 R6 要求先补齐的输入。",
+
+  "expert_commentary": {
+    "verbatim": "漆器品牌做VI手册 ，最难的不是凑够80页，而是怎么把'非遗感'转译成年轻人愿意认的品牌语言——做得太传统像博物馆册子，太现代又不像漆器。我们做过文化品牌的视觉系统，懂怎么在传统工艺和当代表达之间找平衡。方便的话聊聊品牌定位和目标渠道，可发案例参考~",
+    "speaker_class": "peer_practitioner",
+    "is_client_speech": false,
+    "why_recorded": "它给出了这类项目的**双侧否决带**：太传统 → 像博物馆册子；太现代 → 不像漆器。这与 client-007 客户给出的两个负面参考（「老气」的土色拓片 / 「太现代」的珐琅卡通）是同一个几何形状，而两者来源互相独立。这条轴因此从 n=1 变成 n=2，是本记录里唯一有两个独立来源的判据。"
+  },
+
+  "inputs": [
+    {
+      "id": "none",
+      "kind": "spec",
+      "role": "客户既有漆器实物 / 原始纹样稿",
+      "provided": false,
+      "note": "尚未索取。按 client-007 的 ⭐ 教训，这是开工前必须先要到的东西，而不是先查公开资料自拟。"
+    }
+  ],
+
+  "constraints_stated_by_client": {
+    "hard": [
+      "交付物为品牌设计 VI 手册",
+      "体量 80 页",
+      "题材为彝族漆器"
+    ],
+    "soft": [],
+    "negative": []
+  },
+
+  "constraints_we_added": {
+    "hard": [
+      "纹样与色彩只能取自客户提供的实物 / 原稿，不得取自公开资料或生成式产出（来源：client-007）",
+      "生成式产物一律标注不可下厂 / 不可直接进手册终稿（来源：client-007）"
+    ],
+    "soft": [
+      "报价前先谈品牌定位与目标渠道（来源：expert_commentary）"
+    ],
+    "negative": [
+      "不做博物馆图录式排版",
+      "不做脱离漆器髹饰语言的通用现代品牌册"
+    ]
+  },
+
+  "_2_options": "未进行 —— 尚未接洽",
+  "alternatives": [],
+  "_3_selection": "未进行",
+  "selection": null,
+  "rejected_alternatives": [],
+  "_4_feedback": "未进行",
+  "feedback": [],
+  "internal_review": [],
+
+  "preference_memory": {
+    "scope": "none_yet",
+    "accepted_signals": [],
+    "rejected_signals": [],
+    "note": "无。未接洽的询价没有偏好信号 —— 这一节留空是正确状态。"
+  },
+
+  "project_state": {
+    "locked_invariants": [],
+    "status": "rfq_open_not_engaged"
+  },
+
+  "deliverables": [
+    {
+      "type": "brand_vi_manual",
+      "count": 1,
+      "formats": [],
+      "stated_extent_pages": 80
+    }
+  ],
+
+  "acceptance_rubric": {
+    "_note": "本记录**没有**自己的失败样本 —— 一页都没生产。下面每条都标了来源与证据强度。R1 / R4 / R7 来自 client-007（真实、已交付、四轮反馈）；R3 有两个独立来源；R2 是待验证的假设；R5 / R6 只有专家点评一个来源，未经任何项目校准。**不要把 R5 / R6 当作已验证的判据使用。**",
+    "criteria": [
+      {
+        "id": "R1",
+        "name": "考据来源闭合",
+        "gate": true,
+        "test": "手册里每一个纹样单元都能指回一件客户提供的实物或原稿（记编号 / 照片 id）。任何一个纹样的来源是公开资料检索或生成式产出 —— 整条不通过。",
+        "evidence": "client-007：我方依公开资料自拟 8 纹样体系并交付；客户随后给出旧产品原稿，比对发现 3 个不在客户体系内、客户体系里另有 8 个我方全数遗漏。客户从未口头否决，是新证据让方案自我作废。",
+        "strength": "real_project_n1_delivered"
+      },
+      {
+        "id": "R2",
+        "name": "色彩封闭性",
+        "gate": true,
+        "test": "抽出手册全部主视觉与纹样填色，落在「客户实物取样色板」之外的颜色数必须为 0。排版辅助色（正文黑、纸白、网格灰）单独声明，且不得进入纹样与主视觉。",
+        "evidence": "无项目证据。公开资料普遍记载凉山彝族漆器为黑地 + 红 + 黄的封闭三色体系，但**本条必须以客户实物取样为准，不得以公开记载为准** —— 这正是 R1 要防的事。取样之前，本条只是待验证假设。",
+        "strength": "hypothesis_unverified"
+      },
+      {
+        "id": "R3",
+        "name": "双侧否决带（博物馆 ↔ 不像漆器）",
+        "gate": true,
+        "test": "每个方向做两次检验。(a) **可替换检验**：把彝族漆器换成任意另一种民族工艺，方向是否原封不动仍然成立？成立 = 落进「博物馆图录」一侧，不通过。(b) **髹饰签名检验**：黑漆地、描饰笔触、器形轮廓，三者至少两项在版面上可辨？不足两项 = 落进「不像漆器」一侧，不通过。",
+        "evidence": "两个独立来源。client-007：客户先后给出「老气」（土色拓片）与「太现代」（珐琅卡通）两个负面参考。expert_commentary：「太传统像博物馆册子，太现代又不像漆器」。两者形状相同、来源不同。",
+        "strength": "two_independent_sources"
+      },
+      {
+        "id": "R4",
+        "name": "三参考输入闸",
+        "gate": true,
+        "test": "在产出任何方向之前，必须先拿到 1 个正面参考（客户自己的畅销款 / 最满意的既有物）与 2 个负面参考。缺任何一个就不开工。这是**输入闸，不是产出评分**。",
+        "evidence": "client-007：两个负面参考把口味区间从两头夹住，畅销款落在中点 —— 三个合起来才定位得出靶心，单看任何一个都不够。索取顺序应是先要畅销款（定义好），再要负面参考（定义坏）。",
+        "strength": "real_project_n1_delivered"
+      },
+      {
+        "id": "R5",
+        "name": "页数不是交付物：带规则的页 vs 只展示的页",
+        "gate": false,
+        "test": "把 80 页逐页分为「带规则页」（写出了第三方可执行的约束：色值、间距、最小尺寸、禁用清单、纹样应用规矩）与「仅展示页」（只有效果图 / 情绪板）。报出带规则页占比。",
+        "evidence": "仅来自 expert_commentary「最难的不是凑够 80 页」。**没有任何项目校准过阈值** —— 因此本条只报数字，不设通过线。谁先定一个百分比，谁就是在编。",
+        "strength": "commentary_only_uncalibrated"
+      },
+      {
+        "id": "R6",
+        "name": "渠道落地闭合",
+        "gate": false,
+        "test": "客户声明的每一个目标渠道（电商详情 / 线下展陈 / 礼盒 / 短视频 / 门店导视…），手册里至少有一页对应的应用规范，且该页给出可执行规格而不是效果图。声明了渠道却没有对应应用页 = 缺口，逐条列出。",
+        "evidence": "仅来自 expert_commentary「聊聊品牌定位和目标渠道」。无项目证据。",
+        "strength": "commentary_only_uncalibrated"
+      },
+      {
+        "id": "R7",
+        "name": "生成式产物隔离",
+        "gate": true,
+        "test": "生成式图像只允许出现在器形与版式探索页，且必须逐张标注「不可下厂 / 不可作为终稿纹样源」。纹样必须走「考据取样 → 矢量还原 → 受控应用」三步，中间产物可追溯。",
+        "evidence": "client-007：生成式产出在民族纹样上必然有偏差（比例、单元重复方式、组合规矩）。",
+        "strength": "real_project_n1_delivered"
+      }
+    ]
+  },
+
+  "inherited_evidence": {
+    "_note": "本条的失败模式与判据全部借自同族的真实项目，不是本条自己产生的。任何下游使用都必须保留这个区分。",
+    "source_record": "projects/2026-08-22-client-007-scenic-culture-merch.json",
+    "why_transferable": "同一族问题：民族 / 非遗题材的视觉系统构建，都要在「忠于原纹样」与「不老气」之间取位，都以客户既有实物为唯一可靠考据源。",
+    "why_not_fully_transferable": "交付物不同。client-007 是文创实体系列（受起订量、材质、价格带约束），本条是 VI 手册（受页面结构、规则可执行性、渠道适配约束）。client-007 关于起订量 / 价格带 / 工厂的四条教训**不适用**于本条，不要照搬。"
+  },
+
+  "outcome": {
+    "status": "open",
+    "notes": "未接洽。按 expert_commentary 的建议，下一步是先谈品牌定位与目标渠道，而不是先回一个数字。",
+    "client_satisfied": null
+  },
+
+  "reusable_lessons": [
+    "⭐ 询价语言与 brief 语言是两种语料，不要合并。这条询价只给了四个变量（民族 / 工艺 / 交付物 / 页数），而 R4 与 R6 需要的输入一个都没有 —— 「询价里缺什么」本身就是可复用的观察：这类需求方默认页数是规格，而页数恰恰是最不构成规格的那一项。",
+    "⭐ 双侧否决带在这一族问题上被两个独立来源各说了一次（client-007 的客户、本条的同行）。「太传统 / 太现代」不是某个客户的个人口味，而是非遗题材的结构性夹角 —— 值得当作这一族的默认检验项，而不是逐项目重新发现。",
+    "记录一条未成交的询价是有价值的，但必须与真实客户记录分开标志。customer_data 那一位一旦被稀释，下游就再也分不清哪些偏好信号来自真实交付。"
+  ]
+}

@@ -55,6 +55,29 @@ Real client work. The rules are not optional:
   rejection reason class) and set `redacted: true`. A redacted trajectory is
   still worth more than no trajectory.
 
+## Three record classes — keep them apart
+
+`customer_data` is the flag everything downstream uses to tell real client work
+from synthetic briefs. Diluting it costs more than a missing record, so the id
+prefix carries the class:
+
+| id prefix | what it is | `customer_data` | `provenance.kind` |
+|---|---|---|---|
+| `client-NNN` | a real engagement: they commissioned something | **`true`** | `real_client_project` |
+| `internal-NNN` | our own work, or a supplier interaction with no commission | `false` | `internal_exploration` / supplier |
+| `lead-NNN` | a real inbound enquiry we have **not** been engaged on | `false` | `inbound_rfq_not_engaged` |
+
+A `lead-NNN` record is legitimate and worth capturing — the enquiry's wording is
+real external demand language, and what an enquiry *omits* is itself a finding.
+But it has no options, no rejections and no feedback, and it must not borrow a
+`client-NNN` id "in advance". If it converts, follow the `_provenance_warning`
+inside the record: take the next free `client-NNN`, flip `kind` and
+`customer_data`, and **append** the formal brief rather than overwriting the
+enquiry wording — enquiry language and brief language are two different corpora.
+
+⚠️ `new_project.py` enforces the `client-` prefix and will refuse `internal-` and
+`lead-` ids. That is deliberate. Write those files by hand; do not "fix" the script.
+
 ## Start one
 
 ```bash
