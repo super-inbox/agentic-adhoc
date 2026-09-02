@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1348681",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1348681",
+    "url": "https://99designs.com/postcard-flyer-design/contests/postcard-mailer-client-acquisition-vacation-rental-management-1348681",
+    "page_title": "Postcard mailer for client acquisition in vacation rental management | Postcard, flyer or print contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "postcard_flyer_or_print",
+    "category_label": "postcard, flyer or print",
+    "client_display_name": "markkombrink",
+    "designer_count": 24,
+    "entry_count": 134,
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "status": "finished",
+    "title": "Postcard Mailer for Client Acquisition in Vacation Rental Management",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us We provide vacation rental management services to ... What's your vision? 6 x 9 postcard for mailing, double ... Other notes 6×9 Postcard Copy FRONT Headline Is your vacation rental leaving money on the table in...? Subhead In our review of Hilton Head Island homes, we consistently…",
+    "vision_public_excerpt": "6 x 9 postcard for mailing, double ...",
+    "other_notes": "6×9 Postcard Copy FRONT Headline Is your vacation rental leaving money on the table in...? Subhead In our review of Hilton Head Island homes, we consistently…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_162343485",
+    "winner_designer": "imdadulgraphics",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Very receptive to changes, and great work."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_162343485",
+      "role": "winner",
+      "selected": true,
+      "designer": "imdadulgraphics",
+      "alt": "\"Postcard Mailer for Client Acquisition in Vacation Rental Management\" winning Postcard, flyer or print by imdadulgraphics",
+      "local_file": "attachment_162343485.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 436403,
+      "sha256": "7b75fdc427ab76b2f34de7277c71b084d8184a824f0b18723a9d2ff7744954e2",
+      "source_preview_url": "https://images-platform.99static.com/lycIO7XgcpCyCnnx0JDSaeZM_VA=/0x0:1024x1024/500x500/top/smart/99designs-contests-attachments/162/162343/attachment_162343485"
+    },
+    {
+      "entry_id": "attachment_162312773",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "websmartusa",
+      "alt": "Postcard, flyer or print contest entry by websmartusa",
+      "local_file": "attachment_162312773.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 42347,
+      "sha256": "a11ee14ebafceabe7512d940e2e5b86c717d51c0f3ea7d01fb5cbe72388c1d2e",
+      "source_preview_url": "https://images-platform.99static.com/2lZHTmlozgID5RpuyMWIrn9hQpI=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/162/162312/attachment_162312773"
+    },
+    {
+      "entry_id": "attachment_162332284",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Adi Azudin",
+      "alt": "Postcard, flyer or print contest entry by Adi Azudin",
+      "local_file": "attachment_162332284.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 174611,
+      "sha256": "26ce23e0ef0bb8561f3b56c79941776f1f7fb2e3136e3b221816e178ef1d8c7d",
+      "source_preview_url": "https://images-platform.99static.com/UpfPv9RLT-maeShF82r1Mcu-ewE=/0x0:2039x2039/500x500/top/smart/99designs-contests-attachments/162/162332/attachment_162332284"
+    },
+    {
+      "entry_id": "attachment_162331300",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Monki D Loy",
+      "alt": "Postcard, flyer or print contest entry by Monki D Loy",
+      "local_file": "attachment_162331300.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 63062,
+      "sha256": "2c39aa43dd6c094c6fa904ae0d8e4ddddf073bf94bfa5c29d67dfbed2329a91d",
+      "source_preview_url": "https://images-platform.99static.com/LHe37Bb2KCKVnhZEdw_L_uo3X3w=/905x40:1581x716/500x500/top/smart/99designs-contests-attachments/162/162331/attachment_162331300"
+    },
+    {
+      "entry_id": "attachment_162316441",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Adi Azudin",
+      "alt": "Postcard, flyer or print contest entry by Adi Azudin",
+      "local_file": "attachment_162316441.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 160956,
+      "sha256": "0addc14180d866347d15ae910bdd589f6c9a64725fc9baea3763d0e607592838",
+      "source_preview_url": "https://images-platform.99static.com/r2wcDdyo1ru4WjzhMyK-W1LVp64=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/162/162316/attachment_162316441"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Business & Advertising",
+    "subcategory": "Postcard, Flyer or Print"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Print & Editorial Design",
+    "subtype": "Postcard, Flyer or Print",
+    "original_category": "postcard_flyer_or_print",
+    "source_record": "Business/Postcard, Flyer or Print/Postcard Mailer for Client Acquisition in Vacation Rental Management/contest-1348681.json",
+    "source_record_sha256": "41cebd654d684ae9a3546edc60d6868ee1b40f8110419c03aba6869f7e86f690"
+  }
+}

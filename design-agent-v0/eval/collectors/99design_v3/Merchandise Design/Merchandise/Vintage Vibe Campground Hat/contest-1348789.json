@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1348789",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1348789",
+    "url": "https://99designs.com/merchandise-design/contests/vintage-vibe-campground-hat-1348789",
+    "page_title": "Vintage vibe campground hat | Merchandise contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "merchandise",
+    "category_label": "merchandise",
+    "client_display_name": "adelaideshoresrvresort",
+    "designer_count": 31,
+    "entry_count": 82,
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "status": "finished",
+    "title": "Vintage Vibe Campground Hat",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us The Hideaway is a scenic campground nestled along the Suwannee River in North ... We offer both tent and RV camping, with glamping experiences coming ...… What's your vision? We are looking for a new design that will be embroidered on hats that represents The Hideaway, a campground along the Suwannee River in North ...…",
+    "vision_public_excerpt": "We are looking for a new design that will be embroidered on hats that represents The Hideaway, a campground along the Suwannee River in North ...…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_162470403",
+    "winner_designer": "Amrendra",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Great designer. Very creative with the use of AI and very quick and deliberate in their turnaround time"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_162470403",
+      "role": "winner",
+      "selected": true,
+      "designer": "Amrendra",
+      "alt": "\"Vintage Vibe Campground Hat\" winning Merchandise by Amrendra",
+      "local_file": "attachment_162470403.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 323146,
+      "sha256": "73944c0f797435901e1ba7ba7fb395fe5c55de370cd31829c2687a952ae85fa0",
+      "source_preview_url": "https://images-platform.99static.com/r5-CoxP6jWA-13sibi8F2zxXzy4=/160x0:1440x1280/500x500/top/smart/99designs-contests-attachments/162/162470/attachment_162470403"
+    },
+    {
+      "entry_id": "attachment_162340018",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "BeatrixClover",
+      "alt": "Merchandise contest entry by BeatrixClover",
+      "local_file": "attachment_162340018.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 50405,
+      "sha256": "5777b977091a4a8a9aad885157ec86cb6629ea6454f56e054d37edaaaa1269d5",
+      "source_preview_url": "https://images-platform.99static.com/zKX6FBxL0_zbVFTtyEs5TbniWIc=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/162/162340/attachment_162340018"
+    },
+    {
+      "entry_id": "attachment_162345082",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "WiFiSign",
+      "alt": "Merchandise contest entry by WiFiSign",
+      "local_file": "attachment_162345082.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 33764,
+      "sha256": "23af971f59c46d912ceed4ee60fbcadb5be521cb6ab3a279bc3d0bacacc09853",
+      "source_preview_url": "https://images-platform.99static.com/dhxT3WraurAFsIJtK-I0Is7u1GE=/0x0:1872x1872/500x500/top/smart/99designs-contests-attachments/162/162345/attachment_162345082"
+    },
+    {
+      "entry_id": "attachment_162352311",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Wollgraph",
+      "alt": "Merchandise contest entry by Wollgraph",
+      "local_file": "attachment_162352311.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 49121,
+      "sha256": "b103be72959fef8d168063a45be84ab8f466cfd6cd9a78d0f7d0832394c9ab4e",
+      "source_preview_url": "https://images-platform.99static.com/HOOpb_jZB8QktVLOEAXEfUXm_fE=/58x0:949x891/500x500/top/smart/99designs-contests-attachments/162/162352/attachment_162352311"
+    },
+    {
+      "entry_id": "attachment_162355717",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "niki99",
+      "alt": "Merchandise contest entry by niki99",
+      "local_file": "attachment_162355717.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 38975,
+      "sha256": "e9c1b6a7599052111c19ba18a75638af6b8976738be485c3f4c18612d20767ef",
+      "source_preview_url": "https://images-platform.99static.com/WbV4phZVmkvHz4V1cf1CQ4AibN4=/0x0:1080x1080/500x500/top/smart/99designs-contests-attachments/162/162355/attachment_162355717"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Clothing & Merchandise",
+    "subcategory": "Merchandise"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Merchandise Design",
+    "subtype": "Merchandise",
+    "original_category": "merchandise",
+    "source_record": "clothing/Merchandise/Vintage Vibe Campground Hat/contest-1348789.json",
+    "source_record_sha256": "89e2f41dbfb0fbeb593ac5c335a2e924396a319f909facf448d013d10706b1bc"
+  }
+}

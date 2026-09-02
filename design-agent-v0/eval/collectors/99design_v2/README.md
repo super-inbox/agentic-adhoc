@@ -9,7 +9,14 @@ from completed public 99designs contest pages.
 |---|---:|---:|---|
 | `Art Design/` | 9 | 44 | 1 Winner + up to 4 visible candidates |
 | `Travel Hotel/` | 10 | 50 | 1 Winner + 4 visible candidates |
-| **Total** | **19** | **94** | partial Brief + selection metadata + images |
+| `Logo_identity/` | 6 | 30 | 1 Winner + 4 visible candidates |
+| `Web_app/` | 6 | 30 | 1 Winner + 4 visible candidates |
+| `Business/` | 6 | 30 | 1 Winner + 4 visible candidates |
+| `clothing/` | 6 | 30 | 1 Winner + 4 visible candidates |
+| `Art/` | 6 | 30 | 1 Winner + 4 visible candidates |
+| `packaging/` | 6 | 30 | 1 Winner + 4 visible candidates |
+| `book/` | 6 | 30 | 1 Winner + 4 visible candidates |
+| **Total** | **61** | **304** | partial Brief + selection metadata + images |
 
 Each contest directory contains:
 

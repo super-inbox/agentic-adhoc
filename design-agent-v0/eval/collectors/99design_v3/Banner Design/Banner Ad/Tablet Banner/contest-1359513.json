@@ -1,0 +1,163 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359513",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359513",
+    "url": "https://99designs.com/banner-ad-design/contests/tablet-banner-1359513",
+    "page_title": "Tablet banner | Banner ad contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Tablet Banner",
+    "status": "finished",
+    "category": "banner_ad",
+    "industry": "Art & Design",
+    "package": "Bronze",
+    "client_display_name": "simbans",
+    "entry_count": 26,
+    "designer_count": 8,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "about_us": "Standalone Drawing Tablets",
+    "vision_public_excerpt": "using the colors and design of attached \"color scheme\", please design a banner for \"Standalone Drawing Tablet\" ... the final image should be... x... ...",
+    "other_notes": "no",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete vision text where the public excerpt contains ellipses",
+      "exact dimensions where omitted",
+      "referenced input attachments"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF",
+      "XD"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_designer": "SumitMaiti",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Looks great - thank you!",
+    "winner_entry_id": "attachment_164984061"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164984061",
+      "role": "winner",
+      "selected": true,
+      "designer": "SumitMaiti",
+      "alt": "\"Tablet Banner\" winning Banner ad by SumitMaiti",
+      "local_file": "attachment_164984061.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 397468,
+      "sha256": "0841a52cb61da3918d68e6cf11b504080583b12f26def877ffaee9fd322b3b9e",
+      "source_preview_url": "https://images-platform.99static.com/fyPM4IKZvF8jnbkqno6fcOsbnOw=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/164/164984/attachment_164984061"
+    },
+    {
+      "entry_id": "attachment_164983246",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Canvas UI",
+      "alt": null,
+      "local_file": "attachment_164983246.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 235651,
+      "sha256": "5046772f551bfeb7896c3c7fd75f6f750f0bb1f50101ce0e224885b0393591a9",
+      "source_preview_url": "https://images-platform.99static.com/YHwiec_qua3GQ5P2ObaaOaaYcBg=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/164/164983/attachment_164983246"
+    },
+    {
+      "entry_id": "attachment_164983721",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Rextive Art",
+      "alt": null,
+      "local_file": "attachment_164983721.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 404094,
+      "sha256": "d2a8f03367daf700c90a459b7d20258b0ee3da3236fe212e8c910c5debb186ae",
+      "source_preview_url": "https://images-platform.99static.com/dHHtMXWnpmSuZIO0WcV6EL99xSk=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164983/attachment_164983721"
+    },
+    {
+      "entry_id": "attachment_164983817",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Rextive Art",
+      "alt": null,
+      "local_file": "attachment_164983817.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 324062,
+      "sha256": "740f6d03ce50a996ad509ca6e9bbcc91ee058d2dedc7f1c0ae700f8ced853797",
+      "source_preview_url": "https://images-platform.99static.com/u4pcIQ72sLuXiBJ7g54IqLIMkHY=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164983/attachment_164983817"
+    },
+    {
+      "entry_id": "attachment_164983856",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Rextive Art",
+      "alt": null,
+      "local_file": "attachment_164983856.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 392268,
+      "sha256": "38acf020c5c33ff46881a8a8b2c02bd8ea3464c127c55859c931dfa59294c893",
+      "source_preview_url": "https://images-platform.99static.com/CMCJ9ASplPjqp5Zg0cd4qLkMY4w=/0x0:1254x1254/500x500/top/smart/99designs-contests-attachments/164/164983/attachment_164983856"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "cross-contest consistency fixture for the same client and product"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Banner Design",
+    "subtype": "Banner Ad",
+    "original_category": "banner_ad",
+    "source_record": "Art Design/Tablet Banner/contest-1359513.json",
+    "source_record_sha256": "ae08807d7455aa611fb97aa32bfebafade857df5818859d4cf80cc243ea3dc83"
+  }
+}

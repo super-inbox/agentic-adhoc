@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1342512",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1342512",
+    "url": "https://99designs.com/sticker-design/contests/bay-kotor-travel-patch-challenge-1342512",
+    "page_title": "Bay of kotor travel patch challenge | Sticker contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "sticker",
+    "category_label": "sticker",
+    "client_display_name": "myersjerra",
+    "designer_count": 17,
+    "entry_count": 75,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Bay of Kotor Travel Patch Challenge",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us sells stickers, patches and pins to familes who have traveled to specific locations What's your vision? I’m creating a patch/sticker/enamel pin for the location of Kotor, ... I’d like the design to clearly represent ... It should: • Include the text “Kotor, Montenegro” •… Other notes The colors could be muted or ... your ... The shape choice is also up to you",
+    "vision_public_excerpt": "I’m creating a patch/sticker/enamel pin for the location of Kotor, ... I’d like the design to clearly represent ... It should: • Include the text “Kotor, Montenegro” •…",
+    "other_notes": "The colors could be muted or ... your ... The shape choice is also up to you",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_161134026",
+    "winner_designer": "maspoko",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Fantastic to work with and amazing quality."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_161134026",
+      "role": "winner",
+      "selected": true,
+      "designer": "maspoko",
+      "alt": "\"Bay of Kotor Travel Patch Challenge\" winning Sticker by maspoko",
+      "local_file": "attachment_161134026.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 28711,
+      "sha256": "b27aa4fe39b8d776643d9cd2c2629080557084f381f8a3ba6f6ffa178c60e0e8",
+      "source_preview_url": "https://images-platform.99static.com/MgeH_PM7cEG6hOyVBctPqiGb8ys=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/161/161134/attachment_161134026"
+    },
+    {
+      "entry_id": "attachment_161032788",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "knd.blck",
+      "alt": "Sticker contest entry by knd.blck",
+      "local_file": "attachment_161032788.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 38521,
+      "sha256": "3ec6853e9f4d61e53526f9dc7f56d399d7370aea52d02d50b8466384a373602a",
+      "source_preview_url": "https://images-platform.99static.com/qVhiq0fqBpU3syTACAZG2qzN3xw=/0x0:1090x1090/500x500/top/smart/99designs-contests-attachments/161/161032/attachment_161032788"
+    },
+    {
+      "entry_id": "attachment_161058207",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Grue",
+      "alt": "Sticker contest entry by Grue",
+      "local_file": "attachment_161058207.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 600879,
+      "sha256": "8386b7f15615f807adfc8c26935fd1b0059419ec5e38adbbc17e270adf565ce7",
+      "source_preview_url": "https://images-platform.99static.com/yUqbMcXFbFybhV7NLKaCPrrAFqU=/102x102:921x921/500x500/top/smart/99designs-contests-attachments/161/161058/attachment_161058207"
+    },
+    {
+      "entry_id": "attachment_161059527",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "KartiK 2002",
+      "alt": "Sticker contest entry by KartiK 2002",
+      "local_file": "attachment_161059527.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 25706,
+      "sha256": "b44353f2751ac9766c5f47b0b386830217ba15a5697555d98f6ff170b1609784",
+      "source_preview_url": "https://images-platform.99static.com/VKWfcgfP-O_D3On3TXe_LAk-DMg=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/161/161059/attachment_161059527"
+    },
+    {
+      "entry_id": "attachment_161059541",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "KartiK 2002",
+      "alt": "Sticker contest entry by KartiK 2002",
+      "local_file": "attachment_161059541.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 25847,
+      "sha256": "04b563590c80d9ff663a41623c7af27791cfc5f73cd8457edbe3b4805323d86d",
+      "source_preview_url": "https://images-platform.99static.com/a3U7HnEUqIdWGFhOBk4mhbS4p6g=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/161/161059/attachment_161059541"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Clothing & Merchandise",
+    "subcategory": "Sticker"
+  }
+}

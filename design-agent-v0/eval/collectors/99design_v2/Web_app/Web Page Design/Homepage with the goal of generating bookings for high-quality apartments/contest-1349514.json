@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1349514",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1349514",
+    "url": "https://99designs.com/web-design/contests/homepage-goal-generating-bookings-high-quality-apartments-1349514",
+    "page_title": "Homepage with the goal of generating bookings for high-quality apartments | Web page design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Homepage with the goal of generating bookings for high-quality apartments",
+    "status": "finished",
+    "category_label": "web page design",
+    "category": "web_page_design",
+    "industry": "Travel & Hotel",
+    "package": "Custom",
+    "client_display_name": "ludwig.reh2",
+    "entry_count": 352,
+    "designer_count": 80,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "These are high-quality apartments in Riezlern/Kleinwalsertal, right in the ... They are luxuriously furnished and approximately three years…",
+    "vision_public_excerpt": "Style/theme ideas: ... ... ... ... ... Page descriptions Auf der Startseite vielleicht ein Luftbild von Riezlern (kann per Drohne geliefert werden). ... ... Allgemeine ... Perhaps an aerial view of Riezlern on the home page…",
+    "other_notes": "Die Seite sollte Buchungen ... The site should generate ...",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "PSD",
+      "PDF",
+      "XD",
+      "FIG"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_162675982",
+    "winner_designer": "UD_Pro",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Another great job!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_162675982",
+      "role": "winner",
+      "selected": true,
+      "designer": "UD_Pro",
+      "alt": "\"Homepage with the goal of generating bookings for high-quality apartments\" winning Web page design by UD_Pro",
+      "local_file": "attachment_162675982.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 81467,
+      "sha256": "2423570b2832efb7c05129dec3e768c86bd31989d63e74f985d9a3a5feab372d",
+      "source_preview_url": "https://images-platform.99static.com/m2kRf0CAorda5HVur6h2m26RCY4=/0x0:1905x1905/500x500/top/smart/99designs-contests-attachments/162/162675/attachment_162675982"
+    },
+    {
+      "entry_id": "attachment_162515575",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Aj3664",
+      "alt": "Web page design contest entry by Aj3664",
+      "local_file": "attachment_162515575.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 50956,
+      "sha256": "c9c4885a6fb9f03d11f7927597f16a5095be260030994d754da30e4d51edab26",
+      "source_preview_url": "https://images-platform.99static.com/3Zynm94TXwc8vNBZ-_4nHs7Amyo=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/162/162515/attachment_162515575"
+    },
+    {
+      "entry_id": "attachment_162487803",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "UD_Pro",
+      "alt": "Web page design contest entry by UD_Pro",
+      "local_file": "attachment_162487803.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 68350,
+      "sha256": "a985c521af31bbb1f2183e91aa31970838e2e7e46587c0b3bc6b9ff40812cfea",
+      "source_preview_url": "https://images-platform.99static.com/peMKPRmxUjBfNF3JVU8AaJdhaZY=/0x0:1920x1920/500x500/top/smart/99designs-contests-attachments/162/162487/attachment_162487803"
+    },
+    {
+      "entry_id": "attachment_162496548",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "MercClass",
+      "alt": "Web page design contest entry by MercClass",
+      "local_file": "attachment_162496548.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 61780,
+      "sha256": "0c21ae7cb1683273b204d59ce86cc65c0d966af25696c0506970cb9d81338f61",
+      "source_preview_url": "https://images-platform.99static.com/VF6sIt99AELn1DG31eJo6UO_lwI=/0x0:1440x1440/500x500/top/smart/99designs-contests-attachments/162/162496/attachment_162496548"
+    },
+    {
+      "entry_id": "attachment_162497197",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Jasmin_A",
+      "alt": "Web page design contest entry by Jasmin_A",
+      "local_file": "attachment_162497197.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 61889,
+      "sha256": "a5560fdd9a70fc414ea382e096b4b37247029a699db704fff6151612d8b71cb7",
+      "source_preview_url": "https://images-platform.99static.com/a2AUwCD5i-akUyomhyOvLrk4Tjc=/0x0:1440x1440/500x500/top/smart/99designs-contests-attachments/162/162497/attachment_162497197"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Web & App Design",
+    "subcategory": "Web Page Design"
+  }
+}

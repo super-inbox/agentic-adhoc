@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1357946",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1357946",
+    "url": "https://99designs.com/illustrations/contests/design-custom-luxury-wallpaper-historic-boutique-hotel-lobby-1357946",
+    "page_title": "Design a custom luxury wallpaper for a historic boutique hotel lobby | Illustration or graphics contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "illustration_or_graphics",
+    "category_label": "illustration or graphics",
+    "client_display_name": "EM@OKROCK",
+    "designer_count": 22,
+    "entry_count": 85,
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "status": "finished",
+    "title": "Design a Custom Luxury Wallpaper for a Historic Boutique Hotel Lobby",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us We are currently renovating a historic boutique hotel in Park City, ... What's your vision? We are seeking an original wallpaper design for the lobby of a historic boutique hotel in Park City, ... The wallpaper will be installed throughout the main lobby…",
+    "vision_public_excerpt": "We are seeking an original wallpaper design for the lobby of a historic boutique hotel in Park City, ... The wallpaper will be installed throughout the main lobby…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164819702",
+    "winner_designer": "☪ekidot",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Great quality and clean vector work."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164819702",
+      "role": "winner",
+      "selected": true,
+      "designer": "☪ekidot",
+      "alt": "\"Design a Custom Luxury Wallpaper for a Historic Boutique Hotel Lobby\" winning Illustration or graphics by ☪ekidot",
+      "local_file": "attachment_164819702.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 172773,
+      "sha256": "83454e4fa63a50f6f2d2ebe5d6885ac94dadb495cff0b5ee8f93636d6488696d",
+      "source_preview_url": "https://images-platform.99static.com/dnQcoINnmiqxgBjk16morfckWz8=/199x199:1799x1799/500x500/top/smart/99designs-contests-attachments/164/164819/attachment_164819702"
+    },
+    {
+      "entry_id": "attachment_164655813",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ne'Uban",
+      "alt": "Illustration or graphics contest entry by Ne'Uban",
+      "local_file": "attachment_164655813.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 70095,
+      "sha256": "1c736b65ab599afaa5c11caa0d3b571656087e6358a958323b1e4a0d3deccca1",
+      "source_preview_url": "https://images-platform.99static.com/NiQbR30j9eFY7Z--XrLg_ZuRu1Q=/0x0:1818x1818/500x500/top/smart/99designs-contests-attachments/164/164655/attachment_164655813"
+    },
+    {
+      "entry_id": "attachment_164655805",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ne'Uban",
+      "alt": "Illustration or graphics contest entry by Ne'Uban",
+      "local_file": "attachment_164655805.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 33837,
+      "sha256": "332ca71f303b2c4425200d84642d441a36d60ae6c3e49385580ceecf92c86e87",
+      "source_preview_url": "https://images-platform.99static.com/Hmu5QJyxAaemODtmn4VPVVxxoEE=/0x0:1818x1818/500x500/top/smart/99designs-contests-attachments/164/164655/attachment_164655805"
+    },
+    {
+      "entry_id": "attachment_164650635",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "H-Izz Design",
+      "alt": "Illustration or graphics contest entry by H-Izz Design",
+      "local_file": "attachment_164650635.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 96355,
+      "sha256": "045c62c58ed3a15d6580a8aaad55eb99b8c3087dd80f7dc58a60a8390b569570",
+      "source_preview_url": "https://images-platform.99static.com/zxktq_SaEfhwuN04biOPmdcZb_4=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164650/attachment_164650635"
+    },
+    {
+      "entry_id": "attachment_164638860",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "H-Izz Design",
+      "alt": "Illustration or graphics contest entry by H-Izz Design",
+      "local_file": "attachment_164638860.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 76163,
+      "sha256": "82f3cb1e1181c0bddc39cdfe3c0ad91b1630df294a15ef2ef7ec9ef38f208cd8",
+      "source_preview_url": "https://images-platform.99static.com/8ytUjjdQahBVKCWCJkNWfc3IcvI=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/164/164638/attachment_164638860"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Art & Illustration",
+    "subcategory": "Illustration or Graphics"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Art & Illustration Design",
+    "subtype": "Illustration or Graphics",
+    "original_category": "illustration_or_graphics",
+    "source_record": "Art/Illustration or Graphics/Design a Custom Luxury Wallpaper for a Historic Boutique Hotel Lobby/contest-1357946.json",
+    "source_record_sha256": "7554d90a773d537199d8492c2d5b19ee82b870124af162fa21c8a12e0eb5302b"
+  }
+}

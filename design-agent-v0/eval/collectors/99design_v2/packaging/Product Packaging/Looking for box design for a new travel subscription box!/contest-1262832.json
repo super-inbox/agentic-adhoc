@@ -1,0 +1,154 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1262832",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1262832",
+    "url": "https://99designs.com/product-packaging-design/contests/looking-box-design-travel-subscription-1262832",
+    "page_title": "Looking for box design for a new travel subscription box! | Product packaging contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "product_packaging",
+    "category_label": "product packaging",
+    "client_display_name": "infLOUE",
+    "designer_count": 13,
+    "entry_count": 46,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Looking for box design for a new travel subscription box!",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel Other color requirements Hex #Oe...e Hex #8dc...f Company name Travel Well Box LLC Existing website ... Product name Travel Well Box Description of the product Travel Well Box is more than a subscription service—it's your key to a curated world of travel ... Each quarter you'll receive a thoughtfully crafted box filled… Description of the product target audience Travel enthusiasts with disposable income Style attributes Minimalistic Detailed Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Luxury Casual Design needs I want a box ... I am playing around with sizes, but the box will be around ... It might change by an inch, but no ... I like the idea of the box looking like a piece of ... Attachments",
+    "vision_public_excerpt": null,
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_148679096",
+    "winner_designer": "lid graphic",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "good communication, understood my request perfectly. highly recommend."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_148679096",
+      "role": "winner",
+      "selected": true,
+      "designer": "lid graphic",
+      "alt": "\"Looking for box design for a new travel subscription box!\" winning Product packaging by lid graphic",
+      "local_file": "attachment_148679096.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 26935,
+      "sha256": "2c40f0d02c7d7559cf3ae0c8cfdb4fdca08712995b420ced07c9d72cc1efc374",
+      "source_preview_url": "https://images-platform.99static.com/pFmvNzcTvTSTZIKGhVkyWMPPZHw=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/148/148679/attachment_148679096"
+    },
+    {
+      "entry_id": "attachment_148611679",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "lid graphic",
+      "alt": "Product packaging contest entry by lid graphic",
+      "local_file": "attachment_148611679.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 28501,
+      "sha256": "26030b9ea897044e3db1fc4f2c029728b588ee3e3123156cd9e96249c0e21613",
+      "source_preview_url": "https://images-platform.99static.com/Qj1GqUGfL9UKyR9BUXTFc2ZDhPk=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/148/148611/attachment_148611679"
+    },
+    {
+      "entry_id": "attachment_148613724",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Packagingholic",
+      "alt": "Product packaging contest entry by Packagingholic",
+      "local_file": "attachment_148613724.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 171056,
+      "sha256": "79bb2f1fb4975c0d69f64fa288ceb29a82c29b61abe808222f97da72b8c9c44c",
+      "source_preview_url": "https://images-platform.99static.com/dgBVjN55lJYLOu08jNHy8YJBSes=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/148/148613/attachment_148613724"
+    },
+    {
+      "entry_id": "attachment_148560548",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Argellab",
+      "alt": "Product packaging contest entry by Argellab",
+      "local_file": "attachment_148560548.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 55053,
+      "sha256": "c6eeee2e916fa75a5cbbd8377b184a12757249a9a98ce36388b58bbed127e014",
+      "source_preview_url": "https://images-platform.99static.com/qdV1iEaQF6UkC0BZlXd8gpFdAbY=/45x3:625x583/500x500/top/smart/99designs-contests-attachments/148/148560/attachment_148560548"
+    },
+    {
+      "entry_id": "attachment_148583821",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Stacy Ram",
+      "alt": "Product packaging contest entry by Stacy Ram",
+      "local_file": "attachment_148583821.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 58485,
+      "sha256": "895ba6836df81e5b50a192c044687f8e2eec0f40eeef8a5e126c3c7f352da14b",
+      "source_preview_url": "https://images-platform.99static.com/Ph0xdAyeY5w5Dsf4P4M1Kua-DNg=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/148/148583/attachment_148583821"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Packaging & Label",
+    "subcategory": "Product Packaging"
+  }
+}

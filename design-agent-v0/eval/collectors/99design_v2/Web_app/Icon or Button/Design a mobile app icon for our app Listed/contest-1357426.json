@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1357426",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1357426",
+    "url": "https://99designs.com/icon-button-design/contests/design-mobile-app-icon-listed-1357426",
+    "page_title": "Design a mobile app icon for our app listed | Icon or button contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Design a mobile app icon for our app Listed",
+    "status": "finished",
+    "category_label": "icon or button",
+    "category": "icon_button",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "listedtravelapp",
+    "entry_count": 150,
+    "designer_count": 18,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Listed is a mobile application for travelers who want to structure their digital travel ... The app collects content from various sources, such as Instagram,…",
+    "vision_public_excerpt": "We are looking for a talented designer to create a beautiful App Icon for our upcoming iOS and Android mobile app, Listed (a travel app that helps users…",
+    "other_notes": "feel free to check out the test app to gain more feeling & inspiration (iOS only): ...",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164451589",
+    "winner_designer": "Pixelax",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Very responsive, very flexible, amazing designer"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164451589",
+      "role": "winner",
+      "selected": true,
+      "designer": "Pixelax",
+      "alt": "\"Design a mobile app icon for our app Listed\" winning Icon or button by Pixelax",
+      "local_file": "attachment_164451589.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 31537,
+      "sha256": "4c1c934c7971c7e5fbbc1b404976f0448a52a6638dbda3e34639c9d2722af090",
+      "source_preview_url": "https://images-platform.99static.com/Id92kAayeedZpaUg6TKKXNc6qNA=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/164/164451/attachment_164451589"
+    },
+    {
+      "entry_id": "attachment_164367999",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "k r a m s t e r",
+      "alt": "Icon or button contest entry by k r a m s t e r",
+      "local_file": "attachment_164367999.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 423336,
+      "sha256": "fcde286b8a046af322c8da7afe2554eac16f8e856e95fffcd1c8e3d4b0e14416",
+      "source_preview_url": "https://images-platform.99static.com/Gj58AYoVUcpmntmWS-o-cuCC_SA=/492x1995:1496x2999/500x500/top/smart/99designs-contests-attachments/164/164367/attachment_164367999"
+    },
+    {
+      "entry_id": "attachment_164376156",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "k r a m s t e r",
+      "alt": "Icon or button contest entry by k r a m s t e r",
+      "local_file": "attachment_164376156.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 423177,
+      "sha256": "9a040d8ddbf237f70bc3e2f718a4b46cf7c1c95e24aab6abaf0384d2c238db44",
+      "source_preview_url": "https://images-platform.99static.com/aUTtHIc-tc8hsRRE1Wc0D_m-6tQ=/495x1995:1499x2999/500x500/top/smart/99designs-contests-attachments/164/164376/attachment_164376156"
+    },
+    {
+      "entry_id": "attachment_164393565",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ratko Batinic",
+      "alt": "Icon or button contest entry by Ratko Batinic",
+      "local_file": "attachment_164393565.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 119695,
+      "sha256": "7bb9d503a5ddf4abf0431fe5b470ce88814824f03d19d0fb9f86489b19c0a13f",
+      "source_preview_url": "https://images-platform.99static.com/Iqu74B8XqQ9N0ByrPplYYNOdWJg=/0x0:960x960/500x500/top/smart/99designs-contests-attachments/164/164393/attachment_164393565"
+    },
+    {
+      "entry_id": "attachment_164387086",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ratko Batinic",
+      "alt": "Icon or button contest entry by Ratko Batinic",
+      "local_file": "attachment_164387086.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 124639,
+      "sha256": "795f9dedda69316ea0541b24e0d0af6b5f7f4ecbcad6aaea5e084f626ea8e564",
+      "source_preview_url": "https://images-platform.99static.com/Ia_LupqmnWtVCDUoXv8Yq2ioEiI=/0x0:960x960/500x500/top/smart/99designs-contests-attachments/164/164387/attachment_164387086"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Web & App Design",
+    "subcategory": "Icon or Button"
+  }
+}

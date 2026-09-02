@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1299959",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1299959",
+    "url": "https://99designs.com/sticker-design/contests/fun-sticker-design-guided-hiking-business-yosemite-1299959",
+    "page_title": "Fun sticker design for a guided hiking business in yosemite | Sticker contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "sticker",
+    "category_label": "sticker",
+    "client_display_name": "zdegrawh",
+    "designer_count": 12,
+    "entry_count": 35,
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "status": "finished",
+    "title": "Fun sticker design for a guided hiking business in Yosemite",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us We offer guided naturalist walking and hiking tours in Yosemite National ... Our target audience is people from professional work spaces on ... What's your vision? I want to design a sticker that has a cat wearing a sherlock holmes hat and bending over looking at a rock through a magnifying ... I would like the top text…",
+    "vision_public_excerpt": "I want to design a sticker that has a cat wearing a sherlock holmes hat and bending over looking at a rock through a magnifying ... I would like the top text…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_153982478",
+    "winner_designer": "herizkob",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Great designer, got exactly what I wanted!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_153982478",
+      "role": "winner",
+      "selected": true,
+      "designer": "herizkob",
+      "alt": "\"Fun sticker design for a guided hiking business in Yosemite\" winning Sticker by herizkob",
+      "local_file": "attachment_153982478.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 43419,
+      "sha256": "865b3ae73c7c614bd0812368588b2eea307589369a3c603051c3606392170349",
+      "source_preview_url": "https://images-platform.99static.com/ufc7x3QNeodcG3EYWQo5aPvXJdQ=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/153/153982/attachment_153982478"
+    },
+    {
+      "entry_id": "attachment_153975145",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "herizkob",
+      "alt": "Sticker contest entry by herizkob",
+      "local_file": "attachment_153975145.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45587,
+      "sha256": "0be2b7ac306ea77f529cdf29e2a789f2bb4c97561338b0c188d8714301b77fc6",
+      "source_preview_url": "https://images-platform.99static.com/Z7YoM5U-20oJvwZFPyEXLXvrgZs=/22x12:2039x2029/500x500/top/smart/99designs-contests-attachments/153/153975/attachment_153975145"
+    },
+    {
+      "entry_id": "attachment_153947336",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Wisnu Mahendrata",
+      "alt": "Sticker contest entry by Wisnu Mahendrata",
+      "local_file": "attachment_153947336.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 49278,
+      "sha256": "c0fadfc55baefcb1b13f26d7f6982e7694003e07748a37a9f5e89fbc20dd65fb",
+      "source_preview_url": "https://images-platform.99static.com/RT_AS_459LfbyQfxGtsFcgICRWM=/6x6:2040x2040/500x500/top/smart/99designs-contests-attachments/153/153947/attachment_153947336"
+    },
+    {
+      "entry_id": "attachment_153971482",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "straxdesign",
+      "alt": "Sticker contest entry by straxdesign",
+      "local_file": "attachment_153971482.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 56161,
+      "sha256": "68330a7d1e8edba0f19d7959bcc0156adbaa25333678e60f01ab7d2731385c04",
+      "source_preview_url": "https://images-platform.99static.com/bzeXZMcZwFKbMGtZwjFJDDOLZTo=/39x582:1804x2347/500x500/top/smart/99designs-contests-attachments/153/153971/attachment_153971482"
+    },
+    {
+      "entry_id": "attachment_153971686",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "straxdesign",
+      "alt": "Sticker contest entry by straxdesign",
+      "local_file": "attachment_153971686.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 50315,
+      "sha256": "466f1b0f493d5f1e952d2f89957b833738fc9934cd27ea778f5dab559b06c69c",
+      "source_preview_url": "https://images-platform.99static.com/YGq_FZ_-kUHzHz8GTJIkNtrfXPo=/0x11:1988x1999/500x500/top/smart/99designs-contests-attachments/153/153971/attachment_153971686"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Clothing & Merchandise",
+    "subcategory": "Sticker"
+  }
+}

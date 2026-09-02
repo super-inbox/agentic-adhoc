@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-811561",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "811561",
+    "url": "https://99designs.com/magazine-cover-design/contests/cover-f%C3%BCr-einen-sch%C3%BCleraustausch-katalog-811561",
+    "page_title": "Cover für einen schüleraustausch katalog | Magazine cover contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "magazine_cover",
+    "category_label": "magazine cover",
+    "client_display_name": "c.hammer",
+    "designer_count": 17,
+    "entry_count": 76,
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "status": "finished",
+    "title": "Cover für einen Schüleraustausch Katalog",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Do it! Sprachreisen ist eine Agentur für die Vermittlung von ... Seit über... Jahren bieten wir Schüleraustausch Programme, Feriencamps für Kinder und… What's your vision? Der High School Katalog soll ein neues ansprechendes Cover bekommen und unsere Zielgruppe optimal ... Das neue Design soll sich nicht an unserem… Other notes Bei den Bildern bitte beachten, dass die Jugendlichen im Alter zwischen... und... ...",
+    "vision_public_excerpt": "Der High School Katalog soll ein neues ansprechendes Cover bekommen und unsere Zielgruppe optimal ... Das neue Design soll sich nicht an unserem…",
+    "other_notes": "Bei den Bildern bitte beachten, dass die Jugendlichen im Alter zwischen... und... ...",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_95104829",
+    "winner_designer": "emma11",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Wir waren sehr zufrieden"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_95104829",
+      "role": "winner",
+      "selected": true,
+      "designer": "emma11",
+      "alt": "\"Cover für einen Schüleraustausch Katalog\" winning Magazine cover by emma11",
+      "local_file": "attachment_95104829.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 168938,
+      "sha256": "4da9c678b48a1f1210fc28c9ad76ab23e84cfbebf206d4159577d5a6a5053c9b",
+      "source_preview_url": "https://images-platform.99static.com/M2qZSiuMWNygUHvRb7d21MsRqWM=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/95/95104/attachment_95104829"
+    },
+    {
+      "entry_id": "attachment_94882654",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "AleMiglio",
+      "alt": "Magazine cover contest entry by AleMiglio",
+      "local_file": "attachment_94882654.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 145407,
+      "sha256": "3bc000ab739ce019084bf26bb42c4e50037d0b415dbfca11c4728342d88fcac2",
+      "source_preview_url": "https://images-platform.99static.com/zToB30SZVhh0RevDZVytPhr2FDg=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/94/94882/attachment_94882654"
+    },
+    {
+      "entry_id": "attachment_94893250",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "emma11",
+      "alt": "Magazine cover contest entry by emma11",
+      "local_file": "attachment_94893250.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 172387,
+      "sha256": "37a935aeffb65d3e2361961a26c4e303841836b791d94e67cc2efc8ce769e16d",
+      "source_preview_url": "https://images-platform.99static.com/cazA8Un2_nXlobjKxM4b40tBZus=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/94/94893/attachment_94893250"
+    },
+    {
+      "entry_id": "attachment_94894020",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "emma11",
+      "alt": "Magazine cover contest entry by emma11",
+      "local_file": "attachment_94894020.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 172855,
+      "sha256": "54709d51abca8bbdf3dad555868abba783bbf56eba7f1d622078dc22af29558f",
+      "source_preview_url": "https://images-platform.99static.com/SF7EA3VwVQFB5JBjBEqtz4nxpbs=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/94/94894/attachment_94894020"
+    },
+    {
+      "entry_id": "attachment_94894048",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "emma11",
+      "alt": "Magazine cover contest entry by emma11",
+      "local_file": "attachment_94894048.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 173004,
+      "sha256": "7239c1fa7c8fb507cc25118cc28138121efef24cd30e95d7fc72178ba280be18",
+      "source_preview_url": "https://images-platform.99static.com/ibPu5TiW1LxN6t0ha6Fu1Iresw0=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/94/94894/attachment_94894048"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Book & Magazine",
+    "subcategory": "Magazine Cover"
+  }
+}

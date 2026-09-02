@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1344271",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1344271",
+    "url": "https://99designs.com/card-invitation-design/contests/design-holiday-card-boutique-luxury-travel-company-1344271",
+    "page_title": "Design a holiday card for a boutique luxury travel company | Card or invitation contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "card_or_invitation",
+    "category_label": "card or invitation",
+    "client_display_name": "norgaardnicolettS",
+    "designer_count": 26,
+    "entry_count": 78,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Design a Holiday Card for a Boutique Luxury Travel Company",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Luxury Travel Agency What's your vision? Project Overview We are creating a premium holiday card for a luxury travel ... The card will accompany a gift of elegant chopsticks sent to our ... We want a…",
+    "vision_public_excerpt": "Project Overview We are creating a premium holiday card for a luxury travel ... The card will accompany a gift of elegant chopsticks sent to our ... We want a…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_161511586",
+    "winner_designer": "ole_na",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Olena has been AMAZING to work with and she is so talented. She has won multiple of the competitions I put out with diverse design/style requirements and she was…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_161511586",
+      "role": "winner",
+      "selected": true,
+      "designer": "ole_na",
+      "alt": "\"Design a Holiday Card for a Boutique Luxury Travel Company\" winning Card or invitation by ole_na",
+      "local_file": "attachment_161511586.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 44349,
+      "sha256": "f60e7effe12bb52eaf19936491447bd31bf14f8d9ac220472d25f6634cecf9cd",
+      "source_preview_url": "https://images-platform.99static.com/eeVwk4qHRw08t-A0cfDZtgP-uWY=/138x117:1752x1731/500x500/top/smart/99designs-contests-attachments/161/161511/attachment_161511586"
+    },
+    {
+      "entry_id": "attachment_161420291",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "☪ekidot",
+      "alt": "Card or invitation contest entry by ☪ekidot",
+      "local_file": "attachment_161420291.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 24452,
+      "sha256": "f835d3136beadc7053ddf0aeb927c39fb22fcd6d9c2fe2c0298e8ac82384141f",
+      "source_preview_url": "https://images-platform.99static.com/-9NnYk6MvFtY5_NcnlI3kIiExzs=/58x66:1932x1940/500x500/top/smart/99designs-contests-attachments/161/161420/attachment_161420291"
+    },
+    {
+      "entry_id": "attachment_161467504",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Obaydurbd",
+      "alt": "Card or invitation contest entry by Obaydurbd",
+      "local_file": "attachment_161467504.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45551,
+      "sha256": "7af1c2f93364d390027810adb5bd95ec464582991b6bf8d4ce70dee5246460a8",
+      "source_preview_url": "https://images-platform.99static.com/r4qmb3SIEAsP3zJx_YlO4daCTKA=/0x166:2000x2166/500x500/top/smart/99designs-contests-attachments/161/161467/attachment_161467504"
+    },
+    {
+      "entry_id": "attachment_161466102",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Gerasim",
+      "alt": "Card or invitation contest entry by Gerasim",
+      "local_file": "attachment_161466102.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 31511,
+      "sha256": "5b082affc24a7bbd39cbd862dc00b27943cf3ca7c6cdcaa135a3c531b27b41a4",
+      "source_preview_url": "https://images-platform.99static.com/dT3CvvH7CMXIbm_tzS8ZlbyUgM0=/0x80:2000x2080/500x500/top/smart/99designs-contests-attachments/161/161466/attachment_161466102"
+    },
+    {
+      "entry_id": "attachment_161444157",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "nabilahdwisc",
+      "alt": "Card or invitation contest entry by nabilahdwisc",
+      "local_file": "attachment_161444157.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 166513,
+      "sha256": "53e44101512063a0444bcfbe57a185d32a6091cdb3f2ebfdd7cd4e7f2eae5e4a",
+      "source_preview_url": "https://images-platform.99static.com/BUqUV3soM96jMW19Ux2k1k1HSxs=/35x322:1392x1679/500x500/top/smart/99designs-contests-attachments/161/161444/attachment_161444157"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Art & Illustration",
+    "subcategory": "Card or Invitation"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Print & Editorial Design",
+    "subtype": "Card or Invitation",
+    "original_category": "card_or_invitation",
+    "source_record": "Art/Card or Invitation/Design a Holiday Card for a Boutique Luxury Travel Company/contest-1344271.json",
+    "source_record_sha256": "fd72b9bcadee087a80ce77758d61f691e1a484094a3ec60db64536bda0e25a15"
+  }
+}

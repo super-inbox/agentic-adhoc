@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1349718",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1349718",
+    "url": "https://99designs.com/web-design/contests/design-challenge-where-hostel-meets-hotel-1349718",
+    "page_title": "Design challenge: where hostel meets hotel | Web page design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Design Challenge: Where Hostel Meets Hotel",
+    "status": "finished",
+    "category_label": "web page design",
+    "category": "web_page_design",
+    "industry": "Travel & Hotel",
+    "package": "Gold",
+    "client_display_name": "MHostel",
+    "entry_count": 79,
+    "designer_count": 31,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Our hotel is called \"Mountain Hostel\", located in Ramsau am Dachstein (Current website: ... and is a family and youth ... We offer numerous multi-bed…",
+    "vision_public_excerpt": "Style/theme ideas: The design should be a combination of the simple, slightly playful design of youth hostels and 3-star hotels, while simultaneously incorporating refined… Page descriptions ... Home Focus: Emotional video/image hero element, direct booking bar, teasers for rooms & news, directions/access information A key element on the…",
+    "other_notes": "Colors can be flexible in tone, but need to stick to the color pattern of the logo (...",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "PSD",
+      "PDF",
+      "XD",
+      "FIG"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_162783526",
+    "winner_designer": "Isaac Creative",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Isaac is extremely talented! Look forward to working together again soon!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_162783526",
+      "role": "winner",
+      "selected": true,
+      "designer": "Isaac Creative",
+      "alt": "\"Design Challenge: Where Hostel Meets Hotel\" winning Web page design by Isaac Creative",
+      "local_file": "attachment_162783526.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 84496,
+      "sha256": "d2e9c7ebe24aca486316f5c2ad3c866f95c2f61a28fba4ae292bf810b94ec57b",
+      "source_preview_url": "https://images-platform.99static.com/7oUCFtDOHrld25Yc5IgviFMpZow=/0x0:1919x1919/500x500/top/smart/99designs-contests-attachments/162/162783/attachment_162783526"
+    },
+    {
+      "entry_id": "attachment_162765766",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Isaac Creative",
+      "alt": "Web page design contest entry by Isaac Creative",
+      "local_file": "attachment_162765766.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 82599,
+      "sha256": "4816c2ffd533af75b20dcddb2970a205b471739635ce296952b8bfb3351555e9",
+      "source_preview_url": "https://images-platform.99static.com/2ZMJo8FafUj5dPrpZaM5tH99GP4=/0x0:1919x1919/500x500/top/smart/99designs-contests-attachments/162/162765/attachment_162765766"
+    },
+    {
+      "entry_id": "attachment_162555142",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "pb⚡️",
+      "alt": "Web page design contest entry by pb⚡️",
+      "local_file": "attachment_162555142.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 77686,
+      "sha256": "fb6b24c491b4d3009442bf1cdba20f3391ae50810bc6b19d92cb2d1ae05b8358",
+      "source_preview_url": "https://images-platform.99static.com/Ql5z1S_8GkhDkTj0i2-CN2DM18Q=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/162/162555/attachment_162555142"
+    },
+    {
+      "entry_id": "attachment_162530069",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "MercClass",
+      "alt": "Web page design contest entry by MercClass",
+      "local_file": "attachment_162530069.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 78194,
+      "sha256": "ac3d235fc7b58448287eea857d49a50c0d64ff18c387280da16c0344dd25cf0e",
+      "source_preview_url": "https://images-platform.99static.com/P5Di3-p4qjlOT0fC_zK2vcjlT0E=/0x115:1440x1555/500x500/top/smart/99designs-contests-attachments/162/162530/attachment_162530069"
+    },
+    {
+      "entry_id": "attachment_162531529",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "monodeepsamanta",
+      "alt": "Web page design contest entry by monodeepsamanta",
+      "local_file": "attachment_162531529.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 73242,
+      "sha256": "c9d0665334a259f0d09fd372261d714fd4ae87cce3e67acee57f83d2e560d855",
+      "source_preview_url": "https://images-platform.99static.com/sTgoftczyxbstWU2WhB9Skwd2bQ=/0x0:1344x1344/500x500/top/smart/99designs-contests-attachments/162/162531/attachment_162531529"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Web & App Design",
+    "subcategory": "Web Page Design"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1294016",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1294016",
+    "url": "https://99designs.com/product-packaging-design/contests/luxury-high-quality-box-design-product-targeting-women-1294016",
+    "page_title": "Luxury, high-quality box design for a product targeting women. | Product packaging contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "product_packaging",
+    "category_label": "product packaging",
+    "client_display_name": "emilVN",
+    "designer_count": 11,
+    "entry_count": 85,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Luxury, high-quality box design for a product targeting women.",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel Other color requirements Metalic rose gold, metalic silver or metalic ... With a complimenting matte color so the text will ... One feminine accent ... Please create a white background… Company name Navinest Existing website ... Product name Navinest BreezePro Neck Fan Description of the product It is a pocket-size, compact, portable neck fan for home, work, or ... Description of the product target audience The target market is women ages... to ... Style attributes Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Luxury Casual Minimalistic Detailed Design needs The box packaging is designed to give a complete, SLEEK, high-end luxury ... It provides the feel of an Apple brand experience in the \"I never want to throw… What to avoid Avoid using the logo's colours ... The logo should match the colour pallet of your ... Please note that the logo on the box specs is just a placeholder and not… Package dimensions ... cm x ... cm x ... ... in x ... in x ... in Product size should be in cm and inches It all began with a design brief. A quick, interactive guide helped them understand their design style and captured exactly what they needed in their product packaging. What is 99designs? What is a design contest? How much does it cost? Designers across the globe delivered design magic. by Out of the Box ❑ by — P R E M I U M — by — P R…",
+    "vision_public_excerpt": null,
+    "other_notes": "Avoid using the logo's colours ... The logo should match the colour pallet of your ... Please note that the logo on the box specs is just a placeholder and not… Package dimensions ... cm x ... cm x ... ... in x ... in x ... in Product size should be in cm and inches It all began with a design brief. A quick, interactive guide helped them understand their design style and captured exactly what they needed in their product packaging.",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_153156028",
+    "winner_designer": "Out of the Box ❑",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Perfect product packaging Very good and professional designer Every wish is realized Responds quickly Very committed"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_153156028",
+      "role": "winner",
+      "selected": true,
+      "designer": "Out of the Box ❑",
+      "alt": "\"Luxury, high-quality box design for a product targeting women.\" winning Product packaging by Out of the Box ❑",
+      "local_file": "attachment_153156028.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 21692,
+      "sha256": "5686f53c08f0dcd75c88ef63a964d36783aa4fa7aa06b28a7d73930cc0e9e500",
+      "source_preview_url": "https://images-platform.99static.com/e_nC0A_I9e2jICWqSIT3HcBzdYQ=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/153/153156/attachment_153156028"
+    },
+    {
+      "entry_id": "attachment_153137394",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Out of the Box ❑",
+      "alt": "Product packaging contest entry by Out of the Box ❑",
+      "local_file": "attachment_153137394.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 22419,
+      "sha256": "384c57a702a1235184a96ccc141cac4e1cd9b8e1243527d20fec84866fa6ae72",
+      "source_preview_url": "https://images-platform.99static.com/9FwuVf7DtlxvOZCj334PvABfwqk=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/153/153137/attachment_153137394"
+    },
+    {
+      "entry_id": "attachment_153144531",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "— P R E M I U M —",
+      "alt": "Product packaging contest entry by — P R E M I U M —",
+      "local_file": "attachment_153144531.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 24049,
+      "sha256": "12de0e4bb68efeb920777fd8b6ee9b12166909b503fcffe5b870ec7949ee700f",
+      "source_preview_url": "https://images-platform.99static.com/wKAPbrT3yad1JrJerld1bJCWcZE=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/153/153144/attachment_153144531"
+    },
+    {
+      "entry_id": "attachment_153145474",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "— P R E M I U M —",
+      "alt": "Product packaging contest entry by — P R E M I U M —",
+      "local_file": "attachment_153145474.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 25278,
+      "sha256": "548cf4716f442033872fa0125291039e98a288cf631b74e01e0f02a8c82b1274",
+      "source_preview_url": "https://images-platform.99static.com/EzrLe2iGEj3bRUhpmtrVTlqg1vw=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/153/153145/attachment_153145474"
+    },
+    {
+      "entry_id": "attachment_153145478",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "— P R E M I U M —",
+      "alt": "Product packaging contest entry by — P R E M I U M —",
+      "local_file": "attachment_153145478.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 27874,
+      "sha256": "1d27eb9b81252d8b32d8cea19eddb8a23fc0069375b2dfa019c100e4b66cd396",
+      "source_preview_url": "https://images-platform.99static.com/_AFh2dTJNLqSplLQW95r1jBX-Is=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/153/153145/attachment_153145478"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Packaging & Label",
+    "subcategory": "Product Packaging"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Packaging & Label Design",
+    "subtype": "Product Packaging",
+    "original_category": "product_packaging",
+    "source_record": "packaging/Product Packaging/Luxury, high-quality box design for a product targeting women./contest-1294016.json",
+    "source_record_sha256": "02ea12ca8432ec15b9c99f1bcbf342e01aab9c45f33376173025b176619b6ead"
+  }
+}

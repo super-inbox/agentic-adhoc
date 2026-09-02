@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1358478",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1358478",
+    "url": "https://99designs.com/brand-launch-pack/contests/bespoke-luxury-travel-agency-logo-1358478",
+    "page_title": "Bespoke luxury travel agency logo | Brand launch pack contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Bespoke Luxury Travel Agency Logo",
+    "status": "finished",
+    "category_label": "brand launch pack",
+    "category": "brand_launch_pack",
+    "industry": "Travel & Hotel",
+    "package": "Gold",
+    "client_display_name": "nicola7I",
+    "entry_count": 687,
+    "designer_count": 193,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "... ... ...",
+    "about_us": "Tidal & Rare is a bespoke luxury travel agency based in Amelia Island, ... We design private, fully custom journeys for accomplished, well-traveled clients who…",
+    "vision_public_excerpt": null,
+    "other_notes": "The color used for the rose gold is up to ... The colors I like the most are a dark teal and rose ... if there is a way to make it look more like real rose gold - i'd really…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164714835",
+    "winner_designer": "Elise White Studio",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "An amazing designer to work with. All of my feedback was quickly incorporated into the design, with an attention to detail that made the final result feel truly individual and…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164714835",
+      "role": "winner",
+      "selected": true,
+      "designer": "Elise White Studio",
+      "alt": "\"Bespoke Luxury Travel Agency Logo\" winning Brand launch pack by Elise White Studio",
+      "local_file": "attachment_164714835.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 363600,
+      "sha256": "2c4a9036f31d7be5c6cc7a2b77481affd8e0cf930e7e71276663edee1092b7f4",
+      "source_preview_url": "https://images-platform.99static.com/JsqMsDySqqzsQd-JYuQPCWtWKdA=/140x178:1837x1875/500x500/top/smart/99designs-contests-attachments/164/164714/attachment_164714835"
+    },
+    {
+      "entry_id": "attachment_164713913",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "stevanga",
+      "alt": "Brand launch pack contest entry by stevanga",
+      "local_file": "attachment_164713913.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 21432,
+      "sha256": "edda9fd1d1d23d0cba21f86c5c6322c9e5622918714c25c1ecf2c56108cfbd21",
+      "source_preview_url": "https://images-platform.99static.com/_NqeBgdhUCP97iSVQeivcj5qGYg=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/164/164713/attachment_164713913"
+    },
+    {
+      "entry_id": "attachment_164671002",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "GalihCiptoO",
+      "alt": "Brand launch pack contest entry by GalihCiptoO",
+      "local_file": "attachment_164671002.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 10933,
+      "sha256": "3bbd3db6d92196de81c1914fcf213bffc5bbe68df2b463183be7431673655d0f",
+      "source_preview_url": "https://images-platform.99static.com/GZZt-52ryVOUpLOSh2BssVfJ2kk=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/164/164671/attachment_164671002"
+    },
+    {
+      "entry_id": "attachment_164671336",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "xkarlohorvatx",
+      "alt": "Brand launch pack contest entry by xkarlohorvatx",
+      "local_file": "attachment_164671336.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 22273,
+      "sha256": "54b790bdac2009b9b3a5516c6fdfe865714e6473f20e06881cb35f880b766a7e",
+      "source_preview_url": "https://images-platform.99static.com/hJTOWFJswKbJ4O2pEYj1MmumHcw=/538x85:1395x942/500x500/top/smart/99designs-contests-attachments/164/164671/attachment_164671336"
+    },
+    {
+      "entry_id": "attachment_164671571",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Eze.Design",
+      "alt": "Brand launch pack contest entry by Eze.Design",
+      "local_file": "attachment_164671571.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 18141,
+      "sha256": "42015734e7683d0027a5a1605335108097be3d6fb6b61bd68bac1c98aaecc0f6",
+      "source_preview_url": "https://images-platform.99static.com/PsBAhm9hU1lAOI93GALwKH4GqwE=/0x0:1080x1080/500x500/top/smart/99designs-contests-attachments/164/164671/attachment_164671571"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Logo & Identity",
+    "subcategory": "Brand Launch Pack"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Brand Design",
+    "subtype": "Brand Launch Pack",
+    "original_category": "brand_launch_pack",
+    "source_record": "Logo_identity/Brand Launch Pack/Bespoke Luxury Travel Agency Logo/contest-1358478.json",
+    "source_record_sha256": "49bec22ca36f33269c02e972b8d954651b63d60ed6bb189fb15b1bb279805545"
+  }
+}

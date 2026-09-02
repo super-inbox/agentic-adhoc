@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1342655",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1342655",
+    "url": "https://99designs.com/illustrations/contests/virgin-islands-charter-boat-design-1342655",
+    "page_title": "Virgin islands charter boat design | Illustration or graphics contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "illustration_or_graphics",
+    "category_label": "illustration or graphics",
+    "client_display_name": "flyawaychartersvd",
+    "designer_count": 29,
+    "entry_count": 250,
+    "industry": "Travel & Hotel",
+    "package": "Silver",
+    "status": "finished",
+    "title": "VIRGIN ISLANDS CHARTER BOAT DESIGN",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us We take tourists on private day charters out of coral bay ... John to the USVI and BVI on our luxury, custom exclusive market breaking Picaroons ... We have...… What's your vision? Paint color, and decals for new boat and what will become the old boat redesign",
+    "vision_public_excerpt": "Paint color, and decals for new boat and what will become the old boat redesign",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_161104598",
+    "winner_designer": "M.Siddique",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Great job and great communication!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_161104598",
+      "role": "winner",
+      "selected": true,
+      "designer": "M.Siddique",
+      "alt": "\"VIRGIN ISLANDS CHARTER BOAT DESIGN\" winning Illustration or graphics by M.Siddique",
+      "local_file": "attachment_161104598.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 50956,
+      "sha256": "f8c0cb1034aa6dd62712f28598db8867423a7780f0ba09783750c42194e867cb",
+      "source_preview_url": "https://images-platform.99static.com/sAV54iIK6NY_a83x36SHHOE-Qs4=/0x0:1980x1980/500x500/top/smart/99designs-contests-attachments/161/161104/attachment_161104598"
+    },
+    {
+      "entry_id": "attachment_161056227",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "dnite",
+      "alt": "Illustration or graphics contest entry by dnite",
+      "local_file": "attachment_161056227.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 53287,
+      "sha256": "87a351301e31782113d885ad68fed6a040343bad805cb55a99f40e5561a39977",
+      "source_preview_url": "https://images-platform.99static.com/pCMwRztq1S0_fq8tpa27dGR8LdM=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/161/161056/attachment_161056227"
+    },
+    {
+      "entry_id": "attachment_161112887",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "M.Siddique",
+      "alt": "Illustration or graphics contest entry by M.Siddique",
+      "local_file": "attachment_161112887.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 51190,
+      "sha256": "964538540cd30c1874cd471bb074c6fcaa3468ca05f6fd873c03ecc7df4216bd",
+      "source_preview_url": "https://images-platform.99static.com/JQgPEgHSAC5HYxMAoRdBPiLT-rk=/0x0:1980x1980/500x500/top/smart/99designs-contests-attachments/161/161112/attachment_161112887"
+    },
+    {
+      "entry_id": "attachment_161111584",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "vallue",
+      "alt": "Illustration or graphics contest entry by vallue",
+      "local_file": "attachment_161111584.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 43777,
+      "sha256": "dac9cdfc9df992ece60d5879a72302a98160bce73b3f9d9d79ef6ecd5f993cde",
+      "source_preview_url": "https://images-platform.99static.com/9IBfcP25HbEDyLEzU8qEbbkJqnc=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/161/161111/attachment_161111584"
+    },
+    {
+      "entry_id": "attachment_161111594",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "vallue",
+      "alt": "Illustration or graphics contest entry by vallue",
+      "local_file": "attachment_161111594.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 43877,
+      "sha256": "c36a7fb71a556d5d9a03448a8c934944e91c0a617f5b90dfab83172a343e8bd8",
+      "source_preview_url": "https://images-platform.99static.com/15SeH4hYnE_IcYvsWwgqaWWay6g=/0x0:2036x2036/500x500/top/smart/99designs-contests-attachments/161/161111/attachment_161111594"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Art & Illustration",
+    "subcategory": "Illustration or Graphics"
+  }
+}

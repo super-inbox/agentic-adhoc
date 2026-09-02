@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1346696",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1346696",
+    "url": "https://99designs.com/signage-design/contests/deer-spring-canyon-tours-billboard-design-contest-1346696",
+    "page_title": "Deer spring canyon tours billboard design contest | Signage contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "signage",
+    "category_label": "signage",
+    "client_display_name": "ht.williams",
+    "designer_count": 29,
+    "entry_count": 171,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Deer Spring Canyon Tours Billboard Design Contest",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Deer Spring Canyon Tours is seeking a standout, high-impact billboard design that clearly guides travelers to our canyon tours near the iconic Horseshoe Bend ...… What's your vision? Billboard Design Brief Client: Deer Spring Canyon Tours Website: ... Phone:... Address:... US..., Page, Arizona Location & Visibility Context Height:... feet… Other notes We're open to anything!",
+    "vision_public_excerpt": "Billboard Design Brief Client: Deer Spring Canyon Tours Website: ... Phone:... Address:... US..., Page, Arizona Location & Visibility Context Height:... feet…",
+    "other_notes": "We're open to anything!",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_161991822",
+    "winner_designer": "MotivatedDesign",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent understanding of the direction we wanted, visually appealing work, wonderful to work with, cordial and responsible!"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_161991822",
+      "role": "winner",
+      "selected": true,
+      "designer": "MotivatedDesign",
+      "alt": "\"Deer Spring Canyon Tours Billboard Design Contest\" winning Signage by MotivatedDesign",
+      "local_file": "attachment_161991822.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 72520,
+      "sha256": "a416ad4d6d556149103981d727a43aac5388281be7b92ede2e072590a667fafe",
+      "source_preview_url": "https://images-platform.99static.com/heWAOnb2M-jLaOgXRt8iT8VxN68=/41x0:796x755/500x500/top/smart/99designs-contests-attachments/161/161991/attachment_161991822"
+    },
+    {
+      "entry_id": "attachment_161932017",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "websmartusa",
+      "alt": "Signage contest entry by websmartusa",
+      "local_file": "attachment_161932017.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 58429,
+      "sha256": "d4685f344300d5b0d61f6c6e5aaa2d328b15ff64b2f73f92c9c988dc0a65cac5",
+      "source_preview_url": "https://images-platform.99static.com/nZ355qQp5LW1MhSo-Dk36EDDjSc=/0x35:2000x2035/500x500/top/smart/99designs-contests-attachments/161/161932/attachment_161932017"
+    },
+    {
+      "entry_id": "attachment_161932012",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "websmartusa",
+      "alt": "Signage contest entry by websmartusa",
+      "local_file": "attachment_161932012.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 59494,
+      "sha256": "2b2430dc29539614c80824ba80d59e20f2940572ac013a8a9298de542e8dba71",
+      "source_preview_url": "https://images-platform.99static.com/S_XQURZ4FRTdnZKGtn1E8NegQpY=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/161/161932/attachment_161932012"
+    },
+    {
+      "entry_id": "attachment_161932004",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "websmartusa",
+      "alt": "Signage contest entry by websmartusa",
+      "local_file": "attachment_161932004.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 56581,
+      "sha256": "e28b03d4fca5d34669442f16b2e7a506a67ffa7ac4ff4bd045305ba7dd3dd68e",
+      "source_preview_url": "https://images-platform.99static.com/YTHgtm8dinxdardhyw7mwJxFg_k=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/161/161932/attachment_161932004"
+    },
+    {
+      "entry_id": "attachment_161926567",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "icon89GraPhicDeSign",
+      "alt": "Signage contest entry by icon89GraPhicDeSign",
+      "local_file": "attachment_161926567.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 67240,
+      "sha256": "c093ff81f8799a5f39fdfd36b4ef6b4b3007c2330da213f40da82da4d051739b",
+      "source_preview_url": "https://images-platform.99static.com/4ERYEGmvQqmOyHxBELEp6SotzT8=/215x0:1495x1280/500x500/top/smart/99designs-contests-attachments/161/161926/attachment_161926567"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Business & Advertising",
+    "subcategory": "Signage"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Environmental & Signage Design",
+    "subtype": "Signage",
+    "original_category": "signage",
+    "source_record": "Business/Signage/Deer Spring Canyon Tours Billboard Design Contest/contest-1346696.json",
+    "source_record_sha256": "28f7e555668578e697cd838095f75d7e42215d59d2a4f54a8133b8da9c4549fc"
+  }
+}

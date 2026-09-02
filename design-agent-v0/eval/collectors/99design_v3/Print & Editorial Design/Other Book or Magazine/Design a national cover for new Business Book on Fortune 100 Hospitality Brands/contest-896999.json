@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-896999",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "896999",
+    "url": "https://99designs.com/other-book-magazine-design/contests/design-national-cover-business-book-fortune-hospitality-brands-896999",
+    "page_title": "Design a national cover for new business book on fortune 100 hospitality brands | Other book or magazine contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "other_book_or_magazine",
+    "category_label": "other book or magazine",
+    "client_display_name": "andyRh",
+    "designer_count": 18,
+    "entry_count": 66,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Design a national cover for new Business Book on Fortune 100 Hospitality Brands",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Global Meeting Services ... We produce meetings and Events in over... ... We are know for our attention to detail and Hospitable staff, the Ritz Cartlon of our ... … What's your vision? We would like to develop an initial concept book ... Initially, it will be used to communicate the book to key stakeholders such as publishers and ... For the… Other notes Th",
+    "vision_public_excerpt": "We would like to develop an initial concept book ... Initially, it will be used to communicate the book to key stakeholders such as publishers and ... For the…",
+    "other_notes": "Th",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_105173783",
+    "winner_designer": "Evocative ✘",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Thankful to have a continued working relationship with Evocative X for the past two books now. They do a wonderful job and know how to complete a task in a timely…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_105173783",
+      "role": "winner",
+      "selected": true,
+      "designer": "Evocative ✘",
+      "alt": "\"Design a national cover for new Business Book on Fortune 100 Hospitality Brands\" winning Other book or magazine by Evocative ✘",
+      "local_file": "attachment_105173783.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 71107,
+      "sha256": "07b166e2e129735ddbc89d7994e417ff7cc27f2b78705f7a71d7c2ce2f8123b8",
+      "source_preview_url": "https://images-platform.99static.com/62xN33Dk3hYD4bZPHzBdqoB9hW8=/472x80:1560x1168/500x500/top/smart/99designs-contests-attachments/105/105173/attachment_105173783"
+    },
+    {
+      "entry_id": "attachment_105009024",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Gan!",
+      "alt": "Other book or magazine contest entry by Gan!",
+      "local_file": "attachment_105009024.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 41337,
+      "sha256": "385140f71defb8f165f67051a3d533577270ae08aada0e2b04a118a1777d645f",
+      "source_preview_url": "https://images-platform.99static.com/s1rvTbF7hgWhe-qNd5P7wv02oy0=/0x0:980x980/500x500/top/smart/99designs-contests-attachments/105/105009/attachment_105009024"
+    },
+    {
+      "entry_id": "attachment_105067973",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Evocative ✘",
+      "alt": "Other book or magazine contest entry by Evocative ✘",
+      "local_file": "attachment_105067973.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 73306,
+      "sha256": "d79f2f786d597bc21064028cf4afef55faf210d1f0b226b6ce325939c4326cc6",
+      "source_preview_url": "https://images-platform.99static.com/pVlXnJ7SWNHcbUgZbgi66bY27Oc=/345x19:1686x1360/500x500/top/smart/99designs-contests-attachments/105/105067/attachment_105067973"
+    },
+    {
+      "entry_id": "attachment_105079255",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "topsy-turvy ideas",
+      "alt": "Other book or magazine contest entry by topsy-turvy ideas",
+      "local_file": "attachment_105079255.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 80770,
+      "sha256": "c22be84e35416603d5d115d74dcd97cc59cb958d5e968614b732afe88c75ab57",
+      "source_preview_url": "https://images-platform.99static.com/HL0O9K4ypafhJcrO-rlsEl3z8Uw=/240x190:1760x1710/500x500/top/smart/99designs-contests-attachments/105/105079/attachment_105079255"
+    },
+    {
+      "entry_id": "attachment_105014945",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "PRESS ON UNLTD.",
+      "alt": "Other book or magazine contest entry by PRESS ON UNLTD.",
+      "local_file": "attachment_105014945.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 128179,
+      "sha256": "414cc87ec138b7da3ee4b8f3d0a1938081e2d53cf618bbe2a47691b353bf27f6",
+      "source_preview_url": "https://images-platform.99static.com/7SBclc5sgyyIR3B0Nef6FkRJLj4=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/105/105014/attachment_105014945"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Book & Magazine",
+    "subcategory": "Other Book or Magazine"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Print & Editorial Design",
+    "subtype": "Other Book or Magazine",
+    "original_category": "other_book_or_magazine",
+    "source_record": "book/Other Book or Magazine/Design a national cover for new Business Book on Fortune 100 Hospitality Brands/contest-896999.json",
+    "source_record_sha256": "fba65e68d68bdca241272cbd3ac474284dee6a63e406cbe0494670a3f93e4ac9"
+  }
+}

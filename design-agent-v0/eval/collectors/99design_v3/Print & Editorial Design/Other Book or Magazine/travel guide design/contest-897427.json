@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-897427",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "897427",
+    "url": "https://99designs.com/other-book-magazine-design/contests/travel-guide-design-897427",
+    "page_title": "Travel guide design | Other book or magazine contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "other_book_or_magazine",
+    "category_label": "other book or magazine",
+    "client_display_name": "memealkandari",
+    "designer_count": 6,
+    "entry_count": 14,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "travel guide design",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us We are mobile app company that provide users with detailed travel guides for different cities, we want to print our guide for \"London\" to distribute it to people… What's your vision? We want to design a travel guide for London, the guide size should be similar to passport size and it will have around... ... there will be ... page \"with a photo… Other notes We want the design to be simple, modern and use the colors in our logo and ... Also we prefer white or light color background for the pages",
+    "vision_public_excerpt": "We want to design a travel guide for London, the guide size should be similar to passport size and it will have around... ... there will be ... page \"with a photo…",
+    "other_notes": "We want the design to be simple, modern and use the colors in our logo and ... Also we prefer white or light color background for the pages",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_105514893",
+    "winner_designer": "Maria Sideris",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent experience"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_105514893",
+      "role": "winner",
+      "selected": true,
+      "designer": "Maria Sideris",
+      "alt": "\"travel guide design\" winning Other book or magazine by Maria Sideris",
+      "local_file": "attachment_105514893.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45378,
+      "sha256": "daeb0b95504616ff19f96859aa024956f3a41afe43e0a583524dc0c15af78afb",
+      "source_preview_url": "https://images-platform.99static.com/IA_YfdFiWN4MuaoWDaHIZhdLR00=/0x1319:1800x3119/500x500/top/smart/99designs-contests-attachments/105/105514/attachment_105514893"
+    },
+    {
+      "entry_id": "attachment_105309515",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Maria Sideris",
+      "alt": "Other book or magazine contest entry by Maria Sideris",
+      "local_file": "attachment_105309515.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 44091,
+      "sha256": "ea3f887127a069531e783942a0f7cabe11e64035bfcfa3ca5115843b4af1e796",
+      "source_preview_url": "https://images-platform.99static.com/AaY039Z4RgWw9ICYk2N-Mf3PsH4=/0x1460:2040x3500/500x500/top/smart/99designs-contests-attachments/105/105309/attachment_105309515"
+    },
+    {
+      "entry_id": "attachment_105460707",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Maria Sideris",
+      "alt": "Other book or magazine contest entry by Maria Sideris",
+      "local_file": "attachment_105460707.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 58409,
+      "sha256": "61db6917c5ae7527589ad920d108bc31eb87cd2e21a74ea71e745978eb17c521",
+      "source_preview_url": "https://images-platform.99static.com/mRtGVzTmyIZL4PLKxUd0b8yBcXI=/0x5527:1800x7327/500x500/top/smart/99designs-contests-attachments/105/105460/attachment_105460707"
+    },
+    {
+      "entry_id": "attachment_105500700",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Maria Sideris",
+      "alt": "Other book or magazine contest entry by Maria Sideris",
+      "local_file": "attachment_105500700.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 53969,
+      "sha256": "9857cffc9d017bdb0a05f887d9686fdcd2f0dd1c055e6795410bfcdf1de5ba2e",
+      "source_preview_url": "https://images-platform.99static.com/UKBcNI-9bIT3GL-It2J3jHGEpEY=/42x3839:1800x5597/500x500/top/smart/99designs-contests-attachments/105/105500/attachment_105500700"
+    },
+    {
+      "entry_id": "attachment_105120694",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "mary.siu",
+      "alt": "Other book or magazine contest entry by mary.siu",
+      "local_file": "attachment_105120694.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 73011,
+      "sha256": "4c079721d12ad93e67f353c5fdea43cc02f72c41c4fd28111ce542df1275b228",
+      "source_preview_url": "https://images-platform.99static.com/Qb_h7x0Dhl5ZkbDR1dh-pIIQwFA=/0x0:1654x1654/500x500/top/smart/99designs-contests-attachments/105/105120/attachment_105120694"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Book & Magazine",
+    "subcategory": "Other Book or Magazine"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Print & Editorial Design",
+    "subtype": "Other Book or Magazine",
+    "original_category": "other_book_or_magazine",
+    "source_record": "book/Other Book or Magazine/travel guide design/contest-897427.json",
+    "source_record_sha256": "bc8c04bfa7b5d42e9decad57c2de4fe0ee20ed8f56ca6fc5570fa93ed2d610e5"
+  }
+}

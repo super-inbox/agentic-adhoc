@@ -1,0 +1,168 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1358340",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1358340",
+    "url": "https://99designs.com/logo-design/contests/anniversary-logo-prestigious-private-golf-club-1358340",
+    "page_title": "25th anniversary logo for a prestigious private golf club | Logo design contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "25th Anniversary Logo for a Prestigious Private Golf Club",
+    "status": "finished",
+    "category_label": "logo design",
+    "category": "logo_design",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "ShadyCanyon",
+    "entry_count": 262,
+    "designer_count": 37,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "Celebrating... Years or...th Anniversary",
+    "about_us": "Shady Canyon Golf Club is an award-winning private golf club celebrating its...th ... The commemorative logo should honor the Club's legacy while reflecting…",
+    "vision_public_excerpt": null,
+    "other_notes": "Our approved brand fonts are Garamond, Helvetica, Trajan Pro and Bickham Script ... Incorporate the SC logo - possibly have... behind the SC - We are…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164791459",
+    "winner_designer": "menangan",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Menangan is the best - this is the second project that I have returned for help - this time for business cards. Responsive, technically detailed, and just all around awesome."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164791459",
+      "role": "winner",
+      "selected": true,
+      "designer": "menangan",
+      "alt": "\"25th Anniversary Logo for a Prestigious Private Golf Club\" winning Logo design by menangan",
+      "local_file": "attachment_164791459.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 18865,
+      "sha256": "7ac1af2174db8a4aa4f3a8785d5ec6990debe4def0f1b75ddef4c3e3bcf0da55",
+      "source_preview_url": "https://images-platform.99static.com/QSWSgzibmebiHmTeVCAev7AFvBY=/99x99:899x899/500x500/top/smart/99designs-contests-attachments/164/164791/attachment_164791459"
+    },
+    {
+      "entry_id": "attachment_164715179",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "naya89",
+      "alt": "Logo design contest entry by naya89",
+      "local_file": "attachment_164715179.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 23284,
+      "sha256": "3130e73b6895b7b9b3aca5445d8b51bd449e23386b1a15066632548284db66fb",
+      "source_preview_url": "https://images-platform.99static.com/eWhAw6h1Zq7yn3ZWBO2YELEO-1c=/0x0:2024x2024/500x500/top/smart/99designs-contests-attachments/164/164715/attachment_164715179"
+    },
+    {
+      "entry_id": "attachment_164717224",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "menangan",
+      "alt": "Logo design contest entry by menangan",
+      "local_file": "attachment_164717224.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 19913,
+      "sha256": "2aacd1eeb7402c1e71c73d06ee046f81683e8a120957ff88319e0ef2a84edd1b",
+      "source_preview_url": "https://images-platform.99static.com/puqjuvyYtKLUpljH4_MlupfMD9I=/99x99:899x899/500x500/top/smart/99designs-contests-attachments/164/164717/attachment_164717224"
+    },
+    {
+      "entry_id": "attachment_164744330",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "naya89",
+      "alt": "Logo design contest entry by naya89",
+      "local_file": "attachment_164744330.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 22071,
+      "sha256": "4cdfcbf308e4acd7c124d286a0c96100eec768c05b5a81e5813571a24e31084d",
+      "source_preview_url": "https://images-platform.99static.com/_nWYShCFlwOAoLSdbP7-08nDE9E=/0x0:2024x2024/500x500/top/smart/99designs-contests-attachments/164/164744/attachment_164744330"
+    },
+    {
+      "entry_id": "attachment_164762197",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "naya89",
+      "alt": "Logo design contest entry by naya89",
+      "local_file": "attachment_164762197.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 21682,
+      "sha256": "2a4e2b7f454a1c1eb87939f32d7ac0974496208d8a4a4af8928b749e4d39a833",
+      "source_preview_url": "https://images-platform.99static.com/DEhZPO2dBV1R-RJflhGRI_zAMp4=/0x0:2024x2024/500x500/top/smart/99designs-contests-attachments/164/164762/attachment_164762197"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Logo & Identity",
+    "subcategory": "Logo Design"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Brand Design",
+    "subtype": "Logo Design",
+    "original_category": "logo_design",
+    "source_record": "Logo_identity/Logo Design/25th Anniversary Logo for a Prestigious Private Golf Club/contest-1358340.json",
+    "source_record_sha256": "70b9808d5420e1e05fa57a5464fd78f89756cdc5fa2d5c1e5e8c7830f6e89040"
+  }
+}

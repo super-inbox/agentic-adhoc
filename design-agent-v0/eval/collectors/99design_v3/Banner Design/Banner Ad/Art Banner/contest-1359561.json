@@ -1,0 +1,163 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359561",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359561",
+    "url": "https://99designs.com/banner-ad-design/contests/art-banner-1359561",
+    "page_title": "Art banner | Banner ad contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Art Banner",
+    "status": "finished",
+    "category": "banner_ad",
+    "industry": "Art & Design",
+    "package": "Bronze",
+    "client_display_name": "simbans",
+    "entry_count": 117,
+    "designer_count": 33,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "about_us": "Standalone Drawing Tablets",
+    "vision_public_excerpt": "Using the mockup attached, please design a ... (keep the same 3 art pictures as in the mockup) the final image should be...px x...px min",
+    "other_notes": "no",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete vision text where the public excerpt contains ellipses",
+      "exact dimensions where omitted",
+      "referenced input attachments"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF",
+      "XD"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_designer": "Siddharth Kamble108",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Great designer - took my concept and made it into reality where AI continued to fail. Highly recommend.",
+    "winner_entry_id": "attachment_165042029"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_165042029",
+      "role": "winner",
+      "selected": true,
+      "designer": "Siddharth Kamble108",
+      "alt": "\"Art Banner\" winning Banner ad by Siddharth Kamble108",
+      "local_file": "attachment_165042029.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 199369,
+      "sha256": "032dfdc2caca1c9216afe1c5377b02e589eccafd76f9713d053a054ef2598dc4",
+      "source_preview_url": "https://images-platform.99static.com/-xHL1I1EF06mo5seLthWKtQTvzQ=/254x0:1214x960/500x500/top/smart/99designs-contests-attachments/165/165042/attachment_165042029"
+    },
+    {
+      "entry_id": "attachment_165021874",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "JEDOTZ_STD",
+      "alt": null,
+      "local_file": "attachment_165021874.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 58118,
+      "sha256": "a727b9f3c90e25ee5ba4c75db1afb8599e55069da0a8e33f0089e06864d5d517",
+      "source_preview_url": "https://images-platform.99static.com/egG5Q_eJ0TfgSlvRPyQNu-e-GIU=/436x0:1604x1168/500x500/top/smart/99designs-contests-attachments/165/165021/attachment_165021874"
+    },
+    {
+      "entry_id": "attachment_165027640",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Kreative-Sakshi",
+      "alt": null,
+      "local_file": "attachment_165027640.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 34739,
+      "sha256": "27ea0b6ce0c23ef40c8f9b27509f67f0fc960a2fa7443b31691dcdb66c6964fa",
+      "source_preview_url": "https://images-platform.99static.com/ihn9frQpm5Z3aSs1oZbubyeQgbI=/200x200:1800x1800/500x500/top/smart/99designs-contests-attachments/165/165027/attachment_165027640"
+    },
+    {
+      "entry_id": "attachment_165034799",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Web Helper",
+      "alt": null,
+      "local_file": "attachment_165034799.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 31226,
+      "sha256": "5b35d1e90a49202c67faa0a81c3b2fe280c07a8f3494592af63f0b489f8fee1e",
+      "source_preview_url": "https://images-platform.99static.com/5ub9xUb6a65vZDugMpmSBCd7g0s=/0x0:1464x1464/500x500/top/smart/99designs-contests-attachments/165/165034/attachment_165034799"
+    },
+    {
+      "entry_id": "attachment_165041065",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Tushar K∎",
+      "alt": null,
+      "local_file": "attachment_165041065.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 45220,
+      "sha256": "5b20d3c5029c8aad78fa0c0c1c02c5d20501b6edc9d35d85a4110b90f6a11449",
+      "source_preview_url": "https://images-platform.99static.com/2Em7mrtV-zHSaxrYv9rAGygISxI=/258x0:1260x1002/500x500/top/smart/99designs-contests-attachments/165/165041/attachment_165041065"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "cross-contest consistency fixture for the same client and product"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Banner Design",
+    "subtype": "Banner Ad",
+    "original_category": "banner_ad",
+    "source_record": "Art Design/Art banner/contest-1359561.json",
+    "source_record_sha256": "927b873412d7768756b1e6c8291c4a2183df6de1fa57f9fea147fc7ce0ef8f3d"
+  }
+}

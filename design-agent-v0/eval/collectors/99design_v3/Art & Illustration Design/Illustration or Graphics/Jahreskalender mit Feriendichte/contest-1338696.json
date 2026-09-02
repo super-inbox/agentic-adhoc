@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1338696",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1338696",
+    "url": "https://99designs.com/illustrations/contests/jahreskalender-mit-feriendichte-1338696",
+    "page_title": "Jahreskalender mit feriendichte | Illustration or graphics contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "illustration_or_graphics",
+    "category_label": "illustration or graphics",
+    "client_display_name": "rud1i",
+    "designer_count": 5,
+    "entry_count": 27,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Jahreskalender mit Feriendichte",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us Revenue Management, eine seit Jahrzehnten im Hotelgewerbe erfolgreich angewandte Strategie, gewinnt auch in der Vermittlung von Ferienwohnung… What's your vision? Ziel Ein funktionaler Jahreskalender (DIN A4), der die Feriendichte in Deutschland klar und schnell erfassbar ... Grundlage sind tägliche Prozentwerte aus…",
+    "vision_public_excerpt": "Ziel Ein funktionaler Jahreskalender (DIN A4), der die Feriendichte in Deutschland klar und schnell erfassbar ... Grundlage sind tägliche Prozentwerte aus…",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_160408976",
+    "winner_designer": "Badrun",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Badrun is an awesome person. Easy to work with and delivers results of high standard. Will definitely do future projects with him again."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_160408976",
+      "role": "winner",
+      "selected": true,
+      "designer": "Badrun",
+      "alt": "\"Jahreskalender mit Feriendichte\" winning Illustration or graphics by Badrun",
+      "local_file": "attachment_160408976.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 159813,
+      "sha256": "92bef68c9b7ca16d2c9f55bb0c6e6cd76cbf0de4c56e78b0d5bf6e78555e3187",
+      "source_preview_url": "https://images-platform.99static.com/HBaEVsSb12hs7w3BYTy_d3AP2jk=/125x342:1125x1342/500x500/top/smart/99designs-contests-attachments/160/160408/attachment_160408976"
+    },
+    {
+      "entry_id": "attachment_160306177",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Julie ✨",
+      "alt": "Illustration or graphics contest entry by Julie ✨",
+      "local_file": "attachment_160306177.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 43996,
+      "sha256": "19df81d41b81454b727d0096f3f669737c1d3343072cc0ad19d9b6475a0286d6",
+      "source_preview_url": "https://images-platform.99static.com/1C0rkzDzAylNfZtnlrz4Mykc4ek=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/160/160306/attachment_160306177"
+    },
+    {
+      "entry_id": "attachment_160286628",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Revaldo Fadel",
+      "alt": "Illustration or graphics contest entry by Revaldo Fadel",
+      "local_file": "attachment_160286628.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 39098,
+      "sha256": "134773e038b8babb4c1d9320d5b3f0eed1698892fc1540a9f81381397b03a348",
+      "source_preview_url": "https://images-platform.99static.com/Pp2vS3wNdCfjGW8UMI9yuT-KVS0=/0x0:1581x1581/500x500/top/smart/99designs-contests-attachments/160/160286/attachment_160286628"
+    },
+    {
+      "entry_id": "attachment_160290117",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Revaldo Fadel",
+      "alt": "Illustration or graphics contest entry by Revaldo Fadel",
+      "local_file": "attachment_160290117.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 35204,
+      "sha256": "5da892c1f94bfb227397869479c93625d0e7a62595679b7e99e9aa06cc2f53ef",
+      "source_preview_url": "https://images-platform.99static.com/WCyParJasUDBmTYyByKpU45gRM0=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/160/160290/attachment_160290117"
+    },
+    {
+      "entry_id": "attachment_160303603",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "..SINA..",
+      "alt": "Illustration or graphics contest entry by ..SINA..",
+      "local_file": "attachment_160303603.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 101524,
+      "sha256": "f1aabb386e56d275de06864a7f1bfdef0d3e5105ff613d56e7543e622a5ff475",
+      "source_preview_url": "https://images-platform.99static.com/pYJNScL_NCNuELenv-NO1wvG4ks=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/160/160303/attachment_160303603"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Art & Illustration",
+    "subcategory": "Illustration or Graphics"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Art & Illustration Design",
+    "subtype": "Illustration or Graphics",
+    "original_category": "illustration_or_graphics",
+    "source_record": "Art/Illustration or Graphics/Jahreskalender mit Feriendichte/contest-1338696.json",
+    "source_record_sha256": "58f8c58eef331d36b811751725e4518270a624f0c2b1484b2e6a13ab2b7971a2"
+  }
+}

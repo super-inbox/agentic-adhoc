@@ -1,0 +1,163 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359413",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359413",
+    "url": "https://99designs.com/banner-ad-design/contests/app-uprade-banner-1359413",
+    "page_title": "App uprade banner | Banner ad contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "App uprade Banner",
+    "status": "finished",
+    "category": "banner_ad",
+    "industry": "Art & Design",
+    "package": "Bronze",
+    "client_display_name": "simbans",
+    "entry_count": 73,
+    "designer_count": 10,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "about_us": "Standalone Drawing tablets",
+    "vision_public_excerpt": "I have included a mockup of a banner I ... Please help me design ... the final picture should be... x... ... the emphasis is on making the information very clear…",
+    "other_notes": "no",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete vision text where the public excerpt contains ellipses",
+      "exact dimensions where omitted",
+      "referenced input attachments"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF",
+      "XD"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_designer": "PAPRI802030",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Excellent work, Thank you!!!",
+    "winner_entry_id": "attachment_164967380"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164967380",
+      "role": "winner",
+      "selected": true,
+      "designer": "PAPRI802030",
+      "alt": "\"App uprade Banner\" winning Banner ad by PAPRI802030",
+      "local_file": "attachment_164967380.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 64335,
+      "sha256": "3e475dfc65dea9b4207bb2e1670a1cfbabe69b1e70635e140ad6ab4e11761de6",
+      "source_preview_url": "https://images-platform.99static.com/T0bqIm4RlREpi0i4T3xLfsQ7uBg=/184x184:1664x1664/500x500/top/smart/99designs-contests-attachments/164/164967/attachment_164967380"
+    },
+    {
+      "entry_id": "attachment_164958882",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "New Look",
+      "alt": null,
+      "local_file": "attachment_164958882.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 310162,
+      "sha256": "ccafe1e8cc4e1dcde645fbfd1744dd06f64e8423e0f9cd6bea228759b1e5cd96",
+      "source_preview_url": "https://images-platform.99static.com/ISbIhIYHZSphHs3WFZAXUI7fPpQ=/125x125:1128x1128/500x500/top/smart/99designs-contests-attachments/164/164958/attachment_164958882"
+    },
+    {
+      "entry_id": "attachment_164958909",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "New Look",
+      "alt": null,
+      "local_file": "attachment_164958909.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 293085,
+      "sha256": "a5abbf7bc033987d459b0d7bed05be05a15aeca02254ee30b837ba776de85be4",
+      "source_preview_url": "https://images-platform.99static.com/WwN7SmURhkLgcT5HDp-ZdTHIJt0=/125x125:1128x1128/500x500/top/smart/99designs-contests-attachments/164/164958/attachment_164958909"
+    },
+    {
+      "entry_id": "attachment_164959837",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "lukes™",
+      "alt": null,
+      "local_file": "attachment_164959837.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 299139,
+      "sha256": "c5937d3021ba702f0536893d535a24e99c1869c3ac39654ca8bbee3e5ef68b5e",
+      "source_preview_url": "https://images-platform.99static.com/d1aJEeiieynM3oeTNOjEu0s1tBs=/0x0:1122x1122/500x500/top/smart/99designs-contests-attachments/164/164959/attachment_164959837"
+    },
+    {
+      "entry_id": "attachment_164959938",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "iT's Designs",
+      "alt": null,
+      "local_file": "attachment_164959938.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 77099,
+      "sha256": "f119857edce91a81ea2aa17295c26e98224d77b2cf827ab4666ebc4ba236bcea",
+      "source_preview_url": "https://images-platform.99static.com/uAggl1qlNILMrAXCYCYVp82aMCs=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/164/164959/attachment_164959938"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "cross-contest consistency fixture for the same client and product"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Banner Design",
+    "subtype": "Banner Ad",
+    "original_category": "banner_ad",
+    "source_record": "Art Design/App uprade Banner/contest-1359413.json",
+    "source_record_sha256": "35e8247dec823611b9cee5a943e243e6a8a110385c3b7c0faa2ffb0f403a4ef8"
+  }
+}

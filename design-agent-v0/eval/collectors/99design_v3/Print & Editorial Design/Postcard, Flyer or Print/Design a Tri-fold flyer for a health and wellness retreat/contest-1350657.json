@@ -1,0 +1,169 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1350657",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1350657",
+    "url": "https://99designs.com/postcard-flyer-design/contests/design-tri-fold-flyer-health-wellness-retreat-1350657",
+    "page_title": "Design a tri-fold flyer for a health and wellness retreat | Postcard, flyer or print contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "postcard_flyer_or_print",
+    "category_label": "postcard, flyer or print",
+    "client_display_name": "Lyndylou",
+    "designer_count": 9,
+    "entry_count": 46,
+    "industry": "Travel & Hotel",
+    "package": "Custom",
+    "status": "finished",
+    "title": "Design a Tri-fold flyer for a health and wellness retreat",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel About us I would like a Tri-fold flyer is for a my Air ... I want to promote a health and wellness ... It will include; A hamper of healthy high protein clean treats on… What's your vision? I want a tri-fold flyer designed to attract fit people who want to get away but be able to stay fit, and nourish their body while they have a weekend getaway",
+    "vision_public_excerpt": "I want a tri-fold flyer designed to attract fit people who want to get away but be able to stay fit, and nourish their body while they have a weekend getaway",
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_162943084",
+    "winner_designer": "DesignsTRIBE",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Working with DesignsTRIBE was a fantastic experience. They were incredibly responsive to my vision from start to finish. I really appreciated how they…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_162943084",
+      "role": "winner",
+      "selected": true,
+      "designer": "DesignsTRIBE",
+      "alt": "\"Design a Tri-fold flyer for a health and wellness retreat\" winning Postcard, flyer or print by DesignsTRIBE",
+      "local_file": "attachment_162943084.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 64619,
+      "sha256": "9912fa04f96a825ff211ec0504dd4743567e06d77e62508576a9284155685074",
+      "source_preview_url": "https://images-platform.99static.com/KKgvdeG-20P8_Ph0YLwjBjTBBIU=/0x715:1999x2714/500x500/top/smart/99designs-contests-attachments/162/162943/attachment_162943084"
+    },
+    {
+      "entry_id": "attachment_162731831",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "chandrayaan.creative",
+      "alt": "Postcard, flyer or print contest entry by chandrayaan.creative",
+      "local_file": "attachment_162731831.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 54664,
+      "sha256": "e62a9596dee1a6903741b970a83c08073470d92d9374132b8d64b959ddfe5ac3",
+      "source_preview_url": "https://images-platform.99static.com/V9ibcJp6K-Vc8UZqYhZpCzfQAsI=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/162/162731/attachment_162731831"
+    },
+    {
+      "entry_id": "attachment_162745515",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Monki D Loy",
+      "alt": "Postcard, flyer or print contest entry by Monki D Loy",
+      "local_file": "attachment_162745515.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 50839,
+      "sha256": "7387112c2abb70a695034c3baa13bea2b643523c90924ed536eb46f08641a1ec",
+      "source_preview_url": "https://images-platform.99static.com/J7EBSRZg4Hi6krK3KDbLb-2ie80=/158x140:1921x1903/500x500/top/smart/99designs-contests-attachments/162/162745/attachment_162745515"
+    },
+    {
+      "entry_id": "attachment_162749645",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Raihan Kibria",
+      "alt": "Postcard, flyer or print contest entry by Raihan Kibria",
+      "local_file": "attachment_162749645.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 47435,
+      "sha256": "38c60a7299d4ab396f0028c77f6a648e47a80c1dd2176c57b49b046925bf546a",
+      "source_preview_url": "https://images-platform.99static.com/ytElXJrTfBS6g3xQeHfxScHinuo=/141x5694:1141x6694/500x500/top/smart/99designs-contests-attachments/162/162749/attachment_162749645"
+    },
+    {
+      "entry_id": "attachment_162768910",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "bpgraphiczone",
+      "alt": "Postcard, flyer or print contest entry by bpgraphiczone",
+      "local_file": "attachment_162768910.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 63109,
+      "sha256": "b37a4aa3b3e5d208848c1ba5f327fcebe9ffa4b0ef5cbb031e3b1a5de0a323b0",
+      "source_preview_url": "https://images-platform.99static.com/0QKvV7A50jap4AX7cQjXNmpI2Y0=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/162/162768/attachment_162768910"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Business & Advertising",
+    "subcategory": "Postcard, Flyer or Print"
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Print & Editorial Design",
+    "subtype": "Postcard, Flyer or Print",
+    "original_category": "postcard_flyer_or_print",
+    "source_record": "Business/Postcard, Flyer or Print/Design a Tri-fold flyer for a health and wellness retreat/contest-1350657.json",
+    "source_record_sha256": "d4ba58e56fa10bd30a615bb626860354b7f259abcd01ac3a81341bc3a118b7d1"
+  }
+}

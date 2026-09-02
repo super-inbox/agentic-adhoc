@@ -1,0 +1,164 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359316",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359316",
+    "url": "https://99designs.com/logo-brand-guide/contests/design-warm-sophisticated-hospitality-brand-build-around-experiences-1359316",
+    "page_title": "Design a warm, sophisticated hospitality brand build around experiences & memories | Logo & brand guide contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Design a Warm, Sophisticated Hospitality Brand Build Around Experiences & Memories",
+    "status": "finished",
+    "category_label": "logo & brand guide",
+    "category": "logo_brand_guide",
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "client_display_name": "harrisnikki09k",
+    "entry_count": 292,
+    "designer_count": 73,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": "Elevated ... Lasting ...",
+    "about_us": "Golden Horizon Hospitality is a growing collection of distinctive vacation rental properties in destination markets across the ... Our goal is to create much…",
+    "vision_public_excerpt": null,
+    "other_notes": "For the logo, we are open to creative integrations of the GHH ... Subtle references to sunrise, landscape, light, or a sense of destination could work but don't…",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_165017041",
+    "winner_designer": "Si_Lo",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Si_Lo created a new logo for our office. It captured a hint of our old one, yet it was the fresh and elegant look we were looking for. We are extremely pleased with the design."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_165017041",
+      "role": "winner",
+      "selected": true,
+      "designer": "Si_Lo",
+      "alt": "\"Design a Warm, Sophisticated Hospitality Brand Build Around Experiences & Memories\" winning Logo & brand guide by Si_Lo",
+      "local_file": "attachment_165017041.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 17218,
+      "sha256": "88e2ef80f848293dd2f14019bbefdea529e214188d7c7a956321e9ddb4c29c26",
+      "source_preview_url": "https://images-platform.99static.com/KTEAxptI8gnlpL_LfuJc3VdeqLM=/0x0:2040x2040/500x500/top/smart/99designs-contests-attachments/165/165017/attachment_165017041"
+    },
+    {
+      "entry_id": "attachment_164968087",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Astart",
+      "alt": "Logo & brand guide contest entry by Astart",
+      "local_file": "attachment_164968087.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 33712,
+      "sha256": "d6a62a551e2dbeea5a19134dea65ded6b32562084f87d648eb281c13851fd5b3",
+      "source_preview_url": "https://images-platform.99static.com/7o8HL13lBMYbkMm9VFH0dxBqO6Q=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/164/164968/attachment_164968087"
+    },
+    {
+      "entry_id": "attachment_165004190",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Si_Lo",
+      "alt": "Logo & brand guide contest entry by Si_Lo",
+      "local_file": "attachment_165004190.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 38588,
+      "sha256": "4fce9292d029b47403584e915f9ca2980d4891a5d06856241b31653a6d0c5075",
+      "source_preview_url": "https://images-platform.99static.com/SW7FgOkewd4gjsml-Jq5MN31k5E=/0x0:1359x1359/500x500/top/smart/99designs-contests-attachments/165/165004/attachment_165004190"
+    },
+    {
+      "entry_id": "attachment_164928455",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Monika_B",
+      "alt": "Logo & brand guide contest entry by Monika_B",
+      "local_file": "attachment_164928455.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 12423,
+      "sha256": "c4d4eba271020af4894d6d885562498a06c386bf33e5dd683540727650e396cf",
+      "source_preview_url": "https://images-platform.99static.com/QuY7jenX0lpGK4f8Cg1DlaH_0wg=/217x156:1817x1756/500x500/top/smart/99designs-contests-attachments/164/164928/attachment_164928455"
+    },
+    {
+      "entry_id": "attachment_164963803",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "X-DNA",
+      "alt": "Logo & brand guide contest entry by X-DNA",
+      "local_file": "attachment_164963803.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 39315,
+      "sha256": "deb0737d11b833a27b7a6d7450dfdd3d1cc5d836045214767f190df48c00cf98",
+      "source_preview_url": "https://images-platform.99static.com/O9mtF6xrznQqyFPsmyI65XWAljI=/0x0:1819x1819/500x500/top/smart/99designs-contests-attachments/164/164963/attachment_164963803"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Brand Design",
+    "subtype": "Logo & Brand Guide",
+    "original_category": "logo_brand_guide",
+    "source_record": "Travel Hotel/Design a Warm, Sophisticated Hospitality Brand Build Around Experiences & Memories/contest-1359316.json",
+    "source_record_sha256": "b6097ee0b79385c1cd94109d9884d7c63433585abf1d3398a9a015fbad4afac6"
+  }
+}

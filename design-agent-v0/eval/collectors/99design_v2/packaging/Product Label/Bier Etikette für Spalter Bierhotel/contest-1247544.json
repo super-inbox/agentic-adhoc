@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1247544",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1247544",
+    "url": "https://99designs.com/product-label-design/contests/bier-etikette-f%C3%BCr-spalter-bierhotel-1247544",
+    "page_title": "Bier etikette für spalter bierhotel | Product label contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "product_label",
+    "category_label": "product label",
+    "client_display_name": "marco.nuermingen",
+    "designer_count": 10,
+    "entry_count": 45,
+    "industry": "Travel & Hotel",
+    "package": "Bronze",
+    "status": "finished",
+    "title": "Bier Etikette für Spalter Bierhotel",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel Color inspiration Company name Spalter Bierhotel Existing website ... Product name Kellerbier Description of the product Brauchen ein neues Design für unsere ... Das Bierhotel wird derzeit geplant und... ... Für die Vermarktung und Werbung benötigen wir das ... Design eines ... Das… Description of the product target audience Der wo gerne Bier ... Das naturtrübe Kellerbier ist angenehm mild, bernsteinfarbig, naturtrüb und hat einen feinporigen ... Style attributes Minimalistic Detailed Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Luxury Casual Package dimensions Standard Bierflasche EURO 0,5 Liter Standard Bierflasche EURO 0,5 Liter Attachments",
+    "vision_public_excerpt": null,
+    "other_notes": null,
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_146356180",
+    "winner_designer": "VALTO Design",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "VALTO Design provide us with a very professionnal work, was reactive and attentive to the details. He always took the necessary time and the designs he submitted us…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_146356180",
+      "role": "winner",
+      "selected": true,
+      "designer": "VALTO Design",
+      "alt": "\"Bier Etikette für Spalter Bierhotel\" winning Product label by VALTO Design",
+      "local_file": "attachment_146356180.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 50544,
+      "sha256": "722b99b1945be50b7f94d87a3befcb2e23e2a932e474583d4a501a9dba667dc7",
+      "source_preview_url": "https://images-platform.99static.com/BNocNfhGPkfqU_Lm6yuk3hVJobo=/0x241:1996x2237/500x500/top/smart/99designs-contests-attachments/146/146356/attachment_146356180"
+    },
+    {
+      "entry_id": "attachment_146341566",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Aqualeafitsolpl",
+      "alt": "Product label contest entry by Aqualeafitsolpl",
+      "local_file": "attachment_146341566.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 52925,
+      "sha256": "82bb4752fcac3746383644bf6d484083005c70444ae5ea59c2e4639b0fb038c3",
+      "source_preview_url": "https://images-platform.99static.com/Bx9Tcx8Up-6HWXWpTkq6WvwJolc=/0x0:960x960/500x500/top/smart/99designs-contests-attachments/146/146341/attachment_146341566"
+    },
+    {
+      "entry_id": "attachment_146356172",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "VALTO Design",
+      "alt": "Product label contest entry by VALTO Design",
+      "local_file": "attachment_146356172.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 27952,
+      "sha256": "9cc77eb3038d2d92a2acbbb45af4f7de8494847fdcf5c8bd6c9dfd466949ac19",
+      "source_preview_url": "https://images-platform.99static.com/x8r5tFZ_Hx84bK24Vu2S-pepwhg=/0x180:1997x2177/500x500/top/smart/99designs-contests-attachments/146/146356/attachment_146356172"
+    },
+    {
+      "entry_id": "attachment_146412096",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "VALTO Design",
+      "alt": "Product label contest entry by VALTO Design",
+      "local_file": "attachment_146412096.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 29168,
+      "sha256": "c675b6486025160ad0f77d20c3fda9891b327dce0be9cbf1bfe77f176ac5c373",
+      "source_preview_url": "https://images-platform.99static.com/QaZ0qb-1OTU5zquGrG2wabfju_M=/0x172:1997x2169/500x500/top/smart/99designs-contests-attachments/146/146412/attachment_146412096"
+    },
+    {
+      "entry_id": "attachment_146412099",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "VALTO Design",
+      "alt": "Product label contest entry by VALTO Design",
+      "local_file": "attachment_146412099.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 52150,
+      "sha256": "6f03faaa3b3b5943e3ed2dc894babe2f87d83bc19652f5479c004198c292135c",
+      "source_preview_url": "https://images-platform.99static.com/QnZyxo9bZgxEGgiTdfVx2y2He_E=/0x337:1999x2336/500x500/top/smart/99designs-contests-attachments/146/146412/attachment_146412099"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Packaging & Label",
+    "subcategory": "Product Label"
+  }
+}

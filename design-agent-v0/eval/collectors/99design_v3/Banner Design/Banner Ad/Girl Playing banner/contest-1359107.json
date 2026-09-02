@@ -1,0 +1,163 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1359107",
+  "captured_at": "2026-08-31",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1359107",
+    "url": "https://99designs.com/banner-ad-design/contests/girl-playing-banner-1359107",
+    "page_title": "Girl playing banner | Banner ad contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Girl Playing banner",
+    "status": "finished",
+    "category": "banner_ad",
+    "industry": "Art & Design",
+    "package": "Bronze",
+    "client_display_name": "simbans",
+    "entry_count": 51,
+    "designer_count": 15,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "about_us": "standalone drawing tablets",
+    "vision_public_excerpt": "Similar to the sample images of boy, girl and dog, I want to create a drawing of a girl playing with balls (sample attached) with logo printed on ...",
+    "other_notes": "no",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete vision text where the public excerpt contains ellipses",
+      "exact dimensions where omitted",
+      "referenced input attachments"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF",
+      "XD"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_designer": "Sabidesk",
+    "winner_designer_level": "Top Level",
+    "public_selection_rationale_available": false,
+    "client_review": "excellent work, Thank you!",
+    "winner_entry_id": "attachment_164861638"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164861638",
+      "role": "winner",
+      "selected": true,
+      "designer": "Sabidesk",
+      "alt": "\"Girl Playing banner\" winning Banner ad by Sabidesk",
+      "local_file": "attachment_164861638.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 473836,
+      "sha256": "647ffffe426df8ea444119b38ce4a5c40f6e6fd2cd41005ceea344aa56a86ccd",
+      "source_preview_url": "https://images-platform.99static.com/pB0jLsUkZNYdkiLoH3XnU1_7RTI=/213x0:1237x1024/500x500/top/smart/99designs-contests-attachments/164/164861/attachment_164861638"
+    },
+    {
+      "entry_id": "attachment_164861756",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Neef",
+      "alt": null,
+      "local_file": "attachment_164861756.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 329359,
+      "sha256": "7be70d32972bc4a453ea9ff64669ece5fcf93ebbd1d26f5beb48a3fea5c691d3",
+      "source_preview_url": "https://images-platform.99static.com/-yuHz5n-EIuLhuXW_2aw-KLTCf4=/54x30:923x899/500x500/top/smart/99designs-contests-attachments/164/164861/attachment_164861756"
+    },
+    {
+      "entry_id": "attachment_164861840",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Neef",
+      "alt": null,
+      "local_file": "attachment_164861840.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 301238,
+      "sha256": "b4ac22e5208e004e3939104d6a89e9193bc5625badb3b154d809f67fb7d31e89",
+      "source_preview_url": "https://images-platform.99static.com/sks_IvjmcBh4nVEo-C2KTYEYMxA=/46x38:925x917/500x500/top/smart/99designs-contests-attachments/164/164861/attachment_164861840"
+    },
+    {
+      "entry_id": "attachment_164861848",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Neef",
+      "alt": null,
+      "local_file": "attachment_164861848.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 304313,
+      "sha256": "836cef13ffd45497ff01ff714a188f3b59ba1bcc553a80b97162acd8526faf5a",
+      "source_preview_url": "https://images-platform.99static.com/QA3gnZrImlDsUTI5bIRV50kJAoo=/29x2:929x902/500x500/top/smart/99designs-contests-attachments/164/164861/attachment_164861848"
+    },
+    {
+      "entry_id": "attachment_164862280",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Canvas UI",
+      "alt": null,
+      "local_file": "attachment_164862280.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 246015,
+      "sha256": "503928b723e114ab46eff72bf9d4fb0d8afca8fd8d11a9d3fe3d3af9fa118f34",
+      "source_preview_url": "https://images-platform.99static.com/asPrvmKQlibOkeXHscgvcj49gkg=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/164/164862/attachment_164862280"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "cross-contest consistency fixture for the same client and product"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "classification_v3": {
+    "schema_version": "design-type-taxonomy-v0.1",
+    "design_type": "Banner Design",
+    "subtype": "Banner Ad",
+    "original_category": "banner_ad",
+    "source_record": "Art Design/Girl Playing banner/contest-1359107.json",
+    "source_record_sha256": "d78315da7fd9743169534f9122aa20ab54d0cd06746351627362cb70c5c45eff"
+  }
+}

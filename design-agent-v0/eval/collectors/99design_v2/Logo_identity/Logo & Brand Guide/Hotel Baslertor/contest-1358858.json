@@ -1,0 +1,161 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1358858",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1358858",
+    "url": "https://99designs.com/logo-brand-guide/contests/hotel-baslertor-1358858",
+    "page_title": "Hotel baslertor | Logo & brand guide contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "title": "Hotel Baslertor",
+    "status": "finished",
+    "category_label": "logo & brand guide",
+    "category": "logo_brand_guide",
+    "industry": "Travel & Hotel",
+    "package": "Gold",
+    "client_display_name": "MI-42",
+    "entry_count": 365,
+    "designer_count": 85,
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Hotel Baslertor is a city hotel in lucerne, switzerland for leisure and business ... Our guests are couples, individual travelers and business visitors looking for…",
+    "vision_public_excerpt": null,
+    "other_notes": "See the attached PDF for reference images and other ...",
+    "referenced_input_assets": {
+      "mentioned_in_brief": true,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [
+      "PNG",
+      "JPG",
+      "AI",
+      "PSD",
+      "EPS",
+      "PDF"
+    ],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_164915108",
+    "winner_designer": "gudkraf",
+    "winner_designer_level": "Mid Level",
+    "public_selection_rationale_available": false,
+    "client_review": "We couldn’t be happier with the experience we had working with Gudkraf. From start to finish, they truly understood our vision and helped bring it to life exactly…"
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_164915108",
+      "role": "winner",
+      "selected": true,
+      "designer": "gudkraf",
+      "alt": "\"Hotel Baslertor\" winning Logo & brand guide by gudkraf",
+      "local_file": "attachment_164915108.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 26335,
+      "sha256": "d1693efe641e1c0de77f0189fb70f7cb62c12d631ab9fa746e198ba54ff8994e",
+      "source_preview_url": "https://images-platform.99static.com/OaMhDxIqbQO3DYbMI7E1oNYaOzg=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/164/164915/attachment_164915108"
+    },
+    {
+      "entry_id": "attachment_164918968",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Kamran.Ali",
+      "alt": "Logo & brand guide contest entry by Kamran.Ali",
+      "local_file": "attachment_164918968.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 214179,
+      "sha256": "945ff38cac002f8021fd665fa902360cec491c06144d1fbaa0e7302171d0f457",
+      "source_preview_url": "https://images-platform.99static.com/PY3Fn749q_srfwOYqw6ba-tPSCE=/7x466:999x1458/500x500/top/smart/99designs-contests-attachments/164/164918/attachment_164918968"
+    },
+    {
+      "entry_id": "attachment_164915981",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Songv™",
+      "alt": "Logo & brand guide contest entry by Songv™",
+      "local_file": "attachment_164915981.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 19714,
+      "sha256": "3e576f6f20b2d9a16a841a1fb4149596c0dd4b9fa6349fdfe1cceb2040ed2d87",
+      "source_preview_url": "https://images-platform.99static.com/cY9fi4L3wsybKwUu0q1syCAGuS4=/105x103:1838x1836/500x500/top/smart/99designs-contests-attachments/164/164915/attachment_164915981"
+    },
+    {
+      "entry_id": "attachment_164915105",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "gudkraf",
+      "alt": "Logo & brand guide contest entry by gudkraf",
+      "local_file": "attachment_164915105.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 26900,
+      "sha256": "c69482b6897946a8fd4a674707ac4b20613d2247c3f3dccb800a8d6a57efd3aa",
+      "source_preview_url": "https://images-platform.99static.com/Juus7yBYtvd5MTW5bZR8mxpV1vU=/0x0:1999x1999/500x500/top/smart/99designs-contests-attachments/164/164915/attachment_164915105"
+    },
+    {
+      "entry_id": "attachment_164914919",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "BAEYBAEツ",
+      "alt": "Logo & brand guide contest entry by BAEYBAEツ",
+      "local_file": "attachment_164914919.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 98699,
+      "sha256": "d0b37e4245b2e93c1b3875aeed33a0f00d769efc18689b3187deb2a90f9b8cf9",
+      "source_preview_url": "https://images-platform.99static.com/KS3rHRMJu01mm5SjPKYyuVUCBNU=/0x0:2015x2015/500x500/top/smart/99designs-contests-attachments/164/164914/attachment_164914919"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Logo & Identity",
+    "subcategory": "Logo & Brand Guide"
+  }
+}

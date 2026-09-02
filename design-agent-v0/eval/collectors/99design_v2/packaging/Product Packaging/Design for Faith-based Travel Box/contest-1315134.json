@@ -1,0 +1,154 @@
+{
+  "schema_version": "99designs-public-contest-sample-v0.2",
+  "sample_id": "99designs-contest-1315134",
+  "captured_at": "2026-09-01",
+  "capture_method": "manual_public_page_inspection",
+  "source": {
+    "platform": "99designs",
+    "contest_id": "1315134",
+    "url": "https://99designs.com/product-packaging-design/contests/design-faith-based-travel-box-1315134",
+    "page_title": "Design for faith-based travel box | Product packaging contest | 99designs",
+    "language": "en",
+    "public_page_accessible_without_login": true
+  },
+  "contest": {
+    "category": "product_packaging",
+    "category_label": "product packaging",
+    "client_display_name": "Salt&LightTrvCo.",
+    "designer_count": 10,
+    "entry_count": 22,
+    "industry": "Travel & Hotel",
+    "package": "Custom",
+    "status": "finished",
+    "title": "Design for Faith-based Travel Box",
+    "winner_count": 1,
+    "public_candidate_preview_count": 4
+  },
+  "brief": {
+    "availability": "partial_public_excerpt",
+    "slogan": null,
+    "about_us": "Industry Travel & Hotel Color inspiration Other color requirements Primary colors - #...F..., #...C, #FFFFFF Secondary Brand colors - #C3D4D3, #E9E6E4 Primary accent colors buttons and accent text - #F..., #CC... Headlines/text -… Company name Salt and Light Travel ... Existing website ... Product name Box used for client gifts Description of the product Luxurious medium size box to be used for client appreciation gifts that looks like a classic piece of ... Will contain travel promotional gifts like mugs, bags,… Description of the product target audience Anyone that has booked a trip with my agency, children, men, women, seniors ... Style attributes Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Luxury Casual Minimalistic Detailed Design needs Concept & Purpose: The Salt & Light Travel Keepsake Suitcase is a luxurious, suitcase-style gift box designed to celebrate faith-based travel ... Inspired… What to avoid Generic map print designs Package dimensions ... 1/2'' x 9 1/2\" x 4\" It all began with a design brief. A quick, interactive guide helped them understand their design style and captured exactly what they needed in their product packaging. What is 99designs? What is a design contest? How much does it cost? Designers across the globe delivered design magic. by CUPEDIUM by interaksi by umairbinarif by Ravana Ravana by Packagingholic by Packag…",
+    "vision_public_excerpt": null,
+    "other_notes": "Generic map print designs Package dimensions ... 1/2'' x 9 1/2\" x 4\" It all began with a design brief. A quick, interactive guide helped them understand their design style and captured exactly what they needed in their product packaging.",
+    "referenced_input_assets": {
+      "mentioned_in_brief": false,
+      "publicly_visible_or_downloadable": false,
+      "local_files": []
+    },
+    "missing_fields": [
+      "complete public fields where the page contains ellipses",
+      "referenced input attachments",
+      "private comments and revision history"
+    ]
+  },
+  "deliverables_listed_on_page": {
+    "formats": [],
+    "publicly_downloadable": false,
+    "note": "These are delivery formats advertised to the contest client, not public source-file downloads."
+  },
+  "selection": {
+    "winner_entry_id": "attachment_156281773",
+    "winner_designer": "hendijulyandi",
+    "winner_designer_level": "Entry Level",
+    "public_selection_rationale_available": false,
+    "client_review": "Always knows know to interpret my vision to a sleek and lux result. I appreciate the attention to detail."
+  },
+  "assets": [
+    {
+      "entry_id": "attachment_156281773",
+      "role": "winner",
+      "selected": true,
+      "designer": "hendijulyandi",
+      "alt": "\"Design for Faith-based Travel Box\" winning Product packaging by hendijulyandi",
+      "local_file": "attachment_156281773.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 37995,
+      "sha256": "b7e1e85112c7c14d5c5ba948779e941335d028686786dc431eaaaa097768c26d",
+      "source_preview_url": "https://images-platform.99static.com/GWxlR0PJZU5DxH9tx3Wfu9qYNCw=/0x0:1980x1980/500x500/top/smart/99designs-contests-attachments/156/156281/attachment_156281773"
+    },
+    {
+      "entry_id": "attachment_156272459",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "CUPEDIUM",
+      "alt": "Product packaging contest entry by CUPEDIUM",
+      "local_file": "attachment_156272459.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 55450,
+      "sha256": "e1bc23608051c72282fc9d6d3f7d49db867b9f2372f2a303f71d03a5313a2c0f",
+      "source_preview_url": "https://images-platform.99static.com/fl3NVzCtcR-qDyAJnJbuw29QVn8=/46x368:1091x1413/500x500/top/smart/99designs-contests-attachments/156/156272/attachment_156272459"
+    },
+    {
+      "entry_id": "attachment_156272206",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "interaksi",
+      "alt": "Product packaging contest entry by interaksi",
+      "local_file": "attachment_156272206.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 38130,
+      "sha256": "02b6a0c39c7b70ac964964ad7af8a465ada1eead03a0ded343be770204441917",
+      "source_preview_url": "https://images-platform.99static.com/B4w2yGpWP7RykM6ab_u9zADoSFQ=/0x0:1500x1500/500x500/top/smart/99designs-contests-attachments/156/156272/attachment_156272206"
+    },
+    {
+      "entry_id": "attachment_156277305",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "umairbinarif",
+      "alt": "Product packaging contest entry by umairbinarif",
+      "local_file": "attachment_156277305.png",
+      "media_type": "image/png",
+      "width": 500,
+      "height": 500,
+      "byte_size": 192011,
+      "sha256": "3550bcf7f44e3a74e68c906645bcddc780a528fe0c8563923951b30ecdc90cb4",
+      "source_preview_url": "https://images-platform.99static.com/WKE7R7b6c7cU95blPT65YIw0JrU=/0x3:956x959/500x500/top/smart/99designs-contests-attachments/156/156277/attachment_156277305"
+    },
+    {
+      "entry_id": "attachment_156279840",
+      "role": "non_winner_public_preview",
+      "selected": false,
+      "designer": "Ravana Ravana",
+      "alt": "Product packaging contest entry by Ravana Ravana",
+      "local_file": "attachment_156279840.jpg",
+      "media_type": "image/jpeg",
+      "width": 500,
+      "height": 500,
+      "byte_size": 68664,
+      "sha256": "8a7c50694f5a5a77e0a87c8e8a0634528f972c2c82c6af06cda33c8974488b76",
+      "source_preview_url": "https://images-platform.99static.com/DvCDyCKlVCjY96FBiC9f6dplFzU=/100x163:1866x1929/500x500/top/smart/99designs-contests-attachments/156/156279/attachment_156279840"
+    }
+  ],
+  "evaluation_semantics": {
+    "usable_as": [
+      "brief-to-winner retrieval reference",
+      "contest-level winner-vs-visible-candidate preference case",
+      "visual ranking or pairwise comparison fixture",
+      "Travel & Hotel category coverage fixture"
+    ],
+    "do_not_assume": [
+      "non-winner previews are low-quality negatives",
+      "the four public candidates are finalists",
+      "the client rejected each candidate for a known reason",
+      "the public excerpt is the complete original brief"
+    ]
+  },
+  "rights": {
+    "status": "permission_required",
+    "training_use": "not_cleared",
+    "redistribution": "not_cleared",
+    "source_files": "not_available",
+    "note": "Public visibility does not establish permission for model training or redistribution. Keep this sample for local indexing/evaluation until rights are reviewed."
+  },
+  "collection_hierarchy": {
+    "industry": "Travel & Hotel",
+    "category": "Packaging & Label",
+    "subcategory": "Product Packaging"
+  }
+}
