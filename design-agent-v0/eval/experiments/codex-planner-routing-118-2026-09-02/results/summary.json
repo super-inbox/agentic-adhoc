@@ -1,0 +1,255 @@
+{
+  "schema_version": "codex-planner-routing-summary-v1",
+  "generated_at": "2026-09-04T00:42:42.922226Z",
+  "dataset": {
+    "path": "eval/queries.jsonl",
+    "sha256": "d64860e5ea095cbfc061b4fa38f7c8e32bd83ea8cfb6b9755992e5d7319a61a4",
+    "rows": 118
+  },
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "session_mode": "ephemeral",
+    "sandbox": "read-only"
+  },
+  "reliability": {
+    "completed_selected": 118,
+    "total": 118,
+    "first_attempt_completed": 118,
+    "retried_cases": 0
+  },
+  "routing_benchmark_100": {
+    "n": 100,
+    "completed": 100,
+    "intent_any_hit": 0.98,
+    "intent_exact_set": 0.5,
+    "intent_precision_macro": 0.7649999999999999,
+    "intent_recall_macro": 0.9033333333333333,
+    "intent_f1_macro": 0.8086666666666668,
+    "template_top1": 0.7142857142857143,
+    "template_any_hit": 1.0,
+    "template_recall_macro": 0.8701298701298701,
+    "gap_abstention": 0.0,
+    "joint_pass": 0.75,
+    "agent_route_exact": null,
+    "tool_call_free": 1.0
+  },
+  "agent_route_18": {
+    "n": 18,
+    "completed": 18,
+    "intent_any_hit": null,
+    "intent_exact_set": null,
+    "intent_precision_macro": null,
+    "intent_recall_macro": null,
+    "intent_f1_macro": null,
+    "template_top1": null,
+    "template_any_hit": null,
+    "template_recall_macro": null,
+    "gap_abstention": null,
+    "joint_pass": null,
+    "agent_route_exact": 0.8888888888888888,
+    "tool_call_free": 1.0
+  },
+  "routing_by_coverage": {
+    "adjacent": {
+      "n": 42,
+      "completed": 42,
+      "intent_any_hit": 0.9761904761904762,
+      "intent_exact_set": 0.42857142857142855,
+      "intent_precision_macro": 0.7380952380952381,
+      "intent_recall_macro": 0.8650793650793651,
+      "intent_f1_macro": 0.7785714285714288,
+      "template_top1": 0.6428571428571429,
+      "template_any_hit": 1.0,
+      "template_recall_macro": 0.8214285714285714,
+      "gap_abstention": null,
+      "joint_pass": 0.9761904761904762,
+      "agent_route_exact": null,
+      "tool_call_free": 1.0
+    },
+    "direct": {
+      "n": 35,
+      "completed": 35,
+      "intent_any_hit": 0.9714285714285714,
+      "intent_exact_set": 0.6571428571428571,
+      "intent_precision_macro": 0.8333333333333333,
+      "intent_recall_macro": 0.9428571428571428,
+      "intent_f1_macro": 0.8638095238095239,
+      "template_top1": 0.8,
+      "template_any_hit": 1.0,
+      "template_recall_macro": 0.9285714285714286,
+      "gap_abstention": null,
+      "joint_pass": 0.9714285714285714,
+      "agent_route_exact": null,
+      "tool_call_free": 1.0
+    },
+    "gap": {
+      "n": 23,
+      "completed": 23,
+      "intent_any_hit": 1.0,
+      "intent_exact_set": 0.391304347826087,
+      "intent_precision_macro": 0.7101449275362318,
+      "intent_recall_macro": 0.9130434782608695,
+      "intent_f1_macro": 0.7797101449275362,
+      "template_top1": null,
+      "template_any_hit": null,
+      "template_recall_macro": null,
+      "gap_abstention": 0.0,
+      "joint_pass": 0.0,
+      "agent_route_exact": null,
+      "tool_call_free": 1.0
+    }
+  },
+  "routing_by_theme": {
+    "品牌": {
+      "n": 34,
+      "completed": 34,
+      "intent_any_hit": 0.9705882352941176,
+      "intent_exact_set": 0.6176470588235294,
+      "intent_precision_macro": 0.8333333333333333,
+      "intent_recall_macro": 0.8676470588235294,
+      "intent_f1_macro": 0.8431372549019609,
+      "template_top1": 0.8695652173913043,
+      "template_any_hit": 1.0,
+      "template_recall_macro": 0.8913043478260869,
+      "gap_abstention": 0.0,
+      "joint_pass": 0.6470588235294118,
+      "agent_route_exact": null,
+      "tool_call_free": 1.0
+    },
+    "文创": {
+      "n": 33,
+      "completed": 33,
+      "intent_any_hit": 0.9696969696969697,
+      "intent_exact_set": 0.3939393939393939,
+      "intent_precision_macro": 0.7171717171717172,
+      "intent_recall_macro": 0.8585858585858586,
+      "intent_f1_macro": 0.7606060606060607,
+      "template_top1": 0.7857142857142857,
+      "template_any_hit": 1.0,
+      "template_recall_macro": 0.8214285714285714,
+      "gap_abstention": 0.0,
+      "joint_pass": 0.8181818181818182,
+      "agent_route_exact": null,
+      "tool_call_free": 1.0
+    },
+    "电商设计": {
+      "n": 33,
+      "completed": 33,
+      "intent_any_hit": 1.0,
+      "intent_exact_set": 0.48484848484848486,
+      "intent_precision_macro": 0.7424242424242424,
+      "intent_recall_macro": 0.9848484848484849,
+      "intent_f1_macro": 0.8212121212121213,
+      "template_top1": 0.5,
+      "template_any_hit": 1.0,
+      "template_recall_macro": 0.9038461538461539,
+      "gap_abstention": 0.0,
+      "joint_pass": 0.7878787878787878,
+      "agent_route_exact": null,
+      "tool_call_free": 1.0
+    }
+  },
+  "agent_route_confusion": [
+    {
+      "expected": "ask",
+      "predicted": "ask",
+      "count": 3
+    },
+    {
+      "expected": "creative_explore",
+      "predicted": "ask",
+      "count": 2
+    },
+    {
+      "expected": "creative_explore",
+      "predicted": "creative_explore",
+      "count": 1
+    },
+    {
+      "expected": "design_vote",
+      "predicted": "design_vote",
+      "count": 3
+    },
+    {
+      "expected": "factory_export",
+      "predicted": "factory_export",
+      "count": 3
+    },
+    {
+      "expected": "image_edit_variants",
+      "predicted": "image_edit_variants",
+      "count": 3
+    },
+    {
+      "expected": "virtual_tryon",
+      "predicted": "virtual_tryon",
+      "count": 3
+    }
+  ],
+  "usage_totals": {
+    "input_tokens": 1780950,
+    "cached_input_tokens": 693248,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 41626,
+    "reasoning_output_tokens": 15845
+  },
+  "latency": {
+    "sum_case_seconds": 1260.5620000000001,
+    "mean_case_seconds": 10.682728813559324,
+    "max_case_seconds": 19.592
+  },
+  "most_selected_templates": [
+    {
+      "template_id": "template-product-theme-promotional-poster",
+      "count": 76
+    },
+    {
+      "template_id": "template-product-poster",
+      "count": 61
+    },
+    {
+      "template_id": "template-food-product-packaging-design",
+      "count": 25
+    },
+    {
+      "template_id": "template-fashion-ecommerce",
+      "count": 14
+    },
+    {
+      "template_id": "template-industrial-design-concept-sketch",
+      "count": 13
+    },
+    {
+      "template_id": "template-cartoon-character-profile-card-kawaii-style",
+      "count": 9
+    },
+    {
+      "template_id": "template-intangible-heritage",
+      "count": 9
+    },
+    {
+      "template_id": "template-interior-design-mood-board-generator",
+      "count": 7
+    },
+    {
+      "template_id": "template-architecture",
+      "count": 7
+    },
+    {
+      "template_id": "template-lifestyle-photo-grid",
+      "count": 7
+    }
+  ],
+  "production_matcher_snapshot": {
+    "source": "eval/routing_eval_results.jsonl",
+    "sha256": "d6eca162fc7c14a2c1889cbc0a6fae849ae632346430a6293eac94f19cb5fba6",
+    "rows": 100,
+    "intent_overlap_reported_denominator": 0.34375,
+    "candidate_any_hit": 0.33766233766233766,
+    "candidate_recall_macro": 0.2727272727272727,
+    "gap_abstention": 0.08695652173913043
+  }
+}

@@ -1,0 +1,5 @@
+Reading additional input from stdin...
+2026-09-02T22:42:17.377132Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-02T22:42:17.377728Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-02T22:42:17.378204Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-02T22:43:17.277695Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf("<LOCAL_HOME>/.codex/shell_snapshots/01a06449-8e9a-7713-a956-96e23c8f8c2d.1788388937371186000.sh"): Os { code: 2, kind: NotFound, message: "No such file or directory" }

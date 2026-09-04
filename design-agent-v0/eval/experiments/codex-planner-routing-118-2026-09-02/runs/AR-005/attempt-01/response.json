@@ -1,0 +1,1 @@
+{"selected_route":"design_vote","route_intents":[],"template_candidates":[],"needs_clarification":false,"plan":[{"stage":"understand","action":"识别候选板中方案A到D的设计目标、内容与关键差异。"},{"stage":"evaluate","action":"按视觉效果、信息清晰度、品牌或场景适配度及完成度统一比较并排序。"},{"stage":"verify","action":"复核评分依据与候选内容一致，选出最佳方案并给出简明理由。"}],"rationale":"用户明确要求比较并投票选出已提供的A到D方案，属于设计评选任务。"}

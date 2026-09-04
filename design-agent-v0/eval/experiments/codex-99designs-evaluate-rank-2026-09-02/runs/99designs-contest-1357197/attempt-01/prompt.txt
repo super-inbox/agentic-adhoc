@@ -1,0 +1,26 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: Relaunch Coast Collection Website
+Design category: web page design
+About / requirements: Collection Die Coast Collection ist eine Markenkooperation mit Unternehmen aus unterschiedlichen Wirtschaftsbereichen und wird…
+Vision: Style/theme ideas: • modern & klar • natürlich & nordisch • emotional, aber nicht überinszeniert • authentische Bildsprache (keine „Stock-Luxuswelt“) Page descriptions Wir nehmen vorerst nur 3 Seiten und würden im Nachgang, wenn alles gefällt, die restlichen Seiten aufbauen lassen: Wir wünschen uns folgende…
+Other notes: Projektübersicht Wir planen den Relaunch unserer bestehenden WordPress-Website der Marke Coast ... Ziel ist eine moderne, frische und emotionale…
+
+Return only the schema-constrained JSON result.

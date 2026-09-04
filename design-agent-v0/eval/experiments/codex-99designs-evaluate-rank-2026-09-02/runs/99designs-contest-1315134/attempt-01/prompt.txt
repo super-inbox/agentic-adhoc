@@ -1,0 +1,25 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: Design for Faith-based Travel Box
+Design category: product packaging
+About / requirements: Industry Travel & Hotel Color inspiration Other color requirements Primary colors - #...F..., #...C, #FFFFFF Secondary Brand colors - #C3D4D3, #E9E6E4 Primary accent colors buttons and accent text - #F..., #CC... Headlines/text -… Company name Salt and Light Travel ... Existing website ... Product name Box used for client gifts Description of the product Luxurious medium size box to be used for client appreciation gifts that looks like a classic piece of ... Will contain travel promotional gifts like mugs, bags,… Description of the product target audience Anyone that has booked a trip with my agency, children, men, women, seniors ... Style attributes Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Luxury Casual Minimalistic Detailed Design needs Concept & Purpose: The Salt & Light Travel Keepsake Suitcase is a luxurious, suitcase-style gift box designed to celebrate faith-based travel ... Inspired… What to avoid Generic map print designs Package dimensions ... 1/2'' x 9 1/2" x 4"
+Other notes: Generic map print designs Package dimensions ... 1/2'' x 9 1/2" x 4"
+
+Return only the schema-constrained JSON result.

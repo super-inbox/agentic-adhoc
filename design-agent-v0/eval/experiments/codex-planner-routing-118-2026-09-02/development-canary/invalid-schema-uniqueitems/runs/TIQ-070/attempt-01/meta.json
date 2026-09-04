@@ -1,0 +1,32 @@
+{
+  "case_id": "TIQ-070",
+  "layer": "routing_benchmark",
+  "attempt": 1,
+  "status": "failed",
+  "started_at": "2026-09-02T22:33:58.072905Z",
+  "finished_at": "2026-09-02T22:34:01.389674Z",
+  "duration_seconds": 3.316,
+  "exit_code": 1,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": "response.json not created",
+  "validation_errors": [],
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "session_mode": "ephemeral",
+    "sandbox": "read-only"
+  },
+  "dataset_sha256": "d64860e5ea095cbfc061b4fa38f7c8e32bd83ea8cfb6b9755992e5d7319a61a4",
+  "schema_sha256": "ecd46020117bb09298b922e3d3d1df1b12f3102061971b17a9e1d8ac166389a5",
+  "prompt_sha256": "badbb03d5be25f44b905781e83351b0057d313002b1a90edf83f2a1c6795712a",
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": null,
+    "thread_id": "01a06441-f25f-7d91-8adc-f550dd0c1f0c"
+  }
+}

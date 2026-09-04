@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex planner-only routing output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "selected_route",
+    "route_intents",
+    "template_candidates",
+    "needs_clarification",
+    "plan",
+    "rationale"
+  ],
+  "properties": {
+    "selected_route": {
+      "type": "string",
+      "enum": [
+        "template_retrieval",
+        "image_edit_variants",
+        "design_vote",
+        "virtual_tryon",
+        "factory_export",
+        "creative_explore",
+        "ask"
+      ]
+    },
+    "route_intents": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "enum": ["ecommerce", "merch", "education", "lifestyle"]
+      }
+    },
+    "template_candidates": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "enum": [
+          "template-ai-outfit-try-on-poster",
+          "template-annual-event-calendar-infographic",
+          "template-architecture",
+          "template-beauty-step-by-step-guide",
+          "template-cartoon-character-profile-card-kawaii-style",
+          "template-costume",
+          "template-country-souvenirs-watercolor",
+          "template-cultural-festival-poster",
+          "template-cultural-relic-retro-infographic",
+          "template-education-card",
+          "template-educational-topic-infographic",
+          "template-ethnic-costume-deconstruction-board",
+          "template-fashion-ecommerce",
+          "template-fashion-style-outfit-breakdown-infographic",
+          "template-food-product-packaging-design",
+          "template-guofeng-scroll",
+          "template-industrial-design-concept-sketch",
+          "template-intangible-heritage",
+          "template-interior-design-mood-board-generator",
+          "template-international-event-promotional-poster",
+          "template-kids-opposite-concept-education",
+          "template-lifestyle-info-card",
+          "template-lifestyle-photo-grid",
+          "template-lunar-new-year-red-envelope-set",
+          "template-music-style-visual-infographic",
+          "template-national-theme-map-infographic",
+          "template-organ-health-food-guide-infographic",
+          "template-poetry-ink-wash-illustration",
+          "template-product-poster",
+          "template-product-theme-promotional-poster",
+          "template-solar-term",
+          "template-sports-trophy-infographic",
+          "template-then-vs-now-comparison-infographic",
+          "template-watercolor-theme-collage-illustration",
+          "template-yellow-themed-illustrated-timeline-infographic"
+        ]
+      }
+    },
+    "needs_clarification": {"type": "boolean"},
+    "plan": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stage", "action"],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "enum": [
+              "understand",
+              "route",
+              "retrieve",
+              "generate",
+              "edit",
+              "evaluate",
+              "export",
+              "verify",
+              "ask"
+            ]
+          },
+          "action": {"type": "string", "minLength": 1, "maxLength": 240}
+        }
+      }
+    },
+    "rationale": {"type": "string", "minLength": 1, "maxLength": 500}
+  }
+}

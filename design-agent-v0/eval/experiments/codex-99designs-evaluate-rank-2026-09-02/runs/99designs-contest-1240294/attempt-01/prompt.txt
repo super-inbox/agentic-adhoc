@@ -1,0 +1,24 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: We need a powerful box design for our new travel bag
+Design category: product packaging
+About / requirements: Industry Travel & Hotel Color inspiration Company name Tamelot Bags Product name Travel-friendly RFID Money Belt ... Description of the product Its a travel-friendly Money Belt - it's very Slim and it has RFID Blocking ... it can hold a Passport, Credit Cards, Cash and Travel ... The product is extremally… Description of the product target audience People that travel or looking to go on a trip, and want to travel easy, and feel safe (we use RFID Blocking technology in the product) and like to travel with a… Style attributes Luxury Casual Minimalistic Detailed Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Design needs We are currently seeking a creative design for a new packagingfor our Compact Umbrella . We intend to use this packaging design as the MAIN image on our… Package dimensions ... - ... - ... horizontally displayed Attachments Attachments
+
+Return only the schema-constrained JSON result.

@@ -1,0 +1,63 @@
+{
+  "case_id": "99designs-contest-1359509",
+  "attempt": 1,
+  "status": "completed",
+  "started_at": "2026-09-02T22:40:20.087998Z",
+  "finished_at": "2026-09-02T22:41:18.964005Z",
+  "duration_seconds": 58.876,
+  "exit_code": 0,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": null,
+  "validation_errors": [],
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "session_mode": "ephemeral",
+    "sandbox": "read-only"
+  },
+  "dataset_sha256": "de871a55b8dc9d1bb93b0f439f2cb19efb8fafb69871d56d0bea335540b0abc0",
+  "schema_sha256": "4c14b5663825e0ff9822a857cce29f30adae9f51890c6f33a5bdc5ac9905b909",
+  "prompt_sha256": "9e94686c15235b742e6657c5d6423cf5f7d9aed8f39b48cc3cde3865a1ac3458",
+  "inputs": [
+    {
+      "option_id": "A",
+      "sha256": "bd0d8d7648dd0ef3b9e798ca12700e8aed9efea2a794338a8519a818fe2521fb",
+      "byte_size": 234588,
+      "media_type": "image/png"
+    },
+    {
+      "option_id": "B",
+      "sha256": "b0bfd1d0e705bce480be153b38444585baf5f1b385167006c0f60f2ea3282ac0",
+      "byte_size": 96268,
+      "media_type": "image/png"
+    },
+    {
+      "option_id": "C",
+      "sha256": "8ad650aaf186007984e12f496a0c1c20b6b4973cd0a1563ec8d8b71811459e2a",
+      "byte_size": 95202,
+      "media_type": "image/png"
+    },
+    {
+      "option_id": "D",
+      "sha256": "0dfd690771f5756b736f6d163226ed750b4af6ebaf136b42d1dbd4db8fe996e6",
+      "byte_size": 95348,
+      "media_type": "image/png"
+    }
+  ],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": {
+      "input_tokens": 15902,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3042,
+      "reasoning_output_tokens": 2880
+    },
+    "thread_id": "01a06447-c4a9-7222-a0a4-bc34b9c4c782"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blinded design ranking output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ranking", "best_option", "rationale", "confidence", "uncertainty_notes"],
+  "properties": {
+    "ranking": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 5,
+      "items": {"type": "string", "enum": ["A", "B", "C", "D", "E"]}
+    },
+    "best_option": {"type": "string", "enum": ["A", "B", "C", "D", "E"]},
+    "rationale": {"type": "string"},
+    "confidence": {"type": "number"},
+    "uncertainty_notes": {"type": "string"}
+  }
+}

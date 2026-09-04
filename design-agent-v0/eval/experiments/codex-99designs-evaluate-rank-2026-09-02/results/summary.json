@@ -1,0 +1,350 @@
+{
+  "schema_version": "codex-99designs-evaluate-rank-summary-v1",
+  "generated_at": "2026-09-04T00:42:43.039613Z",
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "session_mode": "ephemeral",
+    "sandbox": "read-only"
+  },
+  "dataset": {
+    "contests_sha256": "de871a55b8dc9d1bb93b0f439f2cb19efb8fafb69871d56d0bea335540b0abc0",
+    "pairs_sha256": "f82017430e2854dc092809da87fdebf5e69d16e22e5dcf60000be53b6a4461b0",
+    "contests": 61,
+    "pairs": 243
+  },
+  "reliability": {
+    "completed_selected": 61,
+    "first_attempt_completed": 61,
+    "retried_contests": 0
+  },
+  "contest_all_61": {
+    "n": 61,
+    "completed": 61,
+    "top1_correct": 14,
+    "top1_accuracy_completed": 0.22950819672131148,
+    "top1_accuracy_all_gated": 0.22950819672131148,
+    "winner_mrr_completed": 0.5213114754098359,
+    "mean_confidence": 0.8462295081967217,
+    "tool_call_free": 1.0
+  },
+  "contest_excluding_simbans_52": {
+    "n": 52,
+    "completed": 52,
+    "top1_correct": 11,
+    "top1_accuracy_completed": 0.21153846153846154,
+    "top1_accuracy_all_gated": 0.21153846153846154,
+    "winner_mrr_completed": 0.5179487179487179,
+    "mean_confidence": 0.8469230769230773,
+    "tool_call_free": 1.0
+  },
+  "pairs_all_243": {
+    "n": 243,
+    "judged": 243,
+    "winner_ranked_above_other": 153,
+    "accuracy_completed": 0.6296296296296297,
+    "accuracy_all_gated": 0.6296296296296297
+  },
+  "pairs_excluding_same_designer_206": {
+    "n": 206,
+    "judged": 206,
+    "winner_ranked_above_other": 131,
+    "accuracy_completed": 0.6359223300970874,
+    "accuracy_all_gated": 0.6359223300970874
+  },
+  "pairs_same_designer_37": {
+    "n": 37,
+    "judged": 37,
+    "winner_ranked_above_other": 22,
+    "accuracy_completed": 0.5945945945945946,
+    "accuracy_all_gated": 0.5945945945945946
+  },
+  "pairs_excluding_simbans_208": {
+    "n": 208,
+    "judged": 208,
+    "winner_ranked_above_other": 133,
+    "accuracy_completed": 0.6394230769230769,
+    "accuracy_all_gated": 0.6394230769230769
+  },
+  "per_design_type": {
+    "Art & Illustration Design": {
+      "n": 5,
+      "completed": 5,
+      "top1_correct": 1,
+      "top1_accuracy_completed": 0.2,
+      "top1_accuracy_all_gated": 0.2,
+      "winner_mrr_completed": 0.5166666666666666,
+      "mean_confidence": 0.866,
+      "tool_call_free": 1.0,
+      "unique_clients": 5,
+      "industry_distribution": {
+        "Travel & Hotel": 5
+      },
+      "pairwise": {
+        "n": 20,
+        "judged": 20,
+        "winner_ranked_above_other": 13,
+        "accuracy_completed": 0.65,
+        "accuracy_all_gated": 0.65
+      }
+    },
+    "Banner Design": {
+      "n": 9,
+      "completed": 9,
+      "top1_correct": 3,
+      "top1_accuracy_completed": 0.3333333333333333,
+      "top1_accuracy_all_gated": 0.3333333333333333,
+      "winner_mrr_completed": 0.5407407407407407,
+      "mean_confidence": 0.8422222222222222,
+      "tool_call_free": 1.0,
+      "unique_clients": 1,
+      "industry_distribution": {
+        "Art & Design": 9
+      },
+      "pairwise": {
+        "n": 35,
+        "judged": 35,
+        "winner_ranked_above_other": 20,
+        "accuracy_completed": 0.5714285714285714,
+        "accuracy_all_gated": 0.5714285714285714
+      }
+    },
+    "Brand Design": {
+      "n": 14,
+      "completed": 14,
+      "top1_correct": 2,
+      "top1_accuracy_completed": 0.14285714285714285,
+      "top1_accuracy_all_gated": 0.14285714285714285,
+      "winner_mrr_completed": 0.42738095238095236,
+      "mean_confidence": 0.8428571428571427,
+      "tool_call_free": 1.0,
+      "unique_clients": 14,
+      "industry_distribution": {
+        "Travel & Hotel": 14
+      },
+      "pairwise": {
+        "n": 56,
+        "judged": 56,
+        "winner_ranked_above_other": 28,
+        "accuracy_completed": 0.5,
+        "accuracy_all_gated": 0.5
+      }
+    },
+    "Environmental & Signage Design": {
+      "n": 3,
+      "completed": 3,
+      "top1_correct": 1,
+      "top1_accuracy_completed": 0.3333333333333333,
+      "top1_accuracy_all_gated": 0.3333333333333333,
+      "winner_mrr_completed": 0.611111111111111,
+      "mean_confidence": 0.8366666666666666,
+      "tool_call_free": 1.0,
+      "unique_clients": 3,
+      "industry_distribution": {
+        "Travel & Hotel": 3
+      },
+      "pairwise": {
+        "n": 12,
+        "judged": 12,
+        "winner_ranked_above_other": 9,
+        "accuracy_completed": 0.75,
+        "accuracy_all_gated": 0.75
+      }
+    },
+    "Merchandise Design": {
+      "n": 6,
+      "completed": 6,
+      "top1_correct": 1,
+      "top1_accuracy_completed": 0.16666666666666666,
+      "top1_accuracy_all_gated": 0.16666666666666666,
+      "winner_mrr_completed": 0.5055555555555555,
+      "mean_confidence": 0.8616666666666667,
+      "tool_call_free": 1.0,
+      "unique_clients": 6,
+      "industry_distribution": {
+        "Travel & Hotel": 6
+      },
+      "pairwise": {
+        "n": 24,
+        "judged": 24,
+        "winner_ranked_above_other": 15,
+        "accuracy_completed": 0.625,
+        "accuracy_all_gated": 0.625
+      }
+    },
+    "Packaging & Label Design": {
+      "n": 6,
+      "completed": 6,
+      "top1_correct": 1,
+      "top1_accuracy_completed": 0.16666666666666666,
+      "top1_accuracy_all_gated": 0.16666666666666666,
+      "winner_mrr_completed": 0.5416666666666666,
+      "mean_confidence": 0.8300000000000001,
+      "tool_call_free": 1.0,
+      "unique_clients": 6,
+      "industry_distribution": {
+        "Travel & Hotel": 6
+      },
+      "pairwise": {
+        "n": 24,
+        "judged": 24,
+        "winner_ranked_above_other": 17,
+        "accuracy_completed": 0.7083333333333334,
+        "accuracy_all_gated": 0.7083333333333334
+      }
+    },
+    "Print & Editorial Design": {
+      "n": 12,
+      "completed": 12,
+      "top1_correct": 5,
+      "top1_accuracy_completed": 0.4166666666666667,
+      "top1_accuracy_all_gated": 0.4166666666666667,
+      "winner_mrr_completed": 0.6319444444444444,
+      "mean_confidence": 0.8500000000000001,
+      "tool_call_free": 1.0,
+      "unique_clients": 11,
+      "industry_distribution": {
+        "Travel & Hotel": 12
+      },
+      "pairwise": {
+        "n": 48,
+        "judged": 48,
+        "winner_ranked_above_other": 35,
+        "accuracy_completed": 0.7291666666666666,
+        "accuracy_all_gated": 0.7291666666666666
+      }
+    },
+    "Web & App Design": {
+      "n": 6,
+      "completed": 6,
+      "top1_correct": 0,
+      "top1_accuracy_completed": 0.0,
+      "top1_accuracy_all_gated": 0.0,
+      "winner_mrr_completed": 0.4444444444444444,
+      "mean_confidence": 0.8416666666666667,
+      "tool_call_free": 1.0,
+      "unique_clients": 6,
+      "industry_distribution": {
+        "Travel & Hotel": 6
+      },
+      "pairwise": {
+        "n": 24,
+        "judged": 24,
+        "winner_ranked_above_other": 16,
+        "accuracy_completed": 0.6666666666666666,
+        "accuracy_all_gated": 0.6666666666666666
+      }
+    }
+  },
+  "winner_position": {
+    "A": {
+      "n": 13,
+      "completed": 13,
+      "top1_correct": 4,
+      "top1_accuracy_completed": 0.3076923076923077,
+      "top1_accuracy_all_gated": 0.3076923076923077,
+      "winner_mrr_completed": 0.6153846153846154,
+      "mean_confidence": 0.8500000000000001,
+      "tool_call_free": 1.0
+    },
+    "B": {
+      "n": 12,
+      "completed": 12,
+      "top1_correct": 3,
+      "top1_accuracy_completed": 0.25,
+      "top1_accuracy_all_gated": 0.25,
+      "winner_mrr_completed": 0.48194444444444445,
+      "mean_confidence": 0.8541666666666666,
+      "tool_call_free": 1.0
+    },
+    "C": {
+      "n": 12,
+      "completed": 12,
+      "top1_correct": 2,
+      "top1_accuracy_completed": 0.16666666666666666,
+      "top1_accuracy_all_gated": 0.16666666666666666,
+      "winner_mrr_completed": 0.5138888888888888,
+      "mean_confidence": 0.8366666666666668,
+      "tool_call_free": 1.0
+    },
+    "D": {
+      "n": 12,
+      "completed": 12,
+      "top1_correct": 2,
+      "top1_accuracy_completed": 0.16666666666666666,
+      "top1_accuracy_all_gated": 0.16666666666666666,
+      "winner_mrr_completed": 0.4652777777777777,
+      "mean_confidence": 0.8408333333333333,
+      "tool_call_free": 1.0
+    },
+    "E": {
+      "n": 12,
+      "completed": 12,
+      "top1_correct": 3,
+      "top1_accuracy_completed": 0.25,
+      "top1_accuracy_all_gated": 0.25,
+      "winner_mrr_completed": 0.5222222222222223,
+      "mean_confidence": 0.8491666666666667,
+      "tool_call_free": 1.0
+    }
+  },
+  "predicted_best_position_distribution": {
+    "A": 17,
+    "B": 12,
+    "C": 9,
+    "D": 12,
+    "E": 11
+  },
+  "winner_rank_distribution": {
+    "1": 14,
+    "2": 20,
+    "3": 15,
+    "4": 8,
+    "5": 4
+  },
+  "confidence_calibration": {
+    "mean_reported_confidence": 0.8462295081967217,
+    "top1_accuracy": 0.22950819672131148,
+    "calibration_gap": 0.6167213114754102,
+    "mean_confidence_when_correct": 0.8414285714285715,
+    "mean_confidence_when_incorrect": 0.8476595744680855,
+    "brier_score": 0.5605868852459016
+  },
+  "usage_totals": {
+    "input_tokens": 998672,
+    "cached_input_tokens": 204288,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 69018,
+    "reasoning_output_tokens": 56448
+  },
+  "latency": {
+    "sum_case_seconds": 1531.5960000000002,
+    "mean_case_seconds": 25.108131147540988,
+    "max_case_seconds": 60.292
+  },
+  "chance_baselines": {
+    "contest_top1_expected": 0.20081967213114738,
+    "winner_pairwise_expected": 0.5,
+    "winner_mrr_expected": 0.45771857923497294
+  },
+  "confidence_intervals_95_cluster_bootstrap": {
+    "contest_all_61_top1": [
+      0.13114754098360656,
+      0.3442622950819672
+    ],
+    "contest_excluding_simbans_52_top1": [
+      0.11538461538461539,
+      0.3269230769230769
+    ],
+    "pairs_all_243": [
+      0.5537190082644629,
+      0.7008196721311475
+    ],
+    "pairs_excluding_same_designer_206": [
+      0.5509259259259259,
+      0.7177033492822966
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: Bespoke Luxury Travel Agency Logo
+Design category: brand launch pack
+Slogan: ... ... ...
+About / requirements: Tidal & Rare is a bespoke luxury travel agency based in Amelia Island, ... We design private, fully custom journeys for accomplished, well-traveled clients who…
+Other notes: The color used for the rose gold is up to ... The colors I like the most are a dark teal and rose ... if there is a way to make it look more like real rose gold - i'd really…
+
+Return only the schema-constrained JSON result.

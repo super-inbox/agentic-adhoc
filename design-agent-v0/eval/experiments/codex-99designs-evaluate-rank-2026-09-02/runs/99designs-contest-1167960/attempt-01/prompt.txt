@@ -1,0 +1,26 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: Regional travel magazine for busy moms
+Design category: magazine cover
+About / requirements: Industry Travel & Hotel About us Carolina Traveler shares things-to-do and travel ideas in North Carolina and South ... The magazine is different from local competitors because we focus… What's your vision? Our magazine currently is titled "Day Trips". The title is misleading, since most of our content focuses on overnight ... The title also is causing confusion with… Other notes Here are two previous ... The cover art from these issues will be ... Summer...: ...; Spring... ... • You are welcome to use some or all of these images in your…
+Vision: Our magazine currently is titled "Day Trips". The title is misleading, since most of our content focuses on overnight ... The title also is causing confusion with…
+Other notes: Here are two previous ... The cover art from these issues will be ... Summer...: ...; Spring... ... • You are welcome to use some or all of these images in your…
+
+Return only the schema-constrained JSON result.

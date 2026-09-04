@@ -1,0 +1,1 @@
+{"selected_route":"ask","route_intents":[],"template_candidates":[],"needs_clarification":true,"plan":[{"stage":"ask","action":"询问海报的主题、用途、尺寸、文案及期望风格，以形成可执行的设计简报。"}],"rationale":"请求仅说明“做个海报”，且没有参考输入，缺少主题、内容和用途等必要信息，无法直接规划制作。"}

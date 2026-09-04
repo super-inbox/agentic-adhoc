@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a06447-75f3-7ce2-a6dd-ea959bf7a242"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"selected_route\":\"ask\",\"route_intents\":[],\"template_candidates\":[],\"needs_clarification\":true,\"plan\":[{\"stage\":\"ask\",\"action\":\"Clarify what should be created, including its purpose, format, content, style, and desired dimensions.\"}],\"rationale\":\"The request is contentless and provides no reference input or design requirements, so it cannot be meaningfully planned yet.\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":14804,"cached_input_tokens":11136,"cache_write_input_tokens":0,"output_tokens":91,"reasoning_output_tokens":0}}

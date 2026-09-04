@@ -1,0 +1,1 @@
+{"selected_route":"image_edit_variants","route_intents":[],"template_candidates":[],"needs_clarification":false,"plan":[{"stage":"understand","action":"识别编辑目标中的海报标题及其现有排版约束。"},{"stage":"edit","action":"适度放大标题，同时尽量保持原有字体、位置、层级和整体风格。"},{"stage":"verify","action":"检查放大后的标题是否清晰且无裁切、遮挡或不自然换行。"}],"rationale":"用户要求对已提供的海报进行明确的局部排版修改，适合基于原图编辑。"}

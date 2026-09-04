@@ -1,0 +1,1 @@
+{"selected_route":"image_edit_variants","route_intents":[],"template_candidates":[],"needs_clarification":false,"plan":[{"stage":"understand","action":"识别原图背景区域，并保留主体、构图与其他设计元素。"},{"stage":"edit","action":"将背景调整为更清爽的浅色调，可生成少量配色变体供选择。"},{"stage":"verify","action":"检查主体边缘、文字可读性与整体对比度，确保修改自然统一。"}],"rationale":"已有明确的编辑目标图，需求是更换背景颜色，适合走图片编辑变体路线。"}

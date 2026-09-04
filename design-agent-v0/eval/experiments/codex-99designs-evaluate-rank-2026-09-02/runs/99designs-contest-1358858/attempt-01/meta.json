@@ -1,0 +1,69 @@
+{
+  "case_id": "99designs-contest-1358858",
+  "attempt": 1,
+  "status": "completed",
+  "started_at": "2026-09-02T22:41:32.230891Z",
+  "finished_at": "2026-09-02T22:41:46.934247Z",
+  "duration_seconds": 14.703,
+  "exit_code": 0,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": null,
+  "validation_errors": [],
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "session_mode": "ephemeral",
+    "sandbox": "read-only"
+  },
+  "dataset_sha256": "de871a55b8dc9d1bb93b0f439f2cb19efb8fafb69871d56d0bea335540b0abc0",
+  "schema_sha256": "4c14b5663825e0ff9822a857cce29f30adae9f51890c6f33a5bdc5ac9905b909",
+  "prompt_sha256": "f315a7c338f0ac6cc900c5b14ac15bfb1100a020797c31f9a430cc8aa484c389",
+  "inputs": [
+    {
+      "option_id": "A",
+      "sha256": "945ff38cac002f8021fd665fa902360cec491c06144d1fbaa0e7302171d0f457",
+      "byte_size": 214179,
+      "media_type": "image/png"
+    },
+    {
+      "option_id": "B",
+      "sha256": "c69482b6897946a8fd4a674707ac4b20613d2247c3f3dccb800a8d6a57efd3aa",
+      "byte_size": 26900,
+      "media_type": "image/png"
+    },
+    {
+      "option_id": "C",
+      "sha256": "d1693efe641e1c0de77f0189fb70f7cb62c12d631ab9fa746e198ba54ff8994e",
+      "byte_size": 26335,
+      "media_type": "image/png"
+    },
+    {
+      "option_id": "D",
+      "sha256": "d0b37e4245b2e93c1b3875aeed33a0f00d769efc18689b3187deb2a90f9b8cf9",
+      "byte_size": 98699,
+      "media_type": "image/png"
+    },
+    {
+      "option_id": "E",
+      "sha256": "3e576f6f20b2d9a16a841a1fb4149596c0dd4b9fa6349fdfe1cceb2040ed2d87",
+      "byte_size": 19714,
+      "media_type": "image/jpeg"
+    }
+  ],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": {
+      "input_tokens": 16795,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 548,
+      "reasoning_output_tokens": 351
+    },
+    "thread_id": "01a06448-e05f-7230-860a-245e05848f6c"
+  }
+}

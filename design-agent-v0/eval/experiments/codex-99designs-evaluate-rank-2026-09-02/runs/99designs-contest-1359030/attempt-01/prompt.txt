@@ -1,0 +1,25 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: Luxury off grid vacation rental cabins in East Tennessee
+Design category: logo design
+About / requirements: We will have off grid luxury small cabins on a lake in eastern Tennessee with mountain view'... There will be a farm one day as ... We want it to be an experience…
+Other notes: We've attached photos of the property and views from the property to help inspire some logo ... Simple and elegant logos seem to catch our eye the ... Pine trees…
+
+Return only the schema-constrained JSON result.

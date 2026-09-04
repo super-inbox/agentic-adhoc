@@ -30,6 +30,19 @@ The snapshot contains no API keys, browser session state, signed download URLs, 
 paths, or user account identity. Exact source/output pixels and full nested source traces remain as
 access-controlled Braintrust attachments.
 
+## Codex planner/ranking baselines (2026-09-02)
+
+- [`experiments/codex-planner-routing-118-2026-09-02/`](experiments/codex-planner-routing-118-2026-09-02/)
+  runs all 118 consolidated queries as independent, schema-constrained, planner-only Codex cases.
+  It completed 118/118 on the first attempt with no tool calls. On the 100-query layer it reached
+  98.0% intent any-hit and 100.0% candidate any-hit, but 0.0% correct abstention on the 23 known
+  catalog gaps; exact top-level agent routing was 16/18.
+- [`experiments/codex-99designs-evaluate-rank-2026-09-02/`](experiments/codex-99designs-evaluate-rank-2026-09-02/)
+  builds and runs the blinded 61-contest / 243-pair 99designs preference fixture. Codex recovered
+  the observed winner at top-1 in 14/61 contests (23.0%) and ranked it above a visible alternative
+  in 153/243 pairs (63.0%); excluding same-designer pairs gives 131/206 (63.6%). Rights remain
+  uncleared, so this experiment is local-only and must not be used for training or redistribution.
+
 ## Published cross-Agent canaries
 
 - [`experiments/canva-vs-curify-canary-2026-08-14/`](experiments/canva-vs-curify-canary-2026-08-14/)

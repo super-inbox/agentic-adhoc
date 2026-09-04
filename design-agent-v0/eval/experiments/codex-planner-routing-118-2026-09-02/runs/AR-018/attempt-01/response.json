@@ -1,0 +1,1 @@
+{"selected_route":"ask","route_intents":[],"template_candidates":[],"needs_clarification":true,"plan":[{"stage":"ask","action":"Clarify what should be created, including its purpose, format, content, style, and desired dimensions."}],"rationale":"The request is contentless and provides no reference input or design requirements, so it cannot be meaningfully planned yet."}

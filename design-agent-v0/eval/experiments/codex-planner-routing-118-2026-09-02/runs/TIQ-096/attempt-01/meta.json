@@ -1,0 +1,38 @@
+{
+  "case_id": "TIQ-096",
+  "layer": "routing_benchmark",
+  "attempt": 1,
+  "status": "completed",
+  "started_at": "2026-09-02T22:39:15.426747Z",
+  "finished_at": "2026-09-02T22:39:23.703368Z",
+  "duration_seconds": 8.275,
+  "exit_code": 0,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": null,
+  "validation_errors": [],
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "session_mode": "ephemeral",
+    "sandbox": "read-only"
+  },
+  "dataset_sha256": "d64860e5ea095cbfc061b4fa38f7c8e32bd83ea8cfb6b9755992e5d7319a61a4",
+  "schema_sha256": "ee575bbee47b3545deb5e3c8ba72b73cc310df3b7aed141064d052cb9b9caae3",
+  "prompt_sha256": "e65e1cf3339d21593c211e5211520c34f7cd0a04d0a427be0ece9b3e85f8cbc4",
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": {
+      "input_tokens": 15141,
+      "cached_input_tokens": 11136,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 248,
+      "reasoning_output_tokens": 0
+    },
+    "thread_id": "01a06446-c822-7ce3-96a2-fd951216b605"
+  }
+}

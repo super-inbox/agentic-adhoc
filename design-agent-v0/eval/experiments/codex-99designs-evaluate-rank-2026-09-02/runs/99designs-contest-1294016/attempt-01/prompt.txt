@@ -1,0 +1,25 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: Luxury, high-quality box design for a product targeting women.
+Design category: product packaging
+About / requirements: Industry Travel & Hotel Other color requirements Metalic rose gold, metalic silver or metalic ... With a complimenting matte color so the text will ... One feminine accent ... Please create a white background… Company name Navinest Existing website ... Product name Navinest BreezePro Neck Fan Description of the product It is a pocket-size, compact, portable neck fan for home, work, or ... Description of the product target audience The target market is women ages... to ... Style attributes Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Luxury Casual Minimalistic Detailed Design needs The box packaging is designed to give a complete, SLEEK, high-end luxury ... It provides the feel of an Apple brand experience in the "I never want to throw… What to avoid Avoid using the logo's colours ... The logo should match the colour pallet of your ... Please note that the logo on the box specs is just a placeholder and not… Package dimensions ... cm x ... cm x ... ... in x ... in x ... in Product size should be in cm and inches
+Other notes: Avoid using the logo's colours ... The logo should match the colour pallet of your ... Please note that the logo on the box specs is just a placeholder and not… Package dimensions ... cm x ... cm x ... ... in x ... in x ... in Product size should be in cm and inches
+
+Return only the schema-constrained JSON result.

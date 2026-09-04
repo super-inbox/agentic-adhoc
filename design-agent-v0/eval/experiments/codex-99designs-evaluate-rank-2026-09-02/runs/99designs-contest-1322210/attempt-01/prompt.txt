@@ -1,0 +1,25 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: Disposable urine bag with a premium touch
+Design category: product packaging
+About / requirements: Industry Travel & Hotel Color inspiration Company name drubag Product name drubag Description of the product It is a Disposable urine ... Instead of a rectangular shape, it will look like a trophy cup with 2 handles and one corner of the opening will be elongated than the… Description of the product target audience This is mainly focused for drivers (delivery drivers, truck drivers, long haul truck drivers, any professional drivers). Style attributes Playful Serious Modern Retro Loud Quiet Feminine Masculine Industrial Heritage Luxury Casual Minimalistic Detailed Design needs It is a Disposable urine ... Instead of a rectangular shape, it will look like a trophy cup with 2 handles( small handles that are closer to the main body and… What to avoid wide handles should be ... Package dimensions does'nt ... Its... cc ... it should not be a rectangle ... Attachments
+Other notes: wide handles should be ... Package dimensions does'nt ... Its... cc ... it should not be a rectangle ... Attachments
+
+Return only the schema-constrained JSON result.

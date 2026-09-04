@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a06447-638c-7143-a686-87aef76e0c4a"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"selected_route\":\"ask\",\"route_intents\":[],\"template_candidates\":[],\"needs_clarification\":true,\"plan\":[{\"stage\":\"ask\",\"action\":\"请用户说明需要哪方面的帮助，以及期望的设计产出。\"}],\"rationale\":\"请求仅包含“帮我”，缺少可规划的设计目标、内容和输出要求。\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":14807,"cached_input_tokens":11136,"cache_write_input_tokens":0,"output_tokens":83,"reasoning_output_tokens":0}}

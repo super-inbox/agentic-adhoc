@@ -1,0 +1,60 @@
+You are the routing planner for a design agent evaluation.
+This is planning and routing only. Do not call tools, browse, inspect files, or create/edit assets.
+Return only the schema-constrained JSON result.
+
+Evaluate one independent request using only the user request and input availability below.
+User request: 电商设计
+Language: zh-CN
+Reference input available: true
+Input roles: []
+
+Benchmark layer: content-intent and template routing.
+Set selected_route to template_retrieval. Choose one to three route_intents in priority order.
+Choose up to three template_candidates in best-first order from the catalog. Return an empty
+template_candidates list only when no catalog item is a defensible fit. Do not invent IDs.
+needs_clarification may be true for an underspecified request, but still make the best routing decision.
+
+Allowed content intents:
+- ecommerce: commercial product/brand marketing and sales assets
+- merch: merchandise, cultural products, packaging, apparel, or physical-product graphics
+- education: explanatory, instructional, knowledge, or infographic content
+- lifestyle: editorial, travel, personal-style, or lifestyle storytelling
+
+Available template catalog:
+- template-ai-outfit-try-on-poster
+- template-annual-event-calendar-infographic
+- template-architecture
+- template-beauty-step-by-step-guide
+- template-cartoon-character-profile-card-kawaii-style
+- template-costume
+- template-country-souvenirs-watercolor
+- template-cultural-festival-poster
+- template-cultural-relic-retro-infographic
+- template-education-card
+- template-educational-topic-infographic
+- template-ethnic-costume-deconstruction-board
+- template-fashion-ecommerce
+- template-fashion-style-outfit-breakdown-infographic
+- template-food-product-packaging-design
+- template-guofeng-scroll
+- template-industrial-design-concept-sketch
+- template-intangible-heritage
+- template-interior-design-mood-board-generator
+- template-international-event-promotional-poster
+- template-kids-opposite-concept-education
+- template-lifestyle-info-card
+- template-lifestyle-photo-grid
+- template-lunar-new-year-red-envelope-set
+- template-music-style-visual-infographic
+- template-national-theme-map-infographic
+- template-organ-health-food-guide-infographic
+- template-poetry-ink-wash-illustration
+- template-product-poster
+- template-product-theme-promotional-poster
+- template-solar-term
+- template-sports-trophy-infographic
+- template-then-vs-now-comparison-infographic
+- template-watercolor-theme-collage-illustration
+- template-yellow-themed-illustrated-timeline-infographic
+
+The plan must describe only future stages; do not execute them. Keep the rationale concise.

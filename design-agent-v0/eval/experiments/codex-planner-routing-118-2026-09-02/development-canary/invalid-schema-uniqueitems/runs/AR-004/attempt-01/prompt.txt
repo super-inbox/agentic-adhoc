@@ -1,0 +1,24 @@
+You are the routing planner for a design agent evaluation.
+This is planning and routing only. Do not call tools, browse, inspect files, or create/edit assets.
+Return only the schema-constrained JSON result.
+
+Evaluate one independent request using only the user request and input availability below.
+User request: 这4款包装，站在消费者角度哪款更有质感？
+Language: zh-CN
+Reference input available: true
+Input roles: ["candidate_board"]
+
+Benchmark layer: top-level agent routing.
+Choose exactly one selected_route from the route definitions below. Leave route_intents and
+template_candidates empty because this layer does not score template retrieval. Set
+needs_clarification true exactly when selected_route is ask.
+
+Allowed top-level routes:
+- image_edit_variants: modify a supplied image while preserving it as the source
+- design_vote: compare/rank supplied design options and produce a decision
+- virtual_tryon: place supplied garment/product references on a supplied person
+- factory_export: make print/manufacturing-ready production files
+- creative_explore: a broad but meaningful design brief that needs directions before production
+- ask: contentless request that cannot be planned without clarification
+
+The plan must describe only future stages; do not execute them. Keep the rationale concise.

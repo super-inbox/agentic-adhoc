@@ -1,0 +1,1 @@
+{"selected_route":"ask","route_intents":[],"template_candidates":[],"needs_clarification":true,"plan":[{"stage":"ask","action":"询问品牌名称、行业定位、目标受众、设计范围、风格偏好与期望交付物。"}],"rationale":"请求仅包含“品牌设计”，缺少品牌背景和具体设计目标，无法据此规划。"}

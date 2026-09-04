@@ -1,0 +1,30 @@
+{
+  "schema_version": "codex-planner-routing-freeze-v2",
+  "candidate_config": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "session_mode": "ephemeral",
+    "sandbox": "read-only"
+  },
+  "candidate_config_canonicalization": "UTF-8 JSON; sort_keys=true; separators=(',', ':')",
+  "candidate_config_sha256": "f328bc9aa891c4ea62eb5f983d2749851367419bc8670303fa5420664aa51ca3",
+  "model_identity": {
+    "provider": "OpenAI",
+    "interface": "codex-cli",
+    "model_id": "gpt-5.6-sol",
+    "model_weights_sha256": null,
+    "model_weights_hash_status": "not_exposed_by_codex_cli"
+  },
+  "prompt_manifest": "results/prompt-manifest.jsonl",
+  "prompt_count": 118,
+  "prompt_set_sha256": "b64b762041910982e6dc0bd7fca263e79f7fd41fe55eece007327f0fa522a286",
+  "dataset_sha256": "d64860e5ea095cbfc061b4fa38f7c8e32bd83ea8cfb6b9755992e5d7319a61a4",
+  "output_schema_sha256": "ee575bbee47b3545deb5e3c8ba72b73cc310df3b7aed141064d052cb9b9caae3",
+  "runner_sha256": "169a77fccefbc4427d715df76e65b44bebf8c42cc386b872179a035fcb940001",
+  "scorer_sha256": "e3c402dd73abb0545e1528623cb264ea8b27e96d4227a051291c38e92a1a354f",
+  "canonical_results_sha256": "d45213130fe8ce86a0db4f4e5d0310dabf9e591188c4bae73804012b1b41d338",
+  "summary_sha256": "a17e6ef0153fd2977df6cb5631ff902be5fab57714f9547f98fc5d82086dfb2e",
+  "row_count": 118
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a06447-19eb-7b80-a692-11540c3eeba5"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"selected_route\":\"virtual_tryon\",\"route_intents\":[],\"template_candidates\":[],\"needs_clarification\":false,\"plan\":[{\"stage\":\"understand\",\"action\":\"确认人物自拍为 person_reference、卫衣图片为 garment_reference，并提取人物姿态与服装版型特征。\"},{\"stage\":\"generate\",\"action\":\"将参考卫衣自然试穿到自拍人物身上，保持人物身份、姿态和服装关键设计细节。\"},{\"stage\":\"verify\",\"action\":\"检查贴合度、遮挡关系、比例、光影以及卫衣图案与颜色的一致性。\"}],\"rationale\":\"人物参考和服装参考均已提供，请求明确属于虚拟试穿。\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":14821,"cached_input_tokens":11136,"cache_write_input_tokens":0,"output_tokens":160,"reasoning_output_tokens":0}}

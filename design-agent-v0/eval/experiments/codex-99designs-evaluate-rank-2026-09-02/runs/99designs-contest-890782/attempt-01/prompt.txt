@@ -1,0 +1,26 @@
+You are the evaluator in a blinded, single-turn design-ranking benchmark.
+Do not call tools, browse, inspect files, or create/edit assets. Judge only the attached pixels and
+the visible brief excerpt. Do not use filenames, hidden metadata, presumed contest status, or
+designer identity. The excerpt is known to be incomplete, so do not invent omitted requirements.
+
+Rank every option from best to worst for this specific visible brief. Balance brief fit with visual
+hierarchy, craft, legibility, distinctiveness, and production plausibility. `ranking` must contain
+each of ["A", "B", "C", "D", "E"] exactly once, and `best_option` must equal its first item.
+Set confidence from 0 to 1. Explain the decision concisely and state material uncertainty caused by
+cropping, low resolution, or missing brief context.
+
+Image legend (attachment order is authoritative):
+- Attached image 1 = option A
+- Attached image 2 = option B
+- Attached image 3 = option C
+- Attached image 4 = option D
+- Attached image 5 = option E
+
+Visible public brief excerpt:
+Contest title: Cover für Reisekatalog der a&o Hostels
+Design category: magazine cover
+About / requirements: Industry Travel & Hotel About us Wer gern auf Reisen ist und deutsche sowie europäische Metropolen ... Amsterdam, Prag, Wien, Berlin, Hamburg, Leipzig, München oder Venedig… What's your vision? Vorder- und Rückseite unseres Hotelkatalogs Design aus dem letzten Jahr anbei: => Position Web-URL mit Claim bitte tauschen, ... URL sehr prominent =>… Other notes Website: ...
+Vision: Vorder- und Rückseite unseres Hotelkatalogs Design aus dem letzten Jahr anbei: => Position Web-URL mit Claim bitte tauschen, ... URL sehr prominent =>…
+Other notes: Website: ...
+
+Return only the schema-constrained JSON result.
