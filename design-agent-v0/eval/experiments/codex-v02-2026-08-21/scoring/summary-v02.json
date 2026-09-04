@@ -1,0 +1,1637 @@
+{
+  "schema_version": "codex.brief-bank-v0.2-summary/1.0",
+  "snapshot_finished_at": "2026-09-02T12:40:48.736Z",
+  "candidate": {
+    "agent": "Codex CLI",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default"
+  },
+  "benchmark": {
+    "base_episodes": 24,
+    "expected_conditions": 32
+  },
+  "execution": {
+    "attempts": 66,
+    "attempt_outcomes": {
+      "completed": 32,
+      "error": 31,
+      "timeout": 3
+    },
+    "latest_condition_outcomes": {
+      "completed": 32
+    },
+    "unique_completed_conditions_selected": 32,
+    "missing_or_incomplete_conditions": [],
+    "latency_minutes": {
+      "n": 32,
+      "mean": 31.83,
+      "p50": 29.92,
+      "p95_nearest_rank": 63.17,
+      "max": 94.62
+    },
+    "selected_run_usage": {
+      "input_tokens": 263566021,
+      "cached_input_tokens": 251536128,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3488127,
+      "reasoning_output_tokens": 1379835
+    }
+  },
+  "score_summary": {
+    "condition_macro": {
+      "groups": 32,
+      "lower_bound": 0.6588,
+      "upper_bound": 0.9087,
+      "mean_observed_weight": 0.75,
+      "observable_only_normalized": 0.8736
+    },
+    "base_episode_macro": {
+      "groups": 24,
+      "lower_bound": 0.6858,
+      "upper_bound": 0.9192,
+      "mean_observed_weight": 0.7667,
+      "observable_only_normalized": 0.8898
+    },
+    "interpretation": "Bounds exclude workflow_completion and recovery when unobservable; the observable-only normalized score is diagnostic, not a full-rubric total."
+  },
+  "breakdowns": {
+    "level": {
+      "L3": {
+        "groups": 8,
+        "lower_bound": 0.85,
+        "upper_bound": 0.95,
+        "mean_observed_weight": 0.9,
+        "observable_only_normalized": 0.9444
+      },
+      "L4": {
+        "groups": 24,
+        "lower_bound": 0.595,
+        "upper_bound": 0.895,
+        "mean_observed_weight": 0.7,
+        "observable_only_normalized": 0.85
+      }
+    },
+    "primary_intent": {
+      "adapt": {
+        "groups": 4,
+        "lower_bound": 0.695,
+        "upper_bound": 0.895,
+        "mean_observed_weight": 0.8,
+        "observable_only_normalized": 0.85
+      },
+      "edit": {
+        "groups": 5,
+        "lower_bound": 0.664,
+        "upper_bound": 0.884,
+        "mean_observed_weight": 0.78,
+        "observable_only_normalized": 0.8597
+      },
+      "evaluate_rank": {
+        "groups": 5,
+        "lower_bound": 0.808,
+        "upper_bound": 0.988,
+        "mean_observed_weight": 0.82,
+        "observable_only_normalized": 0.9829
+      },
+      "export": {
+        "groups": 5,
+        "lower_bound": 0.692,
+        "upper_bound": 0.952,
+        "mean_observed_weight": 0.74,
+        "observable_only_normalized": 0.9314
+      },
+      "generate": {
+        "groups": 13,
+        "lower_bound": 0.5754,
+        "upper_bound": 0.8754,
+        "mean_observed_weight": 0.7,
+        "observable_only_normalized": 0.822
+      }
+    },
+    "category": {
+      "brand_identity_directions": {
+        "groups": 5,
+        "lower_bound": 0.644,
+        "upper_bound": 0.904,
+        "mean_observed_weight": 0.74,
+        "observable_only_normalized": 0.8629
+      },
+      "client_feedback_revision": {
+        "groups": 3,
+        "lower_bound": 0.7367,
+        "upper_bound": 0.97,
+        "mean_observed_weight": 0.7667,
+        "observable_only_normalized": 0.9571
+      },
+      "concept_to_factory_ready": {
+        "groups": 3,
+        "lower_bound": 0.6867,
+        "upper_bound": 0.92,
+        "mean_observed_weight": 0.7667,
+        "observable_only_normalized": 0.8857
+      },
+      "ecommerce_launch_suite": {
+        "groups": 5,
+        "lower_bound": 0.546,
+        "upper_bound": 0.806,
+        "mean_observed_weight": 0.74,
+        "observable_only_normalized": 0.7483
+      },
+      "existing_brand_campaign": {
+        "groups": 5,
+        "lower_bound": 0.644,
+        "upper_bound": 0.904,
+        "mean_observed_weight": 0.74,
+        "observable_only_normalized": 0.8629
+      },
+      "multi_format_adaptation": {
+        "groups": 3,
+        "lower_bound": 0.6767,
+        "upper_bound": 0.91,
+        "mean_observed_weight": 0.7667,
+        "observable_only_normalized": 0.8714
+      },
+      "packaging_sku_family": {
+        "groups": 3,
+        "lower_bound": 0.7167,
+        "upper_bound": 0.95,
+        "mean_observed_weight": 0.7667,
+        "observable_only_normalized": 0.9286
+      },
+      "reference_to_original": {
+        "groups": 5,
+        "lower_bound": 0.692,
+        "upper_bound": 0.952,
+        "mean_observed_weight": 0.74,
+        "observable_only_normalized": 0.9314
+      }
+    }
+  },
+  "dimensions": {
+    "artifact_contract": {
+      "applicable": 32,
+      "scored": 32,
+      "mean": 1.0,
+      "distribution": {
+        "1.0": 32
+      },
+      "scale": "0-1",
+      "method": "deterministic",
+      "weights_present": [
+        0.2,
+        0.3
+      ]
+    },
+    "brief_understanding": {
+      "applicable": 32,
+      "scored": 32,
+      "mean": 3.4688,
+      "distribution": {
+        "1": 1,
+        "2": 12,
+        "3": 4,
+        "4": 1,
+        "5": 14
+      },
+      "scale": "0-5",
+      "method": "gemini-2.5-pro condition-aware artifact-grounded judge-v3",
+      "weights_present": [
+        0.15
+      ]
+    },
+    "cross_asset_consistency": {
+      "applicable": 24,
+      "scored": 24,
+      "mean": 3.5,
+      "distribution": {
+        "1": 1,
+        "2": 5,
+        "3": 7,
+        "4": 3,
+        "5": 8
+      },
+      "scale": "0-5",
+      "method": "gemini-2.5-pro condition-aware artifact-grounded judge-v3",
+      "weights_present": [
+        0.15
+      ]
+    },
+    "efficiency": {
+      "applicable": 32,
+      "scored": 32,
+      "mean": 1.0,
+      "distribution": {
+        "1.0": 32
+      },
+      "scale": "0-1",
+      "method": "deterministic",
+      "weights_present": [
+        0.05,
+        0.1
+      ]
+    },
+    "recovery": {
+      "applicable": 32,
+      "scored": 0,
+      "mean": null,
+      "distribution": {},
+      "scale": null,
+      "method": "unobservable under v0.2 protocol",
+      "weights_present": [
+        0.1
+      ]
+    },
+    "revision_fidelity": {
+      "applicable": 24,
+      "scored": 24,
+      "mean": 4.875,
+      "distribution": {
+        "3": 1,
+        "4": 1,
+        "5": 22
+      },
+      "scale": "0-5",
+      "method": "gemini-2.5-pro condition-aware artifact-grounded judge-v3",
+      "weights_present": [
+        0.15
+      ]
+    },
+    "tool_execution": {
+      "applicable": 8,
+      "scored": 8,
+      "mean": 4.5,
+      "distribution": {
+        "1": 1,
+        "5": 7
+      },
+      "scale": "0-5",
+      "method": "gemini-2.5-pro condition-aware artifact-grounded judge-v3",
+      "weights_present": [
+        0.35
+      ]
+    },
+    "workflow_completion": {
+      "applicable": 24,
+      "scored": 0,
+      "mean": null,
+      "distribution": {},
+      "scale": "0-1 proxy",
+      "method": "version-progression proxy; excluded from official score bounds",
+      "weights_present": [
+        0.2
+      ],
+      "proxy_n": 24,
+      "proxy_mean": 1.0
+    }
+  },
+  "violation_ledger": {
+    "canonical_judge_v3": {
+      "CANNOT_TELL": 3,
+      "MET": 403,
+      "NOT_APPLICABLE": 6,
+      "VIOLATED": 53
+    },
+    "tool_execution_v2_crosscheck": {
+      "MET": 60,
+      "VIOLATED": 1
+    }
+  },
+  "context_ablation": {
+    "DAB-L4-BID-001": {
+      "personalized": {
+        "brief_understanding": 4,
+        "score_lower_bound": 0.58,
+        "score_upper_bound": 0.88,
+        "observable_only_normalized": 0.8286
+      },
+      "reference_grounded": {
+        "brief_understanding": 2,
+        "score_lower_bound": 0.55,
+        "score_upper_bound": 0.85,
+        "observable_only_normalized": 0.7857
+      },
+      "zero_shot": {
+        "brief_understanding": 5,
+        "score_lower_bound": 0.64,
+        "score_upper_bound": 0.94,
+        "observable_only_normalized": 0.9143
+      }
+    },
+    "DAB-L4-CAM-001": {
+      "personalized": {
+        "brief_understanding": 2,
+        "score_lower_bound": 0.55,
+        "score_upper_bound": 0.85,
+        "observable_only_normalized": 0.7857
+      },
+      "reference_grounded": {
+        "brief_understanding": 2,
+        "score_lower_bound": 0.52,
+        "score_upper_bound": 0.82,
+        "observable_only_normalized": 0.7429
+      },
+      "zero_shot": {
+        "brief_understanding": 2,
+        "score_lower_bound": 0.55,
+        "score_upper_bound": 0.85,
+        "observable_only_normalized": 0.7857
+      }
+    },
+    "DAB-L4-ECO-001": {
+      "personalized": {
+        "brief_understanding": 2,
+        "score_lower_bound": 0.52,
+        "score_upper_bound": 0.82,
+        "observable_only_normalized": 0.7429
+      },
+      "reference_grounded": {
+        "brief_understanding": 2,
+        "score_lower_bound": 0.52,
+        "score_upper_bound": 0.82,
+        "observable_only_normalized": 0.7429
+      },
+      "zero_shot": {
+        "brief_understanding": 2,
+        "score_lower_bound": 0.55,
+        "score_upper_bound": 0.85,
+        "observable_only_normalized": 0.7857
+      }
+    },
+    "DAB-L4-RTO-001": {
+      "personalized": {
+        "brief_understanding": 5,
+        "score_lower_bound": 0.7,
+        "score_upper_bound": 1.0,
+        "observable_only_normalized": 1.0
+      },
+      "reference_grounded": {
+        "brief_understanding": 3,
+        "score_lower_bound": 0.61,
+        "score_upper_bound": 0.91,
+        "observable_only_normalized": 0.8714
+      },
+      "zero_shot": {
+        "brief_understanding": 3,
+        "score_lower_bound": 0.64,
+        "score_upper_bound": 0.94,
+        "observable_only_normalized": 0.9143
+      }
+    }
+  },
+  "low_scores_0_to_2": [
+    {
+      "condition_id": "DAB-L3-ECO-002@reference_grounded",
+      "brief_id": "DAB-L3-ECO-002",
+      "category": "ecommerce_launch_suite",
+      "dimension": "brief_understanding",
+      "score": 1,
+      "why": "The agent failed to perform the core requested action of retouching the image. While it correctly preserved all invariants, it also preserved the elements it was explicitly asked to change (reflections, haze), violating a hard constraint and completely missing the point of the request.",
+      "run": "runs/dab-l3-eco-002/reference_grounded/2026-08-23T08-39-31-714Z"
+    },
+    {
+      "condition_id": "DAB-L4-MFA-002@reference_grounded",
+      "brief_id": "DAB-L4-MFA-002",
+      "category": "multi_format_adaptation",
+      "dimension": "cross_asset_consistency",
+      "score": 1,
+      "why": "The adaptation map shows a clear plan for a visually consistent set of assets. However, the entire channel pack is missing. Without any final assets, there is no 'coherent visual system' to evaluate, which constitutes a hard gate failure.",
+      "run": "runs/dab-l4-mfa-002/reference_grounded/2026-08-23T20-40-44-695Z"
+    },
+    {
+      "condition_id": "DAB-L3-ECO-002@reference_grounded",
+      "brief_id": "DAB-L3-ECO-002",
+      "category": "ecommerce_launch_suite",
+      "dimension": "tool_execution",
+      "score": 1,
+      "why": "The requested image editing operation did not occur. The output file is perceptually identical to the input, indicating a failure to execute the retouching tools to achieve the specified visual changes. The deliverable is not a retouched image.",
+      "run": "runs/dab-l3-eco-002/reference_grounded/2026-08-23T08-39-31-714Z"
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@reference_grounded",
+      "brief_id": "DAB-L4-BID-001",
+      "category": "brand_identity_directions",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly interpreted the complex workflow of diverging, clustering, awaiting selection, and converging. However, it failed on multiple explicit deliverable requirements, missing a required JSON file for the exploration map, delivering the direction boards as a single composite instead of three files, and failing to produce the final consolidated identity starter kit in the specified PNG/JSON formats. These are significant violations of the brief's output specification.",
+      "run": "runs/dab-l4-bid-001/reference_grounded/2026-08-23T09-53-38-877Z"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@personalized",
+      "brief_id": "DAB-L4-CAM-001",
+      "category": "existing_brand_campaign",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly understood the creative task, constraints, and multi-step workflow, producing a high-quality exploration and revision. However, it failed to deliver the final and most important output: the three-piece channel kit. This is a clear failure to meet a key requirement of the brief.",
+      "run": "runs/dab-l4-cam-001/personalized/2026-08-23T12-28-58-634Z"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@reference_grounded",
+      "brief_id": "DAB-L4-CAM-001",
+      "category": "existing_brand_campaign",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly understood and executed the initial exploration phase, including the divergence (9 hypotheses), clustering (3 territories), and adherence to all brand constraints. However, it failed to deliver the final, critical part of the request: the channel kit (website hero, Instagram, email header). This omission of a key deliverable indicates a significant failure to fulfill the complete brief.",
+      "run": "runs/dab-l4-cam-001/reference_grounded/2026-09-02T11-20-38-804Z"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@zero_shot",
+      "brief_id": "DAB-L4-CAM-001",
+      "category": "existing_brand_campaign",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly interpreted the creative direction, constraints, and phased workflow, including the human checkpoint. However, it failed to deliver the final and most critical part of the request: the three-asset channel kit. It also delivered the exploration map in Markdown instead of the required JSON. The failure to produce any final deliverables is a clear-cut violation of a key requirement.",
+      "run": "runs/dab-l4-cam-001/zero_shot/2026-08-23T14-12-02-470Z"
+    },
+    {
+      "condition_id": "DAB-L4-CFR-003@reference_grounded",
+      "brief_id": "DAB-L4-CFR-003",
+      "category": "client_feedback_revision",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly combined the composition and palette references and followed the multi-round revision workflow. However, it failed a key, explicit instruction in the initial brief by introducing a typo ('低躁运行') into the approved copy. This broke a hard constraint and necessitated a revision cycle.",
+      "run": "runs/dab-l4-cfr-003/reference_grounded/2026-08-23T16-28-31-869Z"
+    },
+    {
+      "condition_id": "DAB-L4-CFRY-002@reference_grounded",
+      "brief_id": "DAB-L4-CFRY-002",
+      "category": "concept_to_factory_ready",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly understood the multi-stage workflow, constraints, and the need to clarify factory parameters. However, it failed on two key deliverable requirements: the intermediate concept package was missing one file and the required JSON format, and the final factory package was missing the required PDF format. Failure to adhere to the specified deliverable manifest is a clear and significant unmet requirement.",
+      "run": "runs/dab-l4-cfry-002/reference_grounded/2026-08-23T17-11-27-952Z"
+    },
+    {
+      "condition_id": "DAB-L4-CFRY-003@reference_grounded",
+      "brief_id": "DAB-L4-CFRY-003",
+      "category": "concept_to_factory_ready",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly executed the core technical print-preparation and revision tasks. However, it failed to meet the specific deliverable packaging requirements for both the intermediate and final stages, omitting required file formats (PNG) and a required asset (version log). This indicates a significant gap in understanding the full brief.",
+      "run": "runs/dab-l4-cfry-003/reference_grounded/2026-08-23T18-25-28-541Z"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@personalized",
+      "brief_id": "DAB-L4-ECO-001",
+      "category": "ecommerce_launch_suite",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The candidate demonstrated excellent understanding of the multi-stage workflow, constraints, and the client's intent. They correctly identified a key blocker (missing asset for the 'integrated loop' feature) which prevented violation of a hard constraint. However, the primary requirement of the brief was to deliver a final suite of six assets, which is entirely missing. This is a hard gate failure. While the reason for stopping was valid, the failure to deliver the main payload makes the result largely unusable against the core business goal.",
+      "run": "runs/dab-l4-eco-001/personalized/2026-08-23T18-57-38-261Z"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@reference_grounded",
+      "brief_id": "DAB-L4-ECO-001",
+      "category": "ecommerce_launch_suite",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly understood the multi-stage workflow, constraints, and the human-in-the-loop decision process. However, it failed to deliver the primary final output of six assets, which is a critical failure to meet the brief's core objective. It also failed on intermediate deliverable counts and formats.",
+      "run": "runs/dab-l4-eco-001/reference_grounded/2026-08-23T19-19-18-385Z"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@zero_shot",
+      "brief_id": "DAB-L4-ECO-001",
+      "category": "ecommerce_launch_suite",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly followed the overall workflow, including the crucial human selection checkpoint. However, it failed on multiple explicit deliverable requirements: the exploration map and scene directions were in the wrong file formats, and the final launch suite contained the wrong mix of asset types, critically omitting a required detail page banner and a selling point image. These are significant failures to adhere to the brief's specifications.",
+      "run": "runs/dab-l4-eco-001/zero_shot/2026-08-23T19-40-40-994Z"
+    },
+    {
+      "condition_id": "DAB-L4-MFA-002@reference_grounded",
+      "brief_id": "DAB-L4-MFA-002",
+      "category": "multi_format_adaptation",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The agent correctly identified all channels and key information, and produced a valid adaptation plan. However, it completely failed to produce the primary deliverable: the seven final image files. This is a critical failure to meet a key requirement of the brief.",
+      "run": "runs/dab-l4-mfa-002/reference_grounded/2026-08-23T20-40-44-695Z"
+    },
+    {
+      "condition_id": "DAB-L4-PSF-001@reference_grounded",
+      "brief_id": "DAB-L4-PSF-001",
+      "category": "packaging_sku_family",
+      "dimension": "brief_understanding",
+      "score": 2,
+      "why": "The candidate correctly followed the complex, phased workflow (diverge-cluster-select-converge) and met all hard constraints. However, the score is low because multiple key deliverable requirements were clearly unmet: the 'coding-strategies' board failed to show the required number of SKUs, and two separate deliverables were missing their required JSON files.",
+      "run": "runs/dab-l4-psf-001/reference_grounded/2026-08-23T21-49-42-837Z"
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@personalized",
+      "brief_id": "DAB-L4-BID-001",
+      "category": "brand_identity_directions",
+      "dimension": "cross_asset_consistency",
+      "score": 2,
+      "why": "The assets that were produced (v0 concepts, v1 refinement) are internally consistent and consistent with each other across versions. However, the final and most important deliverable, the `identity-starter-kit` containing the Taobao and store material previews, is completely missing. This is a critical failure to deliver a coherent system across all required assets.",
+      "run": "runs/dab-l4-bid-001/personalized/2026-08-23T09-17-58-953Z"
+    },
+    {
+      "condition_id": "DAB-L4-BID-003@reference_grounded",
+      "brief_id": "DAB-L4-BID-003",
+      "category": "brand_identity_directions",
+      "dimension": "cross_asset_consistency",
+      "score": 2,
+      "why": "The overall set of assets is critically incomplete and inconsistent in fidelity. The required intermediate visual assets (brand_direction_board) are entirely missing, breaking the logical flow from exploration to final design. While the two final wireframes in the SVG are consistent with each other, they are inconsistent with the deliverable requirement for a final 'launch asset set'. The chain of visual consistency is broken by missing and wrong-fidelity assets.",
+      "run": "runs/dab-l4-bid-003/reference_grounded/2026-08-23T12-13-17-664Z"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@reference_grounded",
+      "brief_id": "DAB-L4-CAM-001",
+      "category": "existing_brand_campaign",
+      "dimension": "cross_asset_consistency",
+      "score": 2,
+      "why": "The assets that were produced are highly consistent. The nine KV options in v0 are well-organized into three coherent, distinct territories. The v1 revision is also consistent with the selected v0 direction. However, the score is low because the required `channel-kit` is completely missing. Without the website, Instagram, and email assets, it's impossible to verify consistency across different formats, and the primary goal of creating a coherent campaign system was not met.",
+      "run": "runs/dab-l4-cam-001/reference_grounded/2026-09-02T11-20-38-804Z"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@personalized",
+      "brief_id": "DAB-L4-ECO-001",
+      "category": "ecommerce_launch_suite",
+      "dimension": "cross_asset_consistency",
+      "score": 2,
+      "why": "The intermediate assets that were produced (v0 exploration and v1 revision) are internally consistent and adhere to the brand guidelines. However, the final, most critical deliverable—the 6-asset launch suite—is missing. Therefore, it's not possible to confirm that a coherent visual system was created for the final launch, and the core requirement of the dimension is unmet.",
+      "run": "runs/dab-l4-eco-001/personalized/2026-08-23T18-57-38-261Z"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@reference_grounded",
+      "brief_id": "DAB-L4-ECO-001",
+      "category": "ecommerce_launch_suite",
+      "dimension": "cross_asset_consistency",
+      "score": 2,
+      "why": "The few assets that were produced for the v1 revision are visually consistent with each other. However, the core requirement of a consistent 6-asset launch suite was not met because the suite is entirely missing. The failure to produce the required set represents a major failure in cross-asset consistency for the final deliverable.",
+      "run": "runs/dab-l4-eco-001/reference_grounded/2026-08-23T19-19-18-385Z"
+    }
+  ],
+  "conditions": [
+    {
+      "condition_id": "DAB-L3-BID-002@reference_grounded",
+      "brief_id": "DAB-L3-BID-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "brand_identity_directions",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l3-bid-002/reference_grounded/2026-08-23T00-23-06-765Z",
+      "latency_ms": 473831,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L3-CAM-002@reference_grounded",
+      "brief_id": "DAB-L3-CAM-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "existing_brand_campaign",
+      "primary_intent": "adapt",
+      "run": "runs/dab-l3-cam-002/reference_grounded/2026-08-23T00-49-44-645Z",
+      "latency_ms": 1212181,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L3-CFR-002@reference_grounded",
+      "brief_id": "DAB-L3-CFR-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "client_feedback_revision",
+      "primary_intent": "edit",
+      "run": "runs/dab-l3-cfr-002/reference_grounded/2026-08-23T07-50-00-204Z",
+      "latency_ms": 1969729,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L3-CFRY-001@reference_grounded",
+      "brief_id": "DAB-L3-CFRY-001",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l3-cfry-001/reference_grounded/2026-08-23T08-22-50-288Z",
+      "latency_ms": 1000903,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L3-ECO-002@reference_grounded",
+      "brief_id": "DAB-L3-ECO-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "edit",
+      "run": "runs/dab-l3-eco-002/reference_grounded/2026-08-23T08-39-31-714Z",
+      "latency_ms": 575002,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 1,
+        "tool_execution": 1
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.5,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.5,
+      "score_upper_bound": 0.6,
+      "observable_only_normalized": 0.5556
+    },
+    {
+      "condition_id": "DAB-L3-MFA-001@reference_grounded",
+      "brief_id": "DAB-L3-MFA-001",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "multi_format_adaptation",
+      "primary_intent": "adapt",
+      "run": "runs/dab-l3-mfa-001/reference_grounded/2026-08-23T08-49-07-081Z",
+      "latency_ms": 1132694,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L3-PSF-002@reference_grounded",
+      "brief_id": "DAB-L3-PSF-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "packaging_sku_family",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l3-psf-002/reference_grounded/2026-08-23T09-08-00-338Z",
+      "latency_ms": 293918,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L3-RTO-002@reference_grounded",
+      "brief_id": "DAB-L3-RTO-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "reference_to_original",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l3-rto-002/reference_grounded/2026-08-23T09-12-54-653Z",
+      "latency_ms": 304002,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@personalized",
+      "brief_id": "DAB-L4-BID-001",
+      "condition": "personalized",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-bid-001/personalized/2026-08-23T09-17-58-953Z",
+      "latency_ms": 2139610,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 4,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.58,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.58,
+      "score_upper_bound": 0.88,
+      "observable_only_normalized": 0.8286
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@reference_grounded",
+      "brief_id": "DAB-L4-BID-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-bid-001/reference_grounded/2026-08-23T09-53-38-877Z",
+      "latency_ms": 5677448,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@zero_shot",
+      "brief_id": "DAB-L4-BID-001",
+      "condition": "zero_shot",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-bid-001/zero_shot/2026-09-02T11-59-34-907Z",
+      "latency_ms": 2473826,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.64,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.64,
+      "score_upper_bound": 0.94,
+      "observable_only_normalized": 0.9143
+    },
+    {
+      "condition_id": "DAB-L4-BID-003@reference_grounded",
+      "brief_id": "DAB-L4-BID-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-bid-003/reference_grounded/2026-08-23T12-13-17-664Z",
+      "latency_ms": 940219,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 3,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@personalized",
+      "brief_id": "DAB-L4-CAM-001",
+      "condition": "personalized",
+      "level": "L4",
+      "category": "existing_brand_campaign",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-cam-001/personalized/2026-08-23T12-28-58-634Z",
+      "latency_ms": 3481993,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@reference_grounded",
+      "brief_id": "DAB-L4-CAM-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "existing_brand_campaign",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-cam-001/reference_grounded/2026-09-02T11-20-38-804Z",
+      "latency_ms": 2292441,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.52,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.52,
+      "score_upper_bound": 0.82,
+      "observable_only_normalized": 0.7429
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@zero_shot",
+      "brief_id": "DAB-L4-CAM-001",
+      "condition": "zero_shot",
+      "level": "L4",
+      "category": "existing_brand_campaign",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-cam-001/zero_shot/2026-08-23T14-12-02-470Z",
+      "latency_ms": 1660598,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857
+    },
+    {
+      "condition_id": "DAB-L4-CAM-003@reference_grounded",
+      "brief_id": "DAB-L4-CAM-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "existing_brand_campaign",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l4-cam-003/reference_grounded/2026-08-23T14-39-45-099Z",
+      "latency_ms": 3790449,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L4-CFR-001@reference_grounded",
+      "brief_id": "DAB-L4-CFR-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "client_feedback_revision",
+      "primary_intent": "edit",
+      "run": "runs/dab-l4-cfr-001/reference_grounded/2026-08-23T15-42-56-013Z",
+      "latency_ms": 2734306,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L4-CFR-003@reference_grounded",
+      "brief_id": "DAB-L4-CFR-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "client_feedback_revision",
+      "primary_intent": "edit",
+      "run": "runs/dab-l4-cfr-003/reference_grounded/2026-08-23T16-28-31-869Z",
+      "latency_ms": 2574846,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.61,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.61,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.8714
+    },
+    {
+      "condition_id": "DAB-L4-CFRY-002@reference_grounded",
+      "brief_id": "DAB-L4-CFRY-002",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-cfry-002/reference_grounded/2026-08-23T17-11-27-952Z",
+      "latency_ms": 2582706,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.61,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.61,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.8714
+    },
+    {
+      "condition_id": "DAB-L4-CFRY-003@reference_grounded",
+      "brief_id": "DAB-L4-CFRY-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-cfry-003/reference_grounded/2026-08-23T18-25-28-541Z",
+      "latency_ms": 1928891,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@personalized",
+      "brief_id": "DAB-L4-ECO-001",
+      "condition": "personalized",
+      "level": "L4",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-eco-001/personalized/2026-08-23T18-57-38-261Z",
+      "latency_ms": 1299497,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.52,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.52,
+      "score_upper_bound": 0.82,
+      "observable_only_normalized": 0.7429
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@reference_grounded",
+      "brief_id": "DAB-L4-ECO-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-eco-001/reference_grounded/2026-08-23T19-19-18-385Z",
+      "latency_ms": 1281816,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.52,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.52,
+      "score_upper_bound": 0.82,
+      "observable_only_normalized": 0.7429
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@zero_shot",
+      "brief_id": "DAB-L4-ECO-001",
+      "condition": "zero_shot",
+      "level": "L4",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-eco-001/zero_shot/2026-08-23T19-40-40-994Z",
+      "latency_ms": 1516992,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857
+    },
+    {
+      "condition_id": "DAB-L4-ECO-003@reference_grounded",
+      "brief_id": "DAB-L4-ECO-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l4-eco-003/reference_grounded/2026-08-23T20-05-58-724Z",
+      "latency_ms": 2085347,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 4,
+        "cross_asset_consistency": 4
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.64,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.64,
+      "score_upper_bound": 0.94,
+      "observable_only_normalized": 0.9143
+    },
+    {
+      "condition_id": "DAB-L4-MFA-002@reference_grounded",
+      "brief_id": "DAB-L4-MFA-002",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "multi_format_adaptation",
+      "primary_intent": "adapt",
+      "run": "runs/dab-l4-mfa-002/reference_grounded/2026-08-23T20-40-44-695Z",
+      "latency_ms": 1460794,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 3,
+        "cross_asset_consistency": 1
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.43,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.43,
+      "score_upper_bound": 0.73,
+      "observable_only_normalized": 0.6143
+    },
+    {
+      "condition_id": "DAB-L4-MFA-003@reference_grounded",
+      "brief_id": "DAB-L4-MFA-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "multi_format_adaptation",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-mfa-003/reference_grounded/2026-08-23T21-05-06-612Z",
+      "latency_ms": 2675481,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L4-PSF-001@reference_grounded",
+      "brief_id": "DAB-L4-PSF-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "packaging_sku_family",
+      "primary_intent": "adapt",
+      "run": "runs/dab-l4-psf-001/reference_grounded/2026-08-23T21-49-42-837Z",
+      "latency_ms": 2655962,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857
+    },
+    {
+      "condition_id": "DAB-L4-PSF-003@reference_grounded",
+      "brief_id": "DAB-L4-PSF-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "packaging_sku_family",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-psf-003/reference_grounded/2026-08-23T22-33-59-506Z",
+      "latency_ms": 2013704,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@personalized",
+      "brief_id": "DAB-L4-RTO-001",
+      "condition": "personalized",
+      "level": "L4",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-rto-001/personalized/2026-08-23T23-07-33-959Z",
+      "latency_ms": 1501836,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@reference_grounded",
+      "brief_id": "DAB-L4-RTO-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-rto-001/reference_grounded/2026-08-23T23-32-36-648Z",
+      "latency_ms": 1426895,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 3,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 4
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.61,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.61,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.8714
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@zero_shot",
+      "brief_id": "DAB-L4-RTO-001",
+      "condition": "zero_shot",
+      "level": "L4",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-rto-001/zero_shot/2026-08-23T23-56-24-267Z",
+      "latency_ms": 1661305,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 3,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.64,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.64,
+      "score_upper_bound": 0.94,
+      "observable_only_normalized": 0.9143
+    },
+    {
+      "condition_id": "DAB-L4-RTO-003@reference_grounded",
+      "brief_id": "DAB-L4-RTO-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "reference_to_original",
+      "primary_intent": "edit",
+      "run": "runs/dab-l4-rto-003/reference_grounded/2026-08-24T00-51-09-849Z",
+      "latency_ms": 2295659,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 3,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 4
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.61,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.61,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.8714
+    }
+  ],
+  "measurement_limits": [
+    "workflow_completion is only a version-progression proxy because checkpoint events are not protocol-bound",
+    "recovery is unobservable because recovery events/check identifiers are not protocol-bound",
+    "judge-v3 is an independent model judge, not human ground truth",
+    "judge-v2 is retained only as an invalidated audit artifact because it lacked condition-aware queries and complete evaluator inventory",
+    "tool-execution judge-v1 was invalidated by counterfactual controls and is excluded"
+  ]
+}

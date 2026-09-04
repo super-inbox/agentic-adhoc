@@ -1,0 +1,173 @@
+{
+  "baseline_id": "codex-21q-single-turn-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "categories": {
+    "Brand Identity": {
+      "n": 2,
+      "weighted_design_mean": 0.53287
+    },
+    "Industrial/Product": {
+      "n": 4,
+      "weighted_design_mean": 0.788369
+    },
+    "Marketing Creative": {
+      "n": 9,
+      "weighted_design_mean": 0.587229
+    },
+    "Merch": {
+      "n": 2,
+      "weighted_design_mean": 0.629738
+    },
+    "Packaging": {
+      "n": 4,
+      "weighted_design_mean": 0.508391
+    }
+  },
+  "coverage": {
+    "dataset_cases": 21,
+    "independent_judge_blocked": 0,
+    "independent_judge_completed": 21,
+    "selected_completed_runs": 21
+  },
+  "dimensions": {
+    "brand_consistency": {
+      "mean": 1.0,
+      "n": 2
+    },
+    "brief_adherence": {
+      "mean": 0.438095,
+      "n": 21
+    },
+    "creative_diversity": {
+      "mean": 0.4,
+      "n": 6
+    },
+    "cross_asset_consistency": {
+      "mean": 0.5,
+      "n": 6
+    },
+    "efficiency": {
+      "mean": 0.815907,
+      "n": 21
+    },
+    "production_readiness": {
+      "mean": 0.761905,
+      "n": 21
+    },
+    "refinement_ability": {
+      "mean": 0.375,
+      "n": 8
+    },
+    "visual_quality": {
+      "mean": 0.714286,
+      "n": 21
+    }
+  },
+  "first_attempt_reliability": {
+    "automatic_retries": 0,
+    "completed": 20,
+    "timeout_task_ids": [
+      "TIQ-098"
+    ],
+    "total": 21
+  },
+  "hard_gates": {
+    "all_inputs_consumed": {
+      "passed": 21,
+      "total": 21
+    },
+    "artifact_contract": {
+      "passed": 13,
+      "total": 21
+    },
+    "completed": {
+      "passed": 21,
+      "total": 21
+    },
+    "judge_coverage": {
+      "passed": 21,
+      "total": 21
+    },
+    "judge_no_fatal_issues": {
+      "passed": 19,
+      "total": 21
+    },
+    "production_gate": {
+      "passed": 15,
+      "total": 21
+    }
+  },
+  "judge_attempts": {
+    "failed_response_contract_attempts": [
+      {
+        "error": "ValueError: Independent judge omitted dimensions: visual_quality",
+        "task_id": "AR-012"
+      },
+      {
+        "error": "ValueError: Independent judge omitted dimensions: visual_quality",
+        "task_id": "AR-012"
+      }
+    ],
+    "raw": 23,
+    "selected_successful": 21
+  },
+  "latency_ms": {
+    "max": 709421.0,
+    "mean": 216311.048,
+    "median": 151270.0,
+    "n": 21,
+    "p95_nearest_rank": 510389.0
+  },
+  "lowest_weighted_cases": [
+    {
+      "benchmark_total_score": 0.0,
+      "task_id": "AR-005",
+      "weighted_design_score": 0.16
+    },
+    {
+      "benchmark_total_score": 0.21345955738040262,
+      "task_id": "AR-003",
+      "weighted_design_score": 0.21345955738040262
+    },
+    {
+      "benchmark_total_score": 0.22540761863409503,
+      "task_id": "AR-001",
+      "weighted_design_score": 0.22540761863409503
+    },
+    {
+      "benchmark_total_score": 0.0,
+      "task_id": "TIQ-084",
+      "weighted_design_score": 0.23076923076923078
+    },
+    {
+      "benchmark_total_score": 0.23076923076923078,
+      "task_id": "TIQ-085",
+      "weighted_design_score": 0.23076923076923078
+    }
+  ],
+  "schema_version": "codex-21q-single-turn-summary-v1",
+  "selected_quality_baseline": {
+    "benchmark_total_mean": 0.413752,
+    "case_passes": 8,
+    "completed": 21,
+    "pass_threshold": 0.7,
+    "posthoc_completion_reruns": [
+      "TIQ-098"
+    ],
+    "weighted_design_mean": 0.609396
+  },
+  "selected_usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 6875264,
+    "input_tokens": 7683038,
+    "output_tokens": 146020,
+    "reasoning_output_tokens": 72538
+  }
+}

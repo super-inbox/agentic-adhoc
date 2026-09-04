@@ -49,7 +49,7 @@ class JudgeResult:
     dimensions: dict[str, DimensionJudgment]
     fatal_issues: list[str]
     model: str
-    judge_version: str = "judge-v2"
+    judge_version: str = "judge-v2.1"
     independent: bool = True
     mock: bool = False
 
@@ -211,6 +211,49 @@ Return only JSON with exactly one entry for every requested dimension:
             contents=parts,
             config=types.GenerateContentConfig(
                 response_modalities=["TEXT"],
+                response_mime_type="application/json",
+                response_json_schema={
+                    "type": "object",
+                    "properties": {
+                        "dimensions": {
+                            "type": "array",
+                            "minItems": len(required),
+                            "maxItems": len(required),
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "enum": sorted(required),
+                                    },
+                                    "score": {"type": "number", "minimum": 0, "maximum": 5},
+                                    "rationale": {"type": "string"},
+                                    "evidence": {
+                                        "type": "array",
+                                        "items": {"type": "string"},
+                                    },
+                                    "confidence": {
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1,
+                                    },
+                                },
+                                "required": [
+                                    "name",
+                                    "score",
+                                    "rationale",
+                                    "evidence",
+                                    "confidence",
+                                ],
+                            },
+                        },
+                        "fatal_issues": {
+                            "type": "array",
+                            "items": {"type": "string"},
+                        },
+                    },
+                    "required": ["dimensions", "fatal_issues"],
+                },
                 temperature=0,
             ),
         )
@@ -221,7 +264,25 @@ Return only JSON with exactly one entry for every requested dimension:
         )
 
     async def evaluate(self, request: JudgeRequest) -> JudgeResult:
-        return await asyncio.to_thread(self._evaluate_sync, request)
+        # Retry only transport/quota transients. Invalid evidence (for example an
+        # unsupported MIME type) must remain a visible harness error.
+        transient_markers = (
+            "429",
+            "resource_exhausted",
+            "temporarily unavailable",
+            "deadline_exceeded",
+            "internal",
+            "503",
+        )
+        for attempt in range(3):
+            try:
+                return await asyncio.to_thread(self._evaluate_sync, request)
+            except Exception as exc:
+                message = f"{type(exc).__name__}: {exc}".lower()
+                if attempt == 2 or not any(marker in message for marker in transient_markers):
+                    raise
+                await asyncio.sleep(5 * (2**attempt))
+        raise AssertionError("unreachable")
 
 
 def _decoded_images(images: list[JudgeImage]) -> list[Image.Image]:

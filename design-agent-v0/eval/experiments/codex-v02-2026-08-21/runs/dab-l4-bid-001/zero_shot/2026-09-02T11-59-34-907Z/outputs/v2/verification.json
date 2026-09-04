@@ -1,0 +1,102 @@
+{
+  "version": "v2",
+  "verified_at": "2026-09-02T08:33:54-04:00",
+  "checkpoint": "taobao_main_image_delta_edit_input_checkpoint",
+  "overall_status": "blocked_by_missing_edit_target",
+  "image_edit_status": "not_run_missing_target",
+  "checks": [
+    {
+      "id": "taobao_edit_target_inventory",
+      "status": "blocked",
+      "method": "Workspace file inventory and filename/content search",
+      "result": "No current Taobao main image or editable source exists in inputs, outputs/v0, outputs/v1, or the workspace root. The price-label and selling-point regions therefore cannot be localized.",
+      "evidence_paths": [
+        "outputs/v2/change-request.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "earlier_scope_history",
+      "status": "pass",
+      "method": "v0 and v1 verification inspection",
+      "result": "Both earlier versions explicitly record that no Taobao main image was produced, confirming that no prior artifact can serve as the edit target.",
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v1/verification.json"
+      ]
+    },
+    {
+      "id": "client_delta_captured",
+      "status": "pass",
+      "method": "State and change-request inspection",
+      "result": "v2 records exactly two authorized image changes: remove the price label and reduce the existing selling-point copy to one sentence.",
+      "evidence_paths": [
+        "outputs/v2/change-request.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "approved_gift_box_and_system_locked",
+      "status": "pass",
+      "method": "Project-state inspection and artifact hash preservation",
+      "result": "The v1 gift-box direction is recorded as approved, Territory B is locked, and no v1 visual artifact was modified or recreated.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png",
+        "outputs/v1/b-layers-in-light-v1-refinement-board.png"
+      ]
+    },
+    {
+      "id": "no_unauthorized_reconstruction",
+      "status": "pass",
+      "method": "v2 artifact inventory",
+      "result": "No replacement Taobao main image, invented price/promotion copy, invented selling-point claim, gift-box redesign, or visual-system redesign was created while the target is missing.",
+      "evidence_paths": [
+        "outputs/v2/change-request.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "v0_preserved",
+      "status": "pass",
+      "method": "SHA-256 comparison with outputs/v0/verification.json",
+      "result": "All 4 artifact hashes recorded in v0 still match.",
+      "evidence_paths": [
+        "outputs/v0/verification.json"
+      ]
+    },
+    {
+      "id": "v1_preserved",
+      "status": "pass",
+      "method": "SHA-256 comparison with outputs/v1/verification.json",
+      "result": "All 8 artifact hashes recorded in v1 still match.",
+      "evidence_paths": [
+        "outputs/v1/verification.json"
+      ]
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v2/change-request.md": "d2728600796939bd4c525ed1ba61c043fcb28fb42e2fcca9be143526dc403a3f",
+    "outputs/project-state.json": "f51f8a30ba192ffa8cba073a08adb2709bfe11c01c19c3a7014cdf910acc3254"
+  },
+  "unresolved_blockers": [
+    {
+      "id": "taobao_main_image_target_missing",
+      "blocks": [
+        "price_label_localization_and_removal",
+        "background_reconstruction_under_price_label",
+        "selling_point_copy_reduction",
+        "unrelated_pixel_preservation_verification"
+      ],
+      "needed": "Current full-resolution Taobao main image or editable source containing the price label and existing selling-point copy."
+    },
+    {
+      "id": "selling_point_source_may_be_missing",
+      "conditional": true,
+      "blocks": [
+        "faithful_one_sentence_rewrite"
+      ],
+      "needed": "Existing selling-point text verbatim, only if it is not legible in the supplied main-image file."
+    }
+  ]
+}

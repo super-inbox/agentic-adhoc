@@ -63,20 +63,24 @@ v0.2 workflow result because it omits feedback handling and state continuity.
 
 ## Status
 
-Final candidate-execution snapshot captured on 2026-08-24:
+Final candidate-execution and scoring snapshot captured on 2026-09-02:
 
-- 30/32 conditions completed their full multi-turn episodes successfully;
-- 2/32 reached the 45-minute candidate turn timeout and are retained as reliability/efficiency
-  evidence:
-  - `DAB-L4-BID-001@zero_shot`;
-  - `DAB-L4-CAM-001@reference_grounded`;
-- no condition remains in an unresolved infrastructure-error state.
+- **32/32 conditions** completed their full episodes, covering all 24 base briefs;
+- the two conditions that previously reached the 45-minute turn timeout were completed by fresh
+  attempts with a 60-minute per-turn ceiling:
+  - `DAB-L4-BID-001@zero_shot`: 4/4 turns, 41.23 minutes total;
+  - `DAB-L4-CAM-001@reference_grounded`: 2/2 turns, 38.21 minutes total;
+- old errors and timeouts remain in the ledger as reliability evidence; they were not deleted or
+  rewritten.
 
-`run-index.jsonl` is the authoritative public attempt ledger and contains 64 attempts for 32 unique
-conditions. Status totals use the latest attempt for each condition. One
-`DAB-L4-RTO-003@reference_grounded` attempt was interrupted by a network disconnect after five
-automatic reconnects; that failed attempt is retained for observability and is superseded by the
-successful full-episode rerun immediately after it.
+`run-index.jsonl` is the authoritative public attempt ledger and contains **66 attempts** for 32
+unique conditions: 32 completed, 31 error, and 3 timeout. The latest attempt for every condition is
+completed. Quality scoring selects exactly one latest primary completed attempt per condition, so
+retries and the duplicate successful `DAB-L4-CFR-003@reference_grounded` attempt cannot silently
+change means.
 
-This status covers candidate execution and artifact/trajectory capture. Independent `judge-v2`
-scoring is a separate experiment stage and is not implied by the 30/32 completion count.
+Canonical quality results are in [`RESULTS.md`](RESULTS.md). The condition-aware, artifact-grounded
+judge-v3 covers every completed condition; deterministic scorers cover artifact contract and turn
+efficiency. Workflow completion remains a labelled proxy and recovery remains unobservable under
+the current event/check vocabulary, so the report gives a full-rubric interval rather than an
+invented point estimate.

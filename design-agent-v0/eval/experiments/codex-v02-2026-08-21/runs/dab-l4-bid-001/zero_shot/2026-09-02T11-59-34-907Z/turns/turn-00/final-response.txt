@@ -1,0 +1,18 @@
+v0 方向选择稿已完成，共 12 个低成本假设、3 个差异化 Creative Territories：
+
+- **01 新中礼序**：礼赠秩序最强；食欲较弱，红金失控会显老。
+- **02 酥层见光**：食欲与工艺最直接；依赖高质量拍摄，易落入普通烘焙广告。
+- **03 1998 酥点档案**：资历与体系感最鲜明；即时食欲较弱，需要更多已核实史料。
+
+主要交付：
+
+- [三方向总览](<WORKDIR>/outputs/v0/creative-territories-overview.png)
+- [完整假设、延展逻辑与取舍说明](<WORKDIR>/outputs/v0/creative-territories.md)
+- [01 新中礼序方向板](<WORKDIR>/outputs/v0/territory-01-new-chinese-ritual-board.png)
+- [02 酥层见光方向板](<WORKDIR>/outputs/v0/territory-02-layers-in-light-board.png)
+- [03 1998 酥点档案方向板](<WORKDIR>/outputs/v0/territory-03-1998-pastry-archive-board.png)
+- [验证记录](<WORKDIR>/outputs/v0/verification.json) · [项目状态](<WORKDIR>/outputs/project-state.json)
+
+现有 Logo 使用原图像素裁切并锁定；辅助视觉采用内置图像生成模式，未生成或重绘 Logo，[完整提示词记录在此](<WORKDIR>/outputs/v0/imagegen-prompts.md)。
+
+当前已停在选择检查点。请回复 `01 / 02 / 03`，或指定要保留／淘汰的假设编号。附件未提供中文品牌名准确字样或标准字源文件，因此本轮没有猜写；选定方向后、进入精修前需要补充。

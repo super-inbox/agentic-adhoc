@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.2",
+  "current_version": "v1",
+  "status": "v1_kv_revision_ready",
+  "client_decisions": [
+    {
+      "id": "campaign_scope",
+      "value": "night fragrance launch"
+    },
+    {
+      "id": "positioning",
+      "value": "quiet, low-stimulation, pre-night ritual; no medical sleep-aid framing"
+    },
+    {
+      "id": "sequence",
+      "value": "select one KV before channel extensions"
+    },
+    {
+      "id": "approved_copy",
+      "value": [
+        "Quiet hours, made tangible.",
+        "让夜晚慢下来。"
+      ]
+    },
+    {
+      "id": "kv_selection",
+      "value": "B3 Curtain Hour",
+      "state": "selected",
+      "source": "client selected the darker direction; B3 was the lowest-luminance v0 candidate"
+    }
+  ],
+  "locked_items": [
+    {
+      "id": "logo",
+      "value": "MORI wordmark from supplied brand board",
+      "source": "inputs/01-brand_guideline.png",
+      "policy": "preserve"
+    },
+    {
+      "id": "palette",
+      "value": {
+        "charcoal": "#3A3A38",
+        "cream": "#EDE8D4",
+        "olive": "#879466",
+        "terracotta": "#AF543F",
+        "pale_blue": "#B7D2D9"
+      },
+      "policy": "cream and terracotta required in every KV"
+    },
+    {
+      "id": "product_identity",
+      "value": "supplied bottle photo, bottle geometry and blank label unchanged",
+      "source": "inputs/02-launch_product.png",
+      "sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286",
+      "policy": "preserve_exact"
+    },
+    {
+      "id": "claims",
+      "value": "no treatment, insomnia-improvement, efficacy, clinical, or medical implication",
+      "policy": "must_avoid"
+    }
+  ],
+  "changed_items": [
+    {
+      "version": "v0",
+      "item": "kv_hypotheses",
+      "change": "created 9 low-cost KV hypotheses"
+    },
+    {
+      "version": "v0",
+      "item": "creative_territories",
+      "change": "clustered hypotheses into A Still Horizon, B Held Moment, and C Tactile Echo"
+    },
+    {
+      "version": "v0",
+      "item": "channel_extensions",
+      "change": "not started; intentionally gated by KV selection"
+    },
+    {
+      "version": "v1",
+      "item": "selected_kv",
+      "change": "B3 Curtain Hour carried forward as the objectively darkest v0 candidate"
+    },
+    {
+      "version": "v1",
+      "item": "product_grounding",
+      "change": "removed the floating photo tile; placed the locked source product at the same perceived scale and position on a real tabletop with a short contact shadow"
+    },
+    {
+      "version": "v1",
+      "item": "lighting",
+      "change": "retained the nighttime atmosphere and right-side direction while broadening and softening the side light"
+    },
+    {
+      "version": "v1",
+      "item": "preserved_items",
+      "change": "Logo, approved copy, typography coordinates, palette, bottle geometry, blank label, curtain rhythm, and terracotta curtain placement remain unchanged"
+    }
+  ],
+  "pending_decisions": [],
+  "pending_work": [
+    {
+      "item": "channel_extensions",
+      "state": "not_started_in_this_delta_turn",
+      "includes": [
+        "website hero",
+        "Instagram portrait",
+        "email header"
+      ]
+    }
+  ],
+  "artifact_paths": {
+    "overview_board": "outputs/v0/boards/mori-kv-territory-overview_v0.png",
+    "territory_notes": "outputs/v0/territory-rationale.md",
+    "imagegen_prompts": "outputs/v0/imagegen-prompts.md",
+    "render_script": "outputs/v0/render_kv_concepts.py",
+    "kv_candidates": [
+      "outputs/v0/kvs/kv-a1_clay-horizon.png",
+      "outputs/v0/kvs/kv-a2_paper-fold.png",
+      "outputs/v0/kvs/kv-a3_quiet-aperture.png",
+      "outputs/v0/kvs/kv-b1_linen-pause.png",
+      "outputs/v0/kvs/kv-b2_ritual-tray.png",
+      "outputs/v0/kvs/kv-b3_curtain-hour.png",
+      "outputs/v0/kvs/kv-c1_vein-relief.png",
+      "outputs/v0/kvs/kv-c2_quiet-ripple.png",
+      "outputs/v0/kvs/kv-c3_woven-signal.png"
+    ],
+    "previous_verification": "outputs/v0/verification.json",
+    "revised_kv": "outputs/v1/kvs/kv-b3_curtain-hour-grounded_v1.png",
+    "revised_background": "outputs/v1/assets/b3-curtain-hour_tabletop-background_v1.png",
+    "v1_imagegen_prompt": "outputs/v1/imagegen-prompt.md",
+    "v1_render_script": "outputs/v1/render_b3_grounded_v1.py",
+    "verification": "outputs/v1/verification.json"
+  }
+}

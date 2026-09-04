@@ -16,6 +16,12 @@ from judge_v2 import (
 
 
 FULL_STAGES = {"UNDERSTAND", "PLAN", "GENERATE", "VERIFY", "PRESENT"}
+GEMINI_INLINE_IMAGE_TYPES = {
+    "image/png",
+    "image/jpeg",
+    "image/webp",
+    "image/gif",
+}
 
 
 def _score(name: str, value: float | bool | None, **metadata: Any) -> Score:
@@ -352,7 +358,10 @@ def _judge_evidence_from_output(
         if attachment is None:
             continue
         content_type = str(artifact.get("content_type") or "application/octet-stream")
-        if content_type.startswith("image/"):
+        # Gemini's inline-image API does not accept SVG. Keep vector files in
+        # the artifact/production contract, but do not send them as raster
+        # visual evidence. These cases also contain rendered PNG/PDF evidence.
+        if content_type.lower() in GEMINI_INLINE_IMAGE_TYPES:
             images.append(
                 JudgeImage(
                     label=str(artifact.get("label") or artifact.get("filename") or "output"),

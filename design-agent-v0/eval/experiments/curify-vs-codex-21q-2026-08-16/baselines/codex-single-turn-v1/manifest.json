@@ -1,0 +1,465 @@
+{
+  "baseline_id": "codex-21q-single-turn-v1",
+  "baseline_sha256": "3f201c2e37bcbfb5a57b4fe329dcd54f90fb9124032ea04616c18e55073461e2",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "ephemeral"
+  },
+  "dataset": {
+    "name": "design-agent-bench-v0.1-multimodal-pilot",
+    "pack_version": "v0.2",
+    "published_file_sha256": "2aab6aa6643b5c0be2cba89455d8caa7f8b5b6c2cdffc161f8333d7a53a8c370",
+    "row_count": 21,
+    "task_ids": [
+      "AR-001",
+      "AR-002",
+      "AR-003",
+      "AR-004",
+      "AR-005",
+      "AR-006",
+      "AR-007",
+      "AR-008",
+      "AR-009",
+      "AR-010",
+      "AR-011",
+      "AR-012",
+      "TIQ-029",
+      "TIQ-070",
+      "TIQ-084",
+      "TIQ-085",
+      "TIQ-086",
+      "TIQ-088",
+      "TIQ-096",
+      "TIQ-098",
+      "TIQ-100"
+    ],
+    "upstream_pre_export_sha256": "4eca24ca324737767bc54bfd24e1f5478851a5ca42c79aeecb249f3d9216eaa1"
+  },
+  "file_sha256": {
+    "dataset.jsonl": "2aab6aa6643b5c0be2cba89455d8caa7f8b5b6c2cdffc161f8333d7a53a8c370",
+    "judge-v2.1.results.jsonl": "bf5fae01378b4aa6d1e691a10e74f292a04b4078ed8194bfff2dd6d933b14428",
+    "results.jsonl": "d3cc0be7554351dc5b610d24121b90c179b6c272bd02a9510e5c7a955fe6ca14",
+    "scripts/freeze_codex_single_turn.py": "e7aa7df167bc7d6ba4c4569ea53a9c7ca20f34352baa99ca679ed125432245b4",
+    "scripts/judge_v2.py": "f86232e98cb2dd4787fc33f0d1fd14a4255dea6e3d51e4801277877b7804b506",
+    "scripts/run_codex_benchmark.mjs": "64219f9c977ea20b9cb11114dd55dbb3568de68f27ce8f4ef41c7dbfa76eaaa3",
+    "scripts/run_full_comparison.py": "12d4d40a793074fdbcefe649ccc5b1567c7f4c34e11f2202aafa2823a9df1c2f",
+    "scripts/scorers.py": "35ce38a7ac6ce588adbf9ad0b4d73a4de0a979a0ff5529225b446a56c4629178",
+    "summary.json": "d18cc7a6974bc30eb9adb50ba061e7979b5efa0d02ac368a9c12d4bbe1ff7ba3"
+  },
+  "frozen_at": "2026-09-04T01:09:31.432932Z",
+  "judge": {
+    "candidate_identity_hidden": true,
+    "canonical_selection": "latest successful judgment per task",
+    "coverage": "21/21",
+    "evidence_adapter": "supported raster images + text evidence; SVG retained for contracts but not sent as inline image",
+    "model": "gemini-2.5-pro",
+    "name": "judge-v2.1",
+    "raw_attempts": 23,
+    "response_contract": "Prompt-enforced JSON for the first 20 successful rows; schema-constrained retry for AR-012 after two malformed responses; rubric and scoring prompt unchanged",
+    "temperature": 0
+  },
+  "notes": [
+    "This freezes a Codex-only quality baseline; it is not a new Curify comparison.",
+    "Historical Flash and partial Pro scores are excluded from canonical results.",
+    "The posthoc TIQ-098 rerun must not be used to claim 21/21 first-attempt reliability.",
+    "AR-012 required a response-format retry; the two omitted-dimension attempts remain in the raw judge ledger.",
+    "Host-specific home and temporary paths are redacted in the committed raw ledger and completion-run text files."
+  ],
+  "protocol": {
+    "automatic_generation_retries": 0,
+    "first_attempt_result": "20/21 completed; TIQ-098 timed out at 15 minutes",
+    "posthoc_completion_reruns": [
+      "TIQ-098"
+    ],
+    "quality_baseline_selection": "latest completed run per task",
+    "reliability_and_quality_are_reported_separately": true,
+    "session_per_selected_run": "ephemeral",
+    "user_turns": 1
+  },
+  "schema_version": "codex-21q-single-turn-freeze-v1",
+  "selected_runs": [
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 131453,
+      "outcome": "completed",
+      "result_sha256": "b15417d80a8a41f23b8ae8349f47837995ad8ec1f8112ba21333b0e33b90f66e",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-001",
+      "run_tree_sha256": "788106d258fccaa0f01083dc3587461498c2740915b806b8f07234910a408b57",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-001",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 200960,
+        "input_tokens": 224683,
+        "output_tokens": 3117,
+        "reasoning_output_tokens": 1680
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 246999,
+      "outcome": "completed",
+      "result_sha256": "fe95922f2e6093ee5394da10aa8e57acdfc53cf63349639487d84759ebf42111",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-002",
+      "run_tree_sha256": "890e5f925689fb15f0cc0aa402efdc6093228dd203a3adf645284b7d3fd65e73",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-002",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 508032,
+        "input_tokens": 559618,
+        "output_tokens": 8181,
+        "reasoning_output_tokens": 4790
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 166964,
+      "outcome": "completed",
+      "result_sha256": "329f9c6329c996f0bf07ff78774032512bf1501996ff7e9ac71db4a496ce4fca",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-003",
+      "run_tree_sha256": "986d820a987f2ed8208baa98d4219c14733e3c7b287590d7016efd120facbe22",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-003",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 186112,
+        "input_tokens": 213629,
+        "output_tokens": 2938,
+        "reasoning_output_tokens": 1573
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 52415,
+      "outcome": "completed",
+      "result_sha256": "6b7389f2a12d5eec1468ec27471e5fe14b9cb3e1ce230d3eb6802ec9bbe8ef02",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-004",
+      "run_tree_sha256": "45249157d5ee1645dafa924f59101e1606a4d1b9d607090f912d85eb326b0cec",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-004",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 59648,
+        "input_tokens": 71598,
+        "output_tokens": 2037,
+        "reasoning_output_tokens": 771
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 33054,
+      "outcome": "completed",
+      "result_sha256": "0624a9b00ab75303568efc2e8a4e1a3865c71cbca8b3004f9f4dcbf5ce2d55f2",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-005",
+      "run_tree_sha256": "8a252c70dff5b2bb90ab45ba0c57f364eeed1a5b91e8ee0cddedd7144d564339",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-005",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 43520,
+        "input_tokens": 53004,
+        "output_tokens": 1346,
+        "reasoning_output_tokens": 574
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 37375,
+      "outcome": "completed",
+      "result_sha256": "96e1bde9393c7fbb4fe56a4668d0de3e65835b7ed6f6ca3ef59e1f4d4012aede",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-006",
+      "run_tree_sha256": "c6940df8b0a626f800a5653a5f639bf2f3798def1bf3bb515ec83c823c37b0ef",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-006",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 59648,
+        "input_tokens": 69763,
+        "output_tokens": 1067,
+        "reasoning_output_tokens": 440
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 2,
+      "latency_ms": 200906,
+      "outcome": "completed",
+      "result_sha256": "52edc29c0cef5c3a93c6f58b41bf8da95d7f2a467a82159cc0d618987bec30b7",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-007",
+      "run_tree_sha256": "cfd63ddf69b75193b2f0d919de938467a05aa076444e3ba5efdefe1d50391721",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-007",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 229888,
+        "input_tokens": 270194,
+        "output_tokens": 3461,
+        "reasoning_output_tokens": 1307
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 2,
+      "latency_ms": 115530,
+      "outcome": "completed",
+      "result_sha256": "16d36db1d540b4cde45387d4f119c2cc0e6d5abae5bb016f86dd3ce57202697b",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-008",
+      "run_tree_sha256": "1ef1da4f3dd04b0d4f46f5d1c3d65bafe1cf2c68b848ed95a738548adcc888a5",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-008",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 230272,
+        "input_tokens": 262396,
+        "output_tokens": 3256,
+        "reasoning_output_tokens": 1483
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 3,
+      "latency_ms": 160198,
+      "outcome": "completed",
+      "result_sha256": "9f4b5dff5f8453f8c8cb8c911cd759ac3153cd1d6cef8e4922bd57971826ebe9",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-009",
+      "run_tree_sha256": "698250838c0dd60413265b6c8c48154954ecbd9bf32f82bf55b5b1ba04165aa8",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-009",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 186240,
+        "input_tokens": 224481,
+        "output_tokens": 4555,
+        "reasoning_output_tokens": 2704
+      }
+    },
+    {
+      "artifact_count": 4,
+      "input_asset_count": 1,
+      "latency_ms": 510389,
+      "outcome": "completed",
+      "result_sha256": "e58e76e8dccad6942d865be9c6d841b8c73e9dcbdc35d27ec17795dc46225fe3",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-010",
+      "run_tree_sha256": "ef0f9360b44cf664f23f1b12ca48490c09a04a05354077bb735db37a67d66414",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-010",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 505600,
+        "input_tokens": 572997,
+        "output_tokens": 23370,
+        "reasoning_output_tokens": 11916
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 464517,
+      "outcome": "completed",
+      "result_sha256": "3daeba50be194343b2e06a807fe55b4257c9e16d33a0b8beadad392f61e47868",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-011",
+      "run_tree_sha256": "99792b54c0039c953a635214c647b1e909892a92bfd2be1791799ba06e61d2a8",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-011",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 712192,
+        "input_tokens": 760803,
+        "output_tokens": 21768,
+        "reasoning_output_tokens": 12595
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 224320,
+      "outcome": "completed",
+      "result_sha256": "5b7b97a202611bd47285c4db688ff1a082a05a3fb2d76ea7ae1d19ad0d166a95",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/AR-012",
+      "run_tree_sha256": "3014cc369532cb38b04e269d2566d692f171fac5eea8f4cc50d3cb6b88769cbd",
+      "selection_reason": "original_frozen_run",
+      "task_id": "AR-012",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 471296,
+        "input_tokens": 514372,
+        "output_tokens": 9443,
+        "reasoning_output_tokens": 4460
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 151270,
+      "outcome": "completed",
+      "result_sha256": "9a994de52773cbd46b942200f11a128799107c82a13daab8ba8733685b4f08c8",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/TIQ-029",
+      "run_tree_sha256": "306e9df3183656d2693bc766c74159d5182df51efdca12135e39331b8d306dfa",
+      "selection_reason": "original_frozen_run",
+      "task_id": "TIQ-029",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 185344,
+        "input_tokens": 215229,
+        "output_tokens": 4034,
+        "reasoning_output_tokens": 2224
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 110366,
+      "outcome": "completed",
+      "result_sha256": "e09534276118251f771ee72c98a1ef937491e53a325d263ab91a7b503db422f6",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/TIQ-070",
+      "run_tree_sha256": "068492956c901ea44a81ea7167cebbc8de05fe36b0583650c024c8e0cb3d5547",
+      "selection_reason": "original_frozen_run",
+      "task_id": "TIQ-070",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 217344,
+        "input_tokens": 243484,
+        "output_tokens": 3312,
+        "reasoning_output_tokens": 1726
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 111704,
+      "outcome": "completed",
+      "result_sha256": "69a7a929cf4a77ac8bbb4e6205e34b5a27609a0de6d71465d8b86e2473bd129a",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/TIQ-084",
+      "run_tree_sha256": "78106d302775b9224e8206c8377787e3531478f088f5b383d9f39baa434ccff1",
+      "selection_reason": "original_frozen_run",
+      "task_id": "TIQ-084",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 237056,
+        "input_tokens": 311328,
+        "output_tokens": 3259,
+        "reasoning_output_tokens": 1179
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 119143,
+      "outcome": "completed",
+      "result_sha256": "26eab40dc3021b0559e8bfb9f8fae5b9c5a3cd62e8e5b8518e698ebb6f505931",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/TIQ-085",
+      "run_tree_sha256": "6a926abe14a8cef5cb1131124c9e211494ef9dbef69dafac329bd8ea6aa38a2e",
+      "selection_reason": "original_frozen_run",
+      "task_id": "TIQ-085",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 286976,
+        "input_tokens": 318444,
+        "output_tokens": 3326,
+        "reasoning_output_tokens": 1500
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 1,
+      "latency_ms": 102381,
+      "outcome": "completed",
+      "result_sha256": "4f536b92ce4f2245518d1e6fae7abe549f3c0ff83d43a0cce290bfd33e0f837b",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/TIQ-086",
+      "run_tree_sha256": "4f060059c4c88540bff373504d702bf08020384271a56e520dba5f47ecd17f95",
+      "selection_reason": "original_frozen_run",
+      "task_id": "TIQ-086",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 208896,
+        "input_tokens": 247929,
+        "output_tokens": 3179,
+        "reasoning_output_tokens": 1309
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 2,
+      "latency_ms": 393530,
+      "outcome": "completed",
+      "result_sha256": "a2df876a036e81a32fae37e57068b5e08a19ccad1120a4a3111fee3f312c7b43",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/TIQ-088",
+      "run_tree_sha256": "b628e1520c4743c23311e34bbee31cd9c874732789305a531f81ab08e9a7d941",
+      "selection_reason": "original_frozen_run",
+      "task_id": "TIQ-088",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 701312,
+        "input_tokens": 753433,
+        "output_tokens": 15240,
+        "reasoning_output_tokens": 7620
+      }
+    },
+    {
+      "artifact_count": 1,
+      "input_asset_count": 2,
+      "latency_ms": 90494,
+      "outcome": "completed",
+      "result_sha256": "3c93ffa7da10433f316a61760ea80e13aaab3e86ea765d0991c7639d23a02dbc",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/TIQ-096",
+      "run_tree_sha256": "5a3738582dfe3d8df21726be9a2ce9d1d6deae7ac5f65d0a7f2104a082577371",
+      "selection_reason": "original_frozen_run",
+      "task_id": "TIQ-096",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 73984,
+        "input_tokens": 114407,
+        "output_tokens": 2283,
+        "reasoning_output_tokens": 961
+      }
+    },
+    {
+      "artifact_count": 22,
+      "input_asset_count": 2,
+      "latency_ms": 709421,
+      "outcome": "completed",
+      "result_sha256": "9ed87504d8385be64955ffc2fc6ac1bdbfef8fcb5a6560ee4cf5a64fafcc9c70",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/scripts/runs/TIQ-098/2026-09-02T21-11-06-822Z",
+      "run_tree_sha256": "6eb35890a2e6aa068b699086495aefdd9a680b8a401c3aab408c2c735afe7053",
+      "selection_reason": "posthoc_completion_rerun_after_original_timeout",
+      "task_id": "TIQ-098",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 648448,
+        "input_tokens": 691574,
+        "output_tokens": 12272,
+        "reasoning_output_tokens": 3815
+      }
+    },
+    {
+      "artifact_count": 4,
+      "input_asset_count": 3,
+      "latency_ms": 410103,
+      "outcome": "completed",
+      "result_sha256": "897a12287b7776c926f321b6ec599cef73eefee10f1e5897cce37d5ce1469639",
+      "run_path": "design-agent-v0/eval/experiments/curify-vs-codex-21q-2026-08-16/candidates/codex/runs/TIQ-100",
+      "run_tree_sha256": "45064eb5cee375d08d90e3b976f851db2b34e149750ea071858eb71d90a6aefa",
+      "selection_reason": "original_frozen_run",
+      "task_id": "TIQ-100",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 922496,
+        "input_tokens": 989672,
+        "output_tokens": 14576,
+        "reasoning_output_tokens": 7911
+      }
+    }
+  ],
+  "status": "frozen"
+}

@@ -1,0 +1,12 @@
+v1 已完成：沿 B 增加留白，以硬盒比例、细纹裱纸、盲压边和极细金属线提升礼盒价格感；Logo 使用锁定源图合成，未重绘或改色。未制作淘宝主图或门店物料，`outputs/v0` 保持不变。
+
+新建或更新：
+
+- [v1 精修方向板](/private<WORKDIR>/outputs/v1/b-layers-in-light-v1-refinement-board.png)
+- [高级礼盒视觉](/private<WORKDIR>/outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png)
+- [增量说明](/private<WORKDIR>/outputs/v1/refinement-notes.md)
+- [v1 验证记录](/private<WORKDIR>/outputs/v1/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+- [图像生成提示词记录](/private<WORKDIR>/outputs/v1/imagegen-prompts.md)
+
+中文标准字源文件仍未提供，因此没有猜写中文品牌名。

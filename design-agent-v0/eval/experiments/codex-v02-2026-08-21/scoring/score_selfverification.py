@@ -40,7 +40,12 @@ EXP = HERE.parent
 EVAL = EXP.parent.parent
 BRIEFS = EVAL / "brief_bank" / "briefs.v0.2.jsonl"
 
-NEEDS_JUDGE = ["brief_understanding", "revision_fidelity", "cross_asset_consistency"]
+NEEDS_JUDGE = [
+    "brief_understanding",
+    "tool_execution",
+    "revision_fidelity",
+    "cross_asset_consistency",
+]
 
 
 def load_briefs():
@@ -50,6 +55,29 @@ def load_briefs():
             r = json.loads(line)
             out[r["id"].lower()] = r
     return out
+
+
+def selected_runs(briefs: dict[str, dict]):
+    """Select the latest primary completed attempt for each benchmark condition."""
+    latest = {}
+    for rj in sorted((EXP / "runs").rglob("result.json")):
+        run_dir = rj.parent
+        try:
+            res = json.loads(rj.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if res.get("outcome") != "completed" or res.get("primary_eligible") is False:
+            continue
+        bid = str(res.get("base_brief_id") or "").lower()
+        brief = briefs.get(bid)
+        if not brief:
+            continue
+        condition = str(res.get("context_condition") or run_dir.parent.name)
+        key = (brief["id"], condition)
+        stamp = str(res.get("started_at") or run_dir.name)
+        if key not in latest or stamp > latest[key][0]:
+            latest[key] = (stamp, run_dir, brief)
+    return [(run_dir, brief) for _, run_dir, brief in sorted(latest.values())]
 
 
 def audit_run(run_dir: Path, brief: dict) -> dict:
@@ -117,19 +145,7 @@ def audit_run(run_dir: Path, brief: dict) -> dict:
 def main() -> int:
     briefs = load_briefs()
     rows = []
-    for rj in sorted((EXP / "runs").rglob("result.json")):
-        run_dir = rj.parent
-        try:
-            res = json.loads(rj.read_text(encoding="utf-8"))
-        except Exception:
-            continue
-        if res.get("outcome") != "completed":
-            continue
-        bid = str(res.get("base_brief_id") or "").lower()
-        brief = briefs.get(bid)
-        if not brief:
-            rows.append({"run": str(run_dir.relative_to(EXP)), "error": f"no brief {bid}"})
-            continue
+    for run_dir, brief in selected_runs(briefs):
         rows.append(audit_run(run_dir, brief))
 
     out = HERE / "selfverification-audit.jsonl"

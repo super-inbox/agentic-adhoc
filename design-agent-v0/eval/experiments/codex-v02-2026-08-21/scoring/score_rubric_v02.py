@@ -11,12 +11,11 @@ a spec gap, not missing effort.
   workflow_completion       PROXY ONLY  see below
   recovery                  NOT OBSERVABLE
   brief_understanding       NEEDS JUDGE
+  tool_execution            NEEDS JUDGE (L3 only)
   revision_fidelity         NEEDS JUDGE
   cross_asset_consistency   NEEDS JUDGE
 
-Weights VARY BY BRIEF, so no fixed table applies: across the 31 runs the
-deterministically-scoreable weight is 0.25 on 23 runs and 0.40 on 8, and the
-judge-dependent weight is 0.45 and 0.15 respectively. Each row carries its own
+Weights VARY BY BRIEF, so no fixed table applies. Each row carries its own
 brief's weights; the summary prints a spread rather than one number.
 
 `expected_workflow` names checkpoints (understand / diverge / cluster / select /
@@ -46,8 +45,34 @@ BRIEFS = EVAL / "brief_bank" / "briefs.v0.2.jsonl"
 
 SCOREABLE = {"artifact_contract", "efficiency"}
 PROXY = {"workflow_completion"}
-NEEDS_JUDGE = {"brief_understanding", "revision_fidelity", "cross_asset_consistency"}
+NEEDS_JUDGE = {
+    "brief_understanding",
+    "tool_execution",
+    "revision_fidelity",
+    "cross_asset_consistency",
+}
 UNOBSERVABLE = {"recovery"}
+
+
+def selected_runs(briefs: dict[str, dict]):
+    """Select the latest primary completed attempt for each benchmark condition."""
+    latest = {}
+    for rj in sorted((EXP / "runs").rglob("result.json")):
+        try:
+            res = json.loads(rj.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if res.get("outcome") != "completed" or res.get("primary_eligible") is False:
+            continue
+        brief = briefs.get(str(res.get("base_brief_id") or "").lower())
+        if not brief:
+            continue
+        condition = str(res.get("context_condition") or rj.parent.parent.name)
+        key = (brief["id"], condition)
+        stamp = str(res.get("started_at") or rj.parent.name)
+        if key not in latest or stamp > latest[key][0]:
+            latest[key] = (stamp, rj.parent, brief, res)
+    return [(run, brief, res) for _, run, brief, res in sorted(latest.values())]
 
 
 def main() -> int:
@@ -58,14 +83,7 @@ def main() -> int:
             briefs[r["id"].lower()] = r
 
     rows = []
-    for rj in sorted((EXP / "runs").rglob("result.json")):
-        res = json.loads(rj.read_text(encoding="utf-8"))
-        if res.get("outcome") != "completed":
-            continue
-        b = briefs.get(str(res.get("base_brief_id") or "").lower())
-        if not b:
-            continue
-        run = rj.parent
+    for run, b, res in selected_runs(briefs):
         weights = (b.get("rubric") or {}).get("checkpoint_weights") or {}
 
         # artifact_contract — required structured artifacts on disk

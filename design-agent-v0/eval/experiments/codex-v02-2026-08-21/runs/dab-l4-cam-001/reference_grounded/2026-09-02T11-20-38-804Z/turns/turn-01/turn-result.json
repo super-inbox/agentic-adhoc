@@ -1,0 +1,199 @@
+{
+  "turn_index": 1,
+  "logical_session_id": "session-01",
+  "started_at": "2026-09-02T11:46:29.481Z",
+  "finished_at": "2026-09-02T11:58:51.041Z",
+  "latency_ms": 741681,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 42,
+    "command_count": 14,
+    "tool_count": 3,
+    "image_activity_count": 10,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a061d9-80a5-7ed3-8ab6-22dec9a39075",
+    "usage": {
+      "input_tokens": 5718938,
+      "cached_input_tokens": 5515136,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 51971,
+      "reasoning_output_tokens": 20977
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 4329,
+      "sha256": "6ea895405a0e2e7939c4b9f348e729d1a33414827f67af28bac4c153c8dd7d7f"
+    },
+    {
+      "filename": "v0/assets/launch-product_locked.png",
+      "byte_size": 1208397,
+      "sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286"
+    },
+    {
+      "filename": "v0/assets/mori-leaf_locked.png",
+      "byte_size": 40637,
+      "sha256": "764892524602d8bf04430c87e8b6cb1690acfeee602544756a63dc42335d0d56"
+    },
+    {
+      "filename": "v0/assets/mori-wordmark_locked.png",
+      "byte_size": 6820,
+      "sha256": "81f13917cb65c6f006e0db84ea7a14be22e06b51703173e992ddb2380308689c"
+    },
+    {
+      "filename": "v0/boards/mori-kv-territory-overview_v0.png",
+      "byte_size": 3647120,
+      "sha256": "4291ec91dad444b50b919e8d4d94a6564580e3b2b519cfeda5ef2d6ba9f82c93"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-a_still-horizon_a1-clay-horizon.png",
+      "byte_size": 2172772,
+      "sha256": "bc39df68a0e5cb0f425b10f004190cec890283df59e4cbbba622aab01cbf9b9e"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-a_still-horizon_a2-paper-fold.png",
+      "byte_size": 1880690,
+      "sha256": "a7d90a66e0c394ec91c2d91752cc1fa0f94b7449f8820aa1cdc9ed270a2b2a4e"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-a_still-horizon_a3-quiet-aperture.png",
+      "byte_size": 2509490,
+      "sha256": "cd2c9a70b679a9bdd14c3407b89ca5c2a1ae9e0736c8aa4bec01ebf144cd3a14"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-b_held-moment_b1-linen-pause.png",
+      "byte_size": 2460463,
+      "sha256": "a963647a3dadef3a3d803827e671323ed786e7eabffa681241ed6feb86000813"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-b_held-moment_b2-ritual-tray.png",
+      "byte_size": 1933237,
+      "sha256": "c07039d69cb30ce6a22e51671329d5d0005d7ff68db48c772896581abc601274"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-b_held-moment_b3-curtain-hour.png",
+      "byte_size": 2213391,
+      "sha256": "edd118f931607beadad15ba5d43469999a8909d678caa20226e5608603c120f6"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-c_tactile-echo_c1-vein-relief.png",
+      "byte_size": 2920546,
+      "sha256": "1298d068bd854ccc08051d712f8058f2f8c0428c512ec697cfd81a12a47eec33"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-c_tactile-echo_c2-quiet-ripple.png",
+      "byte_size": 2187765,
+      "sha256": "badfddc9d3a1c196165618349ca965558322136348edfa0325ca079983a3071a"
+    },
+    {
+      "filename": "v0/generated-backgrounds/territory-c_tactile-echo_c3-woven-signal.png",
+      "byte_size": 2842290,
+      "sha256": "7a77971906d32c8558aed5e3e09113b0d83e9a0acab7083b9ae4dadb4a0a020d"
+    },
+    {
+      "filename": "v0/imagegen-prompts.md",
+      "byte_size": 12970,
+      "sha256": "9e25179adb23e3f259a8e6adad0b1fc6d4d1746620e272cd4fa51e0aa9a9a827"
+    },
+    {
+      "filename": "v0/kvs/kv-a1_clay-horizon.png",
+      "byte_size": 2100576,
+      "sha256": "b2f2f3663c00f558779f0499ded4c21c1f48422ad93e4a6f231a7c1664a87b49"
+    },
+    {
+      "filename": "v0/kvs/kv-a2_paper-fold.png",
+      "byte_size": 1792916,
+      "sha256": "597d525bc5689b6c743ceb558f0f309a094d7ca7af119ffcb1ee476fd3061a6c"
+    },
+    {
+      "filename": "v0/kvs/kv-a3_quiet-aperture.png",
+      "byte_size": 2345352,
+      "sha256": "722a28da1235aed334bd7ae157917c00aa53029545c95bce025626aefc2c0f14"
+    },
+    {
+      "filename": "v0/kvs/kv-b1_linen-pause.png",
+      "byte_size": 2062403,
+      "sha256": "8229922f491025e08019f6a209f1b5dc05f319ca0e20731bfa09c1c0e5326b94"
+    },
+    {
+      "filename": "v0/kvs/kv-b2_ritual-tray.png",
+      "byte_size": 1828857,
+      "sha256": "2b83d331229106c9a13886ce44ff0c56991caf966fa2dfb22c8b77b848485489"
+    },
+    {
+      "filename": "v0/kvs/kv-b3_curtain-hour.png",
+      "byte_size": 2020501,
+      "sha256": "5265a99d99ae1065b8fa55fef0b64f3eaac700b0dd7dc1c21456ac8b4649bc58"
+    },
+    {
+      "filename": "v0/kvs/kv-c1_vein-relief.png",
+      "byte_size": 2528695,
+      "sha256": "02f826e67d05a9818cee88e26382f99363b5d004e1503b1f89ef6f76533f1f72"
+    },
+    {
+      "filename": "v0/kvs/kv-c2_quiet-ripple.png",
+      "byte_size": 2017552,
+      "sha256": "e043a4d33f291b206fa581d1b05dea8b76ab16f80f715517961777d03f4f37ab"
+    },
+    {
+      "filename": "v0/kvs/kv-c3_woven-signal.png",
+      "byte_size": 2512350,
+      "sha256": "f58523f226d788f6d5ad8ad60050b111d388856f571739a766423ab123805071"
+    },
+    {
+      "filename": "v0/render_kv_concepts.py",
+      "byte_size": 12160,
+      "sha256": "4821d6affb3e876e2df789b7209636f734a00d807b0ce6ff2acbb86b155cd97e"
+    },
+    {
+      "filename": "v0/territory-rationale.md",
+      "byte_size": 2332,
+      "sha256": "8e1eae0e76c9b507594d1cf74d12d49b39986001af724cd78149263c20086961"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4141,
+      "sha256": "9837eb450dd3c5e848c1939c64cab58f18583c20f39cf1bfaec289ac035e3023"
+    },
+    {
+      "filename": "v1/assets/b3-curtain-hour_tabletop-background_v1.png",
+      "byte_size": 1946777,
+      "sha256": "44f8ac95b3d7a839ba8826951c7aa9cd297fda518e066850283723b2199abae0"
+    },
+    {
+      "filename": "v1/assets/launch-product_locked_v1.png",
+      "byte_size": 1208397,
+      "sha256": "5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286"
+    },
+    {
+      "filename": "v1/assets/mori-wordmark_locked_v1.png",
+      "byte_size": 6820,
+      "sha256": "81f13917cb65c6f006e0db84ea7a14be22e06b51703173e992ddb2380308689c"
+    },
+    {
+      "filename": "v1/imagegen-prompt.md",
+      "byte_size": 1764,
+      "sha256": "7f7c6c639d7bc0548d827756822db282ba230d54f8ab5061dea8270ee3c7ba3f"
+    },
+    {
+      "filename": "v1/kvs/kv-b3_curtain-hour-grounded_v1.png",
+      "byte_size": 1848682,
+      "sha256": "dd96d84f064a314f3729ccd46d88056d3a6ea1baed40ecf0cd75c15c87132cf8"
+    },
+    {
+      "filename": "v1/render_b3_grounded_v1.py",
+      "byte_size": 5277,
+      "sha256": "9ef18842844b0a70d719cf2b2a10ba801e58b282f7d0961434be9ae9ceecdf6f"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 3915,
+      "sha256": "630a411930e7a96ac50eb08b76c65468b8be7f12291ce49cb61aab3751cb06c8"
+    }
+  ]
+}

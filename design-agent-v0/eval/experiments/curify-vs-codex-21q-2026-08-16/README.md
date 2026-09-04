@@ -4,6 +4,20 @@
 Curify Web 和 Codex CLI，各运行一次，不自动重试。任务覆盖 Brand Identity、Packaging、
 Merch、Marketing Creative、Industrial/Product 五类设计工作。
 
+## 当前 Codex 完整单轮基线（2026-09-02）
+
+Codex-only 的完整质量基线已经冻结在
+[`baselines/codex-single-turn-v1/`](baselines/codex-single-turn-v1/)：
+
+- 21/21 条都有 selected completed run；原始 first-attempt 可靠性仍按 20/21 报告；
+- `TIQ-098` 的原 15 分钟 timeout 保留，另有一次明确标注的 completion rerun；
+- `gemini-2.5-pro / judge-v2.1` 独立评分覆盖 21/21；
+- weighted design mean `0.609`，gated benchmark total mean `0.414`，case pass `8/21`；
+- baseline SHA-256：`3f201c2e37bcbfb5a57b4fe329dcd54f90fb9124032ea04616c18e55073461e2`。
+
+下面的正文保留 2026-08-16 首跑现场，包含当时的 20/21 timeout 和 0/42 judge 状态，作为
+历史证据，不应覆盖上述冻结基线。
+
 ## 候选配置
 
 - Curify：`jwang/vercel@275f7d0a`，本地前端连接已配置的 Curify production API。

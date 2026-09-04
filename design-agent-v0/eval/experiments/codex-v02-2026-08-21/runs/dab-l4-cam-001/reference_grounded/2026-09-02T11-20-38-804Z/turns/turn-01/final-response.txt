@@ -1,0 +1,18 @@
+已完成 v1。B3 是 v0 中明度最低的候选，因此作为“偏暗方向”延续。
+
+仅调整了：
+
+- 增加真实桌面、桌面后沿和瓶底接触阴影
+- 右侧光变得更宽、更柔
+- 移除悬浮摄影图块
+- 保留原有产品尺寸、位置、Logo、文案、瓶型和标签
+
+新建或更新路径：
+
+- [v1 修订 KV](</private<WORKDIR>/outputs/v1/kvs/kv-b3_curtain-hour-grounded_v1.png>)
+- [v1 背景](</private<WORKDIR>/outputs/v1/assets/b3-curtain-hour_tabletop-background_v1.png>)
+- [v1 验证记录](</private<WORKDIR>/outputs/v1/verification.json>)
+- [项目状态](</private<WORKDIR>/outputs/project-state.json>)
+- [ImageGen prompt](</private<WORKDIR>/outputs/v1/imagegen-prompt.md>)
+
+`outputs/v0` 保持不变；本轮未制作渠道延展。

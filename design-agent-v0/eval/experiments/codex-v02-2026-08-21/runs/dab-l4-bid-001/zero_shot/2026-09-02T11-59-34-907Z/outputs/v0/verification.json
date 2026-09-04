@@ -1,0 +1,150 @@
+{
+  "version": "v0",
+  "verified_at": "2026-09-02T08:13:43-04:00",
+  "checkpoint": "creative_territory_selection",
+  "overall_status": "complete_at_current_checkpoint_with_inputs_pending_for_refinement",
+  "checks": [
+    {
+      "id": "scope_hypothesis_count",
+      "status": "pass",
+      "method": "Text inventory count",
+      "result": "12 hypotheses, H01 through H12, are present.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/territory-01-new-chinese-ritual-board.png",
+        "outputs/v0/territory-02-layers-in-light-board.png",
+        "outputs/v0/territory-03-1998-pastry-archive-board.png"
+      ]
+    },
+    {
+      "id": "three_distinct_territories",
+      "status": "pass",
+      "method": "Visual and content inspection",
+      "result": "Three territories have distinct primary mechanisms: ritual structure, sensory product craft, and 1998 provenance/archive.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories-overview.png",
+        "outputs/v0/creative-territories.md"
+      ]
+    },
+    {
+      "id": "palette_non_convergence",
+      "status": "pass",
+      "method": "Palette token comparison",
+      "result": "Territory 01 uses ivory/cinnabar/charcoal/champagne; Territory 02 uses deep brown/toasted orange/pastry gold/warm stone; Territory 03 uses ink navy/celadon/paper white/oxidized copper.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories-overview.png",
+        "outputs/v0/source/build_direction_boards.py"
+      ]
+    },
+    {
+      "id": "logo_integrity",
+      "status": "pass",
+      "method": "Exact crop pixel comparison against source coordinates (760,198,1265,565)",
+      "result": "The locked logo reference is an exact pixel match to the source crop; boards use a proportional placement of that crop and do not use generated logos.",
+      "source_sha256": "6615b1008ae568a972d3cba9c9064adeb25efc50cf2fabedd34e3f4bcfaf6253",
+      "crop_sha256": "6941423fb9162d05a1d92aca322afa96a6762fe87a016c6fec6cf385d4ab8159",
+      "evidence_paths": [
+        "inputs/01-current_logo_and_identity.png",
+        "outputs/v0/assets/locked-current-logo-reference.png",
+        "outputs/v0/source/build_direction_boards.py"
+      ]
+    },
+    {
+      "id": "chinese_brand_name_integrity",
+      "status": "blocked_by_missing_input",
+      "method": "Source inspection",
+      "result": "No Chinese brand name or Chinese standard-word source is visible in the supplied identity image. No replacement name was invented.",
+      "evidence_paths": [
+        "inputs/01-current_logo_and_identity.png",
+        "outputs/v0/creative-territories.md"
+      ]
+    },
+    {
+      "id": "no_premature_channel_production",
+      "status": "pass",
+      "method": "Artifact inventory inspection",
+      "result": "No Taobao main image, store collateral, packaging refinement, or logo redesign was produced. Only extension logic is documented.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v0/creative-territories.md"
+      ]
+    },
+    {
+      "id": "ecommerce_and_store_extension_logic",
+      "status": "pass",
+      "method": "Content inspection",
+      "result": "Every territory states a distinct future ecommerce and store extension path, conditional on selection.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories.md",
+        "outputs/v0/territory-01-new-chinese-ritual-board.png",
+        "outputs/v0/territory-02-layers-in-light-board.png",
+        "outputs/v0/territory-03-1998-pastry-archive-board.png"
+      ]
+    },
+    {
+      "id": "reference_use_contract",
+      "status": "pass",
+      "method": "Prompt record and visual inspection",
+      "result": "The identity reference was used only for system extraction; all image prompts prohibit copying or including the logo, wordmark, layout, or text. Auxiliary key visuals contain no readable brand text or generated logo.",
+      "evidence_paths": [
+        "outputs/v0/imagegen-prompts.md",
+        "outputs/v0/assets/territory-01-new-chinese-ritual-key-visual.png",
+        "outputs/v0/assets/territory-02-layers-in-light-key-visual.png",
+        "outputs/v0/assets/territory-03-1998-archive-key-visual.png"
+      ]
+    },
+    {
+      "id": "visual_output_dimensions_and_readability",
+      "status": "pass",
+      "method": "Pillow dimension check and full-canvas visual inspection",
+      "result": "Overview and all three boards are 2200x1400 RGB PNGs; no clipped board text or missing visual panels observed.",
+      "evidence_paths": [
+        "outputs/v0/creative-territories-overview.png",
+        "outputs/v0/territory-01-new-chinese-ritual-board.png",
+        "outputs/v0/territory-02-layers-in-light-board.png",
+        "outputs/v0/territory-03-1998-pastry-archive-board.png"
+      ]
+    },
+    {
+      "id": "no_external_reference_copying",
+      "status": "pass",
+      "method": "Input and prompt provenance review",
+      "result": "Only the supplied identity image and brand facts were used; no external reference imagery was introduced.",
+      "evidence_paths": [
+        "outputs/v0/imagegen-prompts.md",
+        "outputs/project-state.json"
+      ]
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v0/creative-territories-overview.png": "80419a1258415c0ab7ca19c05b5a43ad3fe3196eff73b02c926305ea138cc33f",
+    "outputs/v0/territory-01-new-chinese-ritual-board.png": "c45893dc4a4728beb3f7592898c99e0f9f0eaaedc529b47e881d578a9acb44fe",
+    "outputs/v0/territory-02-layers-in-light-board.png": "41af2703bc700734c252afe0b1e8b52d1330c88a8f57d90339d5615af6d42a9b",
+    "outputs/v0/territory-03-1998-pastry-archive-board.png": "3a1ca678ca7217cb1418b9777515405e2606e9e8960b0fddb27dd975132e9e93"
+  },
+  "unresolved_blockers": [
+    {
+      "id": "territory_selection_pending",
+      "blocks": [
+        "refinement",
+        "taobao_main_images",
+        "store_collateral"
+      ]
+    },
+    {
+      "id": "chinese_brand_name_source_missing",
+      "blocks": [
+        "exact_chinese_lockup_placement",
+        "typography_refinement"
+      ]
+    },
+    {
+      "id": "verified_product_and_history_inputs_limited",
+      "blocks": [
+        "product_claim_copy",
+        "archive_timeline_copy",
+        "channel_ready_messaging"
+      ]
+    }
+  ]
+}

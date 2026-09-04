@@ -1,0 +1,7 @@
+已完成 20 个 MORI SKU 电商主图，均为 1254×1254 PNG，并通过完整性校验。
+
+- [mori-20-sku-main-images.zip](<REDACTED_RUN_WORKSPACE/outputs/mori-20-sku-main-images.zip>)：20 张主图合集
+- [mori-20-sku-contact-sheet.png](<REDACTED_RUN_WORKSPACE/outputs/mori-20-sku-contact-sheet.png>)：5×4 总览
+- 独立文件：`mori-sku-01-main.png` 至 `mori-sku-20-main.png`
+
+采用内置图像生成：以品牌图为严格视觉参考、SKU 表各格为瓶型参考，统一米白影棚背景、MORI 字标、双色叶片和品牌色体系。

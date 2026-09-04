@@ -1,0 +1,17 @@
+已完成 v0：9 个低成本 KV，聚类为 3 个方向。
+
+- A — Still Horizon：纸面、折面与光隙，偏图形化与适配性
+- B — Held Moment：亚麻、陶盘与透光帘，偏亲密仪式感
+- C — Tactile Echo：压纹、浅弧与编织，偏触感和品牌资产化
+
+主要交付：
+
+- [KV 选择总览](<<WORKDIR>/outputs/v0/boards/mori-kv-territory-overview_v0.png>)
+- [Territory 说明](<<WORKDIR>/outputs/v0/territory-rationale.md>)
+- [验证记录](<<WORKDIR>/outputs/v0/verification.json>)
+- [项目状态](<<WORKDIR>/outputs/project-state.json>)
+- [完整 ImageGen prompts](<<WORKDIR>/outputs/v0/imagegen-prompts.md>)
+
+背景使用内置 ImageGen 生成；产品未交给模型重绘，而是直接使用附件原图等比例排版。Logo、米白、陶土红及批准文案均已保留。
+
+当前停在选择检查点：请内部回传一个编号 A1–A3、B1–B3 或 C1–C3。官网 hero、Instagram 竖版和邮件头图尚未开始。

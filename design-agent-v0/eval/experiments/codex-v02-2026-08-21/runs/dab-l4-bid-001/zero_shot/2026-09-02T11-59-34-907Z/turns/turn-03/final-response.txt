@@ -1,0 +1,16 @@
+v3 状态已保存，但立牌尚未编辑：工作区没有当前门店立牌，也没有 v1 的疏留白立牌参照；按图像编辑流程未凭空重建。价格标签保持“不得恢复”锁定，v0–v2 文件均未改动。
+
+另经核对，`outputs/v2` 没有礼盒或淘宝主图成图；现有礼盒最后保存在 v1，淘宝主图仍不在工作区。
+
+新建或更新：
+
+- [v3 修改边界与连续性说明](/private<WORKDIR>/outputs/v3/change-request.md)
+- [v3 验证与阻塞记录](/private<WORKDIR>/outputs/v3/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+请提供：
+
+1. 当前门店立牌；
+2. v1 更疏的立牌版本或含该版本的可编辑源文件。
+
+收到后只调整立牌留白，礼盒、淘宝主图、视觉系统和无价格标签状态均不动。

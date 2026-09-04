@@ -1,0 +1,141 @@
+{
+  "project": "Grain & Glow identity evolution",
+  "current_version": "v3",
+  "updated_at": "2026-09-02T08:37:02-04:00",
+  "stage": "store_standee_whitespace_delta_input_checkpoint",
+  "status": "blocked_missing_store_standee_target_and_v1_reference",
+  "version_history": [
+    {
+      "version": "v0",
+      "stage": "three_territory_selection",
+      "status": "superseded_by_client_choice",
+      "artifact_root": "outputs/v0",
+      "preserved": true
+    },
+    {
+      "version": "v1",
+      "stage": "selected_territory_b_delta_refinement",
+      "status": "gift_box_direction_approved_and_locked",
+      "artifact_root": "outputs/v1",
+      "preserved": true
+    },
+    {
+      "version": "v2",
+      "stage": "taobao_main_image_delta_edit_input_checkpoint",
+      "status": "blocked_no_visual_output_created",
+      "artifact_root": "outputs/v2",
+      "preserved": true
+    },
+    {
+      "version": "v3",
+      "stage": "store_standee_whitespace_delta_input_checkpoint",
+      "status": "current_blocked_pending_standee_files",
+      "artifact_root": "outputs/v3"
+    }
+  ],
+  "client_decisions": {
+    "confirmed": [
+      {
+        "item": "gift_box",
+        "decision": "keep_unchanged"
+      },
+      {
+        "item": "taobao_main_image",
+        "decision": "keep_unchanged"
+      },
+      {
+        "item": "store_standee",
+        "decision": "change_only_whitespace_to_match_v1_sparse_version"
+      },
+      {
+        "item": "price_label",
+        "decision": "must_remain_removed_do_not_restore"
+      },
+      {
+        "item": "visual_system",
+        "decision": "territory_b_system_locked_do_not_rebuild"
+      },
+      {
+        "item": "existing_logo",
+        "decision": "locked_unchanged"
+      }
+    ],
+    "pending": [
+      {
+        "id": "current_store_standee_source",
+        "question": "Provide the current full-resolution or editable store standee to be changed.",
+        "required_before": [
+          "standee_whitespace_adjustment"
+        ]
+      },
+      {
+        "id": "v1_sparse_store_standee_reference",
+        "question": "Provide the v1 sparser store-standee reference or an editable source containing that version.",
+        "required_before": [
+          "standee_whitespace_matching"
+        ]
+      }
+    ]
+  },
+  "locked_items": [
+    "The approved gift-box direction and available v1 gift-box artifact must not change.",
+    "The current Taobao main image is outside the edit scope and its removed price label must not return.",
+    "Territory B / Layers in Light visual system must not be rebuilt.",
+    "Only store-standee whitespace/spacing may change once the target and reference are supplied.",
+    "Logo, palette, product imagery, lighting, material treatment, copy, and hierarchy remain unchanged.",
+    "All outputs/v0, outputs/v1, and outputs/v2 artifacts remain unchanged."
+  ],
+  "changed_items": [
+    "Recorded the store-standee-only whitespace delta.",
+    "Recorded the no-price-label invariant for the revised standee.",
+    "Recorded saved-state continuity gaps between the client's referenced assets and workspace files.",
+    "No visual pixels were changed because both the standee target and v1 standee reference are absent."
+  ],
+  "continuity_audit": {
+    "client_referenced_v2_gift_box": "not_present_in_outputs/v2; last available gift-box visual is outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png",
+    "client_referenced_v2_taobao_main_image": "not_present_in_workspace",
+    "current_store_standee": "not_present_in_workspace",
+    "v1_sparse_store_standee_reference": "not_present_in_workspace"
+  },
+  "intentionally_not_produced": [
+    "reconstructed_store_standee",
+    "reconstructed_taobao_main_image",
+    "recreated_gift_box",
+    "recreated_visual_system",
+    "restored_price_label",
+    "invented_spacing_values"
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "current_store_standee_missing",
+      "impact": "The editable spacing regions and unrelated pixels cannot be localized or preserved.",
+      "needed": "Current full-resolution or editable store standee."
+    },
+    {
+      "id": "v1_sparse_store_standee_reference_missing",
+      "impact": "The requested v1 whitespace cannot be matched without inventing spacing values.",
+      "needed": "v1 sparser store-standee reference or editable source containing that version."
+    },
+    {
+      "id": "v2_taobao_asset_continuity_gap",
+      "impact": "The asserted v2 no-price-label Taobao asset cannot be included in or verified from this workspace state.",
+      "needed": "Optional synchronization of the current Taobao main-image file if it should be tracked in this workspace."
+    }
+  ],
+  "artifact_paths": {
+    "current_version": {
+      "change_request": "outputs/v3/change-request.md",
+      "verification": "outputs/v3/verification.json"
+    },
+    "approved_gift_box_reference": "outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png",
+    "taobao_main_image_reference": null,
+    "current_store_standee_reference": null,
+    "v1_sparse_store_standee_reference": null,
+    "prior_version_roots": [
+      "outputs/v0",
+      "outputs/v1",
+      "outputs/v2"
+    ]
+  },
+  "next_checkpoint": "Receive the current store standee and v1 sparse standee reference, then adjust only whitespace while keeping the price label absent."
+}

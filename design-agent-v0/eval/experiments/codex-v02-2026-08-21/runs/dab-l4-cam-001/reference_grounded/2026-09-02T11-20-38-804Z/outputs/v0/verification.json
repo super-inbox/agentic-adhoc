@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.2",
+  "version": "v0",
+  "status": "passed_with_expected_selection_blocker",
+  "checks": [
+    {
+      "id": "kv_count_and_clustering",
+      "result": "pass",
+      "details": "9 KV candidates are grouped as 3 distinct territories with 3 candidates each.",
+      "evidence_paths": [
+        "outputs/v0/boards/mori-kv-territory-overview_v0.png",
+        "outputs/v0/territory-rationale.md"
+      ]
+    },
+    {
+      "id": "visual_render_review",
+      "result": "pass",
+      "details": "Overview board and representative full-resolution candidates A1, B2, and C1 were visually inspected; all 9 candidates are visible on the overview with intact bottle silhouettes, readable copy, and unclipped layouts.",
+      "evidence_paths": [
+        "outputs/v0/boards/mori-kv-territory-overview_v0.png",
+        "outputs/v0/kvs/kv-a1_clay-horizon.png",
+        "outputs/v0/kvs/kv-b2_ritual-tray.png",
+        "outputs/v0/kvs/kv-c1_vein-relief.png"
+      ]
+    },
+    {
+      "id": "canvas_dimensions",
+      "result": "pass",
+      "details": "All 9 candidate KVs are RGB PNGs at 1122 x 1402 pixels; the selection overview is 1710 x 2440 pixels.",
+      "evidence_paths": [
+        "outputs/v0/kvs",
+        "outputs/v0/boards/mori-kv-territory-overview_v0.png"
+      ]
+    },
+    {
+      "id": "product_identity_source_lock",
+      "result": "pass",
+      "details": "The locked product asset is byte-identical to the supplied product image. Both SHA-256 values are 5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286. KVs place the complete source photo proportionally as a framed tile; ImageGen was not allowed to redraw the bottle or label.",
+      "evidence_paths": [
+        "inputs/02-launch_product.png",
+        "outputs/v0/assets/launch-product_locked.png",
+        "outputs/v0/render_kv_concepts.py"
+      ]
+    },
+    {
+      "id": "logo_preservation",
+      "result": "pass",
+      "details": "The MORI wordmark silhouette was extracted from the supplied brand board and used consistently in each KV; no generated logo was used.",
+      "evidence_paths": [
+        "inputs/01-brand_guideline.png",
+        "outputs/v0/assets/mori-wordmark_locked.png",
+        "outputs/v0/kvs"
+      ]
+    },
+    {
+      "id": "palette_reuse",
+      "result": "pass",
+      "details": "Every KV contains cream and terracotta. Pixel proximity checks found cream coverage from 18.4% to 65.7% and terracotta coverage from 3.3% to 18.0% across the nine candidates; exact source palette tokens are also defined in the render script.",
+      "evidence_paths": [
+        "outputs/v0/render_kv_concepts.py",
+        "outputs/v0/kvs"
+      ]
+    },
+    {
+      "id": "approved_copy_only",
+      "result": "pass",
+      "details": "Individual KV artwork renders only the supplied MORI logo plus the two approved phrases verbatim: 'Quiet hours, made tangible.' and '让夜晚慢下来。'. Candidate codes and territory labels exist only on the internal overview board.",
+      "evidence_paths": [
+        "outputs/v0/render_kv_concepts.py",
+        "outputs/v0/kvs",
+        "outputs/v0/boards/mori-kv-territory-overview_v0.png"
+      ]
+    },
+    {
+      "id": "medical_and_efficacy_avoidance",
+      "result": "pass",
+      "details": "Visual review found no beds, pills, clinical devices, treatment claims, insomnia-improvement claims, or efficacy symbols. ImageGen prompts explicitly excluded these cues.",
+      "evidence_paths": [
+        "outputs/v0/imagegen-prompts.md",
+        "outputs/v0/boards/mori-kv-territory-overview_v0.png"
+      ]
+    },
+    {
+      "id": "workflow_gate",
+      "result": "pass",
+      "details": "No website hero, Instagram portrait, or email header was produced before KV selection.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v0"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "id": "internal_kv_selection_missing",
+      "status": "open",
+      "required_input": "select one KV code from A1-A3, B1-B3, or C1-C3",
+      "blocked_work": [
+        "website hero",
+        "Instagram portrait",
+        "email header"
+      ]
+    }
+  ]
+}
+

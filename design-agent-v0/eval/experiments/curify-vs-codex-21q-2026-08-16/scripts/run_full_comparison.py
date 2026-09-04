@@ -8,7 +8,6 @@ import asyncio
 import json
 import mimetypes
 import os
-import os
 import statistics
 import subprocess
 import sys
@@ -29,9 +28,18 @@ from judge_v2 import GeminiIndependentJudgeV2  # noqa: E402
 from scorers import benchmark_judge_v2_scores, runtime_scores  # noqa: E402
 
 
-ENV_PATH = BRAINTRUST_EVAL / ".auth/phase1.env"
-RESULTS_PATH = HERE / "full-comparison.judge-v2.results.jsonl"
-SUMMARY_PATH = HERE / "full-comparison.summary.json"
+ENV_PATH = Path(
+    os.environ.get("DESIGN_AGENT_EVAL_ENV")
+    or BRAINTRUST_EVAL / ".auth/phase1.env"
+)
+RESULTS_PATH = Path(
+    os.environ.get("COMPARISON_RESULTS_PATH")
+    or HERE / "full-comparison.judge-v2.results.jsonl"
+).resolve()
+SUMMARY_PATH = Path(
+    os.environ.get("COMPARISON_SUMMARY_PATH")
+    or RESULTS_PATH.with_name("full-comparison.summary.json")
+).resolve()
 CANDIDATES = {
     "curify-web": {
         # Override to score a FRESH run instead of the published 2026-08-16
@@ -48,7 +56,13 @@ CANDIDATES = {
         },
     },
     "codex-cli": {
-        "root": HERE.parent / "codex-v0.2/runs",
+        # An optional completion-run root can contain only the cases being
+        # supplemented. Missing task directories fall back to the frozen
+        # published runs below.
+        "root": Path(
+            os.environ.get("CODEX_RUNS_ROOT")
+            or HERE.parent / "codex-v0.2/runs"
+        ),
         "artifact_subdir": "outputs",
         "identity": {
             "agent": "codex-cli",
@@ -382,15 +396,13 @@ def _existing_keys() -> set[tuple[str, str]]:
         if not line.strip():
             continue
         record = json.loads(line)
-        judge_metadata = (
+        judge_available = (
             record.get("benchmark_scores", {})
             .get("independent_judge_available", {})
-            .get("metadata", {})
+            .get("score")
         )
-        judge_error = str(judge_metadata.get("error") or "").lower()
-        if "resource_exhausted" in judge_error or "spending cap" in judge_error:
-            continue
-        keys.add((record["task_id"], record["candidate_name"]))
+        if not record.get("error") and judge_available == 1:
+            keys.add((record["task_id"], record["candidate_name"]))
     return keys
 
 
@@ -410,7 +422,8 @@ async def _run(args: argparse.Namespace) -> None:
         for case in cases
         for candidate in candidates
     })
-    mode = "a" if args.resume else "w"
+    RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    mode = "a" if args.resume and RESULTS_PATH.exists() else "w"
     with RESULTS_PATH.open(mode, encoding="utf-8") as handle:
         for case in cases:
             task_id = case["input"]["task_id"]

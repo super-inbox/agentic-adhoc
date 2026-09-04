@@ -30,6 +30,19 @@ The snapshot contains no API keys, browser session state, signed download URLs, 
 paths, or user account identity. Exact source/output pixels and full nested source traces remain as
 access-controlled Braintrust attachments.
 
+## Codex execution baselines (2026-09-02)
+
+- [`experiments/curify-vs-codex-21q-2026-08-16/baselines/codex-single-turn-v1/`](experiments/curify-vs-codex-21q-2026-08-16/baselines/codex-single-turn-v1/)
+  freezes the completed Codex-only 21-case multimodal baseline. All 21 cases have an independent
+  `gemini-2.5-pro / judge-v2.1` result; first-attempt completion remains 20/21 because `TIQ-098`
+  required one explicitly labelled posthoc completion run. Weighted design mean is 0.609, the
+  hard-gated mean is 0.414, and 8/21 cases pass all gates at the 0.70 threshold.
+- [`experiments/codex-v02-2026-08-21/`](experiments/codex-v02-2026-08-21/)
+  contains the completed Brief Bank v0.2 run and scoring snapshot: 32/32 context conditions over
+  24 episodes, with condition-aware artifact-grounded judging. The observable-only diagnostic is
+  0.874; the full-rubric condition-macro interval is 0.659–0.909 because workflow completion and
+  recovery are not independently observable under the current protocol.
+
 ## Codex planner/ranking baselines (2026-09-02)
 
 - [`experiments/codex-planner-routing-118-2026-09-02/`](experiments/codex-planner-routing-118-2026-09-02/)

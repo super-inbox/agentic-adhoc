@@ -1,0 +1,132 @@
+{
+  "version": "v3",
+  "verified_at": "2026-09-02T08:38:49-04:00",
+  "checkpoint": "store_standee_whitespace_delta_input_checkpoint",
+  "overall_status": "blocked_by_missing_standee_target_and_reference",
+  "image_edit_status": "not_run_missing_target_and_reference",
+  "checks": [
+    {
+      "id": "current_store_standee_inventory",
+      "status": "blocked",
+      "method": "Workspace media-file inventory and filename/content search",
+      "result": "No current store-standee media or editable source exists in the workspace, so the spacing regions and unrelated pixels cannot be localized.",
+      "evidence_paths": [
+        "outputs/v3/change-request.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "v1_sparse_standee_reference_inventory",
+      "status": "blocked",
+      "method": "outputs/v1 and workspace inventory inspection",
+      "result": "No v1 store-standee artifact or sparser standee reference exists, so the requested spacing cannot be matched without invented values.",
+      "evidence_paths": [
+        "outputs/v1/verification.json",
+        "outputs/v3/change-request.md"
+      ]
+    },
+    {
+      "id": "v2_asset_continuity_audit",
+      "status": "blocked_for_asset_tracking",
+      "method": "outputs/v2 inventory and saved-state inspection",
+      "result": "outputs/v2 contains only change-request.md and verification.json. It contains no gift-box or Taobao main-image file. The last available gift-box visual is in v1, and no Taobao main image exists in the workspace.",
+      "evidence_paths": [
+        "outputs/v2/change-request.md",
+        "outputs/v2/verification.json",
+        "outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "requested_delta_captured",
+      "status": "pass",
+      "method": "State and change-request inspection",
+      "result": "v3 records exactly one allowed visual change: adjust only store-standee whitespace to the v1 sparse version. Gift box, Taobao main image, visual system, and all other content are locked.",
+      "evidence_paths": [
+        "outputs/v3/change-request.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "price_label_non_reintroduction",
+      "status": "pass_at_checkpoint",
+      "method": "v3 artifact inventory",
+      "result": "No visual artifact was generated or reconstructed in v3, so no price label was reintroduced. The no-price-label invariant is explicitly locked for the future standee edit.",
+      "evidence_paths": [
+        "outputs/v3/change-request.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "no_unauthorized_reconstruction",
+      "status": "pass",
+      "method": "v3 artifact inventory",
+      "result": "No standee, Taobao main image, gift box, Logo, price label, copy, or visual-system element was generated or rebuilt while required files are absent.",
+      "evidence_paths": [
+        "outputs/v3/change-request.md"
+      ]
+    },
+    {
+      "id": "v0_preserved",
+      "status": "pass",
+      "method": "SHA-256 comparison with outputs/v0/verification.json",
+      "result": "All 4 artifact hashes recorded in v0 still match.",
+      "evidence_paths": [
+        "outputs/v0/verification.json"
+      ]
+    },
+    {
+      "id": "v1_preserved",
+      "status": "pass",
+      "method": "SHA-256 comparison with outputs/v1/verification.json",
+      "result": "All 8 artifact hashes recorded in v1 still match.",
+      "evidence_paths": [
+        "outputs/v1/verification.json"
+      ]
+    },
+    {
+      "id": "v2_preserved",
+      "status": "pass",
+      "method": "SHA-256 comparison for the immutable v2 folder artifact recorded in v2 verification",
+      "result": "outputs/v2/change-request.md still matches its recorded hash; no file under outputs/v2 was modified.",
+      "evidence_paths": [
+        "outputs/v2/change-request.md",
+        "outputs/v2/verification.json"
+      ]
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v3/change-request.md": "0ac03ad744e51f1385cfbf283eb78e25e9e295b4e4c137fcac02f09afb96edb7",
+    "outputs/project-state.json": "323a2d812a8ccd5ce3ea033bed4a2959551fcb2226da1e8d3137de152170752a"
+  },
+  "prior_state_evidence_sha256": {
+    "outputs/v2/change-request.md": "d2728600796939bd4c525ed1ba61c043fcb28fb42e2fcca9be143526dc403a3f",
+    "outputs/v2/verification.json": "cbc7cfdd8a819833b788dc67cb6b4172cc33b597f69b93cee423cdc6f72d4e2d"
+  },
+  "unresolved_blockers": [
+    {
+      "id": "current_store_standee_missing",
+      "blocks": [
+        "whitespace_region_localization",
+        "unrelated_pixel_preservation",
+        "standee_delta_edit"
+      ],
+      "needed": "Current full-resolution or editable store standee."
+    },
+    {
+      "id": "v1_sparse_store_standee_reference_missing",
+      "blocks": [
+        "v1_spacing_match",
+        "objective_whitespace_verification"
+      ],
+      "needed": "v1 sparser store-standee reference or editable source containing that version."
+    },
+    {
+      "id": "v2_taobao_asset_continuity_gap",
+      "blocks": [
+        "workspace_tracking_of_client_asserted_v2_taobao_asset"
+      ],
+      "needed": "Optional synchronization of the current Taobao main-image file if it should be tracked in this workspace."
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "version": "v1",
+  "verified_at": "2026-09-02T08:28:18-04:00",
+  "checkpoint": "selected_territory_b_delta_refinement",
+  "overall_status": "complete_for_requested_delta_with_production_inputs_pending",
+  "checks": [
+    {
+      "id": "delta_scope_only",
+      "status": "pass",
+      "method": "Artifact and change-note inspection",
+      "result": "v1 contains only the selected Territory B refinement, increased whitespace, premium gift-box treatment, and locked Logo compositing. No new A/C direction or unrelated identity work was added.",
+      "evidence_paths": [
+        "outputs/v1/refinement-notes.md",
+        "outputs/v1/b-layers-in-light-v1-refinement-board.png",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "territory_b_preserved",
+      "status": "pass",
+      "method": "Visual and content comparison with v0 Territory B",
+      "result": "The layers/crispness/light idea, single pastry craft cue, warm grazing light, and deep-brown/pastry-gold/warm-stone system remain identifiable.",
+      "evidence_paths": [
+        "outputs/v0/territory-02-layers-in-light-board.png",
+        "outputs/v1/b-layers-in-light-v1-refinement-board.png"
+      ]
+    },
+    {
+      "id": "whitespace_increased",
+      "status": "pass",
+      "method": "Full-canvas visual inspection and approximate subject-bound comparison",
+      "result": "The gift box and single pastry are concentrated in the lower portion/right half, leaving approximately three-fifths of the 4:3 composition as calm warm-stone backdrop.",
+      "evidence_paths": [
+        "outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png",
+        "outputs/v1/b-layers-in-light-v1-refinement-board.png"
+      ]
+    },
+    {
+      "id": "premium_gift_box_cues",
+      "status": "pass",
+      "method": "Visual material-cue inspection",
+      "result": "The concept shows rigid-board proportions, fine paper texture, beveled edges, a blind-deboss perimeter, deep-brown base, and one thin metallic edge without heavy ornament or prop stacking.",
+      "evidence_paths": [
+        "outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png",
+        "outputs/v1/refinement-notes.md"
+      ]
+    },
+    {
+      "id": "logo_source_integrity",
+      "status": "pass",
+      "method": "SHA-256 equality and RGB array comparison",
+      "result": "The v1 locked Logo reference is byte-identical to the v0 locked crop. The derived RGBA decal has an RGB array exactly equal to that crop; only the white source background was converted to alpha. The decal was placed by a single planar perspective transform and was not generated, redrawn, recolored, split, or replaced.",
+      "v0_and_v1_locked_reference_sha256": "6941423fb9162d05a1d92aca322afa96a6762fe87a016c6fec6cf385d4ab8159",
+      "decal_rgb_exact_match": true,
+      "evidence_paths": [
+        "outputs/v0/assets/locked-current-logo-reference.png",
+        "outputs/v1/assets/locked-current-logo-reference.png",
+        "outputs/v1/assets/locked-current-logo-decal.png",
+        "outputs/v1/source/build_v1_refinement.py"
+      ]
+    },
+    {
+      "id": "territory_b_palette_tokens_preserved",
+      "status": "pass",
+      "method": "Source token comparison",
+      "result": "The four v0 Territory B tokens remain #1D110C, #A9531F, #E5A03C, and #F1D5A2. v1 changes their area ratio rather than introducing a new direction palette.",
+      "evidence_paths": [
+        "outputs/v0/source/build_direction_boards.py",
+        "outputs/v1/source/build_v1_refinement.py",
+        "outputs/v1/b-layers-in-light-v1-refinement-board.png"
+      ]
+    },
+    {
+      "id": "blank_generation_has_no_generated_logo",
+      "status": "pass",
+      "method": "Prompt and visual inspection",
+      "result": "The generated source has a blank lid identity panel and no readable text, Logo, emblem, wheat symbol, or watermark. The Logo appears only in the deterministic composite.",
+      "evidence_paths": [
+        "outputs/v1/assets/b-layers-in-light-premium-gift-box-blank.png",
+        "outputs/v1/imagegen-prompts.md",
+        "outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png"
+      ]
+    },
+    {
+      "id": "v0_preserved",
+      "status": "pass",
+      "method": "SHA-256 comparison with outputs/v0/verification.json",
+      "result": "All four v0 board hashes recorded in the v0 verification file still match; outputs/v0 was not overwritten.",
+      "evidence_paths": [
+        "outputs/v0/verification.json",
+        "outputs/v0/creative-territories-overview.png",
+        "outputs/v0/territory-01-new-chinese-ritual-board.png",
+        "outputs/v0/territory-02-layers-in-light-board.png",
+        "outputs/v0/territory-03-1998-pastry-archive-board.png"
+      ]
+    },
+    {
+      "id": "no_premature_channel_production",
+      "status": "pass",
+      "method": "Artifact inventory inspection",
+      "result": "No Taobao main image, store collateral, production dieline, or cost/material specification was created.",
+      "evidence_paths": [
+        "outputs/v1/refinement-notes.md",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "id": "visual_dimensions_and_readability",
+      "status": "pass",
+      "method": "Pillow dimension check and original-resolution visual inspection",
+      "result": "The gift-box concept is a 1448x1086 RGB PNG and the refinement board is a 2200x1400 RGB PNG. No clipped board text or missing visual panel was observed.",
+      "evidence_paths": [
+        "outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png",
+        "outputs/v1/b-layers-in-light-v1-refinement-board.png"
+      ]
+    },
+    {
+      "id": "chinese_brand_name_integrity",
+      "status": "blocked_by_missing_input",
+      "method": "Source inspection",
+      "result": "The supplied identity still contains no official Chinese brand name/standard-word source. No Chinese name was invented or placed.",
+      "evidence_paths": [
+        "inputs/01-current_logo_and_identity.png",
+        "outputs/v1/refinement-notes.md"
+      ]
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v1/assets/b-layers-in-light-premium-gift-box-blank.png": "0ddb11c1ea4631f2a27a3f5201cce2a92fdbeb30bf72a936b280b1eeed774965",
+    "outputs/v1/b-layers-in-light-premium-gift-box-logo-locked.png": "964a6a0dcdf4ace7c6cc4608680aa78860c3c2e8867c09206760b5f2f6a13902",
+    "outputs/v1/b-layers-in-light-v1-refinement-board.png": "c982277856fce956ff66e8e46eb1017f8b9f211b8eff091f0251ac70f2af3c9d",
+    "outputs/v1/assets/locked-current-logo-reference.png": "6941423fb9162d05a1d92aca322afa96a6762fe87a016c6fec6cf385d4ab8159",
+    "outputs/v1/assets/locked-current-logo-decal.png": "612e02526a777816c004d0161cdfa19aaa657b619025e833114f487a0386dc7c",
+    "outputs/v1/refinement-notes.md": "364194b9173602602458863c4d2ea6ea7ff532021e2b5f79b3a4153bccdd727e",
+    "outputs/v1/imagegen-prompts.md": "f4cb0aa442a549e4b67b9d5ccb1c8998a0497ec04b31d101ab2710c8d15a3a9b",
+    "outputs/v1/source/build_v1_refinement.py": "d90b6e38c70610834b21155e6794fe27154250ae8c48ee5f7afba3a059204fe9"
+  },
+  "unresolved_blockers": [
+    {
+      "id": "chinese_brand_name_source_missing",
+      "blocks": [
+        "exact_chinese_lockup_placement",
+        "chinese_typography_refinement"
+      ]
+    },
+    {
+      "id": "packaging_production_inputs_missing",
+      "blocks": [
+        "production_dieline",
+        "material_and_finishing_specification",
+        "cost_validation"
+      ]
+    },
+    {
+      "id": "approved_product_photography_missing",
+      "blocks": [
+        "final_product_claim_visual",
+        "channel_ready_assets"
+      ]
+    }
+  ]
+}

@@ -10,10 +10,13 @@ import { fileURLToPath } from "node:url";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const EVAL_DIR = path.resolve(HERE, "../../..");
-const DATASET_PATH = path.join(
+const LEGACY_DATASET_PATH = path.join(
   EVAL_DIR,
   "braintrust_eval/results/design-agent-bench-v0.1-multimodal-pilot.dataset.jsonl",
 );
+const DATASET_PATH = fs.existsSync(LEGACY_DATASET_PATH)
+  ? LEGACY_DATASET_PATH
+  : path.resolve(HERE, "../dataset.jsonl");
 const RUNS_DIR = path.join(HERE, "runs");
 const DEFAULT_TIMEOUT_MS = 15 * 60 * 1000;
 const CANDIDATE = {

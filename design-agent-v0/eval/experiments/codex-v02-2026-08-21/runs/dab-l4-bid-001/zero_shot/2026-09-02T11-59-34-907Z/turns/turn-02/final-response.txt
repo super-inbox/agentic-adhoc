@@ -1,0 +1,9 @@
+v2 状态已保存，但淘宝主图未执行编辑：工作区没有现有主图，无法定位价格标签和卖点区域；按图像编辑流程未凭空重建。v0、v1 均保持不变。
+
+新建或更新：
+
+- [v2 局部修改说明](/private<WORKDIR>/outputs/v2/change-request.md)
+- [v2 验证与阻塞记录](/private<WORKDIR>/outputs/v2/verification.json)
+- [项目状态](/private<WORKDIR>/outputs/project-state.json)
+
+请提供当前淘宝主图的高清成图或可编辑源文件。若图中文字不清晰，还需提供现有卖点原文；收到后只删除价格标签并压缩为一句，礼盒和视觉系统不动。

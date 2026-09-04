@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.2",
+  "version": "v1",
+  "status": "pass",
+  "checks": [
+    {
+      "id": "selected_direction_mapping",
+      "result": "pass",
+      "details": "B3 Curtain Hour was carried forward because it was the lowest-luminance v0 candidate at 147.36 mean luma; the next darkest candidate was B1 at 152.61.",
+      "evidence_paths": [
+        "outputs/v0/kvs/kv-b3_curtain-hour.png",
+        "outputs/v0/boards/mori-kv-territory-overview_v0.png"
+      ]
+    },
+    {
+      "id": "requested_delta_visual_review",
+      "result": "pass",
+      "details": "Full-resolution visual inspection confirms a visible horizontal tabletop and back edge, direct bottle-to-table contact, a short contact shadow, and a broader softer right-side light. The floating photo tile is gone.",
+      "evidence_paths": [
+        "outputs/v1/kvs/kv-b3_curtain-hour-grounded_v1.png",
+        "outputs/v1/assets/b3-curtain-hour_tabletop-background_v1.png"
+      ]
+    },
+    {
+      "id": "nighttime_mood_retained",
+      "result": "pass",
+      "details": "Mean luma decreased from 147.36 in v0 B3 to 141.41 in v1, so the requested darker nighttime direction was retained rather than brightened.",
+      "evidence_paths": [
+        "outputs/v0/kvs/kv-b3_curtain-hour.png",
+        "outputs/v1/kvs/kv-b3_curtain-hour-grounded_v1.png"
+      ]
+    },
+    {
+      "id": "product_identity_preserved",
+      "result": "pass",
+      "details": "The v1 locked product asset is byte-identical to the supplied source image; both SHA-256 values are 5db0bf6ad57de7ea8f31030249ceb50387d2ff0d5f4d5564ee3a977b1e51b286. A deterministic silhouette mask was used for compositing; the bottle and blank label were not generated, redrawn, or relabeled.",
+      "evidence_paths": [
+        "inputs/02-launch_product.png",
+        "outputs/v1/assets/launch-product_locked_v1.png",
+        "outputs/v1/render_b3_grounded_v1.py"
+      ]
+    },
+    {
+      "id": "unrelated_layout_preserved",
+      "result": "pass",
+      "details": "Logo, approved copy, typography settings and coordinates, product perceived scale and position, vertical curtain rhythm, and terracotta curtain placement were carried over from v0 B3. Only the tabletop/contact treatment and light softness changed.",
+      "evidence_paths": [
+        "outputs/v0/kvs/kv-b3_curtain-hour.png",
+        "outputs/v1/kvs/kv-b3_curtain-hour-grounded_v1.png",
+        "outputs/v1/render_b3_grounded_v1.py"
+      ]
+    },
+    {
+      "id": "approved_copy_and_claims",
+      "result": "pass",
+      "details": "The revised KV contains only the MORI wordmark and the two approved phrases. No medical, treatment, insomnia-improvement, clinical, or efficacy language or symbols were introduced.",
+      "evidence_paths": [
+        "outputs/v1/kvs/kv-b3_curtain-hour-grounded_v1.png",
+        "outputs/v1/render_b3_grounded_v1.py",
+        "outputs/v1/imagegen-prompt.md"
+      ]
+    },
+    {
+      "id": "artifact_dimensions",
+      "result": "pass",
+      "details": "The revised KV and revised background are RGB PNG files at 1122 x 1402 pixels.",
+      "evidence_paths": [
+        "outputs/v1/kvs/kv-b3_curtain-hour-grounded_v1.png",
+        "outputs/v1/assets/b3-curtain-hour_tabletop-background_v1.png"
+      ]
+    },
+    {
+      "id": "v0_integrity",
+      "result": "pass",
+      "details": "All new visual, prompt, script, and verification artifacts were written under outputs/v1. The v0 B3 SHA-256 remains 5265a99d99ae1065b8fa55fef0b64f3eaac700b0dd7dc1c21456ac8b4649bc58.",
+      "evidence_paths": [
+        "outputs/v0/kvs/kv-b3_curtain-hour.png",
+        "outputs/v1"
+      ]
+    },
+    {
+      "id": "scope_gate",
+      "result": "pass",
+      "details": "No website hero, Instagram portrait, or email header was created in this delta-only turn.",
+      "evidence_paths": [
+        "outputs/project-state.json",
+        "outputs/v1"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

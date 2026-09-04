@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
-"""Judge the three v0.2 rubric dimensions code cannot settle.
+"""Historical judge-v2 for three v0.2 rubric dimensions.
 
-STATUS 2026-08-25: the violation-first prompt below WORKS but the run is
-INCOMPLETE — 8 of 31 scored, the other 23 lost to a Gemini monthly spending cap
-(429 RESOURCE_EXHAUSTED). Output: rubric-v02-judged-v2.jsonl.
+SUPERSEDED: this pass was completed after quota recovery, but a subsequent
+evidence audit found that it used the base query for zero-shot conditions and
+did not provide the judge with source images or a complete evaluator-computed
+output inventory. This produced demonstrable false violations. Keep the script
+and ``rubric-v02-judged-v2.jsonl`` for audit history only; canonical scoring is
+performed by ``judge_rubric_v03.py``. See ``JUDGE_VALIDATION.md``.
+
+Historical status on 2026-08-25: the violation-first prompt below initially
+scored 8 of 31 run directories; the remainder hit a Gemini spending cap.
+The resumability and duplicate-condition bugs were later fixed and 30 unique
+completed conditions were scored, before v2 was superseded by v3.
 
   dimension                v1 (score-first)      v2 (violation-first, n=8)
   brief_understanding      {5:31}  sd 0.00       {1:1, 5:7}  sd 1.32
@@ -66,7 +74,7 @@ Design notes, because a judge is easy to get wrong:
     the failure this repo already documented in consistency_gate.
 """
 from __future__ import annotations
-import base64, json, os, sys, time
+import argparse, base64, json, os, sys, time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -163,6 +171,8 @@ def collect(run: Path):
 
 
 def judge(client, brief: dict, run: Path):
+    from google.genai import types
+
     fb = brief.get("feedback") or []
     cons = brief.get("constraints") or {}
     rub = brief.get("rubric") or {}
@@ -188,14 +198,66 @@ def judge(client, brief: dict, run: Path):
         parts.append({"inline_data": {
             "mime_type": "image/png" if sfx == ".png" else "image/jpeg", "data": b64}})
     resp = client.models.generate_content(
-        model=MODEL, contents=[{"role": "user", "parts": parts}])
+        model=MODEL,
+        contents=[{"role": "user", "parts": parts}],
+        config=types.GenerateContentConfig(
+            temperature=0,
+            response_mime_type="application/json",
+        ),
+    )
     raw = (resp.text or "").strip()
     if raw.startswith("```"):
         raw = raw.split("```")[1].removeprefix("json").strip()
     return json.loads(raw)
 
 
+def selected_runs(briefs: dict[str, dict]):
+    """Return one latest primary completed run per benchmark condition.
+
+    The experiment directory contains 31 completed run directories but only 30
+    unique completed conditions: DAB-L4-CFR-003@reference_grounded has two
+    successful attempts. Scoring both would silently overweight that condition.
+    """
+    latest = {}
+    for rj in sorted((EXP / "runs").rglob("result.json")):
+        res = json.loads(rj.read_text(encoding="utf-8"))
+        if res.get("outcome") != "completed" or res.get("primary_eligible") is False:
+            continue
+        brief = briefs.get(str(res.get("base_brief_id") or "").lower())
+        if not brief:
+            continue
+        condition = str(res.get("context_condition") or rj.parent.parent.name)
+        key = (brief["id"], condition)
+        stamp = str(res.get("started_at") or rj.parent.name)
+        previous = latest.get(key)
+        if previous is None or stamp > previous[0]:
+            latest[key] = (stamp, rj.parent, brief, res)
+    return [(run, brief, res) for _, run, brief, res in sorted(latest.values())]
+
+
+def write_snapshot(path: Path, rows_by_run: dict[str, dict], selected_ids: set[str]):
+    rows = [rows_by_run[rid] for rid in sorted(selected_ids) if rid in rows_by_run]
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(
+        "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows),
+        encoding="utf-8",
+    )
+    temporary.replace(path)
+
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--max-new-runs",
+        type=int,
+        default=0,
+        help="Judge at most this many missing/failed runs (0 means all).",
+    )
+    return parser.parse_args()
+
+
 def main() -> int:
+    args = parse_args()
     from google import genai
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
@@ -209,44 +271,60 @@ def main() -> int:
             r = json.loads(line)
             briefs[r["id"].lower()] = r
 
-    runs = []
-    for rj in sorted((EXP / "runs").rglob("result.json")):
-        res = json.loads(rj.read_text(encoding="utf-8"))
-        if res.get("outcome") == "completed":
-            b = briefs.get(str(res.get("base_brief_id") or "").lower())
-            if b:
-                runs.append((rj.parent, b, res))
+    runs = selected_runs(briefs)
 
     out = HERE / "rubric-v02-judged-v2.jsonl"
-    done = set()
-    if out.exists():                                   # resumable
-        for l in out.read_text(encoding="utf-8").splitlines():
-            if l.strip():
-                done.add(json.loads(l)["run"])
+    previous_rows = []
+    if out.exists():
+        previous_rows = [
+            json.loads(line)
+            for line in out.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+    rows_by_run = {row["run"]: row for row in previous_rows}
+    selected_ids = {str(run.relative_to(EXP)) for run, _, _ in runs}
+    done = {
+        rid for rid, row in rows_by_run.items()
+        if rid in selected_ids and row.get("error") is None
+    }
+    # Canonicalize immediately: prune the superseded duplicate condition while
+    # retaining every successful selected result already obtained.
+    write_snapshot(out, rows_by_run, selected_ids)
 
-    with out.open("a", encoding="utf-8") as fh:
-        for i, (run, brief, res) in enumerate(runs, 1):
-            rid = str(run.relative_to(EXP))
-            if rid in done:
-                continue
-            try:
-                v = judge(client, brief, run)
-                err = None
-            except Exception as e:
-                v, err = {}, f"{type(e).__name__}: {e}"[:180]
-            row = {"run": rid, "brief_id": brief["id"], "condition": run.parent.name,
-                   "level": brief.get("level"), "turns": res.get("completed_turns"),
-                   "model": MODEL, "error": err}
-            for d in DIMS:
-                row[d] = (v.get(d) or {}).get("score")
-                row[d + "_why"] = (v.get(d) or {}).get("why")
-            row["violations"] = v.get("violations") or []
-            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
-            fh.flush()
-            print(f"  {i}/{len(runs)} {rid[:44]} -> "
-                  + " ".join(f"{d[:4]}={row[d]}" for d in DIMS)
-                  + (f" ERR {err}" if err else ""), flush=True)
-            time.sleep(1)
+    attempted = 0
+    for i, (run, brief, res) in enumerate(runs, 1):
+        rid = str(run.relative_to(EXP))
+        if rid in done:
+            continue
+        if args.max_new_runs and attempted >= args.max_new_runs:
+            break
+        attempted += 1
+        try:
+            v = judge(client, brief, run)
+            err = None
+        except Exception as e:
+            v, err = {}, f"{type(e).__name__}: {e}"[:500]
+        row = {"run": rid, "brief_id": brief["id"], "condition": run.parent.name,
+               "level": brief.get("level"), "turns": res.get("completed_turns"),
+               "model": MODEL, "error": err}
+        for d in DIMS:
+            row[d] = (v.get(d) or {}).get("score")
+            row[d + "_why"] = (v.get(d) or {}).get("why")
+        row["violations"] = v.get("violations") or []
+        rows_by_run[rid] = row
+        write_snapshot(out, rows_by_run, selected_ids)
+        print(f"  {i}/{len(runs)} {rid[:44]} -> "
+              + " ".join(f"{d[:4]}={row[d]}" for d in DIMS)
+              + (f" ERR {err}" if err else ""), flush=True)
+        if err and ("RESOURCE_EXHAUSTED" in err or "spending cap" in err.lower()):
+            print("Stopping after quota exhaustion; successful rows remain resumable.", file=sys.stderr)
+            break
+        time.sleep(1)
+    successes = sum(
+        1 for rid in selected_ids
+        if rid in rows_by_run and rows_by_run[rid].get("error") is None
+    )
+    print(f"\njudge coverage: {successes}/{len(selected_ids)} unique completed conditions")
     print(f"\nwrote {out.relative_to(EVAL)}")
     return 0
 
