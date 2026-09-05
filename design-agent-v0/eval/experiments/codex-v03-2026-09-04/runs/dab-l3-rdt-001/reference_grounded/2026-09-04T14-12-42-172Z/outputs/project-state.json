@@ -1,0 +1,44 @@
+{
+  "current_version": "v0",
+  "status": "final",
+  "client_decisions": {
+    "subjects": [
+      "elderly woman",
+      "cheerleader",
+      "priest",
+      "nun",
+      "fictional world leader"
+    ],
+    "pose": "mid-leap",
+    "backdrop": "non-graphic cinematic explosion",
+    "press_target_inches": [14, 8.5],
+    "canvas_ratio": "28:17"
+  },
+  "locked_items": [
+    "Exactly five character canvases, one named subject per canvas",
+    "One coherent repeatable visual system across all five",
+    "Reference use limited to abstract line, shape, and rendering cues",
+    "No copied reference character, words, or logo",
+    "No real politician likeness and no graphic violence"
+  ],
+  "changed_items": [
+    "Created five subject-specific masked and caped mid-leap character illustrations",
+    "Applied one locked navy, cream, gold, coral, and indigo visual system across the set",
+    "Normalized every character canvas to 4200 × 2550 px at 300 ppi",
+    "Created and visually reviewed the labeled 14 × 8.5 inch press proof and preview",
+    "Completed technical, visual, reference-use, and safety verification"
+  ],
+  "artifact_paths": {
+    "style_reference": "inputs/01-style_only.png",
+    "character_set": [
+      "outputs/v0/01-elderly-woman.png",
+      "outputs/v0/02-cheerleader.png",
+      "outputs/v0/03-priest.png",
+      "outputs/v0/04-nun.png",
+      "outputs/v0/05-fictional-world-leader.png"
+    ],
+    "press_proof": "outputs/v0/press-proof.png",
+    "preview": "outputs/v0/preview.png",
+    "verification": "outputs/v0/verification.json"
+  }
+}

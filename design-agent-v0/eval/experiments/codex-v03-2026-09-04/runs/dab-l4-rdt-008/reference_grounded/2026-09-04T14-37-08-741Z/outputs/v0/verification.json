@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "project": "North Field Herbal Balm carton",
+  "version": "v0",
+  "verified_at": "2026-09-04",
+  "verification_status": "PASS_WITH_EXPECTED_PRODUCTION_BLOCKERS",
+  "checks_performed": [
+    {
+      "check": "Required artifact inventory",
+      "result": "pass",
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/v0/concept-layout.png",
+        "outputs/v0/concept-layout.pdf",
+        "outputs/v0/preflight-report.json",
+        "outputs/v0/preflight-report.pdf",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "check": "JSON syntax and structured preflight assertions",
+      "result": "pass",
+      "details": "preflight-report.json and project-state.json parse successfully. Artwork readiness is NOT PRINT READY; production release is BLOCKED; all S01-S16 records are present and marked missing; geometry assumption is none; a 100% sample test and four approval owners are recorded.",
+      "evidence": [
+        "outputs/v0/preflight-report.json",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "check": "PDF integrity and page geometry",
+      "result": "pass",
+      "details": "concept-layout.pdf opens as one landscape A4 page at 842.4 x 595.2 pt. preflight-report.pdf opens as three portrait A4 pages at 595.2 x 842.4 pt. Neither PDF is encrypted and neither contains JavaScript.",
+      "evidence": [
+        "outputs/v0/concept-layout.pdf",
+        "outputs/v0/preflight-report.pdf"
+      ]
+    },
+    {
+      "check": "PDF render test",
+      "result": "pass",
+      "details": "All four PDF pages rendered through Poppler at 120 dpi without an error.",
+      "evidence": [
+        "outputs/v0/qa-render/concept-layout-1.png",
+        "outputs/v0/qa-render/preflight-report-1.png",
+        "outputs/v0/qa-render/preflight-report-2.png",
+        "outputs/v0/qa-render/preflight-report-3.png"
+      ]
+    },
+    {
+      "check": "Visual inspection",
+      "result": "pass",
+      "details": "Rendered pages were inspected at original render resolution. No clipped text, overlaps, broken glyphs, misaligned panels or unreadable sections were observed. Status labels, page numbering and footers are visible.",
+      "evidence": [
+        "outputs/v0/qa-render/concept-layout-1.png",
+        "outputs/v0/qa-render/preflight-report-1.png",
+        "outputs/v0/qa-render/preflight-report-2.png",
+        "outputs/v0/qa-render/preflight-report-3.png"
+      ]
+    },
+    {
+      "check": "Production-status label audit",
+      "result": "pass",
+      "details": "The concept is visibly marked NOT PRINT READY and CONTENT HIERARCHY ONLY. The report states PRODUCTION RELEASE: BLOCKED and repeats NOT PRINT READY on every page.",
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/v0/preflight-report.pdf"
+      ]
+    },
+    {
+      "check": "No guessed structural geometry",
+      "result": "pass",
+      "details": "No cut, crease, fold, flap, glue, bleed or safe-area geometry is drawn. The illustrative rectangle is labeled UNSCALED and NOT A PANEL / NOT A DIELINE. The assumption register records no geometry assumptions.",
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/v0/preflight-report.json"
+      ]
+    },
+    {
+      "check": "Copy fidelity and legal-copy separation",
+      "result": "pass",
+      "details": "The only product copy set as artwork is North Field, Herbal Balm and Net 60 g. Ingredients and warnings are represented only as reserved slots because verbatim approved wording is absent from the accessible input; neither is assigned to a panel.",
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/v0/preflight-report.json"
+      ]
+    },
+    {
+      "check": "Preview equivalence",
+      "result": "pass",
+      "details": "preview.png and concept-layout.png are byte-identical. SHA-256 for each: c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e.",
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/v0/concept-layout.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": [
+    {
+      "ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16"
+      ],
+      "blocker": "All structural parameters remain missing.",
+      "resolution": "Obtain a manufacturer-approved dieline package, or derive a provisional measured drawing from physical blanks and then obtain written manufacturer approval plus a passing 100% sample test."
+    },
+    {
+      "ids": [
+        "C01",
+        "C02",
+        "C03"
+      ],
+      "blocker": "Verbatim regulated copy, market requirements and variable-data applicability/content are not available.",
+      "resolution": "Provide exact approved copy and regulatory requirements before panel assignment."
+    },
+    {
+      "ids": [
+        "P01",
+        "P02"
+      ],
+      "blocker": "Print and proofing specifications are not available.",
+      "resolution": "Obtain manufacturer/prepress production and proofing specifications."
+    },
+    {
+      "blocker": "Required approvals and physical sample have not yet occurred.",
+      "resolution": "Record client concept approval, regulatory copy approval, manufacturer/prepress structural approval, passing physical sample and final client artwork approval."
+    }
+  ],
+  "checkpoint": "Stop before production artwork. Await the missing inputs and approvals listed in preflight-report.json."
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.1",
+  "workflow_version": "v1-frozen",
+  "stage": "final_frozen",
+  "scope": {
+    "pilot_items": 1,
+    "future_queue_range": [
+      100,
+      500
+    ]
+  },
+  "source_binding": {
+    "input_id": "approved-raster",
+    "file": "inputs/01-approved_source_artwork.png",
+    "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f",
+    "identity_policy": "preserve_identity",
+    "allowed_influence": [
+      "geometry",
+      "wording",
+      "color_relationships"
+    ]
+  },
+  "release_gate": {
+    "exemplar_human_approval_required": true,
+    "exemplar_status": "approved_condition_satisfied",
+    "batch_rule_status": "frozen",
+    "batch_release_status": "eligible_under_frozen_rule_not_started",
+    "approval_record": {
+      "approver_role": "client",
+      "approver_name": null,
+      "approval_evidence": "Client feedback: The exemplar matches; clean only the noisy small curved corners, rerun preflight, then freeze the batch rule.",
+      "approval_scope": "visual match with curve-only cleanup condition",
+      "condition_result": "satisfied_by_v1_preflight",
+      "recorded_at": "2026-09-04T11:42:10-04:00",
+      "approved_master_sha256": {
+        "svg": "987b6293ef6fbbef8c07f4639c7004257fce2270567c725d39c17735889aca13",
+        "eps": "a8a2f2095ef080624e4acab3a0d56ea4822715d6ba09a3c0d0bce50d1b4e4cf3",
+        "pdf": "1fc1431a10579f6736207f0072b82057006e223ff4cd809a8417fd24cd7fbe5e"
+      },
+      "approved_preview_sha256": "7681903ee379e094d949577b8ae891079c5c80487b06bd662768d19c2490e92b"
+    }
+  },
+  "automatic_trace_acceptance": {
+    "decision_rule": "accept only when every hard gate and numeric threshold passes",
+    "hard_gates": [
+      "OCR wording exactly equals approved wording",
+      "zero embedded raster images in SVG, EPS, and PDF masters",
+      "zero unintended open fills, self-intersections, or lost counters",
+      "all intended colors map to approved palette roles",
+      "all minimum strokes remain at least 0.20 mm at nominal output size"
+    ],
+    "thresholds": {
+      "edge_distance_p95_mm_max": 0.3,
+      "silhouette_iou_min": 0.985,
+      "median_delta_e_2000_max": 2.0,
+      "p95_delta_e_2000_max": 4.0,
+      "logo_nodes_per_mm_max": 3.0,
+      "display_outline_nodes_per_mm_max": 8.0,
+      "micro_islands_below_0_05_mm2_max": 0,
+      "unintended_path_count_delta": 0
+    }
+  },
+  "manual_review_triggers": [
+    {
+      "code": "OCR_MISMATCH",
+      "trigger": "Any wording, punctuation, spacing, or weight label differs."
+    },
+    {
+      "code": "INTERWEAVE_OR_OCCLUSION",
+      "trigger": "Over-under crossings, overlaps, masks, or occluded shapes are present."
+    },
+    {
+      "code": "UNKNOWN_DISPLAY_TYPE",
+      "trigger": "A distinctive display face cannot be matched to an approved font file."
+    },
+    {
+      "code": "TRACE_COMPLEXITY",
+      "trigger": "Node density exceeds the relevant automatic threshold."
+    },
+    {
+      "code": "PALETTE_DRIFT",
+      "trigger": "Median or p95 Delta E exceeds the automatic threshold."
+    },
+    {
+      "code": "GEOMETRY_DRIFT",
+      "trigger": "Silhouette IoU or edge-distance threshold fails."
+    },
+    {
+      "code": "SMALL_DETAIL",
+      "trigger": "A feature or stroke is below 0.20 mm at nominal size."
+    },
+    {
+      "code": "RASTER_NOISE",
+      "trigger": "Texture, compression, antialiasing, or gradient noise creates false islands."
+    },
+    {
+      "code": "PATH_DEFECT",
+      "trigger": "Lost counters, self-intersections, unintended open paths, or duplicate paths occur."
+    },
+    {
+      "code": "LOW_SOURCE_RESOLUTION",
+      "trigger": "Effective source resolution is below 150 ppi at nominal size."
+    }
+  ],
+  "per_item_sequence": [
+    "ingest_and_hash",
+    "detect_panels_palette_and_wording",
+    "generate_auto_trace_candidate",
+    "measure_against_acceptance_thresholds",
+    "route_to_accept_or_manual_review",
+    "export_svg_eps_pdf",
+    "render_previews_at_small_nominal_and_large_scales",
+    "verify_no_raster_dependency_and_record_metrics",
+    "hold_for_human_approval_when_item_is_exemplar_or_triggered",
+    "release_only_after_gate_record_is_complete"
+  ],
+  "pilot_trace_decision": {
+    "whole_frame_auto_trace": "rejected",
+    "reasons": [
+      "interwoven multicolor emblem",
+      "distinctive display lettering",
+      "paper and ink raster noise"
+    ],
+    "final_method": "selective source-guided outline cleanup plus geometric Bezier reconstruction",
+    "manual_cleanup_applied": [
+      "display wordmark contour simplification",
+      "emblem crossing order reconstruction",
+      "panel and rule normalization",
+      "supporting text converted to clean glyph outlines",
+      "v1 small curved-corner anchor consolidation on the ORBIT COFFEE outline only"
+    ]
+  },
+  "required_batch_record_fields": [
+    "item_id",
+    "source_sha256",
+    "operator",
+    "trace_engine_version",
+    "threshold_results",
+    "manual_review_codes",
+    "node_counts_before_after",
+    "palette_values",
+    "export_sha256s",
+    "preview_paths",
+    "approval_status",
+    "approver",
+    "approval_timestamp"
+  ],
+  "v1_delta": {
+    "target": "ORBIT COFFEE display-outline path",
+    "v0_anchor_nodes": 220,
+    "v1_anchor_nodes": 165,
+    "reduction_percent": 25.0,
+    "non_target_geometry_and_colors": "verified_unchanged"
+  },
+  "preflight": {
+    "status": "pass",
+    "run_at": "2026-09-04T11:41:32-04:00",
+    "source_edge_distance_p95_mm": 0.2033,
+    "failed_checks": [],
+    "final_verification_path": "outputs/v1/verification.json"
+  },
+  "rule_freeze": {
+    "status": "frozen",
+    "frozen_at": "2026-09-04T11:42:10-04:00",
+    "frozen_version": "v1",
+    "rule_sha256": "6aac6729277eeaf4f9768379aadadf478eaa17e5fd14787a8cf56de2d9adea39",
+    "v0_rule_sha256": "6aac6729277eeaf4f9768379aadadf478eaa17e5fd14787a8cf56de2d9adea39",
+    "acceptance_thresholds_changed_from_v0": false,
+    "manual_review_triggers_changed_from_v0": false,
+    "change_control": "Any later rule change requires a new version, preflight, and explicit client approval."
+  }
+}

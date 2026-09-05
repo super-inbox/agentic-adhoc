@@ -1,0 +1,59 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-09-04T14:17:14.607Z",
+  "finished_at": "2026-09-04T14:29:08.112Z",
+  "latency_ms": 713530,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 53,
+    "command_count": 17,
+    "tool_count": 5,
+    "image_activity_count": 9,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a06cc7-e4a0-7cb2-89e4-e32228f3c194",
+    "usage": {
+      "input_tokens": 1349896,
+      "cached_input_tokens": 1270656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 22302,
+      "reasoning_output_tokens": 10180
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1279,
+      "sha256": "0875b5adf3d14e304b6d3f4efbea9f8700ff625fbabd26255ebc6c8ed857cb28"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 2417,
+      "sha256": "e8eacb7caa72c0f48595c82ecf8f24acfabca9ee7323f3010abdb98fa25f71fa"
+    },
+    {
+      "filename": "v0/edited-cartoon.png",
+      "byte_size": 4700271,
+      "sha256": "69bd59a95b8deed766d6b50d90b21177551a0fa2419c0d7ad1d5db7ff62c97eb"
+    },
+    {
+      "filename": "v0/generated-lettering-source.png",
+      "byte_size": 2465291,
+      "sha256": "94b63c35bfaf25ab291726c559549169011c7c806867442f46e50c1326ec2886"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 4700271,
+      "sha256": "69bd59a95b8deed766d6b50d90b21177551a0fa2419c0d7ad1d5db7ff62c97eb"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3240,
+      "sha256": "d3ad6743fe8c4d35152a0e5b74932859affaa2ddf1e696ed8ab9d5350b1ad086"
+    }
+  ]
+}

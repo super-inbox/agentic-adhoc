@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "version": "v0",
+  "stage": "final",
+  "deliverable": "outputs/v0/future-neighbourhood.png",
+  "preview": "outputs/v0/preview.png",
+  "checks_performed": [
+    {
+      "check": "PNG integrity and dimensions",
+      "status": "pass",
+      "method": "file and sips inspection",
+      "observed": "1536 x 1024, 8-bit RGB PNG, 3:2 landscape"
+    },
+    {
+      "check": "Preview equivalence",
+      "status": "pass",
+      "method": "SHA-256 comparison",
+      "observed": "Final and preview have identical SHA-256: 5cc4019281b8e2dcc1d44ae2e53c96889a825a2bd8c7ef27fbc466093d0e6300"
+    },
+    {
+      "check": "Reference A geometry",
+      "status": "pass",
+      "method": "Manual visual inspection against the layout reference",
+      "observed": "Road spans the bottom; main building is left; prominent tree is near centre; sun is upper-right"
+    },
+    {
+      "check": "Reference A style exclusion",
+      "status": "pass",
+      "method": "Manual visual inspection",
+      "observed": "Final uses smooth filled forms and deliberate soft contours, not Reference A's thin sketch linework"
+    },
+    {
+      "check": "Reference B abstract-style use",
+      "status": "pass",
+      "method": "Manual visual inspection against the style reference",
+      "observed": "Rounded silhouettes, smooth contour treatment, soft dimensional fills, and polished friendly rendering energy are present"
+    },
+    {
+      "check": "Reference B identity and layout exclusion",
+      "status": "pass",
+      "method": "Manual visual inspection",
+      "observed": "No copied emblem composition, crescent, star, wording, logo, mascot, or character; no centered badge layout"
+    },
+    {
+      "check": "Independent colour direction",
+      "status": "pass",
+      "method": "Manual visual inspection",
+      "observed": "Scene is led by sky blue, coral, fresh greens, aqua, lilac, and warm rose rather than the style reference's navy-and-yellow scheme"
+    },
+    {
+      "check": "Friendly future mobility",
+      "status": "pass",
+      "method": "Manual visual inspection",
+      "observed": "Original electric neighbourhood shuttle, bicycle, solar roof, greenery, and bright atmosphere create an optimistic mobility scene"
+    },
+    {
+      "check": "Depth and lighting coherence",
+      "status": "pass",
+      "method": "Manual visual inspection",
+      "observed": "Upper-right illumination, lower-left shadows, foreground planting, midground anchors, and softened background buildings establish coherent depth"
+    },
+    {
+      "check": "Prohibited text and branding",
+      "status": "pass",
+      "method": "Manual visual inspection",
+      "observed": "No visible words, letters, numbers, signage, logos, trademarks, or watermark"
+    }
+  ],
+  "evidence_paths": [
+    "inputs/01-geometry_only.png",
+    "inputs/02-style_only.png",
+    "outputs/v0/future-neighbourhood.png",
+    "outputs/v0/preview.png",
+    "outputs/project-state.json"
+  ],
+  "unresolved_blockers": []
+}

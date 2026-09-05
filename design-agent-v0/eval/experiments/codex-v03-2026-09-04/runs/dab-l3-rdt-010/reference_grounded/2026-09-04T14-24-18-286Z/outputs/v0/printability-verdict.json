@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "owl-printability-verdict-v0",
+  "verdict": "manual_review",
+  "verdict_states": [
+    "print_ready",
+    "manual_review",
+    "insufficient_source"
+  ],
+  "state_definitions": {
+    "print_ready": "The supplied evidence is sufficient for production without unresolved fidelity or colour decisions.",
+    "manual_review": "A usable reconstruction exists, but one or more production-significant decisions require human approval.",
+    "insufficient_source": "The source does not support a reliable reconstruction of the artwork identity."
+  },
+  "production_status": "not_approved_for_print",
+  "can_be_reprinted": "yes_after_manual_approval",
+  "summary": "The photograph is sufficient to recover a recognizable, clean three-colour geometric owl and to prepare editable separations. It is not sufficient to establish exact original colour values, exact undistorted contours, the intended treatment of white areas, or every small eye-highlight detail. The reconstruction is therefore suitable for proofing, not direct production release.",
+  "source_assessment": {
+    "source_path": "inputs/01-degraded_product_photo.png",
+    "source_resolution_px": {
+      "width": 1086,
+      "height": 1448
+    },
+    "supports": [
+      "The overall owl silhouette and component arrangement",
+      "Three dominant printed colour regions: dark blue, rust orange, and warm taupe",
+      "Large geometric features: brow chevron, crown inset, eye rings, pupils, beak diamond, torso, wings, and feet"
+    ],
+    "does_not_support": [
+      "Calibrated or exact spot-colour matching",
+      "Exact pre-distortion dimensions or asymmetry",
+      "A definitive answer on whether light areas were garment knockouts, white ink, or an underbase",
+      "Exact contours of small pupil highlights and minor edge/registration marks"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "source-large-forms-readable",
+      "finding": "The principal colour masses and their adjacency remain visibly distinguishable despite folds, lighting falloff, and perspective.",
+      "path": "inputs/01-degraded_product_photo.png"
+    },
+    {
+      "id": "editable-vector-separations",
+      "finding": "The reconstruction contains 13 editable path elements, exactly three flat fill colours, no embedded image, and no background rectangle.",
+      "path": "outputs/v0/recovered_owl_artwork.svg"
+    },
+    {
+      "id": "transparent-production-raster",
+      "finding": "The production raster is 2100 by 3000 pixels in RGBA mode; background and designed negative-space samples have zero alpha.",
+      "path": "outputs/v0/recovered_owl_artwork.png"
+    },
+    {
+      "id": "white-substrate-proof",
+      "finding": "The viewing proof shows the intended appearance when transparent gaps reveal a white substrate.",
+      "path": "outputs/v0/preview.png"
+    }
+  ],
+  "uncertainty": [
+    {
+      "area": "colour",
+      "severity": "high",
+      "reason": "The phone photograph contains uneven warm lighting and no colour target; the supplied hex values are visual approximations only."
+    },
+    {
+      "area": "geometry",
+      "severity": "medium",
+      "reason": "Fabric curvature, folds, camera perspective, and print wear prevent recovery of exact original control points. Bilateral symmetry was normalized where the source appeared photographically distorted."
+    },
+    {
+      "area": "small_eye_details",
+      "severity": "medium",
+      "reason": "The photograph shows light marks in the pupils, but does not reliably distinguish intended glints from wear, reflection, or fabric texture. One clearly supported glint per pupil was retained in simplified form."
+    },
+    {
+      "area": "light_area_treatment",
+      "severity": "medium",
+      "reason": "The reconstruction models light gaps as transparency because the source garment is white. The photograph cannot prove whether the original production used garment knockouts, a white ink plate, or an underbase."
+    }
+  ],
+  "required_human_review": [
+    "Compare the proof with the physical garment or an original brand asset, if available, and approve the normalized proportions and symmetry.",
+    "Approve the crown's narrow orange accent and the simplified single glint in each pupil.",
+    "Choose production colours from physical swatches or an approved brand specification; do not use the provisional hex values as an exact match claim.",
+    "Confirm whether light areas should remain garment knockouts on a white shirt or become a white ink/underbase separation on another substrate.",
+    "Run and approve a size-accurate test print, including registration of the narrow transparent gaps."
+  ],
+  "conditions_to_reach_print_ready": [
+    "All required human-review items are approved and recorded.",
+    "The print provider converts the approved palette and white treatment into process-appropriate separations.",
+    "A production-size proof passes registration and appearance review."
+  ],
+  "related_artifacts": [
+    "outputs/v0/recovered_owl_artwork.svg",
+    "outputs/v0/recovered_owl_artwork.png",
+    "outputs/v0/preview.png",
+    "outputs/v0/design_document.json",
+    "outputs/v0/verification.json"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "project": "premium_laminate_surface_identity_india",
+  "current_version": "v1",
+  "status": "awaiting_pre_final_symbol_confirmation_and_official_name",
+  "updated": "2026-09-04",
+  "client_decisions": {
+    "market": "India",
+    "audience": "B2B architects, interior designers and premium residential/commercial project teams",
+    "positioning": "minimal, professional, modern, reliable and high quality",
+    "selected_direction": "B / 02 / Modular Field",
+    "official_brand_name": null
+  },
+  "locked_items": [
+    "Direction B / 02 / Modular Field is selected.",
+    "Direction B architectural grid is locked.",
+    "Direction B restrained lowercase wordmark architecture is locked.",
+    "Direction B palette, collection-code behavior and sample-book architecture are locked.",
+    "The standard mark remains unchanged for 24 px and above.",
+    "Generic house, roof and marble-vein icon shortcuts are excluded.",
+    "The directions differ by identity architecture, not merely palette."
+  ],
+  "changed_items": [
+    "Recorded the client selection of Direction B / 02 / Modular Field.",
+    "Created a separate integer-aligned optical symbol master for 16-23 px.",
+    "Increased compact corner weight to 3 px at native 16 px.",
+    "Changed the compact centre to a crisp 2 x 2 px square.",
+    "Preserved the approved grid, wordmark architecture and all unrelated Direction B elements."
+  ],
+  "artifact_paths": {
+    "preview": "outputs/v1/preview.png",
+    "selected_direction_refinement": {
+      "png": "outputs/v1/direction-b-symbol-refinement.png",
+      "svg": "outputs/v1/direction-b-symbol-refinement.svg"
+    },
+    "compact_symbol": {
+      "svg": "outputs/v1/direction-b-compact-symbol.svg",
+      "native_16px_png": "outputs/v1/direction-b-compact-symbol-16px.png"
+    },
+    "design_document": "outputs/v1/design_document.json",
+    "verification": "outputs/v1/verification.json",
+    "identity_starter": null
+  },
+  "open_human_checkpoint": {
+    "type": "pre_final_symbol_confirmation_and_name_input",
+    "selection": "B / 02 / Modular Field",
+    "compact_symbol_status": "refined_at_16px_awaiting_confirmation",
+    "required_before": [
+      "final selected mark export set",
+      "final wordmark construction",
+      "final PNG/SVG/PDF identity starter"
+    ]
+  },
+  "unresolved_inputs": [
+    "Confirm the revised 16 px optical symbol may proceed to the final system.",
+    "Provide or confirm the official brand name before final wordmark construction."
+  ],
+  "version_history": [
+    {
+      "version": "v0",
+      "stage": "three_direction_review",
+      "artifact_root": "outputs/v0",
+      "supersedes": null
+    },
+    {
+      "version": "v1",
+      "stage": "selected_direction_compact_symbol_refinement",
+      "artifact_root": "outputs/v1",
+      "supersedes": "v0",
+      "delta": "Direction B selected; 16-23 px optical master added."
+    }
+  ]
+}

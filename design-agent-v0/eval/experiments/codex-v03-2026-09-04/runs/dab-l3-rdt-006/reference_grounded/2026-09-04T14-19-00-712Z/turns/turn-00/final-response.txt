@@ -1,0 +1,11 @@
+Completed the masked road edit.
+
+- [Final PNG](<<WORKDIR>/outputs/v0/road-with-traffic-final.png>)
+- [Preview](<<WORKDIR>/outputs/v0/preview.png>)
+- [Verification](<<WORKDIR>/outputs/v0/verification.json>)
+- [Change set](<<WORKDIR>/outputs/v0/change_set.json>)
+- [Project state](<<WORKDIR>/outputs/project-state.json>)
+
+Verified: exactly three cars, valid left-hand traffic, visible right-hand driver position, and **0 changed pixels outside the supplied mask**.
+
+Built-in image editing was used with the final prompt specifying two rear-facing cars in the left outbound lane, one front-facing right-hand-drive car in the opposing lane, photorealistic perspective and shadows, and strict preservation of all existing scenery and road geometry.

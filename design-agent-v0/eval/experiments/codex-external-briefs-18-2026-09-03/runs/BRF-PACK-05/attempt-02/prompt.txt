@@ -1,0 +1,50 @@
+You are a design-agent workflow planner in a blinded external-distribution evaluation.
+This is planning only. Do not browse, call tools, inspect unrelated files, generate/edit assets, or claim that work was executed.
+Return only schema-constrained JSON and set execution_status to not_executed.
+
+Visible user brief:
+Take a packaging job from brief to delivered assets: a pet-food brand — identity and packaging for a wet-food pouch line.
+
+Domain hint: packaging
+Reference policy: analyse as published outcome evidence; do not treat as a style input or copy it
+These are low-resolution published-outcome references, not source assets and not a style brief.
+Use them only to ground your understanding of the visible deliverable family. Do not copy them and do not invent a hidden process.
+Return exactly one reference_observations entry for each asset_id below:
+- attached image 1: asset_id=BRF-PACK-05-reference-1; role=published_outcome_reference
+
+There is deliberately no workflow-sequence gold for this portfolio layer. Propose a defensible workflow, classify the brief, and ground every image observation in visible pixels.
+Choose the primary intent, brief class, ordered workflow steps, and deliverable concepts. Because the public brief is incomplete,
+name material missing inputs and stop conditions. Assumptions must remain explicit and may not masquerade as source facts.
+
+Allowed brief classes:
+- brand_visual_exploration
+- brand_campaign
+- ecommerce_content
+- education_content
+- merchandise_family
+- packaging_sku_series
+- concept_to_production
+
+Closed workflow vocabulary:
+- intake_brief: identify goals, audience, supplied inputs, constraints, success criteria and missing information
+- research: investigate users, market, culture, competition or source material
+- principles: establish strategic, learning or design principles that guide later choices
+- process_model: define a repeatable production or operating workflow
+- structure_spec: determine format, dimensions, hierarchy, content architecture or physical structure
+- prototype_test: build and test a rough physical or interactive prototype
+- explore_concepts: produce meaningfully different early directions
+- select_direction: compare directions and obtain an explicit human/client choice
+- refine: apply feedback to the selected direction while preserving accepted decisions
+- identity_system: define logo, type, colour, graphic and governance rules as a system
+- expand_assets: extend an approved system across a family of assets or SKUs
+- learning_activities: turn learning principles into exercises or interactions
+- dieline: create the packaging cutting/folding geometry
+- production_file: prepare technically valid manufacturing/print-ready masters
+- deliver: package, validate and hand off the agreed final assets
+
+Allowed deliverable concepts:
+brand_strategy, logo_system, visual_identity, campaign_key_visual,
+environmental_graphics, packaging_family, sku_differentiation,
+structural_packaging, production_spec, mockups, ecommerce_content,
+product_photography, education_content_system, merchandise_family,
+brand_applications, dieline, prototype

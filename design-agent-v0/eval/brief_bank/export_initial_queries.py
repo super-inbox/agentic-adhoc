@@ -64,7 +64,7 @@ def project(
             conditions[0] if conditions else None,
         )
     if not isinstance(condition, dict):
-        raise ValueError(f"{row.get('id')}: v0.2 row has no context condition")
+        raise ValueError(f"{row.get('id')}: workflow row has no context condition")
 
     include_ids = set(condition["include_input_ids"])
     reference_by_input = {
@@ -102,7 +102,7 @@ def project(
         "context_condition": condition_id,
         "query": condition.get("query_override", row["initial_query"]),
         "language": row["language"],
-        "layer": "l3_l4_brief_initial_query_v0.2",
+        "layer": f"l3_l4_brief_initial_query_v{row['schema_version']}",
         "capability_level": row["level"],
         "category": row["category"],
         "primary_intent": row["primary_intent"],
@@ -127,7 +127,7 @@ def project(
 def project_rows(rows: list[dict], *, episode_source: str | None = None) -> list[dict]:
     projected: list[dict] = []
     for row in rows:
-        if row.get("schema_version") == "0.2":
+        if row.get("schema_version") in {"0.2", "0.3"}:
             projected.extend(
                 project(row, condition, episode_source=episode_source)
                 for condition in row["context_conditions"]

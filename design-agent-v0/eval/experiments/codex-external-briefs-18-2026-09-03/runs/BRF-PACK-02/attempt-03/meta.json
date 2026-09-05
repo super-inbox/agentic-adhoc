@@ -1,0 +1,38 @@
+{
+  "id": "BRF-PACK-02",
+  "layer": "case_study_workflow",
+  "attempt": 3,
+  "status": "completed",
+  "started_at": "2026-09-04T02:40:56.583074Z",
+  "finished_at": "2026-09-04T02:41:26.055636Z",
+  "duration_seconds": 29.472583,
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "dataset_row_sha256": "9b20d12132c7d4d4692c1cb6fe04d58afebb8838f2b53f073244e64ec36cb381",
+  "prompt_sha256": "bfc80ae73a5c8fe7fa154876e4a69badab9bd1ded7c92181f7553f75692086de",
+  "input_assets": [],
+  "exit_code": 0,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": null,
+  "validation_errors": [],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": {
+      "input_tokens": 14965,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1391,
+      "reasoning_output_tokens": 494
+    },
+    "thread_id": "01a06a4a-6938-73d3-bdea-e9a3954e0446"
+  }
+}

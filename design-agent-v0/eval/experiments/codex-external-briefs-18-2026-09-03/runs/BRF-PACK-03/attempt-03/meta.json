@@ -1,0 +1,54 @@
+{
+  "id": "BRF-PACK-03",
+  "layer": "portfolio_reference",
+  "attempt": 3,
+  "status": "completed",
+  "started_at": "2026-09-04T02:41:34.325682Z",
+  "finished_at": "2026-09-04T02:42:54.409334Z",
+  "duration_seconds": 80.083752541,
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "dataset_row_sha256": "939bc3cec0829cb2eb213c9b5b30b39ca6c39cd474b226c7066d6b2992635e5d",
+  "prompt_sha256": "3b84c800e3f21c2b731d1564a89b8c1178fd0f34bb8f51e7363bbdd089ff6b05",
+  "input_assets": [
+    {
+      "asset_id": "BRF-PACK-03-reference-1",
+      "sha256": "1a351db58a56e8dcf984581b00fa70a160a72b7826e4cb48b193ee2f13716ab2",
+      "bytes": 69161
+    },
+    {
+      "asset_id": "BRF-PACK-03-reference-2",
+      "sha256": "841a88768a9eefab83436eecdeb593bfa9ab1fa2d5b3685a2acb08dbb8b4e75b",
+      "bytes": 11072
+    },
+    {
+      "asset_id": "BRF-PACK-03-reference-3",
+      "sha256": "2d47efad7ffdff176b928d497ebe38ce9cb5385e292727bfa7cf8821eb707a97",
+      "bytes": 56943
+    }
+  ],
+  "exit_code": 0,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": null,
+  "validation_errors": [],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": {
+      "input_tokens": 16719,
+      "cached_input_tokens": 11136,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 4196,
+      "reasoning_output_tokens": 2588
+    },
+    "thread_id": "01a06a4a-fcb1-7692-a640-fffa6567b151"
+  }
+}

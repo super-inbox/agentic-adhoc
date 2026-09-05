@@ -1,0 +1,91 @@
+{
+  "dataset_partition": {
+    "core_v0_2_migrated_rows": 24,
+    "projected_context_condition_runs": 43,
+    "public_corpus_grounded_external_rows": 11,
+    "total_episodes": 35
+  },
+  "files": {
+    "base_dataset": {
+      "bytes": 161384,
+      "path": "brief_bank/briefs.v0.2.jsonl",
+      "rows": 24,
+      "sha256": "f5489d3d1b770f8a8a5bc5e82263c9a273b6ecc06cc72b82e92586f76339313c"
+    },
+    "builder": {
+      "bytes": 46331,
+      "path": "brief_bank/build_v03.py",
+      "sha256": "c6402be2828560dc5d28e02f5209e434659e511a4792ae53e634ca05dc644b69"
+    },
+    "dataset": {
+      "bytes": 233725,
+      "path": "brief_bank/briefs.v0.3.jsonl",
+      "rows": 35,
+      "sha256": "d574a95c439110849e717b2c61940f39dc990b7c02612b3916fc5dcf5753e421"
+    },
+    "initial_query_projection": {
+      "bytes": 70969,
+      "path": "brief_bank/initial_queries.v0.3.jsonl",
+      "rows": 43,
+      "sha256": "7f236b84135c2e9cf64feb7fcadb6b139ab12bc94b8d1daa165b445c0b628095"
+    },
+    "projection_builder": {
+      "bytes": 5854,
+      "path": "brief_bank/export_initial_queries.py",
+      "sha256": "a01465d3e82fecebaaa7eade145afae7a45a4b72506aa1c2372e60f1ce2575ed"
+    },
+    "public_seed_index": {
+      "bytes": 34195,
+      "path": "reddit_briefs/reddit_brief_seeds_2026-08-30.jsonl",
+      "rows": 20,
+      "sha256": "cc5940bd1936f1e954de5ff9c4c136d1740239893ad021d279f4b64c33ec53d2"
+    },
+    "schema": {
+      "bytes": 12270,
+      "path": "brief_bank/brief.v0.3.schema.json",
+      "sha256": "fe34839256bf4404b90d3d495bdb1c979dc6b036fff45d30c39db7aeb3b69dbf"
+    },
+    "v02_asset_manifest": {
+      "bytes": 11344,
+      "path": "assets/reference-pack-v0.2/manifest.jsonl",
+      "rows": 18,
+      "sha256": "ecaa3ddd9181a78549d9ae2da05ad049f0af67113183cffeec9517c7999dbfb9"
+    },
+    "v03_asset_manifest": {
+      "bytes": 3762,
+      "path": "assets/brief-bank-v0.3/manifest.jsonl",
+      "rows": 6,
+      "sha256": "819f4079637cdb187249b44893758220f7c21db72838a75a9e97097d850ef792"
+    },
+    "v03_generation_log": {
+      "bytes": 3321,
+      "path": "assets/brief-bank-v0.3/generation.jsonl",
+      "rows": 4,
+      "sha256": "9cf882f3e45b8dc4a09d7368ac1e01bf5cd27a3388cee047c802e87cf706312f"
+    },
+    "v03_mask_builder": {
+      "bytes": 1168,
+      "path": "assets/brief-bank-v0.3/build_masks.py",
+      "sha256": "d3ab55cdc0e94681f307604c4edae7511fb722ba4693d34604410b6b26b08c29"
+    },
+    "validator": {
+      "bytes": 17104,
+      "path": "brief_bank/validate_v03.py",
+      "sha256": "e3422df3bee4eca0e6c9ed78d25cf24df4b54fc57a6f779ab11a22ad7d382a66"
+    }
+  },
+  "frozen_at": "2026-09-04",
+  "lineage": {
+    "core_business_scope_changed": false,
+    "external_seed_count": 11,
+    "external_selection_rule": "record_type=case AND brief_readiness=ready_to_author",
+    "reference_material_records_imported_as_cases": 0
+  },
+  "rights_and_claim_boundary": {
+    "benchmark_status": "harness-ready with completed Codex baseline; no cross-Agent result is claimed",
+    "customer_data": false,
+    "pixel_fixtures": "project_owned_test_fixture",
+    "public_posts": "task/failure patterns only; stored as paraphrased seed references"
+  },
+  "schema_version": "brief-bank-freeze-v0.3"
+}

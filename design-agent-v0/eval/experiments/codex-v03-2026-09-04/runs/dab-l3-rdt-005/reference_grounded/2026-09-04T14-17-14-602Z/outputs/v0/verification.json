@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "candidate_version": "v0",
+  "status": "passed",
+  "artifact_path": "outputs/v0/edited-cartoon.png",
+  "artifact_sha256": "69bd59a95b8deed766d6b50d90b21177551a0fa2419c0d7ad1d5db7ff62c97eb",
+  "checks": [
+    {
+      "id": "exact_replacement_text",
+      "method": "visual inspection at original resolution",
+      "result": "passed",
+      "expected": "SHIP IT TODAY",
+      "observed_lines": [
+        "SHIP",
+        "IT",
+        "TODAY"
+      ],
+      "notes": "Uppercase wording is exact, with no punctuation or extra copy."
+    },
+    {
+      "id": "typography_and_placement",
+      "method": "visual inspection at original resolution",
+      "result": "passed",
+      "observed": "Bold black cartoon lettering is legible and centered on three lines with clearance from the bubble outline and yellow emphasis marks."
+    },
+    {
+      "id": "binary_mask_validation",
+      "method": "decoded 8-bit mask histogram",
+      "result": "passed",
+      "histogram": {
+        "0": 1348842,
+        "255": 223674
+      },
+      "unexpected_mask_values": []
+    },
+    {
+      "id": "outside_mask_pixel_identity",
+      "method": "decoded RGBA channel-by-channel comparison against approved artwork",
+      "result": "passed",
+      "locked_pixels_checked": 1348842,
+      "mismatched_pixels": 0,
+      "mismatched_channels": 0,
+      "mismatch_samples": []
+    },
+    {
+      "id": "inside_mask_application",
+      "method": "decoded RGB comparison against selected image-edit output",
+      "result": "passed",
+      "editable_pixels_checked": 223674,
+      "rgb_pixels_matching_selected_edit": 223674,
+      "pixels_changed_from_source": 218125
+    },
+    {
+      "id": "dimensions",
+      "method": "PNG IHDR inspection",
+      "result": "passed",
+      "source": {
+        "width": 1254,
+        "height": 1254
+      },
+      "output": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "id": "png_alpha_behavior",
+      "method": "PNG IHDR inspection plus decoded alpha-channel comparison",
+      "result": "passed",
+      "source_png_color_type": 6,
+      "output_png_color_type": 6,
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_alpha_range": [
+        220,
+        251
+      ],
+      "output_alpha_range": [
+        220,
+        251
+      ],
+      "alpha_mismatch_pixels": 0
+    },
+    {
+      "id": "protected_visuals",
+      "method": "pixel-identity result plus visual inspection",
+      "result": "passed",
+      "items": [
+        "speech-bubble outline",
+        "speech-bubble tail",
+        "robot",
+        "workshop",
+        "background"
+      ]
+    },
+    {
+      "id": "preview_integrity",
+      "method": "byte comparison and SHA-256",
+      "result": "passed",
+      "preview_path": "outputs/v0/preview.png",
+      "preview_sha256": "69bd59a95b8deed766d6b50d90b21177551a0fa2419c0d7ad1d5db7ff62c97eb",
+      "byte_identical_to_final": true
+    }
+  ],
+  "evidence_paths": [
+    "inputs/01-approved_artwork.png",
+    "inputs/02-only_editable_region.png",
+    "outputs/v0/generated-lettering-source.png",
+    "outputs/v0/edited-cartoon.png",
+    "outputs/v0/preview.png",
+    "outputs/v0/change_set.json"
+  ],
+  "unresolved_blockers": []
+}

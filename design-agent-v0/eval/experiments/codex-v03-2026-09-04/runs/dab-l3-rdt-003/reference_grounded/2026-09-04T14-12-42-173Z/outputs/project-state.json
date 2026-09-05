@@ -1,0 +1,56 @@
+{
+  "current_version": "v0",
+  "status": "final_candidate_complete",
+  "client_decisions": {
+    "brief": "Original poster illustration for a solar-powered community bicycle workshop",
+    "style_reference_use": {
+      "allowed": ["shape_language", "line_treatment"],
+      "identity_policy": "abstract_only",
+      "prohibited": [
+        "reference palette",
+        "reference composition",
+        "reference wording",
+        "recognizable reference character or brand"
+      ]
+    },
+    "target_palette": [
+      {"name": "cobalt", "hex": "#174EA6"},
+      {"name": "acid green", "hex": "#B7FF3C"},
+      {"name": "warm grey", "hex": "#E8E4DC"}
+    ],
+    "tone": ["friendly", "energetic", "community"],
+    "hierarchy": "clear poster focal hierarchy",
+    "deliverable": {
+      "id": "cycling-poster",
+      "count": 1,
+      "format": "PNG",
+      "stage": "final"
+    }
+  },
+  "locked_items": [
+    "Use only cobalt #174EA6, acid green #B7FF3C, and warm grey #E8E4DC",
+    "Retain no recognizable reference character, wording, brand, palette, or composition",
+    "Original bicycle-workshop subject must visibly include solar power",
+    "Friendly energetic community tone",
+    "Clear poster focal hierarchy"
+  ],
+  "changed_items": [
+    {
+      "version": "v0",
+      "items": [
+        "Created an original portrait solar-powered bicycle-workshop poster",
+        "Applied abstract cut-paper shapes and friendly rounded line treatment from the style reference",
+        "Normalized the final PNG to the exact three-color target palette",
+        "Created required preview and verification artifacts"
+      ]
+    }
+  ],
+  "artifact_paths": {
+    "cycling_poster": "outputs/v0/cycling-poster.png",
+    "preview": "outputs/v0/preview.png",
+    "verification": "outputs/v0/verification.json",
+    "generation_prompt": "outputs/v0/generation-prompt.txt",
+    "generation_source": "outputs/v0/solar-community-bicycle-workshop-source.png"
+  },
+  "unresolved_blockers": []
+}

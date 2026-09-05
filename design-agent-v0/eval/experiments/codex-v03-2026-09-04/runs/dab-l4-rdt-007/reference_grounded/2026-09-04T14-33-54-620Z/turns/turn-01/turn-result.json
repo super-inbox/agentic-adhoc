@@ -1,0 +1,114 @@
+{
+  "turn_index": 1,
+  "logical_session_id": "session-01",
+  "started_at": "2026-09-04T14:46:43.578Z",
+  "finished_at": "2026-09-04T14:56:19.705Z",
+  "latency_ms": 576150,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 50,
+    "command_count": 13,
+    "tool_count": 7,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a06cd7-26ef-7b52-b70a-7b0ff7d122cf",
+    "usage": {
+      "input_tokens": 4084646,
+      "cached_input_tokens": 3968768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 52913,
+      "reasoning_output_tokens": 16766
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2897,
+      "sha256": "b397cdc0d35c251db4a0423f987e0ad160c7c6cdff569fdba28e387c5b7e8271"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 4863,
+      "sha256": "6eb982091521935064021efe9f76521b15f191b67a8be2bb2326db94609a55eb"
+    },
+    {
+      "filename": "v0/direction-01-registered-edge.png",
+      "byte_size": 431615,
+      "sha256": "69ae3fed8910c6df06475c3119d8669de4bb49593474e1b473403609bfbf9b29"
+    },
+    {
+      "filename": "v0/direction-01-registered-edge.svg",
+      "byte_size": 8453,
+      "sha256": "aeec9636f55c526f2f6a70c38334a5db967fcb420f11ddb2f9c77497b37371cc"
+    },
+    {
+      "filename": "v0/direction-02-modular-field.png",
+      "byte_size": 433699,
+      "sha256": "040a3ee4ac392a121855cf29922f6c6ef9838e88296f010d88ee3fc7caa5bd4d"
+    },
+    {
+      "filename": "v0/direction-02-modular-field.svg",
+      "byte_size": 8931,
+      "sha256": "2cdcf0bd09317e266f17c3d406b8f29a7032f02a16246e63a9aa6eb616f0c40e"
+    },
+    {
+      "filename": "v0/direction-03-cutline-wordmark.png",
+      "byte_size": 440497,
+      "sha256": "7679b0c5b99b7a7de0bbb1d8191b142a587f0d81a3112076d8d0013a86d44d88"
+    },
+    {
+      "filename": "v0/direction-03-cutline-wordmark.svg",
+      "byte_size": 8982,
+      "sha256": "1165b97f525a791350813ecbe36d0415acfc2507a0761cb29c5f47f24ba05a20"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 297668,
+      "sha256": "06405f4f978141fe56daebe4862a61cbd8767be9d7f7df841ba93d3004c30bc5"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5394,
+      "sha256": "c3ce7d4ee7c8d0021d801300ed8ac918c2e92f5ac42850b81ed9dc1c986761f6"
+    },
+    {
+      "filename": "v1/design_document.json",
+      "byte_size": 2618,
+      "sha256": "faa6fbc8989d0dd1f9ff7389e001520959d7f5042e9db3c1e2e2312be4d30273"
+    },
+    {
+      "filename": "v1/direction-b-compact-symbol-16px.png",
+      "byte_size": 139,
+      "sha256": "40bafa484e48a5f2eb905543145b2e69a5a497547ab31fff54350b28a5fa5e58"
+    },
+    {
+      "filename": "v1/direction-b-compact-symbol.svg",
+      "byte_size": 552,
+      "sha256": "2bf42475eff9b7c30fd90308dda53978fc98d1abf9b6ee4936ee510754b23970"
+    },
+    {
+      "filename": "v1/direction-b-symbol-refinement.png",
+      "byte_size": 193998,
+      "sha256": "39c2dadf18b5e1b5e7b611ebeb2450f7729e16839069b90d25463d80175008ca"
+    },
+    {
+      "filename": "v1/direction-b-symbol-refinement.svg",
+      "byte_size": 11437,
+      "sha256": "5c740f1f8bbc84696ef3fd9674b22c91ec53c3c6b8c8e8943ddadb91e8b55d0d"
+    },
+    {
+      "filename": "v1/preview.png",
+      "byte_size": 292600,
+      "sha256": "99b0de1aed111ed78f300a80e31de4a4300add8c13f7ffaef2435b052a8e8c06"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 6263,
+      "sha256": "134c2fecacceabeb99576bde636973095deac0cf3053626d7e40f99619adf2da"
+    }
+  ]
+}

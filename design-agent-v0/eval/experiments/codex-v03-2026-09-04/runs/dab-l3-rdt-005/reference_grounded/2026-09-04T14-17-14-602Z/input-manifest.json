@@ -1,0 +1,24 @@
+[
+  {
+    "input_id": "edit-target",
+    "asset_id": "v03-robot-speech-bubble-source",
+    "role": "approved_artwork",
+    "reference_role": "edit_target",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "01-approved_artwork.png",
+    "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/robot-speech-bubble-source.png",
+    "byte_size": 2972861,
+    "sha256": "49e72cb26fda02196fc6c8b27e49abd7344b933846f69b5a80d2e79d7e365077"
+  },
+  {
+    "input_id": "edit-mask",
+    "asset_id": "v03-robot-speech-bubble-mask",
+    "role": "only_editable_region",
+    "reference_role": "supporting_asset",
+    "identity_policy": "analysis_only",
+    "filename": "02-only_editable_region.png",
+    "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/robot-speech-bubble-mask.png",
+    "byte_size": 4505,
+    "sha256": "aceb733e1af33960faffcce90c817f71bc09c8d8fe4baa39cc77ed2ed73abac3"
+  }
+]

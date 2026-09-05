@@ -1,0 +1,8 @@
+Completed the polished future-neighbourhood illustration as a 1536×1024 PNG. All ten verification checks pass with no unresolved blockers.
+
+- [Final illustration](<WORKDIR>/outputs/v0/future-neighbourhood.png)
+- [Preview](<WORKDIR>/outputs/v0/preview.png)
+- [Verification](<WORKDIR>/outputs/v0/verification.json)
+- [Project state](<WORKDIR>/outputs/project-state.json)
+
+Built-in image generation was used. Prompt: create an original 3:2 future-neighbourhood scene preserving only Reference A’s road-bottom/building-left/tree-centre/sun-upper-right geometry, using only Reference B’s rounded, softly dimensional illustration qualities, with an independent coral–aqua–green–lilac palette and no copied text, logo, character, crescent, star, layout, or colours.

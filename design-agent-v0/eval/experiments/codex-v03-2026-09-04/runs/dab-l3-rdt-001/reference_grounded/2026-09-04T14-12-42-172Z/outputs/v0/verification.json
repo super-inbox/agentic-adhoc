@@ -1,0 +1,130 @@
+{
+  "version": "v0",
+  "status": "passed",
+  "verification_date": "2026-09-04",
+  "generation": {
+    "mode": "built-in image generation",
+    "reference_role": "style reference only",
+    "shared_prompt": "Final full-bleed 28:17 sublimation canvas; exactly one masked and cream-lined-caped subject in a full-body mid-leap action pose; deep midnight-navy radial field; harmless layered gold, amber, coral, and cream cinematic explosion; broad rounded forms; thick cream outer keyline with slimmer navy internal lines; soft cel shading and warm rim light; no text, logo, real-person likeness, weapons, or graphic violence.",
+    "subject_variants": {
+      "elderly woman": "Silver wind-swept bun, expressive age lines, plum practical hero tunic, forward-fist leap.",
+      "cheerleader": "Adult athletic cheerleader, ponytail, coral/navy modest uniform, two cream/gold pom-poms, toe-touch-inspired leap, no team marks.",
+      "priest": "Middle-aged priest, white clerical collar, charcoal/navy cassock-inspired suit, protective open-hand leap, respectful presentation.",
+      "nun": "Adult nun, cream coif and fitted veil, modest navy habit-inspired suit, raised-fist leap, respectful presentation.",
+      "fictional world leader": "Entirely invented middle-aged Black woman, close-cropped silver curls, civilian high-collared stateswoman suit and plain coral sash, no flags or political insignia."
+    }
+  },
+  "specification": {
+    "character_count": 5,
+    "canvas_ratio": "28:17",
+    "press_target_inches": [14, 8.5],
+    "print_dimensions_px": [4200, 2550],
+    "resolution_ppi": 300,
+    "color_mode": "RGB"
+  },
+  "artifacts": [
+    {
+      "subject": "elderly woman",
+      "path": "outputs/v0/01-elderly-woman.png",
+      "sha256": "4b4cd61096d675004154d2cca8ab7abef4582ae15b5818f65680c4b6f565eaa4"
+    },
+    {
+      "subject": "cheerleader",
+      "path": "outputs/v0/02-cheerleader.png",
+      "sha256": "b86ea3ce4104ed012386058799ad89ba0881c7c49933e7291362bbccfa7a9091"
+    },
+    {
+      "subject": "priest",
+      "path": "outputs/v0/03-priest.png",
+      "sha256": "ba5f98b8416a036b1f086b042a48d45fd4383c259d4e147a47d32ef65cf1c9f0"
+    },
+    {
+      "subject": "nun",
+      "path": "outputs/v0/04-nun.png",
+      "sha256": "1bc639da5fd0268608995ad0b46bfc7cf8f77f365b9b53bbf7030df5dbb7aa02"
+    },
+    {
+      "subject": "fictional world leader",
+      "path": "outputs/v0/05-fictional-world-leader.png",
+      "sha256": "03bf34b1d5e707d22456e32cae2265f3f0bf435f3c6acdd5152a817379435ec6"
+    }
+  ],
+  "checks_performed": [
+    {
+      "check": "character_output_count",
+      "result": "pass",
+      "expected": 5,
+      "observed": 5,
+      "evidence_paths": [
+        "outputs/v0/01-elderly-woman.png",
+        "outputs/v0/02-cheerleader.png",
+        "outputs/v0/03-priest.png",
+        "outputs/v0/04-nun.png",
+        "outputs/v0/05-fictional-world-leader.png"
+      ]
+    },
+    {
+      "check": "print_geometry_and_file_integrity",
+      "result": "pass",
+      "details": "All five character files are nonblank RGB PNGs measuring exactly 4200 × 2550 px. Cross-multiplication confirms 4200:2550 = 28:17. PNG metadata reports approximately 300 × 300 ppi.",
+      "evidence_paths": [
+        "outputs/v0/01-elderly-woman.png",
+        "outputs/v0/02-cheerleader.png",
+        "outputs/v0/03-priest.png",
+        "outputs/v0/04-nun.png",
+        "outputs/v0/05-fictional-world-leader.png"
+      ]
+    },
+    {
+      "check": "one_named_subject_per_canvas",
+      "result": "pass",
+      "details": "Visual review confirms one person only on each canvas, with subject-specific age, costume, or role cues and no additional people.",
+      "evidence_paths": [
+        "outputs/v0/preview.png",
+        "outputs/v0/press-proof.png"
+      ]
+    },
+    {
+      "check": "shared_visual_system",
+      "result": "pass",
+      "details": "All five use the same deep-navy field, cream outer keyline, dark internal line weight, warm gold/coral rounded explosion, radial energy rays, soft cel shading, warm rim light, full-body airborne framing, and cream-lined cape treatment.",
+      "evidence_paths": [
+        "outputs/v0/preview.png",
+        "outputs/v0/press-proof.png"
+      ]
+    },
+    {
+      "check": "subject_and_action_requirements",
+      "result": "pass",
+      "details": "Each subject is visibly masked, caped, and mid-leap with both feet off the ground; each explosion is stylized, cinematic, non-graphic, and contains no depicted victim or injury.",
+      "evidence_paths": [
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "check": "reference_and_safety_constraints",
+      "result": "pass",
+      "details": "Visual review found no copied reference lettering, logo, crescent identity, or character; no real politician likeness, flags, maps, national insignia, weapons, blood, wounds, or graphic violence are present. Reference influence is limited to abstract rounded shapes, outline language, soft shading, and upbeat rendering energy.",
+      "evidence_paths": [
+        "inputs/01-style_only.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "check": "press_proof",
+      "result": "pass",
+      "details": "The proof is exactly 4200 × 2550 px at approximately 300 ppi, labels all five final filenames, records the 14 × 8.5 inch target, 28:17 ratio, RGB mode, 100% print scale guidance, and mirroring caveat.",
+      "evidence_paths": [
+        "outputs/v0/press-proof.png",
+        "outputs/v0/preview.png"
+      ]
+    }
+  ],
+  "proof_sha256": "5650362e173bf5266a8679db599ab545ef4defcd35db1e6c9958910e09f7194c",
+  "preview_sha256": "fec42b217abe5c31cc83299a09ba3873670c360ddc20bafcdc4397bde63c261f",
+  "unresolved_blockers": [],
+  "production_notes": [
+    "No printer/substrate ICC profile was supplied; the delivered artwork and proof are RGB. Confirm the production color profile before pressing.",
+    "Artwork is not mirrored. Mirror only if required by the selected transfer paper and press workflow."
+  ]
+}

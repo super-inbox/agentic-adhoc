@@ -1,0 +1,13 @@
+Completed v0.
+
+Verdict: **`manual_review`** — the owl is recoverable and suitable for proofing, but not print-ready from this uncalibrated, fabric-distorted photo alone. Exact colors, small eye details, normalized proportions, and white/underbase treatment require approval.
+
+Files:
+
+- [Editable SVG master](/private<WORKDIR>/outputs/v0/recovered_owl_artwork.svg) — 13 editable paths, three colors, no embedded photo
+- [Transparent production PNG](/private<WORKDIR>/outputs/v0/recovered_owl_artwork.png)
+- [White-substrate preview](/private<WORKDIR>/outputs/v0/preview.png)
+- [Printability verdict](/private<WORKDIR>/outputs/v0/printability-verdict.json)
+- [Design document](/private<WORKDIR>/outputs/v0/design_document.json)
+- [Verification report](/private<WORKDIR>/outputs/v0/verification.json)
+- [Project state](/private<WORKDIR>/outputs/project-state.json)

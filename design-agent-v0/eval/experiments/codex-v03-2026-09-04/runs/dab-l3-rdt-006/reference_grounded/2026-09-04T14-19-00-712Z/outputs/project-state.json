@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.3",
+  "current_version": "v0",
+  "status": "complete",
+  "client_decisions": [
+    {
+      "decision": "Use the supplied approved road photograph as the edit target.",
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "Add exactly three realistic cars, all using valid Australian left-hand traffic lanes.",
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "Make at least one near vehicle visibly right-hand drive.",
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "Permit changes only within the supplied binary road mask.",
+      "source": "current_user_turn"
+    }
+  ],
+  "locked_items": [
+    "All pixels outside inputs/02-road_surface_edit_region.png",
+    "Traffic signs and guideposts",
+    "Trees, vegetation, hillside, and sky",
+    "Road geometry and visible marking alignment",
+    "Australian left-hand traffic rule"
+  ],
+  "changed_items": [
+    {
+      "item": "car-1",
+      "change": "Added a small rear-facing car receding in the outbound lane left of the centre lines."
+    },
+    {
+      "item": "car-2",
+      "change": "Added a mid-distance rear-facing car receding in the outbound lane left of the centre lines."
+    },
+    {
+      "item": "car-3",
+      "change": "Added a near front-facing car approaching in the inbound lane right of the centre lines, with the driver and steering position visible on the vehicle's right-hand side."
+    },
+    {
+      "item": "vehicle-shadows",
+      "change": "Added localized contact and cast shadows supporting the three vehicle additions."
+    }
+  ],
+  "artifact_paths": {
+    "road-with-traffic": "outputs/v0/road-with-traffic-final.png",
+    "preview": "outputs/v0/preview.png",
+    "change_set": "outputs/v0/change_set.json",
+    "verification": "outputs/v0/verification.json",
+    "localized_addition_mask": "outputs/v0/vehicle-additions-mask.png"
+  }
+}

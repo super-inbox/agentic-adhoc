@@ -1,0 +1,38 @@
+{
+  "id": "BRF-BRAND-01",
+  "layer": "case_study_workflow",
+  "attempt": 3,
+  "status": "completed",
+  "started_at": "2026-09-04T02:38:13.574338Z",
+  "finished_at": "2026-09-04T02:38:57.562809Z",
+  "duration_seconds": 43.988085125,
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "dataset_row_sha256": "a0d6b92bef30617ae793e6885c45bc9cdaae4a290a1c73f00fdf82074018172e",
+  "prompt_sha256": "2c0ccc3bda1f44e469e14e7ce1caf43a295c425ea9c130009d62237da19bdf57",
+  "input_assets": [],
+  "exit_code": 0,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": null,
+  "validation_errors": [],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": {
+      "input_tokens": 14963,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1948,
+      "reasoning_output_tokens": 1034
+    },
+    "thread_id": "01a06a47-ec90-76f3-ac90-cf032dccd029"
+  }
+}

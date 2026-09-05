@@ -1,0 +1,9 @@
+Reading additional input from stdin...
+2026-09-04T14:12:42.351605Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-09-04T14:12:42.360162Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-09-04T14:12:42.364462Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 93 column 5
+2026-09-04T14:12:42.826788Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-09-04T14:12:42.826839Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-09-04T14:15:15.289976Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 93 column 5
+2026-09-04T14:15:22.031165Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 93 column 5
+2026-09-04T14:15:26.411742Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 93 column 5

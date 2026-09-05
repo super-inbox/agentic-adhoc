@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" role="img" aria-labelledby="title desc">
+  <title id="title">Modular Field compact symbol</title>
+  <desc id="desc">A sixteen-pixel optical master made from four architectural corner modules around a two-pixel ochre centre.</desc>
+  <g fill="#143A35">
+    <path d="M1 1H7V4H4V7H1V1Z"/>
+    <path d="M9 1H15V7H12V4H9V1Z"/>
+    <path d="M9 12H12V9H15V15H9V12Z"/>
+    <path d="M1 9H4V12H7V15H1V9Z"/>
+  </g>
+  <rect x="7" y="7" width="2" height="2" fill="#D8AA35"/>
+</svg>

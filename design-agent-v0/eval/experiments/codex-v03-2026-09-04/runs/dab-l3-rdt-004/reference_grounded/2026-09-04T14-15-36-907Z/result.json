@@ -1,0 +1,156 @@
+{
+  "schema_version": "codex-design-agent-v03-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-RDT-004@reference_grounded",
+  "base_brief_id": "DAB-L3-RDT-004",
+  "context_condition": "reference_grounded",
+  "category": "reference_to_original",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution",
+    "workflow_orchestration",
+    "multi_reference_binding"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 3600000,
+  "started_at": "2026-09-04T14:15:36.911Z",
+  "finished_at": "2026-09-04T14:19:00.560Z",
+  "latency_ms": 203649,
+  "intended_turns": 1,
+  "completed_turns": 1,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a06cc6-68e9-7593-a65a-c5792e82f21c",
+  "input_assets": [
+    {
+      "input_id": "layout-reference",
+      "asset_id": "v03-layout-road-sketch",
+      "role": "geometry_only",
+      "reference_role": "layout_reference",
+      "identity_policy": "analysis_only",
+      "filename": "01-geometry_only.png",
+      "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/layout-road-sketch.png",
+      "byte_size": 856801,
+      "sha256": "2999e70ef22634109c17e612012ac5e1db86f8d7acef529eeb2fa721015c799f"
+    },
+    {
+      "input_id": "style-reference",
+      "asset_id": "factory-luna-club-sticker",
+      "role": "style_only",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "02-style_only.png",
+      "source_path": "eval/assets/reference-pack-v0.2/factory/luna-club-sticker.png",
+      "byte_size": 220853,
+      "sha256": "7956c4e5900e53317128d7733ecf0c7729be48edc9d76e5f7a13962aca5cc718"
+    }
+  ],
+  "input_context_ids": [
+    "layout-reference",
+    "style-reference"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl",
+    "preview.png"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "preview.png": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2407,
+      "sha256": "4d33a1a37440825b27c9541c82a4cd96b41d4679f968febdd1546230d9d9672b"
+    },
+    {
+      "filename": "v0/future-neighbourhood.png",
+      "byte_size": 1880154,
+      "sha256": "5cc4019281b8e2dcc1d44ae2e53c96889a825a2bd8c7ef27fbc466093d0e6300"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 1880154,
+      "sha256": "5cc4019281b8e2dcc1d44ae2e53c96889a825a2bd8c7ef27fbc466093d0e6300"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3003,
+      "sha256": "33b2ad4a69f63449acd3f60fa7e68d6c3643b733d9ec35baf030f55470fb241b"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-09-04T14:15:36.911Z",
+      "finished_at": "2026-09-04T14:19:00.527Z",
+      "latency_ms": 203634,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 21,
+        "command_count": 6,
+        "tool_count": 1,
+        "image_activity_count": 4,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a06cc6-68e9-7593-a65a-c5792e82f21c",
+        "usage": {
+          "input_tokens": 320059,
+          "cached_input_tokens": 286208,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7763,
+          "reasoning_output_tokens": 3827
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 2407,
+          "sha256": "4d33a1a37440825b27c9541c82a4cd96b41d4679f968febdd1546230d9d9672b"
+        },
+        {
+          "filename": "v0/future-neighbourhood.png",
+          "byte_size": 1880154,
+          "sha256": "5cc4019281b8e2dcc1d44ae2e53c96889a825a2bd8c7ef27fbc466093d0e6300"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 1880154,
+          "sha256": "5cc4019281b8e2dcc1d44ae2e53c96889a825a2bd8c7ef27fbc466093d0e6300"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3003,
+          "sha256": "33b2ad4a69f63449acd3f60fa7e68d6c3643b733d9ec35baf030f55470fb241b"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 320059,
+    "cached_input_tokens": 286208,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7763,
+    "reasoning_output_tokens": 3827
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

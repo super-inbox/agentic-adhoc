@@ -1,0 +1,38 @@
+{
+  "id": "BRF-EDU-02",
+  "layer": "case_study_workflow",
+  "attempt": 3,
+  "status": "completed",
+  "started_at": "2026-09-04T02:39:35.645563Z",
+  "finished_at": "2026-09-04T02:40:02.705463Z",
+  "duration_seconds": 27.059933875,
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "dataset_row_sha256": "e09b84613f6219355f0f1383d35acc70cf24650a97babdbb4a3e6a244ff96501",
+  "prompt_sha256": "0d3332684f3d0039d5745f9b9e5b159f58bf6f8d6c5c585b41aa719bc98bb22f",
+  "input_assets": [],
+  "exit_code": 0,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": null,
+  "validation_errors": [],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": {
+      "input_tokens": 14953,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1304,
+      "reasoning_output_tokens": 489
+    },
+    "thread_id": "01a06a49-2d14-74d0-998c-24c1932c7ab8"
+  }
+}

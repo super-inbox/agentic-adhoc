@@ -1,0 +1,28 @@
+{
+  "schema_version": "external-brief-plan-freeze-v1",
+  "candidate_config": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "candidate_config_sha256": "f328bc9aa891c4ea62eb5f983d2749851367419bc8670303fa5420664aa51ca3",
+  "model_identity": {
+    "provider": "OpenAI",
+    "interface": "codex-cli",
+    "model_id": "gpt-5.6-sol",
+    "model_weights_sha256": null,
+    "model_weights_hash_status": "not_exposed_by_codex_cli"
+  },
+  "dataset_sha256": "aace3f87fd059fbeee2d5abbbd1efbc20411ea0cec3522ddc9a7913453c696da",
+  "output_schema_sha256": "ff45bb9aab1922c6192a7d8fdaf9acd428f61b6245e7f683d18e960d6e47b37c",
+  "builder_sha256": "360250288fae52adc7505af23e9d1519e28234cfa43869800642634b2df212b7",
+  "runner_sha256": "b30c466f412912cefc295e412bdf8970b2b0b43713cec17fc89d69c8e4ae8fea",
+  "scorer_sha256": "6c158e1c3ca5dcd9eaf15e20bd91b09f84c425a4188b0e7fd9a0bcee6c53f389",
+  "prompt_set_sha256": "c14e575b6721742160a9377a62e62600800c7965b66cb53464aa925bddb5dc41",
+  "canonical_results_sha256": "7b79f44b750e6a6a4bcf0f3627cc6addc8ebb2504abfa31aebba578e4035a76a",
+  "summary_sha256": "07146dd376b9442d1013689570fe1f18b0ecac9bb1e98c91d10e55c72645e1c7",
+  "row_count": 18
+}

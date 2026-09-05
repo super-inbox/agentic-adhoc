@@ -1,0 +1,30 @@
+{
+  "categories": {
+    "brand_identity_directions": 4,
+    "client_feedback_revision": 5,
+    "concept_to_factory_ready": 7,
+    "ecommerce_launch_suite": 3,
+    "existing_brand_campaign": 3,
+    "multi_format_adaptation": 4,
+    "packaging_sku_family": 3,
+    "reference_to_original": 6
+  },
+  "core_rows": 24,
+  "dataset_sha256": "d574a95c439110849e717b2c61940f39dc990b7c02612b3916fc5dcf5753e421",
+  "errors": 0,
+  "external_rows": 11,
+  "levels": {
+    "L3": 16,
+    "L4": 19
+  },
+  "primary_intents": {
+    "adapt": 4,
+    "edit": 7,
+    "evaluate_rank": 5,
+    "export": 9,
+    "generate": 10
+  },
+  "referenced_assets": 18,
+  "rows": 35,
+  "schema_version": "0.3"
+}

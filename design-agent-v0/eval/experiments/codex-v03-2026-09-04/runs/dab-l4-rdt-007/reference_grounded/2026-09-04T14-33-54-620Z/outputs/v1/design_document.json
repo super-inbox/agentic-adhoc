@@ -1,0 +1,65 @@
+{
+  "document_type": "selected_direction_compact_symbol_refinement",
+  "version": "v1",
+  "stage": "pre_final_symbol_checkpoint",
+  "date": "2026-09-04",
+  "selected_direction": {
+    "client_label": "B",
+    "original_id": "02",
+    "name": "Modular Field",
+    "source_board": "outputs/v0/direction-02-modular-field.png"
+  },
+  "client_delta": "Keep the architectural grid and restrained wordmark, but make the symbol readable at 16 px before preparing the final system.",
+  "preserved_without_change": [
+    "Architectural 52-unit grid behavior",
+    "Lowercase provisional wordmark structure",
+    "Spruce, ochre, sage and warm-white palette",
+    "Standard 64-unit mark for sizes of 24 px and above",
+    "Collection-code behavior",
+    "Sample-book cover architecture"
+  ],
+  "changed": [
+    {
+      "item": "compact_symbol_master",
+      "scope": "16 to 23 px only",
+      "before": "The standard 64-unit master was proportionally reduced, creating fractional pixel edges at 16 px.",
+      "after": "A separate 16-unit optical master uses integer-aligned geometry."
+    }
+  ],
+  "compact_symbol_geometry": {
+    "viewbox": "0 0 16 16",
+    "outer_margin_px_at_16": 1,
+    "corner_weight_px_at_16": 3,
+    "center_signal_px_at_16": "2 x 2",
+    "center_corner_radius_px_at_16": 0,
+    "filled_pixel_counts": {
+      "spruce": 108,
+      "ochre": 4,
+      "transparent": 144
+    },
+    "occupied_pixel_bounds": "x 1-14, y 1-14",
+    "anti_aliasing_dependency_at_native_16_px": false
+  },
+  "responsive_logo_rule": {
+    "16_to_23_px": "Use direction-b-compact-symbol.svg or the native 16 px PNG optical master.",
+    "24_px_and_above": "Use the unchanged standard mark from Direction B v0.",
+    "print_minimum": "6 mm using the standard master.",
+    "prohibition": "Do not interpolate or morph between the micro and standard masters."
+  },
+  "artifacts": {
+    "review_preview": "outputs/v1/preview.png",
+    "refinement_board_png": "outputs/v1/direction-b-symbol-refinement.png",
+    "refinement_board_svg": "outputs/v1/direction-b-symbol-refinement.svg",
+    "compact_symbol_svg": "outputs/v1/direction-b-compact-symbol.svg",
+    "compact_symbol_native_png": "outputs/v1/direction-b-compact-symbol-16px.png",
+    "verification": "outputs/v1/verification.json"
+  },
+  "final_system_status": {
+    "prepared": false,
+    "reason": "This turn requests a pre-final symbol correction, and the official brand name remains missing.",
+    "required_before_final": [
+      "Confirm the 16 px optical master may proceed.",
+      "Provide the official brand name and capitalization for the final wordmark."
+    ]
+  }
+}

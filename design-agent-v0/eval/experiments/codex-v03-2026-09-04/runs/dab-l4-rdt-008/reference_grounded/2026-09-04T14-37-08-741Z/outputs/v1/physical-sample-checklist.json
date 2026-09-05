@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "project": "North Field Herbal Balm carton",
+  "version": "v1",
+  "checklist_status": "NOT TESTED",
+  "structure_status": "PROVISIONAL",
+  "artwork_status": "NOT APPROVED FOR PRINT",
+  "known_inputs": {
+    "nominal_width_mm": 120,
+    "nominal_depth_mm": 70,
+    "nominal_height_mm": 210,
+    "construction": "reverse-tuck",
+    "board_basis_weight_gsm": 350
+  },
+  "sample_record": {
+    "sample_id": null,
+    "test_date": null,
+    "tester": null,
+    "supplier": null,
+    "drawing_revision": "PROVISIONAL V1",
+    "actual_product_unit": null,
+    "board_certificate": null,
+    "measured_caliper_mm": null,
+    "board_grade": null,
+    "grain_direction": null
+  },
+  "measurement_checks": [
+    {
+      "id": "M01",
+      "axis": "width",
+      "nominal_mm": 120,
+      "observed_mm": null,
+      "dimension_basis": null,
+      "supplier_tolerance_mm": null,
+      "result": "not_tested",
+      "release_note": "Cannot pass until dimension basis and supplier tolerance are approved."
+    },
+    {
+      "id": "M02",
+      "axis": "depth",
+      "nominal_mm": 70,
+      "observed_mm": null,
+      "dimension_basis": null,
+      "supplier_tolerance_mm": null,
+      "result": "not_tested",
+      "release_note": "Cannot pass until dimension basis and supplier tolerance are approved."
+    },
+    {
+      "id": "M03",
+      "axis": "height",
+      "nominal_mm": 210,
+      "observed_mm": null,
+      "dimension_basis": null,
+      "supplier_tolerance_mm": null,
+      "result": "not_tested",
+      "release_note": "Cannot pass until dimension basis and supplier tolerance are approved."
+    }
+  ],
+  "checks": [
+    {
+      "id": "P01-P08",
+      "section": "prerequisites",
+      "scope": "Actual product, traceable stock, measured caliper/grade/grain, drawing revision, sample method, supplier tolerances, 100% output and evidence tools."
+    },
+    {
+      "id": "A01-A09",
+      "section": "assembly_and_closure",
+      "scope": "Squareness, seam, reverse-tuck relation, flap orientation evidence, dust-flap clearance, locks, crease quality, cycling and panel bow."
+    },
+    {
+      "id": "F01-F05",
+      "section": "product_fit_and_handling",
+      "scope": "Actual filled-product insertion/removal, clearances, closure security, documented handling test and any retention feature."
+    },
+    {
+      "id": "E01-E04",
+      "section": "evidence",
+      "scope": "Required photos, measurement log, deviation log and material/drawing source records."
+    }
+  ],
+  "allowed_dispositions": [
+    "revise_and_retest",
+    "exploratory_sample_recorded",
+    "provisional_structure_accepted_for_supplier_review",
+    "fail"
+  ],
+  "disallowed_disposition": "print_ready",
+  "required_signoff": [
+    "tester",
+    "packaging engineer",
+    "supplier structural owner",
+    "client structure reviewer"
+  ],
+  "print_release_conditions_remaining": [
+    "Supplier-approved dieline and revision",
+    "Approved geometry and manufacturing tolerances",
+    "Verified board grade, caliper, coating and grain direction",
+    "Approved bleed and safe areas",
+    "Artwork preflight on approved geometry",
+    "Final manufacturer/prepress and client approvals"
+  ]
+}

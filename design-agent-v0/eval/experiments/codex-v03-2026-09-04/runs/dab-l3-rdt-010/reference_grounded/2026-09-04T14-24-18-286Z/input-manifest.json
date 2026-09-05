@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "shirt-photo",
+    "asset_id": "v03-owl-shirt-client-photo",
+    "role": "degraded_product_photo",
+    "reference_role": "source_artwork",
+    "identity_policy": "preserve_identity",
+    "filename": "01-degraded_product_photo.png",
+    "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/owl-shirt-client-photo.png",
+    "byte_size": 2374013,
+    "sha256": "9c15eac4ada1093f478aa2496642ab4b97e998ce720f53fd82016056f7f23ba2"
+  }
+]

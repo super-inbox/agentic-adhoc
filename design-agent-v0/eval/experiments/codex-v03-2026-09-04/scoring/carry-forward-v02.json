@@ -1,0 +1,151 @@
+{
+  "schema_version": "brief-bank-v0.3-core-carry-forward/1.0",
+  "reason": "The 24 core episode business contracts, rubrics, projected queries, assets, candidate model, and execution protocol are unchanged; v0.3 adds migration-only metadata.",
+  "lineage_validation": {
+    "validated": true,
+    "core_briefs": 24,
+    "core_conditions": 32,
+    "ignored_migration_only_brief_fields": [
+      "revision",
+      "schema_version"
+    ],
+    "ignored_projection_metadata_fields": [
+      "episode_source",
+      "layer"
+    ]
+  },
+  "source_summary": "experiments/codex-v02-2026-08-21/scoring/summary-v02.json",
+  "source_summary_sha256": "9806af756d13b27df7572ef61e0920769e1d4f2456ed25e39e590aa66dadf3cd",
+  "source_judge": "experiments/codex-v02-2026-08-21/scoring/rubric-v02-judged-v3.jsonl",
+  "source_judge_sha256": "48baa3580a0d851d5f04ab49f0bd88c38d7920484b7e6e9a076f5992eda271ed",
+  "conditions": [
+    {
+      "condition_id": "DAB-L3-BID-002@reference_grounded",
+      "result_sha256": "cb6210f394fa71a6da0d387dd2eed3310fd931d14337856d6fd304ec2be3beae"
+    },
+    {
+      "condition_id": "DAB-L3-CAM-002@reference_grounded",
+      "result_sha256": "c433d74d18c3c440f5ed296bbc02bb1992a79050438b8bcdf1879da885399e7c"
+    },
+    {
+      "condition_id": "DAB-L3-CFR-002@reference_grounded",
+      "result_sha256": "6d46d660921bc5f73922685c24ac43d1c30e866e2938ad40dac3b7dfdbd2d41e"
+    },
+    {
+      "condition_id": "DAB-L3-CFRY-001@reference_grounded",
+      "result_sha256": "e7626d38774de43447cb90161d43ccb8db5d00f40f5ede6ea2e8fe58bb1e8a01"
+    },
+    {
+      "condition_id": "DAB-L3-ECO-002@reference_grounded",
+      "result_sha256": "1341633d321ef6778cc52da203c19bad799b9ead178b2227d6d12b70743962ed"
+    },
+    {
+      "condition_id": "DAB-L3-MFA-001@reference_grounded",
+      "result_sha256": "8d3094125d3c6d1948b5079a674a797865a6aecf30b8962c715cb247e447d17c"
+    },
+    {
+      "condition_id": "DAB-L3-PSF-002@reference_grounded",
+      "result_sha256": "6217bb0f6d48a7cea8e1212f79016ba95c404533b0d53cd828247dca98bed3a4"
+    },
+    {
+      "condition_id": "DAB-L3-RTO-002@reference_grounded",
+      "result_sha256": "2d165977650617b9238b30382f4e9facedd0e1fbe1834e50277e894b0838a901"
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@personalized",
+      "result_sha256": "8dd3afd505ea7ee9db60b31f1c5f06d57dc82212d46fc4ceb1e3a2ebbe1f9df7"
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@reference_grounded",
+      "result_sha256": "1faa533d53c1afd55517efd1787f5f761c6f6c7120fd43bdd379470954faae1f"
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@zero_shot",
+      "result_sha256": "624b2983a4640e0fa7a4a4606e6042dd697962f0a72c21e0f542f81eed9992d8"
+    },
+    {
+      "condition_id": "DAB-L4-BID-003@reference_grounded",
+      "result_sha256": "d8ac8002909a85895f7e52219ee0a9c34f61d9dc457e337ff12eb2d3b6766c26"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@personalized",
+      "result_sha256": "434de49266ea11c4743b346b88b05ddd1238eec4b0564d309199f55cff4f1e8f"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@reference_grounded",
+      "result_sha256": "dc1486d8346e47709e680e960a1d24080b968841586e34b57cd32328312851ad"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@zero_shot",
+      "result_sha256": "ca5566c66f9c17b5917f91eb8c178939a508bda3f6ebead869031d1ce1e7fc82"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-003@reference_grounded",
+      "result_sha256": "86c9f2e1b0e1b4f51a3b6409d98411a39a6fb479a033134ee4c62cc63fa55f8c"
+    },
+    {
+      "condition_id": "DAB-L4-CFR-001@reference_grounded",
+      "result_sha256": "9af80e26e288459b9b268a05f361f4eaf1574385837cea830030e8117df7e8f8"
+    },
+    {
+      "condition_id": "DAB-L4-CFR-003@reference_grounded",
+      "result_sha256": "8cc53f1c596d1039162ac68683c8df3282eb8fa0867775c2334d088447fdbd2f"
+    },
+    {
+      "condition_id": "DAB-L4-CFRY-002@reference_grounded",
+      "result_sha256": "f97fedb5bc81162b435fd360a1727264bb817d45f5f2263aef26880b91f43bae"
+    },
+    {
+      "condition_id": "DAB-L4-CFRY-003@reference_grounded",
+      "result_sha256": "adeb21c6a792db3de87fdb1fbd85df25178f22507618a845115b3226f3cbe07b"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@personalized",
+      "result_sha256": "18549f562c71e2f913acd5c42cd541bfdd9fa92b36bffd47f33a9c40181459c5"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@reference_grounded",
+      "result_sha256": "1df923019943e0c75fdd073b6b164896d55ac3133208fbbbb5260191da297b14"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@zero_shot",
+      "result_sha256": "c0d22f406633cd22166440578949a9d8dba1e5c2253e840bc130fe6621a363c3"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-003@reference_grounded",
+      "result_sha256": "53fa3e0ec7c8ceed7ae6c73507a77c820e6e33ce1499537e95fbe778127567e3"
+    },
+    {
+      "condition_id": "DAB-L4-MFA-002@reference_grounded",
+      "result_sha256": "56145ca95b355fa146046a75702d3ab07ba13cdf1d6ad8572aa1f40d924bc5de"
+    },
+    {
+      "condition_id": "DAB-L4-MFA-003@reference_grounded",
+      "result_sha256": "9697f9f4b2c05d0c8a87a6cae225bfa85c95ca105b942acfc05f83f1747da758"
+    },
+    {
+      "condition_id": "DAB-L4-PSF-001@reference_grounded",
+      "result_sha256": "274ae7f23f89b371efa732c054a31a2e386a0d66f29e27b1d83ee7c28af32051"
+    },
+    {
+      "condition_id": "DAB-L4-PSF-003@reference_grounded",
+      "result_sha256": "6a2c81b4bae7e1c305db20c8862a0c00b1a89663163fcca9522b506bed03456a"
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@personalized",
+      "result_sha256": "c5f9a6647a5ce4aae307d83624965fae206366b0b463cf431e453a55d0685380"
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@reference_grounded",
+      "result_sha256": "7cb4be325ba5f7daa31239466eb93dcdf6fc5b75d23c8e09a84e46bd672ef775"
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@zero_shot",
+      "result_sha256": "1efd5bf06b082529b814363506c22b27984a8769c484201891a1e8f123a28d43"
+    },
+    {
+      "condition_id": "DAB-L4-RTO-003@reference_grounded",
+      "result_sha256": "7dc9c7529b0e10c9e5829ef9fc4a4355b9a820cf8f29ee641c666b6042200d9c"
+    }
+  ]
+}

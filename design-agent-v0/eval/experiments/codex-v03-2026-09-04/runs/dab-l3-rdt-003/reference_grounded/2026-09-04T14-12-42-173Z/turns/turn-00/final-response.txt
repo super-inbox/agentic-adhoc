@@ -1,0 +1,9 @@
+Completed the original solar-powered community bicycle workshop poster.
+
+- [Final cycling poster PNG](<WORKDIR>/outputs/v0/cycling-poster.png)
+- [Preview](<WORKDIR>/outputs/v0/preview.png)
+- [Verification report](<WORKDIR>/outputs/v0/verification.json)
+- [Project state](<WORKDIR>/outputs/project-state.json)
+- [Final generation prompt](<WORKDIR>/outputs/v0/generation-prompt.txt)
+
+Created with built-in image generation, then normalized to exactly `#174EA6`, `#B7FF3C`, and `#E8E4DC`. All verification checks passed with no unresolved blockers.

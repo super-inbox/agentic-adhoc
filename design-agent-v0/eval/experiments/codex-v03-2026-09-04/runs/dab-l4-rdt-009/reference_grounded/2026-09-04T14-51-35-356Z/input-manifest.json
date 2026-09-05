@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "approved-raster",
+    "asset_id": "factory-orbit-coffee-artwork",
+    "role": "approved_source_artwork",
+    "reference_role": "source_artwork",
+    "identity_policy": "preserve_identity",
+    "filename": "01-approved_source_artwork.png",
+    "source_path": "eval/assets/reference-pack-v0.2/factory/orbit-coffee-artwork.png",
+    "byte_size": 865492,
+    "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "current_version": "v0",
+  "status": "final_candidate_complete",
+  "client_decisions": [
+    "Create one original brutalist civic plaza at dusk.",
+    "Use the supplied reference only for abstract colour relationships and subtle material texture.",
+    "Do not inherit the reference composition, subject matter, typography, branding, icons, or ornamental motifs."
+  ],
+  "locked_items": [
+    "Target subject: brutalist civic plaza",
+    "Time and mood: dusk / blue hour",
+    "Reference influence boundary: colour palette and material texture only",
+    "Final format: PNG",
+    "No text, logos, product imagery, or decorative motifs"
+  ],
+  "changed_items": [
+    "Introduced an original wide, pedestrian-eye-level plaza composition.",
+    "Created monumental rectilinear civic massing with portals, terraces, stairs, ramps, and an open forecourt.",
+    "Added dispersed pedestrians to establish scale and public use.",
+    "Translated the reference's warm bone/oatmeal, taupe, and charcoal relationships into dusk-lit concrete architecture.",
+    "Translated the reference's fine matte grain into subtle sandblasted concrete and mineral paving texture."
+  ],
+  "reference_use": {
+    "input_id": "palette-reference",
+    "source_path": "inputs/01-palette_and_texture_only.png",
+    "allowed_influence": [
+      "color_palette",
+      "material_texture"
+    ],
+    "identity_policy": "abstract_only",
+    "explicitly_excluded": [
+      "composition",
+      "layout",
+      "subject",
+      "product form",
+      "typography",
+      "branding",
+      "icons",
+      "ornamental motifs"
+    ]
+  },
+  "artifact_paths": {
+    "brutalist_plaza_final": "outputs/v0/brutalist-civic-plaza-final.png",
+    "preview": "outputs/v0/preview.png",
+    "verification": "outputs/v0/verification.json"
+  }
+}

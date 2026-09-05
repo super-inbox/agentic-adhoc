@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "project": "North Field Herbal Balm carton",
+  "current_version": "v1",
+  "current_stage": "provisional structure / production blocked",
+  "updated_at": "2026-09-04",
+  "client_decisions": [
+    {
+      "decision": "Prepare only work that is safe without a manufacturer dieline.",
+      "source": "current user request",
+      "status": "locked"
+    },
+    {
+      "decision": "Do not label or export artwork as print ready until panel geometry, bleed, folds and safe areas are verified.",
+      "source": "current user request",
+      "status": "locked"
+    },
+    {
+      "decision": "Use 120 x 70 x 210 mm, reverse-tuck construction and 350 gsm board only as provisional structural inputs.",
+      "source": "client feedback for v1",
+      "status": "provisional - not approved for print"
+    }
+  ],
+  "locked_items": [
+    {
+      "type": "copy",
+      "value": "North Field"
+    },
+    {
+      "type": "copy",
+      "value": "Herbal Balm"
+    },
+    {
+      "type": "copy",
+      "value": "Net 60 g"
+    },
+    {
+      "type": "release_gate",
+      "value": "NOT PRINT READY until verified structural and production inputs are approved."
+    }
+  ],
+  "provisional_items": [
+    {
+      "type": "nominal_dimensions",
+      "value": "120 x 70 x 210 mm interpreted as W x D x H",
+      "open_qualification": "Internal/external dimension basis and tolerances are not supplied."
+    },
+    {
+      "type": "carton_construction",
+      "value": "reverse-tuck",
+      "open_qualification": "Exact subtype, flap owner and opening orientation are not supplied."
+    },
+    {
+      "type": "board_basis_weight",
+      "value": "350 gsm",
+      "open_qualification": "Grade, caliper, coating and grain direction are not supplied."
+    }
+  ],
+  "changed_items": [
+    {
+      "version": "v0",
+      "items": [
+        "Created one geometry-neutral content-hierarchy concept.",
+        "Created a structural preflight register with 16 exact missing parameters.",
+        "Separated concept-safe work from production-blocked work.",
+        "Recorded manufacturer request, measured-derivation fallback, approvals and required physical sample test."
+      ]
+    },
+    {
+      "version": "v1",
+      "items": [
+        "Recorded the client-supplied nominal 120 x 70 x 210 mm envelope.",
+        "Updated S02, S03 and S11 from missing to partially resolved using reverse-tuck construction and 350 gsm basis weight.",
+        "Created a labelled two-page provisional structure without cut, flap, joint, crease, bleed or safe-area geometry.",
+        "Created a three-page physical-sample checklist with no invented acceptance tolerances.",
+        "Kept production release blocked and left v0 artifacts unchanged."
+      ]
+    }
+  ],
+  "open_inputs": [
+    "S01 manufacturer-approved 1:1 dieline and revision",
+    "S02 exact reverse-tuck subtype, major-flap owner and opening orientation",
+    "S03 internal/external dimension basis, measuring convention and tolerances",
+    "S04-S10 panel/cut/crease/flap/joint/bleed/safe-area geometry",
+    "S11 board grade, caliper, coating and grain direction",
+    "S12-S16 tolerances, special structures, finishing, file setup and wrap behavior",
+    "C01 exact ingredients and warnings",
+    "C02 regulatory/market copy requirements",
+    "C03 barcode and variable-data requirements",
+    "P01-P02 print and proofing specifications"
+  ],
+  "version_artifacts": {
+    "v0": [
+      "outputs/v0/concept-layout.png",
+      "outputs/v0/concept-layout.pdf",
+      "outputs/v0/preview.png",
+      "outputs/v0/preflight-report.json",
+      "outputs/v0/preflight-report.pdf",
+      "outputs/v0/verification.json"
+    ],
+    "v1": [
+      "outputs/v1/provisional-structure.png",
+      "outputs/v1/provisional-structure.pdf",
+      "outputs/v1/provisional-structure.json",
+      "outputs/v1/preview.png",
+      "outputs/v1/physical-sample-checklist-preview.png",
+      "outputs/v1/physical-sample-checklist.pdf",
+      "outputs/v1/physical-sample-checklist.json",
+      "outputs/v1/verification.json"
+    ]
+  },
+  "artifact_paths": [
+    "outputs/v1/provisional-structure.png",
+    "outputs/v1/provisional-structure.pdf",
+    "outputs/v1/provisional-structure.json",
+    "outputs/v1/preview.png",
+    "outputs/v1/physical-sample-checklist-preview.png",
+    "outputs/v1/physical-sample-checklist.pdf",
+    "outputs/v1/physical-sample-checklist.json",
+    "outputs/v1/verification.json"
+  ]
+}

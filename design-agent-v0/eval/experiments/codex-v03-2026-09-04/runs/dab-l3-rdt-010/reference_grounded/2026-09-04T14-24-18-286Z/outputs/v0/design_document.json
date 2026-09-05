@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "version": "v0",
+  "title": "Three-colour geometric owl recovery",
+  "intent": "Separate the identifiable owl artwork from the photographed shirt and reconstruct it as simple, production-friendly editable vector geometry without importing garment, body, lighting, fold, or perspective pixels.",
+  "source_binding": {
+    "input_id": "shirt-photo",
+    "path": "inputs/01-degraded_product_photo.png",
+    "business_role": "degraded_product_photo",
+    "reference_role": "source_artwork",
+    "identity_policy": "preserve_identity",
+    "allowed_influence": [
+      "printed_artwork_identity",
+      "approximate_color_regions"
+    ]
+  },
+  "canvas": {
+    "view_box": "0 0 700 1000",
+    "background": "transparent",
+    "light_areas": "transparent negative space",
+    "master_format": "SVG",
+    "raster_export_px": {
+      "width": 2100,
+      "height": 3000
+    },
+    "preview_px": {
+      "width": 700,
+      "height": 1000,
+      "matte": "white substrate simulation"
+    }
+  },
+  "palette": [
+    {
+      "role": "dark_blue",
+      "hex": "#344954",
+      "used_for": [
+        "brow chevron",
+        "crown inset",
+        "pupils",
+        "wings",
+        "feet"
+      ],
+      "certainty": "approximate_only"
+    },
+    {
+      "role": "rust_orange",
+      "hex": "#BC6845",
+      "used_for": [
+        "eye rings",
+        "torso",
+        "crown accent"
+      ],
+      "certainty": "approximate_only"
+    },
+    {
+      "role": "warm_taupe",
+      "hex": "#8A765F",
+      "used_for": [
+        "beak and central facial diamond"
+      ],
+      "certainty": "approximate_only"
+    }
+  ],
+  "vector_construction": {
+    "visible_artwork_element_type": "path",
+    "path_count": 13,
+    "embedded_raster_count": 0,
+    "stroke_count": 0,
+    "groups_in_back_to_front_order": [
+      "crown-accent",
+      "crown",
+      "wings",
+      "beak",
+      "eye-rings",
+      "pupils",
+      "torso",
+      "feet",
+      "brow"
+    ],
+    "component_paths": [
+      "crown-accent-path",
+      "crown-path",
+      "left-wing-path",
+      "right-wing-path",
+      "beak-path",
+      "left-eye-ring-path",
+      "right-eye-ring-path",
+      "left-pupil-path",
+      "right-pupil-path",
+      "torso-path",
+      "left-foot-path",
+      "right-foot-path",
+      "brow-path"
+    ],
+    "compound_path_usage": "Even-odd compound paths create transparent eye centres and pupil glints without adding a fourth colour."
+  },
+  "identity_preservation": {
+    "retained_features": [
+      "Wide downward dark brow chevron with pointed upper corners",
+      "Small inverted crown triangle with a narrow orange accent",
+      "Two large orange eye rings with dark pupils and light glints",
+      "Long central taupe diamond beak",
+      "Rust torso with a deep centre V and tapered lower body",
+      "Two dark leaf-shaped wings and two separated triangular feet"
+    ],
+    "normalizations": [
+      "Removed camera perspective and garment curvature",
+      "Restored bilateral symmetry to paired eyes, wings, and feet",
+      "Replaced fabric-deformed edges with straight segments or low-complexity Bezier curves",
+      "Flattened lighting-driven colour variation into three provisional fills"
+    ],
+    "deliberate_simplifications": [
+      "Retained one clearly legible geometric glint per pupil and omitted ambiguous secondary light marks",
+      "Treated irregular edge fringing as print wear or registration uncertainty rather than new decorative detail"
+    ]
+  },
+  "excluded_source_content": [
+    "shirt fabric and weave",
+    "shirt folds and seams",
+    "wearer's body and skin",
+    "room background",
+    "photographic lighting and shadows",
+    "camera perspective",
+    "compression and print-wear texture"
+  ],
+  "production_notes": [
+    "SVG is the editable master; each visible component is an individually identified path.",
+    "The transparent PNG is a high-resolution convenience export, not a substitute for the vector master.",
+    "The preview is flattened on white only to show the intended negative-space appearance.",
+    "Before printing, a human must approve geometry, exact colours, white/underbase treatment, final physical size, and registration tolerance."
+  ],
+  "not_claimed": [
+    "Exact colour match",
+    "Exact recovery of the original vector control points",
+    "Final print readiness without human proof approval"
+  ],
+  "artifact_paths": {
+    "editable_master": "outputs/v0/recovered_owl_artwork.svg",
+    "transparent_raster": "outputs/v0/recovered_owl_artwork.png",
+    "preview": "outputs/v0/preview.png",
+    "verdict": "outputs/v0/printability-verdict.json",
+    "verification": "outputs/v0/verification.json"
+  }
+}

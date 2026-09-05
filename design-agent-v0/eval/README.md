@@ -8,6 +8,17 @@ This directory contains three complementary evaluation layers:
 | `reference_asset_eval.py` | `queries.jsonl` + `assets/reference-pack-v0.1/` | real-pixel binding, integrity, provenance, privacy, and alpha validation |
 | `runtime_eval.py` | `runtime_cases.example.jsonl` | single-turn HTTP black-box route, trace, visual verdict, retry, and artifact scoring |
 
+## Unified rubric
+
+[`rubrics/unified-design-agent-rubric-v0.1.md`](rubrics/unified-design-agent-rubric-v0.1.md)
+maps the seven current Codex benchmark groups into one agent-neutral reporting protocol. It keeps
+the mentor's eight weighted design-quality dimensions, adds conditional hard gates, and reports
+routing, planning, preference alignment, and reliability as separate diagnostic panels. The
+machine-readable contract is
+[`rubrics/unified-design-agent-rubric-v0.1.json`](rubrics/unified-design-agent-rubric-v0.1.json).
+Raw headline metrics from heterogeneous datasets are deliberately not averaged, and the duplicated
+v0.2/v0.3 core is counted only once.
+
 ## Runtime and structured-editing research
 
 - [`runtime-verification/2026-08-26-canva-magic-layers-agent-json.md`](runtime-verification/2026-08-26-canva-magic-layers-agent-json.md)
@@ -30,7 +41,7 @@ The snapshot contains no API keys, browser session state, signed download URLs, 
 paths, or user account identity. Exact source/output pixels and full nested source traces remain as
 access-controlled Braintrust attachments.
 
-## Codex execution baselines (2026-09-02)
+## Codex execution baselines (2026-09-04)
 
 - [`experiments/curify-vs-codex-21q-2026-08-16/baselines/codex-single-turn-v1/`](experiments/curify-vs-codex-21q-2026-08-16/baselines/codex-single-turn-v1/)
   freezes the completed Codex-only 21-case multimodal baseline. All 21 cases have an independent
@@ -42,6 +53,13 @@ access-controlled Braintrust attachments.
   24 episodes, with condition-aware artifact-grounded judging. The observable-only diagnostic is
   0.874; the full-rubric condition-macro interval is 0.659–0.909 because workflow completion and
   recovery are not independently observable under the current protocol.
+- [`experiments/codex-v03-2026-09-04/`](experiments/codex-v03-2026-09-04/)
+  completes the Brief Bank v0.3 Codex baseline across 35 episodes / 43 conditions. The unchanged
+  core is an explicitly provenance-checked carry-forward of the 32 frozen v0.2 conditions; the 11
+  external conditions are new full-episode executions with an independent artifact-grounded
+  `gemini-2.5-pro` judge. All 11 completed on the first attempt and passed every hard gate; their
+  weighted macro is 0.984. The combined 43-condition result remains an honest 0.742–0.928 interval
+  because the inherited core retains its two unobservable dimensions.
 
 ## Codex planner/ranking baselines (2026-09-02)
 
@@ -55,6 +73,21 @@ access-controlled Braintrust attachments.
   the observed winner at top-1 in 14/61 contests (23.0%) and ranked it above a visible alternative
   in 153/243 pairs (63.0%); excluding same-designer pairs gives 131/206 (63.6%). Rights remain
   uncleared, so this experiment is local-only and must not be used for training or redistribution.
+
+## Codex external-brief planning baseline (2026-09-03)
+
+[`experiments/codex-external-briefs-18-2026-09-03/`](experiments/codex-external-briefs-18-2026-09-03/)
+turns the 11 case-study workflow briefs and 7 ZCOOL portfolio briefs into two explicitly bounded,
+planner-only tests. Codex completed 18/18 eligible model attempts on the first try. On the 11-case
+workflow layer it reached 48.2% step F1, 89.1% ordered-LCS recall, a 0.625 gated mean, and 1/11
+passes. On the 7-case ZCOOL layer it reached 100% reference coverage, 91.7% deliverable recall,
+a 0.868 gated mean, and 7/7 passes; exact brief-class naming was only 28.6%.
+
+The workflow score recovers one documented public case-study sequence rather than universal
+process truth. ZCOOL images are low-resolution published-outcome evidence, not style instructions,
+preference labels, or visual-quality gold. Both layers explicitly exclude design execution claims.
+Two harness-schema preflight batches (36 rejected calls) are retained for audit but excluded from
+model-attempt reliability because they never entered inference.
 
 ## Published cross-Agent canaries
 
@@ -117,6 +150,7 @@ documented real jobs in
 | field | meaning |
 |---|---|
 | `brief` | the job stated as a user would state it |
+| `primary_intent` / `secondary_intents` | explicit task boundary used by the planner protocol |
 | `expected_steps` | ordered controlled-vocabulary step slugs (`intake_brief`, `research`, `explore_concepts`, `dieline`, `production_file`, `deliver`, …) |
 | `expected_step_count` | expected plan length |
 | `provenance` | case file, org, source URL |
@@ -131,13 +165,21 @@ is reproduced.
 python3 eval/build_briefs.py eval/briefs.jsonl   # re-extract
 ```
 
+The completed [`codex-external-briefs-18-2026-09-03`](experiments/codex-external-briefs-18-2026-09-03/)
+experiment adds the missing candidate-visible task context, closed output schema, plan-only boundary,
+missing-input/stop-condition contract, deterministic step/order scorer, hard gates, and hashes. These
+11 rows are therefore a **workflow-planning benchmark**, not a claim of full L4 execution.
+
 ## L3/L4 episode benchmark (`brief_bank/`)
 
-[`brief_bank/briefs.v0.2.jsonl`](brief_bank/briefs.v0.2.jsonl) extends the process-only workflow
-briefs into 24 executable Design Agent episodes and 32 matched run conditions. Each episode
+[`brief_bank/briefs.v0.3.jsonl`](brief_bank/briefs.v0.3.jsonl) is now the current harness contract.
+It preserves the 24 v0.2 episodes unchanged, then adds exactly 11 public-corpus-grounded external
+cases with ready fixtures, for 35 episodes and 43 context-condition runs. Each episode
 specifies inputs, constraints, available tools, observable checkpoints, simulated client feedback,
 project state, reference roles, human decisions, intermediate/final deliverables, verification,
-hard gates, and a weighted rubric. The original
+hard gates, and a weighted rubric. The frozen
+[`briefs.v0.2.jsonl`](brief_bank/briefs.v0.2.jsonl) remains the source of the completed Codex baseline;
+the original
 [`briefs.v0.1.jsonl`](brief_bank/briefs.v0.1.jsonl) remains frozen as the business-task baseline.
 
 | axis | v0.2 coverage |
@@ -149,14 +191,30 @@ hard gates, and a weighted rubric. The original
 | designer-feedback probes | 8 multi-turn/state-recovery · 6 creative-exploration · 6 structured-editing |
 | context conditions | 24 reference-grounded · 4 zero-shot · 4 personalized = 32 runs |
 
-The directory also contains versioned schemas, a deterministic v0.1→v0.2 builder,
-semantic/fixture validation, unit tests, and a generated 32-row first-turn projection. That
-projection intentionally excludes future feedback and is a routing/input smoke test only; it
+The v0.3 external partition adds four reference-channel/set-generation cases, two bounded image
+edits, one brand-direction workflow, and four prepress/vector cases. Four project-owned generated
+source images and two deterministic masks close its fixture gap. Because this extension is not
+category-balanced, benchmark reports must keep the 24-case core and 11-case external partition
+separate rather than publishing one undifferentiated macro score.
+
+The directory also contains versioned schemas, deterministic v0.1→v0.2→v0.3 builders,
+semantic/fixture validation, unit tests, and generated 32-row v0.2 / 43-row v0.3 first-turn
+projections. A projection intentionally excludes future feedback and is a routing/input smoke test only; it
 cannot establish L4 workflow success without later turns, checkpoint evidence, state continuity,
 verification, and final deliverables. `trajectory.jsonl` denotes observable actions and artifacts,
 not private chain-of-thought.
 
 ```bash
+python3 eval/assets/brief-bank-v0.3/build_masks.py
+python3 eval/assets/brief-bank-v0.3/build_manifest.py
+python3 eval/brief_bank/build_v03.py
+python3 eval/brief_bank/validate_v03.py
+python3 eval/brief_bank/export_initial_queries.py \
+  --input eval/brief_bank/briefs.v0.3.jsonl \
+  --output eval/brief_bank/initial_queries.v0.3.jsonl
+python3 eval/brief_bank/freeze_v03.py
+
+# Frozen v0.2 regression
 python3 eval/brief_bank/build_v02.py
 python3 eval/brief_bank/validate_briefs.py
 python3 eval/brief_bank/export_initial_queries.py \
@@ -184,7 +242,8 @@ only ~69 of its rows touch brand/packaging/merch — so folding it in would grow
 generic image benchmark rather than the workflow set. It remains useful for
 *routing* recall in its own repo.
 
-**Still missing: trajectories.** A brief says what the steps should be; a
-trajectory records what actually happened, including which option a human chose
-and why. Those only exist once real jobs are run and captured
-(`curify-frontend/lib/agent/trajectory.ts`).
+The Codex v0.3 baseline now supplies complete end-to-end candidate trajectories and independently
+judged artifacts for all 11 external episodes. This does **not** close the product gap: Curify still
+needs an episode runner that captures the same feedback, state, verification, and final-deliverable
+contract through `curify-frontend/lib/agent/trajectory.ts` before a like-for-like comparison is
+possible.

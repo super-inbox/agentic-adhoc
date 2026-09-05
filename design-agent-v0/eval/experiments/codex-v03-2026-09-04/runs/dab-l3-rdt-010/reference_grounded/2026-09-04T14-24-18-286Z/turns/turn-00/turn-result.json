@@ -1,0 +1,64 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-09-04T14:24:18.289Z",
+  "finished_at": "2026-09-04T14:37:08.683Z",
+  "latency_ms": 770407,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 62,
+    "command_count": 21,
+    "tool_count": 5,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a06cce-5d6c-7f60-9b96-8860a81a5939",
+    "usage": {
+      "input_tokens": 1217980,
+      "cached_input_tokens": 1151872,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 31978,
+      "reasoning_output_tokens": 17030
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 2564,
+      "sha256": "8eb2cfbd6556cf327431dbe5bf0d4de0e50212f3da803026d36f302a3b8558de"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 4691,
+      "sha256": "abf69363288a6195ba47d9f7b9d0f9968e0f08fd5d878df42d528a887671c20f"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 72080,
+      "sha256": "1bcf73b2808468ab0592da225d8394bf5746f31cec6846db275de9f9db206e90"
+    },
+    {
+      "filename": "v0/printability-verdict.json",
+      "byte_size": 5201,
+      "sha256": "62b23f8137161194b3a764ce9ea19f2770be7831adb9ec7f75ea4cd5130405ae"
+    },
+    {
+      "filename": "v0/recovered_owl_artwork.png",
+      "byte_size": 298370,
+      "sha256": "f4cd8869467917148f2506e03460d9a46edfe7125cf79a4c8c066d88e5fe101d"
+    },
+    {
+      "filename": "v0/recovered_owl_artwork.svg",
+      "byte_size": 4663,
+      "sha256": "d26990b8ececeb88f00224550c2a14bb5c6fdf94ca3e64c895018b4c82d66069"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5452,
+      "sha256": "e1e6d1971a9b0bf9c20e1fc3696eb86f8d917bf6884234b322e571c48db6f7e4"
+    }
+  ]
+}

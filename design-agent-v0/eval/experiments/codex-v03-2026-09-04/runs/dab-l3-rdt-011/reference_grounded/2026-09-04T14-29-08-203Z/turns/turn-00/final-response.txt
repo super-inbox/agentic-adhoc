@@ -1,0 +1,10 @@
+Completed the v0 vector master without redesign.
+
+- [Editable SVG](<WORKDIR>/outputs/v0/luna-club-vector-master.svg)
+- Print PDF: :codex-file-citation{path="<WORKDIR>/outputs/v0/luna-club-vector-master.pdf" purpose="output"}
+- [Raster alignment proof](<WORKDIR>/outputs/v0/luna-club-overlay-proof.png)
+- [Preview](<WORKDIR>/outputs/v0/preview.png)
+- [Verification report](<WORKDIR>/outputs/v0/verification.json)
+- [Design document](<WORKDIR>/outputs/v0/design_document.json)
+
+Verification passed: 7 editable paths, 922 nodes, no embedded raster in either master, and 95% of measured edges align within 1 px.

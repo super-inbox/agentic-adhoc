@@ -1,0 +1,8 @@
+Completed the localized text replacement with exact copy “SHIP IT TODAY.”
+
+- [Final PNG](<<WORKDIR>/outputs/v0/edited-cartoon.png>)
+- [Preview](<<WORKDIR>/outputs/v0/preview.png>)
+- [Verification](<<WORKDIR>/outputs/v0/verification.json>)
+- [Change set and final prompt](<<WORKDIR>/outputs/v0/change_set.json>)
+
+Verified 1,348,842 locked pixels with zero mismatches. Dimensions remain 1254×1254 RGBA, and the source alpha channel is preserved exactly.

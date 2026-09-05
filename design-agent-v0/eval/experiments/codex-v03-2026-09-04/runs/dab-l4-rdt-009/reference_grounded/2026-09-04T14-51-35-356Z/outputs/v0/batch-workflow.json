@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "workflow_version": "v0-pilot",
+  "stage": "intermediate",
+  "scope": {
+    "pilot_items": 1,
+    "future_queue_range": [
+      100,
+      500
+    ]
+  },
+  "source_binding": {
+    "input_id": "approved-raster",
+    "file": "inputs/01-approved_source_artwork.png",
+    "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f",
+    "identity_policy": "preserve_identity",
+    "allowed_influence": [
+      "geometry",
+      "wording",
+      "color_relationships"
+    ]
+  },
+  "release_gate": {
+    "exemplar_human_approval_required": true,
+    "exemplar_status": "pending",
+    "batch_release_status": "blocked_pending_exemplar_approval",
+    "required_approval_record": [
+      "approver_name",
+      "approval_timestamp",
+      "approved_master_sha256",
+      "approved_preview_sha256"
+    ]
+  },
+  "automatic_trace_acceptance": {
+    "decision_rule": "accept only when every hard gate and numeric threshold passes",
+    "hard_gates": [
+      "OCR wording exactly equals approved wording",
+      "zero embedded raster images in SVG, EPS, and PDF masters",
+      "zero unintended open fills, self-intersections, or lost counters",
+      "all intended colors map to approved palette roles",
+      "all minimum strokes remain at least 0.20 mm at nominal output size"
+    ],
+    "thresholds": {
+      "edge_distance_p95_mm_max": 0.3,
+      "silhouette_iou_min": 0.985,
+      "median_delta_e_2000_max": 2.0,
+      "p95_delta_e_2000_max": 4.0,
+      "logo_nodes_per_mm_max": 3.0,
+      "display_outline_nodes_per_mm_max": 8.0,
+      "micro_islands_below_0_05_mm2_max": 0,
+      "unintended_path_count_delta": 0
+    }
+  },
+  "manual_review_triggers": [
+    {
+      "code": "OCR_MISMATCH",
+      "trigger": "Any wording, punctuation, spacing, or weight label differs."
+    },
+    {
+      "code": "INTERWEAVE_OR_OCCLUSION",
+      "trigger": "Over-under crossings, overlaps, masks, or occluded shapes are present."
+    },
+    {
+      "code": "UNKNOWN_DISPLAY_TYPE",
+      "trigger": "A distinctive display face cannot be matched to an approved font file."
+    },
+    {
+      "code": "TRACE_COMPLEXITY",
+      "trigger": "Node density exceeds the relevant automatic threshold."
+    },
+    {
+      "code": "PALETTE_DRIFT",
+      "trigger": "Median or p95 Delta E exceeds the automatic threshold."
+    },
+    {
+      "code": "GEOMETRY_DRIFT",
+      "trigger": "Silhouette IoU or edge-distance threshold fails."
+    },
+    {
+      "code": "SMALL_DETAIL",
+      "trigger": "A feature or stroke is below 0.20 mm at nominal size."
+    },
+    {
+      "code": "RASTER_NOISE",
+      "trigger": "Texture, compression, antialiasing, or gradient noise creates false islands."
+    },
+    {
+      "code": "PATH_DEFECT",
+      "trigger": "Lost counters, self-intersections, unintended open paths, or duplicate paths occur."
+    },
+    {
+      "code": "LOW_SOURCE_RESOLUTION",
+      "trigger": "Effective source resolution is below 150 ppi at nominal size."
+    }
+  ],
+  "per_item_sequence": [
+    "ingest_and_hash",
+    "detect_panels_palette_and_wording",
+    "generate_auto_trace_candidate",
+    "measure_against_acceptance_thresholds",
+    "route_to_accept_or_manual_review",
+    "export_svg_eps_pdf",
+    "render_previews_at_small_nominal_and_large_scales",
+    "verify_no_raster_dependency_and_record_metrics",
+    "hold_for_human_approval_when_item_is_exemplar_or_triggered",
+    "release_only_after_gate_record_is_complete"
+  ],
+  "pilot_trace_decision": {
+    "whole_frame_auto_trace": "rejected",
+    "reasons": [
+      "interwoven multicolor emblem",
+      "distinctive display lettering",
+      "paper and ink raster noise"
+    ],
+    "final_method": "selective source-guided outline cleanup plus geometric Bezier reconstruction",
+    "manual_cleanup_applied": [
+      "display wordmark contour simplification",
+      "emblem crossing order reconstruction",
+      "panel and rule normalization",
+      "supporting text converted to clean glyph outlines"
+    ]
+  },
+  "required_batch_record_fields": [
+    "item_id",
+    "source_sha256",
+    "operator",
+    "trace_engine_version",
+    "threshold_results",
+    "manual_review_codes",
+    "node_counts_before_after",
+    "palette_values",
+    "export_sha256s",
+    "preview_paths",
+    "approval_status",
+    "approver",
+    "approval_timestamp"
+  ]
+}

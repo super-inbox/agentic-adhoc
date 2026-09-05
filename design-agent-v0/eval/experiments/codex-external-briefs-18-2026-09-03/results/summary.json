@@ -1,0 +1,67 @@
+{
+  "schema_version": "external-brief-plan-summary-v1",
+  "generated_at": "2026-09-04T02:43:58.824377Z",
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "dataset": {
+    "path": "dataset/external-briefs.jsonl",
+    "sha256": "aace3f87fd059fbeee2d5abbbd1efbc20411ea0cec3522ddc9a7913453c696da",
+    "rows": 18
+  },
+  "reliability": {
+    "completed": 18,
+    "total": 18,
+    "first_attempt_completed": 18,
+    "retried_cases": 0,
+    "attempts": 18,
+    "raw_attempts": 54,
+    "harness_preflight_failures": 36
+  },
+  "layers": {
+    "case_study_workflow": {
+      "n": 11,
+      "completed": 11,
+      "first_attempt_completed": 11,
+      "passes": 1,
+      "intent_exact": 0.8181818181818182,
+      "brief_class_exact": 0.9090909090909091,
+      "step_f1": 0.4817695376518905,
+      "step_order_lcs": 0.890909090909091,
+      "sequence_exact": 0.0,
+      "deliverable_recall": 0.9242424242424243,
+      "reference_coverage": 1.0,
+      "boundary_awareness": 1.0,
+      "weighted_score": 0.6252378503849091,
+      "gated_total": 0.6252378503849091
+    },
+    "portfolio_reference": {
+      "n": 7,
+      "completed": 7,
+      "first_attempt_completed": 7,
+      "passes": 7,
+      "intent_exact": 1.0,
+      "brief_class_exact": 0.2857142857142857,
+      "step_f1": null,
+      "step_order_lcs": null,
+      "sequence_exact": null,
+      "deliverable_recall": 0.9166666666666667,
+      "reference_coverage": 1.0,
+      "boundary_awareness": 1.0,
+      "weighted_score": 0.8678571428571428,
+      "gated_total": 0.8678571428571428
+    }
+  },
+  "usage_totals": {
+    "input_tokens": 274485,
+    "cached_input_tokens": 22272,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 41237,
+    "reasoning_output_tokens": 21829
+  }
+}

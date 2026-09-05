@@ -1,0 +1,32 @@
+{
+  "id": "BRF-ECOM-03",
+  "layer": "case_study_workflow",
+  "attempt": 2,
+  "status": "error",
+  "started_at": "2026-09-04T02:37:40.176622Z",
+  "finished_at": "2026-09-04T02:37:43.470428Z",
+  "duration_seconds": 3.293503416,
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "dataset_row_sha256": "3b9608f96ed889a05a70f66761f1e5ddc0b7d927189e05d811cc9ef04adda79c",
+  "prompt_sha256": "6ebd32629210bb832c511f13635dd69a8d23a0e5bb4d5731c0ffa92bb3ea9911",
+  "input_assets": [],
+  "exit_code": 1,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": "response.json not created",
+  "validation_errors": [],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": null,
+    "thread_id": "01a06a47-69f6-7d01-94ad-f594e089c4d9"
+  }
+}

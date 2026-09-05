@@ -1,0 +1,111 @@
+{
+  "document_type": "logo_direction_design_document",
+  "version": "v0",
+  "stage": "intermediate_direction_review",
+  "date": "2026-09-04",
+  "brief": {
+    "category": "premium laminate surfaces",
+    "market": "India launch",
+    "primary_audience": [
+      "architects",
+      "interior designers",
+      "commercial specification buyers",
+      "premium residential project teams"
+    ],
+    "desired_attributes": [
+      "minimal",
+      "professional",
+      "modern",
+      "reliable",
+      "high quality",
+      "consistent",
+      "scalable"
+    ],
+    "positioning_guardrail": "Premium and technically credible, not luxury-fashion.",
+    "reference_assets": []
+  },
+  "shared_presentation_rules": {
+    "working_wordmark": "BRAND",
+    "working_descriptor": "LAMINATE SURFACES",
+    "placeholder_disclosure": "The official brand name was not supplied; all name and initial treatments are provisional.",
+    "small_size_test_pixels": [16, 24, 32],
+    "large_application_test": "210 x 297 mm sample-book cover",
+    "selection_status": "none",
+    "refinement_status": "not_started"
+  },
+  "directions": [
+    {
+      "id": "01",
+      "name": "Registered Edge",
+      "strategic_idea": "Measured planes aligned to a single registration datum.",
+      "identity_architecture": "Independent geometric symbol plus widely tracked uppercase wordmark.",
+      "mark_construction": "Two offset surface planes crossed by one vertical datum line.",
+      "tone": ["precise", "architectural", "assured"],
+      "palette": {
+        "graphite": "#17242B",
+        "clay": "#C87550",
+        "mineral": "#D7D1C5",
+        "porcelain": "#F8F6F0"
+      },
+      "system_extension": "The datum line can organize covers, range tabs and technical layouts.",
+      "small_size_result": "Proposed icon minimum is 16 px; the paired planes and accent line remain distinguishable.",
+      "sample_book_result": "Compact mark, range datum stripe and dark specification-led cover architecture.",
+      "board_png": "outputs/v0/direction-01-registered-edge.png",
+      "vector_source": "outputs/v0/direction-01-registered-edge.svg"
+    },
+    {
+      "id": "02",
+      "name": "Modular Field",
+      "strategic_idea": "A repeatable kit in which four corner modules frame a central signal.",
+      "identity_architecture": "Expandable modular symbol plus approachable lowercase wordmark.",
+      "mark_construction": "Four right-angle modules surround one contrasting square.",
+      "tone": ["systematic", "adaptable", "confident"],
+      "palette": {
+        "spruce": "#143A35",
+        "ochre": "#D8AA35",
+        "sage": "#8A9A89",
+        "warm_white": "#F6F2E8"
+      },
+      "system_extension": "Modules become range codes, repeat patterns, shelf navigation and spatial graphics.",
+      "small_size_result": "Proposed icon minimum is 16 px; the four corners and centre remain readable.",
+      "sample_book_result": "Light swatch-friendly cover, coded centre tile and modular crop system.",
+      "board_png": "outputs/v0/direction-02-modular-field.png",
+      "vector_source": "outputs/v0/direction-02-modular-field.svg"
+    },
+    {
+      "id": "03",
+      "name": "Cutline Wordmark",
+      "strategic_idea": "The brand name itself carries a calibrated cut inspired by machining and section drawings.",
+      "identity_architecture": "Name-led custom wordmark with a cut initial as the compact mark.",
+      "mark_construction": "A bold provisional initial interrupted by the same horizontal cut used across the wordmark.",
+      "tone": ["editorial", "direct", "contemporary"],
+      "palette": {
+        "cobalt": "#263FC5",
+        "coral": "#E46450",
+        "near_black": "#1A1C26",
+        "soft_white": "#F8F7F2"
+      },
+      "system_extension": "The cutline aligns typography, range metadata, covers and signage.",
+      "small_size_result": "Proposed initial minimum is 16 px; the cut remains visible as a one-pixel interruption.",
+      "sample_book_result": "High-impact editorial cover with overscale initial and aligned range data.",
+      "dependency": "The official name and first letter must be known before this direction can be accurately judged as a final wordmark.",
+      "board_png": "outputs/v0/direction-03-cutline-wordmark.png",
+      "vector_source": "outputs/v0/direction-03-cutline-wordmark.svg"
+    }
+  ],
+  "differentiation_summary": [
+    "Direction 01 is symbol-led and precision-oriented.",
+    "Direction 02 is system-led and pattern-capable.",
+    "Direction 03 is typography-led and editorial."
+  ],
+  "avoidance_review": {
+    "generic_house_or_roof_icon": false,
+    "marble_vein_icon": false,
+    "palette_only_variants": false
+  },
+  "human_checkpoint": {
+    "required": true,
+    "prompt": "Select Direction 01, 02 or 03 before any refinement or final identity-starter production.",
+    "selected_direction": null
+  }
+}

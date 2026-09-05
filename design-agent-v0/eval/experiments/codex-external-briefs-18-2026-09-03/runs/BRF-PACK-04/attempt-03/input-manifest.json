@@ -1,0 +1,12 @@
+[
+  {
+    "asset_id": "BRF-PACK-04-reference-1",
+    "sha256": "7982822ae16ddc0f330ad2fdd040a46092a311c0d2ece9f58d02f1dd6fccda5e",
+    "bytes": 5002
+  },
+  {
+    "asset_id": "BRF-PACK-04-reference-2",
+    "sha256": "54a44d43e4c8de96b7cc0c68f4d08657784905a31c599147338773ce2225eb57",
+    "bytes": 14366
+  }
+]

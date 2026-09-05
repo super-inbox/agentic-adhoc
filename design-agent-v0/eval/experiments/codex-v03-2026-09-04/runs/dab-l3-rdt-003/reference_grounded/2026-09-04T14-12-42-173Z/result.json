@@ -1,0 +1,165 @@
+{
+  "schema_version": "codex-design-agent-v03-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-RDT-003@reference_grounded",
+  "base_brief_id": "DAB-L3-RDT-003",
+  "context_condition": "reference_grounded",
+  "category": "reference_to_original",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution",
+    "workflow_orchestration",
+    "multi_reference_binding"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 3600000,
+  "started_at": "2026-09-04T14:12:42.178Z",
+  "finished_at": "2026-09-04T14:17:14.559Z",
+  "latency_ms": 272381,
+  "intended_turns": 1,
+  "completed_turns": 1,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a06cc3-be7d-7ba1-9ee9-65a82dc7a29f",
+  "input_assets": [
+    {
+      "input_id": "style-reference",
+      "asset_id": "factory-luna-club-sticker",
+      "role": "style_without_color",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "01-style_without_color.png",
+      "source_path": "eval/assets/reference-pack-v0.2/factory/luna-club-sticker.png",
+      "byte_size": 220853,
+      "sha256": "7956c4e5900e53317128d7733ecf0c7729be48edc9d76e5f7a13962aca5cc718"
+    }
+  ],
+  "input_context_ids": [
+    "style-reference",
+    "target-palette"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl",
+    "preview.png"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "preview.png": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1983,
+      "sha256": "22df2d7b160e78f11d48dd6be106aeb8474b908a199dbf7a044b8fe11c64fe41"
+    },
+    {
+      "filename": "v0/cycling-poster.png",
+      "byte_size": 32814,
+      "sha256": "b1b34a0e174ffe3204452b8aba9c3a8cd0efd5f00e3e2aeac8dbf790d3ed10a6"
+    },
+    {
+      "filename": "v0/generation-prompt.txt",
+      "byte_size": 2850,
+      "sha256": "c97f678244d5b4153fbf65de4a708c8453bf649806ee65951646f04c309b3226"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 32814,
+      "sha256": "b1b34a0e174ffe3204452b8aba9c3a8cd0efd5f00e3e2aeac8dbf790d3ed10a6"
+    },
+    {
+      "filename": "v0/solar-community-bicycle-workshop-source.png",
+      "byte_size": 1736714,
+      "sha256": "ce044073a00e3b230f0c871e67d56a70db0e22f0d931ea24ac439dfff28e6c58"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3178,
+      "sha256": "3814996eb5e9d15c18f20d793974fb41733a4ee9f58eac30c3a1f29175efd7b4"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-09-04T14:12:42.178Z",
+      "finished_at": "2026-09-04T14:17:14.546Z",
+      "latency_ms": 272377,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 30,
+        "command_count": 9,
+        "tool_count": 2,
+        "image_activity_count": 4,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a06cc3-be7d-7ba1-9ee9-65a82dc7a29f",
+        "usage": {
+          "input_tokens": 400054,
+          "cached_input_tokens": 344320,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 9794,
+          "reasoning_output_tokens": 4220
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 1983,
+          "sha256": "22df2d7b160e78f11d48dd6be106aeb8474b908a199dbf7a044b8fe11c64fe41"
+        },
+        {
+          "filename": "v0/cycling-poster.png",
+          "byte_size": 32814,
+          "sha256": "b1b34a0e174ffe3204452b8aba9c3a8cd0efd5f00e3e2aeac8dbf790d3ed10a6"
+        },
+        {
+          "filename": "v0/generation-prompt.txt",
+          "byte_size": 2850,
+          "sha256": "c97f678244d5b4153fbf65de4a708c8453bf649806ee65951646f04c309b3226"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 32814,
+          "sha256": "b1b34a0e174ffe3204452b8aba9c3a8cd0efd5f00e3e2aeac8dbf790d3ed10a6"
+        },
+        {
+          "filename": "v0/solar-community-bicycle-workshop-source.png",
+          "byte_size": 1736714,
+          "sha256": "ce044073a00e3b230f0c871e67d56a70db0e22f0d931ea24ac439dfff28e6c58"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3178,
+          "sha256": "3814996eb5e9d15c18f20d793974fb41733a4ee9f58eac30c3a1f29175efd7b4"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 400054,
+    "cached_input_tokens": 344320,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9794,
+    "reasoning_output_tokens": 4220
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

@@ -3,11 +3,41 @@
 This directory is the workflow-level companion to `../queries.jsonl`.
 
 - `queries.jsonl` remains the fast 118-case routing regression set.
-- `briefs.v0.2.jsonl` is the current protocol for tool use, workflow completion, revision,
-  context, and state evaluation.
+- `briefs.v0.3.jsonl` is the current protocol: the frozen 24-case v0.2 core plus an
+  11-case public-corpus-grounded external extension.
+- `briefs.v0.2.jsonl` remains the frozen 24-case protocol used by the completed Codex baseline.
 - `briefs.v0.1.jsonl` is the frozen 24-episode business-task baseline.
 - A brief is not just a prompt. It contains inputs, constraints, checkpoints, feedback,
   deliverables, failure conditions, and a scoring contract.
+
+## v0.3 external-failure extension
+
+v0.3 does not modify any v0.2 business episode. It migrates those 24 rows without changing
+their episode contracts, then adds exactly the 11 Reddit-derived records previously marked
+`record_type=case` and `brief_readiness=ready_to_author`. The three `reference_material`
+records and six `needs_fixture_assets` cases are deliberately not imported.
+
+| partition | episodes | projected conditions | purpose |
+|---|---:|---:|---|
+| frozen v0.2 core | 24 | 32 | balanced eight-category Agent benchmark |
+| public-corpus external | 11 | 11 | real failure modes: reference channels, bounded edits, set consistency, and prepress/vector work |
+| v0.3 total | 35 | 43 | report core and external metrics separately |
+
+The external rows use paraphrased task/failure patterns, not copied post media. Four new
+project-owned generated sources and two deterministic edit masks close the missing-fixture gap;
+other rows reuse project-owned `reference-pack-v0.2` assets. Every external row now has an input
+contract, reference permissions, observable workflow, deliverables, hard gates, verification,
+and required trace artifacts. Controlled follow-up messages are explicitly identified as
+evaluator fixtures rather than original client feedback.
+
+The completed
+[`codex-v03-2026-09-04`](../experiments/codex-v03-2026-09-04/)
+baseline covers all 43 conditions: 32 unchanged core conditions are explicitly carried forward
+from the frozen v0.2 result, while all 11 external conditions are new full-episode executions with
+image/file artifacts and task-specific verification. The external weighted macro is 0.984 with
+11/11 hard-gate and score+gate passes; the combined result is reported as a 0.742–0.928 interval
+because the inherited core still has two unobservable rubric dimensions. Curify itself still lacks
+a comparable episode runner.
 
 ## v0.2 designer-feedback upgrade
 
@@ -58,7 +88,13 @@ evaluation: edit→regenerate, evaluate→generate, and export→explain.
 
 ## Files
 
-- `briefs.v0.2.jsonl` — current 24 workflow episodes.
+- `briefs.v0.3.jsonl` — 35 episodes: 24 frozen core + 11 external-failure cases.
+- `initial_queries.v0.3.jsonl` — generated 43-condition first-turn projection.
+- `brief.v0.3.schema.json` — vendor-neutral v0.3 portable schema.
+- `build_v03.py` / `validate_v03.py` / `freeze_v03.py` — deterministic build, validation,
+  lineage checks, fixture integrity, and reproducibility hashes.
+- `freeze-manifest.v0.3.json` — hashes for dataset, schema, builders, source seeds, and assets.
+- `briefs.v0.2.jsonl` — frozen 24-episode baseline used by the completed Codex v0.2 run.
 - `initial_queries.v0.2.jsonl` — generated 32-condition first-turn projection.
 - `brief.v0.2.schema.json` — v0.2 portable JSON Schema.
 - `build_v02.py` — deterministic upgrade from the frozen v0.1 rows.
@@ -71,6 +107,16 @@ evaluation: edit→regenerate, evaluate→generate, and export→explain.
 Run validation from `design-agent-v0`:
 
 ```bash
+python3 eval/assets/brief-bank-v0.3/build_masks.py
+python3 eval/assets/brief-bank-v0.3/build_manifest.py
+python3 eval/brief_bank/build_v03.py
+python3 eval/brief_bank/validate_v03.py
+python3 eval/brief_bank/export_initial_queries.py \
+  --input eval/brief_bank/briefs.v0.3.jsonl \
+  --output eval/brief_bank/initial_queries.v0.3.jsonl
+python3 eval/brief_bank/freeze_v03.py
+
+# Frozen v0.2 regression
 python3 eval/brief_bank/build_v02.py
 python3 eval/brief_bank/validate_briefs.py
 python3 eval/brief_bank/export_initial_queries.py \
@@ -78,7 +124,10 @@ python3 eval/brief_bank/export_initial_queries.py \
 python3 -m unittest discover -s eval/brief_bank -p 'test_*.py'
 ```
 
-The validator checks both versions. For v0.2 it additionally checks exact capability coverage,
+The legacy validator checks v0.1/v0.2. `validate_v03.py` additionally proves exact v0.2 core
+preservation, selects exactly the 11 ready public-corpus cases, rejects reference-only records,
+verifies both asset packs and mask geometry, and checks every new contract. For v0.2 the legacy
+validator checks exact capability coverage,
 state-version continuity, cross-session resume evidence, reference-role completeness, ablation
 input boundaries, structured edit artifacts, and that the 24 business episodes still match the
 frozen v0.1 source. Every referenced image is verified against
@@ -86,7 +135,7 @@ frozen v0.1 source. Every referenced image is verified against
 
 ## Episode contract
 
-Each v0.2 row contains:
+Each v0.2/v0.3 row contains:
 
 ```text
 initial_query
@@ -121,14 +170,15 @@ The four ablation briefs use three matched conditions:
 - `personalized`: uses the same inputs as reference-grounded plus project-scoped accepted/rejected
   preference signals from simulated prior sessions.
 
-The other 20 briefs run once as `reference_grounded`. Therefore 24 base episodes become 32 run
-rows, not 72. Compare conditions within the same `base_brief_id`; do not treat them as independent
-business tasks.
+The other 20 core briefs and all 11 v0.3 external briefs run once as `reference_grounded`.
+Therefore the 24-case core becomes 32 run rows and the full v0.3 dataset becomes 43, not 105.
+Compare conditions within the same `base_brief_id`; do not treat them as independent business tasks.
 
 ## Provenance and limitations
 
-This is a harness-ready benchmark contract, not a completed Agent experiment and not a claim that
-24 private client records have been collected. The preference memories and later feedback turns are
+This is a benchmark contract, not a claim that 24 private client records have been collected. A
+completed Codex baseline exists, but it is one candidate sample per condition rather than human
+ground truth or a cross-Agent comparison. The preference memories and later feedback turns are
 controlled fixtures, not real customer histories. `provenance.kind` distinguishes:
 
 - `reverse_constructed`: process facts come from an existing documented public case; wording and
@@ -136,6 +186,8 @@ controlled fixtures, not real customer histories. `provenance.kind` distinguishe
 - `internal_scenario`: grounded in Curify's documented customer/factory/ecommerce workflows, with
   identifying details removed or replaced.
 - `controlled_synthetic`: created to exercise a specific capability or failure mode.
+- `public_corpus_grounded`: task/failure pattern is paraphrased from a public seed while executable
+  assets and any controlled feedback are newly authored and explicitly labelled.
 
 No row should be presented as verbatim customer data. The 160-case target should progressively
 replace controlled rows with consented, anonymized real briefs plus revision histories. Preserve

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "version": "v0",
+  "result": "pass",
+  "checks_performed": [
+    {
+      "id": "svg-opens-and-parses",
+      "status": "pass",
+      "detail": "XML parsed successfully with 7 editable path elements.",
+      "evidence_paths": [
+        "outputs/v0/luna-club-vector-master.svg"
+      ]
+    },
+    {
+      "id": "svg-has-no-embedded-raster",
+      "status": "pass",
+      "detail": "Image elements: 0; data-image references: 0.",
+      "evidence_paths": [
+        "outputs/v0/luna-club-vector-master.svg",
+        "outputs/v0/qa/trace-metadata.json"
+      ]
+    },
+    {
+      "id": "svg-rasterises",
+      "status": "pass",
+      "detail": "Rendered SVG opened as 498\u00d7516 RGBA PNG.",
+      "evidence_paths": [
+        "outputs/v0/qa/luna-club-svg-render-tight.png"
+      ]
+    },
+    {
+      "id": "pdf-opens-and-rasterises",
+      "status": "pass",
+      "detail": "pdfinfo opened the one-page print PDF and Poppler rasterised it successfully.",
+      "evidence_paths": [
+        "outputs/v0/luna-club-vector-master.pdf",
+        "outputs/v0/qa/pdfinfo.txt",
+        "outputs/v0/qa/luna-club-pdf-render-tight.png"
+      ]
+    },
+    {
+      "id": "pdf-has-no-embedded-raster",
+      "status": "pass",
+      "detail": "Poppler pdfimages found 0 raster image objects.",
+      "evidence_paths": [
+        "outputs/v0/luna-club-vector-master.pdf",
+        "outputs/v0/qa/pdfimages.txt"
+      ]
+    },
+    {
+      "id": "source-vector-alignment",
+      "status": "pass",
+      "detail": {
+        "metrics": {
+          "silhouette_iou": 0.996355,
+          "navy_visible_iou": 0.987193,
+          "lettering_iou": 0.960375,
+          "silhouette_edge_distance": {
+            "mean_px": 0.2545,
+            "p95_px": 1.0,
+            "max_px": 1.4142
+          },
+          "lettering_edge_distance": {
+            "mean_px": 0.2398,
+            "p95_px": 1.0,
+            "max_px": 2.2361
+          },
+          "mean_absolute_rgb_error_common_silhouette": 3.4327,
+          "svg_pdf_render_mean_absolute_rgba_delta": 0.582861,
+          "svg_pdf_render_max_rgba_delta": 255,
+          "svg_pdf_alpha_iou_at_128": 0.998539
+        },
+        "thresholds": {
+          "silhouette_iou_min": 0.985,
+          "navy_iou_min": 0.97,
+          "lettering_iou_min": 0.95,
+          "edge_p95_max_px": 1.5
+        }
+      },
+      "evidence_paths": [
+        "outputs/v0/luna-club-overlay-proof.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "svg-pdf-render-parity",
+      "status": "pass",
+      "detail": {
+        "mean_absolute_rgba_delta": 0.582861,
+        "max_rgba_delta": 255,
+        "alpha_iou_at_128": 0.998539,
+        "acceptance": "Mean RGBA delta \u2264 1.0 and alpha IoU \u2265 0.995; edge-antialias kernels may differ by renderer."
+      },
+      "evidence_paths": [
+        "outputs/v0/qa/luna-club-svg-render-tight.png",
+        "outputs/v0/qa/luna-club-pdf-render-tight.png"
+      ]
+    },
+    {
+      "id": "node-economy",
+      "status": "pass",
+      "detail": {
+        "editable_path_elements": 7,
+        "total_nodes": 922,
+        "embedded_rasters": 0
+      },
+      "evidence_paths": [
+        "outputs/v0/qa/trace-metadata.json"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

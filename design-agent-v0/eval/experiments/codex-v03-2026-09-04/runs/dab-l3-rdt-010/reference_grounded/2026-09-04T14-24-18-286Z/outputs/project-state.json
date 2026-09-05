@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "project_id": "geometric-owl-artwork-recovery",
+  "current_version": "v0",
+  "status": "candidate_complete_manual_review_required",
+  "client_decisions": [
+    {
+      "decision": "Preserve the printed owl identity.",
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "Exclude shirt fabric, body, lighting, folds, and photographic perspective from the recovered artwork.",
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "Prefer simple, production-friendly three-colour geometry.",
+      "source": "current_user_turn"
+    },
+    {
+      "decision": "Do not classify the result as print-ready when fidelity or colour evidence is insufficient.",
+      "source": "current_user_turn"
+    }
+  ],
+  "locked_items": [
+    "Owl artwork identity and major component arrangement",
+    "Three printed colour roles: dark blue, rust orange, and warm taupe",
+    "Transparent background with no garment or body pixels",
+    "Editable SVG path master",
+    "Three-state verdict vocabulary: print_ready, manual_review, insufficient_source"
+  ],
+  "changed_items": [
+    {
+      "item": "source separation",
+      "change": "Removed all photographic and garment content; retained only reconstructed artwork geometry."
+    },
+    {
+      "item": "geometry",
+      "change": "Normalized perspective, fabric distortion, and paired-feature symmetry while preserving the supported silhouette."
+    },
+    {
+      "item": "colour",
+      "change": "Replaced uneven photographic colour variation with three provisional flat fills."
+    },
+    {
+      "item": "small eye details",
+      "change": "Used one simplified, clearly supported transparent glint per pupil and omitted ambiguous secondary marks."
+    },
+    {
+      "item": "negative space",
+      "change": "Modeled light gaps as transparency; preview alone simulates a white substrate."
+    }
+  ],
+  "unresolved_blockers": [
+    "Human approval of normalized geometry and small-detail simplifications",
+    "Approved production colour specification",
+    "Decision on garment knockout versus white ink/underbase",
+    "Production-size test print and registration approval"
+  ],
+  "artifact_paths": {
+    "recovered_artwork_svg": "outputs/v0/recovered_owl_artwork.svg",
+    "recovered_artwork_png": "outputs/v0/recovered_owl_artwork.png",
+    "preview": "outputs/v0/preview.png",
+    "printability_verdict": "outputs/v0/printability-verdict.json",
+    "design_document": "outputs/v0/design_document.json",
+    "verification": "outputs/v0/verification.json"
+  }
+}

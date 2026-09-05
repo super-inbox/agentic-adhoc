@@ -1,0 +1,74 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-09-04T14:12:42.176Z",
+  "finished_at": "2026-09-04T14:24:18.142Z",
+  "latency_ms": 696027,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 54,
+    "command_count": 16,
+    "tool_count": 5,
+    "image_activity_count": 9,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a06cc3-bed9-7320-baa1-bf70a454810e",
+    "usage": {
+      "input_tokens": 1234638,
+      "cached_input_tokens": 1143680,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 20745,
+      "reasoning_output_tokens": 8568
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1570,
+      "sha256": "535935fb02d1191e2b0bd52348d61f4de7182a1cb86e281c667f5e2ed8d53005"
+    },
+    {
+      "filename": "v0/01-elderly-woman.png",
+      "byte_size": 6070372,
+      "sha256": "4b4cd61096d675004154d2cca8ab7abef4582ae15b5818f65680c4b6f565eaa4"
+    },
+    {
+      "filename": "v0/02-cheerleader.png",
+      "byte_size": 7052362,
+      "sha256": "b86ea3ce4104ed012386058799ad89ba0881c7c49933e7291362bbccfa7a9091"
+    },
+    {
+      "filename": "v0/03-priest.png",
+      "byte_size": 6218235,
+      "sha256": "ba5f98b8416a036b1f086b042a48d45fd4383c259d4e147a47d32ef65cf1c9f0"
+    },
+    {
+      "filename": "v0/04-nun.png",
+      "byte_size": 7729874,
+      "sha256": "1bc639da5fd0268608995ad0b46bfc7cf8f77f365b9b53bbf7030df5dbb7aa02"
+    },
+    {
+      "filename": "v0/05-fictional-world-leader.png",
+      "byte_size": 7274450,
+      "sha256": "03bf34b1d5e707d22456e32cae2265f3f0bf435f3c6acdd5152a817379435ec6"
+    },
+    {
+      "filename": "v0/press-proof.png",
+      "byte_size": 5709859,
+      "sha256": "5650362e173bf5266a8679db599ab545ef4defcd35db1e6c9958910e09f7194c"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 1740176,
+      "sha256": "fec42b217abe5c31cc83299a09ba3873670c360ddc20bafcdc4397bde63c261f"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5985,
+      "sha256": "d47a3a56293a392597b061642cb441fa4d5589e798b39b5beb61c52a14d1e6c5"
+    }
+  ]
+}

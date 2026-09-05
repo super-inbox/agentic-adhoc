@@ -1,0 +1,17 @@
+Title:           Luna Club Vector Master
+Subject:         Editable path master traced from client artwork
+Author:          Vector reconstruction
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           1
+Encrypted:       no
+Page size:       498 x 516 pts
+Page rot:        0
+File size:       3445 bytes
+Optimized:       no
+PDF version:     1.4

@@ -1,0 +1,179 @@
+{
+  "schema_version": "codex-design-agent-v03-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-RDT-006@reference_grounded",
+  "base_brief_id": "DAB-L3-RDT-006",
+  "context_condition": "reference_grounded",
+  "category": "client_feedback_revision",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution",
+    "workflow_orchestration",
+    "structured_editing"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 3600000,
+  "started_at": "2026-09-04T14:19:00.722Z",
+  "finished_at": "2026-09-04T14:33:54.478Z",
+  "latency_ms": 893756,
+  "intended_turns": 1,
+  "completed_turns": 1,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a06cc9-832f-7131-b5f0-0ca7d429b618",
+  "input_assets": [
+    {
+      "input_id": "edit-target",
+      "asset_id": "v03-australian-empty-road",
+      "role": "approved_road_photo",
+      "reference_role": "edit_target",
+      "identity_policy": "preserve_unedited_regions",
+      "filename": "01-approved_road_photo.png",
+      "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/australian-empty-road.png",
+      "byte_size": 3471961,
+      "sha256": "905163ed293b665b56c689e49d99d776af80a1c9a20e2bdb03c41682a61e8cb8"
+    },
+    {
+      "input_id": "edit-mask",
+      "asset_id": "v03-australian-road-edit-mask",
+      "role": "road_surface_edit_region",
+      "reference_role": "supporting_asset",
+      "identity_policy": "analysis_only",
+      "filename": "02-road_surface_edit_region.png",
+      "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/australian-road-edit-mask.png",
+      "byte_size": 6106,
+      "sha256": "a33d84d4635cda2a749db3ef3e87056f63336511f6d860fb748cbc3cba9f96dd"
+    }
+  ],
+  "input_context_ids": [
+    "edit-target",
+    "edit-mask",
+    "traffic-rule"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl",
+    "preview.png",
+    "change_set.json"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "preview.png": true,
+    "change_set.json": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1899,
+      "sha256": "32c960a4ff7dad46279b614ce55b06ae8629290ff71e0343d0ad2ce7dd73ce45"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 2066,
+      "sha256": "5d0f9ca7380242799bc672ad06211bed350de212b9fc9298f9e3d896b4be05f8"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 3884477,
+      "sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914"
+    },
+    {
+      "filename": "v0/road-with-traffic-final.png",
+      "byte_size": 3884477,
+      "sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914"
+    },
+    {
+      "filename": "v0/vehicle-additions-mask.png",
+      "byte_size": 9190,
+      "sha256": "e5ad7ddee9906bb58ae342b80809f18b9d96f13ec6de63cfdfa254088192a654"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4687,
+      "sha256": "ef1ad735c431ce3b11ac02599172f8a3002ea1108aa33672d56aa7af0831af41"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-09-04T14:19:00.723Z",
+      "finished_at": "2026-09-04T14:33:54.445Z",
+      "latency_ms": 893743,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 53,
+        "command_count": 17,
+        "tool_count": 5,
+        "image_activity_count": 4,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a06cc9-832f-7131-b5f0-0ca7d429b618",
+        "usage": {
+          "input_tokens": 1290347,
+          "cached_input_tokens": 1218432,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 32910,
+          "reasoning_output_tokens": 17244
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 1899,
+          "sha256": "32c960a4ff7dad46279b614ce55b06ae8629290ff71e0343d0ad2ce7dd73ce45"
+        },
+        {
+          "filename": "v0/change_set.json",
+          "byte_size": 2066,
+          "sha256": "5d0f9ca7380242799bc672ad06211bed350de212b9fc9298f9e3d896b4be05f8"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 3884477,
+          "sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914"
+        },
+        {
+          "filename": "v0/road-with-traffic-final.png",
+          "byte_size": 3884477,
+          "sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914"
+        },
+        {
+          "filename": "v0/vehicle-additions-mask.png",
+          "byte_size": 9190,
+          "sha256": "e5ad7ddee9906bb58ae342b80809f18b9d96f13ec6de63cfdfa254088192a654"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 4687,
+          "sha256": "ef1ad735c431ce3b11ac02599172f8a3002ea1108aa33672d56aa7af0831af41"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 1290347,
+    "cached_input_tokens": 1218432,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 32910,
+    "reasoning_output_tokens": 17244
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

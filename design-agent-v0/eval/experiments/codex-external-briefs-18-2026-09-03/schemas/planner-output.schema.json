@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "External design brief planning output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "primary_intent",
+    "brief_class",
+    "execution_status",
+    "workflow_steps",
+    "reference_observations",
+    "deliverable_concepts",
+    "missing_inputs",
+    "assumptions",
+    "stop_conditions",
+    "rationale",
+    "confidence"
+  ],
+  "properties": {
+    "primary_intent": {
+      "type": "string",
+      "enum": ["generate", "edit", "evaluate_rank", "export", "adapt"]
+    },
+    "brief_class": {
+      "type": "string",
+      "enum": [
+        "brand_visual_exploration",
+        "brand_campaign",
+        "ecommerce_content",
+        "education_content",
+        "merchandise_family",
+        "packaging_sku_series",
+        "concept_to_production"
+      ]
+    },
+    "execution_status": {"type": "string", "const": "not_executed"},
+    "workflow_steps": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "objective"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "intake_brief",
+              "research",
+              "principles",
+              "process_model",
+              "structure_spec",
+              "prototype_test",
+              "explore_concepts",
+              "select_direction",
+              "refine",
+              "identity_system",
+              "expand_assets",
+              "learning_activities",
+              "dieline",
+              "production_file",
+              "deliver"
+            ]
+          },
+          "objective": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "reference_observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["asset_id", "observations"],
+        "properties": {
+          "asset_id": {"type": "string", "minLength": 1},
+          "observations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "deliverable_concepts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "brand_strategy",
+          "logo_system",
+          "visual_identity",
+          "campaign_key_visual",
+          "environmental_graphics",
+          "packaging_family",
+          "sku_differentiation",
+          "structural_packaging",
+          "production_spec",
+          "mockups",
+          "ecommerce_content",
+          "product_photography",
+          "education_content_system",
+          "merchandise_family",
+          "brand_applications",
+          "dieline",
+          "prototype"
+        ]
+      }
+    },
+    "missing_inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "stop_conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "rationale": {"type": "string", "minLength": 1},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+  }
+}

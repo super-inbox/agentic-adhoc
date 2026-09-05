@@ -1,0 +1,38 @@
+{
+  "id": "BRF-MERCH-02",
+  "layer": "case_study_workflow",
+  "attempt": 3,
+  "status": "completed",
+  "started_at": "2026-09-04T02:40:09.359611Z",
+  "finished_at": "2026-09-04T02:40:58.779647Z",
+  "duration_seconds": 49.420066416,
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "dataset_row_sha256": "97b36b0ed35e9e24d7e443c62f84465b8b170e51e949b64b92a40b16c6e10b42",
+  "prompt_sha256": "681fa10e6ac4246de6e53c4fae73b134e5ad8560d4c71bb42b2ef3723a7f4e2a",
+  "input_assets": [],
+  "exit_code": 0,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": null,
+  "validation_errors": [],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": {
+      "input_tokens": 14959,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2521,
+      "reasoning_output_tokens": 1539
+    },
+    "thread_id": "01a06a49-b0ca-7f42-857e-ac617b64a753"
+  }
+}

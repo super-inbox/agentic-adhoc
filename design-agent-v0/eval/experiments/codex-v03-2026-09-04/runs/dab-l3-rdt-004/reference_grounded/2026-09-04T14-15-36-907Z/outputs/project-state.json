@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "current_version": "v0",
+  "status": "final",
+  "updated_date": "2026-09-04",
+  "client_decisions": [
+    {
+      "decision": "Use Reference A for layout only",
+      "source": "inputs/01-geometry_only.png",
+      "scope": [
+        "object_positions",
+        "spatial_relationships"
+      ]
+    },
+    {
+      "decision": "Use Reference B for abstract illustration style only",
+      "source": "inputs/02-style_only.png",
+      "scope": [
+        "shape_language",
+        "line_treatment",
+        "rendering_energy"
+      ]
+    },
+    {
+      "decision": "Create one polished, friendly, optimistic future-neighbourhood mobility scene",
+      "scope": [
+        "final PNG"
+      ]
+    }
+  ],
+  "locked_items": [
+    {
+      "id": "road-position",
+      "value": "Road runs horizontally along the bottom"
+    },
+    {
+      "id": "building-position",
+      "value": "Main building is on the left"
+    },
+    {
+      "id": "tree-position",
+      "value": "Prominent tree is near the centre"
+    },
+    {
+      "id": "sun-position",
+      "value": "Sun is in the upper-right"
+    },
+    {
+      "id": "style-separation",
+      "value": "Reference A contributes no line style; Reference B contributes no layout, identity, wording, logo, character, or colour palette"
+    }
+  ],
+  "changed_items": [
+    {
+      "id": "scene-rendering",
+      "change": "Converted the geometry-only arrangement into a polished, softly dimensional contemporary illustration"
+    },
+    {
+      "id": "future-neighbourhood-content",
+      "change": "Added sustainable architecture, greenery, an original electric shuttle, and a bicycle while retaining the four locked anchors"
+    },
+    {
+      "id": "independent-palette",
+      "change": "Used coral, turquoise, fresh green, lilac, warm rose, sky blue, and graphite accents instead of the style reference palette"
+    },
+    {
+      "id": "lighting-depth",
+      "change": "Added coherent upper-right daylight, lower-left cast shadows, and atmospheric neighbourhood depth"
+    }
+  ],
+  "artifact_paths": {
+    "final": "outputs/v0/future-neighbourhood.png",
+    "preview": "outputs/v0/preview.png",
+    "verification": "outputs/v0/verification.json",
+    "project_state": "outputs/project-state.json"
+  },
+  "versions": [
+    {
+      "version": "v0",
+      "stage": "final",
+      "artifact": "outputs/v0/future-neighbourhood.png"
+    }
+  ]
+}

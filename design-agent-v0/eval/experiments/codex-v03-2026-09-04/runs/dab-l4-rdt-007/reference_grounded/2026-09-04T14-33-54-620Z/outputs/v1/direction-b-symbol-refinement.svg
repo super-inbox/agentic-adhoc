@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#0E2C28" flood-opacity="0.16"/>
+    </filter>
+    <symbol id="standardMark" viewBox="0 0 64 64">
+      <path d="M4 4H29V13H13V29H4V4Z" fill="currentColor"/>
+      <path d="M35 4H60V29H51V13H35V4Z" fill="currentColor"/>
+      <path d="M35 51H51V35H60V60H35V51Z" fill="currentColor"/>
+      <path d="M4 35H13V51H29V60H4V35Z" fill="currentColor"/>
+      <rect x="27" y="27" width="10" height="10" rx="1.5" fill="#D8AA35"/>
+    </symbol>
+    <symbol id="microMark" viewBox="0 0 16 16">
+      <path d="M1 1H7V4H4V7H1V1Z" fill="currentColor"/>
+      <path d="M9 1H15V7H12V4H9V1Z" fill="currentColor"/>
+      <path d="M9 12H12V9H15V15H9V12Z" fill="currentColor"/>
+      <path d="M1 9H4V12H7V15H1V9Z" fill="currentColor"/>
+      <rect x="7" y="7" width="2" height="2" fill="#D8AA35"/>
+    </symbol>
+    <pattern id="architecturalGrid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M0 0H52V52H0Z" fill="none" stroke="#F3EFE5" stroke-opacity="0.10"/>
+      <rect x="23" y="23" width="6" height="6" fill="#D8AA35" fill-opacity="0.72"/>
+    </pattern>
+    <pattern id="pixelGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#7F8E89" stroke-opacity="0.36" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1100" fill="#ECE8DE"/>
+  <rect x="0" y="0" width="18" height="1100" fill="#D8AA35"/>
+
+  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" fill="#143A35">
+    <text x="78" y="66" font-size="15" font-weight="700" letter-spacing="3">SELECTED DIRECTION B</text>
+    <text x="78" y="120" font-size="44" font-weight="600" letter-spacing="-1">Modular Field / 16 px optical master</text>
+    <text x="78" y="156" font-size="18" fill="#536A65">Requested delta only: compact symbol simplified; architectural grid and wordmark retained.</text>
+
+    <g transform="translate(1240,54)">
+      <rect width="290" height="72" rx="7" fill="#143A35"/>
+      <rect x="0" y="0" width="8" height="72" rx="4" fill="#D8AA35"/>
+      <text x="28" y="29" font-size="11" font-weight="700" letter-spacing="2" fill="#A7B7B2">STATUS</text>
+      <text x="28" y="53" font-size="15" font-weight="600" fill="#F6F2E8">Selected / compact refinement</text>
+    </g>
+
+    <rect x="70" y="205" width="600" height="500" rx="8" fill="#143A35"/>
+    <rect x="70" y="205" width="600" height="500" rx="8" fill="url(#architecturalGrid)"/>
+    <text x="110" y="250" font-size="12" font-weight="700" letter-spacing="2.1" fill="#A7B7B2">LOCKED / GRID + RESTRAINED WORDMARK</text>
+    <g transform="translate(118,316)" color="#F6F2E8">
+      <use href="#standardMark" width="132" height="132"/>
+    </g>
+    <g transform="translate(300,330)">
+      <text x="0" y="77" font-size="78" font-weight="600" letter-spacing="-3" fill="#F6F2E8">brand</text>
+      <rect x="278" y="61" width="12" height="12" rx="2" fill="#D8AA35"/>
+      <text x="4" y="116" font-size="12" font-weight="700" letter-spacing="3.5" fill="#A7B7B2">LAMINATE SURFACES</text>
+      <text x="4" y="154" font-size="11" fill="#7F9992">Name remains provisional</text>
+    </g>
+    <line x1="110" y1="520" x2="630" y2="520" stroke="#F6F2E8" stroke-opacity="0.20"/>
+    <text x="110" y="560" font-size="13" font-weight="700" letter-spacing="1.8" fill="#D8AA35">PRESERVED FROM V0</text>
+    <text x="110" y="592" font-size="15" fill="#D8E0DC">Grid spacing, spruce/ochre palette, lowercase lockup,</text>
+    <text x="110" y="617" font-size="15" fill="#D8E0DC">collection-code behavior and sample-book architecture.</text>
+    <rect x="110" y="650" width="120" height="28" rx="14" fill="#F6F2E8" fill-opacity="0.10"/>
+    <text x="170" y="668" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="1.5" fill="#A7B7B2">NO REDESIGN</text>
+
+    <rect x="705" y="205" width="430" height="500" rx="8" fill="#F8F5ED"/>
+    <text x="745" y="250" font-size="12" font-weight="700" letter-spacing="2.1" fill="#75837F">NEW / 16 × 16 PIXEL CONSTRUCTION</text>
+    <rect x="755" y="288" width="320" height="320" fill="#EFEADF"/>
+    <g transform="translate(755,288) scale(20)" color="#143A35">
+      <use href="#microMark" width="16" height="16"/>
+    </g>
+    <rect x="755" y="288" width="320" height="320" fill="url(#pixelGrid)"/>
+    <rect x="755" y="288" width="320" height="320" fill="none" stroke="#81908B" stroke-opacity="0.65"/>
+    <path d="M775 268V282M755 272H795" stroke="#D8AA35" stroke-width="2"/>
+    <text x="755" y="642" font-size="12" font-weight="700" fill="#143A35">1 px OUTER MARGIN</text>
+    <text x="1075" y="642" text-anchor="end" font-size="12" font-weight="700" fill="#143A35">WHOLE-PIXEL EDGES</text>
+    <text x="755" y="674" font-size="13" fill="#536A65">Each filled cell maps to one device pixel at 16 px.</text>
+
+    <rect x="1170" y="205" width="360" height="500" rx="8" fill="#F8F5ED"/>
+    <text x="1210" y="250" font-size="12" font-weight="700" letter-spacing="2.1" fill="#75837F">DELTA / MICRO MASTER ONLY</text>
+    <line x1="1210" y1="274" x2="1490" y2="274" stroke="#D3CFC4"/>
+    <g transform="translate(1210,307)">
+      <text x="0" y="0" font-size="11" font-weight="700" letter-spacing="1.6" fill="#75837F">STANDARD / ≥24 PX</text>
+      <rect x="0" y="18" width="94" height="94" rx="12" fill="#EAE5D9"/>
+      <g transform="translate(15,33)" color="#143A35"><use href="#standardMark" width="64" height="64"/></g>
+      <text x="124" y="48" font-size="15" font-weight="600">Unchanged</text>
+      <text x="124" y="74" font-size="13" fill="#536A65">Original 64-unit geometry</text>
+      <text x="124" y="96" font-size="13" fill="#536A65">for print and display.</text>
+    </g>
+    <g transform="translate(1210,458)">
+      <text x="0" y="0" font-size="11" font-weight="700" letter-spacing="1.6" fill="#75837F">MICRO / 16–23 PX</text>
+      <rect x="0" y="18" width="94" height="94" rx="12" fill="#EAE5D9"/>
+      <g transform="translate(15,33)" color="#143A35"><use href="#microMark" width="64" height="64"/></g>
+      <text x="124" y="48" font-size="15" font-weight="600">Optically redrawn</text>
+      <text x="124" y="74" font-size="13" fill="#536A65">3 px corner weight</text>
+      <text x="124" y="96" font-size="13" fill="#536A65">2 × 2 px square centre.</text>
+    </g>
+    <rect x="1210" y="608" width="280" height="64" rx="5" fill="#143A35"/>
+    <circle cx="1234" cy="640" r="7" fill="#D8AA35"/>
+    <text x="1254" y="635" font-size="10" font-weight="700" letter-spacing="1.5" fill="#A7B7B2">16 PX RESULT</text>
+    <text x="1254" y="650" font-size="12.5" font-weight="600" fill="#F6F2E8">Crisp silhouette / centre retained</text>
+
+    <rect x="70" y="740" width="1460" height="290" rx="8" fill="#F8F5ED"/>
+    <text x="110" y="785" font-size="12" font-weight="700" letter-spacing="2.1" fill="#75837F">ACTUAL-SIZE PROOFS / RESPONSIVE SWITCH</text>
+    <text x="110" y="816" font-size="15" fill="#536A65">Micro master below 24 px; standard master from 24 px upward.</text>
+
+    <g transform="translate(110,850)">
+      <rect width="122" height="122" rx="10" fill="#ECE7DB"/>
+      <g transform="translate(53,53)" color="#143A35"><use href="#microMark" width="16" height="16"/></g>
+      <text x="61" y="147" text-anchor="middle" font-size="12" font-weight="700">16 px</text>
+      <text x="61" y="167" text-anchor="middle" font-size="10" fill="#75837F">MICRO</text>
+    </g>
+    <g transform="translate(252,850)">
+      <rect width="122" height="122" rx="10" fill="#143A35"/>
+      <g transform="translate(51,51)" color="#F6F2E8"><use href="#microMark" width="20" height="20"/></g>
+      <text x="61" y="147" text-anchor="middle" font-size="12" font-weight="700">20 px</text>
+      <text x="61" y="167" text-anchor="middle" font-size="10" fill="#75837F">MICRO / REVERSE</text>
+    </g>
+    <g transform="translate(394,850)">
+      <rect width="122" height="122" rx="10" fill="#ECE7DB"/>
+      <g transform="translate(49,49)" color="#143A35"><use href="#standardMark" width="24" height="24"/></g>
+      <text x="61" y="147" text-anchor="middle" font-size="12" font-weight="700">24 px</text>
+      <text x="61" y="167" text-anchor="middle" font-size="10" fill="#75837F">STANDARD</text>
+    </g>
+    <g transform="translate(536,850)">
+      <rect width="122" height="122" rx="10" fill="#ECE7DB"/>
+      <g transform="translate(45,45)" color="#143A35"><use href="#standardMark" width="32" height="32"/></g>
+      <text x="61" y="147" text-anchor="middle" font-size="12" font-weight="700">32 px</text>
+      <text x="61" y="167" text-anchor="middle" font-size="10" fill="#75837F">STANDARD</text>
+    </g>
+
+    <g transform="translate(725,850)">
+      <text x="0" y="5" font-size="11" font-weight="700" letter-spacing="1.7" fill="#75837F">MINIMUM-SIZE RULE</text>
+      <line x1="0" y1="25" x2="330" y2="25" stroke="#D3CFC4"/>
+      <text x="0" y="62" font-size="15" font-weight="600">Digital minimum</text>
+      <text x="210" y="62" font-size="15" font-weight="700">16 px</text>
+      <text x="0" y="96" font-size="15" font-weight="600">Preferred UI size</text>
+      <text x="210" y="96" font-size="15" font-weight="700">24 px+</text>
+      <text x="0" y="130" font-size="15" font-weight="600">Print minimum</text>
+      <text x="210" y="130" font-size="15" font-weight="700">6 mm</text>
+      <text x="0" y="164" font-size="12" fill="#75837F">Never interpolate between the two masters.</text>
+    </g>
+
+    <g transform="translate(1140,822)">
+      <text x="0" y="0" font-size="11" font-weight="700" letter-spacing="1.7" fill="#75837F">SAMPLE-BOOK ARCHITECTURE / UNCHANGED</text>
+      <g filter="url(#shadow)" transform="translate(40,28)">
+        <polygon points="0,10 12,0 172,0 160,10" fill="#F5F1E7"/>
+        <polygon points="160,10 172,0 172,190 160,202" fill="#B58A22"/>
+        <rect x="0" y="10" width="160" height="192" fill="#F6F2E8"/>
+        <rect x="0" y="10" width="8" height="192" fill="#D8AA35"/>
+        <g transform="translate(20,27)" color="#143A35"><use href="#standardMark" width="37" height="37"/></g>
+        <text x="20" y="96" font-size="22" font-weight="600" letter-spacing="-1">brand<tspan fill="#D8AA35">.</tspan></text>
+        <text x="20" y="113" font-size="5.5" font-weight="700" letter-spacing="1.6" fill="#6C7B76">LAMINATE SURFACES</text>
+        <text x="20" y="166" font-size="6.5" font-weight="700" letter-spacing="1.1">M01 / ESSENTIALS</text>
+        <text x="20" y="180" font-size="6.5" fill="#6C7B76">Commercial surface range</text>
+      </g>
+      <text x="240" y="96" font-size="14" font-weight="600">No layout change</text>
+      <text x="240" y="123" font-size="13" fill="#536A65">Standard mark remains</text>
+      <text x="240" y="145" font-size="13" fill="#536A65">the print/display master.</text>
+    </g>
+  </g>
+
+  <text x="80" y="1072" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.7" fill="#75837F">V1 • DIRECTION B SELECTED • COMPACT SYMBOL DELTA • FINAL WORDMARK PENDING OFFICIAL NAME</text>
+  <text x="1520" y="1072" text-anchor="end" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.7" fill="#75837F">V1 / B-16</text>
+</svg>

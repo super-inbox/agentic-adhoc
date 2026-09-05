@@ -1,0 +1,417 @@
+{
+  "schema_version": "codex-design-agent-v03-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L4-RDT-008@reference_grounded",
+  "base_brief_id": "DAB-L4-RDT-008",
+  "context_condition": "reference_grounded",
+  "category": "concept_to_factory_ready",
+  "capability_level": "L4",
+  "capability_tags": [
+    "tool_execution",
+    "workflow_orchestration",
+    "multi_turn_revision",
+    "production_execution"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 3600000,
+  "started_at": "2026-09-04T14:37:08.743Z",
+  "finished_at": "2026-09-04T14:54:31.228Z",
+  "latency_ms": 1042485,
+  "intended_turns": 2,
+  "completed_turns": 2,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a06cda-1d32-7ad1-97f0-00d88eda4b5a",
+  "input_assets": [],
+  "input_context_ids": [
+    "product-copy"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl",
+    "preview.png"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "preview.png": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 4443,
+      "sha256": "58556ddeb2b6fef95744081717f7f0e1dcfb27a72c54137fca40fb62d3dfec37"
+    },
+    {
+      "filename": "v0/concept-layout.pdf",
+      "byte_size": 234886,
+      "sha256": "d8ad94d15447c8948ff04df39b2db0723b70b7e21b12e792c0b1183bddbd0d73"
+    },
+    {
+      "filename": "v0/concept-layout.png",
+      "byte_size": 203506,
+      "sha256": "c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e"
+    },
+    {
+      "filename": "v0/preflight-report.json",
+      "byte_size": 9094,
+      "sha256": "7cc073558630561ca79c3fdae965d2c57a277a625cd31ef1e929cf8df4b8a52d"
+    },
+    {
+      "filename": "v0/preflight-report.pdf",
+      "byte_size": 695089,
+      "sha256": "4e28d635c7830445c5d3b4dffe8f401ed1edde7a0ac9ffcb2ea286dfecab06cc"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 203506,
+      "sha256": "c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e"
+    },
+    {
+      "filename": "v0/qa-render/concept-layout-1.png",
+      "byte_size": 514468,
+      "sha256": "fe91c9893edcd76611ac5d5de6c698799644f21e1452a8f6b3b7d2935c17bafa"
+    },
+    {
+      "filename": "v0/qa-render/preflight-report-1.png",
+      "byte_size": 397150,
+      "sha256": "a785e5440f818071d1a6057b8f879311487fd9c6deca737393bc527f9435ebf9"
+    },
+    {
+      "filename": "v0/qa-render/preflight-report-2.png",
+      "byte_size": 441109,
+      "sha256": "f896c378ac3297bfde628db2e01116e274ababf1d0039162302fa423584bcb02"
+    },
+    {
+      "filename": "v0/qa-render/preflight-report-3.png",
+      "byte_size": 483537,
+      "sha256": "bb2e36a241cd9eb1d9065089ec7888695eb83a3cdd9e7d6544c84bf81af65ddc"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 5573,
+      "sha256": "b71fc384771683619d3bda1aae38ba7b99d81e1707efd17c5aef132e1ef1bc11"
+    },
+    {
+      "filename": "v1/physical-sample-checklist-preview.png",
+      "byte_size": 150610,
+      "sha256": "7e40180bf9b11ecc63e2d5a5deba3b5da4042de22b04df5fa50373135b5bc6d2"
+    },
+    {
+      "filename": "v1/physical-sample-checklist.json",
+      "byte_size": 3194,
+      "sha256": "ad68979eaf12ea3c9227485620e08ecda9f21623bec19e5798c676faf2fe59da"
+    },
+    {
+      "filename": "v1/physical-sample-checklist.pdf",
+      "byte_size": 620552,
+      "sha256": "452f7a418cebdc9219d8379374cdf0d57b841bc5214bd1de5327112db94235f5"
+    },
+    {
+      "filename": "v1/preview.png",
+      "byte_size": 128921,
+      "sha256": "48370d9a96b07952113b9353c9a3de4706c99ac2ee6390d657a579da21558b87"
+    },
+    {
+      "filename": "v1/provisional-structure.json",
+      "byte_size": 3316,
+      "sha256": "2ab2c5d0d334c78d6f362aac2433e0034fdbe7d25771c614fd08be660808a9da"
+    },
+    {
+      "filename": "v1/provisional-structure.pdf",
+      "byte_size": 405007,
+      "sha256": "c573e4f1e460c22682e31cd159a920e2c7f64a54bfb2f23b09f4f0ea41426af6"
+    },
+    {
+      "filename": "v1/provisional-structure.png",
+      "byte_size": 128921,
+      "sha256": "48370d9a96b07952113b9353c9a3de4706c99ac2ee6390d657a579da21558b87"
+    },
+    {
+      "filename": "v1/qa-render/physical-sample-checklist-1.png",
+      "byte_size": 384176,
+      "sha256": "0a41f2b7dcf43788950f6b48d6c92ad7eea271d5068ec376f5eee65570280e56"
+    },
+    {
+      "filename": "v1/qa-render/physical-sample-checklist-2.png",
+      "byte_size": 421388,
+      "sha256": "5ac9a997156d2d2b9666be4c00ca11b5cbe639b64142675348c739a29817d7b3"
+    },
+    {
+      "filename": "v1/qa-render/physical-sample-checklist-3.png",
+      "byte_size": 429903,
+      "sha256": "fb9ef341c88582b2789d46b0fe1f9312426b4cecd228917eaa6c138b8b670460"
+    },
+    {
+      "filename": "v1/qa-render/provisional-structure-1.png",
+      "byte_size": 332986,
+      "sha256": "28b7e7575fee4258428d4137a8b33a88df04c9b32467cec79a0950727ec359ca"
+    },
+    {
+      "filename": "v1/qa-render/provisional-structure-2.png",
+      "byte_size": 457881,
+      "sha256": "6f8d560e0ddc03d21b27e84e3c94ec6f81ceb0869d2e0fbaf2642da04f6871df"
+    },
+    {
+      "filename": "v1/verification.json",
+      "byte_size": 6603,
+      "sha256": "a61c807f0314c2e35e0de84ba347baa85a47f2b90bf0c75460920c4ae153c931"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-09-04T14:37:08.743Z",
+      "finished_at": "2026-09-04T14:45:20.602Z",
+      "latency_ms": 491877,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 33,
+        "command_count": 11,
+        "tool_count": 2,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a06cda-1d32-7ad1-97f0-00d88eda4b5a",
+        "usage": {
+          "input_tokens": 465560,
+          "cached_input_tokens": 423936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 24537,
+          "reasoning_output_tokens": 8601
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 1896,
+          "sha256": "4db330f68c8aae4de9c01a20429ddf55729e6c9a329ac659ddb1751c09282293"
+        },
+        {
+          "filename": "v0/concept-layout.pdf",
+          "byte_size": 234886,
+          "sha256": "d8ad94d15447c8948ff04df39b2db0723b70b7e21b12e792c0b1183bddbd0d73"
+        },
+        {
+          "filename": "v0/concept-layout.png",
+          "byte_size": 203506,
+          "sha256": "c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e"
+        },
+        {
+          "filename": "v0/preflight-report.json",
+          "byte_size": 9094,
+          "sha256": "7cc073558630561ca79c3fdae965d2c57a277a625cd31ef1e929cf8df4b8a52d"
+        },
+        {
+          "filename": "v0/preflight-report.pdf",
+          "byte_size": 695089,
+          "sha256": "4e28d635c7830445c5d3b4dffe8f401ed1edde7a0ac9ffcb2ea286dfecab06cc"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 203506,
+          "sha256": "c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e"
+        },
+        {
+          "filename": "v0/qa-render/concept-layout-1.png",
+          "byte_size": 514468,
+          "sha256": "fe91c9893edcd76611ac5d5de6c698799644f21e1452a8f6b3b7d2935c17bafa"
+        },
+        {
+          "filename": "v0/qa-render/preflight-report-1.png",
+          "byte_size": 397150,
+          "sha256": "a785e5440f818071d1a6057b8f879311487fd9c6deca737393bc527f9435ebf9"
+        },
+        {
+          "filename": "v0/qa-render/preflight-report-2.png",
+          "byte_size": 441109,
+          "sha256": "f896c378ac3297bfde628db2e01116e274ababf1d0039162302fa423584bcb02"
+        },
+        {
+          "filename": "v0/qa-render/preflight-report-3.png",
+          "byte_size": 483537,
+          "sha256": "bb2e36a241cd9eb1d9065089ec7888695eb83a3cdd9e7d6544c84bf81af65ddc"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 5573,
+          "sha256": "b71fc384771683619d3bda1aae38ba7b99d81e1707efd17c5aef132e1ef1bc11"
+        }
+      ]
+    },
+    {
+      "turn_index": 1,
+      "logical_session_id": "session-01",
+      "started_at": "2026-09-04T14:45:20.620Z",
+      "finished_at": "2026-09-04T14:54:31.172Z",
+      "latency_ms": 550589,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 32,
+        "command_count": 9,
+        "tool_count": 3,
+        "image_activity_count": 0,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a06cda-1d32-7ad1-97f0-00d88eda4b5a",
+        "usage": {
+          "input_tokens": 1549244,
+          "cached_input_tokens": 1462528,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 50634,
+          "reasoning_output_tokens": 16446
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 4443,
+          "sha256": "58556ddeb2b6fef95744081717f7f0e1dcfb27a72c54137fca40fb62d3dfec37"
+        },
+        {
+          "filename": "v0/concept-layout.pdf",
+          "byte_size": 234886,
+          "sha256": "d8ad94d15447c8948ff04df39b2db0723b70b7e21b12e792c0b1183bddbd0d73"
+        },
+        {
+          "filename": "v0/concept-layout.png",
+          "byte_size": 203506,
+          "sha256": "c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e"
+        },
+        {
+          "filename": "v0/preflight-report.json",
+          "byte_size": 9094,
+          "sha256": "7cc073558630561ca79c3fdae965d2c57a277a625cd31ef1e929cf8df4b8a52d"
+        },
+        {
+          "filename": "v0/preflight-report.pdf",
+          "byte_size": 695089,
+          "sha256": "4e28d635c7830445c5d3b4dffe8f401ed1edde7a0ac9ffcb2ea286dfecab06cc"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 203506,
+          "sha256": "c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e"
+        },
+        {
+          "filename": "v0/qa-render/concept-layout-1.png",
+          "byte_size": 514468,
+          "sha256": "fe91c9893edcd76611ac5d5de6c698799644f21e1452a8f6b3b7d2935c17bafa"
+        },
+        {
+          "filename": "v0/qa-render/preflight-report-1.png",
+          "byte_size": 397150,
+          "sha256": "a785e5440f818071d1a6057b8f879311487fd9c6deca737393bc527f9435ebf9"
+        },
+        {
+          "filename": "v0/qa-render/preflight-report-2.png",
+          "byte_size": 441109,
+          "sha256": "f896c378ac3297bfde628db2e01116e274ababf1d0039162302fa423584bcb02"
+        },
+        {
+          "filename": "v0/qa-render/preflight-report-3.png",
+          "byte_size": 483537,
+          "sha256": "bb2e36a241cd9eb1d9065089ec7888695eb83a3cdd9e7d6544c84bf81af65ddc"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 5573,
+          "sha256": "b71fc384771683619d3bda1aae38ba7b99d81e1707efd17c5aef132e1ef1bc11"
+        },
+        {
+          "filename": "v1/physical-sample-checklist-preview.png",
+          "byte_size": 150610,
+          "sha256": "7e40180bf9b11ecc63e2d5a5deba3b5da4042de22b04df5fa50373135b5bc6d2"
+        },
+        {
+          "filename": "v1/physical-sample-checklist.json",
+          "byte_size": 3194,
+          "sha256": "ad68979eaf12ea3c9227485620e08ecda9f21623bec19e5798c676faf2fe59da"
+        },
+        {
+          "filename": "v1/physical-sample-checklist.pdf",
+          "byte_size": 620552,
+          "sha256": "452f7a418cebdc9219d8379374cdf0d57b841bc5214bd1de5327112db94235f5"
+        },
+        {
+          "filename": "v1/preview.png",
+          "byte_size": 128921,
+          "sha256": "48370d9a96b07952113b9353c9a3de4706c99ac2ee6390d657a579da21558b87"
+        },
+        {
+          "filename": "v1/provisional-structure.json",
+          "byte_size": 3316,
+          "sha256": "2ab2c5d0d334c78d6f362aac2433e0034fdbe7d25771c614fd08be660808a9da"
+        },
+        {
+          "filename": "v1/provisional-structure.pdf",
+          "byte_size": 405007,
+          "sha256": "c573e4f1e460c22682e31cd159a920e2c7f64a54bfb2f23b09f4f0ea41426af6"
+        },
+        {
+          "filename": "v1/provisional-structure.png",
+          "byte_size": 128921,
+          "sha256": "48370d9a96b07952113b9353c9a3de4706c99ac2ee6390d657a579da21558b87"
+        },
+        {
+          "filename": "v1/qa-render/physical-sample-checklist-1.png",
+          "byte_size": 384176,
+          "sha256": "0a41f2b7dcf43788950f6b48d6c92ad7eea271d5068ec376f5eee65570280e56"
+        },
+        {
+          "filename": "v1/qa-render/physical-sample-checklist-2.png",
+          "byte_size": 421388,
+          "sha256": "5ac9a997156d2d2b9666be4c00ca11b5cbe639b64142675348c739a29817d7b3"
+        },
+        {
+          "filename": "v1/qa-render/physical-sample-checklist-3.png",
+          "byte_size": 429903,
+          "sha256": "fb9ef341c88582b2789d46b0fe1f9312426b4cecd228917eaa6c138b8b670460"
+        },
+        {
+          "filename": "v1/qa-render/provisional-structure-1.png",
+          "byte_size": 332986,
+          "sha256": "28b7e7575fee4258428d4137a8b33a88df04c9b32467cec79a0950727ec359ca"
+        },
+        {
+          "filename": "v1/qa-render/provisional-structure-2.png",
+          "byte_size": 457881,
+          "sha256": "6f8d560e0ddc03d21b27e84e3c94ec6f81ceb0869d2e0fbaf2642da04f6871df"
+        },
+        {
+          "filename": "v1/verification.json",
+          "byte_size": 6603,
+          "sha256": "a61c807f0314c2e35e0de84ba347baa85a47f2b90bf0c75460920c4ae153c931"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 2014804,
+    "cached_input_tokens": 1886464,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 75171,
+    "reasoning_output_tokens": 25047
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

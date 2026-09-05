@@ -1,0 +1,136 @@
+{
+  "document_type": "candidate_verification",
+  "version": "v1",
+  "verified": "2026-09-04",
+  "overall_status": "requested_compact_symbol_delta_complete_pre_final_checkpoint_open",
+  "checks": [
+    {
+      "id": "client_selection",
+      "status": "pass",
+      "expected": "Direction B selected without changing the other direction artifacts.",
+      "actual": "Project state records B / 02 / Modular Field as selected.",
+      "evidence": ["outputs/project-state.json"]
+    },
+    {
+      "id": "delta_isolation",
+      "status": "pass",
+      "expected": "Change only the 16 px symbol behavior; preserve the architectural grid and restrained wordmark.",
+      "actual": "A separate micro master was added for 16-23 px. The standard mark, grid, lowercase lockup, palette and sample-book architecture are explicitly retained.",
+      "method": "Source comparison and visual review of the v0 selected board against the v1 refinement board.",
+      "evidence": [
+        "outputs/v0/direction-02-modular-field.svg",
+        "outputs/v1/direction-b-symbol-refinement.svg",
+        "outputs/v1/design_document.json"
+      ]
+    },
+    {
+      "id": "native_16px_dimensions",
+      "status": "pass",
+      "expected": "A native 16 x 16 px symbol proof.",
+      "actual": "The PNG is RGBA and exactly 16 x 16 pixels.",
+      "method": "Pillow decode and dimension inspection.",
+      "evidence": ["outputs/v1/direction-b-compact-symbol-16px.png"]
+    },
+    {
+      "id": "pixel_geometry",
+      "status": "pass",
+      "expected": "Readable whole-pixel construction at 16 px.",
+      "actual": "The mark occupies x 1-14 and y 1-14, with 108 spruce pixels, four ochre pixels and 144 transparent pixels. It uses a 3 px corner weight and 2 x 2 px centre.",
+      "method": "Exact RGBA pixel count and occupied-bounds inspection.",
+      "evidence": [
+        "outputs/v1/direction-b-compact-symbol-16px.png",
+        "outputs/v1/design_document.json"
+      ]
+    },
+    {
+      "id": "svg_png_equivalence",
+      "status": "pass",
+      "expected": "The compact SVG must reproduce the approved native pixel map at 16 px.",
+      "actual": "A 16 x 16 render of the SVG is pixel-for-pixel identical to the native PNG; difference bounds are empty.",
+      "method": "Native-size SVG render followed by Pillow RGBA difference comparison.",
+      "evidence": [
+        "outputs/v1/direction-b-compact-symbol.svg",
+        "outputs/v1/direction-b-compact-symbol-16px.png"
+      ]
+    },
+    {
+      "id": "responsive_switch",
+      "status": "pass",
+      "expected": "Compact optimization must not replace the approved display mark.",
+      "actual": "The board specifies the micro master at 16-23 px and the unchanged standard master at 24 px and above; print minimum remains 6 mm.",
+      "evidence": ["outputs/v1/direction-b-symbol-refinement.png"]
+    },
+    {
+      "id": "review_board",
+      "status": "pass",
+      "expected": "Legible refinement proof with no clipping or overlap defects.",
+      "actual": "The board is PNG, 1600 x 1100 pixels, and was visually inspected at native resolution after annotation correction.",
+      "method": "Image decode, dimension check and native-resolution visual inspection.",
+      "evidence": ["outputs/v1/direction-b-symbol-refinement.png"]
+    },
+    {
+      "id": "preview",
+      "status": "pass",
+      "expected": "Current-state review preview.",
+      "actual": "The preview is PNG, 1920 x 1000 pixels, and shows the refinement board beside a nearest-neighbor enlargement of the exact 16 px asset.",
+      "evidence": ["outputs/v1/preview.png"]
+    },
+    {
+      "id": "prior_version_immutability",
+      "status": "pass",
+      "expected": "Earlier v0 artifacts remain unchanged.",
+      "actual": "Every v0 artifact with a recorded v0 baseline hash matches that baseline.",
+      "method": "SHA-256 comparison against outputs/v0/verification.json.",
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/v0/direction-01-registered-edge.png",
+        "outputs/v0/direction-02-modular-field.png",
+        "outputs/v0/direction-03-cutline-wordmark.png",
+        "outputs/v0/design_document.json"
+      ]
+    },
+    {
+      "id": "final_system_checkpoint",
+      "status": "pass",
+      "expected": "Do not prepare the final system before the 16 px correction checkpoint or invent a final brand name.",
+      "actual": "The final identity starter remains unprepared and identity_starter remains null in project state.",
+      "evidence": [
+        "outputs/project-state.json",
+        "outputs/v1/design_document.json"
+      ]
+    }
+  ],
+  "artifact_hashes_sha256": {
+    "outputs/v1/preview.png": "99b0de1aed111ed78f300a80e31de4a4300add8c13f7ffaef2435b052a8e8c06",
+    "outputs/v1/direction-b-symbol-refinement.png": "39c2dadf18b5e1b5e7b611ebeb2450f7729e16839069b90d25463d80175008ca",
+    "outputs/v1/direction-b-symbol-refinement.svg": "5c740f1f8bbc84696ef3fd9674b22c91ec53c3c6b8c8e8943ddadb91e8b55d0d",
+    "outputs/v1/direction-b-compact-symbol.svg": "2bf42475eff9b7c30fd90308dda53978fc98d1abf9b6ee4936ee510754b23970",
+    "outputs/v1/direction-b-compact-symbol-16px.png": "40bafa484e48a5f2eb905543145b2e69a5a497547ab31fff54350b28a5fa5e58",
+    "outputs/v1/design_document.json": "faa6fbc8989d0dd1f9ff7389e001520959d7f5042e9db3c1e2e2312be4d30273",
+    "outputs/project-state.json": "b397cdc0d35c251db4a0423f987e0ad160c7c6cdff569fdba28e387c5b7e8271"
+  },
+  "v0_baseline_hash_comparison": {
+    "outputs/v0/preview.png": "match",
+    "outputs/v0/direction-01-registered-edge.png": "match",
+    "outputs/v0/direction-02-modular-field.png": "match",
+    "outputs/v0/direction-03-cutline-wordmark.png": "match",
+    "outputs/v0/design_document.json": "match"
+  },
+  "unresolved_blockers": [
+    {
+      "id": "compact_symbol_confirmation",
+      "blocking": "final_system_preparation",
+      "required_input": "Confirm that the v1 16 px optical master may proceed."
+    },
+    {
+      "id": "official_brand_name",
+      "blocking": "final_wordmark_and_identity_starter",
+      "required_input": "Provide the official brand name and capitalization."
+    }
+  ],
+  "intentionally_not_created": [
+    "Final identity-starter PNG",
+    "Final identity-starter SVG",
+    "Final identity-starter PDF"
+  ]
+}

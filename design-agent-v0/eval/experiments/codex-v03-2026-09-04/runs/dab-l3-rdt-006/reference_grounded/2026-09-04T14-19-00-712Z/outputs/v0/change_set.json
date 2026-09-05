@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.3",
+  "version": "v0",
+  "stage": "final",
+  "operation": "localized_object_addition",
+  "input_bindings": [
+    {
+      "input_id": "edit-target",
+      "business_role": "approved_road_photo",
+      "path": "inputs/01-approved_road_photo.png",
+      "use": "immutable source for all non-addition pixels"
+    },
+    {
+      "input_id": "edit-mask",
+      "business_role": "road_surface_edit_region",
+      "path": "inputs/02-road_surface_edit_region.png",
+      "use": "hard outer boundary for every changed pixel"
+    }
+  ],
+  "traffic_rule": {
+    "jurisdiction": "Australia",
+    "driving_side": "left",
+    "driver_position": "right-hand drive"
+  },
+  "changes": [
+    {
+      "id": "car-1",
+      "approximate_bounds_xyxy": [397, 377, 440, 411],
+      "lane": "left of double centre lines",
+      "direction": "away from camera",
+      "view": "rear"
+    },
+    {
+      "id": "car-2",
+      "approximate_bounds_xyxy": [419, 439, 488, 498],
+      "lane": "left of double centre lines",
+      "direction": "away from camera",
+      "view": "rear"
+    },
+    {
+      "id": "car-3",
+      "approximate_bounds_xyxy": [913, 553, 1185, 731],
+      "lane": "right of double centre lines",
+      "direction": "toward camera",
+      "view": "front",
+      "right_hand_drive_evidence": "Driver and steering position are visible on viewer-left of the front-facing car, which is the vehicle's right-hand side."
+    }
+  ],
+  "preservation": {
+    "method": "AI image edit followed by deterministic localized alpha compositing through the supplied guard mask",
+    "outer_guard_mask": "inputs/02-road_surface_edit_region.png",
+    "localized_effect_mask": "outputs/v0/vehicle-additions-mask.png",
+    "changed_pixels": 59990,
+    "changed_pixels_outside_outer_guard_mask": 0,
+    "changed_pixels_outside_localized_effect_mask": 0
+  },
+  "final_artifact": {
+    "path": "outputs/v0/road-with-traffic-final.png",
+    "format": "PNG",
+    "dimensions": [1536, 1024],
+    "sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914"
+  }
+}

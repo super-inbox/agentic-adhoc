@@ -1,0 +1,38 @@
+{
+  "id": "BRF-PACK-06",
+  "layer": "portfolio_reference",
+  "attempt": 1,
+  "status": "error",
+  "started_at": "2026-09-04T02:36:03.403912Z",
+  "finished_at": "2026-09-04T02:36:06.259000Z",
+  "duration_seconds": 2.8551153750000005,
+  "candidate": {
+    "agent": "codex-cli",
+    "cli_version": "codex-cli 0.146.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "sandbox": "read-only",
+    "session_mode": "ephemeral"
+  },
+  "dataset_row_sha256": "aa5dc50cb1a9f0f74c85a60e06fa83ef871c6ef80868cd2aa429aa5371ffe268",
+  "prompt_sha256": "2fc6f8611ee5be4476b1f3cc55ffe56a1c78adcdf3a03028c912cdb12d4cab8c",
+  "input_assets": [
+    {
+      "asset_id": "BRF-PACK-06-reference-1",
+      "sha256": "4f16dbd06333486c0ce5d51a6db2b889b291f6ec929b4607a0a8d6d3a2fa1268",
+      "bytes": 28780
+    }
+  ],
+  "exit_code": 1,
+  "timeout": false,
+  "process_error": null,
+  "parse_error": "response.json not created",
+  "validation_errors": [],
+  "trace": {
+    "event_count": 4,
+    "tool_call_count": 0,
+    "tool_types": {},
+    "usage": null,
+    "thread_id": "01a06a45-eff4-7723-83a7-318e475c7aca"
+  }
+}

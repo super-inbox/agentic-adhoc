@@ -1,0 +1,246 @@
+{
+  "schema_version": "curify.design-agent-unified-rubric/0.1",
+  "name": "Curify Design Agent Unified Rubric v0.1",
+  "frozen_on": "2026-09-04",
+  "agent_neutral": true,
+  "pass_threshold": 0.7,
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 5,
+    "anchors": {
+      "0": "Task or dimension not addressed.",
+      "1": "Core result is wrong, unusable, or violates a critical requirement.",
+      "2": "Material requirements are missing or execution is substantially flawed.",
+      "3": "Usable, but one or more important requirements are weak or unverified.",
+      "4": "Correct and complete with only minor finish or evidence weakness.",
+      "5": "All important requirements are observably met with no material defect."
+    }
+  },
+  "quality_dimensions": [
+    {
+      "id": "brief_adherence",
+      "label": "Brief adherence",
+      "weight": 0.15,
+      "definition": "Follows the requested operation, outputs, constraints, and exclusions.",
+      "evidence": ["user brief", "artifact inventory", "visible outputs", "constraint checks"]
+    },
+    {
+      "id": "visual_quality",
+      "label": "Visual quality",
+      "weight": 0.2,
+      "definition": "Visible craft, hierarchy, composition, legibility, realism or illustration finish, and absence of defects.",
+      "evidence": ["rendered output pixels", "large and small scale proofs", "independent visual judge"]
+    },
+    {
+      "id": "creative_diversity",
+      "label": "Creative diversity",
+      "weight": 0.1,
+      "definition": "Required alternatives are meaningfully distinct concepts rather than superficial variants.",
+      "evidence": ["candidate set", "concept rationales", "pairwise visual comparison"]
+    },
+    {
+      "id": "brand_consistency",
+      "label": "Brand consistency",
+      "weight": 0.15,
+      "definition": "Preserves locked identity and correctly applies the declared brand or reference system.",
+      "evidence": ["source identity", "reference contract", "brand tokens", "cross-output comparison"]
+    },
+    {
+      "id": "refinement_ability",
+      "label": "Refinement ability",
+      "weight": 0.15,
+      "definition": "Applies the requested delta while preserving protected content and recoverable approved state.",
+      "evidence": ["before and after artifacts", "pixel or object delta", "version state", "feedback trajectory"]
+    },
+    {
+      "id": "cross_asset_consistency",
+      "label": "Cross-asset consistency",
+      "weight": 0.1,
+      "definition": "Maintains a coherent system across assets while respecting their format-specific roles.",
+      "evidence": ["multi-asset set", "design tokens", "layout and copy consistency checks"]
+    },
+    {
+      "id": "production_readiness",
+      "label": "Production readiness",
+      "weight": 0.1,
+      "definition": "Required formats, dimensions, file structure, preflight, and handoff evidence are valid for the claimed use.",
+      "evidence": ["file parser facts", "dimensions and mode", "vector and PDF inspection", "delivery manifest"]
+    },
+    {
+      "id": "efficiency",
+      "label": "Efficiency",
+      "weight": 0.05,
+      "definition": "Completes within intended turns and declared budgets without avoidable retries or user loops.",
+      "evidence": ["attempt index", "turn count", "latency", "tool and model usage", "normalized cost"]
+    }
+  ],
+  "agent_hard_gates": [
+    {
+      "id": "completion",
+      "applies_when": "always",
+      "pass_condition": "Required turns finish and the final response or artifact set exists."
+    },
+    {
+      "id": "task_boundary_safe_abstention",
+      "applies_when": "routing or unsupported-capability case",
+      "pass_condition": "The correct operation is selected, or the agent explicitly abstains when no supported capability exists."
+    },
+    {
+      "id": "required_inputs_reference_contract",
+      "applies_when": "one or more inputs or references are required",
+      "pass_condition": "All required inputs are consumed and only allowed reference channels are transferred."
+    },
+    {
+      "id": "hard_constraints",
+      "applies_when": "always",
+      "pass_condition": "Every case-specific invariant, exact-copy or count rule, privacy rule, and forbidden action passes."
+    },
+    {
+      "id": "artifact_contract",
+      "applies_when": "the task requires artifacts",
+      "pass_condition": "Required count, type, format, and structured evidence files are present and readable."
+    },
+    {
+      "id": "approval_order_state_continuity",
+      "applies_when": "L4, feedback, revision, selection, or recovery case",
+      "pass_condition": "Human selection precedes convergence and later turns preserve locked state and rollback scope."
+    },
+    {
+      "id": "production_validity",
+      "applies_when": "print, vector, export, factory, or package claim",
+      "pass_condition": "Claimed file properties pass independent file and preflight inspection."
+    }
+  ],
+  "evaluator_validity_gates": [
+    "fixture_integrity",
+    "independent_judge_coverage",
+    "sufficient_artifact_evidence",
+    "dataset_prompt_model_scorer_hashes"
+  ],
+  "scoring_rules": {
+    "applicability": "Declare applicable dimensions and gates before candidate execution.",
+    "quality_score": "sum(weight * score / 5 for applicable dimensions) / sum(applicable weights)",
+    "gated_score": "quality_score when every applicable agent hard gate is MET; otherwise 0",
+    "benchmark_pass": "evaluator-valid AND every applicable agent hard gate is MET AND quality_score >= 0.70",
+    "candidate_missing_evidence": "Score the affected required dimension 0.",
+    "evaluator_missing_instrumentation": "Report lower and upper bounds for missing weight; mark benchmark pass unavailable.",
+    "not_applicable": "Allowed only when declared before execution; renormalize across the remaining applicable weights.",
+    "rubric_coverage": "observed applicable weight / required applicable weight"
+  },
+  "legacy_crosswalk": [
+    {
+      "legacy": ["brief_understanding"],
+      "canonical": "brief_adherence",
+      "rule": "Partial evidence only; it cannot prove final-output adherence by itself."
+    },
+    {
+      "legacy": ["revision_fidelity", "edit_fidelity", "preservation_fidelity"],
+      "canonical": "refinement_ability",
+      "rule": "Use only on edit or revision tasks and retain the original evidence."
+    },
+    {
+      "legacy": ["reference_contract"],
+      "canonical": "brand_consistency",
+      "rule": "Use only when brand or reference identity is an applicable requirement."
+    },
+    {
+      "legacy": ["artifact_contract", "verification_quality", "scalability"],
+      "canonical": "production_readiness",
+      "rule": "Treat as components; no single component automatically becomes the whole production score."
+    },
+    {
+      "legacy": ["workflow_completion", "recovery"],
+      "canonical": null,
+      "rule": "Report through the approval/state gate and workflow diagnostic panel."
+    },
+    {
+      "legacy": ["tool_execution", "output_fidelity"],
+      "canonical": null,
+      "rule": "No global automatic mapping; bind against the predeclared task success contract."
+    }
+  ],
+  "diagnostic_panels": [
+    {
+      "id": "routing_boundary",
+      "metrics": ["intent_f1", "intent_exact", "template_top1", "template_recall", "agent_route_exact", "gap_abstention"]
+    },
+    {
+      "id": "workflow_planning",
+      "metrics": ["step_f1", "ordered_lcs", "sequence_exact", "deliverable_recall", "reference_coverage", "boundary_awareness"]
+    },
+    {
+      "id": "preference_alignment",
+      "metrics": ["winner_top1", "winner_mrr", "pairwise_accuracy", "cluster_bootstrap_ci", "winner_position_bias"]
+    },
+    {
+      "id": "reliability_cost",
+      "metrics": ["first_attempt_completion", "attempts", "retries", "timeouts", "errors", "latency_p50", "latency_p95", "normalized_cost"]
+    }
+  ],
+  "dataset_mapping": [
+    {
+      "id": "21q_single_turn_multimodal",
+      "role": "single_turn_multimodal_stress",
+      "quality_score": "supported",
+      "report": ["quality_score", "gated_score", "pass_rate", "hard_gate_ledger", "reliability_cost"]
+    },
+    {
+      "id": "brief_bank_v0.2",
+      "role": "legacy_multiturn_core",
+      "quality_score": "interval_only",
+      "report": ["quality_interval", "rubric_coverage", "reliability_cost"],
+      "counting_rule": "Lineage source for v0.3 core; never add independently to a v0.3 suite total."
+    },
+    {
+      "id": "routing_118",
+      "role": "routing_regression",
+      "quality_score": "not_supported",
+      "report": ["routing_boundary", "reliability_cost"]
+    },
+    {
+      "id": "99designs_rank",
+      "role": "external_preference_canary",
+      "quality_score": "not_supported",
+      "report": ["preference_alignment", "reliability_cost"],
+      "counting_rule": "Observed winner is a human choice signal, not objective visual-quality gold."
+    },
+    {
+      "id": "workflow_briefs_11",
+      "role": "known_sequence_planner_regression",
+      "quality_score": "not_supported",
+      "report": ["workflow_planning", "reliability_cost"]
+    },
+    {
+      "id": "zcool_briefs_7",
+      "role": "external_reference_planner_regression",
+      "quality_score": "not_supported",
+      "report": ["workflow_planning", "reliability_cost"]
+    },
+    {
+      "id": "brief_bank_v0.3",
+      "role": "primary_l3_l4_execution_benchmark",
+      "quality_score": "supported_with_core_interval",
+      "report": ["core_interval", "external_quality_score", "combined_interval", "gated_pass_rate", "hard_gate_ledger", "reliability_cost"],
+      "counting_rule": "Count 32 core conditions and 11 external conditions once; report the two partitions separately."
+    }
+  ],
+  "suite_reporting": {
+    "primary_execution_benchmark": "brief_bank_v0.3",
+    "single_turn_stress_benchmark": "21q_single_turn_multimodal",
+    "routing_regression": "routing_118",
+    "planner_regressions": ["workflow_briefs_11", "zcool_briefs_7"],
+    "preference_canary": "99designs_rank",
+    "legacy_lineage_only": "brief_bank_v0.2",
+    "flat_average_forbidden": true,
+    "required_sections": [
+      "dataset_adapter_coverage",
+      "execution_quality_and_gated_scores",
+      "routing_boundary_panel",
+      "workflow_planning_panel",
+      "preference_alignment_panel",
+      "reliability_latency_cost",
+      "hard_gate_failure_ledger",
+      "reproducibility_hashes"
+    ]
+  }
+}

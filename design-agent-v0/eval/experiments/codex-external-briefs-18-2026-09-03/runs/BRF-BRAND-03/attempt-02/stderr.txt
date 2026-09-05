@@ -1,0 +1,6 @@
+Reading additional input from stdin...
+2026-09-04T02:37:36.729468Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 93 column 5
+2026-09-04T02:37:37.189108Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-04T02:37:37.189678Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-04T02:37:37.190189Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-09-04T02:37:39.929643Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf("<LOCAL_HOME>/.codex/shell_snapshots/01a06a47-5dfd-7403-822f-1cd9635aa275.1788489457184022000.sh"): Os { code: 2, kind: NotFound, message: "No such file or directory" }

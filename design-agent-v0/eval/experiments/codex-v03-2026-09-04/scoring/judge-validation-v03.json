@@ -1,0 +1,26 @@
+{
+  "schema_version": "brief-bank-v0.3-judge-control/1.0",
+  "judge_model": "gemini-2.5-pro",
+  "positive_run": "runs/dab-l3-rdt-005/reference_grounded/2026-09-04T14-17-14-602Z",
+  "control": "replace edited result and preview with byte-identical unedited source while retaining candidate-authored claims",
+  "positive_edit_fidelity": 5,
+  "negative_edit_fidelity": 0,
+  "negative_hard_gates": [
+    {
+      "gate": "exact text",
+      "verdict": "VIOLATED",
+      "evidence": "The output file v0/edited-cartoon.png is a byte-for-byte copy of the input file, as shown by their identical SHA256 hashes (49e72cb2...). The original text 'BLORP ZING?' was not replaced with the requested 'SHIP IT TODAY'."
+    },
+    {
+      "gate": "zero outside-mask pixel change",
+      "verdict": "MET",
+      "evidence": "The output file is an exact copy of the input file, therefore zero pixels were changed outside the mask (or anywhere else)."
+    },
+    {
+      "gate": "same dimensions",
+      "verdict": "MET",
+      "evidence": "EVALUATOR-COMPUTED OUTPUT INVENTORY confirms that v0/edited-cartoon.png has dimensions [1254, 1254], which matches the source image."
+    }
+  ],
+  "passed": true
+}

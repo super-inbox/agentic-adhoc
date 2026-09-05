@@ -1,0 +1,144 @@
+{
+  "schema_version": "codex-design-agent-v03-run-v1",
+  "candidate": {
+    "agent_name": "codex-cli",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "model_provider": "openai-http",
+    "transport": "responses-https",
+    "session_mode": "persisted-thread-resume"
+  },
+  "cli_version": "codex-cli 0.146.0",
+  "run_mode": "full-episode",
+  "query_id": "DAB-L3-RDT-002@reference_grounded",
+  "base_brief_id": "DAB-L3-RDT-002",
+  "context_condition": "reference_grounded",
+  "category": "reference_to_original",
+  "capability_level": "L3",
+  "capability_tags": [
+    "tool_execution",
+    "workflow_orchestration",
+    "multi_reference_binding"
+  ],
+  "future_feedback_visible_at_turn_0": false,
+  "primary_eligible": true,
+  "turn_timeout_ms": 3600000,
+  "started_at": "2026-09-04T14:12:42.179Z",
+  "finished_at": "2026-09-04T14:15:36.850Z",
+  "latency_ms": 174671,
+  "intended_turns": 1,
+  "completed_turns": 1,
+  "logical_sessions": [
+    "session-01"
+  ],
+  "codex_thread_id": "01a06cc3-be8c-71b2-abd5-ea8e85aef06e",
+  "input_assets": [
+    {
+      "input_id": "palette-reference",
+      "asset_id": "detail-page-quiet-ritual-reference-page",
+      "role": "palette_and_texture_only",
+      "reference_role": "style_reference",
+      "identity_policy": "abstract_only",
+      "filename": "01-palette_and_texture_only.png",
+      "source_path": "eval/assets/reference-pack-v0.2/detail-page/quiet-ritual-reference-page.png",
+      "byte_size": 815623,
+      "sha256": "f941e16e01835e825f6b0a2b4d65e5d021329ae6e223b451c307998ec5a97af2"
+    }
+  ],
+  "input_context_ids": [
+    "palette-reference"
+  ],
+  "required_candidate_artifacts": [
+    "verification.json",
+    "trajectory.jsonl",
+    "preview.png"
+  ],
+  "artifact_contract": {
+    "verification.json": true,
+    "preview.png": true,
+    "trajectory.jsonl": true
+  },
+  "artifacts": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1797,
+      "sha256": "5b9ecc6194f604cae2ffce12277376ead57ca8b4dfede077fe454176165bcf21"
+    },
+    {
+      "filename": "v0/brutalist-civic-plaza-final.png",
+      "byte_size": 2387254,
+      "sha256": "d99617f4f80e0e678e78d9043de926363da222e61e02190f15aafe638360b71b"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 2387254,
+      "sha256": "d99617f4f80e0e678e78d9043de926363da222e61e02190f15aafe638360b71b"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3382,
+      "sha256": "757fe2cfe19bcd3c524e369bd2f95f1b937a3953145498596a0c201079923c7d"
+    }
+  ],
+  "turn_results": [
+    {
+      "turn_index": 0,
+      "logical_session_id": "session-01",
+      "started_at": "2026-09-04T14:12:42.179Z",
+      "finished_at": "2026-09-04T14:15:36.830Z",
+      "latency_ms": 174664,
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "error": null,
+      "trace_summary": {
+        "event_count": 19,
+        "command_count": 5,
+        "tool_count": 1,
+        "image_activity_count": 3,
+        "runtime_error_count": 0,
+        "runtime_error_messages": [],
+        "thread_id": "01a06cc3-be8c-71b2-abd5-ea8e85aef06e",
+        "usage": {
+          "input_tokens": 259456,
+          "cached_input_tokens": 233728,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5748,
+          "reasoning_output_tokens": 2079
+        }
+      },
+      "artifact_manifest_after_turn": [
+        {
+          "filename": "project-state.json",
+          "byte_size": 1797,
+          "sha256": "5b9ecc6194f604cae2ffce12277376ead57ca8b4dfede077fe454176165bcf21"
+        },
+        {
+          "filename": "v0/brutalist-civic-plaza-final.png",
+          "byte_size": 2387254,
+          "sha256": "d99617f4f80e0e678e78d9043de926363da222e61e02190f15aafe638360b71b"
+        },
+        {
+          "filename": "v0/preview.png",
+          "byte_size": 2387254,
+          "sha256": "d99617f4f80e0e678e78d9043de926363da222e61e02190f15aafe638360b71b"
+        },
+        {
+          "filename": "v0/verification.json",
+          "byte_size": 3382,
+          "sha256": "757fe2cfe19bcd3c524e369bd2f95f1b937a3953145498596a0c201079923c7d"
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 259456,
+    "cached_input_tokens": 233728,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5748,
+    "reasoning_output_tokens": 2079
+  },
+  "failure_class": null,
+  "outcome": "completed"
+}

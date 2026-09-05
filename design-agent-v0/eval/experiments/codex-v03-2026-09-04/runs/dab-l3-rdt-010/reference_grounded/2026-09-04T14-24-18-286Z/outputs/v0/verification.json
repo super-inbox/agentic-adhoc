@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "version": "v0",
+  "verification_result": "pass_with_manual_review",
+  "checks_performed": [
+    {
+      "id": "source-binding",
+      "status": "pass",
+      "method": "Confirmed the single allowed source file and its dimensions.",
+      "evidence": {
+        "path": "inputs/01-degraded_product_photo.png",
+        "pixel_dimensions": [
+          1086,
+          1448
+        ],
+        "sha256": "9c15eac4ada1093f478aa2496642ab4b97e998ce720f53fd82016056f7f23ba2"
+      }
+    },
+    {
+      "id": "svg-validity",
+      "status": "pass",
+      "method": "Parsed the SVG as XML and validated it with xmllint.",
+      "evidence": {
+        "path": "outputs/v0/recovered_owl_artwork.svg",
+        "view_box": "0 0 700 1000",
+        "sha256": "d26990b8ececeb88f00224550c2a14bb5c6fdf94ca3e64c895018b4c82d66069"
+      }
+    },
+    {
+      "id": "editable-path-master",
+      "status": "pass",
+      "method": "Enumerated all visible SVG graphics elements.",
+      "evidence": {
+        "path_count": 13,
+        "visible_graphics_tags": [
+          "path"
+        ],
+        "embedded_image_count": 0,
+        "background_rect_count": 0
+      }
+    },
+    {
+      "id": "three-colour-separation",
+      "status": "pass",
+      "method": "Enumerated unique SVG path fill values.",
+      "evidence": {
+        "unique_fill_count": 3,
+        "fills": [
+          "#344954",
+          "#8A765F",
+          "#BC6845"
+        ]
+      }
+    },
+    {
+      "id": "garment-pixel-exclusion",
+      "status": "pass",
+      "method": "Confirmed the vector has no image elements or raster references and the production PNG was rendered solely from those paths.",
+      "evidence": {
+        "svg": "outputs/v0/recovered_owl_artwork.svg",
+        "production_png": "outputs/v0/recovered_owl_artwork.png"
+      }
+    },
+    {
+      "id": "transparent-production-raster",
+      "status": "pass",
+      "method": "Inspected PNG mode, dimensions, alpha bounds, and representative alpha samples.",
+      "evidence": {
+        "path": "outputs/v0/recovered_owl_artwork.png",
+        "mode": "RGBA",
+        "pixel_dimensions": [
+          2100,
+          3000
+        ],
+        "alpha_bounding_box_px": [
+          244,
+          285,
+          1856,
+          2874
+        ],
+        "alpha_samples": {
+          "canvas_background": 0,
+          "left_eye_negative_gap": 0,
+          "left_pupil_glint": 0,
+          "left_pupil_fill": 255,
+          "orange_torso": 255,
+          "navy_wing": 255
+        },
+        "sha256": "f4cd8869467917148f2506e03460d9a46edfe7125cf79a4c8c066d88e5fe101d"
+      }
+    },
+    {
+      "id": "preview-render",
+      "status": "pass",
+      "method": "Rendered the SVG, flattened a viewing copy onto white, and visually inspected it for clipping, missing components, and unintended overlaps.",
+      "evidence": {
+        "path": "outputs/v0/preview.png",
+        "mode": "RGB",
+        "pixel_dimensions": [
+          700,
+          1000
+        ],
+        "sha256": "1bcf73b2808468ab0592da225d8394bf5746f31cec6846db275de9f9db206e90"
+      }
+    },
+    {
+      "id": "identity-fidelity",
+      "status": "manual_review",
+      "method": "Compared the source and proof for the large supported forms and recorded all intentional normalizations and simplifications.",
+      "evidence": {
+        "source": "inputs/01-degraded_product_photo.png",
+        "proof": "outputs/v0/preview.png",
+        "retained_large_components": 9,
+        "review_areas": [
+          "normalized symmetry and proportions",
+          "crown orange accent width",
+          "simplified pupil glints"
+        ]
+      }
+    },
+    {
+      "id": "colour-fidelity",
+      "status": "manual_review",
+      "method": "Checked that colour regions are plausible and distinct but did not claim calibrated matching from the unevenly lit phone photograph.",
+      "evidence": {
+        "source": "inputs/01-degraded_product_photo.png",
+        "palette_documentation": "outputs/v0/design_document.json"
+      }
+    },
+    {
+      "id": "verdict-enum",
+      "status": "pass",
+      "method": "Confirmed that the verdict document explicitly distinguishes all three required states and selects manual_review.",
+      "evidence": {
+        "path": "outputs/v0/printability-verdict.json",
+        "selected": "manual_review",
+        "allowed": [
+          "print_ready",
+          "manual_review",
+          "insufficient_source"
+        ]
+      }
+    }
+  ],
+  "evidence_paths": [
+    "inputs/01-degraded_product_photo.png",
+    "outputs/v0/recovered_owl_artwork.svg",
+    "outputs/v0/recovered_owl_artwork.png",
+    "outputs/v0/preview.png",
+    "outputs/v0/design_document.json",
+    "outputs/v0/printability-verdict.json"
+  ],
+  "unresolved_blockers": [
+    {
+      "blocks": "print_ready",
+      "issue": "Exact colour selection requires a calibrated reference, approved brand specification, or physical swatch review."
+    },
+    {
+      "blocks": "print_ready",
+      "issue": "A human must approve normalized geometry and simplified small eye/crown details against the physical garment or a better master."
+    },
+    {
+      "blocks": "print_ready",
+      "issue": "The intended white/negative-space and underbase treatment must be chosen for the target garment and print process."
+    },
+    {
+      "blocks": "print_ready",
+      "issue": "A size-accurate production proof and registration check has not been performed."
+    }
+  ]
+}

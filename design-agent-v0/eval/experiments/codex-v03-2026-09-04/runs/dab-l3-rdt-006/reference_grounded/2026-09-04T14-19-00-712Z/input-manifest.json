@@ -1,0 +1,24 @@
+[
+  {
+    "input_id": "edit-target",
+    "asset_id": "v03-australian-empty-road",
+    "role": "approved_road_photo",
+    "reference_role": "edit_target",
+    "identity_policy": "preserve_unedited_regions",
+    "filename": "01-approved_road_photo.png",
+    "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/australian-empty-road.png",
+    "byte_size": 3471961,
+    "sha256": "905163ed293b665b56c689e49d99d776af80a1c9a20e2bdb03c41682a61e8cb8"
+  },
+  {
+    "input_id": "edit-mask",
+    "asset_id": "v03-australian-road-edit-mask",
+    "role": "road_surface_edit_region",
+    "reference_role": "supporting_asset",
+    "identity_policy": "analysis_only",
+    "filename": "02-road_surface_edit_region.png",
+    "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/australian-road-edit-mask.png",
+    "byte_size": 6106,
+    "sha256": "a33d84d4635cda2a749db3ef3e87056f63336511f6d860fb748cbc3cba9f96dd"
+  }
+]

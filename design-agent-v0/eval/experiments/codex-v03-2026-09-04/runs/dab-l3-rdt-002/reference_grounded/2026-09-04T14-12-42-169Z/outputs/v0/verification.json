@@ -1,0 +1,91 @@
+{
+  "version": "v0",
+  "deliverable_id": "brutalist-plaza",
+  "stage": "final",
+  "result": "pass",
+  "checks_performed": [
+    {
+      "check": "file_integrity_and_format",
+      "result": "pass",
+      "details": "Final and preview are readable, non-interlaced RGB PNG files at 1536 x 1024 pixels.",
+      "evidence_paths": [
+        "outputs/v0/brutalist-civic-plaza-final.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "check": "target_subject",
+      "result": "pass",
+      "details": "Visual inspection confirms a brutalist civic plaza with monumental concrete volumes, an open public forecourt, stairs, terraces, ramps, and entrances.",
+      "evidence_paths": [
+        "outputs/v0/brutalist-civic-plaza-final.png"
+      ]
+    },
+    {
+      "check": "dusk_setting",
+      "result": "pass",
+      "details": "Blue-hour sky, deep charcoal recesses, warm interior illumination, and integrated plaza lights clearly establish dusk.",
+      "evidence_paths": [
+        "outputs/v0/brutalist-civic-plaza-final.png"
+      ]
+    },
+    {
+      "check": "massing_and_pedestrian_scale",
+      "result": "pass",
+      "details": "Oblique pedestrian-eye-level framing makes the rectilinear massing readable; multiple dispersed people provide clear scale.",
+      "evidence_paths": [
+        "outputs/v0/brutalist-civic-plaza-final.png"
+      ]
+    },
+    {
+      "check": "reference_influence_boundary",
+      "result": "pass",
+      "details": "Reference influence is limited to warm bone/oatmeal surfaces, taupe midtones, near-charcoal darks, off-white highlights, and fine matte mineral grain translated into concrete and paving.",
+      "evidence_paths": [
+        "inputs/01-palette_and_texture_only.png",
+        "outputs/v0/brutalist-civic-plaza-final.png"
+      ]
+    },
+    {
+      "check": "unrelated_subject_and_layout",
+      "result": "pass",
+      "details": "The output is a single wide architectural photograph with an asymmetrical plaza perspective, not a vertical product/editorial panel composition.",
+      "evidence_paths": [
+        "inputs/01-palette_and_texture_only.png",
+        "outputs/v0/brutalist-civic-plaza-final.png"
+      ]
+    },
+    {
+      "check": "prohibited_inheritance",
+      "result": "pass",
+      "details": "Visual inspection found no diffuser or vessel, vapor, product staging, copied typography, branding, icons, borders, feature grid, or ornamental motif.",
+      "evidence_paths": [
+        "outputs/v0/brutalist-civic-plaza-final.png"
+      ]
+    },
+    {
+      "check": "deliverable_count_and_stage",
+      "result": "pass",
+      "details": "One final brutalist-plaza PNG is present; preview.png is the required candidate-side preview of that same final image.",
+      "evidence_paths": [
+        "outputs/v0/brutalist-civic-plaza-final.png",
+        "outputs/v0/preview.png"
+      ]
+    }
+  ],
+  "reference_influence_documentation": {
+    "source_role": "palette_and_texture_only",
+    "used": [
+      "warm bone and oatmeal against taupe and near-charcoal",
+      "restrained off-white highlights",
+      "subtle matte granular material finish"
+    ],
+    "not_used": [
+      "reference layout or framing",
+      "reference subject or product silhouette",
+      "reference text or typographic hierarchy",
+      "reference branding, icons, borders, or decorative motifs"
+    ]
+  },
+  "unresolved_blockers": []
+}

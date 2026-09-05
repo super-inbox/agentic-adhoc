@@ -1,0 +1,82 @@
+{
+  "source_dimensions_px": [
+    1408,
+    768
+  ],
+  "artboard": {
+    "x": 454.5,
+    "y": 125.5,
+    "width": 498.0,
+    "height": 516.0
+  },
+  "palette": {
+    "navy": "#232A5C",
+    "white": "#FFFFFF",
+    "yellow": "#FEEE8E"
+  },
+  "layers": {
+    "shadow-09": {
+      "subpaths": 1,
+      "nodes": 82,
+      "signed_areas_px2": [
+        179144.0
+      ]
+    },
+    "shadow-20": {
+      "subpaths": 1,
+      "nodes": 82,
+      "signed_areas_px2": [
+        179113.0
+      ]
+    },
+    "shadow-35": {
+      "subpaths": 1,
+      "nodes": 81,
+      "signed_areas_px2": [
+        179104.0
+      ]
+    },
+    "shadow-50": {
+      "subpaths": 1,
+      "nodes": 81,
+      "signed_areas_px2": [
+        179103.0
+      ]
+    },
+    "silhouette": {
+      "subpaths": 1,
+      "nodes": 126,
+      "signed_areas_px2": [
+        179055.5
+      ]
+    },
+    "navy_master": {
+      "subpaths": 2,
+      "nodes": 158,
+      "signed_areas_px2": [
+        110130.5,
+        6867.5
+      ]
+    },
+    "yellow_master": {
+      "subpaths": 11,
+      "nodes": 312,
+      "signed_areas_px2": [
+        4299.0,
+        3027.0,
+        2704.5,
+        2477.0,
+        2421.0,
+        2243.0,
+        1787.0,
+        1380.5,
+        -518.5,
+        -399.0,
+        -221.0
+      ]
+    }
+  },
+  "path_elements": 7,
+  "total_nodes": 922,
+  "embedded_rasters": 0
+}

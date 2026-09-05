@@ -1,0 +1,12 @@
+Reading additional input from stdin...
+2026-09-04T14:29:08.258101Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-09-04T14:29:08.260853Z  WARN codex_features: unknown feature key in config: remote_connections
+2026-09-04T14:29:08.261397Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 93 column 5
+2026-09-04T14:29:08.764118Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-09-04T14:29:08.764137Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-09-04T14:42:45.677706Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 93 column 5
+2026-09-04T14:42:53.025724Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 93 column 5
+2026-09-04T14:46:39.563402Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 93 column 5
+2026-09-04T14:46:53.664223Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 93 column 5
+2026-09-04T14:50:53.991161Z ERROR codex_core::tools::router: error=exec_command failed for `/bin/zsh -lc 'rm -f tools/__pycache__/vectorize_luna.cpython-39.pyc && rmdir tools/__pycache__'`: CreateProcess { message: "Rejected(\"`/bin/zsh -lc 'rm -f tools/__pycache__/vectorize_luna.cpython-39.pyc && rmdir tools/__pycache__'` rejected: rm -f style commands are not permitted. Use a safer approach\")" }
+2026-09-04T14:51:16.859984Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 93 column 5

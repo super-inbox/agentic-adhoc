@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "version": "v0",
+  "artifact_role": "vector-master",
+  "source": {
+    "input_id": "client-raster",
+    "path": "inputs/01-source_artwork.png",
+    "dimensions_px": [
+      1408,
+      768
+    ],
+    "identity_policy": "preserve_exact"
+  },
+  "intent": "True vector reconstruction without redesign; preserve silhouette, original lettering, and color boundaries.",
+  "artboard": {
+    "x": 454.5,
+    "y": 125.5,
+    "width": 498.0,
+    "height": 516.0,
+    "units": "SVG user units / PDF points",
+    "mapping": "1 vector unit equals 1 source pixel at native proof scale"
+  },
+  "palette": [
+    {
+      "role": "navy artwork",
+      "hex": "#232A5C",
+      "source_basis": "opaque interior median"
+    },
+    {
+      "role": "white silhouette",
+      "hex": "#FFFFFF",
+      "source_basis": "opaque interior median"
+    },
+    {
+      "role": "lettering",
+      "hex": "#FEEE8E",
+      "source_basis": "opaque interior median"
+    }
+  ],
+  "construction": {
+    "method": "Measured color-region tracing on half-pixel boundaries with Ramer-Douglas-Peucker cleanup.",
+    "layer_order": [
+      "edge-softening",
+      "silhouette-base",
+      "navy-artwork",
+      "original-lettering"
+    ],
+    "editable_path_elements": 7,
+    "subpaths": 18,
+    "node_count": 922,
+    "embedded_rasters": 0,
+    "lettering_treatment": "Traced directly from the client pixels; no font substitution."
+  },
+  "exports": {
+    "svg": "outputs/v0/luna-club-vector-master.svg",
+    "print_pdf": "outputs/v0/luna-club-vector-master.pdf",
+    "overlay_proof": "outputs/v0/luna-club-overlay-proof.png",
+    "preview": "outputs/v0/preview.png"
+  }
+}

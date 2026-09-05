@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "project": "North Field Herbal Balm carton",
+  "version": "v1",
+  "verified_at": "2026-09-04",
+  "verification_status": "PASS_WITH_EXPECTED_PRODUCTION_BLOCKERS",
+  "checks_performed": [
+    {
+      "check": "Requested v1 artifact inventory",
+      "result": "pass",
+      "evidence": [
+        "outputs/v1/provisional-structure.pdf",
+        "outputs/v1/provisional-structure.png",
+        "outputs/v1/provisional-structure.json",
+        "outputs/v1/preview.png",
+        "outputs/v1/physical-sample-checklist.pdf",
+        "outputs/v1/physical-sample-checklist-preview.png",
+        "outputs/v1/physical-sample-checklist.json",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "check": "Requested-delta scope",
+      "result": "pass",
+      "details": "Only the supplied provisional dimensions, reverse-tuck construction and 350 gsm basis weight were added. The v0 concept and preflight artifacts were not revised or copied into v1.",
+      "evidence": [
+        "outputs/v1/provisional-structure.json",
+        "outputs/project-state.json"
+      ]
+    },
+    {
+      "check": "Prior-version integrity",
+      "result": "pass",
+      "details": "SHA-256 comparison confirms all 10 files under outputs/v0 are byte-identical to the pre-v1 baseline.",
+      "baseline_sha256": {
+        "outputs/v0/concept-layout.pdf": "d8ad94d15447c8948ff04df39b2db0723b70b7e21b12e792c0b1183bddbd0d73",
+        "outputs/v0/concept-layout.png": "c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e",
+        "outputs/v0/preflight-report.json": "7cc073558630561ca79c3fdae965d2c57a277a625cd31ef1e929cf8df4b8a52d",
+        "outputs/v0/preflight-report.pdf": "4e28d635c7830445c5d3b4dffe8f401ed1edde7a0ac9ffcb2ea286dfecab06cc",
+        "outputs/v0/preview.png": "c69f1c5a21d904d7d2bbd59736e02f3293267ae578a78f150a7fa21e2393045e",
+        "outputs/v0/qa-render/concept-layout-1.png": "fe91c9893edcd76611ac5d5de6c698799644f21e1452a8f6b3b7d2935c17bafa",
+        "outputs/v0/qa-render/preflight-report-1.png": "a785e5440f818071d1a6057b8f879311487fd9c6deca737393bc527f9435ebf9",
+        "outputs/v0/qa-render/preflight-report-2.png": "f896c378ac3297bfde628db2e01116e274ababf1d0039162302fa423584bcb02",
+        "outputs/v0/qa-render/preflight-report-3.png": "bb2e36a241cd9eb1d9065089ec7888695eb83a3cdd9e7d6544c84bf81af65ddc",
+        "outputs/v0/verification.json": "b71fc384771683619d3bda1aae38ba7b99d81e1707efd17c5aef132e1ef1bc11"
+      },
+      "evidence": [
+        "outputs/v0"
+      ]
+    },
+    {
+      "check": "Structured input fidelity",
+      "result": "pass",
+      "details": "The v1 structure records W=120 mm, D=70 mm, H=210 mm, reverse-tuck construction and 350 gsm basis weight. Only S02, S03 and S11 are marked partially resolved. The release gate remains blocked.",
+      "evidence": [
+        "outputs/v1/provisional-structure.json"
+      ]
+    },
+    {
+      "check": "No hidden structural assumptions",
+      "result": "pass",
+      "details": "The dimension basis, reverse-tuck subtype/orientation, flap profiles, joint, cut contour, score compensation, caliper, board grade/coating/grain, tolerances, bleed and safe areas remain explicitly open. No flap or cut profile is drawn.",
+      "evidence": [
+        "outputs/v1/provisional-structure.pdf",
+        "outputs/v1/provisional-structure.json"
+      ]
+    },
+    {
+      "check": "Checklist threshold audit",
+      "result": "pass",
+      "details": "All measurements begin untested. Supplier tolerances are null/TBD and the checklist states that dimensions cannot pass until basis and tolerances are approved. Print-ready is an expressly disallowed disposition.",
+      "evidence": [
+        "outputs/v1/physical-sample-checklist.pdf",
+        "outputs/v1/physical-sample-checklist.json"
+      ]
+    },
+    {
+      "check": "PDF integrity and page geometry",
+      "result": "pass",
+      "details": "provisional-structure.pdf opens as two landscape A4 pages at 842.4 x 595.2 pt. physical-sample-checklist.pdf opens as three portrait A4 pages at 595.2 x 842.4 pt. Neither PDF is encrypted and neither contains JavaScript.",
+      "evidence": [
+        "outputs/v1/provisional-structure.pdf",
+        "outputs/v1/physical-sample-checklist.pdf"
+      ]
+    },
+    {
+      "check": "PDF render and visual inspection",
+      "result": "pass",
+      "details": "All five PDF pages rendered through Poppler at 120 dpi and were inspected at original render resolution. No clipped text, overlaps, escaped hatch marks, broken glyphs or unreadable sections remain. Page labels and provisional/not-print-ready notices are visible throughout.",
+      "evidence": [
+        "outputs/v1/qa-render/provisional-structure-1.png",
+        "outputs/v1/qa-render/provisional-structure-2.png",
+        "outputs/v1/qa-render/physical-sample-checklist-1.png",
+        "outputs/v1/qa-render/physical-sample-checklist-2.png",
+        "outputs/v1/qa-render/physical-sample-checklist-3.png"
+      ]
+    },
+    {
+      "check": "Preview equivalence",
+      "result": "pass",
+      "details": "preview.png and provisional-structure.png are byte-identical. SHA-256 for each: 48370d9a96b07952113b9353c9a3de4706c99ac2ee6390d657a579da21558b87.",
+      "evidence": [
+        "outputs/v1/preview.png",
+        "outputs/v1/provisional-structure.png"
+      ]
+    }
+  ],
+  "final_sha256": {
+    "outputs/v1/provisional-structure.pdf": "c573e4f1e460c22682e31cd159a920e2c7f64a54bfb2f23b09f4f0ea41426af6",
+    "outputs/v1/physical-sample-checklist.pdf": "452f7a418cebdc9219d8379374cdf0d57b841bc5214bd1de5327112db94235f5",
+    "outputs/v1/provisional-structure.json": "2ab2c5d0d334c78d6f362aac2433e0034fdbe7d25771c614fd08be660808a9da",
+    "outputs/v1/physical-sample-checklist.json": "ad68979eaf12ea3c9227485620e08ecda9f21623bec19e5798c676faf2fe59da"
+  },
+  "unresolved_blockers": [
+    "Supplier-approved 1:1 dieline and revision",
+    "Internal/external dimension basis and manufacturer tolerances",
+    "Exact reverse-tuck subtype, major-flap owner and opening orientation",
+    "Cut, crease, flap, glue-joint, slot/notch and score-compensation geometry",
+    "Board grade, caliper, coating and grain direction",
+    "Bleed, safe areas, print orientation and production-layer specifications",
+    "Completed physical sample evidence and supplier/client structural approvals",
+    "Existing copy, regulatory, variable-data, print and proofing blockers from v0"
+  ],
+  "checkpoint": "Stop before production artwork or print release. Use the checklist for a provisional physical sample, then obtain supplier geometry and approvals."
+}

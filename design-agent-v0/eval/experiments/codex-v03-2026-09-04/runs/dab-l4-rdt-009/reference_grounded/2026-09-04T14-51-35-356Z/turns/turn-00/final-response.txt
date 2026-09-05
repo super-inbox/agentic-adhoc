@@ -1,0 +1,10 @@
+Completed the v0 pilot.
+
+- Vector master: [SVG](<WORKDIR>/outputs/v0/orbit-coffee-night-bloom-vector-master.svg), [EPS](<WORKDIR>/outputs/v0/orbit-coffee-night-bloom-vector-master.eps), and :codex-file-citation{path="<WORKDIR>/outputs/v0/orbit-coffee-night-bloom-vector-master.pdf" purpose="output"}
+- [Rendered preview](<WORKDIR>/outputs/v0/preview.png)
+- Batch workflow: [JSON](<WORKDIR>/outputs/v0/batch-workflow.json) and :codex-file-citation{path="<WORKDIR>/outputs/v0/batch-workflow.pdf" purpose="output"}
+- [Design document](<WORKDIR>/outputs/v0/design_document.json), [verification](<WORKDIR>/outputs/v0/verification.json), and [project state](<WORKDIR>/outputs/project-state.json)
+
+Verification passed with 55 SVG paths, zero embedded images, zero live-text nodes, and successful small/large render checks. Whole-frame auto-tracing was rejected and manual cleanup documented.
+
+Exemplar approval remains pending, so release of the 100–500 item batch is explicitly blocked.

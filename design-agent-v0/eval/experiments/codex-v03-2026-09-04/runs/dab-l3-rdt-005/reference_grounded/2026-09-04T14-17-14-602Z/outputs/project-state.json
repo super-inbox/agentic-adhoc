@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "current_version": "v0",
+  "status": "complete",
+  "client_decisions": [
+    {
+      "decision": "replacement_copy",
+      "value": "SHIP IT TODAY",
+      "locked": true
+    },
+    {
+      "decision": "edit_scope",
+      "value": "Only the supplied binary speech-bubble mask is editable",
+      "locked": true
+    },
+    {
+      "decision": "output_requirements",
+      "value": "Final PNG at source dimensions with matching alpha behavior",
+      "locked": true
+    }
+  ],
+  "locked_items": [
+    "Every decoded RGBA value outside the binary mask",
+    "The alpha channel at every pixel",
+    "Speech-bubble outline and tail",
+    "Robot, workshop, background, and framing",
+    "Canvas dimensions: 1254 by 1254 pixels",
+    "PNG RGBA mode"
+  ],
+  "changed_items": [
+    {
+      "item": "speech_bubble_text",
+      "from": "BLORP ZING?",
+      "to": "SHIP IT TODAY",
+      "scope": "inside supplied mask"
+    }
+  ],
+  "artifact_paths": {
+    "edited_cartoon": "outputs/v0/edited-cartoon.png",
+    "preview": "outputs/v0/preview.png",
+    "change_set": "outputs/v0/change_set.json",
+    "verification": "outputs/v0/verification.json",
+    "selected_generation_source": "outputs/v0/generated-lettering-source.png"
+  },
+  "unresolved_blockers": []
+}

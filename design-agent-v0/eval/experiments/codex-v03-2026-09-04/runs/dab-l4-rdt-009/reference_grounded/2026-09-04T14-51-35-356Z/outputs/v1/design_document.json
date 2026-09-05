@@ -1,0 +1,297 @@
+{
+  "document_version": "v1",
+  "candidate_status": "approved_master_batch_rule_frozen",
+  "source": {
+    "input_id": "approved-raster",
+    "business_role": "approved_source_artwork",
+    "identity_policy": "preserve_identity",
+    "path": "inputs/01-approved_source_artwork.png",
+    "sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f",
+    "pixel_dimensions": [
+      1376,
+      768
+    ]
+  },
+  "master": {
+    "composition": "front and back proof-sheet master",
+    "viewbox_source_units": [
+      0,
+      0,
+      1376,
+      768
+    ],
+    "physical_size_mm": {
+      "width": 279.675,
+      "height": 156.098
+    },
+    "nominal_front_width_mm": 100.0,
+    "nominal_back_width_mm": 100.203,
+    "front_bounds_source_units": [
+      123,
+      127,
+      492,
+      501
+    ],
+    "back_bounds_source_units": [
+      760,
+      127,
+      493,
+      501
+    ],
+    "editable_structure": [
+      "panel fills",
+      "cream dome shapes",
+      "emblem Bezier paths",
+      "outlined wording",
+      "information rules",
+      "safe guides",
+      "crop marks",
+      "proof captions"
+    ],
+    "raster_dependencies": 0
+  },
+  "locked_identity_items": {
+    "wording": [
+      "ORBIT COFFEE",
+      "NIGHT BLOOM",
+      "250 g",
+      "ORIGIN",
+      "ROAST",
+      "NOTES",
+      "FRONT",
+      "BACK"
+    ],
+    "panel_relationship": "burgundy fields enclosing a cream center/card",
+    "emblem_relationship": "four interwoven oval paths in copper, red-copper, and tan",
+    "front_back_geometry": "paired square panels with external crop marks and internal safe guides"
+  },
+  "palette": [
+    {
+      "role": "paper",
+      "hex": "#F7F8EE",
+      "approx_cmyk_percent": [
+        0,
+        0,
+        4,
+        3
+      ]
+    },
+    {
+      "role": "cream",
+      "hex": "#F4F0DC",
+      "approx_cmyk_percent": [
+        0,
+        2,
+        10,
+        4
+      ]
+    },
+    {
+      "role": "burgundy",
+      "hex": "#4D0F28",
+      "approx_cmyk_percent": [
+        0,
+        81,
+        48,
+        70
+      ]
+    },
+    {
+      "role": "dark_wording",
+      "hex": "#4B061F",
+      "approx_cmyk_percent": [
+        0,
+        92,
+        59,
+        71
+      ]
+    },
+    {
+      "role": "copper",
+      "hex": "#CB704B",
+      "approx_cmyk_percent": [
+        0,
+        45,
+        63,
+        20
+      ]
+    },
+    {
+      "role": "red_copper",
+      "hex": "#C65E49",
+      "approx_cmyk_percent": [
+        0,
+        53,
+        63,
+        22
+      ]
+    },
+    {
+      "role": "tan",
+      "hex": "#D9BC92",
+      "approx_cmyk_percent": [
+        0,
+        13,
+        33,
+        15
+      ]
+    }
+  ],
+  "vectorization_record": {
+    "whole_frame_auto_trace": "rejected_for_final",
+    "reason": "would encode paper noise, antialias fringes, and false nodes",
+    "display_wordmark": {
+      "source_crop_px": [
+        174,
+        410,
+        558,
+        468
+      ],
+      "threshold_rgb": {
+        "r_lt": 126,
+        "g_lt": 86,
+        "b_lt": 108
+      },
+      "v0_source_simplification_tolerance_px": 1.2,
+      "v0_curve_model": "closed Catmull-Rom converted to cubic Bezier",
+      "v0_curve_tension": 0.75,
+      "cleanup_curve_model": "bounded cubic Bezier consolidation fitted to the approved v0 silhouette",
+      "cleanup_fit_error_source_px": 0.7,
+      "source_sampling_steps_per_v0_segment": 12,
+      "contours": 16,
+      "raw_nodes": 2294,
+      "clean_nodes": 165,
+      "node_reduction_percent_from_raw": 92.81,
+      "v0_clean_nodes": 220,
+      "v1_clean_nodes": 165,
+      "v1_reduction_percent_from_v0": 25.0,
+      "delta_scope": "ORBIT COFFEE display-outline curved-corner anchors only",
+      "locked_during_delta": [
+        "crop and placement",
+        "contour count and counters",
+        "fill color",
+        "approved v0 curve silhouette as the fit target",
+        "all non-target artwork paths"
+      ]
+    },
+    "supporting_wording": [
+      {
+        "text": "NIGHT BLOOM",
+        "font_postscript_name": "Georgia-Bold",
+        "font_size_source_units": 34.0,
+        "tracking_source_units": -0.9,
+        "outline_width_source_units": 264.677,
+        "ascent_source_units": 31.178,
+        "descent_source_units": 7.454,
+        "baseline_source_y": 511.0
+      },
+      {
+        "text": "250 g",
+        "font_postscript_name": "AvenirNext-DemiBold",
+        "font_size_source_units": 24.0,
+        "tracking_source_units": -1.5,
+        "outline_width_source_units": 59.088,
+        "ascent_source_units": 24.0,
+        "descent_source_units": 8.784,
+        "baseline_source_y": 556.0
+      },
+      {
+        "text": "ORIGIN",
+        "font_postscript_name": "AvenirNext-DemiBold",
+        "font_size_source_units": 18.0,
+        "tracking_source_units": 0.0,
+        "outline_width_source_units": 64.71,
+        "ascent_source_units": 18.0,
+        "descent_source_units": 6.588,
+        "baseline_source_y": 333.0
+      },
+      {
+        "text": "ROAST",
+        "font_postscript_name": "AvenirNext-DemiBold",
+        "font_size_source_units": 18.0,
+        "tracking_source_units": 0.0,
+        "outline_width_source_units": 59.868,
+        "ascent_source_units": 18.0,
+        "descent_source_units": 6.588,
+        "baseline_source_y": 418.0
+      },
+      {
+        "text": "NOTES",
+        "font_postscript_name": "AvenirNext-DemiBold",
+        "font_size_source_units": 18.0,
+        "tracking_source_units": 0.0,
+        "outline_width_source_units": 60.858,
+        "ascent_source_units": 18.0,
+        "descent_source_units": 6.588,
+        "baseline_source_y": 488.0
+      },
+      {
+        "text": "FRONT",
+        "font_postscript_name": "AvenirNext-Regular",
+        "font_size_source_units": 20.0,
+        "tracking_source_units": 1.8,
+        "outline_width_source_units": 74.1,
+        "ascent_source_units": 20.0,
+        "descent_source_units": 7.32,
+        "baseline_source_y": 708.0
+      },
+      {
+        "text": "BACK",
+        "font_postscript_name": "AvenirNext-Regular",
+        "font_size_source_units": 20.0,
+        "tracking_source_units": 1.8,
+        "outline_width_source_units": 59.08,
+        "ascent_source_units": 20.0,
+        "descent_source_units": 7.32,
+        "baseline_source_y": 708.0
+      }
+    ],
+    "emblem": {
+      "construction": "four cubic Bezier ellipse paths plus five foreground crossing arcs",
+      "front_center_source_units": [
+        364,
+        309
+      ],
+      "back_center_source_units": [
+        1009,
+        233
+      ],
+      "back_scale": 0.64
+    },
+    "geometry_method": "measured source coordinates normalized into explicit shapes and cubic curves"
+  },
+  "print_notes": {
+    "scaling": "uniform scaling permitted; do not independently stretch panels or emblems",
+    "minimum_recommended_output": "verify 0.20 mm minimum strokes after scaling",
+    "color_management": "hex values preserve approved relationships; printer should map to press profile and proof CMYK conversions",
+    "guides": "crop and safe guides are separate vector objects in the proof-sheet master"
+  },
+  "artifacts": {
+    "svg": "outputs/v1/orbit-coffee-night-bloom-vector-master.svg",
+    "eps": "outputs/v1/orbit-coffee-night-bloom-vector-master.eps",
+    "pdf": "outputs/v1/orbit-coffee-night-bloom-vector-master.pdf",
+    "preview": "outputs/v1/preview.png",
+    "workflow_json": "outputs/v1/batch-workflow.json",
+    "workflow_pdf": "outputs/v1/batch-workflow.pdf"
+  },
+  "approval_gate": {
+    "exemplar_approval": "approved_condition_satisfied",
+    "batch_rule": "frozen_v1",
+    "batch_release": "eligible_not_started",
+    "approval_evidence": "Client feedback: The exemplar matches; clean only the noisy small curved corners, rerun preflight, then freeze the batch rule."
+  },
+  "delta_from_v0": {
+    "requested_delta": "clean noisy nodes in small curved corners only",
+    "changed_path": "ORBIT COFFEE display-outline path",
+    "v0_anchor_nodes": 220,
+    "v1_anchor_nodes": 165,
+    "reduction_percent": 25.0,
+    "unchanged": [
+      "all other artwork paths and shapes",
+      "all approved wording",
+      "all palette values and color roles",
+      "all panel, guide, table, emblem, and caption geometry",
+      "batch acceptance thresholds and manual-review triggers"
+    ]
+  }
+}

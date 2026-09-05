@@ -1,0 +1,131 @@
+{
+  "schema_version": "0.3",
+  "version": "v0",
+  "artifact": "outputs/v0/road-with-traffic-final.png",
+  "result": "pass",
+  "checks": [
+    {
+      "id": "png_and_dimensions",
+      "status": "pass",
+      "method": "Decoded PNG header and pixel data.",
+      "observed": "1536x1024, 8-bit RGB PNG",
+      "evidence_paths": [
+        "outputs/v0/road-with-traffic-final.png"
+      ]
+    },
+    {
+      "id": "exactly_three_cars",
+      "status": "pass",
+      "method": "Full-frame visual inspection, supported by three connected localized-addition regions.",
+      "observed": "Two rear-facing receding cars and one front-facing approaching car; no other vehicles present.",
+      "metrics": {
+        "visible_car_count": 3,
+        "localized_effect_connected_components": 3
+      },
+      "evidence_paths": [
+        "outputs/v0/preview.png",
+        "outputs/v0/vehicle-additions-mask.png"
+      ]
+    },
+    {
+      "id": "left_hand_traffic",
+      "status": "pass",
+      "method": "Visual lane and orientation check against the double centre lines.",
+      "observed": "Both cars travelling away occupy the lane left of the centre lines; the oncoming car occupies the opposite lane right of the centre lines, valid for Australian left-hand traffic.",
+      "evidence_paths": [
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "right_hand_drive_visible",
+      "status": "pass",
+      "method": "Front-windshield visual inspection of the near vehicle.",
+      "observed": "The driver and steering position are visible on viewer-left of the front-facing car, corresponding to the vehicle's right-hand side.",
+      "evidence_paths": [
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "outside_mask_pixel_identity",
+      "status": "pass",
+      "method": "Decoded-pixel RGB comparison of final against approved source, gated by the supplied mask.",
+      "metrics": {
+        "changed_pixels_total": 59990,
+        "changed_pixels_inside_mask": 59990,
+        "changed_pixels_outside_mask": 0
+      },
+      "source_sha256": "905163ed293b665b56c689e49d99d776af80a1c9a20e2bdb03c41682a61e8cb8",
+      "final_sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914",
+      "evidence_paths": [
+        "inputs/01-approved_road_photo.png",
+        "inputs/02-road_surface_edit_region.png",
+        "outputs/v0/road-with-traffic-final.png"
+      ]
+    },
+    {
+      "id": "localized_change_only",
+      "status": "pass",
+      "method": "Decoded-pixel comparison against the hand-traced localized effect matte.",
+      "metrics": {
+        "effect_mask_active_pixels": 60122,
+        "changed_pixels_outside_effect_mask": 0,
+        "changed_bounds_xyxy": [391, 377, 1187, 746]
+      },
+      "observed": "All changes are confined to three vehicle silhouettes and their localized shadows; signs, vegetation, sky, and unrelated road pixels remain sourced from the approved image.",
+      "evidence_paths": [
+        "outputs/v0/vehicle-additions-mask.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "road_geometry_and_markings",
+      "status": "pass",
+      "method": "Full-frame visual comparison with the approved source.",
+      "observed": "Road edges, double centre lines, edge lines, and painted arrows retain their original alignment and geometry; only natural vehicle occlusion and shadow occur at the additions.",
+      "evidence_paths": [
+        "inputs/01-approved_road_photo.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "photorealism",
+      "status": "pass",
+      "method": "Visual inspection at full resolution.",
+      "observed": "Vehicle scale decreases with distance; lighting, road contact, and cast shadows are consistent with the source photograph.",
+      "evidence_paths": [
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "preview_matches_final",
+      "status": "pass",
+      "method": "SHA-256 file comparison.",
+      "metrics": {
+        "preview_sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914",
+        "final_sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914"
+      },
+      "evidence_paths": [
+        "outputs/v0/preview.png",
+        "outputs/v0/road-with-traffic-final.png"
+      ]
+    }
+  ],
+  "pixel_component_evidence": [
+    {
+      "component": 1,
+      "area_pixels": 1744,
+      "bounds_xyxy": [391, 377, 446, 417]
+    },
+    {
+      "component": 2,
+      "area_pixels": 4545,
+      "bounds_xyxy": [412, 439, 495, 507]
+    },
+    {
+      "component": 3,
+      "area_pixels": 53833,
+      "bounds_xyxy": [785, 553, 1187, 746]
+    }
+  ],
+  "unresolved_blockers": []
+}

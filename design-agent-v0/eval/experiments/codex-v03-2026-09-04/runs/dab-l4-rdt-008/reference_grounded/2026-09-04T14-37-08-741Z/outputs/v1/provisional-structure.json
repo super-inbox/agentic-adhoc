@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "project": "North Field Herbal Balm carton",
+  "version": "v1",
+  "status": "PROVISIONAL - NOT PRINT READY",
+  "supplied_delta": {
+    "nominal_dimensions_mm": {
+      "width": 120,
+      "depth": 70,
+      "height": 210,
+      "status": "client-supplied provisional",
+      "dimension_basis": "not supplied - internal versus external remains open"
+    },
+    "construction": {
+      "value": "reverse-tuck",
+      "status": "client-supplied provisional",
+      "exact_subtype_and_opening_orientation": "not supplied"
+    },
+    "board": {
+      "basis_weight_gsm": 350,
+      "status": "client-supplied provisional",
+      "note": "Basis weight does not establish board caliper, grade, coating or grain direction."
+    }
+  },
+  "safe_nominal_mapping": {
+    "purpose": "Labelled structural relationship only; not CAD geometry.",
+    "body_height_mm": 210,
+    "body_panels": [
+      {
+        "label": "Face A",
+        "nominal_width_mm": 120,
+        "front_or_back_assignment": "TBD"
+      },
+      {
+        "label": "Side A",
+        "nominal_width_mm": 70,
+        "side_assignment": "provisional"
+      },
+      {
+        "label": "Face B",
+        "nominal_width_mm": 120,
+        "front_or_back_assignment": "TBD"
+      },
+      {
+        "label": "Side B",
+        "nominal_width_mm": 70,
+        "side_assignment": "provisional"
+      }
+    ],
+    "nominal_body_panel_sum_mm": 380,
+    "nominal_body_panel_sum_exclusions": [
+      "glue joint",
+      "score allowance",
+      "caliper compensation",
+      "manufacturing tolerance"
+    ],
+    "closure_relationship": "Top and bottom major tucks oppose each other; exact flap owner, opening direction and geometry are not assigned."
+  },
+  "prior_preflight_status_delta": [
+    {
+      "id": "S02",
+      "previous": "missing",
+      "current": "partially resolved",
+      "known": "reverse-tuck construction",
+      "still_open": "Exact ECMA subtype, major-flap owner, opening direction and panel orientation."
+    },
+    {
+      "id": "S03",
+      "previous": "missing",
+      "current": "partially resolved",
+      "known": "Nominal W x D x H = 120 x 70 x 210 mm",
+      "still_open": "Internal/external dimension basis, measuring convention and tolerances."
+    },
+    {
+      "id": "S11",
+      "previous": "missing",
+      "current": "partially resolved",
+      "known": "350 gsm board basis weight",
+      "still_open": "Board grade, caliper, coating and grain direction."
+    }
+  ],
+  "unresolved_geometry": [
+    "Manufacturer-approved 1:1 dieline and revision",
+    "Exact cut contour",
+    "Exact crease axes, fold directions and score specification",
+    "Major tuck, dust, lock and glue flap profiles/depths/angles",
+    "Glue-joint side, width, overlap and adhesive keep-outs",
+    "Caliper and score/fold compensation",
+    "Radii, slots, notches, locks, perforations or special structures",
+    "Manufacturer cut, crease, register, glue and assembled tolerances",
+    "Inside/outside view and print-reading orientation",
+    "Bleed and panel-specific safe areas",
+    "Finishing geometry and production-layer rules"
+  ],
+  "release_gate": {
+    "status": "blocked",
+    "statement": "This structure is a labelled provisional relationship. It is not a production dieline and is not approved for print."
+  }
+}

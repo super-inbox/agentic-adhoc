@@ -1,0 +1,59 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-09-04T14:12:42.178Z",
+  "finished_at": "2026-09-04T14:17:14.546Z",
+  "latency_ms": 272377,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 30,
+    "command_count": 9,
+    "tool_count": 2,
+    "image_activity_count": 4,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a06cc3-be7d-7ba1-9ee9-65a82dc7a29f",
+    "usage": {
+      "input_tokens": 400054,
+      "cached_input_tokens": 344320,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9794,
+      "reasoning_output_tokens": 4220
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1983,
+      "sha256": "22df2d7b160e78f11d48dd6be106aeb8474b908a199dbf7a044b8fe11c64fe41"
+    },
+    {
+      "filename": "v0/cycling-poster.png",
+      "byte_size": 32814,
+      "sha256": "b1b34a0e174ffe3204452b8aba9c3a8cd0efd5f00e3e2aeac8dbf790d3ed10a6"
+    },
+    {
+      "filename": "v0/generation-prompt.txt",
+      "byte_size": 2850,
+      "sha256": "c97f678244d5b4153fbf65de4a708c8453bf649806ee65951646f04c309b3226"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 32814,
+      "sha256": "b1b34a0e174ffe3204452b8aba9c3a8cd0efd5f00e3e2aeac8dbf790d3ed10a6"
+    },
+    {
+      "filename": "v0/solar-community-bicycle-workshop-source.png",
+      "byte_size": 1736714,
+      "sha256": "ce044073a00e3b230f0c871e67d56a70db0e22f0d931ea24ac439dfff28e6c58"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 3178,
+      "sha256": "3814996eb5e9d15c18f20d793974fb41733a4ee9f58eac30c3a1f29175efd7b4"
+    }
+  ]
+}

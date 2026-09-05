@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "current_version": "v0",
+  "status": "final",
+  "client_decisions": [
+    "Preserve the supplied identity exactly; no redesign.",
+    "Deliver an editable SVG and print PDF with a raster alignment proof.",
+    "Do not embed or upscale the source raster as vector output."
+  ],
+  "locked_items": [
+    "silhouette",
+    "original lettering",
+    "white/navy/yellow color boundaries"
+  ],
+  "changed_items": [
+    {
+      "item": "production format",
+      "from": "client RGBA raster",
+      "to": "editable layered vector paths",
+      "design_change": false
+    }
+  ],
+  "artifact_paths": {
+    "vector_master_svg": "outputs/v0/luna-club-vector-master.svg",
+    "vector_master_pdf": "outputs/v0/luna-club-vector-master.pdf",
+    "overlay_proof": "outputs/v0/luna-club-overlay-proof.png",
+    "preview": "outputs/v0/preview.png",
+    "design_document": "outputs/v0/design_document.json",
+    "verification": "outputs/v0/verification.json"
+  },
+  "unresolved_blockers": []
+}

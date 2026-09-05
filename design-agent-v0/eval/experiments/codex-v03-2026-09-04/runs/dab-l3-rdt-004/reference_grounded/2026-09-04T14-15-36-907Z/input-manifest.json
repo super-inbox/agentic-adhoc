@@ -1,0 +1,24 @@
+[
+  {
+    "input_id": "layout-reference",
+    "asset_id": "v03-layout-road-sketch",
+    "role": "geometry_only",
+    "reference_role": "layout_reference",
+    "identity_policy": "analysis_only",
+    "filename": "01-geometry_only.png",
+    "source_path": "eval/assets/brief-bank-v0.3/reddit-fixtures/layout-road-sketch.png",
+    "byte_size": 856801,
+    "sha256": "2999e70ef22634109c17e612012ac5e1db86f8d7acef529eeb2fa721015c799f"
+  },
+  {
+    "input_id": "style-reference",
+    "asset_id": "factory-luna-club-sticker",
+    "role": "style_only",
+    "reference_role": "style_reference",
+    "identity_policy": "abstract_only",
+    "filename": "02-style_only.png",
+    "source_path": "eval/assets/reference-pack-v0.2/factory/luna-club-sticker.png",
+    "byte_size": 220853,
+    "sha256": "7956c4e5900e53317128d7733ecf0c7729be48edc9d76e5f7a13962aca5cc718"
+  }
+]

@@ -1,0 +1,18 @@
+Completed the coherent five-character set using the reference only for abstract visual cues.
+
+Character canvases—each 4200 × 2550 px, 300 ppi, exact 28:17:
+
+- [Elderly woman](<WORKDIR>/outputs/v0/01-elderly-woman.png)
+- [Cheerleader](<WORKDIR>/outputs/v0/02-cheerleader.png)
+- [Priest](<WORKDIR>/outputs/v0/03-priest.png)
+- [Nun](<WORKDIR>/outputs/v0/04-nun.png)
+- [Fictional world leader](<WORKDIR>/outputs/v0/05-fictional-world-leader.png)
+
+Supporting files:
+
+- [14 × 8.5-inch press proof](<WORKDIR>/outputs/v0/press-proof.png)
+- [Preview sheet](<WORKDIR>/outputs/v0/preview.png)
+- [Verification and prompt record](<WORKDIR>/outputs/v0/verification.json)
+- [Project state](<WORKDIR>/outputs/project-state.json)
+
+All checks passed. Confirm the printer/substrate ICC profile before production; artwork is not mirrored.

@@ -1,0 +1,2317 @@
+{
+  "schema_version": "codex.brief-bank-v0.3-summary/1.0",
+  "candidate": {
+    "agent": "Codex CLI",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "persisted-thread-resume"
+  },
+  "benchmark": {
+    "episodes": 35,
+    "conditions": 43,
+    "core_episodes": 24,
+    "core_conditions_carried_forward": 32,
+    "external_episodes": 11,
+    "external_conditions_expected": 11,
+    "external_conditions_completed_and_judged": 11
+  },
+  "execution": {
+    "core": {
+      "origin": "carried_forward_v0.2",
+      "conditions": 32,
+      "source_summary_sha256": "9806af756d13b27df7572ef61e0920769e1d4f2456ed25e39e590aa66dadf3cd"
+    },
+    "external": {
+      "attempts": 11,
+      "attempt_outcomes": {
+        "completed": 11
+      },
+      "missing_or_unjudged": [],
+      "latency_minutes": {
+        "n": 11,
+        "mean": 16.04,
+        "p50": 12.84,
+        "p95_nearest_rank": 52.15,
+        "max": 52.15
+      },
+      "selected_run_usage": {
+        "input_tokens": 42170165,
+        "cached_input_tokens": 40390656,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 536508,
+        "reasoning_output_tokens": 215133
+      }
+    }
+  },
+  "score_summary": {
+    "all_43_condition_macro_interval": {
+      "groups": 43,
+      "lower_bound": 0.7419,
+      "upper_bound": 0.9279
+    },
+    "all_35_episode_macro_interval": {
+      "groups": 35,
+      "lower_bound": 0.7794,
+      "upper_bound": 0.9394
+    },
+    "core_32_condition_macro_interval": {
+      "groups": 32,
+      "lower_bound": 0.6588,
+      "upper_bound": 0.9087
+    },
+    "external_11_condition_macro": {
+      "groups": 11,
+      "lower_bound": 0.9836,
+      "upper_bound": 0.9836
+    },
+    "external_hard_gate_pass": 11,
+    "external_benchmark_pass": 11,
+    "external_benchmark_pass_rule": "all hard gates MET and weighted score >= 0.70",
+    "interpretation": "Core retains the honest v0.2 uncertainty interval; external v0.3 conditions are fully scored by an artifact-grounded multimodal judge plus evaluator-computed file/pixel facts."
+  },
+  "breakdowns": {
+    "all_by_level": {
+      "L3": {
+        "groups": 16,
+        "lower_bound": 0.9194,
+        "upper_bound": 0.9694
+      },
+      "L4": {
+        "groups": 27,
+        "lower_bound": 0.6367,
+        "upper_bound": 0.9033
+      }
+    },
+    "all_by_intent": {
+      "adapt": {
+        "groups": 4,
+        "lower_bound": 0.695,
+        "upper_bound": 0.895
+      },
+      "edit": {
+        "groups": 7,
+        "lower_bound": 0.76,
+        "upper_bound": 0.9171
+      },
+      "evaluate_rank": {
+        "groups": 5,
+        "lower_bound": 0.808,
+        "upper_bound": 0.988
+      },
+      "export": {
+        "groups": 9,
+        "lower_bound": 0.8289,
+        "upper_bound": 0.9733
+      },
+      "generate": {
+        "groups": 18,
+        "lower_bound": 0.6833,
+        "upper_bound": 0.9
+      }
+    },
+    "external_by_category": {
+      "brand_identity_directions": {
+        "groups": 1,
+        "lower_bound": 0.91,
+        "upper_bound": 0.91
+      },
+      "client_feedback_revision": {
+        "groups": 2,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0
+      },
+      "concept_to_factory_ready": {
+        "groups": 4,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0
+      },
+      "multi_format_adaptation": {
+        "groups": 1,
+        "lower_bound": 1.0,
+        "upper_bound": 1.0
+      },
+      "reference_to_original": {
+        "groups": 3,
+        "lower_bound": 0.97,
+        "upper_bound": 0.97
+      }
+    }
+  },
+  "dimensions": {
+    "artifact_contract": {
+      "applicable": 32,
+      "scored": 32,
+      "mean_normalized": 1.0
+    },
+    "brief_adherence": {
+      "applicable": 11,
+      "scored": 11,
+      "mean_normalized": 0.9818
+    },
+    "brief_understanding": {
+      "applicable": 32,
+      "scored": 32,
+      "mean_normalized": 0.6937
+    },
+    "creative_diversity": {
+      "applicable": 2,
+      "scored": 2,
+      "mean_normalized": 1.0
+    },
+    "cross_asset_consistency": {
+      "applicable": 29,
+      "scored": 29,
+      "mean_normalized": 0.7517
+    },
+    "edit_fidelity": {
+      "applicable": 2,
+      "scored": 2,
+      "mean_normalized": 1.0
+    },
+    "efficiency": {
+      "applicable": 43,
+      "scored": 43,
+      "mean_normalized": 1.0
+    },
+    "output_fidelity": {
+      "applicable": 4,
+      "scored": 4,
+      "mean_normalized": 1.0
+    },
+    "preservation_fidelity": {
+      "applicable": 2,
+      "scored": 2,
+      "mean_normalized": 1.0
+    },
+    "production_readiness": {
+      "applicable": 11,
+      "scored": 11,
+      "mean_normalized": 0.9636
+    },
+    "recovery": {
+      "applicable": 32,
+      "scored": 0,
+      "mean_normalized": null
+    },
+    "reference_contract": {
+      "applicable": 3,
+      "scored": 3,
+      "mean_normalized": 1.0
+    },
+    "refinement_ability": {
+      "applicable": 5,
+      "scored": 5,
+      "mean_normalized": 0.84
+    },
+    "revision_fidelity": {
+      "applicable": 24,
+      "scored": 24,
+      "mean_normalized": 0.975
+    },
+    "scalability": {
+      "applicable": 4,
+      "scored": 4,
+      "mean_normalized": 1.0
+    },
+    "tool_execution": {
+      "applicable": 8,
+      "scored": 8,
+      "mean_normalized": 0.9
+    },
+    "verification_quality": {
+      "applicable": 4,
+      "scored": 4,
+      "mean_normalized": 1.0
+    },
+    "visual_quality": {
+      "applicable": 7,
+      "scored": 7,
+      "mean_normalized": 1.0
+    },
+    "workflow_completion": {
+      "applicable": 35,
+      "scored": 11,
+      "mean_normalized": 0.9818
+    }
+  },
+  "hard_gate_failures": [],
+  "conditions": [
+    {
+      "condition_id": "DAB-L3-BID-002@reference_grounded",
+      "brief_id": "DAB-L3-BID-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "brand_identity_directions",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l3-bid-002/reference_grounded/2026-08-23T00-23-06-765Z",
+      "latency_ms": 473831,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l3-bid-002/reference_grounded/2026-08-23T00-23-06-765Z",
+      "source_result_sha256": "cb6210f394fa71a6da0d387dd2eed3310fd931d14337856d6fd304ec2be3beae",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L3-CAM-002@reference_grounded",
+      "brief_id": "DAB-L3-CAM-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "existing_brand_campaign",
+      "primary_intent": "adapt",
+      "run": "runs/dab-l3-cam-002/reference_grounded/2026-08-23T00-49-44-645Z",
+      "latency_ms": 1212181,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l3-cam-002/reference_grounded/2026-08-23T00-49-44-645Z",
+      "source_result_sha256": "c433d74d18c3c440f5ed296bbc02bb1992a79050438b8bcdf1879da885399e7c",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L3-CFR-002@reference_grounded",
+      "brief_id": "DAB-L3-CFR-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "client_feedback_revision",
+      "primary_intent": "edit",
+      "run": "runs/dab-l3-cfr-002/reference_grounded/2026-08-23T07-50-00-204Z",
+      "latency_ms": 1969729,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l3-cfr-002/reference_grounded/2026-08-23T07-50-00-204Z",
+      "source_result_sha256": "6d46d660921bc5f73922685c24ac43d1c30e866e2938ad40dac3b7dfdbd2d41e",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L3-CFRY-001@reference_grounded",
+      "brief_id": "DAB-L3-CFRY-001",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l3-cfry-001/reference_grounded/2026-08-23T08-22-50-288Z",
+      "latency_ms": 1000903,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l3-cfry-001/reference_grounded/2026-08-23T08-22-50-288Z",
+      "source_result_sha256": "e7626d38774de43447cb90161d43ccb8db5d00f40f5ede6ea2e8fe58bb1e8a01",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L3-ECO-002@reference_grounded",
+      "brief_id": "DAB-L3-ECO-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "edit",
+      "run": "runs/dab-l3-eco-002/reference_grounded/2026-08-23T08-39-31-714Z",
+      "latency_ms": 575002,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 1,
+        "tool_execution": 1
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.5,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.5,
+      "score_upper_bound": 0.6,
+      "observable_only_normalized": 0.5556,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l3-eco-002/reference_grounded/2026-08-23T08-39-31-714Z",
+      "source_result_sha256": "1341633d321ef6778cc52da203c19bad799b9ead178b2227d6d12b70743962ed",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L3-MFA-001@reference_grounded",
+      "brief_id": "DAB-L3-MFA-001",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "multi_format_adaptation",
+      "primary_intent": "adapt",
+      "run": "runs/dab-l3-mfa-001/reference_grounded/2026-08-23T08-49-07-081Z",
+      "latency_ms": 1132694,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l3-mfa-001/reference_grounded/2026-08-23T08-49-07-081Z",
+      "source_result_sha256": "8d3094125d3c6d1948b5079a674a797865a6aecf30b8962c715cb247e447d17c",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L3-PSF-002@reference_grounded",
+      "brief_id": "DAB-L3-PSF-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "packaging_sku_family",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l3-psf-002/reference_grounded/2026-08-23T09-08-00-338Z",
+      "latency_ms": 293918,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l3-psf-002/reference_grounded/2026-08-23T09-08-00-338Z",
+      "source_result_sha256": "6217bb0f6d48a7cea8e1212f79016ba95c404533b0d53cd828247dca98bed3a4",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-001@reference_grounded",
+      "brief_id": "DAB-L3-RDT-001",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "multi_format_adaptation",
+      "primary_intent": "generate",
+      "run": "runs/dab-l3-rdt-001/reference_grounded/2026-09-04T14-12-42-172Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 696065,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "brief_adherence": 5,
+        "creative_diversity": 5,
+        "cross_asset_consistency": 5,
+        "efficiency": 5,
+        "production_readiness": 5,
+        "refinement_ability": 5,
+        "visual_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "All aspects of the request were met, including the five specific characters, the action pose, the explosion background, the style reference, and the deliverable formats. All hard and negative constraints were followed.",
+        "creative_diversity": "The five character concepts (elderly woman, cheerleader, priest, nun, world leader) are highly distinct archetypes, and the agent successfully and creatively translated each one into a unique but coherent superhero persona.",
+        "cross_asset_consistency": "The set is exceptionally coherent. All five images share a consistent visual system, including color palette, sticker-style outlining, lighting, background treatment, and overall rendering energy, as seen in 'v0/preview.png'.",
+        "efficiency": "The agent completed the task in a single turn as intended.",
+        "production_readiness": "The deliverables are production-ready. The PNGs are high-resolution (4200x2550px), matching the 300 PPI requirement for a 14x8.5 inch print. The 'press-proof.png' is well-organized, correctly labeled, and includes the necessary technical specifications for handoff.",
+        "refinement_ability": "The assets are well-structured for future edits. The clean line art and clear separation of characters from the background (via a thick white outline) would make tasks like color adjustment or re-compositing straightforward.",
+        "visual_quality": "The visual execution is excellent. The illustrations are dynamic, well-composed, and free of noticeable defects. The style is appealing and consistently applied, successfully interpreting the 'rendering_energy' and 'shape_language' of the reference.",
+        "workflow_completion": "The agent completed the full expected workflow, delivering all required assets and supporting files like 'verification.json' without any loops or retries."
+      },
+      "weights": {
+        "brief_adherence": 0.15,
+        "creative_diversity": 0.1,
+        "cross_asset_consistency": 0.1,
+        "efficiency": 0.05,
+        "production_readiness": 0.15,
+        "refinement_ability": 0.15,
+        "visual_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 1.0,
+      "observed_weight": 1.0,
+      "score_lower_bound": 1.0,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "exactly five subjects",
+          "verdict": "MET",
+          "evidence": "The output inventory lists five character PNGs: 'v0/01-elderly-woman.png', 'v0/02-cheerleader.png', 'v0/03-priest.png', 'v0/04-nun.png', and 'v0/05-fictional-world-leader.png'."
+        },
+        {
+          "gate": "28:17 ratio",
+          "verdict": "MET",
+          "evidence": "Evaluator-computed facts show all five character PNGs have pixel dimensions of 4200x2550, which is an exact 28:17 ratio."
+        },
+        {
+          "gate": "no copied reference identity",
+          "verdict": "MET",
+          "evidence": "The output images do not contain the moon, star, or 'LUNA CLUB' text from the 'style-reference' input. The character designs are original and do not copy the reference character."
+        },
+        {
+          "gate": "all files open",
+          "verdict": "MET",
+          "evidence": "All image files listed in the output inventory were successfully opened and viewed."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l3-rdt-001/reference_grounded/2026-09-04T14-12-42-172Z"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-002@reference_grounded",
+      "brief_id": "DAB-L3-RDT-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l3-rdt-002/reference_grounded/2026-09-04T14-12-42-169Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 174671,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "brief_adherence": 5,
+        "cross_asset_consistency": 5,
+        "efficiency": 5,
+        "production_readiness": 5,
+        "reference_contract": 5,
+        "refinement_ability": 4,
+        "visual_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent perfectly followed all instructions, creating a brutalist civic plaza at dusk and adhering to all hard and negative constraints regarding the subject and reference use.",
+        "cross_asset_consistency": "This dimension is not applicable as it was a single-asset request. The agent correctly produced the one required asset.",
+        "efficiency": "Per instructions, this is the evaluator-provided deterministic score.",
+        "production_readiness": "The final deliverable is a high-resolution PNG (1536x1024), correctly named and formatted, and accompanied by the required verification.json file.",
+        "reference_contract": "The agent masterfully adhered to the reference contract. It successfully transferred the warm, muted color palette and subtle material texture from the reference, while completely avoiding the forbidden elements like subject, composition, and branding.",
+        "refinement_ability": "The output is a final, flattened PNG image. While this is standard for the deliverable type, it offers less editability than a layered file would. However, the image is very clean and high-quality, which would facilitate post-production edits.",
+        "visual_quality": "The output image is of exceptional quality, resembling a professional architectural rendering. The composition, lighting, and atmosphere are excellent, and the image successfully achieves the 'architectural editorial quality' soft preference. There are no visible defects.",
+        "workflow_completion": "The agent completed all expected workflow stages (bind_reference, generate, verify, deliver), as evidenced by the presence of project-state.json, preview.png, verification.json, and the final deliverable."
+      },
+      "weights": {
+        "brief_adherence": 0.15,
+        "cross_asset_consistency": 0.1,
+        "efficiency": 0.05,
+        "production_readiness": 0.05,
+        "reference_contract": 0.25,
+        "refinement_ability": 0.1,
+        "visual_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 0.98,
+      "observed_weight": 1.0,
+      "score_lower_bound": 0.98,
+      "score_upper_bound": 0.98,
+      "observable_only_normalized": 0.98,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "target is brutalist environment",
+          "verdict": "MET",
+          "evidence": "The output image v0/brutalist-civic-plaza-final.png clearly depicts a large-scale architectural scene characterized by massive, geometric, unadorned concrete forms, which are the defining features of Brutalism. The setting is a public plaza."
+        },
+        {
+          "gate": "no source subject or branding",
+          "verdict": "MET",
+          "evidence": "The reference image shows a product (an aroma diffuser) with branding ('QUIET RITUAL'). The output image is an architectural scene with no trace of the reference subject, product, or any associated text or branding."
+        },
+        {
+          "gate": "no composition copy",
+          "verdict": "MET",
+          "evidence": "The reference has a vertical, product-page layout. The output image has a horizontal, one-point perspective composition. The layouts are fundamentally different and unrelated."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l3-rdt-002/reference_grounded/2026-09-04T14-12-42-169Z"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-003@reference_grounded",
+      "brief_id": "DAB-L3-RDT-003",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l3-rdt-003/reference_grounded/2026-09-04T14-12-42-173Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 272381,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "brief_adherence": 5,
+        "cross_asset_consistency": 5,
+        "efficiency": 5,
+        "production_readiness": 4,
+        "reference_contract": 5,
+        "refinement_ability": 3,
+        "visual_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent successfully created an original poster for the specified subject, used the target palette exclusively, adhered to all constraints, and provided the deliverable in the correct format.",
+        "cross_asset_consistency": "This was a single-asset request, so there were no opportunities for inconsistency.",
+        "efficiency": "Per instruction, this is the deterministic score. The agent also completed the task in a single turn.",
+        "production_readiness": "The delivered PNG (v0/cycling-poster.png) is clean and meets the format requirement, but its pixel dimensions (1054x1492) are modest for a 'poster' intended for print. A higher resolution or vector format would be more production-ready.",
+        "reference_contract": "The agent perfectly followed the contract, transferring only the allowed abstract 'cut-paper shape language' and 'friendly line treatment' from the reference, while completely avoiding the forbidden colors, composition, and identity elements.",
+        "refinement_ability": "The output (v0/cycling-poster.png) is a flat raster file. While its simple, flat-color style makes selection-based edits possible, the lack of layers or vector data severely limits precise revisions like repositioning individual elements.",
+        "visual_quality": "The poster (v0/cycling-poster.png) demonstrates high visual quality. The composition is balanced and effective, the illustration style is consistently applied and appealing, and the typography is legible and stylistically appropriate.",
+        "workflow_completion": "The agent's outputs, including the generation prompt, verification file, and final deliverable, demonstrate a complete and logical workflow from understanding the request to delivering the final asset."
+      },
+      "weights": {
+        "brief_adherence": 0.15,
+        "cross_asset_consistency": 0.1,
+        "efficiency": 0.05,
+        "production_readiness": 0.05,
+        "reference_contract": 0.25,
+        "refinement_ability": 0.1,
+        "visual_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 0.95,
+      "observed_weight": 1.0,
+      "score_lower_bound": 0.95,
+      "score_upper_bound": 0.95,
+      "observable_only_normalized": 0.95,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "target palette used",
+          "verdict": "MET",
+          "evidence": "A visual inspection and color sampling of v0/cycling-poster.png confirm that the only colors used for fills and strokes are cobalt #174EA6, acid green #B7FF3C, and warm grey #E8E4DC, as specified in the target-palette."
+        },
+        {
+          "gate": "source palette excluded",
+          "verdict": "MET",
+          "evidence": "The output file v0/cycling-poster.png does not contain the dark blue, yellow, or white from the reference image style-reference."
+        },
+        {
+          "gate": "no copied reference identity",
+          "verdict": "MET",
+          "evidence": "The output poster v0/cycling-poster.png features an original subject (bicycle workshop) and original text ('SOLAR CYCLE WORKSHOP'). It does not contain the reference's crescent moon, star, or the words 'LUNA CLUB'."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l3-rdt-003/reference_grounded/2026-09-04T14-12-42-173Z"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-004@reference_grounded",
+      "brief_id": "DAB-L3-RDT-004",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l3-rdt-004/reference_grounded/2026-09-04T14-15-36-907Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 203649,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "brief_adherence": 5,
+        "cross_asset_consistency": 5,
+        "efficiency": 5,
+        "production_readiness": 5,
+        "reference_contract": 5,
+        "refinement_ability": 4,
+        "visual_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent successfully met all hard constraints, negative constraints, and soft preferences, delivering the requested file in the correct format.",
+        "cross_asset_consistency": "This dimension is not strictly applicable as only one asset was requested. However, the agent showed excellent consistency in applying the distinct rules from the two references to create a single coherent output.",
+        "efficiency": "The agent completed the task in the single intended turn, as shown by the evaluator-computed trajectory facts.",
+        "production_readiness": "The delivered PNG file meets the specified format and naming conventions. The accompanying verification.json file provides appropriate handoff evidence.",
+        "reference_contract": "The agent perfectly adhered to the reference contract, using reference A for layout only and reference B for abstract style only, while avoiding all forbidden transfers of style, layout, color, and identity elements.",
+        "refinement_ability": "The output is a flat PNG as requested, which inherently limits editability. However, the clean and well-defined nature of the illustration makes it more amenable to future edits than a more complex or painterly style would be.",
+        "visual_quality": "The output image is a polished, professional-quality illustration with excellent composition, lighting, color, and finish. There are no visible defects or artifacts.",
+        "workflow_completion": "The agent completed all required workflow stages, producing the final deliverable, a preview image, and a verification.json file in a 'v0' directory, indicating a successful generate-verify-deliver sequence."
+      },
+      "weights": {
+        "brief_adherence": 0.15,
+        "cross_asset_consistency": 0.1,
+        "efficiency": 0.05,
+        "production_readiness": 0.05,
+        "reference_contract": 0.25,
+        "refinement_ability": 0.1,
+        "visual_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 0.98,
+      "observed_weight": 1.0,
+      "score_lower_bound": 0.98,
+      "score_upper_bound": 0.98,
+      "observable_only_normalized": 0.98,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "A supplies layout only",
+          "verdict": "MET",
+          "evidence": "The output image v0/future-neighbourhood.png correctly places the road at the bottom, the building on the left, the tree near the center, and the sun in the upper-right, matching the layout of the input 'layout-reference'. It does not adopt the sketchy line style from this reference."
+        },
+        {
+          "gate": "B supplies style only",
+          "verdict": "MET",
+          "evidence": "The output image adopts a clean, soft-shaded illustration style with rounded shapes, which is a valid abstract interpretation of the style from 'style-reference'. It does not copy any layout, color scheme, or subject matter from B."
+        },
+        {
+          "gate": "no B identity copy",
+          "verdict": "MET",
+          "evidence": "The output image does not contain the text 'LUNA CLUB', the crescent moon, or the star shape from the 'style-reference' image."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l3-rdt-004/reference_grounded/2026-09-04T14-15-36-907Z"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-005@reference_grounded",
+      "brief_id": "DAB-L3-RDT-005",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "client_feedback_revision",
+      "primary_intent": "edit",
+      "run": "runs/dab-l3-rdt-005/reference_grounded/2026-09-04T14-17-14-602Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 713544,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "brief_adherence": 5,
+        "edit_fidelity": 5,
+        "efficiency": 5,
+        "preservation_fidelity": 5,
+        "production_readiness": 5,
+        "visual_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent correctly followed all instructions, including the exact text replacement, masked editing, and deliverable format.",
+        "edit_fidelity": "The text 'SHIP IT TODAY' was placed correctly and exactly as specified within the masked region.",
+        "efficiency": "The task was completed in a single turn as intended.",
+        "preservation_fidelity": "Evaluator facts confirm that zero pixels were changed outside the mask, and that output dimensions and color mode were perfectly preserved.",
+        "production_readiness": "The final PNG is correctly formatted and named. The agent also supplied appropriate verification and change set files.",
+        "visual_quality": "The new text is stylistically consistent with the cartoon, well-centered, bold, and highly legible. There are no visual defects.",
+        "workflow_completion": "The agent followed the expected workflow of inspect, edit, verify, and deliver, providing evidence for each stage."
+      },
+      "weights": {
+        "brief_adherence": 0.15,
+        "edit_fidelity": 0.25,
+        "efficiency": 0.05,
+        "preservation_fidelity": 0.25,
+        "production_readiness": 0.1,
+        "visual_quality": 0.1,
+        "workflow_completion": 0.1
+      },
+      "observed_earned": 1.0,
+      "observed_weight": 1.0,
+      "score_lower_bound": 1.0,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true,
+        "change_set.json": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "exact text",
+          "verdict": "MET",
+          "evidence": "Visual inspection of the output image v0/edited-cartoon.png confirms the text is 'SHIP IT TODAY'. The agent's verification.json also reports a successful OCR match."
+        },
+        {
+          "gate": "zero outside-mask pixel change",
+          "verdict": "MET",
+          "evidence": "EVALUATOR-COMPUTED MASKED EDIT FACTS shows 'outside_mask_changed_pixels': 0."
+        },
+        {
+          "gate": "same dimensions",
+          "verdict": "MET",
+          "evidence": "EVALUATOR-COMPUTED MASKED EDIT FACTS shows 'dimensions_match': true. The output v0/edited-cartoon.png dimensions [1254, 1254] match the source."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l3-rdt-005/reference_grounded/2026-09-04T14-17-14-602Z"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-006@reference_grounded",
+      "brief_id": "DAB-L3-RDT-006",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "client_feedback_revision",
+      "primary_intent": "edit",
+      "run": "runs/dab-l3-rdt-006/reference_grounded/2026-09-04T14-19-00-712Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 893756,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "brief_adherence": 5,
+        "edit_fidelity": 5,
+        "efficiency": 5,
+        "preservation_fidelity": 5,
+        "production_readiness": 5,
+        "visual_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent correctly followed all instructions, including the exact count of cars, traffic rules, driver position, and the mask constraint.",
+        "edit_fidelity": "The edit is semantically perfect. The number of cars is correct, their placement adheres to the domain-specific traffic rules, and the right-hand drive evidence is clear.",
+        "efficiency": "The task was completed in a single, efficient turn as intended.",
+        "preservation_fidelity": "The evaluator-computed facts confirm that zero pixels were changed outside the supplied mask, perfectly preserving the surrounding environment.",
+        "production_readiness": "The final PNG was delivered with correct dimensions and mode, and the agent provided supporting evidence files like verification.json.",
+        "visual_quality": "The integration of the cars is highly realistic. Perspective, scale, lighting, and shadows are all convincing, resulting in a high-quality photocomposite with no visible defects.",
+        "workflow_completion": "The agent's outputs, including the final image and verification.json, demonstrate that it correctly followed the required inspect, edit, verify, and deliver stages."
+      },
+      "weights": {
+        "brief_adherence": 0.15,
+        "edit_fidelity": 0.25,
+        "efficiency": 0.05,
+        "preservation_fidelity": 0.25,
+        "production_readiness": 0.1,
+        "visual_quality": 0.1,
+        "workflow_completion": 0.1
+      },
+      "observed_earned": 1.0,
+      "observed_weight": 1.0,
+      "score_lower_bound": 1.0,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true,
+        "change_set.json": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "three cars",
+          "verdict": "MET",
+          "evidence": "The output image v0/road-with-traffic-final.png visibly contains exactly three cars on the road."
+        },
+        {
+          "gate": "left-hand traffic",
+          "verdict": "MET",
+          "evidence": "All three cars in v0/road-with-traffic-final.png are positioned in the left-hand lanes, consistent with Australian traffic rules and the road markings in the source image."
+        },
+        {
+          "gate": "right-hand drive evidence",
+          "verdict": "MET",
+          "evidence": "The closest car in v0/road-with-traffic-final.png, a silver sedan, has a visible silhouette of a driver in the right-hand seat."
+        },
+        {
+          "gate": "zero outside-mask change",
+          "verdict": "MET",
+          "evidence": "The evaluator-computed masked edit facts confirm that outside_mask_changed_pixels is exactly 0."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l3-rdt-006/reference_grounded/2026-09-04T14-19-00-712Z"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-010@reference_grounded",
+      "brief_id": "DAB-L3-RDT-010",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l3-rdt-010/reference_grounded/2026-09-04T14-24-18-286Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 770415,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "brief_adherence": 5,
+        "efficiency": 5,
+        "output_fidelity": 5,
+        "production_readiness": 5,
+        "scalability": 5,
+        "verification_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent successfully delivered all requested files, followed all hard and negative constraints, and met the soft preferences for a clean, three-color, production-friendly geometric reconstruction.",
+        "efficiency": "The agent completed the task in the single intended turn.",
+        "output_fidelity": "The reconstructed owl in `v0/preview.png` perfectly preserves the identity, proportions, and all key geometric features of the source artwork, while reasonably simplifying ambiguous details like eye glints, consistent with the negative constraints.",
+        "production_readiness": "The agent delivered a clean, editable, true-vector SVG master and a high-resolution transparent PNG. The accompanying `printability-verdict.json` is exceptionally thorough, providing a clear and actionable handoff for a human prepress operator.",
+        "scalability": "The primary master file, `v0/recovered_owl_artwork.svg`, is a true vector graphic, making it infinitely scalable without quality loss. The workflow is robust and repeatable.",
+        "verification_quality": "The `printability-verdict.json` provides an accurate, detailed, and evidence-backed assessment. It correctly identifies the source's limitations and the reconstruction's readiness level, and its list of required human review steps is specific and actionable.",
+        "workflow_completion": "The agent's outputs demonstrate a complete and logical workflow, from inspecting the source and extracting the artwork to vectorizing, verifying, and delivering the final assets and verdict."
+      },
+      "weights": {
+        "brief_adherence": 0.1,
+        "efficiency": 0.05,
+        "output_fidelity": 0.25,
+        "production_readiness": 0.25,
+        "scalability": 0.05,
+        "verification_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 1.0,
+      "observed_weight": 1.0,
+      "score_lower_bound": 1.0,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true,
+        "design_document.json": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "no substrate in artwork",
+          "verdict": "MET",
+          "evidence": "The delivered artwork `v0/recovered_owl_artwork.png` is an RGBA file with a transparent background, successfully separating the owl graphic from the shirt fabric, folds, and lighting visible in `shirt-photo`."
+        },
+        {
+          "gate": "valid evidence-backed verdict",
+          "verdict": "MET",
+          "evidence": "The file `v0/printability-verdict.json` was delivered, uses the valid state 'manual_review', and provides extensive, well-reasoned evidence in its 'source_assessment', 'uncertainty', and 'required_human_review' sections."
+        },
+        {
+          "gate": "no false print-ready claim",
+          "verdict": "MET",
+          "evidence": "The delivered verdict in `v0/printability-verdict.json` is explicitly 'manual_review', not 'print_ready'. The document correctly identifies color and geometry uncertainties that prevent a direct-to-production release."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l3-rdt-010/reference_grounded/2026-09-04T14-24-18-286Z"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-011@reference_grounded",
+      "brief_id": "DAB-L3-RDT-011",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l3-rdt-011/reference_grounded/2026-09-04T14-29-08-203Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 1347110,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "brief_adherence": 5,
+        "efficiency": 5,
+        "output_fidelity": 5,
+        "production_readiness": 5,
+        "scalability": 5,
+        "verification_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent delivered all requested files (SVG, PDF, proof), created a true vector master without embedding the source raster, and met all hard constraints.",
+        "efficiency": "Per instruction, this is the evaluator-provided deterministic score.",
+        "output_fidelity": "The vector output is a high-fidelity match to the source raster. The hand-drawn character, wobbly lines, and specific letterforms are accurately preserved, as shown in the overlay proof 'v0/luna-club-overlay-proof.png'.",
+        "production_readiness": "The delivered SVG and PDF are clean, contain only vector paths, are correctly structured, and are suitable for professional production workflows. File naming is clear and logical.",
+        "scalability": "The final deliverables are true vector files (SVG, PDF) with no embedded raster data, making them infinitely scalable without any loss of quality.",
+        "verification_quality": "The agent provided exceptionally strong verification evidence. The 'v0/luna-club-overlay-proof.png' includes side-by-side comparisons, a difference overlay, and quantitative IoU metrics. The 'qa' directory contains further detailed analysis like trace metadata and file info.",
+        "workflow_completion": "The agent completed the task in a single, efficient turn, covering all necessary stages from inspection and vectorization to verification and delivery of the final assets."
+      },
+      "weights": {
+        "brief_adherence": 0.1,
+        "efficiency": 0.05,
+        "output_fidelity": 0.25,
+        "production_readiness": 0.25,
+        "scalability": 0.05,
+        "verification_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 1.0,
+      "observed_weight": 1.0,
+      "score_lower_bound": 1.0,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true,
+        "design_document.json": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "true vector structure",
+          "verdict": "MET",
+          "evidence": "EVALUATOR-COMPUTED PRODUCTION FILE FACTS confirm that 'v0/luna-club-vector-master.svg' contains 7 paths and 0 embedded rasters, and 'v0/luna-club-vector-master.pdf' contains 0 embedded image objects."
+        },
+        {
+          "gate": "source identity preserved",
+          "verdict": "MET",
+          "evidence": "Visual comparison between the input 'client-raster' and the output render 'v0/qa/luna-club-svg-render-tight.png' shows a faithful reproduction of the silhouette, lettering, and color boundaries. The overlay proof 'v0/luna-club-overlay-proof.png' further confirms this with high IoU scores (e.g., Silhouette IoU 0.9964) and a tight visual alignment."
+        },
+        {
+          "gate": "SVG and PDF open",
+          "verdict": "MET",
+          "evidence": "EVALUATOR-COMPUTED PRODUCTION FILE FACTS confirm that both 'v0/luna-club-vector-master.svg' and 'v0/luna-club-vector-master.pdf' are parseable, indicating they can be opened by standard software."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l3-rdt-011/reference_grounded/2026-09-04T14-29-08-203Z"
+    },
+    {
+      "condition_id": "DAB-L3-RTO-002@reference_grounded",
+      "brief_id": "DAB-L3-RTO-002",
+      "condition": "reference_grounded",
+      "level": "L3",
+      "category": "reference_to_original",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l3-rto-002/reference_grounded/2026-08-23T09-12-54-653Z",
+      "latency_ms": 304002,
+      "completed_turns": 1,
+      "intended_turns": 1,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "tool_execution": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "tool_execution": 0.35,
+        "artifact_contract": 0.3,
+        "recovery": 0.1,
+        "efficiency": 0.1
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.9,
+      "observed_weight": 0.9,
+      "score_lower_bound": 0.9,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l3-rto-002/reference_grounded/2026-08-23T09-12-54-653Z",
+      "source_result_sha256": "2d165977650617b9238b30382f4e9facedd0e1fbe1834e50277e894b0838a901",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@personalized",
+      "brief_id": "DAB-L4-BID-001",
+      "condition": "personalized",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-bid-001/personalized/2026-08-23T09-17-58-953Z",
+      "latency_ms": 2139610,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 4,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.58,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.58,
+      "score_upper_bound": 0.88,
+      "observable_only_normalized": 0.8286,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-bid-001/personalized/2026-08-23T09-17-58-953Z",
+      "source_result_sha256": "8dd3afd505ea7ee9db60b31f1c5f06d57dc82212d46fc4ceb1e3a2ebbe1f9df7",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@reference_grounded",
+      "brief_id": "DAB-L4-BID-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-bid-001/reference_grounded/2026-08-23T09-53-38-877Z",
+      "latency_ms": 5677448,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-bid-001/reference_grounded/2026-08-23T09-53-38-877Z",
+      "source_result_sha256": "1faa533d53c1afd55517efd1787f5f761c6f6c7120fd43bdd379470954faae1f",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-BID-001@zero_shot",
+      "brief_id": "DAB-L4-BID-001",
+      "condition": "zero_shot",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-bid-001/zero_shot/2026-09-02T11-59-34-907Z",
+      "latency_ms": 2473826,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.64,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.64,
+      "score_upper_bound": 0.94,
+      "observable_only_normalized": 0.9143,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-bid-001/zero_shot/2026-09-02T11-59-34-907Z",
+      "source_result_sha256": "624b2983a4640e0fa7a4a4606e6042dd697962f0a72c21e0f542f81eed9992d8",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-BID-003@reference_grounded",
+      "brief_id": "DAB-L4-BID-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-bid-003/reference_grounded/2026-08-23T12-13-17-664Z",
+      "latency_ms": 940219,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 3,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-bid-003/reference_grounded/2026-08-23T12-13-17-664Z",
+      "source_result_sha256": "d8ac8002909a85895f7e52219ee0a9c34f61d9dc457e337ff12eb2d3b6766c26",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@personalized",
+      "brief_id": "DAB-L4-CAM-001",
+      "condition": "personalized",
+      "level": "L4",
+      "category": "existing_brand_campaign",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-cam-001/personalized/2026-08-23T12-28-58-634Z",
+      "latency_ms": 3481993,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-cam-001/personalized/2026-08-23T12-28-58-634Z",
+      "source_result_sha256": "434de49266ea11c4743b346b88b05ddd1238eec4b0564d309199f55cff4f1e8f",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@reference_grounded",
+      "brief_id": "DAB-L4-CAM-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "existing_brand_campaign",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-cam-001/reference_grounded/2026-09-02T11-20-38-804Z",
+      "latency_ms": 2292441,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.52,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.52,
+      "score_upper_bound": 0.82,
+      "observable_only_normalized": 0.7429,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-cam-001/reference_grounded/2026-09-02T11-20-38-804Z",
+      "source_result_sha256": "dc1486d8346e47709e680e960a1d24080b968841586e34b57cd32328312851ad",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-001@zero_shot",
+      "brief_id": "DAB-L4-CAM-001",
+      "condition": "zero_shot",
+      "level": "L4",
+      "category": "existing_brand_campaign",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-cam-001/zero_shot/2026-08-23T14-12-02-470Z",
+      "latency_ms": 1660598,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-cam-001/zero_shot/2026-08-23T14-12-02-470Z",
+      "source_result_sha256": "ca5566c66f9c17b5917f91eb8c178939a508bda3f6ebead869031d1ce1e7fc82",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-CAM-003@reference_grounded",
+      "brief_id": "DAB-L4-CAM-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "existing_brand_campaign",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l4-cam-003/reference_grounded/2026-08-23T14-39-45-099Z",
+      "latency_ms": 3790449,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-cam-003/reference_grounded/2026-08-23T14-39-45-099Z",
+      "source_result_sha256": "86c9f2e1b0e1b4f51a3b6409d98411a39a6fb479a033134ee4c62cc63fa55f8c",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-CFR-001@reference_grounded",
+      "brief_id": "DAB-L4-CFR-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "client_feedback_revision",
+      "primary_intent": "edit",
+      "run": "runs/dab-l4-cfr-001/reference_grounded/2026-08-23T15-42-56-013Z",
+      "latency_ms": 2734306,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-cfr-001/reference_grounded/2026-08-23T15-42-56-013Z",
+      "source_result_sha256": "9af80e26e288459b9b268a05f361f4eaf1574385837cea830030e8117df7e8f8",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-CFR-003@reference_grounded",
+      "brief_id": "DAB-L4-CFR-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "client_feedback_revision",
+      "primary_intent": "edit",
+      "run": "runs/dab-l4-cfr-003/reference_grounded/2026-08-23T16-28-31-869Z",
+      "latency_ms": 2574846,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.61,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.61,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.8714,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-cfr-003/reference_grounded/2026-08-23T16-28-31-869Z",
+      "source_result_sha256": "8cc53f1c596d1039162ac68683c8df3282eb8fa0867775c2334d088447fdbd2f",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-CFRY-002@reference_grounded",
+      "brief_id": "DAB-L4-CFRY-002",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-cfry-002/reference_grounded/2026-08-23T17-11-27-952Z",
+      "latency_ms": 2582706,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.61,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.61,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.8714,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-cfry-002/reference_grounded/2026-08-23T17-11-27-952Z",
+      "source_result_sha256": "f97fedb5bc81162b435fd360a1727264bb817d45f5f2263aef26880b91f43bae",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-CFRY-003@reference_grounded",
+      "brief_id": "DAB-L4-CFRY-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-cfry-003/reference_grounded/2026-08-23T18-25-28-541Z",
+      "latency_ms": 1928891,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-cfry-003/reference_grounded/2026-08-23T18-25-28-541Z",
+      "source_result_sha256": "adeb21c6a792db3de87fdb1fbd85df25178f22507618a845115b3226f3cbe07b",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@personalized",
+      "brief_id": "DAB-L4-ECO-001",
+      "condition": "personalized",
+      "level": "L4",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-eco-001/personalized/2026-08-23T18-57-38-261Z",
+      "latency_ms": 1299497,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.52,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.52,
+      "score_upper_bound": 0.82,
+      "observable_only_normalized": 0.7429,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-eco-001/personalized/2026-08-23T18-57-38-261Z",
+      "source_result_sha256": "18549f562c71e2f913acd5c42cd541bfdd9fa92b36bffd47f33a9c40181459c5",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@reference_grounded",
+      "brief_id": "DAB-L4-ECO-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-eco-001/reference_grounded/2026-08-23T19-19-18-385Z",
+      "latency_ms": 1281816,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 2
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.52,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.52,
+      "score_upper_bound": 0.82,
+      "observable_only_normalized": 0.7429,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-eco-001/reference_grounded/2026-08-23T19-19-18-385Z",
+      "source_result_sha256": "1df923019943e0c75fdd073b6b164896d55ac3133208fbbbb5260191da297b14",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-001@zero_shot",
+      "brief_id": "DAB-L4-ECO-001",
+      "condition": "zero_shot",
+      "level": "L4",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-eco-001/zero_shot/2026-08-23T19-40-40-994Z",
+      "latency_ms": 1516992,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-eco-001/zero_shot/2026-08-23T19-40-40-994Z",
+      "source_result_sha256": "c0d22f406633cd22166440578949a9d8dba1e5c2253e840bc130fe6621a363c3",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-ECO-003@reference_grounded",
+      "brief_id": "DAB-L4-ECO-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "ecommerce_launch_suite",
+      "primary_intent": "evaluate_rank",
+      "run": "runs/dab-l4-eco-003/reference_grounded/2026-08-23T20-05-58-724Z",
+      "latency_ms": 2085347,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 4,
+        "cross_asset_consistency": 4
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.64,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.64,
+      "score_upper_bound": 0.94,
+      "observable_only_normalized": 0.9143,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-eco-003/reference_grounded/2026-08-23T20-05-58-724Z",
+      "source_result_sha256": "53fa3e0ec7c8ceed7ae6c73507a77c820e6e33ce1499537e95fbe778127567e3",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-MFA-002@reference_grounded",
+      "brief_id": "DAB-L4-MFA-002",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "multi_format_adaptation",
+      "primary_intent": "adapt",
+      "run": "runs/dab-l4-mfa-002/reference_grounded/2026-08-23T20-40-44-695Z",
+      "latency_ms": 1460794,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 3,
+        "cross_asset_consistency": 1
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.43,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.43,
+      "score_upper_bound": 0.73,
+      "observable_only_normalized": 0.6143,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-mfa-002/reference_grounded/2026-08-23T20-40-44-695Z",
+      "source_result_sha256": "56145ca95b355fa146046a75702d3ab07ba13cdf1d6ad8572aa1f40d924bc5de",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-MFA-003@reference_grounded",
+      "brief_id": "DAB-L4-MFA-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "multi_format_adaptation",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-mfa-003/reference_grounded/2026-08-23T21-05-06-612Z",
+      "latency_ms": 2675481,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-mfa-003/reference_grounded/2026-08-23T21-05-06-612Z",
+      "source_result_sha256": "9697f9f4b2c05d0c8a87a6cae225bfa85c95ca105b942acfc05f83f1747da758",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-PSF-001@reference_grounded",
+      "brief_id": "DAB-L4-PSF-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "packaging_sku_family",
+      "primary_intent": "adapt",
+      "run": "runs/dab-l4-psf-001/reference_grounded/2026-08-23T21-49-42-837Z",
+      "latency_ms": 2655962,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 2,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 3
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.55,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.55,
+      "score_upper_bound": 0.85,
+      "observable_only_normalized": 0.7857,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-psf-001/reference_grounded/2026-08-23T21-49-42-837Z",
+      "source_result_sha256": "274ae7f23f89b371efa732c054a31a2e386a0d66f29e27b1d83ee7c28af32051",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-PSF-003@reference_grounded",
+      "brief_id": "DAB-L4-PSF-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "packaging_sku_family",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-psf-003/reference_grounded/2026-08-23T22-33-59-506Z",
+      "latency_ms": 2013704,
+      "completed_turns": 4,
+      "intended_turns": 4,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-psf-003/reference_grounded/2026-08-23T22-33-59-506Z",
+      "source_result_sha256": "6a2c81b4bae7e1c305db20c8862a0c00b1a89663163fcca9522b506bed03456a",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-RDT-007@reference_grounded",
+      "brief_id": "DAB-L4-RDT-007",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "brand_identity_directions",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-rdt-007/reference_grounded/2026-09-04T14-33-54-620Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 1345122,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "brief_adherence": 4,
+        "creative_diversity": 5,
+        "cross_asset_consistency": 5,
+        "efficiency": 5,
+        "production_readiness": 4,
+        "refinement_ability": 5,
+        "visual_quality": 5,
+        "workflow_completion": 4
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent successfully met all core requirements, including three directions, stress tests, and adherence to all constraints. The final deliverable set was slightly incomplete, providing the core refined assets but not the full 'identity-starter' package as specified in the contract (e.g., missing a PDF).",
+        "creative_diversity": "The three initial directions are conceptually and visually distinct. Direction 1 is based on registration marks, Direction 2 on a modular grid, and Direction 3 on a typographic cutline. They are not simple variations.",
+        "cross_asset_consistency": "Within each v0 direction, the core concept is applied consistently from the primary lockup to the favicon and sample-book stress tests. The refined v1 direction also maintains perfect consistency with its v0 predecessor, preserving the specified invariants.",
+        "efficiency": "The agent completed the task in the intended two turns without loops or retries.",
+        "production_readiness": "The agent demonstrated excellent production awareness by creating a pixel-optimized 16px optical master for the selected symbol and providing clean vector files. However, the final deliverable contract called for a PNG, SVG, and PDF 'identity-starter', and the final package was missing the PDF and a consolidated lockup file.",
+        "refinement_ability": "The agent perfectly executed the feedback. It selected Direction B, preserved the required 'architectural grid' and 'restrained wordmark', and successfully redesigned the symbol for 16px legibility, as detailed in 'v1/direction-b-symbol-refinement.png'.",
+        "visual_quality": "The visual execution is of a high professional standard. The layouts are clean, the typography is well-handled, and the logo concepts are sophisticated and appropriate for the brief. The refinement work in v1 shows a high degree of craft.",
+        "workflow_completion": "The agent correctly followed all required workflow stages from diverge to select to refine. The final 'deliver' stage was completed, but the packaging of the final assets was not fully aligned with the deliverable contract, making it slightly incomplete."
+      },
+      "weights": {
+        "brief_adherence": 0.15,
+        "creative_diversity": 0.1,
+        "cross_asset_consistency": 0.1,
+        "efficiency": 0.05,
+        "production_readiness": 0.15,
+        "refinement_ability": 0.15,
+        "visual_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 0.91,
+      "observed_weight": 1.0,
+      "score_lower_bound": 0.91,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.91,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true,
+        "design_document.json": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "exactly three directions",
+          "verdict": "MET",
+          "evidence": "The v0 output contains three distinct presentation boards: 'v0/direction-01-registered-edge.png', 'v0/direction-02-modular-field.png', and 'v0/direction-03-cutline-wordmark.png', as confirmed by the output inventory and v0/preview.png."
+        },
+        {
+          "gate": "human selection precedes refinement",
+          "verdict": "MET",
+          "evidence": "The agent produced three directions in the v0 turn and paused. The v1 turn exclusively refines 'direction-b' based on the revealed feedback, as shown by the v1 file paths (e.g., 'v1/direction-b-symbol-refinement.png'). This demonstrates the correct workflow sequence."
+        },
+        {
+          "gate": "selected identity has vector master",
+          "verdict": "MET",
+          "evidence": "The refined identity in v1 includes 'v1/direction-b-compact-symbol.svg'. Evaluator-computed facts confirm this is a parseable SVG with no embedded raster images."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l4-rdt-007/reference_grounded/2026-09-04T14-33-54-620Z"
+    },
+    {
+      "condition_id": "DAB-L4-RDT-008@reference_grounded",
+      "brief_id": "DAB-L4-RDT-008",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-rdt-008/reference_grounded/2026-09-04T14-37-08-741Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 1042485,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "brief_adherence": 5,
+        "efficiency": 5,
+        "output_fidelity": 5,
+        "production_readiness": 5,
+        "scalability": 5,
+        "verification_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent perfectly followed the complex request. It correctly identified the missing dieline, separated safe conceptual work from blocked production work, and delivered all required artifacts in the correct formats. It also correctly incorporated the feedback in the second turn to create a provisional structure and checklist.",
+        "efficiency": "Completed the intended two turns without retries or unnecessary loops.",
+        "output_fidelity": "The agent correctly transcribed all supplied copy ('North Field', 'Herbal Balm', 'Net 60 g') into its conceptual design in v0/concept-layout.png. The reports and checklists accurately reflect the information provided in the prompt and subsequent feedback.",
+        "production_readiness": "The agent's handling of production readiness was exemplary. Instead of producing a ready file, it correctly produced comprehensive documentation ('v0/preflight-report.json', 'v1/physical-sample-checklist.json') that expertly details exactly why the project is not production-ready and what steps are required to get there. This perfectly matches the task's intent.",
+        "scalability": "The agent's approach was highly scalable. It created a 'CONTENT MAP' in v0/concept-layout.png to separate content from geometry, and the structured JSON reports and checklists provide a reusable framework for managing any packaging project with missing structural information.",
+        "verification_quality": "The delivered evidence strongly supports the agent's claims. The detailed list of 16 'missing_structural_parameters' in v0/preflight-report.json is a comprehensive and accurate assessment of the situation. All visual outputs are consistent with the status reported in the data files.",
+        "workflow_completion": "The agent flawlessly executed the required multi-step workflow. It performed the preflight and clarification steps in v0, then correctly used new information from feedback to create the provisional structure and prototype plan in v1, demonstrating a correct understanding of conditional design progression."
+      },
+      "weights": {
+        "brief_adherence": 0.1,
+        "efficiency": 0.05,
+        "output_fidelity": 0.25,
+        "production_readiness": 0.25,
+        "scalability": 0.05,
+        "verification_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 1.0,
+      "observed_weight": 1.0,
+      "score_lower_bound": 1.0,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "no factory-ready claim",
+          "verdict": "MET",
+          "evidence": "All relevant deliverables across both versions are explicitly and repeatedly marked 'NOT PRINT READY', 'BLOCKED', or 'PROVISIONAL'. For example, v0/preflight-report.json states 'artwork_readiness': 'NOT PRINT READY' and 'production_release': 'BLOCKED'. The v1/provisional-structure.png is labeled 'PROVISIONAL / NOT A PRODUCTION DIELINE'."
+        },
+        {
+          "gate": "no invented dieline",
+          "verdict": "MET",
+          "evidence": "The agent correctly avoided creating a production dieline. In v0, it created an abstract 'FRONT CONTENT MODULE' and explicitly stated 'this rectangle is not a carton panel'. In v1, it created a 'Nominal carton envelope' and a 'Nominal body-band map', both clearly labeled as schematic relationships and not production geometry, explicitly noting the exclusion of glue joints, score allowances, etc."
+        },
+        {
+          "gate": "preflight report present",
+          "verdict": "MET",
+          "evidence": "The agent delivered 'v0/preflight-report.json' and 'v0/preflight-report.pdf' in the first turn, fulfilling the deliverable contract."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l4-rdt-008/reference_grounded/2026-09-04T14-37-08-741Z"
+    },
+    {
+      "condition_id": "DAB-L4-RDT-009@reference_grounded",
+      "brief_id": "DAB-L4-RDT-009",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "concept_to_factory_ready",
+      "primary_intent": "export",
+      "run": "runs/dab-l4-rdt-009/reference_grounded/2026-09-04T14-51-35-356Z",
+      "execution_origin": "new_v0.3_execution",
+      "latency_ms": 3128994,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "brief_adherence": 5,
+        "efficiency": 5,
+        "output_fidelity": 5,
+        "production_readiness": 5,
+        "scalability": 5,
+        "verification_quality": 5,
+        "workflow_completion": 5
+      },
+      "score_reasons": {
+        "brief_adherence": "The agent perfectly followed all instructions, including hard constraints, deliverables, and the multi-turn workflow with a human checkpoint.",
+        "efficiency": "The agent completed the task in the intended two turns without any retries or unnecessary steps.",
+        "output_fidelity": "The final vector master in `v1` is a visually faithful and high-quality reproduction of the source raster artwork, as confirmed by direct visual comparison.",
+        "production_readiness": "The deliverables are exceptionally well-suited for production. The vector files are clean, and the batch workflow document is thorough, providing clear, measurable, and actionable rules for a large-scale queue.",
+        "scalability": "The core of the request was to create a scalable workflow, and the agent delivered this perfectly. The `v1/batch-workflow.json` defines a robust, metric-driven system suitable for processing hundreds of items.",
+        "verification_quality": "The agent provided extensive and clear evidence for its work, including side-by-side comparisons (`v0/source-vector-comparison.png`), scale proofs, a specific before-and-after image for the refinement (`v1/v0-v1-curve-comparison.png`), and detailed documentation.",
+        "workflow_completion": "The agent perfectly executed the required workflow: inspect, vectorize, preflight for approval, refine based on feedback, and deliver. The two-version output (v0 and v1) is a clear record of this process."
+      },
+      "weights": {
+        "brief_adherence": 0.1,
+        "efficiency": 0.05,
+        "output_fidelity": 0.25,
+        "production_readiness": 0.25,
+        "scalability": 0.05,
+        "verification_quality": 0.15,
+        "workflow_completion": 0.15
+      },
+      "observed_earned": 1.0,
+      "observed_weight": 1.0,
+      "score_lower_bound": 1.0,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "structured_artifact_contract": {
+        "verification.json": true,
+        "trajectory.jsonl": true,
+        "preview.png": true,
+        "design_document.json": true
+      },
+      "structured_artifact_complete": true,
+      "hard_gate_pass": true,
+      "hard_gates": [
+        {
+          "gate": "true vector master",
+          "verdict": "MET",
+          "evidence": "Evaluator-computed facts for the final deliverables `v1/orbit-coffee-night-bloom-vector-master.svg`, `.eps`, and `.pdf` confirm they are parseable vector files with zero embedded raster images."
+        },
+        {
+          "gate": "source identity preserved",
+          "verdict": "MET",
+          "evidence": "Visual comparison between `INPUT approved-raster` and `OUTPUT v1/preview.png` shows a faithful reproduction of the source artwork's geometry, wording, and color relationships. The vector output is a clean, sharp representation of the source."
+        },
+        {
+          "gate": "exemplar approved before batch",
+          "verdict": "MET",
+          "evidence": "The agent correctly produced a `v0` candidate, paused for the required human checkpoint, and then incorporated feedback into a `v1` final version. The `v1/batch-workflow.json` explicitly records the approval and freezes the batch rule, stating `\"batch_release_status\": \"eligible_under_frozen_rule_not_started\"`."
+        }
+      ],
+      "benchmark_pass": true,
+      "judge_run": "runs/dab-l4-rdt-009/reference_grounded/2026-09-04T14-51-35-356Z"
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@personalized",
+      "brief_id": "DAB-L4-RTO-001",
+      "condition": "personalized",
+      "level": "L4",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-rto-001/personalized/2026-08-23T23-07-33-959Z",
+      "latency_ms": 1501836,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 5,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.7,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.7,
+      "score_upper_bound": 1.0,
+      "observable_only_normalized": 1.0,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-rto-001/personalized/2026-08-23T23-07-33-959Z",
+      "source_result_sha256": "c5f9a6647a5ce4aae307d83624965fae206366b0b463cf431e453a55d0685380",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@reference_grounded",
+      "brief_id": "DAB-L4-RTO-001",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-rto-001/reference_grounded/2026-08-23T23-32-36-648Z",
+      "latency_ms": 1426895,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 3,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 4
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.61,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.61,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.8714,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-rto-001/reference_grounded/2026-08-23T23-32-36-648Z",
+      "source_result_sha256": "7cb4be325ba5f7daa31239466eb93dcdf6fc5b75d23c8e09a84e46bd672ef775",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-RTO-001@zero_shot",
+      "brief_id": "DAB-L4-RTO-001",
+      "condition": "zero_shot",
+      "level": "L4",
+      "category": "reference_to_original",
+      "primary_intent": "generate",
+      "run": "runs/dab-l4-rto-001/zero_shot/2026-08-23T23-56-24-267Z",
+      "latency_ms": 1661305,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 3,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 5
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.64,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.64,
+      "score_upper_bound": 0.94,
+      "observable_only_normalized": 0.9143,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-rto-001/zero_shot/2026-08-23T23-56-24-267Z",
+      "source_result_sha256": "1efd5bf06b082529b814363506c22b27984a8769c484201891a1e8f123a28d43",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    },
+    {
+      "condition_id": "DAB-L4-RTO-003@reference_grounded",
+      "brief_id": "DAB-L4-RTO-003",
+      "condition": "reference_grounded",
+      "level": "L4",
+      "category": "reference_to_original",
+      "primary_intent": "edit",
+      "run": "runs/dab-l4-rto-003/reference_grounded/2026-08-24T00-51-09-849Z",
+      "latency_ms": 2295659,
+      "completed_turns": 2,
+      "intended_turns": 2,
+      "scores": {
+        "artifact_contract": 1.0,
+        "efficiency": 1.0,
+        "brief_understanding": 3,
+        "revision_fidelity": 5,
+        "cross_asset_consistency": 4
+      },
+      "weights": {
+        "brief_understanding": 0.15,
+        "workflow_completion": 0.2,
+        "revision_fidelity": 0.15,
+        "cross_asset_consistency": 0.15,
+        "artifact_contract": 0.2,
+        "recovery": 0.1,
+        "efficiency": 0.05
+      },
+      "workflow_completion_proxy": 1.0,
+      "observed_earned": 0.61,
+      "observed_weight": 0.7,
+      "score_lower_bound": 0.61,
+      "score_upper_bound": 0.91,
+      "observable_only_normalized": 0.8714,
+      "execution_origin": "carried_forward_v0.2",
+      "source_experiment": "experiments/codex-v02-2026-08-21",
+      "source_run": "runs/dab-l4-rto-003/reference_grounded/2026-08-24T00-51-09-849Z",
+      "source_result_sha256": "7dc9c7529b0e10c9e5829ef9fc4a4355b9a820cf8f29ee641c666b6042200d9c",
+      "hard_gate_pass": null,
+      "hard_gate_status": "not normalized in v0.2 canonical summary"
+    }
+  ],
+  "measurement_limits": [
+    "The core 32 are not newly sampled; they are provenance-checked carry-forward results from the unchanged v0.2 contract.",
+    "Core workflow_completion and recovery remain unobservable and therefore retain lower/upper bounds rather than point estimates.",
+    "External visual and semantic scores use Gemini model judgment and are not human ground truth.",
+    "A single stochastic candidate run per external condition estimates capability, not variance.",
+    "The candidate saw required structured-artifact filenames but not their schema validation prose; structured artifact completion therefore measures file presence, while hidden validation prose is not used as a penalty.",
+    "The judge passed a counterfactual control in which stale self-verification was retained but the edited pixels were replaced by the unchanged source."
+  ]
+}

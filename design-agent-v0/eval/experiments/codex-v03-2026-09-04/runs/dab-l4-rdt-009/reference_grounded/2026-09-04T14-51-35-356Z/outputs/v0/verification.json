@@ -1,0 +1,344 @@
+{
+  "verification_version": "v0",
+  "verified_at": "2026-09-04T11:21:46-04:00",
+  "overall_status": "passed_with_expected_approval_blocker",
+  "checks": [
+    {
+      "id": "source_binding",
+      "status": "pass",
+      "evidence": [
+        "inputs/01-approved_source_artwork.png",
+        "outputs/v0/design_document.json"
+      ],
+      "details": {
+        "source_sha256": "4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f"
+      }
+    },
+    {
+      "id": "svg_is_editable_vector",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/orbit-coffee-night-bloom-vector-master.svg"
+      ],
+      "details": {
+        "paths": 55,
+        "rectangles": 10,
+        "images": 0,
+        "live_text_nodes": 0
+      }
+    },
+    {
+      "id": "svg_has_no_font_dependency",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/orbit-coffee-night-bloom-vector-master.svg"
+      ],
+      "details": {
+        "live_text_nodes": 0,
+        "wording_carried_in_desc": true
+      }
+    },
+    {
+      "id": "eps_is_vector_only",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/orbit-coffee-night-bloom-vector-master.eps"
+      ],
+      "details": {
+        "eps_header": "%!PS-Adobe-3.0 EPSF-3.0",
+        "raster_operators_found": []
+      }
+    },
+    {
+      "id": "pdf_is_vector_only",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/orbit-coffee-night-bloom-vector-master.pdf"
+      ],
+      "details": {
+        "pages": 1,
+        "image_xobjects": 0,
+        "font_resources": 1,
+        "text_show_operators": 0,
+        "page_width_points": 792.779,
+        "page_height_points": 442.481,
+        "metadata": {
+          "/Author": "Candidate Design Agent",
+          "/CreationDate": "D:20260904111709-04'00'",
+          "/Creator": "anonymous",
+          "/Keywords": "vector master, SVG, EPS, print, source-sha256:4c1e4d5aa41ea0cc4d5cac3f33f9ef3d51a4ed47b6cdb086ede6d5bd01dd9f1f",
+          "/ModDate": "D:20260904111709-04'00'",
+          "/Producer": "ReportLab PDF Library - (opensource)",
+          "/Subject": "Path-based approved artwork conversion; no embedded raster dependency",
+          "/Title": "Orbit Coffee Night Bloom vector master",
+          "/Trapped": "/False"
+        }
+      }
+    },
+    {
+      "id": "wording_exact",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/design_document.json",
+        "outputs/v0/orbit-coffee-night-bloom-vector-master.svg"
+      ],
+      "details": {
+        "expected_and_recorded": [
+          "ORBIT COFFEE",
+          "NIGHT BLOOM",
+          "250 g",
+          "ORIGIN",
+          "ROAST",
+          "NOTES",
+          "FRONT",
+          "BACK"
+        ]
+      }
+    },
+    {
+      "id": "geometry_and_color_fidelity",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/preview.png",
+        "outputs/v0/source-vector-comparison.png"
+      ],
+      "details": {
+        "source_and_preview_dimensions_px": [
+          1376,
+          768
+        ],
+        "full_frame_mean_absolute_rgb_error_0_255": 4.8215,
+        "full_frame_mean_absolute_error_percent": 1.891,
+        "full_frame_psnr_db": 22.502,
+        "display_wordmark_mask_iou": 0.911462,
+        "display_wordmark_symmetric_edge_distance_px": {
+          "median": 0.0,
+          "p95": 1.0,
+          "p99": 1.414,
+          "max": 2.0
+        },
+        "display_wordmark_p95_edge_distance_mm_at_nominal": 0.2033,
+        "flat_color_patch_comparison": {
+          "paper": {
+            "source_median_rgb": [
+              246,
+              248,
+              237
+            ],
+            "preview_median_rgb": [
+              247,
+              248,
+              238
+            ],
+            "rgb_distance": 1.414
+          },
+          "front_burgundy": {
+            "source_median_rgb": [
+              76,
+              14,
+              39
+            ],
+            "preview_median_rgb": [
+              77,
+              15,
+              40
+            ],
+            "rgb_distance": 1.732
+          },
+          "front_cream": {
+            "source_median_rgb": [
+              245,
+              240,
+              220
+            ],
+            "preview_median_rgb": [
+              244,
+              240,
+              220
+            ],
+            "rgb_distance": 1.0
+          },
+          "back_cream": {
+            "source_median_rgb": [
+              243,
+              241,
+              218
+            ],
+            "preview_median_rgb": [
+              244,
+              240,
+              220
+            ],
+            "rgb_distance": 2.449
+          }
+        },
+        "interpretation": "The thin display-outline IoU remains below the automatic-trace gate and therefore retains its manual-review route. After cleanup, its p95 edge distance is within 0.30 mm. Full-frame error is mainly the intentionally omitted raster paper/ink texture."
+      }
+    },
+    {
+      "id": "large_and_small_scale_render",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/scale-proof-small.png",
+        "outputs/v0/scale-proof-large-detail.png"
+      ],
+      "details": {
+        "small_render_px": [
+          344,
+          192
+        ],
+        "large_master_render_px": [
+          2752,
+          1536
+        ],
+        "visual_defects_found": 0
+      }
+    },
+    {
+      "id": "node_cleanup",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/build-metrics.json",
+        "outputs/v0/orbit-coffee-night-bloom-vector-master.svg"
+      ],
+      "details": {
+        "source_crop_px": [
+          174,
+          410,
+          558,
+          468
+        ],
+        "threshold_rgb": {
+          "r_lt": 126,
+          "g_lt": 86,
+          "b_lt": 108
+        },
+        "simplification_tolerance_source_px": 1.2,
+        "curve_model": "closed Catmull-Rom converted to cubic Bezier",
+        "curve_tension": 0.75,
+        "contours": 16,
+        "raw_nodes": 2294,
+        "clean_nodes": 220,
+        "node_reduction_percent": 90.41
+      }
+    },
+    {
+      "id": "workflow_thresholds_and_triggers",
+      "status": "pass",
+      "evidence": [
+        "outputs/v0/batch-workflow.json",
+        "outputs/v0/batch-workflow.pdf"
+      ],
+      "details": {
+        "workflow_pdf_pages": 3,
+        "manual_trigger_count": 10
+      }
+    },
+    {
+      "id": "exemplar_approval_gate",
+      "status": "pending",
+      "evidence": [
+        "outputs/v0/batch-workflow.json",
+        "outputs/v0/batch-workflow.pdf"
+      ],
+      "details": {
+        "exemplar_human_approval_required": true,
+        "exemplar_status": "pending",
+        "batch_release_status": "blocked_pending_exemplar_approval",
+        "required_approval_record": [
+          "approver_name",
+          "approval_timestamp",
+          "approved_master_sha256",
+          "approved_preview_sha256"
+        ]
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "role": "vector-master-svg",
+      "stage": "final",
+      "path": "outputs/v0/orbit-coffee-night-bloom-vector-master.svg",
+      "bytes": 66695,
+      "sha256": "1e7001ea159e49b7d3251d9b3076e239b3a1dcf21eb408d2420558d71c5cc837"
+    },
+    {
+      "role": "vector-master-eps",
+      "stage": "final",
+      "path": "outputs/v0/orbit-coffee-night-bloom-vector-master.eps",
+      "bytes": 112069,
+      "sha256": "9cca1fc590bbc343808b0828e0af635854c7660aee60a36990b3ae000e17f4f4"
+    },
+    {
+      "role": "vector-master-pdf",
+      "stage": "final",
+      "path": "outputs/v0/orbit-coffee-night-bloom-vector-master.pdf",
+      "bytes": 25943,
+      "sha256": "9d0c1d6ee198814236da5b6667a7f8d5d0f559b7e6d7ce1a0b24c60dac22fce7"
+    },
+    {
+      "role": "preview",
+      "stage": "final",
+      "path": "outputs/v0/preview.png",
+      "bytes": 60166,
+      "sha256": "bb3c155aacdc47f777b8f99053e006ca8abc6e83da670b4b47a5ecf0f3262c8d"
+    },
+    {
+      "role": "design-document",
+      "stage": "final",
+      "path": "outputs/v0/design_document.json",
+      "bytes": 6945,
+      "sha256": "993daa1c33810a807854564d3b39a0e10f854b8186108628221ba799fdf5780d"
+    },
+    {
+      "role": "batch-workflow-json",
+      "stage": "intermediate",
+      "path": "outputs/v0/batch-workflow.json",
+      "bytes": 4335,
+      "sha256": "a5d8eb915595b83c456657c743d39e4f7abb3e9334bd4686030ea81314b05584"
+    },
+    {
+      "role": "batch-workflow-pdf",
+      "stage": "intermediate",
+      "path": "outputs/v0/batch-workflow.pdf",
+      "bytes": 7894,
+      "sha256": "7db70ce713744f8d3027ba97c4ba48557cd42b0e550c77590730f80f792e5e92"
+    },
+    {
+      "role": "visual-comparison",
+      "stage": "verification",
+      "path": "outputs/v0/source-vector-comparison.png",
+      "bytes": 366079,
+      "sha256": "99d9fa292ca5c9471c57286dc612c6c9528360d9b201958f4d5280a30860cf56"
+    },
+    {
+      "role": "small-scale-proof",
+      "stage": "verification",
+      "path": "outputs/v0/scale-proof-small.png",
+      "bytes": 11860,
+      "sha256": "e52f26eac02364adc7164a8a6cdf5e00489a4767aa79d2842ac86f2e9ec17c9e"
+    },
+    {
+      "role": "large-scale-proof",
+      "stage": "verification",
+      "path": "outputs/v0/scale-proof-large-detail.png",
+      "bytes": 64081,
+      "sha256": "9c6e28a75452822c33010efa7998c1d87a93a621fb068729d76cb7761594cb11"
+    },
+    {
+      "role": "workflow-render-proof",
+      "stage": "verification",
+      "path": "outputs/v0/batch-workflow-preview.png",
+      "bytes": 154238,
+      "sha256": "971f414ad63237210d76d0c2ec6e1ead80c45a6836448ff70c2ea6bf6fa35dfe"
+    }
+  ],
+  "failed_checks": [],
+  "unresolved_blockers": [
+    {
+      "code": "HUMAN_EXEMPLAR_APPROVAL_PENDING",
+      "impact": "The 100-500 item batch workflow must not be released.",
+      "resolution": "Human approver accepts this exemplar and records the approved master and preview hashes."
+    }
+  ]
+}

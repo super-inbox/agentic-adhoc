@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "candidate_version": "v0",
+  "deliverable_id": "cycling-poster",
+  "status": "passed",
+  "checks": [
+    {
+      "id": "png_format_and_dimensions",
+      "result": "pass",
+      "method": "File signature and Pillow metadata inspection",
+      "observed": {
+        "format": "PNG",
+        "dimensions_px": [1054, 1492],
+        "mode": "RGB"
+      },
+      "evidence_paths": [
+        "outputs/v0/cycling-poster.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "exact_target_palette",
+      "result": "pass",
+      "method": "Exhaustive enumeration of all 1572568 pixels in the final RGB PNG",
+      "expected_hex": ["#174EA6", "#B7FF3C", "#E8E4DC"],
+      "observed": [
+        {"hex": "#174EA6", "pixel_count": 1000321},
+        {"hex": "#B7FF3C", "pixel_count": 145799},
+        {"hex": "#E8E4DC", "pixel_count": 426448}
+      ],
+      "unexpected_color_count": 0,
+      "evidence_paths": ["outputs/v0/cycling-poster.png"]
+    },
+    {
+      "id": "original_bicycle_workshop_subject",
+      "result": "pass",
+      "method": "Visual inspection at original resolution",
+      "observed": "A coherent side-view bicycle sits in a repair stand with a pump, wrench, gears, tool bench, and power unit.",
+      "evidence_paths": [
+        "outputs/v0/cycling-poster.png",
+        "outputs/v0/preview.png"
+      ]
+    },
+    {
+      "id": "solar_power_readability",
+      "result": "pass",
+      "method": "Visual inspection at original resolution",
+      "observed": "An angled gridded solar-panel canopy connects through a visible acid-green cable to the workshop power unit.",
+      "evidence_paths": ["outputs/v0/cycling-poster.png"]
+    },
+    {
+      "id": "reference_use_contract",
+      "result": "pass",
+      "method": "Side-by-side visual comparison of the supplied style reference and final poster",
+      "observed": "The final uses only abstract hand-cut contours and friendly rounded line treatment. It contains no crescent, star, circular badge, reference wording, character, palette, or copied composition.",
+      "evidence_paths": [
+        "inputs/01-style_without_color.png",
+        "outputs/v0/cycling-poster.png"
+      ]
+    },
+    {
+      "id": "poster_copy",
+      "result": "pass",
+      "method": "Manual visual text inspection",
+      "observed": [
+        "SOLAR CYCLE WORKSHOP",
+        "POWER UP • FIX UP • RIDE ON"
+      ],
+      "forbidden_reference_words_present": false,
+      "evidence_paths": ["outputs/v0/cycling-poster.png"]
+    },
+    {
+      "id": "focal_hierarchy",
+      "result": "pass",
+      "method": "Visual inspection at poster scale and thumbnail scale",
+      "observed": "Large title first, solar canopy and bicycle illustration second, compact action line third.",
+      "evidence_paths": ["outputs/v0/preview.png"]
+    },
+    {
+      "id": "preview_matches_final",
+      "result": "pass",
+      "method": "SHA-256 comparison",
+      "observed_sha256": "b1b34a0e174ffe3204452b8aba9c3a8cd0efd5f00e3e2aeac8dbf790d3ed10a6",
+      "evidence_paths": [
+        "outputs/v0/cycling-poster.png",
+        "outputs/v0/preview.png"
+      ]
+    }
+  ],
+  "unresolved_blockers": []
+}

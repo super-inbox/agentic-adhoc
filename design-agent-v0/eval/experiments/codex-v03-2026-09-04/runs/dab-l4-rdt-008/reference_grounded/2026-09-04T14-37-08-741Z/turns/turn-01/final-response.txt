@@ -1,0 +1,16 @@
+Completed the requested v1 delta. The structure is explicitly provisional and not print-ready; v0 remains byte-for-byte unchanged.
+
+New outputs:
+
+- Labelled structure: :codex-file-citation{path="/private<WORKDIR>/outputs/v1/provisional-structure.pdf" purpose="output"}, [PNG](/private<WORKDIR>/outputs/v1/provisional-structure.png), and [structure data](/private<WORKDIR>/outputs/v1/provisional-structure.json)
+
+- Physical-sample checklist: :codex-file-citation{path="/private<WORKDIR>/outputs/v1/physical-sample-checklist.pdf" purpose="output"}, [preview](/private<WORKDIR>/outputs/v1/physical-sample-checklist-preview.png), and [checklist data](/private<WORKDIR>/outputs/v1/physical-sample-checklist.json)
+
+- [v1 preview](/private<WORKDIR>/outputs/v1/preview.png)
+- [v1 verification](/private<WORKDIR>/outputs/v1/verification.json)
+
+Changed:
+
+- [project-state.json](/private<WORKDIR>/outputs/project-state.json)
+
+Flap profiles, glue joint, caliper, dimension basis, tolerances, bleed, safe areas, and production dieline remain unresolved.

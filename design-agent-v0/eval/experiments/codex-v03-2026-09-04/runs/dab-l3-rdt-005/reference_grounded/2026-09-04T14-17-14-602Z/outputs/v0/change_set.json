@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "candidate_version": "v0",
+  "status": "final",
+  "edit_type": "localized_text_replacement",
+  "inputs": {
+    "edit_target": {
+      "path": "inputs/01-approved_artwork.png",
+      "sha256": "49e72cb26fda02196fc6c8b27e49abd7344b933846f69b5a80d2e79d7e365077",
+      "role": "approved_artwork"
+    },
+    "edit_mask": {
+      "path": "inputs/02-only_editable_region.png",
+      "sha256": "aceb733e1af33960faffcce90c817f71bc09c8d8fe4baa39cc77ed2ed73abac3",
+      "role": "only_editable_region"
+    },
+    "replacement_copy": "SHIP IT TODAY"
+  },
+  "generation": {
+    "mode": "built-in image edit",
+    "use_case": "text-localization",
+    "selected_source_path": "outputs/v0/generated-lettering-source.png",
+    "selected_source_sha256": "94b63c35bfaf25ab291726c559549169011c7c806867442f46e50c1326ec2886",
+    "final_prompt": "Use case: text-localization. Image 1 is the approved edit target; Image 2 defines the binary editable region. Change only the black speech-bubble lettering to the exact uppercase words 'SHIP IT TODAY', arranged as three centered lines: SHIP / IT / TODAY. Use bold, playful, highly legible black cartoon lettering consistent with the original. Preserve the four original yellow/orange emphasis marks, speech-bubble interior, shape, outline, tail, robot, workshop, background, source framing, and square dimensions. Do not add other text, punctuation, symbols, decoration, or a watermark, and do not change pixels outside the white mask."
+  },
+  "changes": [
+    {
+      "item": "speech_bubble_copy",
+      "before": "BLORP ZING?",
+      "after": "SHIP IT TODAY",
+      "layout": [
+        "SHIP",
+        "IT",
+        "TODAY"
+      ]
+    }
+  ],
+  "preserved": [
+    "All pixels outside the binary mask",
+    "Source alpha values at every pixel",
+    "Speech-bubble outline and tail",
+    "Robot, workshop, background, and framing",
+    "Original yellow/orange emphasis-mark design"
+  ],
+  "post_processing": {
+    "operation": "binary-mask RGB composite",
+    "editable_mask_value": 255,
+    "locked_mask_value": 0,
+    "alpha_source": "approved artwork at every pixel"
+  },
+  "final_artifact": {
+    "path": "outputs/v0/edited-cartoon.png",
+    "sha256": "69bd59a95b8deed766d6b50d90b21177551a0fa2419c0d7ad1d5db7ff62c97eb",
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "bit_depth": 8,
+    "png_color_type": 6,
+    "alpha_mode": "RGBA"
+  }
+}

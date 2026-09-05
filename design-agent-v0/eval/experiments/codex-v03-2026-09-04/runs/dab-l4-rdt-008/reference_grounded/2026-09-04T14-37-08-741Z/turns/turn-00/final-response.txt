@@ -1,0 +1,18 @@
+Completed the safe v0 concept. It is explicitly marked “NOT PRINT READY / CONTENT HIERARCHY ONLY,” with no guessed folds, panels, bleed, safe areas, or legal-copy placement.
+
+- Concept artwork: :codex-file-citation{path="/private<WORKDIR>/outputs/v0/concept-layout.pdf" purpose="output"} plus [PNG preview](/private<WORKDIR>/outputs/v0/preview.png)
+
+- Preflight report: :codex-file-citation{path="/private<WORKDIR>/outputs/v0/preflight-report.pdf" purpose="output"} plus [structured JSON](/private<WORKDIR>/outputs/v0/preflight-report.json)
+
+- Workflow records: [verification.json](/private<WORKDIR>/outputs/v0/verification.json) and [project-state.json](/private<WORKDIR>/outputs/project-state.json)
+
+Production remains blocked pending these exact structural inputs:
+
+- Manufacturer-approved 1:1 dieline, units, revision, and carton construction.
+- Finished W x D x H and tolerances.
+- Panel map, cut contours, creases/folds, flap geometry, and assembly sequence.
+- Adhesive/no-print zones, seam overlap, bleed, and panel-specific safe areas.
+- Board grade, caliper, coating, grain direction, and manufacturing tolerances.
+- Special structures, finishing geometry, production-layer setup, and artwork wrap direction.
+
+The verbatim approved ingredients and warnings are also absent from the accessible input and remain unplaced. If no dieline exists, derivation requires assembled and flat blanks, the actual product, calibrated measurement by a packaging engineer, written manufacturer approval, and a passing 100% physical sample test.

@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "palette-reference",
+    "asset_id": "detail-page-quiet-ritual-reference-page",
+    "role": "palette_and_texture_only",
+    "reference_role": "style_reference",
+    "identity_policy": "abstract_only",
+    "filename": "01-palette_and_texture_only.png",
+    "source_path": "eval/assets/reference-pack-v0.2/detail-page/quiet-ritual-reference-page.png",
+    "byte_size": 815623,
+    "sha256": "f941e16e01835e825f6b0a2b4d65e5d021329ae6e223b451c307998ec5a97af2"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-09-04T14:19:00.723Z",
+  "finished_at": "2026-09-04T14:33:54.445Z",
+  "latency_ms": 893743,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 53,
+    "command_count": 17,
+    "tool_count": 5,
+    "image_activity_count": 4,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a06cc9-832f-7131-b5f0-0ca7d429b618",
+    "usage": {
+      "input_tokens": 1290347,
+      "cached_input_tokens": 1218432,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 32910,
+      "reasoning_output_tokens": 17244
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 1899,
+      "sha256": "32c960a4ff7dad46279b614ce55b06ae8629290ff71e0343d0ad2ce7dd73ce45"
+    },
+    {
+      "filename": "v0/change_set.json",
+      "byte_size": 2066,
+      "sha256": "5d0f9ca7380242799bc672ad06211bed350de212b9fc9298f9e3d896b4be05f8"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 3884477,
+      "sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914"
+    },
+    {
+      "filename": "v0/road-with-traffic-final.png",
+      "byte_size": 3884477,
+      "sha256": "7eaa4c033802812a125185429bdbc562103fd58b47a89fb02503d609182fb914"
+    },
+    {
+      "filename": "v0/vehicle-additions-mask.png",
+      "byte_size": 9190,
+      "sha256": "e5ad7ddee9906bb58ae342b80809f18b9d96f13ec6de63cfdfa254088192a654"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 4687,
+      "sha256": "ef1ad735c431ce3b11ac02599172f8a3002ea1108aa33672d56aa7af0831af41"
+    }
+  ]
+}

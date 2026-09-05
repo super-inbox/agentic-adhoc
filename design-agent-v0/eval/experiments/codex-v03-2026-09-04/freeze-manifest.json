@@ -1,0 +1,201 @@
+{
+  "schema_version": "codex.brief-bank-v0.3-freeze/1.0",
+  "frozen_at": "2026-09-05T02:02:55.572024+00:00",
+  "candidate": {
+    "agent": "Codex CLI",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "service_tier": "default",
+    "session_mode": "persisted-thread-resume",
+    "cli_version": "codex-cli 0.146.0"
+  },
+  "judge": {
+    "model": "gemini-2.5-pro",
+    "temperature": 0,
+    "judge_version": "v0.3-artifact-grounded-1",
+    "package_versions": {
+      "google-genai": "1.47.0",
+      "pypdf": "6.17.0",
+      "Pillow": "12.3.0"
+    }
+  },
+  "prompt_hashes": {
+    "candidate_prompt_source_sha256": "972f81a1c515c7a6efe9ab083e9b90d7ff1f3544633faca7690b6b0a44274c6f",
+    "judge_prompt_template_sha256": "1555e0c0634fac5a57431f3949ab2ccc00799b627f43eaf88d59d1872fc4c0d8"
+  },
+  "dataset_files": [
+    {
+      "path": "design-agent-v0/eval/brief_bank/briefs.v0.3.jsonl",
+      "bytes": 233725,
+      "sha256": "d574a95c439110849e717b2c61940f39dc990b7c02612b3916fc5dcf5753e421",
+      "rows": 35
+    },
+    {
+      "path": "design-agent-v0/eval/brief_bank/initial_queries.v0.3.jsonl",
+      "bytes": 70969,
+      "sha256": "7f236b84135c2e9cf64feb7fcadb6b139ab12bc94b8d1daa165b445c0b628095",
+      "rows": 43
+    },
+    {
+      "path": "design-agent-v0/eval/brief_bank/brief.v0.3.schema.json",
+      "bytes": 12270,
+      "sha256": "fe34839256bf4404b90d3d495bdb1c979dc6b036fff45d30c39db7aeb3b69dbf",
+      "rows": null
+    },
+    {
+      "path": "design-agent-v0/eval/brief_bank/freeze-manifest.v0.3.json",
+      "bytes": 3208,
+      "sha256": "df528319307b19772153ea8810434a1c303caae641537e25668a0c8da0c528d7",
+      "rows": null
+    },
+    {
+      "path": "design-agent-v0/eval/assets/reference-pack-v0.2/manifest.jsonl",
+      "bytes": 11344,
+      "sha256": "ecaa3ddd9181a78549d9ae2da05ad049f0af67113183cffeec9517c7999dbfb9",
+      "rows": 18
+    },
+    {
+      "path": "design-agent-v0/eval/assets/brief-bank-v0.3/manifest.jsonl",
+      "bytes": 3762,
+      "sha256": "819f4079637cdb187249b44893758220f7c21db72838a75a9e97097d850ef792",
+      "rows": 6
+    }
+  ],
+  "runner": {
+    "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scripts/run_codex_v03.mjs",
+    "bytes": 34365,
+    "sha256": "689370c896d957c0ba2b9ac49b617bffc5f10141b34863863ffd75fd78e8b26b"
+  },
+  "freezer": {
+    "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scripts/freeze_v03_experiment.py",
+    "bytes": 6589,
+    "sha256": "0ad67ce869f020a162566f4e169f004c73a4b727a0a35ddce8d27fc910c6d837"
+  },
+  "scorers": [
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/evidence_v03.py",
+      "bytes": 15132,
+      "sha256": "dd5d3a2a53623fe62ed19b73fcde79b0a0d9db52252b583f6dc5023d8a44382c"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/judge_v03.py",
+      "bytes": 15516,
+      "sha256": "3f7cdfa3a50f9a89844bdee6e6f957c4f3f6fde319acc1650bcdff870846f605"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/summarize_v03.py",
+      "bytes": 18934,
+      "sha256": "7e110c621a8d05d698636beb90812b6c38b18a1bbe8609031e54bd54a3262d95"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/validate_judge_v03.py",
+      "bytes": 3717,
+      "sha256": "674d1a0343a23dd960192a54c09260f2711d6cdeef4fbff32403030fd46fa478"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/test_scoring_v03.py",
+      "bytes": 2985,
+      "sha256": "a7109630a146bb46b97130ae08ccb35d80506223494b5a42c35d2dfc75c9953f"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/requirements-judge.txt",
+      "bytes": 50,
+      "sha256": "63f32a0a88f15e991658b68c79b25ad5894a78e207087c189d40f5ce94f36afc"
+    }
+  ],
+  "result_files": [
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/run-index.jsonl",
+      "bytes": 67325,
+      "sha256": "30abf12da5eda24795fa35c1228277167ff3028859cbb0da4a8be308e2969b7d"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/rubric-v03-judged.jsonl",
+      "bytes": 47017,
+      "sha256": "1e05ebd3332b1c18ec5a3a7b52205b1222748151cd7afd3d681ec23754653b90"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/judge-validation-v03.json",
+      "bytes": 1184,
+      "sha256": "b35b1588bdc63b4d805b7f58af2769eefd0134644d529ca0767d753d20d6396c"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/carry-forward-v02.json",
+      "bytes": 6038,
+      "sha256": "63de08c95a024892e091e92c2ce002f61735858046e6e1b2a2f37fa881d9db15"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/scoring/summary-v03.json",
+      "bytes": 99185,
+      "sha256": "df22c01779d66f04885a5e9dee508a29292a9cb5f24aa013bff52444781de517"
+    },
+    {
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/RESULTS.md",
+      "bytes": 2947,
+      "sha256": "1d51b9dce0b49197f59af75122591d87b1753617ba8c2fb58b8348b2adb356e9"
+    }
+  ],
+  "new_completed_run_results": [
+    {
+      "condition_id": "DAB-L3-RDT-001@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l3-rdt-001/reference_grounded/2026-09-04T14-12-42-172Z/result.json",
+      "sha256": "057c34f69263b4cab86b7069a48fe3ce5597565ae99b273add3331dc7cd145ca"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-002@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l3-rdt-002/reference_grounded/2026-09-04T14-12-42-169Z/result.json",
+      "sha256": "3e96554d27d72ad262c8c49e61b86487295a36276b99e068ac0b248405e3f093"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-003@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l3-rdt-003/reference_grounded/2026-09-04T14-12-42-173Z/result.json",
+      "sha256": "58a337a89b5bbd08146bebf61e4e0265803ced354cba06fb0ffc02a57ddfa210"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-004@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l3-rdt-004/reference_grounded/2026-09-04T14-15-36-907Z/result.json",
+      "sha256": "8b5e6ef73f5afe6c8ae8313f341e3e77e010f387600183417a53a49b0adca74e"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-005@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l3-rdt-005/reference_grounded/2026-09-04T14-17-14-602Z/result.json",
+      "sha256": "e00a5302a75a04dfa45a2bd6c89268c7dcd604a76349223547992d4da3784e08"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-006@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l3-rdt-006/reference_grounded/2026-09-04T14-19-00-712Z/result.json",
+      "sha256": "7f75f3b004e93f53af33c890df4c3f589499366ec1c0332450810fc7610070ec"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-010@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l3-rdt-010/reference_grounded/2026-09-04T14-24-18-286Z/result.json",
+      "sha256": "dab9f1e0cb9a2aef250ba8712c1583b46acb15021f66304f855c475688a980f8"
+    },
+    {
+      "condition_id": "DAB-L3-RDT-011@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l3-rdt-011/reference_grounded/2026-09-04T14-29-08-203Z/result.json",
+      "sha256": "ddc09bb3f43bbfbdc1440edef11b0e52553ddb33b14e885ccd48b34849d1b5fd"
+    },
+    {
+      "condition_id": "DAB-L4-RDT-007@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l4-rdt-007/reference_grounded/2026-09-04T14-33-54-620Z/result.json",
+      "sha256": "ea65f0145b21c67d61b0bbe421795e853f0226da6847b739ef73116168744411"
+    },
+    {
+      "condition_id": "DAB-L4-RDT-008@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l4-rdt-008/reference_grounded/2026-09-04T14-37-08-741Z/result.json",
+      "sha256": "a22c4e20929d425f28b9637d6454a6b41231c351a75f71b4d9634e0bef9d1658"
+    },
+    {
+      "condition_id": "DAB-L4-RDT-009@reference_grounded",
+      "path": "design-agent-v0/eval/experiments/codex-v03-2026-09-04/runs/dab-l4-rdt-009/reference_grounded/2026-09-04T14-51-35-356Z/result.json",
+      "sha256": "794e695504f5f79abfc553a6850ff38b9950ea9321a45e5308092caa55a59d62"
+    }
+  ],
+  "coverage": {
+    "core_conditions_carried_forward": 32,
+    "external_conditions_newly_executed": 11,
+    "total_conditions": 43
+  },
+  "secrets_included": false
+}

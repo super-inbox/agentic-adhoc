@@ -1,0 +1,9 @@
+Completed v1 and froze the batch rule. Only the `ORBIT COFFEE` outline changed: 220 → 165 anchors (25% reduction). Preflight passed at 0.2033 mm p95 geometry drift against the 0.30 mm limit. Colours, wording, contours, non-target paths, and all v0 files remain unchanged. Batch execution was not started.
+
+New/changed paths:
+
+- Master: [SVG](/private<WORKDIR>/outputs/v1/orbit-coffee-night-bloom-vector-master.svg), [EPS](/private<WORKDIR>/outputs/v1/orbit-coffee-night-bloom-vector-master.eps), :codex-file-citation{path="/private<WORKDIR>/outputs/v1/orbit-coffee-night-bloom-vector-master.pdf" purpose="output"}
+- Frozen workflow: [JSON](/private<WORKDIR>/outputs/v1/batch-workflow.json), :codex-file-citation{path="/private<WORKDIR>/outputs/v1/batch-workflow.pdf" purpose="output"}
+- Required artifacts: [preview.png](/private<WORKDIR>/outputs/v1/preview.png), [design_document.json](/private<WORKDIR>/outputs/v1/design_document.json), [verification.json](/private<WORKDIR>/outputs/v1/verification.json)
+- Updated state: [project-state.json](/private<WORKDIR>/outputs/project-state.json)
+- Supporting QA files are also under [outputs/v1](/private<WORKDIR>/outputs/v1).

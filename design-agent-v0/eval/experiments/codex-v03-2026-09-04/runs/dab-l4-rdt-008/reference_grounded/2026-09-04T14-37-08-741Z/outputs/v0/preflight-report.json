@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "report_id": "north-field-herbal-balm-carton-preflight-v0",
+  "report_date": "2026-09-04",
+  "product": {
+    "brand": "North Field",
+    "name": "Herbal Balm",
+    "net_contents": "Net 60 g"
+  },
+  "artwork_readiness": "NOT PRINT READY",
+  "production_release": "BLOCKED",
+  "summary": "A geometry-neutral concept and reusable content hierarchy can be reviewed. Production artwork cannot begin until the package structure, dieline geometry, bleed, folds, safe areas and related production specifications are verified.",
+  "source_inputs": [
+    {
+      "id": "COPY-01",
+      "status": "available",
+      "exact_text": "North Field"
+    },
+    {
+      "id": "COPY-02",
+      "status": "available",
+      "exact_text": "Herbal Balm"
+    },
+    {
+      "id": "COPY-03",
+      "status": "available",
+      "exact_text": "Net 60 g"
+    },
+    {
+      "id": "COPY-04",
+      "status": "blocked",
+      "description": "The brief says approved ingredients and warnings exist, but their verbatim wording is not present in the accessible project input. They are represented only as unplaced copy slots."
+    }
+  ],
+  "assumptions": {
+    "package_geometry": "none",
+    "panel_count": "none",
+    "panel_dimensions": "none",
+    "fold_positions": "none",
+    "bleed": "none",
+    "safe_areas": "none",
+    "concept_rectangle": "Illustrative content card only; not a carton panel, not to scale and not reusable as geometry."
+  },
+  "concept_safe_work_completed": [
+    "Geometry-neutral front-content hierarchy using only the available approved strings",
+    "Reusable proposed palette, typography relationship and field-line motif",
+    "Copy inventory separated from panel placement",
+    "Manufacturer information request path",
+    "Approval and physical sample-test plan"
+  ],
+  "production_blocked_work": [
+    "Assigning artwork or legal copy to any panel",
+    "Creating cut, crease, fold, perforation, flap, glue or no-print layers",
+    "Extending backgrounds into bleed or across seams",
+    "Sizing or positioning regulated copy, barcode or variable data",
+    "Creating finishing masks or production separations",
+    "Exporting or describing any file as print ready or factory ready"
+  ],
+  "missing_structural_parameters": [
+    {
+      "id": "S01",
+      "parameter": "Manufacturer dieline file",
+      "status": "missing",
+      "exact_value_required": "Dimensioned 1:1 vector CAD/PDF/AI file, units, revision/date and manufacturer-approved source."
+    },
+    {
+      "id": "S02",
+      "parameter": "Carton construction",
+      "status": "missing",
+      "exact_value_required": "ECMA/FEFCO code or explicit structural style, including closure and opening direction."
+    },
+    {
+      "id": "S03",
+      "parameter": "Finished internal dimensions",
+      "status": "missing",
+      "exact_value_required": "Width x depth x height in millimetres, dimension convention and dimensional tolerances."
+    },
+    {
+      "id": "S04",
+      "parameter": "Panel map",
+      "status": "missing",
+      "exact_value_required": "Identity, width, height and reading orientation for every body panel."
+    },
+    {
+      "id": "S05",
+      "parameter": "Cut contour",
+      "status": "missing",
+      "exact_value_required": "Exact vector coordinates/path for every external and internal cut, including radii, notches and slots."
+    },
+    {
+      "id": "S06",
+      "parameter": "Crease and fold geometry",
+      "status": "missing",
+      "exact_value_required": "Centerline coordinates, fold direction, score type and assembly sequence for every fold."
+    },
+    {
+      "id": "S07",
+      "parameter": "Flap geometry",
+      "status": "missing",
+      "exact_value_required": "Dimensions, angles and overlaps for glue, tuck, dust and lock flaps."
+    },
+    {
+      "id": "S08",
+      "parameter": "Adhesive and no-print zones",
+      "status": "missing",
+      "exact_value_required": "Glue coverage, seam overlap and no-ink/no-varnish keep-outs."
+    },
+    {
+      "id": "S09",
+      "parameter": "Bleed",
+      "status": "missing",
+      "exact_value_required": "Required millimetres beyond each cut edge plus seam and internal-cutout bleed rules."
+    },
+    {
+      "id": "S10",
+      "parameter": "Safe areas",
+      "status": "missing",
+      "exact_value_required": "Required inset in millimetres from cuts, creases, perforations, slots and adhesive zones, by panel."
+    },
+    {
+      "id": "S11",
+      "parameter": "Substrate",
+      "status": "missing",
+      "exact_value_required": "Board grade, thickness/caliper, coating and grain direction."
+    },
+    {
+      "id": "S12",
+      "parameter": "Manufacturing tolerances",
+      "status": "missing",
+      "exact_value_required": "Allowed cut, crease, print-register, glue and assembled-dimension variation."
+    },
+    {
+      "id": "S13",
+      "parameter": "Special structures",
+      "status": "missing",
+      "exact_value_required": "Geometry for any perforation, tear strip, window, hang tab, locking feature or other conversion operation."
+    },
+    {
+      "id": "S14",
+      "parameter": "Finishing geometry",
+      "status": "missing",
+      "exact_value_required": "Masks, registration and keep-outs for any foil, spot coating, white ink, emboss or deboss."
+    },
+    {
+      "id": "S15",
+      "parameter": "Production file setup",
+      "status": "missing",
+      "exact_value_required": "Units, scale, page box, layer naming, dieline spot colors/line weights and non-printing-object rules."
+    },
+    {
+      "id": "S16",
+      "parameter": "Artwork wrap and seam behavior",
+      "status": "missing",
+      "exact_value_required": "Cross-panel continuity, seam allowance and reading direction after assembly."
+    }
+  ],
+  "additional_missing_inputs": [
+    {
+      "id": "C01",
+      "category": "copy",
+      "required": "Verbatim approved ingredients and warnings."
+    },
+    {
+      "id": "C02",
+      "category": "regulatory",
+      "required": "Target market, required responsible-party information, directions and any product claims or market-specific statements."
+    },
+    {
+      "id": "C03",
+      "category": "variable_data",
+      "required": "Applicability, content and required zones for barcode, lot/batch, expiry or PAO."
+    },
+    {
+      "id": "P01",
+      "category": "print",
+      "required": "Print process, color/ICC profile, inks, trapping, overprint, image resolution, total ink and minimum type/line rules."
+    },
+    {
+      "id": "P02",
+      "category": "proofing",
+      "required": "Proofing standard, submission format and prepress contact."
+    }
+  ],
+  "structural_information_path": {
+    "preferred": {
+      "method": "request_from_manufacturer",
+      "required_response": "Manufacturer-approved S01-S16 package with named revision and source owner."
+    },
+    "conditional_alternative": {
+      "method": "derive_from_physical_blank",
+      "prerequisites": [
+        "Assembled carton blank",
+        "Unglued flat blank",
+        "Actual filled product",
+        "Specified board/caliper",
+        "Calibrated measuring tools",
+        "Qualified packaging engineer"
+      ],
+      "restriction": "Measured geometry remains provisional until written manufacturer approval and a passing 100% physical sample test."
+    }
+  },
+  "required_sample_test": {
+    "scale": "100% with no fit-to-page or other scaling",
+    "material": "Specified production stock and caliper",
+    "steps": [
+      "Cut, crease, glue and assemble using the verified production sequence.",
+      "Insert the actual filled 60 g product and verify fit, closure, opening and glue integrity.",
+      "Check every critical mark against cuts, creases, perforations, slots, seams and adhesive zones.",
+      "Verify bleed and cross-panel continuity.",
+      "Scan barcode and inspect variable data if applicable.",
+      "Record photographs, measurements, deviations and written approvals."
+    ],
+    "acceptance": "All checks pass within manufacturer-specified tolerances with no critical content entering restricted zones."
+  },
+  "approvals_required": [
+    {
+      "owner": "Client",
+      "approval": "Conceptual visual direction and content hierarchy, independent of structure."
+    },
+    {
+      "owner": "Regulatory/legal copy owner",
+      "approval": "Exact ingredients, warnings and all applicable market copy."
+    },
+    {
+      "owner": "Manufacturer/prepress",
+      "approval": "Dieline geometry, revision, material, tolerances, bleed, safe areas, no-print zones and print/finishing setup."
+    },
+    {
+      "owner": "Manufacturer and client",
+      "approval": "Passing physical sample and final imposed artwork before production release."
+    }
+  ],
+  "release_gate": {
+    "status": "blocked",
+    "conditions_to_clear": [
+      "All S01-S16 values received and verified",
+      "All C01-C03 and P01-P02 inputs resolved",
+      "Exact regulated copy approved",
+      "Artwork built on approved geometry and preflighted",
+      "100% physical sample test passed",
+      "Manufacturer/prepress and client approvals recorded"
+    ]
+  }
+}

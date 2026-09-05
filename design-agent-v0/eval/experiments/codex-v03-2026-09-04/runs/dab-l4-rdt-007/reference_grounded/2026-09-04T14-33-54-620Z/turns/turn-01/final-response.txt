@@ -1,0 +1,14 @@
+Direction B is locked. The only design change is a pixel-aligned optical master for 16–23 px; the architectural grid, restrained wordmark, palette, sample-book design, and standard 24 px+ mark remain unchanged.
+
+New paths:
+
+- [v1 preview](/private<WORKDIR>/outputs/v1/preview.png)
+- [Refinement board PNG](/private<WORKDIR>/outputs/v1/direction-b-symbol-refinement.png)
+- [Compact symbol SVG](/private<WORKDIR>/outputs/v1/direction-b-compact-symbol.svg)
+- [Native 16 px symbol PNG](/private<WORKDIR>/outputs/v1/direction-b-compact-symbol-16px.png)
+- [Design document](/private<WORKDIR>/outputs/v1/design_document.json)
+- [Verification](/private<WORKDIR>/outputs/v1/verification.json)
+
+Changed: [project-state.json](/private<WORKDIR>/outputs/project-state.json). All `v0` artifacts remain unchanged.
+
+The final identity system remains deferred pending confirmation of this micro mark and the official brand name/capitalization.

@@ -1,0 +1,359 @@
+{
+  "verification_version": "v1",
+  "verified_at": "2026-09-04T11:42:39-04:00",
+  "overall_status": "pass",
+  "requested_delta": "clean only noisy nodes in small curved corners; preserve approved geometry and colors",
+  "checks": [
+    {
+      "id": "v0_preserved",
+      "status": "pass",
+      "details": {
+        "changed_v0_paths": []
+      },
+      "evidence": [
+        "outputs/v0",
+        "outputs/v1/v0-v1-curve-comparison.png"
+      ]
+    },
+    {
+      "id": "requested_delta_only",
+      "status": "pass",
+      "details": {
+        "changed_svg_path_indices": [
+          20
+        ],
+        "changed_pixel_bbox": [
+          183,
+          420,
+          545,
+          462
+        ],
+        "non_target_pixel_changes": 0
+      },
+      "evidence": [
+        "outputs/v1/orbit-coffee-night-bloom-vector-master.svg",
+        "outputs/v1/v0-v1-curve-comparison.png"
+      ]
+    },
+    {
+      "id": "curve_node_cleanup",
+      "status": "pass",
+      "details": {
+        "source_crop_px": [
+          174,
+          410,
+          558,
+          468
+        ],
+        "threshold_rgb": {
+          "r_lt": 126,
+          "g_lt": 86,
+          "b_lt": 108
+        },
+        "v0_source_simplification_tolerance_px": 1.2,
+        "v0_curve_model": "closed Catmull-Rom converted to cubic Bezier",
+        "v0_curve_tension": 0.75,
+        "cleanup_curve_model": "bounded cubic Bezier consolidation fitted to the approved v0 silhouette",
+        "cleanup_fit_error_source_px": 0.7,
+        "source_sampling_steps_per_v0_segment": 12,
+        "contours": 16,
+        "raw_nodes": 2294,
+        "clean_nodes": 165,
+        "node_reduction_percent_from_raw": 92.81,
+        "v0_clean_nodes": 220,
+        "v1_clean_nodes": 165,
+        "v1_reduction_percent_from_v0": 25.0,
+        "delta_scope": "ORBIT COFFEE display-outline curved-corner anchors only",
+        "locked_during_delta": [
+          "crop and placement",
+          "contour count and counters",
+          "fill color",
+          "approved v0 curve silhouette as the fit target",
+          "all non-target artwork paths"
+        ]
+      },
+      "evidence": [
+        "outputs/v1/build-metrics.json",
+        "outputs/v1/orbit-coffee-night-bloom-vector-master.svg"
+      ]
+    },
+    {
+      "id": "approved_geometry_and_colors_preserved",
+      "status": "pass",
+      "details": {
+        "p95_edge_distance_mm": 0.2033,
+        "limit_mm": 0.3,
+        "palette_identical": true,
+        "locked_identity_items_identical": true
+      },
+      "evidence": [
+        "outputs/v1/preview.png",
+        "outputs/v1/design_document.json"
+      ]
+    },
+    {
+      "id": "svg_vector_only",
+      "status": "pass",
+      "details": {
+        "paths": 55,
+        "images": 0,
+        "live_text": 0
+      },
+      "evidence": [
+        "outputs/v1/orbit-coffee-night-bloom-vector-master.svg"
+      ]
+    },
+    {
+      "id": "pdf_vector_only",
+      "status": "pass",
+      "details": {
+        "pages": 1,
+        "image_xobjects": 0,
+        "widget_annotations": 0
+      },
+      "evidence": [
+        "outputs/v1/orbit-coffee-night-bloom-vector-master.pdf"
+      ]
+    },
+    {
+      "id": "scale_preflight",
+      "status": "pass",
+      "details": {
+        "small_render": "344x192",
+        "large_render": "2752x1536",
+        "visual_defects_found": 0
+      },
+      "evidence": [
+        "outputs/v1/scale-proof-small.png",
+        "outputs/v1/scale-proof-large-detail.png"
+      ]
+    },
+    {
+      "id": "batch_rule_unchanged_then_frozen",
+      "status": "pass",
+      "details": {
+        "v0_rule_sha256": "6aac6729277eeaf4f9768379aadadf478eaa17e5fd14787a8cf56de2d9adea39",
+        "v1_rule_sha256": "6aac6729277eeaf4f9768379aadadf478eaa17e5fd14787a8cf56de2d9adea39",
+        "frozen_rule_sha256": "6aac6729277eeaf4f9768379aadadf478eaa17e5fd14787a8cf56de2d9adea39",
+        "thresholds_changed": false,
+        "triggers_changed": false
+      },
+      "evidence": [
+        "outputs/v1/batch-workflow.json",
+        "outputs/v1/batch-workflow.pdf"
+      ]
+    },
+    {
+      "id": "client_approval_and_freeze_gate",
+      "status": "pass",
+      "details": {
+        "approver_role": "client",
+        "approver_name": null,
+        "approval_scope": "visual match with curve-only cleanup condition",
+        "condition_result": "satisfied_by_v1_preflight",
+        "batch_release_status": "eligible_under_frozen_rule_not_started"
+      },
+      "evidence": [
+        "outputs/v1/batch-workflow.json",
+        "outputs/v1/design_document.json"
+      ]
+    },
+    {
+      "id": "workflow_pdf_render",
+      "status": "pass",
+      "details": {
+        "pages": 3,
+        "image_xobjects": 0,
+        "widget_annotations": 0
+      },
+      "evidence": [
+        "outputs/v1/batch-workflow.pdf",
+        "outputs/v1/batch-workflow-preview.png"
+      ]
+    }
+  ],
+  "failed_checks": [],
+  "core_preflight": {
+    "preflight_version": "v1-core",
+    "run_at": "2026-09-04T11:41:32-04:00",
+    "status": "pass",
+    "failures": [],
+    "checks": {
+      "v0_folder_unchanged": {
+        "pass": true,
+        "changed_paths": []
+      },
+      "only_target_svg_path_changed": {
+        "pass": true,
+        "changed_path_indices": [
+          20
+        ],
+        "target_path_index": 20,
+        "target_wording": "ORBIT COFFEE"
+      },
+      "non_target_rectangles_identical": {
+        "pass": true
+      },
+      "pixel_changes_confined_to_target_roi": {
+        "pass": true,
+        "changed_pixels_outside_roi": 0,
+        "changed_pixel_bbox": [
+          183,
+          420,
+          545,
+          462
+        ],
+        "target_roi": [
+          170,
+          405,
+          560,
+          470
+        ]
+      },
+      "node_cleanup": {
+        "pass": true,
+        "v0_anchor_nodes": 220,
+        "v1_anchor_nodes": 165,
+        "reduction_percent": 25.0,
+        "contours": 16
+      },
+      "geometry_tolerance": {
+        "pass": true,
+        "mask_iou": 0.902398,
+        "symmetric_edge_distance_px": {
+          "median": 0.0,
+          "p95": 1.0,
+          "p99": 2.0,
+          "max": 2.0
+        },
+        "p95_edge_distance_mm_at_nominal": 0.2033,
+        "threshold_mm": 0.3
+      },
+      "svg_vector_only": {
+        "pass": true,
+        "path_count": 55,
+        "image_count": 0,
+        "live_text_count": 0
+      },
+      "eps_vector_only": {
+        "pass": true
+      },
+      "pdf_vector_only": {
+        "pass": true,
+        "pages": 1,
+        "image_xobjects": 0,
+        "text_show_operators": 0,
+        "page_size_points": [
+          792.779,
+          442.481
+        ]
+      },
+      "scale_renders_present": {
+        "pass": true
+      }
+    },
+    "master_hashes": {
+      "svg": "987b6293ef6fbbef8c07f4639c7004257fce2270567c725d39c17735889aca13",
+      "eps": "a8a2f2095ef080624e4acab3a0d56ea4822715d6ba09a3c0d0bce50d1b4e4cf3",
+      "pdf": "1fc1431a10579f6736207f0072b82057006e223ff4cd809a8417fd24cd7fbe5e"
+    },
+    "preview_sha256": "7681903ee379e094d949577b8ae891079c5c80487b06bd662768d19c2490e92b"
+  },
+  "rule_freeze": {
+    "status": "frozen",
+    "frozen_at": "2026-09-04T11:42:10-04:00",
+    "frozen_version": "v1",
+    "rule_sha256": "6aac6729277eeaf4f9768379aadadf478eaa17e5fd14787a8cf56de2d9adea39",
+    "v0_rule_sha256": "6aac6729277eeaf4f9768379aadadf478eaa17e5fd14787a8cf56de2d9adea39",
+    "acceptance_thresholds_changed_from_v0": false,
+    "manual_review_triggers_changed_from_v0": false,
+    "change_control": "Any later rule change requires a new version, preflight, and explicit client approval."
+  },
+  "artifacts": [
+    {
+      "role": "vector-master-svg",
+      "stage": "final",
+      "path": "outputs/v1/orbit-coffee-night-bloom-vector-master.svg",
+      "bytes": 68986,
+      "sha256": "987b6293ef6fbbef8c07f4639c7004257fce2270567c725d39c17735889aca13"
+    },
+    {
+      "role": "vector-master-eps",
+      "stage": "final",
+      "path": "outputs/v1/orbit-coffee-night-bloom-vector-master.eps",
+      "bytes": 112987,
+      "sha256": "a8a2f2095ef080624e4acab3a0d56ea4822715d6ba09a3c0d0bce50d1b4e4cf3"
+    },
+    {
+      "role": "vector-master-pdf",
+      "stage": "final",
+      "path": "outputs/v1/orbit-coffee-night-bloom-vector-master.pdf",
+      "bytes": 27444,
+      "sha256": "1fc1431a10579f6736207f0072b82057006e223ff4cd809a8417fd24cd7fbe5e"
+    },
+    {
+      "role": "preview",
+      "stage": "final",
+      "path": "outputs/v1/preview.png",
+      "bytes": 61155,
+      "sha256": "7681903ee379e094d949577b8ae891079c5c80487b06bd662768d19c2490e92b"
+    },
+    {
+      "role": "design-document",
+      "stage": "final",
+      "path": "outputs/v1/design_document.json",
+      "bytes": 8274,
+      "sha256": "6bf6dffa04745c9730c0ff40012b3f1358e3399ff405dc7f0063bc60da4af68f"
+    },
+    {
+      "role": "frozen-batch-workflow-json",
+      "stage": "final_frozen",
+      "path": "outputs/v1/batch-workflow.json",
+      "bytes": 6098,
+      "sha256": "e31eda416218e36d2933c47230382e6ef43321993723a1b98be8f3b2a098794d"
+    },
+    {
+      "role": "frozen-batch-workflow-pdf",
+      "stage": "final_frozen",
+      "path": "outputs/v1/batch-workflow.pdf",
+      "bytes": 7519,
+      "sha256": "e6969cb88890de484d57e56e76da3b0a85190646b9a6a409bf003230742c0c0c"
+    },
+    {
+      "role": "curve-cleanup-metrics",
+      "stage": "verification",
+      "path": "outputs/v1/build-metrics.json",
+      "bytes": 4034,
+      "sha256": "68d42ba6083f7ccaeba4e1bfacffd9317cd0c594f1e1134c7bfc5057667f2209"
+    },
+    {
+      "role": "small-scale-proof",
+      "stage": "verification",
+      "path": "outputs/v1/scale-proof-small.png",
+      "bytes": 11947,
+      "sha256": "32492194dafb02adca914b04e19c602b88f70a0b003a6b970afb66066bec012c"
+    },
+    {
+      "role": "large-scale-proof",
+      "stage": "verification",
+      "path": "outputs/v1/scale-proof-large-detail.png",
+      "bytes": 65626,
+      "sha256": "d492e3fe0b5462cf385946030946638a2ad2cb3476d8ecc3c756dd7ebbf7c578"
+    },
+    {
+      "role": "delta-comparison",
+      "stage": "verification",
+      "path": "outputs/v1/v0-v1-curve-comparison.png",
+      "bytes": 193401,
+      "sha256": "b713421845698e46023c764c0ac46b99f3723d7de5d0e8d349feaaf315c8edb6"
+    },
+    {
+      "role": "workflow-render-proof",
+      "stage": "verification",
+      "path": "outputs/v1/batch-workflow-preview.png",
+      "bytes": 128691,
+      "sha256": "74eed9e60d2f7c0947dc3f1542927d04c7e20211c5777f479c2bff50612bf830"
+    }
+  ],
+  "unresolved_blockers": []
+}

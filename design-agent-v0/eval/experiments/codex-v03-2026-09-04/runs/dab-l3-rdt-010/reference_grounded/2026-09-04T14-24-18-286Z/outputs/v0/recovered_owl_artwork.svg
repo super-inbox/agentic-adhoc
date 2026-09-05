@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="100%"
+     height="100%"
+     viewBox="0 0 700 1000"
+     preserveAspectRatio="xMidYMid meet"
+     shape-rendering="geometricPrecision">
+  <title>Recovered three-colour geometric owl artwork</title>
+  <desc>
+    Clean vector reconstruction from the supplied T-shirt photograph. The background
+    and all light-coloured gaps are transparent. All visible artwork is made from
+    editable paths using three flat approximate colours.
+  </desc>
+  <metadata>
+    Version v0. Identity-preserving reconstruction; perspective and fabric distortion
+    normalized. Colour values are provisional because the source photograph is not
+    colour-calibrated. Human proof approval is required before production.
+  </metadata>
+
+  <!-- Crown accent: the narrow rust rim visible beneath the dark crown -->
+  <g id="crown-accent" aria-label="rust crown accent">
+    <path id="crown-accent-path"
+          fill="#BC6845"
+          d="M220 125
+             Q350 158 480 115
+             L350 278
+             Z"/>
+  </g>
+
+  <!-- Crown inset -->
+  <g id="crown" aria-label="dark blue crown">
+    <path id="crown-path"
+          fill="#344954"
+          d="M238 132
+             Q350 158 462 126
+             L350 258
+             Z"/>
+  </g>
+
+  <!-- Outer wings, kept separate from the torso by transparent gutters -->
+  <g id="wings" aria-label="dark blue wings">
+    <path id="left-wing-path"
+          fill="#344954"
+          d="M112 505
+             C54 613 69 785 240 860
+             C252 738 217 610 150 535
+             Z"/>
+    <path id="right-wing-path"
+          fill="#344954"
+          d="M588 505
+             C646 613 631 785 460 860
+             C448 738 483 610 550 535
+             Z"/>
+  </g>
+
+  <!-- Central warm-taupe beak / facial diamond -->
+  <g id="beak" aria-label="warm taupe beak">
+    <path id="beak-path"
+          fill="#8A765F"
+          d="M350 342
+             L417 472
+             L350 602
+             L283 472
+             Z"/>
+  </g>
+
+  <!-- Orange eye rings use compound paths; their centres remain transparent -->
+  <g id="eye-rings" aria-label="rust orange eye rings">
+    <path id="left-eye-ring-path"
+          fill="#BC6845"
+          fill-rule="evenodd"
+          d="M240 285
+             A100 108 0 1 0 240 501
+             A100 108 0 1 0 240 285
+             Z
+             M240 333
+             A56 60 0 1 1 240 453
+             A56 60 0 1 1 240 333
+             Z"/>
+    <path id="right-eye-ring-path"
+          fill="#BC6845"
+          fill-rule="evenodd"
+          d="M460 285
+             A100 108 0 1 0 460 501
+             A100 108 0 1 0 460 285
+             Z
+             M460 333
+             A56 60 0 1 1 460 453
+             A56 60 0 1 1 460 333
+             Z"/>
+  </g>
+
+  <!-- Dark pupils with one clearly supported, simplified transparent glint each -->
+  <g id="pupils" aria-label="dark blue pupils">
+    <path id="left-pupil-path"
+          fill="#344954"
+          fill-rule="evenodd"
+          d="M240 343
+             A44 50 0 1 0 240 443
+             A44 50 0 1 0 240 343
+             Z
+             M214 364
+             L229 358
+             L239 369
+             L235 385
+             L218 381
+             Z"/>
+    <path id="right-pupil-path"
+          fill="#344954"
+          fill-rule="evenodd"
+          d="M460 343
+             A44 50 0 1 0 460 443
+             A44 50 0 1 0 460 343
+             Z
+             M434 364
+             L449 358
+             L459 369
+             L455 385
+             L438 381
+             Z"/>
+  </g>
+
+  <!-- Main torso; the deep centre V and tapered base match the source identity -->
+  <g id="torso" aria-label="rust orange torso">
+    <path id="torso-path"
+          fill="#BC6845"
+          d="M175 505
+             L287 540
+             L350 630
+             L413 540
+             L525 505
+             L450 860
+             L250 860
+             Z"/>
+  </g>
+
+  <!-- Two separated triangular feet -->
+  <g id="feet" aria-label="dark blue feet">
+    <path id="left-foot-path"
+          fill="#344954"
+          d="M250 882
+             L338 891
+             L290 958
+             Z"/>
+    <path id="right-foot-path"
+          fill="#344954"
+          d="M362 891
+             L450 882
+             L410 958
+             Z"/>
+  </g>
+
+  <!-- Forehead / brow chevron overlays the upper eyes as in the photograph -->
+  <g id="brow" aria-label="dark blue brow chevron">
+    <path id="brow-path"
+          fill="#344954"
+          d="M145 95
+             L350 300
+             L555 95
+             L545 215
+             L350 405
+             L155 215
+             Z"/>
+  </g>
+</svg>

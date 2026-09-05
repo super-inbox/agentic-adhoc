@@ -1,0 +1,99 @@
+{
+  "turn_index": 0,
+  "logical_session_id": "session-01",
+  "started_at": "2026-09-04T14:51:35.360Z",
+  "finished_at": "2026-09-04T15:22:48.584Z",
+  "latency_ms": 1873248,
+  "exit_code": 0,
+  "signal": null,
+  "timed_out": false,
+  "error": null,
+  "trace_summary": {
+    "event_count": 188,
+    "command_count": 73,
+    "tool_count": 15,
+    "image_activity_count": 0,
+    "runtime_error_count": 0,
+    "runtime_error_messages": [],
+    "thread_id": "01a06ce7-568b-7fe0-a93c-687f641a6991",
+    "usage": {
+      "input_tokens": 8870966,
+      "cached_input_tokens": 8619008,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 71013,
+      "reasoning_output_tokens": 29310
+    }
+  },
+  "artifact_manifest_after_turn": [
+    {
+      "filename": "project-state.json",
+      "byte_size": 4386,
+      "sha256": "5c3475e6dc96cb1c44ac1032f4caf299abad815b988c160b6aa4e73a723434cb"
+    },
+    {
+      "filename": "v0/batch-workflow-preview.png",
+      "byte_size": 154238,
+      "sha256": "971f414ad63237210d76d0c2ec6e1ead80c45a6836448ff70c2ea6bf6fa35dfe"
+    },
+    {
+      "filename": "v0/batch-workflow.json",
+      "byte_size": 4335,
+      "sha256": "a5d8eb915595b83c456657c743d39e4f7abb3e9334bd4686030ea81314b05584"
+    },
+    {
+      "filename": "v0/batch-workflow.pdf",
+      "byte_size": 7894,
+      "sha256": "7db70ce713744f8d3027ba97c4ba48557cd42b0e550c77590730f80f792e5e92"
+    },
+    {
+      "filename": "v0/build-metrics.json",
+      "byte_size": 3220,
+      "sha256": "f94b057cee607ceb851fd90f18ab8ec7c7e9dd47ebfaca35c258f6aadb2fd90c"
+    },
+    {
+      "filename": "v0/design_document.json",
+      "byte_size": 6945,
+      "sha256": "993daa1c33810a807854564d3b39a0e10f854b8186108628221ba799fdf5780d"
+    },
+    {
+      "filename": "v0/orbit-coffee-night-bloom-vector-master.eps",
+      "byte_size": 112069,
+      "sha256": "9cca1fc590bbc343808b0828e0af635854c7660aee60a36990b3ae000e17f4f4"
+    },
+    {
+      "filename": "v0/orbit-coffee-night-bloom-vector-master.pdf",
+      "byte_size": 25943,
+      "sha256": "9d0c1d6ee198814236da5b6667a7f8d5d0f559b7e6d7ce1a0b24c60dac22fce7"
+    },
+    {
+      "filename": "v0/orbit-coffee-night-bloom-vector-master.svg",
+      "byte_size": 66695,
+      "sha256": "1e7001ea159e49b7d3251d9b3076e239b3a1dcf21eb408d2420558d71c5cc837"
+    },
+    {
+      "filename": "v0/preview.png",
+      "byte_size": 60166,
+      "sha256": "bb3c155aacdc47f777b8f99053e006ca8abc6e83da670b4b47a5ecf0f3262c8d"
+    },
+    {
+      "filename": "v0/scale-proof-large-detail.png",
+      "byte_size": 64081,
+      "sha256": "9c6e28a75452822c33010efa7998c1d87a93a621fb068729d76cb7761594cb11"
+    },
+    {
+      "filename": "v0/scale-proof-small.png",
+      "byte_size": 11860,
+      "sha256": "e52f26eac02364adc7164a8a6cdf5e00489a4767aa79d2842ac86f2e9ec17c9e"
+    },
+    {
+      "filename": "v0/source-vector-comparison.png",
+      "byte_size": 366079,
+      "sha256": "99d9fa292ca5c9471c57286dc612c6c9528360d9b201958f4d5280a30860cf56"
+    },
+    {
+      "filename": "v0/verification.json",
+      "byte_size": 9806,
+      "sha256": "1e9f923d6446297231e046b6581f78a092dec838a3d39a883788c8e4f8c09be8"
+    }
+  ]
+}
